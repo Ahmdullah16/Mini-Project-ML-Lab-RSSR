@@ -10,7 +10,15 @@ args=parser.parse_args()
 ledger=root/'reports/ablation-pilot-runs.json'
 if ledger.exists() and not args.resume:
     parser.error('Existing run ledger preserved. Use --resume to verify/continue it.')
-manifest=prepare(root/'configs/naip-pilot-manifest.json',root/'data',limit=16)
+manifest=None
+if args.resume and ledger.exists():
+    existing_records=json.loads(ledger.read_text())
+    if existing_records:
+        expected=existing_records[0]['manifest_sha256']
+        manifest=next((p for p in (root/'data/prepared').glob('*/manifest.json') if digest(p)==expected),None)
+        if manifest is None: raise ValueError('Original prepared manifest missing; restore the matching snapshot')
+if manifest is None:
+    manifest=prepare(root/'configs/naip-pilot-manifest.json',root/'data',limit=16)
 base=json.loads((root/'configs/pilot.json').read_text())
 variants={
  'cnn':{'kind':'cnn'},'cnn_attention':{'kind':'attention'},

@@ -20,7 +20,7 @@ def geotiff(checkpoint,source,target,divisor):
         mask=(ds.read_masks()>0).all(0)&np.isfinite(x).all(0)
         x[:,~mask]=0
         profile=ds.profile.copy()
-        profile.update(driver="GTiff",count=model.bands,dtype="float32",height=ds.height*model.scale,width=ds.width*model.scale,transform=ds.transform*Affine.scale(1/model.scale),nodata=float("nan"))
+        profile.update(driver="GTiff",count=model.bands,dtype="float32",height=ds.height*model.scale,width=ds.width*model.scale,transform=Affine(ds.transform.a/model.scale,ds.transform.b/model.scale,ds.transform.c,ds.transform.d/model.scale,ds.transform.e/model.scale,ds.transform.f),nodata=float("nan"))
     y=tiled(model,torch.from_numpy(x)[None])[0].numpy()
     valid=np.repeat(np.repeat(mask,model.scale,0),model.scale,1); y[:,~valid]=np.nan
     target=Path(target); target.parent.mkdir(parents=True,exist_ok=True)

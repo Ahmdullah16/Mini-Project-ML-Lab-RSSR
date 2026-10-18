@@ -1,0 +1,73 @@
+{
+  "provider_item_id": "S2A_11TQH_20261016_1_L2A",
+  "query": {
+    "bbox": [
+      -114,
+      43,
+      -113.9,
+      43.1
+    ],
+    "datetime": "2026-10-01T00:00:00Z/2026-10-19T00:00:00Z",
+    "query": {
+      "eo:cloud_cover": {
+        "lt": 20
+      }
+    },
+    "collections": [
+      "sentinel-2-l2a"
+    ],
+    "limit": 1,
+    "sortby": [
+      {
+        "field": "properties.datetime",
+        "direction": "desc"
+      }
+    ]
+  },
+  "acquisition_time": "2026-10-16T18:42:34.462000Z",
+  "availability_time": "2026-10-17T01:01:39.293Z",
+  "ingestion_time": "2026-10-18T19:28:41.200513+00:00",
+  "asset_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/11/T/QH/2026/10/S2A_11TQH_20261016_1_L2A/TCI.tif",
+  "license_links": [
+    "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+  ],
+  "attribution": "Contains modified Copernicus Sentinel data; provider Element 84 Sentinel COG archive",
+  "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+  "checkpoint_run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+  "domain_limitation": "NAIP-trained RGB display pilot applied to Sentinel TCI; cross-sensor quality unvalidated; not reflectance or scientific spectral inference",
+  "reference_metrics": null,
+  "cloud_mask": "item-level cloud filter only; no pixel-level cloud mask",
+  "window": [
+    4717,
+    2783,
+    256,
+    256
+  ],
+  "crs": "EPSG:32611",
+  "source_transform": [
+    10.0,
+    0.0,
+    747130.0,
+    0.0,
+    -10.0,
+    4772170.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "valid_fraction": 1.0,
+  "transfer": {
+    "bytes_received": 1900544,
+    "requests": 2,
+    "budget_bytes": 32000000,
+    "etag": "\"50181b7396d6ec5d0adfa96fa041aac1-35\"",
+    "source_size": 288176396,
+    "errors": []
+  },
+  "source_sha256": "5a813255c41414ae5601bd52741bad8599687fcd2d1a96ce78e4942fba026cdf",
+  "inference_time": "2026-10-18T19:28:47.596959+00:00",
+  "output_sha256": "cdcfa63c4e25d746afbcc9e63c0143b8d85ed953a13240fa8ee18fa69c51a41d",
+  "source_path": "data/fresh/9c49190809bfac6b1e2717014b60f58df5502cd2b2e13626f5eb20556629aac0/source.tif",
+  "output_path": "data/fresh/9c49190809bfac6b1e2717014b60f58df5502cd2b2e13626f5eb20556629aac0/sr.tif",
+  "status": "completed"
+}
