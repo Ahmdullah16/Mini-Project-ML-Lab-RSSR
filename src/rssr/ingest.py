@@ -27,7 +27,7 @@ def request_json(url,body=None):
             time.sleep(2**attempt)
 
 
-def refresh(config,root,fetch=request_json):
+def refresh(config,root,fetch=request_json,resume_job=None):
     # Queries overlap intentionally: provider IDs make repeats idempotent. A frozen
     # research manifest never reads this catalog automatically.
     if config.get("max_pages",2) not in range(1,11):
@@ -35,15 +35,26 @@ def refresh(config,root,fetch=request_json):
     if config.get("limit",10) not in range(1,101):
         raise ValueError("limit must be 1..100")
     root=Path(root); root.mkdir(parents=True,exist_ok=True); db=connect(root/"catalog.sqlite")
+    url=config["endpoint"].rstrip("/")+"/search"
+    body={k:config[k] for k in ("bbox","datetime","collections","limit","query") if k in config}
+    if resume_job:
+        previous=db.execute("SELECT query_config,status,cursor_or_watermark FROM ingestion_jobs WHERE id=?",(resume_job,)).fetchone()
+        if not previous or previous[1] not in ('partial','failed','running') or not previous[2] or json.loads(previous[0])!=config:
+            db.close()
+            raise ValueError('Resume requires an unfinished job with an identical configuration and saved cursor')
+        saved=json.loads(previous[2]); url=saved['href']
+        body=saved.get('body') if saved.get('method','GET')=='POST' else None
     jid=uuid.uuid4().hex; dataset="stac:"+config["endpoint"]
     with db:
         db.execute("INSERT OR IGNORE INTO datasets VALUES(?,?,?,?,?,?,?)",(dataset,"Live STAC metadata","rolling",config["endpoint"],"Asset-specific; verify before downloading","Provider STAC metadata",config_hash(config)))
         db.execute("INSERT INTO ingestion_jobs(id,provider,query_config,start_time,status) VALUES(?,?,?,?,?)",(jid,config["endpoint"],json.dumps(config),now(),"running"))
-    url=config["endpoint"].rstrip("/")+"/search"
-    body={k:config[k] for k in ("bbox","datetime","collections","limit","query") if k in config}
-    found=added=0; cursor=None
+    found=added=0; cursor=json.dumps({'href':url,'method':'POST' if body is not None else 'GET','body':body})
     try:
         for page in range(config.get("max_pages",2)):
+            # Persist the request before fetching: a failed/interrupted page can be
+            # replayed safely because scene IDs deduplicate committed records.
+            with db:
+                db.execute("UPDATE ingestion_jobs SET cursor_or_watermark=?,items_found=?,items_added=? WHERE id=?",(cursor,found,added,jid))
             result=fetch(url,body)
             for item in result["features"]:
                 found+=1; props=item["properties"]; key=item["collection"]+":"+item["id"]
@@ -53,8 +64,12 @@ def refresh(config,root,fetch=request_json):
             nxt=next((l for l in result.get("links",[]) if l["rel"]=="next"),None)
             if not nxt:
                 cursor=None; break
-            url=nxt["href"]; body=nxt.get("body") if nxt.get("method","GET")=="POST" else None
-            cursor=json.dumps(nxt)
+            url=nxt["href"]
+            next_body=nxt.get("body")
+            if nxt.get('merge') and next_body is not None:
+                next_body={**(body or {}),**next_body}
+            body=next_body if nxt.get("method","GET").upper()=="POST" else None
+            cursor=json.dumps({'href':url,'method':'POST' if body is not None else 'GET','body':body})
         with db:
             db.execute("UPDATE ingestion_jobs SET end_time=?,status=?,items_found=?,items_added=?,cursor_or_watermark=? WHERE id=?",(now(),"partial" if cursor else "completed",found,added,cursor,jid))
     except Exception as e:
@@ -63,4 +78,4 @@ def refresh(config,root,fetch=request_json):
         raise
     finally:
         db.close()
-    return {"job_id":jid,"items_found":found,"items_added":added,"status":"partial" if cursor else "completed","asset_downloads":0}
+    return {"job_id":jid,"resumed_from":resume_job,"items_found":found,"items_added":added,"status":"partial" if cursor else "completed","asset_downloads":0}

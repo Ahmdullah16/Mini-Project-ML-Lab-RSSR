@@ -1,0 +1,14 @@
+{
+  "run_id": "17a5ba7aeff34c5c843cda428e7a8cd1",
+  "tile_id": "73817a7ef499749efc6d0c6473a1d3d979606bd8cf8d7e7787881ff4b7cce240",
+  "selection": "first validation tile; seed 17 fixed representative, not selected best",
+  "rgb_display_range": [
+    0,
+    0.3
+  ],
+  "error_range": [
+    0,
+    0.05
+  ],
+  "physical_calibration": "unverified"
+}

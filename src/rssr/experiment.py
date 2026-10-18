@@ -46,6 +46,11 @@ def train(config, manifest_path, root, resume=None):
         raise ValueError("Bounded run requires 1..10000 steps and batch size 1..32")
     torch.set_num_threads(2); torch.manual_seed(config["seed"]); torch.use_deterministic_algorithms(True)
     root=Path(root); manifest=json.loads(Path(manifest_path).read_text()); mh=digest(manifest_path)
+    weight=config.get('consistency_weight',0)
+    if not np.isfinite(weight) or weight<0:
+        raise ValueError('Consistency weight must be finite and nonnegative')
+    if weight and manifest.get('protocol')!='synthetic-naip-v1':
+        raise ValueError('Consistency operator is only justified for synthetic-naip-v1')
     if config["model"]["bands"] != len(manifest["bands"]) or config["model"]["scale"] != manifest["scale"]:
         raise ValueError("Model and dataset bands/scale differ")
     training,validation=load_tiles(manifest,"train"),load_tiles(manifest,"validation")
@@ -80,7 +85,7 @@ def train(config, manifest_path, root, resume=None):
             ids=torch.randint(len(training),(config["batch_size"],),generator=generator).tolist()
             lr=torch.stack([training[i][1] for i in ids]); hr=torch.stack([training[i][2] for i in ids])
             optimizer.zero_grad(set_to_none=True); pred=model(lr)
-            loss=F.l1_loss(pred,hr)
+            reconstruction=F.l1_loss(pred,hr); loss=reconstruction
             if config.get("consistency_weight",0):
                 # This operator is justified ONLY for the recorded synthetic degradation.
                 loss=loss+config["consistency_weight"]*F.l1_loss(torch.stack([degrade(p,manifest["scale"]) for p in pred]),lr)
@@ -94,7 +99,7 @@ def train(config, manifest_path, root, resume=None):
                     best_model=copy.deepcopy(model.state_dict()); best_step=step
                 state={"model":model.state_dict(),"optimizer":optimizer.state_dict(),"config":config,"step":step,"best":best,"best_model":best_model,"best_step":best_step,"generator":generator.get_state(),"rng":torch.get_rng_state(),"manifest_hash":mh,"run_id":rid,"provenance":"pilot synthetic degradation on NAIP; not a research-validated model"}
                 save_checkpoint(out/"last.pt",state)
-                history.append({"step":step,"train_l1":loss.item(),"validation_l1":val})
+                history.append({"step":step,"train_l1":reconstruction.item(),"train_total_loss":loss.item(),"validation_l1":val})
         selected=dict(state,model=best_model,selected_step=best_step,inference_only=True)
         save_checkpoint(out/"best.pt",selected)
         report={"run_id":rid,"config":config,"git_commit":git,"dirty":dirty,"manifest_hash":mh,"environment":environment,"hardware":hardware,"seconds":time.perf_counter()-started,"parameters":sum(p.numel() for p in model.parameters()),"history":history,"resume_from":str(resume) if resume else None}

@@ -2,7 +2,9 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. MP02–MP40 have introductory offline notebooks; full experiments, detailed practice solutions and learner mastery remain pending.
+**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02 now has expanded explanations, solutions and a measured real training-crop experiment; MP03–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
+
+Measured [three-seed ablations](reports/ablation-pilot.md) still trail bicubic. The [local HTTP demo](reports/demo-http.json) passed inference; no public deployment is claimed.
 
 Read [actual progress](docs/progress.md), [audit](docs/audit.md), [setup](docs/setup.md), [protocol](docs/protocol.md), [dataset cards](docs/dataset-cards.md), [architecture](docs/architecture.md), [literature](docs/literature.md), and [next session](docs/next_session.md).
 
@@ -10,7 +12,7 @@ Read [actual progress](docs/progress.md), [audit](docs/audit.md), [setup](docs/s
 
 Install with python -m pip install -e .[dev,demo] after creating a Python 3.12 environment and installing CPU PyTorch. See setup for quoting and platform details.
 
-`ash
+```bash
 rssr download configs/naip-pilot-manifest.json --root data
 python scripts/pilot.py
 python scripts/report.py
@@ -18,7 +20,7 @@ python -m pytest -q
 python scripts/execute_notebooks.py
 rssr refresh configs/stac.json --root data
 rssr export data/catalog.sqlite reports/export
-`
+```
 
 The pilot uses three real aerial scenes and **synthetic** degradation, not real cross-sensor satellite pairs. It evaluates validation only. Source imagery, SQLite and checkpoints stay in ignored data/. The default download is about 5.6 MB plus dependencies. No training or downloads occur at import. Research settings are templates, not measured results.
 
