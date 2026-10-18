@@ -1,3 +1,24 @@
+# Next session — 2026-10-19 checkpoint
+
+Continue branch feat/image-foundations. PR #2 was already merged before this work; do not overwrite prior checkpoints. Local code, dataset and experiment records are preserved.
+
+Next incomplete teaching task: expand MP05 Gaussian Blur Simulator from its authoritative brief. Define correlation versus convolution, kernel normalization, sigma/radius/boundaries; implement hand calculations, meaningful tests and synthetic plus existing training-crop comparisons. Then proceed to MP06 onward. Do not mark introductory notebooks complete.
+
+Executed this continuation:
+- tests/test_image_foundations.py: 6 passed; tests/test_catalog.py: 2 passed.
+- scripts/image_foundations_experiments.py: both real training-crop experiments completed with two inspected figures and reports/mp03-mp04-experiments.json.
+- scripts/execute_notebooks.py --only MP03 and --only MP04: real kernels passed, both explicit Python exit code 0.
+- scripts/check_demo.py: HTTP inference checked again; scripts/check_catalog.py validates the new cached metadata endpoint when RSSR_CATALOG is configured.
+- Network restrictions initially blocked Git fetch and Jupyter startup. Session network permission was granted; fetch then succeeded. Do not label that first stalled attempt as a notebook pass.
+
+Local setup: workspace work/venv/Scripts/python.exe; TEMP/TMP and Jupyter/IPython/Matplotlib caches under work/tmp. From the repository root the environment is ../../work/venv. Reuse existing dependencies and ignored data/. No new imagery, dependencies or GPU time was consumed this continuation.
+
+Launch local demo with RSSR_CHECKPOINT pointing at data/runs/b5f690d95fe4422b88f6f728ce6d6c2c/best.pt and RSSR_CATALOG at data/catalog.sqlite, then python app/demo.py. The catalog reader does not create, migrate or write the database. Cached partial jobs do not count as complete refreshes. The host needs persistent research storage; public deployment and remaining UI features remain pending.
+
+The previous detailed checkpoint follows for commands, resources and research limitations. Its MP03 next-action text is superseded by the MP05 instruction above.
+
+---
+
 # Next session
 
 Continue branch feat/notebook-demo-validation. Preserve completed work and data.
@@ -30,3 +51,4 @@ Expand MP03 from its authoritative image-resizing brief using the existing train
 For research, inspect texture diversity and acquire additional independent geographic scenes within the remaining bounded download budget before increasing training. Estimate throughput from measured runs but do not extrapolate tiny 32px patches to full images without a pilot. Investigate zero-residual initialization as a predeclared control; retain old results. Do not tune on the test scene.
 
 For public deployment, finish missing demo controls, then obtain authenticated access to a verified free host (e.g. eligible ZeroGPU account) through a secret store, not chat plaintext. Shell Git push previously failed in the credential helper; use connected GitHub tree/commit/branch tools for publishing. Never force-push or merge.
+Latest full-suite result (2026-10-19): 51 tests, 4 subtests, 2 known warnings, 11.47 seconds. Structure check: 40 IDs, 365 links.

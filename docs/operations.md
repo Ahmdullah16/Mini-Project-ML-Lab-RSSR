@@ -34,3 +34,5 @@ Local RGB demo: set RSSR_CHECKPOINT to a validated three-band checkpoint, then r
 `python app/demo.py`. Four-band scientific rasters use `rssr infer` and GeoTIFF output.
 Upload cap is 8 MB, input edge cap 1024, queue 2, concurrency 1. Gradio temporary
 cache expiry is 60 seconds; uploaded data are not added to research records.
+
+Set RSSR_CATALOG to an existing schema-v1 SQLite file to enable the demo cached catalog panel. It opens SQLite read-only, reports the latest job separately from last complete refresh and limits displayed observations to 20. Use python scripts/check_catalog.py for the local HTTP integration check. No automatic refresh, imagery download or training occurs from that panel.

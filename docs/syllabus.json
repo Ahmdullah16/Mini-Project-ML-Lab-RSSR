@@ -23,7 +23,7 @@
     "objective": "Nearest-neighbor, bilinear and bicubic interpolation.",
     "brief": "stage_01_python_numpy/MP03_image_resizing_laboratory/README.md",
     "prerequisites_original": "[MP02 — NumPy Image Laboratory](../../stage_01_python_numpy/MP02_numpy_image_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
+    "implementation_status": "expanded lesson, worked solutions, NumPy tests and real training-crop experiment executed; real kernel passed 2026-10-19; mastery unassessed",
     "learner_mastery": "not assessed"
   },
   {
@@ -32,7 +32,7 @@
     "objective": "Image differences, absolute error, MSE and visualization.",
     "brief": "stage_01_python_numpy/MP04_image_comparison_tool/README.md",
     "prerequisites_original": "[MP03 — Image Resizing Laboratory](../../stage_01_python_numpy/MP03_image_resizing_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
+    "implementation_status": "expanded lesson, worked solutions, NumPy tests and real training-crop experiment executed; real kernel passed 2026-10-19; mastery unassessed",
     "learner_mastery": "not assessed"
   },
   {

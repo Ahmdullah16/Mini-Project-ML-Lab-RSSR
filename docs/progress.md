@@ -1,6 +1,6 @@
 # Progress
 
-Last reconciled: 2026-10-18. No learner mastery or completed research claim.
+Last reconciled: 2026-10-19. No learner mastery or completed research claim.
 
 ## Implemented and executed
 
@@ -28,3 +28,16 @@ Known cached dependency wheels occupy 233,718,558 bytes; verified dataset files 
 Public hosting needs an authenticated hosting account and verified free entitlement. HF documentation has a free ZeroGPU exception for eligible personal accounts; ordinary compute Spaces require a paid plan. No plan was activated or public URL claimed. The local application still lacks full catalog/AOI UI, model selection, licensed in-app sample selection and metadata download controls; scientific GeoTIFF export is available through the CLI.
 
 Pending: full MP03-MP40 teaching content/solutions/real experiments, additional independent geographic scenes, real cross-sensor alignment/calibration, fresh asset acquisition/inference, automatic timestamp watermarks and scheduler recovery, strong official baseline, robustness/spectral/efficiency study, complete literature extraction, thesis/presentation deliverables, durable hosted storage, frozen final selection and held-out evaluation. The preliminary draft is not publication ready.
+
+## Continuation verified 2026-10-19
+
+PR #2 was already merged at c565276b1eda951b17d2dbabccc0f48e98e272af; the starting working tree was clean. Prior run records and checkpoints were preserved.
+
+MP03 and MP04 now contain expanded mathematics, hand calculations, practice and separate solutions, reusable NumPy operations, real training-crop experiments and measured figures. Six new offline tests passed. Both notebooks passed real kernels with explicit exit code 0. The first attempt stalled under network restrictions; granting session network access resolved both kernel startup and Git fetch. Existing local-kernel TCP warnings remain.
+
+MP03 used a checksummed 64x64 four-band training crop, area-average x2 degradation, and declared interpolation conventions. Bicubic had the lowest MSE on that crop. MP04 confirmed zero error for identical images and 0.0004 MSE for +0.02 brightness; a controlled shift demonstrated alignment sensitivity. No test scene or new download was used. Figures were visually checked. See reports/mp03-mp04-experiments.json.
+
+The demo now exposes read-only catalog freshness and acquisition/availability/ingestion times. Two database tests passed, including byte-for-byte nonmutation and distinguishing a newer partial job from an older complete job. Local HTTP returned 19 cached observations, latest status partial, and no complete refresh. No live-sensing claim or asset download. See reports/catalog-http.json.
+
+Full MP05-MP40 expansions, research generalization, fresh asset ingestion and public hosting remain unfinished. No new research-training result, learner completion or publication-readiness claim is made.
+`python -m pytest`: 51 tests and 4 subtests passed in 11.47 seconds, with the same two known GeoTIFF warnings. Structure validation: 40 IDs and 365 relative links passed.
