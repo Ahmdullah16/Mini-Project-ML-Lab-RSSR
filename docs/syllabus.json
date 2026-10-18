@@ -5,7 +5,7 @@
     "objective": "Pixels, RGB channels, grayscale images, image dimensions, bit depth, histograms.",
     "brief": "stage_01_python_numpy/MP01_digital_image_explorer/README.md",
     "prerequisites_original": "No machine learning knowledge or dataset is required. The notebook introduces indexing, variables, arrays, and functions as they appear. Use Python 3.11 or 3.12, a terminal, and NumPy, Matplotlib, and Pillow. JupyterLab is needed only for interactive notebook use. The headless runner needs only the three image libraries plus the Python standard library. CPU execution is sufficient.",
-    "implementation_status": "imported, validation pending",
+    "implementation_status": "preserved implementation; 10 tests and real kernel passed; mastery unassessed",
     "learner_mastery": "not assessed"
   },
   {
@@ -14,7 +14,7 @@
     "objective": "Indexing, slicing, reshaping, broadcasting, normalization, vectorized operations.",
     "brief": "stage_01_python_numpy/MP02_numpy_image_laboratory/README.md",
     "prerequisites_original": "[MP01 — Digital Image Explorer](../../stage_01_python_numpy/MP01_digital_image_explorer/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "expanded lesson, solution examples, tests and real training-crop timing executed; mastery unassessed",
     "learner_mastery": "not assessed"
   },
   {
@@ -23,7 +23,7 @@
     "objective": "Nearest-neighbor, bilinear and bicubic interpolation.",
     "brief": "stage_01_python_numpy/MP03_image_resizing_laboratory/README.md",
     "prerequisites_original": "[MP02 — NumPy Image Laboratory](../../stage_01_python_numpy/MP02_numpy_image_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -32,7 +32,7 @@
     "objective": "Image differences, absolute error, MSE and visualization.",
     "brief": "stage_01_python_numpy/MP04_image_comparison_tool/README.md",
     "prerequisites_original": "[MP03 — Image Resizing Laboratory](../../stage_01_python_numpy/MP03_image_resizing_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -41,7 +41,7 @@
     "objective": "Convolution, Gaussian kernels, kernel size and blur strength.",
     "brief": "stage_02_image_processing/MP05_gaussian_blur_simulator/README.md",
     "prerequisites_original": "[MP04 — Image Comparison Tool](../../stage_01_python_numpy/MP04_image_comparison_tool/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -50,7 +50,7 @@
     "objective": "Downsampling, scale factors, sampling and aliasing.",
     "brief": "stage_02_image_processing/MP06_low_resolution_image_generator/README.md",
     "prerequisites_original": "[MP05 — Gaussian Blur Simulator](../../stage_02_image_processing/MP05_gaussian_blur_simulator/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -59,7 +59,7 @@
     "objective": "Blur, noise, downsampling and degradation combinations.",
     "brief": "stage_02_image_processing/MP07_synthetic_degradation_laboratory/README.md",
     "prerequisites_original": "[MP06 — Low-Resolution Image Generator](../../stage_02_image_processing/MP06_low_resolution_image_generator/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -68,7 +68,7 @@
     "objective": "Fourier transforms, spatial frequencies, edge and texture information.",
     "brief": "stage_02_image_processing/MP08_frequency_domain_image_explorer/README.md",
     "prerequisites_original": "[MP07 — Synthetic Degradation Laboratory](../../stage_02_image_processing/MP07_synthetic_degradation_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -77,7 +77,7 @@
     "objective": "Reconstruction error, dynamic range and PSNR.",
     "brief": "stage_03_metrics/MP09_mse_and_psnr_from_scratch/README.md",
     "prerequisites_original": "[MP08 — Frequency-Domain Image Explorer](../../stage_02_image_processing/MP08_frequency_domain_image_explorer/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -86,7 +86,7 @@
     "objective": "Luminance, contrast and structural similarity.",
     "brief": "stage_03_metrics/MP10_ssim_evaluation_tool/README.md",
     "prerequisites_original": "[MP09 — MSE and PSNR from Scratch](../../stage_03_metrics/MP09_mse_and_psnr_from_scratch/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -95,7 +95,7 @@
     "objective": "Metrics, error maps, comparison figures and result tables.",
     "brief": "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/README.md",
     "prerequisites_original": "[MP10 — SSIM Evaluation Tool](../../stage_03_metrics/MP10_ssim_evaluation_tool/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -104,7 +104,7 @@
     "objective": "Vectors, matrices, tensor shapes, transformations and norms.",
     "brief": "stage_04_math_pytorch/MP12_linear_algebra_visualizer/README.md",
     "prerequisites_original": "[MP11 — Super-Resolution Evaluation Dashboard](../../stage_03_metrics/MP11_super_resolution_evaluation_dashboard/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -113,7 +113,7 @@
     "objective": "Derivatives, gradients, learning rates and optimization.",
     "brief": "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/README.md",
     "prerequisites_original": "[MP12 — Linear Algebra Visualizer](../../stage_04_math_pytorch/MP12_linear_algebra_visualizer/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -122,7 +122,7 @@
     "objective": "Forward propagation, activation functions, loss and backpropagation.",
     "brief": "stage_04_math_pytorch/MP14_neural_network_from_scratch/README.md",
     "prerequisites_original": "[MP13 — Gradient Descent from Scratch](../../stage_04_math_pytorch/MP13_gradient_descent_from_scratch/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -131,7 +131,7 @@
     "objective": "Tensors, autograd, optimizers and model training.",
     "brief": "stage_04_math_pytorch/MP15_first_pytorch_neural_network/README.md",
     "prerequisites_original": "[MP14 — Neural Network from Scratch](../../stage_04_math_pytorch/MP14_neural_network_from_scratch/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -140,7 +140,7 @@
     "objective": "Dataset, DataLoader, validation, checkpoints and reproducibility.",
     "brief": "stage_04_math_pytorch/MP16_reusable_training_pipeline/README.md",
     "prerequisites_original": "[MP15 — First PyTorch Neural Network](../../stage_04_math_pytorch/MP15_first_pytorch_neural_network/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -149,7 +149,7 @@
     "objective": "Kernels, padding, stride, feature maps and receptive fields.",
     "brief": "stage_05_cnn_sr/MP17_convolution_playground/README.md",
     "prerequisites_original": "[MP16 — Reusable Training Pipeline](../../stage_04_math_pytorch/MP16_reusable_training_pipeline/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -158,7 +158,7 @@
     "objective": "Sobel filters and learned convolutional features.",
     "brief": "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/README.md",
     "prerequisites_original": "[MP17 — Convolution Playground](../../stage_05_cnn_sr/MP17_convolution_playground/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -167,7 +167,7 @@
     "objective": "Supervised reconstruction using convolutional neural networks.",
     "brief": "stage_05_cnn_sr/MP19_cnn_image_reconstruction/README.md",
     "prerequisites_original": "[MP18 — CNN Edge Detection Laboratory](../../stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -176,7 +176,7 @@
     "objective": "Feature extraction, nonlinear mapping and SR reconstruction.",
     "brief": "stage_05_cnn_sr/MP20_srcnn_implementation/README.md",
     "prerequisites_original": "[MP19 — CNN Image Reconstruction](../../stage_05_cnn_sr/MP19_cnn_image_reconstruction/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -185,7 +185,7 @@
     "objective": "Residual blocks, skip connections and deep feature extraction.",
     "brief": "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/README.md",
     "prerequisites_original": "[MP20 — SRCNN Implementation](../../stage_05_cnn_sr/MP20_srcnn_implementation/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -194,7 +194,7 @@
     "objective": "Interpolation, transposed convolution and PixelShuffle.",
     "brief": "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/README.md",
     "prerequisites_original": "[MP21 — Residual CNN Super-Resolution](../../stage_05_cnn_sr/MP21_residual_cnn_super_resolution/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -203,7 +203,7 @@
     "objective": "Global pooling, channel weights and feature recalibration.",
     "brief": "stage_06_attention/MP23_channel_attention_from_scratch/README.md",
     "prerequisites_original": "[MP22 — Upsampling Architecture Comparison](../../stage_05_cnn_sr/MP22_upsampling_architecture_comparison/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -212,7 +212,7 @@
     "objective": "Spatial attention maps and feature weighting.",
     "brief": "stage_06_attention/MP24_spatial_attention_from_scratch/README.md",
     "prerequisites_original": "[MP23 — Channel Attention from Scratch](../../stage_06_attention/MP23_channel_attention_from_scratch/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -221,7 +221,7 @@
     "objective": "Channel attention, spatial attention and CBAM-style integration.",
     "brief": "stage_06_attention/MP25_combined_attention_module/README.md",
     "prerequisites_original": "[MP24 — Spatial Attention from Scratch](../../stage_06_attention/MP24_spatial_attention_from_scratch/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -230,7 +230,7 @@
     "objective": "Residual attention blocks and SR performance comparisons.",
     "brief": "stage_06_attention/MP26_attention_based_sr_network/README.md",
     "prerequisites_original": "[MP25 — Combined Attention Module](../../stage_06_attention/MP25_combined_attention_module/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -239,7 +239,7 @@
     "objective": "Queries, keys, values, scaled dot-product attention and softmax.",
     "brief": "stage_07_transformers/MP27_self_attention_from_scratch/README.md",
     "prerequisites_original": "[MP26 — Attention-Based SR Network](../../stage_06_attention/MP26_attention_based_sr_network/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -248,7 +248,7 @@
     "objective": "Attention heads, feature projections and concatenation.",
     "brief": "stage_07_transformers/MP28_multi_head_self_attention/README.md",
     "prerequisites_original": "[MP27 — Self-Attention from Scratch](../../stage_07_transformers/MP27_self_attention_from_scratch/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -257,7 +257,7 @@
     "objective": "Multi-head attention, normalization, residual connections and feed-forward networks.",
     "brief": "stage_07_transformers/MP29_transformer_encoder_block/README.md",
     "prerequisites_original": "[MP28 — Multi-Head Self-Attention](../../stage_07_transformers/MP28_multi_head_self_attention/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -266,7 +266,7 @@
     "objective": "Patch embeddings, tokens, local windows and attention complexity.",
     "brief": "stage_07_transformers/MP30_image_patches_and_window_attention/README.md",
     "prerequisites_original": "[MP29 — Transformer Encoder Block](../../stage_07_transformers/MP29_transformer_encoder_block/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -275,7 +275,7 @@
     "objective": "SwinIR-style image restoration and Transformer SR evaluation.",
     "brief": "stage_07_transformers/MP31_transformer_based_sr_baseline/README.md",
     "prerequisites_original": "[MP30 — Image Patches and Window Attention](../../stage_07_transformers/MP30_image_patches_and_window_attention/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -284,7 +284,7 @@
     "objective": "Satellite bands, spatial resolution, GeoTIFF and raster metadata.",
     "brief": "stage_08_remote_sensing/MP32_satellite_image_explorer/README.md",
     "prerequisites_original": "[MP31 — Transformer-Based SR Baseline](../../stage_07_transformers/MP31_transformer_based_sr_baseline/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -293,7 +293,7 @@
     "objective": "Band selection, normalization, invalid pixels and patch extraction.",
     "brief": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/README.md",
     "prerequisites_original": "[MP32 — Satellite Image Explorer](../../stage_08_remote_sensing/MP32_satellite_image_explorer/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -302,7 +302,7 @@
     "objective": "Paired data, synthetic degradation and alignment.",
     "brief": "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/README.md",
     "prerequisites_original": "[MP33 — Satellite Preprocessing Pipeline](../../stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -311,7 +311,7 @@
     "objective": "Scene-independent train, validation and test splits.",
     "brief": "stage_08_remote_sensing/MP35_geographic_dataset_splitting/README.md",
     "prerequisites_original": "[MP34 — Satellite HR–LR Pair Builder](../../stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -320,7 +320,7 @@
     "objective": "WorldStrat, Sen2Venµs, geometric and radiometric differences.",
     "brief": "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/README.md",
     "prerequisites_original": "[MP35 — Geographic Dataset Splitting](../../stage_08_remote_sensing/MP35_geographic_dataset_splitting/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -329,7 +329,7 @@
     "objective": "CNN features, Transformer features, addition and concatenation.",
     "brief": "stage_09_hybrid_research/MP37_feature_fusion_laboratory/README.md",
     "prerequisites_original": "[MP36 — Cross-Sensor Dataset Investigation](../../stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -338,7 +338,7 @@
     "objective": "Integrated architecture and reconstruction.",
     "brief": "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/README.md",
     "prerequisites_original": "[MP37 — Feature Fusion Laboratory](../../stage_09_hybrid_research/MP37_feature_fusion_laboratory/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -347,7 +347,7 @@
     "objective": "CNN, CNN + Attention, CNN + Transformer, full hybrid.",
     "brief": "stage_09_hybrid_research/MP39_controlled_ablation_study/README.md",
     "prerequisites_original": "[MP38 — Hybrid CNN–Attention–Transformer SR Model](../../stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   },
   {
@@ -356,7 +356,7 @@
     "objective": "Blur, noise, cross-sensor shift, parameters, FLOPs, inference time and GPU memory.",
     "brief": "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/README.md",
     "prerequisites_original": "[MP39 — Controlled Ablation Study](../../stage_09_hybrid_research/MP39_controlled_ablation_study/README.md) and the earlier foundations in the roadmap.\n\nRead the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.",
-    "implementation_status": "pending",
+    "implementation_status": "introductory notebook passed real Jupyter kernel; full project criteria pending",
     "learner_mastery": "not assessed"
   }
 ]

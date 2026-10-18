@@ -1,8 +1,10 @@
 # MP21 — Residual CNN Super-Resolution
 
-**Status: Not started** · **Curriculum: proposed for review**
+**Status: In progress** · **Curriculum: proposed for review**
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
+
+Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
 
 ## Learning objectives
 

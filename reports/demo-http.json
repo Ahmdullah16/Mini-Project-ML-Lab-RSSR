@@ -1,0 +1,33 @@
+{
+  "transport": "local HTTP Gradio client",
+  "http_status": 200,
+  "input_shape": [
+    32,
+    32,
+    3
+  ],
+  "output_shapes": [
+    [
+      64,
+      64,
+      3
+    ],
+    [
+      64,
+      64,
+      3
+    ]
+  ],
+  "provenance": {
+    "run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+    "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+    "status": "pilot synthetic degradation on NAIP; not a research-validated model",
+    "scale": 2,
+    "sensor": "user supplied; unverified",
+    "acquisition_time": "unknown",
+    "reference_metrics": "unavailable: no HR reference",
+    "display_scaling": "fixed [0,1], clipped for RGB display only"
+  },
+  "status": "passed",
+  "fixture": "synthetic RGB ramp; no fidelity claim"
+}

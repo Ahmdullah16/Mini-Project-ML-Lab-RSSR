@@ -1,35 +1,32 @@
 # Next session
 
-Resume from local feature branch feat/reproducible-rssr-lab. Do not restart.
+Continue branch feat/notebook-demo-validation. Preserve completed work and data.
+PR #1 was merged externally at 96b770559e3f866eed27cfc046dbbf61fc0f3382; no open PR existed at this continuation's start. Local implementation commit bf59f89 adds MP02, catalog recovery and ablation controls. A follow-up evidence commit and review PR contain the final continuation state. Do not merge automatically.
 
-Local commits: e870de1 (preserved syllabus/shared pipeline), 7c21f4e (validation
-extensions), dadf319 (corrected explicit uint16 scaling after inspecting real data).
-GitHub currently has minimal main only; shell push failed in Windows credential
-helper, so use connected GitHub create_tree/create_commit/create_branch and a draft
-PR. Do not merge. Local untracked reports/ contains real run summaries to preserve.
+## Verified commands from repository root
 
-Last verified commands from repository root with work/venv Python:
+Use the existing ../../work/venv/Scripts/python.exe from this checkout, or activate an equivalent environment. In the desktop workspace, work/venv is beside outputs/. Set TEMP/TMP to the writable work/tmp folder on restricted Windows; also set JUPYTER_RUNTIME_DIR, IPYTHONDIR and MPLCONFIGDIR below it.
 
-* scripts/pilot.py: five 100-step models completed; validation only.
-* scripts/report.py: generated measured table; every model below bicubic.
-* scripts/demo_pilot.py: RGB checkpoint data/runs/b5f690d95fe4422b88f6f728ce6d6c2c/best.pt.
-* MP01 unittest: 10 passed after workspace TEMP/TMP configuration.
-* exact resume check: four steps equals two + resume bit-for-bit.
-* scripts/check_structure.py: 40 IDs, 317 links at that revision.
-* refresh configs/stac.json: 10 added, then 0 duplicates; partial page budget.
+- python -m pytest -q: 43 tests, 4 subtests passed, 2 GeoTIFF warnings, 13.82 seconds.
+- python scripts/execute_notebooks.py: all 40 cell execution records passed. Windows wrapper returned nonzero after completion; see warning below. python scripts/execute_notebooks.py --only MP02 then ran the expanded lesson, with explicit Python exit code 0. Source hashes and absence of error outputs independently checked for all 40.
+- python scripts/mp02_experiment.py: real training crop, brightness exact equality and masked-statistics tolerance passed, measured timing record saved.
+- python scripts/ablation_pilot.py: 24 validation-only runs completed. python scripts/ablation_pilot.py --resume reverified all 24 hashes/configurations and did not retrain. Default refuses to overwrite an existing ledger.
+- Local app/demo.py with RSSR_CHECKPOINT=data/runs/b5f690d95fe4422b88f6f728ce6d6c2c/best.pt; python scripts/check_demo.py completed HTTP inference. The local server may need restarting after the desktop session ends.
+- Live refresh resumed prior job ed7874fc8c78498aa7de3e88d03f6e1a into job 5271e81960da4a6ba5ad096e9313222d: 9 found/added, partial. No assets downloaded. Continue explicitly with rssr refresh configs/stac.json --root data --resume-job 5271e81960da4a6ba5ad096e9313222d, or restart overlap if provider cursor expired.
+- python scripts/research_figures.py generated and visually checked two measured figures. python scripts/check_structure.py verified 40 IDs and 361 links before final checkpoint docs.
 
-Next action: finish full pytest, install missing Jupyter/Gradio dependencies from
-work/wheels, execute all notebooks in a real kernel, exercise local HTTP demo
-inference, record failures/results, then publish reviewable branch via connector.
-The prior transfer process may no longer exist after interruption; inspect wheel
-files and installed packages before redownloading. work/fetch_wheels.py records
-checksums and bounded transfers when completed. Existing venv shares bundled
-read-only scientific packages; no system installs are necessary.
+## Artifacts and limitations
 
-Resource limits: 2 GB new download ceiling and 2 GPU-hours. Three data assets total
-5,627,736 bytes. CPU-only execution used 0 GPU-hours. Dependency transfer accounting
-must distinguish unique cached payloads and duplicate/interrupted network attempts.
+reports/ contains execution ledgers, MP02 timings, HTTP evidence, ablation summaries, environment versions, figures and an explicitly preliminary research draft. Ignored data/runs/ contains actual checkpoint/training/evaluation files. Keep data/catalog.sqlite and data/prepared/ together; tile paths are absolute, so reprepare after relocation. Original five-model runs are preserved in reports/pilot-runs.json.
 
-Remaining work is listed honestly in progress.md. Public hosting credential and
-free-compute entitlement are absent; do not claim a hosted URL. Larger research
-resource estimates must follow actual pilot measurements, not invented throughput.
+The notebook dependency failure was fixed; Windows ZeroMQ shutdown messages persist and merit an isolated follow-up. Notebook cell success is verified; a clean exit across the complete 40-kernel batch is not claimed. No Colab or remote CI success is assumed.
+
+New pilot uses 100 steps, 3 seeds, one validation scene; every learned run trails bicubic. No independent-scene CI or final test evaluation. Known wheel cache 233,718,558 bytes, source images 5,627,736 bytes, 0 GPU-hours; unmeasured prior network retries prevent exact transfer accounting. No paid resources activated.
+
+## Precise next action
+
+Expand MP03 from its authoritative image-resizing brief using the existing training/validation data: explain coordinate conventions, implement and test from-scratch nearest/bilinear interpolation, compare with declared bicubic, show measured figures, and run the expanded notebook. Continue MP04 onward with genuine project-specific experiments and solutions, not completion labels on scaffolds.
+
+For research, inspect texture diversity and acquire additional independent geographic scenes within the remaining bounded download budget before increasing training. Estimate throughput from measured runs but do not extrapolate tiny 32px patches to full images without a pilot. Investigate zero-residual initialization as a predeclared control; retain old results. Do not tune on the test scene.
+
+For public deployment, finish missing demo controls, then obtain authenticated access to a verified free host (e.g. eligible ZeroGPU account) through a secret store, not chat plaintext. Shell Git push previously failed in the credential helper; use connected GitHub tree/commit/branch tools for publishing. Never force-push or merge.

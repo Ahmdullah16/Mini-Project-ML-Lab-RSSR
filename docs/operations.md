@@ -12,7 +12,7 @@ collection+item IDs deduplicate repeated overlapping queries. It records job sta
 end, failures, acquisition time and provider-created field. Retries use exponential
 backoff and honor numeric Retry-After, capped at 30 seconds. Pagination stops at the
 configured budget, records a next cursor, and reports partial rather than complete.
-Automatic continuation from saved cursors/watermarks is pending. Downloaded assets
+Resume a partial, failed, or interrupted job explicitly with `rssr refresh configs/stac.json --root data --resume-job JOB_ID`. The configuration must match exactly. Each request is checkpointed before fetching; replay deduplicates committed scene IDs. POST next-link merge bodies are supported. Expired provider cursors require restarting the overlapping query; automatic timestamp watermarks remain pending. Downloaded assets
 use checksummed resumable downloads with three attempts and atomic final replacement.
 
 Default proposed scheduler interval: 24 hours; configure an OS scheduler to run the
@@ -24,7 +24,7 @@ explicit commands. Fresh observations without an HR reference have no PSNR/SSIM.
 
 The local Gradio demo uses no database writer. Public deployment needs an account
 and verified free compute entitlement. Checked 2026-10-18: Hugging Face documentation
-states compute Spaces require a paid plan even though CPU Basic has no hourly cost:
+states ordinary compute Spaces require a paid plan even though CPU Basic has no hourly cost; eligible free personal accounts can host up to two ZeroGPU Gradio Spaces. That exception still needs an authenticated account and verified eligibility:
 https://huggingface.co/docs/hub/spaces-overview . Do not activate a plan automatically.
 Disk persistence must be checked: https://huggingface.co/docs/hub/spaces-storage .
 Never use ephemeral storage as the durable research database. A hosted SQL/object

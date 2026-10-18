@@ -1,0 +1,43 @@
+{
+  "seeds": [
+    17,
+    23,
+    41
+  ],
+  "steps": 100,
+  "variants": {
+    "cnn": {
+      "kind": "cnn"
+    },
+    "cnn_attention": {
+      "kind": "attention"
+    },
+    "cnn_transformer": {
+      "kind": "hybrid",
+      "use_attention": false
+    },
+    "hybrid": {
+      "kind": "hybrid"
+    },
+    "hybrid_add": {
+      "kind": "hybrid",
+      "fusion": "add"
+    },
+    "hybrid_gate": {
+      "kind": "hybrid",
+      "gate": true
+    },
+    "hybrid_constant_gate": {
+      "kind": "hybrid",
+      "constant_gate": 0.5
+    },
+    "hybrid_consistency": {
+      "kind": "hybrid"
+    }
+  },
+  "consistency_weight": 0.1,
+  "selection": "lowest validation L1 at steps 20,40,60,80,100",
+  "evaluation": "validation only; one scene, 16 nonoverlapping tiles; average tile metrics",
+  "hypothesis": "Exploratory controls; no final selection, novelty or geographic generalization claim",
+  "budget": "24 CPU runs, no new downloads, no GPU"
+}

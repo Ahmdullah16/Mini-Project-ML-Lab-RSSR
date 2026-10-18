@@ -39,11 +39,14 @@ class WindowBlock(nn.Module):
 
 
 class SRModel(nn.Module):
-    def __init__(self, bands=3, scale=2, width=16, kind="hybrid", gate=False, fusion="concat", window=4):
+    def __init__(self, bands=3, scale=2, width=16, kind="hybrid", gate=False, fusion="concat", window=4, use_attention=True, constant_gate=1.):
         super().__init__()
         if scale not in (2,4) or bands < 1 or width < 2 or kind not in ("srcnn","cnn","attention","transformer","hybrid") or fusion not in ("concat","add"):
             raise ValueError("Invalid model configuration")
         self.scale,self.bands,self.kind,self.fusion = scale,bands,kind,fusion
+        if not 0<=constant_gate<=1 or (gate and constant_gate!=1.):
+            raise ValueError('Constant gate must be in [0,1] and exclusive with learned gate')
+        self.constant_gate=constant_gate
         self.srcnn = None
         if kind == "srcnn":
             self.context = None
@@ -52,7 +55,7 @@ class SRModel(nn.Module):
         self.head = nn.Conv2d(bands,width,3,padding=1)
         self.local = nn.Sequential(nn.Conv2d(width,width,3,padding=1),nn.ReLU(),nn.Conv2d(width,width,3,padding=1)) if kind != "transformer" else None
         self.context = WindowBlock(width,window) if kind in ("transformer","hybrid") else None
-        self.attention = Attention(width) if kind in ("attention","hybrid") else nn.Identity()
+        self.attention = Attention(width) if use_attention and kind in ("attention","hybrid") else nn.Identity()
         self.fuse = nn.Conv2d(width*2,width,1) if kind == "hybrid" and fusion == "concat" else nn.Identity()
         self.tail = nn.Sequential(nn.Conv2d(width,bands*scale*scale,3,padding=1),nn.PixelShuffle(scale))
         self.gate = nn.Sequential(nn.Conv2d(bands,width,3,padding=1),nn.ReLU(),nn.Conv2d(width,bands,1),nn.Sigmoid()) if gate else None
@@ -74,7 +77,7 @@ class SRModel(nn.Module):
         residual = self.tail(self.attention(f))
         if self.gate is not None:
             residual = residual * F.interpolate(self.gate(x),scale_factor=self.scale,mode="nearest")
-        return base + residual
+        return base + self.constant_gate*residual
 
 
 @torch.inference_mode()

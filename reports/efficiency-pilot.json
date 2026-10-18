@@ -1,0 +1,68 @@
+[
+  {
+    "run_id": "485ac5c254df4acbabdbc690aedaf2cc",
+    "input_shape": [
+      1,
+      4,
+      64,
+      64
+    ],
+    "device": "cpu",
+    "precision": "float32",
+    "threads": 2,
+    "warmup": 3,
+    "repetitions": 20,
+    "median_seconds": 0.0034689500025706366,
+    "min_seconds": 0.0024621999909868464,
+    "max_seconds": 0.006482900003902614,
+    "parameters": 7552,
+    "timing_scope": "model only, excludes IO and tiling",
+    "macs": null,
+    "peak_memory_bytes": null,
+    "variant": "cnn"
+  },
+  {
+    "run_id": "755cd7e99b5e4cfb96cf0b9a2f22a8dc",
+    "input_shape": [
+      1,
+      4,
+      64,
+      64
+    ],
+    "device": "cpu",
+    "precision": "float32",
+    "threads": 2,
+    "warmup": 3,
+    "repetitions": 20,
+    "median_seconds": 0.0117769499993301,
+    "min_seconds": 0.008843100004014559,
+    "max_seconds": 0.022707900003297254,
+    "parameters": 10807,
+    "timing_scope": "model only, excludes IO and tiling",
+    "macs": null,
+    "peak_memory_bytes": null,
+    "variant": "hybrid"
+  },
+  {
+    "run_id": "17a5ba7aeff34c5c843cda428e7a8cd1",
+    "input_shape": [
+      1,
+      4,
+      64,
+      64
+    ],
+    "device": "cpu",
+    "precision": "float32",
+    "threads": 2,
+    "warmup": 3,
+    "repetitions": 20,
+    "median_seconds": 0.01048274999629939,
+    "min_seconds": 0.007615499998792075,
+    "max_seconds": 0.01695340000151191,
+    "parameters": 11467,
+    "timing_scope": "model only, excludes IO and tiling",
+    "macs": null,
+    "peak_memory_bytes": null,
+    "variant": "hybrid_gate"
+  }
+]

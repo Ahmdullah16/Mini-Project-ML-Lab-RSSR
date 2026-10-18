@@ -1,6 +1,6 @@
 # MP02 — NumPy Image Laboratory
 
-**Status: Not started** · **Curriculum: proposed for review**
+**Status: In progress** · **Curriculum: proposed for review**
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
@@ -24,7 +24,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Compare loops and vectorized brightness and masking operations; deliver equivalence checks and a timing table.
+**Executed implementation experiment; learner mastery unassessed.** See [notebook](../../notebooks/MP02.ipynb), [measured timings and provenance](../../reports/mp02-array-lab.json), and `python scripts/mp02_experiment.py`. Loop/vectorized brightness matched exactly; masked statistics matched within 1e-12 on a checksummed 64x64 training crop. No test scene was used.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -34,7 +34,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- A documented script or notebook and exact run command added during implementation; the MP02 notebook, reusable array_lab module and experiment script are supplied.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 

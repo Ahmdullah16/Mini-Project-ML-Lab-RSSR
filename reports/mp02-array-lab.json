@@ -1,0 +1,76 @@
+{
+  "project": "MP02",
+  "source_sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+  "manifest_sha256": "ece6813b3dbf0d05c9afff333ecbbad665b338345d4da29b9ddfe76064fe63b4",
+  "scene_id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+  "split": "train",
+  "crop_xywh": [
+    0,
+    0,
+    64,
+    64
+  ],
+  "shape_hwc": [
+    64,
+    64,
+    4
+  ],
+  "valid_pixels": 4096,
+  "bands": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "units": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "dtype": "float64",
+  "equivalence": "passed",
+  "channel_mean": [
+    0.12634230957031256,
+    0.10029414062500014,
+    0.07850183105468728,
+    0.1844067138671877
+  ],
+  "population_variance": [
+    0.00035731812933385365,
+    0.0002329429685974112,
+    0.00017381971588551986,
+    0.00027853557259976903
+  ],
+  "timings": [
+    {
+      "operation": "brightness",
+      "implementation": "loop",
+      "median_seconds": 0.01846300000033807,
+      "repetitions": 5,
+      "warmup": 1
+    },
+    {
+      "operation": "brightness",
+      "implementation": "vectorized",
+      "median_seconds": 6.540000322274864e-05,
+      "repetitions": 5,
+      "warmup": 1
+    },
+    {
+      "operation": "masked_stats",
+      "implementation": "loop",
+      "median_seconds": 0.027429299996583723,
+      "repetitions": 5,
+      "warmup": 1
+    },
+    {
+      "operation": "masked_stats",
+      "implementation": "vectorized",
+      "median_seconds": 0.0006436000112444162,
+      "repetitions": 5,
+      "warmup": 1
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "limitations": "One training crop; microbenchmark includes function validation and allocation, excludes IO. Timing varies with CPU load. No SR performance claim."
+}

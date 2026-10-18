@@ -28,7 +28,7 @@ In Colab, clone the implementation target and install it:
 !pip install -e '.[dev,demo]'
 ```
 
-Until the PR is merged, check out `feat/reproducible-rssr-lab` after cloning.
+The initial pilot PR #1 was merged. Continuation work is on `feat/notebook-demo-validation`; check out that branch until its PR is merged.
 Save `--root` to a persistent mounted location for training. Downloads, prepared
 manifests, SQLite and checkpoints must all be copied together; prepared manifests
 currently contain absolute local tile paths, so rerun preparation after relocation.
@@ -37,5 +37,5 @@ Use `best.pt` for inference, never resume. Best validation L1 selects the checkp
 
 Restricted Windows environments may need TEMP and TMP set to a writable workspace
 folder before invoking Python. The measured environment used a venv with read-only
-access to bundled NumPy/Pillow/Matplotlib plus isolated installed dependencies;
+access to bundled NumPy/Pillow and isolated Matplotlib plus isolated installed dependencies;
 the lock records resolved versions, rather than claiming a pristine base install.
