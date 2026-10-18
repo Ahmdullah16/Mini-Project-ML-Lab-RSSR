@@ -99,7 +99,7 @@ def prepare(manifest_path, root, scale=2, patch=32, limit=16):
     mh = digest(manifest_path)
     with db:
         db.execute("INSERT OR IGNORE INTO datasets VALUES(?,?,?,?,?,?,?)",(mh,manifest["name"],manifest["version"],manifest["source_url"],manifest["license"],manifest["citation"],mh))
-    out = root/"prepared"/f"{mh[:12]}-x{scale}-p{patch}-n{limit}"
+    out = root/"prepared"/f"{mh[:12]}-x{scale}-p{patch}-n{limit}-portable-v1"
     out.mkdir(parents=True,exist_ok=True)
     tiles=[]
     for item in scenes:
@@ -121,7 +121,7 @@ def prepare(manifest_path, root, scale=2, patch=32, limit=16):
                 path=out/f"{tid}.npz"
                 if not path.exists():
                     np.savez(path,lr=lr.numpy(),hr=hr.numpy())
-                record={"id":tid,"scene_id":sid,"split":item["split"],"path":str(path.resolve()),"sha256":digest(path)}
+                record={"id":tid,"scene_id":sid,"split":item["split"],"path":path.name,"sha256":digest(path)}
                 tiles.append(record)
                 with db:
                     db.execute("INSERT OR IGNORE INTO pairs_or_tiles VALUES(?,?,?,?,?,?,?,?,?)",(tid,item["split"],str(path),str(path),scale,json.dumps([z,y,patch,patch]),"synthetic, same HR grid",json.dumps(cfg),record["sha256"]))

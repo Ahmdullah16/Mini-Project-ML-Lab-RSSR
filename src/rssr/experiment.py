@@ -16,15 +16,20 @@ from .db import connect
 from .data import now
 
 
-def load_tiles(manifest, split):
+def load_tiles(manifest, split, base=None):
     rows = [r for r in manifest["tiles"] if r["split"] == split]
     if not rows:
         raise ValueError(f"No {split} tiles")
     result=[]
     for row in rows:
-        if digest(row["path"]) != row["sha256"]:
+        path=Path(row['path'])
+        if not path.is_absolute():
+            if base is None:
+                raise ValueError('Relative tile paths require the prepared manifest directory')
+            path=Path(base)/path
+        if digest(path) != row["sha256"]:
             raise ValueError("Prepared tile checksum mismatch")
-        with np.load(row["path"],allow_pickle=False) as d:
+        with np.load(path,allow_pickle=False) as d:
             result.append((row,torch.from_numpy(d["lr"]),torch.from_numpy(d["hr"])))
     return result
 
@@ -53,7 +58,7 @@ def train(config, manifest_path, root, resume=None):
         raise ValueError('Consistency operator is only justified for synthetic-naip-v1')
     if config["model"]["bands"] != len(manifest["bands"]) or config["model"]["scale"] != manifest["scale"]:
         raise ValueError("Model and dataset bands/scale differ")
-    training,validation=load_tiles(manifest,"train"),load_tiles(manifest,"validation")
+    training,validation=load_tiles(manifest,"train",Path(manifest_path).parent),load_tiles(manifest,"validation",Path(manifest_path).parent)
     model=SRModel(**config["model"]); optimizer=torch.optim.Adam(model.parameters(),lr=config["lr"])
     generator=torch.Generator().manual_seed(config["seed"])
     step=0; best=float("inf"); best_model=None; best_step=0
@@ -120,7 +125,7 @@ def evaluate(checkpoint, manifest_path, root, split="validation"):
     model,state=load_model(checkpoint); manifest=json.loads(Path(manifest_path).read_text())
     if digest(manifest_path) != state["manifest_hash"]:
         raise ValueError("Evaluation dataset mismatch")
-    rows=load_tiles(manifest,split); output=[]
+    rows=load_tiles(manifest,split,Path(manifest_path).parent); output=[]
     torch.set_num_threads(2)
     for row,x,hr in rows:
         with torch.inference_mode():

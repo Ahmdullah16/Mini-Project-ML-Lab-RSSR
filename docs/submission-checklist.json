@@ -1,0 +1,274 @@
+[
+  {
+    "id": "1a",
+    "requirement": "Resource authorization",
+    "status": "passed",
+    "acceptance": "Bounded CPU runs; no paid service",
+    "implementation_or_evidence": "reports/environment-continuation.json",
+    "assessment": "No charges or GPU use; transfer overhead from the original session remains incompletely measured."
+  },
+  {
+    "id": "1b",
+    "requirement": "Exact resource accounting",
+    "status": "failed",
+    "acceptance": "Account for all wire bytes and compute",
+    "implementation_or_evidence": "reports/environment-continuation.json",
+    "assessment": "New COG transfers counted; historical retry overhead unknown."
+  },
+  {
+    "id": "2",
+    "requirement": "Audit and preserve",
+    "status": "passed",
+    "acceptance": "Preserve source syllabus, old runs, inspect branches/PRs",
+    "implementation_or_evidence": "docs/import-manifest.json",
+    "assessment": "PRs 1\u20133 merged externally; current work is isolated on feat/submission-pipeline."
+  },
+  {
+    "id": "3a",
+    "requirement": "40 IDs and nine stages",
+    "status": "passed",
+    "acceptance": "Unique authoritative IDs/titles/objectives and prerequisites",
+    "implementation_or_evidence": "docs/syllabus.json",
+    "assessment": "Structure checker verified IDs; mastery remains unassessed."
+  },
+  {
+    "id": "3b",
+    "requirement": "Full teaching deliverables",
+    "status": "failed",
+    "acceptance": "Every lesson has defined mathematics, worked examples, exercises, solutions and appropriate real experiments",
+    "implementation_or_evidence": "notebooks",
+    "assessment": "MP01\u201304 expanded; MP05\u201340 still introductory."
+  },
+  {
+    "id": "4a",
+    "requirement": "Shared CLI/code",
+    "status": "passed",
+    "acceptance": "Separate reusable data, training, metrics, inference, database modules",
+    "implementation_or_evidence": "src/rssr/cli.py",
+    "assessment": "Existing offline tests and local workflows; new fresh workflow has an explicit script."
+  },
+  {
+    "id": "4b",
+    "requirement": "Portable reproducibility",
+    "status": "failed",
+    "acceptance": "Fresh checkout/environment quickstart, pinned dependencies and relocatable assets",
+    "implementation_or_evidence": "scripts/portable_quickstart.py",
+    "assessment": "Relative prepared paths implemented; fresh-checkout execution in progress."
+  },
+  {
+    "id": "5a",
+    "requirement": "Synthetic SR pipeline",
+    "status": "passed",
+    "acceptance": "Licensed real subset through training/validation/inference/database",
+    "implementation_or_evidence": "reports/pilot-runs.json",
+    "assessment": "Executed engineering pilot only."
+  },
+  {
+    "id": "5b",
+    "requirement": "Scientific cross-sensor pipeline",
+    "status": "failed",
+    "acceptance": "Verified calibration, registration, masks and spectral compatibility",
+    "implementation_or_evidence": "docs/protocol.md",
+    "assessment": "No validated real paired cross-sensor study."
+  },
+  {
+    "id": "6a",
+    "requirement": "Dataset provenance",
+    "status": "passed",
+    "acceptance": "Pinned source versions, checksums, licensing and geographic split",
+    "implementation_or_evidence": "configs/naip-pilot-manifest.json",
+    "assessment": "Three NAIP scenes; fixed numerical scaling, not verified reflectance."
+  },
+  {
+    "id": "6b",
+    "requirement": "Independent research scenes",
+    "status": "failed",
+    "acceptance": "Multiple independent train/validation regions and suitable paired satellite data",
+    "implementation_or_evidence": "docs/dataset-cards.md",
+    "assessment": "Current research validation has one scene."
+  },
+  {
+    "id": "7a",
+    "requirement": "Fresh acquisition-to-output",
+    "status": "passed",
+    "acceptance": "Query, bounded download, mask/CRS validation, inference, provenance and database record",
+    "implementation_or_evidence": "src/rssr/fresh.py",
+    "assessment": "Sentinel acquisition 2026-10-16 executed; 1,900,544 bytes; no HR metrics; domain shift unvalidated."
+  },
+  {
+    "id": "7b",
+    "requirement": "Incremental durable ingestion",
+    "status": "failed",
+    "acceptance": "Watermarks, deduplication, retries, expired-cursor and scheduler recovery",
+    "implementation_or_evidence": "src/rssr/ingest.py",
+    "assessment": "Explicit cursor recovery works; automatic watermarks and robust scheduler recovery incomplete."
+  },
+  {
+    "id": "7c",
+    "requirement": "Freshness/offline honesty",
+    "status": "passed",
+    "acceptance": "Separate acquisition/availability/ingestion time; partial versus complete refresh",
+    "implementation_or_evidence": "src/rssr/catalog.py",
+    "assessment": "Read-only cached HTTP view tested."
+  },
+  {
+    "id": "8a",
+    "requirement": "Local experiment database",
+    "status": "passed",
+    "acceptance": "Foreign keys, migrations, integrity, normalized records, exports",
+    "implementation_or_evidence": "src/rssr/db.py",
+    "assessment": "Additive v2 inference_jobs migration tested; existing rows preserved."
+  },
+  {
+    "id": "8b",
+    "requirement": "Hosted persistence",
+    "status": "blocked",
+    "acceptance": "Restart preserves required server-side data",
+    "implementation_or_evidence": "docs/operations.md",
+    "assessment": "No authenticated free host/persistent storage provisioned."
+  },
+  {
+    "id": "9a",
+    "requirement": "Literature verification",
+    "status": "failed",
+    "acceptance": "Complete primary-source extraction matrix and bibliography",
+    "implementation_or_evidence": "docs/literature.md",
+    "assessment": "Initial verified references exist; detailed extraction/overlap remains incomplete."
+  },
+  {
+    "id": "9b",
+    "requirement": "Defensible contribution",
+    "status": "failed",
+    "acceptance": "Test hypothesis against attenuation and other controls under shift",
+    "implementation_or_evidence": "reports/ablation-pilot.md",
+    "assessment": "Constant attenuation explains much of pilot gain; no novelty established."
+  },
+  {
+    "id": "10a",
+    "requirement": "Educational baselines/ablations",
+    "status": "passed",
+    "acceptance": "Classical, SRCNN, CNN, attention, Transformer, hybrid and required controls",
+    "implementation_or_evidence": "reports/ablation-pilot-runs.json",
+    "assessment": "24 measured runs across three seeds, with limits disclosed."
+  },
+  {
+    "id": "10b",
+    "requirement": "Strong official baseline",
+    "status": "failed",
+    "acceptance": "Compatible official/pretrained modern comparison",
+    "implementation_or_evidence": "docs/protocol.md",
+    "assessment": "Not reproduced."
+  },
+  {
+    "id": "11a",
+    "requirement": "Metric protocol",
+    "status": "passed",
+    "acceptance": "Range, border, bands, masks and aggregation explicit",
+    "implementation_or_evidence": "docs/protocol.md",
+    "assessment": "Synthetic protocol implemented; physical-unit metrics guarded."
+  },
+  {
+    "id": "11b",
+    "requirement": "Research breadth",
+    "status": "failed",
+    "acceptance": "Spectral, robustness, alignment, downstream when justified, geographic CI",
+    "implementation_or_evidence": "reports/ablation-pilot.md",
+    "assessment": "One scene cannot support geographic confidence intervals."
+  },
+  {
+    "id": "11c",
+    "requirement": "Efficiency",
+    "status": "failed",
+    "acceptance": "Parameters, latency, peak memory and declared FLOP/MAC conventions",
+    "implementation_or_evidence": "reports/efficiency-pilot.json",
+    "assessment": "CPU latency and parameters measured; peak memory/FLOPs incomplete."
+  },
+  {
+    "id": "11d",
+    "requirement": "Final selection and held-out test",
+    "status": "failed",
+    "acceptance": "Freeze selection then evaluate once without tuning",
+    "implementation_or_evidence": "src/rssr/experiment.py",
+    "assessment": "No final model selected; test remains unused."
+  },
+  {
+    "id": "12a",
+    "requirement": "Resume and provenance",
+    "status": "passed",
+    "acceptance": "Exact interrupted resume; configs, seeds, environment, hashes",
+    "implementation_or_evidence": "tests/test_experiment.py",
+    "assessment": "Existing equivalence test passed; relocatable prepared manifests tested."
+  },
+  {
+    "id": "12b",
+    "requirement": "All notebooks clean exits",
+    "status": "failed",
+    "acceptance": "All final notebook versions in isolated kernels with clean process exits",
+    "implementation_or_evidence": "scripts/execute_notebooks.py",
+    "assessment": "Earlier cell evidence exists; final clean-environment batch pending."
+  },
+  {
+    "id": "13a",
+    "requirement": "Local inference demo",
+    "status": "passed",
+    "acceptance": "Real upload/inference API and validated output dimensions",
+    "implementation_or_evidence": "reports/demo-http.json",
+    "assessment": "Local HTTP inference verified."
+  },
+  {
+    "id": "13b",
+    "requirement": "Complete demo controls",
+    "status": "failed",
+    "acceptance": "Samples, compatible models, AOI, metadata, downloads, scientific export",
+    "implementation_or_evidence": "app/demo.py",
+    "assessment": "Catalog/upload/basic comparison implemented; remaining controls in progress."
+  },
+  {
+    "id": "13c",
+    "requirement": "Public inference deployment",
+    "status": "blocked",
+    "acceptance": "Public URL completes inference and restart/persistence check",
+    "implementation_or_evidence": "docs/operations.md",
+    "assessment": "Authenticated host access/entitlement missing; no URL claimed."
+  },
+  {
+    "id": "14a",
+    "requirement": "Submission artifacts",
+    "status": "failed",
+    "acceptance": "Final report, slides, examiner guide, executed notebook bundle and manifest",
+    "implementation_or_evidence": "reports/research-draft.md",
+    "assessment": "Preliminary report and figures only; package incomplete."
+  },
+  {
+    "id": "14b",
+    "requirement": "Consistent documentation",
+    "status": "failed",
+    "acceptance": "README, briefs, progress and evidence agree",
+    "implementation_or_evidence": "README.md",
+    "assessment": "Known stale introductory-status text being reconciled."
+  },
+  {
+    "id": "15a",
+    "requirement": "Local tests",
+    "status": "passed",
+    "acceptance": "Offline regression suite and real-data smoke integration",
+    "implementation_or_evidence": "tests",
+    "assessment": "Last full suite 51 tests plus four subtests; new targeted tests pass; final full run pending."
+  },
+  {
+    "id": "15b",
+    "requirement": "Final commit CI",
+    "status": "failed",
+    "acceptance": "CI passes on actual submission commit",
+    "implementation_or_evidence": ".github/workflows/test.yml",
+    "assessment": "Final commit not selected; CI must be checked after publication."
+  },
+  {
+    "id": "15c",
+    "requirement": "Review/checkpoints",
+    "status": "passed",
+    "acceptance": "Validated commits, resumable exact next actions, no automatic merge",
+    "implementation_or_evidence": "docs/next_session.md",
+    "assessment": "Submission work checkpoint maintained; no institutional submission authorized."
+  }
+]

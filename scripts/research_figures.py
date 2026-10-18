@@ -21,7 +21,7 @@ fig.savefig(root/'reports/ablation-pilot.png',dpi=140); plt.close(fig)
 record=next(r for r in runs if r['variant']=='hybrid_gate' and r['seed']==17)
 model,state=load_model(root/'data/runs'/record['run_id']/'best.pt')
 manifest=next(p for p in (root/'data/prepared').glob('*/manifest.json') if __import__('rssr.core',fromlist=['digest']).digest(p)==state['manifest_hash'])
-row,lr,hr=load_tiles(json.loads(manifest.read_text()),'validation')[0]
+row,lr,hr=load_tiles(json.loads(manifest.read_text()),'validation',manifest.parent)[0]
 with torch.inference_mode(): sr=model(lr[None])[0]
 base=resize(lr,2)
 fig,axes=plt.subplots(1,5,figsize=(14,3),layout='constrained')

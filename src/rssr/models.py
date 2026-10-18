@@ -39,7 +39,7 @@ class WindowBlock(nn.Module):
 
 
 class SRModel(nn.Module):
-    def __init__(self, bands=3, scale=2, width=16, kind="hybrid", gate=False, fusion="concat", window=4, use_attention=True, constant_gate=1.):
+    def __init__(self, bands=3, scale=2, width=16, kind="hybrid", gate=False, fusion="concat", window=4, use_attention=True, constant_gate=1., zero_residual=False):
         super().__init__()
         if scale not in (2,4) or bands < 1 or width < 2 or kind not in ("srcnn","cnn","attention","transformer","hybrid") or fusion not in ("concat","add"):
             raise ValueError("Invalid model configuration")
@@ -58,6 +58,8 @@ class SRModel(nn.Module):
         self.attention = Attention(width) if use_attention and kind in ("attention","hybrid") else nn.Identity()
         self.fuse = nn.Conv2d(width*2,width,1) if kind == "hybrid" and fusion == "concat" else nn.Identity()
         self.tail = nn.Sequential(nn.Conv2d(width,bands*scale*scale,3,padding=1),nn.PixelShuffle(scale))
+        if zero_residual:
+            nn.init.zeros_(self.tail[0].weight); nn.init.zeros_(self.tail[0].bias)
         self.gate = nn.Sequential(nn.Conv2d(bands,width,3,padding=1),nn.ReLU(),nn.Conv2d(width,bands,1),nn.Sigmoid()) if gate else None
 
     def forward(self, x):

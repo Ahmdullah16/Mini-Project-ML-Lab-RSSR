@@ -14,7 +14,7 @@ def snapshot(path,limit=20,now=None):
     db=sqlite3.connect(path.as_uri()+'?mode=ro',uri=True)
     db.row_factory=sqlite3.Row
     try:
-        if [r[0] for r in db.execute('SELECT version FROM schema_versions')]!=[1]:
+        if [r[0] for r in db.execute('SELECT version FROM schema_versions')] not in ([1],[2]):
             raise ValueError('Unsupported catalog schema')
         latest=db.execute('SELECT id,start_time,end_time,status,items_found,items_added FROM ingestion_jobs ORDER BY start_time DESC,id DESC LIMIT 1').fetchone()
         complete=db.execute("SELECT end_time FROM ingestion_jobs WHERE status='completed' AND end_time IS NOT NULL ORDER BY end_time DESC LIMIT 1").fetchone()

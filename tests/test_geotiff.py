@@ -10,7 +10,9 @@ def test_export_preserves_extent_and_mask(tmp_path):
     source=tmp_path/'source.tif'; target=tmp_path/'output.tif'
     transform=from_origin(100,200,10,10)
     x=np.ones((4,8,8),dtype=np.uint8)*100; x[:,0,0]=0
-    with rasterio.open(source,'w',driver='GTiff',width=8,height=8,count=4,dtype='uint8',transform=transform,crs='EPSG:32632',nodata=0) as ds: ds.write(x)
+    with rasterio.open(source,'w',driver='GTiff',width=8,height=8,count=4,dtype='uint8',transform=transform,crs='EPSG:32632',nodata=0) as ds:
+        ds.write(x)
+        ds.colorinterp=(rasterio.enums.ColorInterp.red,rasterio.enums.ColorInterp.green,rasterio.enums.ColorInterp.blue,rasterio.enums.ColorInterp.undefined)
     cfg={'model':{'bands':4,'width':8,'kind':'cnn','scale':2}}
     checkpoint=tmp_path/'model.pt'; torch.save({'model':SRModel(**cfg['model']).state_dict(),'config':cfg,'run_id':'fixture','provenance':'random test fixture'},checkpoint)
     geotiff(checkpoint,source,target,255)
