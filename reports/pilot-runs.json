@@ -1,0 +1,27 @@
+[
+  {
+    "model": "cnn",
+    "run": "data\\runs\\22be1e98c0a04353a08a115cdba92d45",
+    "evaluation": "data\\runs\\22be1e98c0a04353a08a115cdba92d45\\evaluation-validation.json"
+  },
+  {
+    "model": "attention",
+    "run": "data\\runs\\582a397315fd4c81ad58c4db547ea133",
+    "evaluation": "data\\runs\\582a397315fd4c81ad58c4db547ea133\\evaluation-validation.json"
+  },
+  {
+    "model": "transformer",
+    "run": "data\\runs\\eee0da5de13b44dfaaed3fc25f4243d0",
+    "evaluation": "data\\runs\\eee0da5de13b44dfaaed3fc25f4243d0\\evaluation-validation.json"
+  },
+  {
+    "model": "hybrid",
+    "run": "data\\runs\\69a891269d58472e813647ca72d97fd1",
+    "evaluation": "data\\runs\\69a891269d58472e813647ca72d97fd1\\evaluation-validation.json"
+  },
+  {
+    "model": "srcnn",
+    "run": "data\\runs\\cf4d768adbf2484ea00de5c7db9b85f7",
+    "evaluation": "data\\runs\\cf4d768adbf2484ea00de5c7db9b85f7\\evaluation-validation.json"
+  }
+]

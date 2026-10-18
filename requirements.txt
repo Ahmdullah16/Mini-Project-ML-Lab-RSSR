@@ -1,0 +1,15 @@
+# Starter stack for Python 3.11/3.12; unpinned, not a tested lockfile.
+# Use the official PyTorch selector for accelerator-specific builds.
+# Record resolved package versions for each implemented experiment.
+numpy
+Pillow
+matplotlib
+scipy
+scikit-image
+jupyterlab
+ipykernel
+torch
+torchvision
+tqdm
+# Stage 08 onward: geospatial raster IO.
+rasterio

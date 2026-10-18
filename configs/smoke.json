@@ -1,0 +1,17 @@
+{
+  "seed": 17,
+  "steps": 2,
+  "batch_size": 4,
+  "lr": 0.001,
+  "validate_every": 2,
+  "consistency_weight": 0.0,
+  "model": {
+    "bands": 4,
+    "scale": 2,
+    "width": 16,
+    "kind": "hybrid",
+    "gate": false,
+    "fusion": "concat",
+    "window": 4
+  }
+}

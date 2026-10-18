@@ -1,0 +1,29 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+# Datasets and generated research artifacts, at any level
+data/
+datasets/
+outputs/
+results/
+runs/
+checkpoints/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.onnx
