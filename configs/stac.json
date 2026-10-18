@@ -1,0 +1,27 @@
+{
+  "endpoint": "https://earth-search.aws.element84.com/v1",
+  "bbox": [
+    -114,
+    43,
+    -113.9,
+    43.1
+  ],
+  "datetime": "2026-09-01T00:00:00Z/2026-10-18T00:00:00Z",
+  "collections": [
+    "sentinel-2-l2a"
+  ],
+  "bands": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "query": {
+    "eo:cloud_cover": {
+      "lt": 20
+    }
+  },
+  "limit": 5,
+  "max_pages": 2,
+  "refresh_interval_hours": 24
+}
