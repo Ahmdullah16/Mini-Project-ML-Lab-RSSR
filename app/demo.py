@@ -38,6 +38,15 @@ def build():
             baseline=gr.Image(label='Bicubic baseline'); sr=gr.Image(label='Pilot model estimate')
         metadata=gr.JSON(label='Provenance')
         button.click(lambda a:predict(a,checkpoint),inputs=image,outputs=[baseline,sr,metadata],api_name='predict',concurrency_limit=1)
+        with gr.Accordion('Cached satellite catalog and data age',open=False):
+            gr.Markdown('Read-only metadata snapshot. Partial refreshes are shown separately from the last complete refresh. This does not download imagery or retrain the model.')
+            catalog=gr.JSON(label='Catalog freshness and recent observations')
+            read_catalog=gr.Button('Read local catalog')
+            def catalog_status():
+                from rssr.catalog import snapshot
+                path=os.environ.get('RSSR_CATALOG')
+                return snapshot(path) if path else {'status':'No catalog configured; set RSSR_CATALOG on the host'}
+            read_catalog.click(catalog_status,outputs=catalog,api_name='catalog',concurrency_limit=1)
     return demo
 
 

@@ -10,26 +10,6 @@
     "canonical_utf8_lf_sha256": "c2c525624e4ed80f995af22476ae45eea2947301df7c925a0cc969325016290f"
   },
   {
-    "source": "notebooks\\MP03.ipynb",
-    "source_sha256": "423c8c4b8bc6eec54831dd083869a463e13707efb6c941cefdd340639a626eab",
-    "started_at": "2026-10-18T12:08:39.562321+00:00",
-    "executed": "data\\executed_notebooks\\MP03.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:08:49.801054+00:00",
-    "canonical_utf8_lf_sha256": "b6150a6426d917f8ec9912e7afc793e80cc072cdf2588237107d52421501e479"
-  },
-  {
-    "source": "notebooks\\MP04.ipynb",
-    "source_sha256": "3501234cd16a235909a9392e0b86f2cfaec8fd76fbbbc31cb45ce99dfbbfabef",
-    "started_at": "2026-10-18T12:08:49.811367+00:00",
-    "executed": "data\\executed_notebooks\\MP04.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:01.808197+00:00",
-    "canonical_utf8_lf_sha256": "904816630b37814a1ad53938f3c53166cd317df1b77244479fbca771ba6e764f"
-  },
-  {
     "source": "notebooks\\MP05.ipynb",
     "source_sha256": "e2f3d0775a8c4a6cb82848b530bb208756503c17a51c868a5c94edbd09de948b",
     "started_at": "2026-10-18T12:09:01.812234+00:00",
@@ -398,5 +378,23 @@
     "status": "passed-real-jupyter-kernel",
     "finished_at": "2026-10-18T12:15:37.741264+00:00",
     "canonical_utf8_lf_sha256": "960df6e931a65a034dfb23ad6d3fb92dc2112ea0196068934ed77594ce47aa7f"
+  },
+  {
+    "source": "notebooks\\MP03.ipynb",
+    "source_sha256": "b648167bb825403d853d87140e008d893185e2159e06d81a2ac4f4fb21873c73",
+    "started_at": "2026-10-18T19:09:24.447839+00:00",
+    "executed": "data\\executed_notebooks\\MP03.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-18T19:09:27.013047+00:00"
+  },
+  {
+    "source": "notebooks\\MP04.ipynb",
+    "source_sha256": "2b0357c152ac730f84523878f161977d6e49558436bdfe2e240c0679151c5bef",
+    "started_at": "2026-10-18T19:09:27.805924+00:00",
+    "executed": "data\\executed_notebooks\\MP04.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-18T19:09:29.996660+00:00"
   }
 ]

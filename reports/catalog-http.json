@@ -1,0 +1,170 @@
+{
+  "mode": "cached metadata; no live sensing or automatic asset download",
+  "snapshot_time": "2026-10-18T19:11:36.441978+00:00",
+  "last_complete_refresh": null,
+  "seconds_since_complete_refresh": null,
+  "latest_job": {
+    "id": "5271e81960da4a6ba5ad096e9313222d",
+    "start_time": "2026-10-18T12:11:25.886155+00:00",
+    "end_time": "2026-10-18T12:11:29.302336+00:00",
+    "status": "partial",
+    "items_found": 9,
+    "items_added": 9
+  },
+  "observations": [
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20260904_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-09-04T18:42:21.643000Z",
+      "availability_time": "2026-09-05T01:05:07.537Z",
+      "ingestion_time": "2026-10-18T12:11:29.291850+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20260906_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-09-06T18:32:24.973000Z",
+      "availability_time": "2026-09-06T23:42:17.629Z",
+      "ingestion_time": "2026-10-18T12:11:29.275962+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2A_11TQH_20260906_1_L2A",
+      "sensor": "sentinel-2a",
+      "acquisition_time": "2026-09-06T18:42:38.461000Z",
+      "availability_time": "2026-09-07T00:59:24.767Z",
+      "ingestion_time": "2026-10-18T12:11:29.267475+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20260909_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-09-09T18:42:20.886000Z",
+      "availability_time": "2026-09-09T23:39:44.480Z",
+      "ingestion_time": "2026-10-18T12:11:29.247653+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20260911_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-09-11T18:32:25.648000Z",
+      "availability_time": "2026-09-12T00:57:48.589Z",
+      "ingestion_time": "2026-10-18T12:11:28.243533+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2A_11TQH_20260913_0_L2A",
+      "sensor": "sentinel-2a",
+      "acquisition_time": "2026-09-13T18:32:41.468000Z",
+      "availability_time": "2026-09-14T04:11:20.892Z",
+      "ingestion_time": "2026-10-18T12:11:28.235462+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20260914_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-09-14T18:42:22.511000Z",
+      "availability_time": "2026-09-15T01:14:59.102Z",
+      "ingestion_time": "2026-10-18T12:11:28.218806+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20260916_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-09-16T18:32:26.089000Z",
+      "availability_time": "2026-09-16T23:21:07.504Z",
+      "ingestion_time": "2026-10-18T12:11:28.210097+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20260921_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-09-21T18:32:27.953000Z",
+      "availability_time": "2026-09-22T00:52:28.322Z",
+      "ingestion_time": "2026-10-18T12:11:28.193332+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20260924_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-09-24T18:42:24.494000Z",
+      "availability_time": "2026-09-25T01:02:18.331Z",
+      "ingestion_time": "2026-10-18T06:07:34.420757+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20260929_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-09-29T18:42:23.541000Z",
+      "availability_time": "2026-09-29T23:29:39.723Z",
+      "ingestion_time": "2026-10-18T06:07:34.410585+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20261001_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-10-01T18:32:29.157000Z",
+      "availability_time": "2026-10-01T23:25:55.533Z",
+      "ingestion_time": "2026-10-18T06:07:34.394176+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2A_11TQH_20261003_0_L2A",
+      "sensor": "sentinel-2a",
+      "acquisition_time": "2026-10-03T18:32:40.919000Z",
+      "availability_time": "2026-10-04T01:49:03.974Z",
+      "ingestion_time": "2026-10-18T06:07:34.389869+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20261004_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-10-04T18:42:25.229000Z",
+      "availability_time": "2026-10-04T23:07:04.685Z",
+      "ingestion_time": "2026-10-18T06:07:34.377560+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20261006_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-10-06T18:32:27.393000Z",
+      "availability_time": "2026-10-07T09:04:22.858Z",
+      "ingestion_time": "2026-10-18T06:07:32.784755+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2C_11TQH_20261014_0_L2A",
+      "sensor": "sentinel-2c",
+      "acquisition_time": "2026-10-14T18:42:24.959000Z",
+      "availability_time": "2026-10-15T13:35:20.207Z",
+      "ingestion_time": "2026-10-18T06:07:32.775789+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20261009_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-10-09T18:42:23.255000Z",
+      "availability_time": "2026-10-10T00:56:16.239Z",
+      "ingestion_time": "2026-10-18T06:07:32.775789+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2B_11TQH_20261016_0_L2A",
+      "sensor": "sentinel-2b",
+      "acquisition_time": "2026-10-16T18:32:26.585000Z",
+      "availability_time": "2026-10-17T00:58:28.432Z",
+      "ingestion_time": "2026-10-18T06:07:32.768330+00:00",
+      "quality_flags": "metadata only"
+    },
+    {
+      "provider_item_id": "sentinel-2-l2a:S2A_11TQH_20261016_1_L2A",
+      "sensor": "sentinel-2a",
+      "acquisition_time": "2026-10-16T18:42:34.462000Z",
+      "availability_time": "2026-10-17T01:01:39.293Z",
+      "ingestion_time": "2026-10-18T06:07:32.759480+00:00",
+      "quality_flags": "metadata only"
+    }
+  ],
+  "observation_limit": 20,
+  "reference_metrics": "unavailable without compatible HR reference"
+}
