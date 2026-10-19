@@ -1,3 +1,11 @@
+# Current progress — 2026-10-19
+
+Latest resumable state: [next session](next_session.md). MP01–MP15 expanded; MP16–MP40 pending full implementation. Streamlit stateless deployment prepared with genuine public checkpoint; local inference/restart checks passed, public URL unverified. Durable external storage remains a separate incomplete requirement. See [deployment settings](streamlit-deployment.md).
+
+Latest checks: 73 tests and four subtests passed without warnings; 40 IDs and 394 relative links passed. Deployment-only clean install and two empty-cache restart runs passed (sampled peak RSS at most 300.4 MB). Local browser Sentinel acquisition, inference and georeferenced download passed; public hosting and live external storage remain unverified.
+
+The following is historical milestone evidence; newer counts and next actions above supersede older entries.
+
 # Progress
 
 ## Latest validation — 2026-10-19

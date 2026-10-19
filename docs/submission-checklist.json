@@ -37,7 +37,7 @@
     "status": "failed",
     "acceptance": "Every lesson has defined mathematics, worked examples, exercises, solutions and appropriate real experiments",
     "implementation_or_evidence": "notebooks",
-    "assessment": "MP01\u2013MP11 expanded; MP12\u2013MP40 still introductory. Full educational acceptance remains incomplete."
+    "assessment": "MP01\u2013MP15 expanded and executed; MP16\u2013MP40 remain introductory. Learner mastery unassessed."
   },
   {
     "id": "4a",
@@ -125,7 +125,7 @@
     "status": "blocked",
     "acceptance": "Restart preserves required server-side data",
     "implementation_or_evidence": "docs/operations.md",
-    "assessment": "No authenticated free host/persistent storage provisioned."
+    "assessment": "Optional S3/PostgreSQL artifact/provenance adapter prepared and offline-tested; external accounts, full schema migration and live durability checks pending. Stateless Streamlit demo does not wait for this."
   },
   {
     "id": "9a",
@@ -221,7 +221,7 @@
     "status": "failed",
     "acceptance": "Samples, compatible models, AOI, metadata, downloads, scientific export",
     "implementation_or_evidence": "app/demo.py",
-    "assessment": "Samples, model selection, AOI and downloads implemented and HTTP-tested. Uploaded multispectral GeoTIFF UI and public host checks remain incomplete."
+    "assessment": "Streamlit and Gradio controls implemented; local browser inference and PNG download verified. On-demand Sentinel workflow uses temporary storage."
   },
   {
     "id": "13c",
@@ -229,7 +229,7 @@
     "status": "blocked",
     "acceptance": "Public URL completes inference and restart/persistence check",
     "implementation_or_evidence": "docs/operations.md",
-    "assessment": "Authenticated host access/entitlement missing; no URL claimed."
+    "assessment": "User will connect GitHub through Streamlit Community Cloud; app preparation and Linux CI underway. No public URL verified."
   },
   {
     "id": "14a",
@@ -253,7 +253,7 @@
     "status": "passed",
     "acceptance": "Offline regression suite and real-data smoke integration",
     "implementation_or_evidence": "tests",
-    "assessment": "Isolated Python 3.12 suite: 64 tests plus four subtests passed in 13.39 seconds; no warnings."
+    "assessment": "71 tests plus four subtests passed; two additional asset tests and affected storage/demo tests passed; final combined suite pending."
   },
   {
     "id": "15b",
@@ -261,7 +261,7 @@
     "status": "failed",
     "acceptance": "CI passes on actual submission commit",
     "implementation_or_evidence": ".github/workflows/test.yml",
-    "assessment": "Final commit not selected; CI must be checked after publication."
+    "assessment": "CI succeeded for 79b8e5a. New Streamlit/lesson changes require CI on their published commit."
   },
   {
     "id": "15c",

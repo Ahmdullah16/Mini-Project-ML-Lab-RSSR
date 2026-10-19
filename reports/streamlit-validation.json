@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-19",
+  "environment": "Isolated Windows Python 3.12 deployment-only venv; app/requirements.txt",
+  "clean_install": "passed",
+  "restart_report": "streamlit-restart.json",
+  "full_suite": {
+    "passed": 73,
+    "subtests": 4,
+    "seconds": 7.46,
+    "warnings": 0
+  },
+  "structure": {
+    "project_ids": 40,
+    "relative_links": 394
+  },
+  "public_deployment": "not verified; Streamlit dashboard sign-in required",
+  "external_storage": "offline adapter tests only; no live account"
+}

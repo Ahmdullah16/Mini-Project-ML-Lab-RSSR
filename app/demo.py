@@ -9,20 +9,10 @@ from rssr.models import tiled
 
 
 def predict(image,checkpoint):
-    if image is None:
-        raise ValueError("Choose an opaque RGB image")
-    a=np.asarray(image)
-    if a.dtype!=np.uint8 or a.ndim!=3 or a.shape[2]!=3 or min(a.shape[:2])<1 or max(a.shape[:2])>1024:
-        raise ValueError("Expected uint8 RGB, at most 1024 pixels per side")
-    x=torch.from_numpy(a.astype(np.float32)/255).permute(2,0,1)
+    from rssr.display import predict_rgb,validate_rgb
+    validate_rgb(image)
     model,state=load_model(checkpoint)
-    if model.bands!=3:
-        raise ValueError("RGB upload requires a three-band checkpoint; use CLI for multispectral GeoTIFF")
-    torch.set_num_threads(2)
-    y=tiled(model,x[None])[0]
-    baseline=resize(x,model.scale)
-    display=lambda v:np.rint(v.permute(1,2,0).numpy().clip(0,1)*255).astype(np.uint8)
-    return display(baseline),display(y),{'run_id':state['run_id'],'checkpoint_sha256':digest(checkpoint),'status':state['provenance'],'scale':model.scale,'sensor':'user supplied; unverified','acquisition_time':'unknown','reference_metrics':'unavailable: no HR reference','display_scaling':'fixed [0,1], clipped for RGB display only'}
+    return predict_rgb(image,model,state,digest(checkpoint))
 
 
 def build():
