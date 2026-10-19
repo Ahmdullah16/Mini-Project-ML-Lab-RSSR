@@ -1,0 +1,97 @@
+{
+  "convention": "HW float64 cross-correlation; kernels not flipped; zero padding; CPU",
+  "impulses": [
+    {
+      "stride": 1,
+      "padding": 0,
+      "dilation": 1,
+      "output_shape": [
+        7,
+        7
+      ],
+      "nonzero_pixels": 9,
+      "torch_max_error": 0.0
+    },
+    {
+      "stride": 1,
+      "padding": 1,
+      "dilation": 1,
+      "output_shape": [
+        9,
+        9
+      ],
+      "nonzero_pixels": 9,
+      "torch_max_error": 0.0
+    },
+    {
+      "stride": 2,
+      "padding": 1,
+      "dilation": 1,
+      "output_shape": [
+        5,
+        5
+      ],
+      "nonzero_pixels": 1,
+      "torch_max_error": 0.0
+    },
+    {
+      "stride": 1,
+      "padding": 2,
+      "dilation": 2,
+      "output_shape": [
+        9,
+        9
+      ],
+      "nonzero_pixels": 9,
+      "torch_max_error": 0.0
+    }
+  ],
+  "receptive_field": {
+    "span": 11,
+    "jump": 2,
+    "measured_span": [
+      11,
+      11
+    ],
+    "contributing_pixels": 81
+  },
+  "real_source": {
+    "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "region_id": "ROI_00006",
+    "split": "train",
+    "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "acquisition_time": "2021-09-17"
+  },
+  "license": "NAIP public domain; USDA/OpenSR attribution",
+  "window": [
+    0,
+    0,
+    64,
+    64
+  ],
+  "band": "red",
+  "scaling": "stored DN / 10000; not calibrated reflectance",
+  "real_filters": [
+    {
+      "kernel": "identity",
+      "minimum": 0.0306,
+      "maximum": 0.1788,
+      "mse_vs_input": 0.0
+    },
+    {
+      "kernel": "mean",
+      "minimum": 0.032100000000000004,
+      "maximum": 0.17224444444444442,
+      "mse_vs_input": 0.00011635692325544946
+    },
+    {
+      "kernel": "horizontal derivative",
+      "minimum": -0.0670375,
+      "maximum": 0.070075,
+      "mse_vs_input": 0.01645627404663086
+    }
+  ],
+  "limitations": "Fixed filtering demonstration only; edge padding biases border pixels. No learned model, SR quality claim or held-out data."
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-19",
+  "full_suite": {
+    "tests": 75,
+    "subtests": 4,
+    "seconds": 14.44,
+    "warnings": 0
+  },
+  "notebooks": [
+    "MP17: real kernel exit 0",
+    "MP18: real kernel exit 0"
+  ],
+  "figures": "both visually inspected",
+  "new_downloads_bytes": 0,
+  "gpu_hours": 0,
+  "held_out_test_used": false
+}

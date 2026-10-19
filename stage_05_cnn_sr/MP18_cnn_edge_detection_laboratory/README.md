@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded [notebook](../../notebooks/MP18.ipynb), [experiment record](../../reports/mp18-edges.json) and [figure](../../reports/mp18-edges.png) compare fixed and learned Sobel operators. Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Compare fixed Sobel filters with learned convolutional features on simple edges; deliver edge maps, kernel visualizations, and boundary-effect checks.
+**Executed:** `python scripts/edge_experiment.py` trains a small convolution to imitate known Sobel labels, validates on disjoint synthetic edge fixtures, compares kernels/maps on a licensed training crop and checks zero versus replicate padding. This is operator imitation, not independent semantic-edge accuracy.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- Executable script `scripts/edge_experiment.py` and expanded notebook with definitions, hand examples, exercises and worked solutions.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 
