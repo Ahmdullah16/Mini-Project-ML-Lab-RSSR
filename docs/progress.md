@@ -1,10 +1,12 @@
 # Current progress — 2026-10-19
 
-Latest resumable state: [next session](next_session.md). MP01–MP16 expanded; MP17–MP40 pending full implementation. Streamlit stateless deployment prepared with genuine public checkpoint; local inference/restart checks passed, public URL unverified. Durable external storage remains a separate incomplete requirement. See [deployment settings](streamlit-deployment.md).
+Latest resumable state: [next session](next_session.md). MP01–MP18 expanded; MP19–MP40 pending full implementation. Streamlit stateless deployment prepared with genuine public checkpoint; local inference/restart checks passed, public URL unverified. Durable external storage remains a separate incomplete requirement. See [deployment settings](streamlit-deployment.md).
 
 Latest checks: 73 tests and four subtests passed without warnings; 40 IDs and 394 relative links passed. Deployment-only clean install and two empty-cache restart runs passed (sampled peak RSS at most 300.4 MB). Local browser Sentinel acquisition, inference and georeferenced download passed; public hosting and live external storage remain unverified.
 
 MP16 expanded and executed: seeded regression and exact eight-step checkpoint recovery passed; see [MP16 evidence](../reports/mp16-pipeline.json). Streamlit checkpoint 6c118ea passed both Linux CI jobs (run 39247571971), then PR #7 was merged externally. Deploy from main.
+
+MP17–MP18 expanded and executed in isolated kernels. Convolution agrees exactly with PyTorch for the tested cases; autograd confirms an 11×11 receptive span with 81 contributing pixels. Learned Sobel imitation has 8.68e-9 maximum kernel error; this is not independent edge accuracy. See [convolution](../reports/mp17-convolution.json) and [edges](../reports/mp18-edges.json). Full suite: 75 tests and four subtests passed without warnings in 14.44 s. No new imagery downloads or test evaluation.
 
 The following is historical milestone evidence; newer counts and next actions above supersede older entries.
 

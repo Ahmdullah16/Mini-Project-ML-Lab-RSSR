@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded [notebook](../../notebooks/MP17.ipynb), [report](../../reports/mp17-convolution.json) and [figure](../../reports/mp17-convolution.png) cover impulse geometry, receptive-field support and licensed real-crop filtering. Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Compare kernels, padding, stride, and dilation on impulses; deliver shape tables and receptive-field visualizations.
+**Executed:** `python scripts/convolution_experiment.py` compares four impulse settings with PyTorch, measures receptive-field support by autograd and filters a checksummed NAIP training crop. Reference errors are zero; measured span is 11×11 with 81 contributing pixels.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- Executable script `scripts/convolution_experiment.py` and expanded notebook with hand examples, practice and worked solutions.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 
