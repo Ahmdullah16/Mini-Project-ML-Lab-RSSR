@@ -2,7 +2,7 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02–MP15 have expanded explanations, solutions and measured real training-crop experiments; MP16–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
+**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02–MP16 have expanded explanations, solutions and measured real training-crop experiments; MP17–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
 
 Measured [three-seed ablations](reports/ablation-pilot.md) still trail bicubic. The [local HTTP demo](reports/demo-http.json) passed inference; no public deployment is claimed.
 

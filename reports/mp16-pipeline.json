@@ -1,0 +1,27 @@
+{
+  "seed": 16,
+  "device": "cpu",
+  "torch": "2.14.1+cpu",
+  "regression": {
+    "training_examples": 16,
+    "validation_examples": 15,
+    "epochs": 100,
+    "batch_size": 4,
+    "optimizer": "SGD",
+    "learning_rate": 0.1,
+    "num_workers": 0,
+    "initial_epoch_mse": 2.700752168893814,
+    "final_epoch_mse": 1.9095836023552692e-14,
+    "validation_mse": 4.192202208747227e-14,
+    "seeded_parameters_equal": true
+  },
+  "production_resume": {
+    "steps": 8,
+    "interruption_step": 4,
+    "parameters_exact": true,
+    "validation_best_equal": true,
+    "inference_checkpoint_rejected": true
+  },
+  "real_data_evidence": "geographic-study.json",
+  "limitations": "Synthetic resume fixture shares a ramp across train/validation and tests mechanics only, not generalization. Separate real geographic train/validation evidence is linked; no new real training or held-out evaluation here."
+}

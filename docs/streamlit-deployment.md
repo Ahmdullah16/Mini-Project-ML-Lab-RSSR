@@ -7,7 +7,7 @@ The first deployment target is Streamlit Community Cloud. The app is deliberatel
 Connect your GitHub account at https://share.streamlit.io/ using the normal dashboard. Choose Create app, then:
 
 - Repository: `Ahmdullah16/Mini-Project-ML-Lab-RSSR`
-- Branch: `feat/streamlit-submission`
+- Branch: `main`
 - Entry point: `app/streamlit_app.py`
 - Advanced settings: Python **3.12**
 - Secrets: **none required** for the stateless demo
