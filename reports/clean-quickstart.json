@@ -1,0 +1,15 @@
+{
+  "dataset_bytes_transferred": 5627736,
+  "steps": 100,
+  "checkpoint": "runs\\ea85549bf64e47a986a5d65a2f130752\\best.pt",
+  "checkpoint_sha256": "3005be1f47ac717e240a26c66e94099dcd73244c5f6192c203eda5a215e53e1f",
+  "prepared_manifest": "prepared\\77b4d996b480-x2-p32-n16-portable-v1\\manifest.json",
+  "evaluation": "runs\\ea85549bf64e47a986a5d65a2f130752\\evaluation-validation.json",
+  "output": "demo-output.tif",
+  "output_sha256": "d95ce6664b8fb931932747a58501053b462efd5cf709afaf4e4f8b1002950f8a",
+  "status": "executed engineering pilot; no final research claim",
+  "source_commit": "cd3f61ff6fe11e8eb0622ff395264421757a207a",
+  "clone_method": "fresh HTTPS branch clone",
+  "system_site_packages": false,
+  "python": "3.12.14"
+}

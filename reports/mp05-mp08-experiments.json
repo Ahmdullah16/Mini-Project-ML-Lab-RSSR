@@ -1,0 +1,218 @@
+{
+  "source_sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+  "source_scene": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+  "split": "train",
+  "crop_xywh": [
+    0,
+    0,
+    64,
+    64
+  ],
+  "units": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "mp05": [
+    {
+      "sigma": 0.5,
+      "radius": 2,
+      "kernel_sum": 1.0,
+      "training_crop_mse_by_band": [
+        2.2757865295308407e-06,
+        1.3111369496345038e-06,
+        9.627684052292458e-07,
+        2.3942593520391037e-06
+      ],
+      "boundary_constant_corner": 0.7979587396494062,
+      "boundary_edge_corner": 1.0
+    },
+    {
+      "sigma": 1.0,
+      "radius": 3,
+      "kernel_sum": 0.9999999999999999,
+      "training_crop_mse_by_band": [
+        1.708364024870371e-05,
+        9.714391728376171e-06,
+        7.406823758207797e-06,
+        1.7520966757016317e-05
+      ],
+      "boundary_constant_corner": 0.48933542124890306,
+      "boundary_edge_corner": 0.9999999999999999
+    },
+    {
+      "sigma": 2.0,
+      "radius": 6,
+      "kernel_sum": 1.0,
+      "training_crop_mse_by_band": [
+        4.465605932382635e-05,
+        2.5413837292664386e-05,
+        2.051755389881012e-05,
+        4.070432152313465e-05
+      ],
+      "boundary_constant_corner": 0.35980540280313267,
+      "boundary_edge_corner": 1.0
+    }
+  ],
+  "mp06_mp07_pairs": [
+    {
+      "scale": 2,
+      "sampling": "unfiltered decimation, phase zero",
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "path": "data/teaching-pairs/x2-decimation.npz",
+      "sha256": "7dc54b38421d50824b3aa4d36bf8bac8b8cb64879563dd19d46d813352d7cc41"
+    },
+    {
+      "scale": 2,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.0,
+      "noise_std": 0.0,
+      "seed": 17,
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "path": "data/teaching-pairs/x2-sigma0.0-noise0.0.npz",
+      "sha256": "2126bc5cb865ac7e23be2b60bab25ee9401160707e2a5eb4bbf80c28f9364094",
+      "finite": true
+    },
+    {
+      "scale": 2,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.0,
+      "noise_std": 0.01,
+      "seed": 17,
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "path": "data/teaching-pairs/x2-sigma0.0-noise0.01.npz",
+      "sha256": "e8edd5f3ca708201aa0372c834acf1afd7857bc0a0edf90c33fb8c29f1d7acd2",
+      "finite": true
+    },
+    {
+      "scale": 2,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.8,
+      "noise_std": 0.0,
+      "seed": 17,
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "path": "data/teaching-pairs/x2-sigma0.8-noise0.0.npz",
+      "sha256": "cd6487ba5fae651a4fc4968d8ec30656207c7bec1567629acd9bdb10d3b2d7cd",
+      "finite": true
+    },
+    {
+      "scale": 2,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.8,
+      "noise_std": 0.01,
+      "seed": 17,
+      "shape": [
+        32,
+        32,
+        4
+      ],
+      "path": "data/teaching-pairs/x2-sigma0.8-noise0.01.npz",
+      "sha256": "aceb82093b1d5069e9d6311a5da482623490b08f4a3f8b573e703be904ad8abe",
+      "finite": true
+    },
+    {
+      "scale": 4,
+      "sampling": "unfiltered decimation, phase zero",
+      "shape": [
+        16,
+        16,
+        4
+      ],
+      "path": "data/teaching-pairs/x4-decimation.npz",
+      "sha256": "1ffb6a221bae82ebe7efd44a1f5287f2dbfde1c78b94e52fe3bb3bd27c3a6963"
+    },
+    {
+      "scale": 4,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.0,
+      "noise_std": 0.0,
+      "seed": 17,
+      "shape": [
+        16,
+        16,
+        4
+      ],
+      "path": "data/teaching-pairs/x4-sigma0.0-noise0.0.npz",
+      "sha256": "f6129c40d2e8df6b15f09a7e057effab5e5cb078afdc798e686b78f32d71fccc",
+      "finite": true
+    },
+    {
+      "scale": 4,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.0,
+      "noise_std": 0.01,
+      "seed": 17,
+      "shape": [
+        16,
+        16,
+        4
+      ],
+      "path": "data/teaching-pairs/x4-sigma0.0-noise0.01.npz",
+      "sha256": "f7b753883b3bcd03dfaf0218673626cefe66fa4018cf5082d4f3528717768ba3",
+      "finite": true
+    },
+    {
+      "scale": 4,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.8,
+      "noise_std": 0.0,
+      "seed": 17,
+      "shape": [
+        16,
+        16,
+        4
+      ],
+      "path": "data/teaching-pairs/x4-sigma0.8-noise0.0.npz",
+      "sha256": "2c7a83a651eee0ed19ec5eba24a526b7004b210ada818a8644a6c1b3e5fdc98c",
+      "finite": true
+    },
+    {
+      "scale": 4,
+      "sampling": "area average after optional Gaussian",
+      "sigma": 0.8,
+      "noise_std": 0.01,
+      "seed": 17,
+      "shape": [
+        16,
+        16,
+        4
+      ],
+      "path": "data/teaching-pairs/x4-sigma0.8-noise0.01.npz",
+      "sha256": "60c9858c1165a91f3890d6490d822758008786992697dcfbb02669ffd282d422",
+      "finite": true
+    }
+  ],
+  "mp08": [
+    {
+      "name": "HR",
+      "inverse_max_error": 1.3877787807814457e-16,
+      "spatial_energy": 66.84548021,
+      "frequency_energy_normalized": 66.84548020999999
+    },
+    {
+      "name": "blurred",
+      "inverse_max_error": 1.3877787807814457e-16,
+      "spatial_energy": 66.43956723576395,
+      "frequency_energy_normalized": 66.43956723576392
+    },
+    {
+      "name": "noisy",
+      "inverse_max_error": 1.3877787807814457e-16,
+      "spatial_energy": 67.43498889036464,
+      "frequency_energy_normalized": 67.43498889036465
+    }
+  ],
+  "limitations": "One crop; discrete synthetic forward operator, not a sensor-calibrated PSF. Gaussian noise is unbounded and not clipped; spectrum uses periodic boundary assumption."
+}

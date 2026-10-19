@@ -1,0 +1,73 @@
+{
+  "selection": "first candidates by pinned provider filename order, geography checks only",
+  "added": 6,
+  "transfers": [
+    {
+      "scene": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "bytes_received": 1875912,
+      "geographic_decision": "accepted",
+      "bounds": [
+        -99.84124634724179,
+        38.7892881091233,
+        -99.8271872690643,
+        38.80029054320659
+      ]
+    },
+    {
+      "scene": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "bytes_received": 1875912,
+      "geographic_decision": "accepted",
+      "bounds": [
+        -99.26324205041706,
+        34.44229543436816,
+        -99.25003665728639,
+        34.45323506753958
+      ]
+    },
+    {
+      "scene": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "bytes_received": 1875912,
+      "geographic_decision": "accepted",
+      "bounds": [
+        -103.47931669679029,
+        35.17736658328468,
+        -103.46582764881154,
+        35.18844104357268
+      ]
+    },
+    {
+      "scene": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+      "bytes_received": 1875912,
+      "geographic_decision": "accepted",
+      "bounds": [
+        -101.13854511432554,
+        34.651531555972305,
+        -101.12506976360126,
+        34.662666521892156
+      ]
+    },
+    {
+      "scene": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+      "bytes_received": 1875912,
+      "geographic_decision": "accepted",
+      "bounds": [
+        -112.36675523592476,
+        32.06231834223883,
+        -112.3537775522223,
+        32.073369116792584
+      ]
+    },
+    {
+      "scene": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+      "bytes_received": 1875912,
+      "geographic_decision": "accepted",
+      "bounds": [
+        -111.77514639797361,
+        42.81416759233281,
+        -111.76021104368105,
+        42.82516234664614
+      ]
+    }
+  ],
+  "original_test_preserved": true
+}

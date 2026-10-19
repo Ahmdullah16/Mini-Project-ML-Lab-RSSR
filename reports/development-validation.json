@@ -1,0 +1,41 @@
+{
+  "environment": "isolated Windows x64 Python 3.12, no system site packages",
+  "tests": {
+    "command": "python -m pytest -q",
+    "passed": 64,
+    "subtests_passed": 4,
+    "warnings": 0,
+    "seconds": 13.39,
+    "exit_code": 0
+  },
+  "links": {
+    "command": "python scripts/check_structure.py",
+    "ids": 40,
+    "valid_relative_links": 383,
+    "exit_code": 0
+  },
+  "database": {
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "geographic_resume": {
+    "command": "python scripts/geographic_study.py",
+    "completed_checkpoints_reverified": 6,
+    "retrained": false,
+    "exit_code": 0
+  },
+  "limitations": [
+    "Local notebook TCP encryption warning; bind kernels locally.",
+    "Final project-wide teaching/research acceptance remains incomplete.",
+    "Earlier sandbox-temp test failure and corrected fixture are documented in progress."
+  ],
+  "recorded_at": "2026-10-19T06:18:01.865981+00:00",
+  "notebooks": {
+    "count": 40,
+    "command": "python scripts/execute_notebooks.py",
+    "exit_code": 0,
+    "source_hashes_verified": true,
+    "environment": "isolated Python 3.12 kernel",
+    "warning": "Local TCP transport encryption warning; no execution errors"
+  }
+}

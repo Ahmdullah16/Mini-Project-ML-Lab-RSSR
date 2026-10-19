@@ -1,0 +1,374 @@
+[
+  {
+    "model": "cnn",
+    "zero_residual": false,
+    "seed": 17,
+    "run_id": "383d6bdb9cf944f683f6112e881f6539",
+    "checkpoint_sha256": "11b6d20956458f83634363b3ded7034e7d679830ace31ae436f691fa364a4948",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 17,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": false
+      }
+    },
+    "seconds": 4.265502599999309,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 42.69166153434606,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "cnn",
+    "zero_residual": false,
+    "seed": 23,
+    "run_id": "546d9838a70b412ab1f088017ba71882",
+    "checkpoint_sha256": "c378e41d93401160cb6ebb1c5d9cacf7e4bb297155e9e2efad5849e75833f098",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 23,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": false
+      }
+    },
+    "seconds": 3.393444300003466,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 42.4221940771783,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "cnn",
+    "zero_residual": false,
+    "seed": 41,
+    "run_id": "ed05f1a83ce645ba9e1639dc3f5f24c8",
+    "checkpoint_sha256": "33dd6184fbdb28603a8fc9a2d10a8476d680c1b8052577000a73f4b9a6d8a92f",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 41,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": false
+      }
+    },
+    "seconds": 3.8088328000012552,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 42.9781153146748,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "cnn",
+    "zero_residual": true,
+    "seed": 17,
+    "run_id": "8c3ab8036b0a42e08d6ff2452d1d7606",
+    "checkpoint_sha256": "9045f3d95730033b1f8bb0b2a6d07ef7c97fe81a54dbcb4d13037b96c1a3e152",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 17,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "seconds": 3.366727800006629,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.72864277679352,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "cnn",
+    "zero_residual": true,
+    "seed": 23,
+    "run_id": "992c5857b82447b09f3a21ec4dc5b55f",
+    "checkpoint_sha256": "b85789d6788ea543a971753af607e959bb3b699cf41f76a3af0fcabb9ec3c3db",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 23,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "seconds": 3.855286799996975,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.722280095452774,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "cnn",
+    "zero_residual": true,
+    "seed": 41,
+    "run_id": "2d45442fb0954ff9b118a860c3ff978f",
+    "checkpoint_sha256": "057719ab19e1f94cc61508a61a744b2f85a8a7c79f7b394b31638fc537bd5164",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 41,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "seconds": 3.6627789000049233,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.69392924318748,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "hybrid",
+    "zero_residual": false,
+    "seed": 17,
+    "run_id": "6993f4c3b71541278e5ced1de834585f",
+    "checkpoint_sha256": "f7d291074122350cc542f8531688b05478ea91ddef307cc8633c2e1f37d29ff7",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 17,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": false
+      }
+    },
+    "seconds": 17.94974949999596,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.329724627972865,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "hybrid",
+    "zero_residual": false,
+    "seed": 23,
+    "run_id": "c2d1ba3e38194ec4ac3069b57d2cad25",
+    "checkpoint_sha256": "f80a1fed808505ef14299f8ce9f81cbc2fe7e154df9aab89bfe3e25db056eda7",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 23,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": false
+      }
+    },
+    "seconds": 18.106919700003345,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.322482018812934,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "hybrid",
+    "zero_residual": false,
+    "seed": 41,
+    "run_id": "883830f002f84b5eb164e014dbd0b020",
+    "checkpoint_sha256": "be1d829dc3868de7e7c930a2aeaa17641adf30bf98d7eebbc044aaf8c6399d7b",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 41,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": false
+      }
+    },
+    "seconds": 19.294749499997124,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.12745769788674,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "hybrid",
+    "zero_residual": true,
+    "seed": 17,
+    "run_id": "356c15763ff843658a60da0197bc28cc",
+    "checkpoint_sha256": "790f57124f8f23b5e231f907d31a4311fff31bb0351ac98e68e4410df729084e",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 17,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "seconds": 13.073845599996275,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.762221455058985,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "hybrid",
+    "zero_residual": true,
+    "seed": 23,
+    "run_id": "24aa3fc84e174b8dbcf01c263f9b5fd4",
+    "checkpoint_sha256": "d62ef8457fe0f812141d5a70b7c3b2a262a2e810bfce3ed1f369a7b257e1cf6f",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 23,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "seconds": 10.569256499991752,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.7956060288079,
+    "bicubic_psnr": 45.8104369217606
+  },
+  {
+    "model": "hybrid",
+    "zero_residual": true,
+    "seed": 41,
+    "run_id": "48f1957762bd48949cbc80da6c2cfec7",
+    "checkpoint_sha256": "cb2efb843b156c198180532f133e43402de4eac32ac573e0c4d3e4410c8eaac8",
+    "manifest_sha256": "d4330dbf887749dd3d9ab64800639b21ccc16400d3d314766f6ba410e9d54714",
+    "config": {
+      "seed": 41,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "seconds": 16.86574649999966,
+    "git_commit": "e711acb51d098f7235acaf8526ba8360e9611a25",
+    "dirty": true,
+    "psnr": 45.799775128258524,
+    "bicubic_psnr": 45.8104369217606
+  }
+]

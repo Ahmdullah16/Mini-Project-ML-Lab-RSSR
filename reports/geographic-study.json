@@ -1,0 +1,332 @@
+[
+  {
+    "model": "cnn",
+    "seed": 17,
+    "config": {
+      "seed": 17,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "run_id": "35931a32a3974ba2bdc5e212ee60b0fa",
+    "checkpoint_sha256": "7240cbb0a216c5b89af71f4389e96d08b432a1485bf0c6171e52ba3a4b82d56b",
+    "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+    "seconds": 5.426200199988671,
+    "git_commit": "4d3e80b08e85f75e463a107a09c8e6385e6716ca",
+    "dirty": true,
+    "validation_scenes": [
+      {
+        "scene_id": "8d547371a9fd34f0caed6173271169412807ad93047c765bc0b01d80d6ec68f7",
+        "model": 43.381200032138885,
+        "bicubic": 41.897359335268376,
+        "delta_db": 1.4838406968705087
+      },
+      {
+        "scene_id": "abede46bdc929af43f8d69aaaf1785f44734c003b3db4674e36b0ed9377aba24",
+        "model": 41.687286062304985,
+        "bicubic": 39.7397580003133,
+        "delta_db": 1.947528061991683
+      },
+      {
+        "scene_id": "d1b9e4d5499dc353c4abecf25c057300253988399deef418726b2daa8ccea23a",
+        "model": 48.23410234010354,
+        "bicubic": 45.8104369217606,
+        "delta_db": 2.4236654183429422
+      },
+      {
+        "scene_id": "f84b7969520561611b00d39e2ecdc93cf7bc4dbce0a98738ddcc77f7840c56b5",
+        "model": 36.91145058502167,
+        "bicubic": 35.35474446621664,
+        "delta_db": 1.5567061188050317
+      }
+    ],
+    "scene_mean_delta_db": 1.8529350740025414
+  },
+  {
+    "model": "cnn",
+    "seed": 23,
+    "config": {
+      "seed": 23,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "run_id": "a328bb8c59974c20946b4781ad1caf16",
+    "checkpoint_sha256": "39decb07de4d235afd6b5f7e91fd29e7be6a8d0596c6bbd0d53ed65d282e43af",
+    "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+    "seconds": 5.420254900003783,
+    "git_commit": "4d3e80b08e85f75e463a107a09c8e6385e6716ca",
+    "dirty": true,
+    "validation_scenes": [
+      {
+        "scene_id": "8d547371a9fd34f0caed6173271169412807ad93047c765bc0b01d80d6ec68f7",
+        "model": 42.8705402425624,
+        "bicubic": 41.897359335268376,
+        "delta_db": 0.9731809072940223
+      },
+      {
+        "scene_id": "abede46bdc929af43f8d69aaaf1785f44734c003b3db4674e36b0ed9377aba24",
+        "model": 41.16095631912686,
+        "bicubic": 39.7397580003133,
+        "delta_db": 1.421198318813559
+      },
+      {
+        "scene_id": "d1b9e4d5499dc353c4abecf25c057300253988399deef418726b2daa8ccea23a",
+        "model": 47.50214347756282,
+        "bicubic": 45.8104369217606,
+        "delta_db": 1.6917065558022202
+      },
+      {
+        "scene_id": "f84b7969520561611b00d39e2ecdc93cf7bc4dbce0a98738ddcc77f7840c56b5",
+        "model": 36.42626145635904,
+        "bicubic": 35.35474446621664,
+        "delta_db": 1.0715169901424062
+      }
+    ],
+    "scene_mean_delta_db": 1.289400693013052
+  },
+  {
+    "model": "cnn",
+    "seed": 41,
+    "config": {
+      "seed": 41,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "run_id": "8a7e8ac6e42a40c99a8288c896da5617",
+    "checkpoint_sha256": "74755fb5b992e9c9e4781b72ae306129760256cae6df2bea3afabc6c5ef55725",
+    "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+    "seconds": 7.10242000001017,
+    "git_commit": "4d3e80b08e85f75e463a107a09c8e6385e6716ca",
+    "dirty": true,
+    "validation_scenes": [
+      {
+        "scene_id": "8d547371a9fd34f0caed6173271169412807ad93047c765bc0b01d80d6ec68f7",
+        "model": 43.099936511154,
+        "bicubic": 41.897359335268376,
+        "delta_db": 1.2025771758856223
+      },
+      {
+        "scene_id": "abede46bdc929af43f8d69aaaf1785f44734c003b3db4674e36b0ed9377aba24",
+        "model": 41.343432472975735,
+        "bicubic": 39.7397580003133,
+        "delta_db": 1.6036744726624335
+      },
+      {
+        "scene_id": "d1b9e4d5499dc353c4abecf25c057300253988399deef418726b2daa8ccea23a",
+        "model": 48.03759041891901,
+        "bicubic": 45.8104369217606,
+        "delta_db": 2.2271534971584117
+      },
+      {
+        "scene_id": "f84b7969520561611b00d39e2ecdc93cf7bc4dbce0a98738ddcc77f7840c56b5",
+        "model": 36.603091962501495,
+        "bicubic": 35.35474446621664,
+        "delta_db": 1.2483474962848575
+      }
+    ],
+    "scene_mean_delta_db": 1.5704381604978312
+  },
+  {
+    "model": "hybrid",
+    "seed": 17,
+    "config": {
+      "seed": 17,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "run_id": "062190a95045466ca70493b02c1a70ec",
+    "checkpoint_sha256": "867a6f95c79450ea7be112452752f9db5481be3b6e3dfa424f6373dac2c7794d",
+    "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+    "seconds": 15.121342300000833,
+    "git_commit": "4d3e80b08e85f75e463a107a09c8e6385e6716ca",
+    "dirty": true,
+    "validation_scenes": [
+      {
+        "scene_id": "8d547371a9fd34f0caed6173271169412807ad93047c765bc0b01d80d6ec68f7",
+        "model": 43.248180939164804,
+        "bicubic": 41.897359335268376,
+        "delta_db": 1.3508216038964278
+      },
+      {
+        "scene_id": "abede46bdc929af43f8d69aaaf1785f44734c003b3db4674e36b0ed9377aba24",
+        "model": 41.49272972383247,
+        "bicubic": 39.7397580003133,
+        "delta_db": 1.7529717235191669
+      },
+      {
+        "scene_id": "d1b9e4d5499dc353c4abecf25c057300253988399deef418726b2daa8ccea23a",
+        "model": 47.911811666583965,
+        "bicubic": 45.8104369217606,
+        "delta_db": 2.1013747448233673
+      },
+      {
+        "scene_id": "f84b7969520561611b00d39e2ecdc93cf7bc4dbce0a98738ddcc77f7840c56b5",
+        "model": 36.7454255242543,
+        "bicubic": 35.35474446621664,
+        "delta_db": 1.3906810580376643
+      }
+    ],
+    "scene_mean_delta_db": 1.6489622825691566
+  },
+  {
+    "model": "hybrid",
+    "seed": 23,
+    "config": {
+      "seed": 23,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "run_id": "48c9f94601ee40c9984524f174c2543a",
+    "checkpoint_sha256": "f52724177c32d3b6aa6081728069b1a3d5df73dd492f83c0309d4dd0367ba119",
+    "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+    "seconds": 15.821935399988433,
+    "git_commit": "4d3e80b08e85f75e463a107a09c8e6385e6716ca",
+    "dirty": true,
+    "validation_scenes": [
+      {
+        "scene_id": "8d547371a9fd34f0caed6173271169412807ad93047c765bc0b01d80d6ec68f7",
+        "model": 42.734735499580516,
+        "bicubic": 41.897359335268376,
+        "delta_db": 0.8373761643121398
+      },
+      {
+        "scene_id": "abede46bdc929af43f8d69aaaf1785f44734c003b3db4674e36b0ed9377aba24",
+        "model": 40.96216464736348,
+        "bicubic": 39.7397580003133,
+        "delta_db": 1.2224066470501782
+      },
+      {
+        "scene_id": "d1b9e4d5499dc353c4abecf25c057300253988399deef418726b2daa8ccea23a",
+        "model": 47.42583160961157,
+        "bicubic": 45.8104369217606,
+        "delta_db": 1.6153946878509728
+      },
+      {
+        "scene_id": "f84b7969520561611b00d39e2ecdc93cf7bc4dbce0a98738ddcc77f7840c56b5",
+        "model": 36.30960740868024,
+        "bicubic": 35.35474446621664,
+        "delta_db": 0.9548629424636061
+      }
+    ],
+    "scene_mean_delta_db": 1.1575101104192242
+  },
+  {
+    "model": "hybrid",
+    "seed": 41,
+    "config": {
+      "seed": 41,
+      "steps": 1000,
+      "batch_size": 4,
+      "lr": 0.001,
+      "validate_every": 100,
+      "consistency_weight": 0.0,
+      "model": {
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      }
+    },
+    "run_id": "9d8898552c6944e4b09d32c6f0611795",
+    "checkpoint_sha256": "ec08de393bae01fa3a871c22e2fcdebfd8d8c454dd81572bb926d413eed37a3e",
+    "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+    "seconds": 14.118603500013705,
+    "git_commit": "4d3e80b08e85f75e463a107a09c8e6385e6716ca",
+    "dirty": true,
+    "validation_scenes": [
+      {
+        "scene_id": "8d547371a9fd34f0caed6173271169412807ad93047c765bc0b01d80d6ec68f7",
+        "model": 42.766982190101004,
+        "bicubic": 41.897359335268376,
+        "delta_db": 0.8696228548326275
+      },
+      {
+        "scene_id": "abede46bdc929af43f8d69aaaf1785f44734c003b3db4674e36b0ed9377aba24",
+        "model": 41.14172236817868,
+        "bicubic": 39.7397580003133,
+        "delta_db": 1.401964367865375
+      },
+      {
+        "scene_id": "d1b9e4d5499dc353c4abecf25c057300253988399deef418726b2daa8ccea23a",
+        "model": 47.24177462072978,
+        "bicubic": 45.8104369217606,
+        "delta_db": 1.4313376989691804
+      },
+      {
+        "scene_id": "f84b7969520561611b00d39e2ecdc93cf7bc4dbce0a98738ddcc77f7840c56b5",
+        "model": 36.43027911418931,
+        "bicubic": 35.35474446621664,
+        "delta_db": 1.075534647972674
+      }
+    ],
+    "scene_mean_delta_db": 1.1946148924099642
+  }
+]

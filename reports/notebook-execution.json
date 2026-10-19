@@ -2,399 +2,361 @@
   {
     "source": "stage_01_python_numpy\\MP01_digital_image_explorer\\digital_image_explorer.ipynb",
     "source_sha256": "4d1e0b7257e3fbf80e835834b6bbdace604d9e079af822ffb665c314de15e842",
-    "started_at": "2026-10-18T12:08:06.182830+00:00",
+    "started_at": "2026-10-19T06:14:11.453032+00:00",
     "executed": "data\\executed_notebooks\\digital_image_explorer.executed.ipynb",
     "code_cells": 16,
     "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:08:26.397547+00:00",
-    "canonical_utf8_lf_sha256": "c2c525624e4ed80f995af22476ae45eea2947301df7c925a0cc969325016290f"
-  },
-  {
-    "source": "notebooks\\MP05.ipynb",
-    "source_sha256": "e2f3d0775a8c4a6cb82848b530bb208756503c17a51c868a5c94edbd09de948b",
-    "started_at": "2026-10-18T12:09:01.812234+00:00",
-    "executed": "data\\executed_notebooks\\MP05.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:15.059786+00:00",
-    "canonical_utf8_lf_sha256": "7b18dedc6a1a6a72185abf3e70a83353bc8587fcdbd522f14c00b4360e0b79cf"
-  },
-  {
-    "source": "notebooks\\MP06.ipynb",
-    "source_sha256": "b7b1a46d61206c49da376b12f35abc7bc24db959bf5083802e4a7443d07b1030",
-    "started_at": "2026-10-18T12:09:15.066612+00:00",
-    "executed": "data\\executed_notebooks\\MP06.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:24.859407+00:00",
-    "canonical_utf8_lf_sha256": "86215636f8550d18ab778411b74936df14fd65897d9696097eae5e393df8b0a8"
-  },
-  {
-    "source": "notebooks\\MP07.ipynb",
-    "source_sha256": "cbc6752668bbc251c815cfc6dea1186f68f1bb7d0453c0cd49cc7c5a48ef8a6d",
-    "started_at": "2026-10-18T12:09:24.868924+00:00",
-    "executed": "data\\executed_notebooks\\MP07.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:31.556952+00:00",
-    "canonical_utf8_lf_sha256": "73ef8f292b65774f89ac8ee9efd2908b2ed7a0db9adb577ac24b1399124ef6ea"
-  },
-  {
-    "source": "notebooks\\MP08.ipynb",
-    "source_sha256": "de0b7880cd0b5579d05577068a0a99887dab582df2e3eaeaa271d7f4cb09d126",
-    "started_at": "2026-10-18T12:09:31.564176+00:00",
-    "executed": "data\\executed_notebooks\\MP08.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:39.412786+00:00",
-    "canonical_utf8_lf_sha256": "7a2f06d76dbe5b031b3d394daacab106669832b2041925458b522ea1e388f8f5"
-  },
-  {
-    "source": "notebooks\\MP09.ipynb",
-    "source_sha256": "6d3a8824c06ed885ec5c37d30063d91537673c99e20f6dc9e7343a3fb284af02",
-    "started_at": "2026-10-18T12:09:39.424966+00:00",
-    "executed": "data\\executed_notebooks\\MP09.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:46.431473+00:00",
-    "canonical_utf8_lf_sha256": "b98f9e6fcade359d2feaa93e41089f127e38f3b724d0bb7813fb5a2762927f91"
-  },
-  {
-    "source": "notebooks\\MP10.ipynb",
-    "source_sha256": "4e05c8b2908728a67035f967f3bea530709930df9226e2a249e717910e0a2a6a",
-    "started_at": "2026-10-18T12:09:46.433484+00:00",
-    "executed": "data\\executed_notebooks\\MP10.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:09:53.576728+00:00",
-    "canonical_utf8_lf_sha256": "c16b7988a2e90f668248de07b8c49cf33c96b689c5f5a27bf85dcc69a66e60ef"
-  },
-  {
-    "source": "notebooks\\MP11.ipynb",
-    "source_sha256": "7c0d6e77f5e7ed0bce11d2b3fb4e49470ecfff89e1cad11829a7c393dd6f13f4",
-    "started_at": "2026-10-18T12:09:53.591883+00:00",
-    "executed": "data\\executed_notebooks\\MP11.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:00.753249+00:00",
-    "canonical_utf8_lf_sha256": "e2533f7e5c056babe5252cef754c067fd75abc3266640628c303614549500320"
-  },
-  {
-    "source": "notebooks\\MP12.ipynb",
-    "source_sha256": "7bfde3109efcc32e6b82c32c3f67315b1def4e555c361b719afff74389dd04bd",
-    "started_at": "2026-10-18T12:10:00.756937+00:00",
-    "executed": "data\\executed_notebooks\\MP12.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:09.169422+00:00",
-    "canonical_utf8_lf_sha256": "9fa1aaf36a5f51218f0632ea024667ecfa86b1e34d33e6acd9e0e3bc2aa41203"
-  },
-  {
-    "source": "notebooks\\MP13.ipynb",
-    "source_sha256": "7a22bacd1c37b42eab8f6bccb41eaf0ff67250cfe2f76219871f171ae6947e4b",
-    "started_at": "2026-10-18T12:10:09.176511+00:00",
-    "executed": "data\\executed_notebooks\\MP13.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:19.371385+00:00",
-    "canonical_utf8_lf_sha256": "bd9e8737cd8e52479f165707df041953c6a531a7a8ace6321b5dbf801eee8050"
-  },
-  {
-    "source": "notebooks\\MP14.ipynb",
-    "source_sha256": "1ab60390d4f106989288941b92b3e868e04ca6e1e7d2d2cf194a5db84ae22f7d",
-    "started_at": "2026-10-18T12:10:19.380117+00:00",
-    "executed": "data\\executed_notebooks\\MP14.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:26.121099+00:00",
-    "canonical_utf8_lf_sha256": "5636fea53b8d5ef079f9265b89771cf1d41c8829ec018094642e6ecc1d43d0c0"
-  },
-  {
-    "source": "notebooks\\MP15.ipynb",
-    "source_sha256": "3ddef88808f22f7eb927147c65e5f5100f947e7dbe64bcc418e370976963ac85",
-    "started_at": "2026-10-18T12:10:26.137291+00:00",
-    "executed": "data\\executed_notebooks\\MP15.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:32.871611+00:00",
-    "canonical_utf8_lf_sha256": "207688cc4754902a4ed4fcedc7ef621841395e2a93723021126379ea7e6ee138"
-  },
-  {
-    "source": "notebooks\\MP16.ipynb",
-    "source_sha256": "16bcf53ed0c64e7f4614451bf7a27e83fd229d97e9e22c90e03781573fb5fe1f",
-    "started_at": "2026-10-18T12:10:32.886449+00:00",
-    "executed": "data\\executed_notebooks\\MP16.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:40.087937+00:00",
-    "canonical_utf8_lf_sha256": "3bb5afaa0a28c81567e68d25a648f0d7177bebb39bc61e6fcbf832a7c4cd1a23"
-  },
-  {
-    "source": "notebooks\\MP17.ipynb",
-    "source_sha256": "77ef1df8b4cc3f40b73f9d3be2889d69fd65b773164751169b18f7ce0efcb219",
-    "started_at": "2026-10-18T12:10:40.095998+00:00",
-    "executed": "data\\executed_notebooks\\MP17.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:47.445404+00:00",
-    "canonical_utf8_lf_sha256": "9450edd378aac56dee3b97437e3783b9a4dfd559ef99077fcc3c6aa63d17214b"
-  },
-  {
-    "source": "notebooks\\MP18.ipynb",
-    "source_sha256": "eadcfa61b079e2a9e03b658dc1d9c789161360cee85cfcf7cd0faef6807df849",
-    "started_at": "2026-10-18T12:10:47.453378+00:00",
-    "executed": "data\\executed_notebooks\\MP18.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:10:57.572693+00:00",
-    "canonical_utf8_lf_sha256": "f53e114129d0173488f552c206f2ed4ccd4d1ce98c6929afd9b763e0882e6eb3"
-  },
-  {
-    "source": "notebooks\\MP19.ipynb",
-    "source_sha256": "8a56ca315a46b1cbd8dbc3bc3a2d5991a453ddc9a895f3df6c9e7b9c690557d1",
-    "started_at": "2026-10-18T12:10:57.591455+00:00",
-    "executed": "data\\executed_notebooks\\MP19.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:11:14.507907+00:00",
-    "canonical_utf8_lf_sha256": "1dee66f65b1ba7fbd7bf2ac9a943068ac843401bce905520dbb737efef88498c"
-  },
-  {
-    "source": "notebooks\\MP20.ipynb",
-    "source_sha256": "b9314d9daa2ed9831fac47d64337cbebeacf059a5ac737c214a65c08feea83fc",
-    "started_at": "2026-10-18T12:11:14.514496+00:00",
-    "executed": "data\\executed_notebooks\\MP20.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:11:26.878773+00:00",
-    "canonical_utf8_lf_sha256": "2046e77f927481156938f0b0862ae991d99da9409f281d1be88d181be5af4a12"
-  },
-  {
-    "source": "notebooks\\MP21.ipynb",
-    "source_sha256": "d534d498ef09588354c3d0dcbe4927dac0e3f7551d1e76088ad8e41dfeb7a9e4",
-    "started_at": "2026-10-18T12:11:26.894980+00:00",
-    "executed": "data\\executed_notebooks\\MP21.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:11:39.054710+00:00",
-    "canonical_utf8_lf_sha256": "6217a44915c663b255bc88c54b9c6c3348f0d6e12d8dcd53cfb0315c595e126b"
-  },
-  {
-    "source": "notebooks\\MP22.ipynb",
-    "source_sha256": "63f1a87327435e872904771c9f8b74eca86c79dd1c57d51cf42d3d10923993b2",
-    "started_at": "2026-10-18T12:11:39.065781+00:00",
-    "executed": "data\\executed_notebooks\\MP22.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:11:50.965304+00:00",
-    "canonical_utf8_lf_sha256": "29cb4e6e2d7c39cbbf912a4a384e39ad5dfa2eb8436c84aab162c9af87a18a54"
-  },
-  {
-    "source": "notebooks\\MP23.ipynb",
-    "source_sha256": "7c0262f8e44a434b32b539023ec2a0cfc994a32fb671bcf0fbc6846a738c98ac",
-    "started_at": "2026-10-18T12:11:50.968322+00:00",
-    "executed": "data\\executed_notebooks\\MP23.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:11:57.553764+00:00",
-    "canonical_utf8_lf_sha256": "c5ad90aaf49c113cd3efbe4014df8cc8630ca479e043fc021cf0f37ac5720ea6"
-  },
-  {
-    "source": "notebooks\\MP24.ipynb",
-    "source_sha256": "452fa452aa7751be83e654da4d33fdf2b69d02ced3ba1a66bce97c086162d92e",
-    "started_at": "2026-10-18T12:11:57.553764+00:00",
-    "executed": "data\\executed_notebooks\\MP24.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:12:04.214894+00:00",
-    "canonical_utf8_lf_sha256": "78835e430045e04acca526511e40f0d23930a9d258f55682b51ec48a839015fa"
-  },
-  {
-    "source": "notebooks\\MP25.ipynb",
-    "source_sha256": "a13188701e12ffdfdfce4e9b62184b23de88613e5abaf89cf374245c2b7a307a",
-    "started_at": "2026-10-18T12:12:04.214894+00:00",
-    "executed": "data\\executed_notebooks\\MP25.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:12:10.800198+00:00",
-    "canonical_utf8_lf_sha256": "6ebc557c49f2d147385f792b57a54de81be7bef8bdaa8a5d3be9e994a1e29599"
-  },
-  {
-    "source": "notebooks\\MP26.ipynb",
-    "source_sha256": "859cf8907cbac9ef157995928bc902026c4c3c0ce16499587d1181a44e91d764",
-    "started_at": "2026-10-18T12:12:10.800198+00:00",
-    "executed": "data\\executed_notebooks\\MP26.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:12:21.083102+00:00",
-    "canonical_utf8_lf_sha256": "a0f9678da747e19db96e9819775cde4d1f8e80b721d82e2bd1b245d871651b65"
-  },
-  {
-    "source": "notebooks\\MP27.ipynb",
-    "source_sha256": "b4b3cd22b3bef8c40b7a3d3213ec5ee20c79888dcd01bc4857fb85991efb8184",
-    "started_at": "2026-10-18T12:12:21.092990+00:00",
-    "executed": "data\\executed_notebooks\\MP27.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:12:31.768270+00:00",
-    "canonical_utf8_lf_sha256": "2e5a684273e1a42da1c161b6af5652d7d6dad5712863262bc72a51a5fa3bb587"
-  },
-  {
-    "source": "notebooks\\MP28.ipynb",
-    "source_sha256": "1a35d541060287ec939f0663d02e7fc1b0d4201adb6c2d153eefd53d99b9acf3",
-    "started_at": "2026-10-18T12:12:31.790339+00:00",
-    "executed": "data\\executed_notebooks\\MP28.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:12:42.226205+00:00",
-    "canonical_utf8_lf_sha256": "0bd578fef680fad68037123d1a56cf4cc57f50652694ed70529818ce0c36cf03"
-  },
-  {
-    "source": "notebooks\\MP29.ipynb",
-    "source_sha256": "c9764ab40a653a538c273095f7261b7bc282b4a4ea5e5c3ad4562ac8c528fa80",
-    "started_at": "2026-10-18T12:12:42.239134+00:00",
-    "executed": "data\\executed_notebooks\\MP29.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:12:52.684833+00:00",
-    "canonical_utf8_lf_sha256": "f151d44921b4b12df054db81486c3df073c29e5924ceaea9bee9c39f65ca9819"
-  },
-  {
-    "source": "notebooks\\MP30.ipynb",
-    "source_sha256": "d41a33561651f4cb2db9c82032b8fbc209414ce9729641a5cda9c7ab9205dd02",
-    "started_at": "2026-10-18T12:12:52.703424+00:00",
-    "executed": "data\\executed_notebooks\\MP30.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:02.369873+00:00",
-    "canonical_utf8_lf_sha256": "59f9bda07f4adb2123fd3765fc27877c09f5faa61b0bd0333069a8992744e09c"
-  },
-  {
-    "source": "notebooks\\MP31.ipynb",
-    "source_sha256": "88042688bc78d619ccd9662cb0995aa67f0b5e1a73144a0cfb3d47174ab0439d",
-    "started_at": "2026-10-18T12:13:02.393306+00:00",
-    "executed": "data\\executed_notebooks\\MP31.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:13.193798+00:00",
-    "canonical_utf8_lf_sha256": "dd9ad8f051970056b3a42a5f100a0bc7893ccbc7b242ac2ccb0d0e7f5834e2e4"
-  },
-  {
-    "source": "notebooks\\MP32.ipynb",
-    "source_sha256": "ce2fb6d3ded03ae739b8f0a1975a26c984d92d0cc7d4bfaf25d74fcbd698ff98",
-    "started_at": "2026-10-18T12:13:13.201705+00:00",
-    "executed": "data\\executed_notebooks\\MP32.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:21.498917+00:00",
-    "canonical_utf8_lf_sha256": "2effc3f7c34227944ac2afefaf86d86df790453c93e69627fb6a1b5dd6786e82"
-  },
-  {
-    "source": "notebooks\\MP33.ipynb",
-    "source_sha256": "4ae63746849af98cb2b102b66b5ca3a27595ad72efcea7ae149d57da7b33a48c",
-    "started_at": "2026-10-18T12:13:21.514966+00:00",
-    "executed": "data\\executed_notebooks\\MP33.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:27.711224+00:00",
-    "canonical_utf8_lf_sha256": "78962a74a7475b80569e4317d434347b88fc43f70c49046d1a8c45f17737a4d1"
-  },
-  {
-    "source": "notebooks\\MP34.ipynb",
-    "source_sha256": "089242eaf8b5cb7c291e3b59522f9e52c48fae9ba3a660f7689191c3b74e5499",
-    "started_at": "2026-10-18T12:13:27.723639+00:00",
-    "executed": "data\\executed_notebooks\\MP34.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:34.303464+00:00",
-    "canonical_utf8_lf_sha256": "07da16ac41032d92da2041de37cd03c34d66aa4b85fcac9623ed1f9cf53fb8cb"
-  },
-  {
-    "source": "notebooks\\MP35.ipynb",
-    "source_sha256": "9930f9195db4a4da08f402e88a6ee524b3c39d823506cfc8f13aae8c783dd047",
-    "started_at": "2026-10-18T12:13:34.308978+00:00",
-    "executed": "data\\executed_notebooks\\MP35.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:41.145466+00:00",
-    "canonical_utf8_lf_sha256": "192f81f6df0d2669c95655ca82add0ff012503597e8f130d69d0bf11b6ea1388"
-  },
-  {
-    "source": "notebooks\\MP36.ipynb",
-    "source_sha256": "639e634542de27709ae4b0e036c770ad7c076c1717090fff268c5739525c7e83",
-    "started_at": "2026-10-18T12:13:41.163541+00:00",
-    "executed": "data\\executed_notebooks\\MP36.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:47.783267+00:00",
-    "canonical_utf8_lf_sha256": "970e65dd23cae5fff230c2ac6ae3f71ebac831b92083abed9166d250e30c273b"
-  },
-  {
-    "source": "notebooks\\MP37.ipynb",
-    "source_sha256": "c6d65d039351d59169700223b619ca95e3c8a7e3bbaf5ce6b164a38e2a467453",
-    "started_at": "2026-10-18T12:13:47.785283+00:00",
-    "executed": "data\\executed_notebooks\\MP37.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:13:55.978576+00:00",
-    "canonical_utf8_lf_sha256": "953b2cd14ca65fc8f90e60aafebc0dcef9e2d154b09144e926b537c6cec526fb"
-  },
-  {
-    "source": "notebooks\\MP38.ipynb",
-    "source_sha256": "2fb064e4b2b1cd23c547fd51b559ad1230097aa2f1419c0613d498bf77d4d20c",
-    "started_at": "2026-10-18T12:13:55.992888+00:00",
-    "executed": "data\\executed_notebooks\\MP38.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:14:04.399797+00:00",
-    "canonical_utf8_lf_sha256": "a9ed2646964fe4ccb8f87ff7a950fecb7594e51fecf384daa906003e25badd40"
-  },
-  {
-    "source": "notebooks\\MP39.ipynb",
-    "source_sha256": "6ca60e49a62c521da9fee36fc1a0a14740c5c9da4b51e756ef543a72845f0820",
-    "started_at": "2026-10-18T12:14:04.410803+00:00",
-    "executed": "data\\executed_notebooks\\MP39.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:14:14.274395+00:00",
-    "canonical_utf8_lf_sha256": "4bcbece7ed1e44e951a9e9945e0eafb5da053b2f20163e66be9f3c22fa4cd6bf"
-  },
-  {
-    "source": "notebooks\\MP40.ipynb",
-    "source_sha256": "c8d8136e4acaa0ba3a9c51fd3cb9169018502f7480a230cccd4ba9d85644908f",
-    "started_at": "2026-10-18T12:14:14.291873+00:00",
-    "executed": "data\\executed_notebooks\\MP40.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:14:22.911663+00:00",
-    "canonical_utf8_lf_sha256": "91d25f2559f386fc2ba702eb3504a6a1d66ba6e0630e260d44216af09e67374e"
+    "finished_at": "2026-10-19T06:14:17.175100+00:00"
   },
   {
     "source": "notebooks\\MP02.ipynb",
     "source_sha256": "3a82372b6a3765e958ac9aa7a9bca542fa291675cb1e11f02c703f24b3ab6db4",
-    "started_at": "2026-10-18T12:15:32.455010+00:00",
+    "started_at": "2026-10-19T06:14:17.179102+00:00",
     "executed": "data\\executed_notebooks\\MP02.executed.ipynb",
     "code_cells": 5,
     "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T12:15:37.741264+00:00",
-    "canonical_utf8_lf_sha256": "960df6e931a65a034dfb23ad6d3fb92dc2112ea0196068934ed77594ce47aa7f"
+    "finished_at": "2026-10-19T06:14:19.691744+00:00"
   },
   {
     "source": "notebooks\\MP03.ipynb",
     "source_sha256": "b648167bb825403d853d87140e008d893185e2159e06d81a2ac4f4fb21873c73",
-    "started_at": "2026-10-18T19:09:24.447839+00:00",
+    "started_at": "2026-10-19T06:14:19.691744+00:00",
     "executed": "data\\executed_notebooks\\MP03.executed.ipynb",
     "code_cells": 4,
     "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T19:09:27.013047+00:00"
+    "finished_at": "2026-10-19T06:14:22.542008+00:00"
   },
   {
     "source": "notebooks\\MP04.ipynb",
     "source_sha256": "2b0357c152ac730f84523878f161977d6e49558436bdfe2e240c0679151c5bef",
-    "started_at": "2026-10-18T19:09:27.805924+00:00",
+    "started_at": "2026-10-19T06:14:22.546597+00:00",
     "executed": "data\\executed_notebooks\\MP04.executed.ipynb",
     "code_cells": 4,
     "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-18T19:09:29.996660+00:00"
+    "finished_at": "2026-10-19T06:14:25.408856+00:00"
+  },
+  {
+    "source": "notebooks\\MP05.ipynb",
+    "source_sha256": "dd4b69fd278fb8d237250a8a6fb67144862e1c4fe4d9d07e59c63960c69f06d2",
+    "started_at": "2026-10-19T06:14:25.414349+00:00",
+    "executed": "data\\executed_notebooks\\MP05.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:28.310585+00:00"
+  },
+  {
+    "source": "notebooks\\MP06.ipynb",
+    "source_sha256": "5df3ef73db63e3b19bfba498c407b916eaa9dea25cdf6a5dcbc96626a59edb16",
+    "started_at": "2026-10-19T06:14:28.313830+00:00",
+    "executed": "data\\executed_notebooks\\MP06.executed.ipynb",
+    "code_cells": 3,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:31.964837+00:00"
+  },
+  {
+    "source": "notebooks\\MP07.ipynb",
+    "source_sha256": "1fab0cbdd91120693d10bbbb8ef16210c97beffa57df995dbb88be2ffc85da18",
+    "started_at": "2026-10-19T06:14:31.968319+00:00",
+    "executed": "data\\executed_notebooks\\MP07.executed.ipynb",
+    "code_cells": 3,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:35.039997+00:00"
+  },
+  {
+    "source": "notebooks\\MP08.ipynb",
+    "source_sha256": "7f2b264c3b3b94ef048cda46a02dd1b85db6afb2ebbcf837641bd2266cdee62b",
+    "started_at": "2026-10-19T06:14:35.044565+00:00",
+    "executed": "data\\executed_notebooks\\MP08.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:38.082854+00:00"
+  },
+  {
+    "source": "notebooks\\MP09.ipynb",
+    "source_sha256": "9344f9a21b5ba0ef34c6d523bf1d14b0710176db9d913792206eef241dac462f",
+    "started_at": "2026-10-19T06:14:38.093417+00:00",
+    "executed": "data\\executed_notebooks\\MP09.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:40.631533+00:00"
+  },
+  {
+    "source": "notebooks\\MP10.ipynb",
+    "source_sha256": "171f395e48faee43357ddccf4550a2ff8dc0af235e7ea07e3a6ddb647017c43b",
+    "started_at": "2026-10-19T06:14:40.631533+00:00",
+    "executed": "data\\executed_notebooks\\MP10.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:43.457074+00:00"
+  },
+  {
+    "source": "notebooks\\MP11.ipynb",
+    "source_sha256": "7b1c903456422667bd42dd792a59b820822f4752ec549eb5e5ac51fc2fa08681",
+    "started_at": "2026-10-19T06:14:43.457074+00:00",
+    "executed": "data\\executed_notebooks\\MP11.executed.ipynb",
+    "code_cells": 4,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:45.924012+00:00"
+  },
+  {
+    "source": "notebooks\\MP12.ipynb",
+    "source_sha256": "7bfde3109efcc32e6b82c32c3f67315b1def4e555c361b719afff74389dd04bd",
+    "started_at": "2026-10-19T06:14:45.926028+00:00",
+    "executed": "data\\executed_notebooks\\MP12.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:51.256196+00:00"
+  },
+  {
+    "source": "notebooks\\MP13.ipynb",
+    "source_sha256": "7a22bacd1c37b42eab8f6bccb41eaf0ff67250cfe2f76219871f171ae6947e4b",
+    "started_at": "2026-10-19T06:14:51.272826+00:00",
+    "executed": "data\\executed_notebooks\\MP13.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:14:56.848226+00:00"
+  },
+  {
+    "source": "notebooks\\MP14.ipynb",
+    "source_sha256": "1ab60390d4f106989288941b92b3e868e04ca6e1e7d2d2cf194a5db84ae22f7d",
+    "started_at": "2026-10-19T06:14:56.855252+00:00",
+    "executed": "data\\executed_notebooks\\MP14.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:02.872578+00:00"
+  },
+  {
+    "source": "notebooks\\MP15.ipynb",
+    "source_sha256": "3ddef88808f22f7eb927147c65e5f5100f947e7dbe64bcc418e370976963ac85",
+    "started_at": "2026-10-19T06:15:02.879251+00:00",
+    "executed": "data\\executed_notebooks\\MP15.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:08.322978+00:00"
+  },
+  {
+    "source": "notebooks\\MP16.ipynb",
+    "source_sha256": "16bcf53ed0c64e7f4614451bf7a27e83fd229d97e9e22c90e03781573fb5fe1f",
+    "started_at": "2026-10-19T06:15:08.329014+00:00",
+    "executed": "data\\executed_notebooks\\MP16.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:14.098914+00:00"
+  },
+  {
+    "source": "notebooks\\MP17.ipynb",
+    "source_sha256": "77ef1df8b4cc3f40b73f9d3be2889d69fd65b773164751169b18f7ce0efcb219",
+    "started_at": "2026-10-19T06:15:14.107207+00:00",
+    "executed": "data\\executed_notebooks\\MP17.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:19.409214+00:00"
+  },
+  {
+    "source": "notebooks\\MP18.ipynb",
+    "source_sha256": "eadcfa61b079e2a9e03b658dc1d9c789161360cee85cfcf7cd0faef6807df849",
+    "started_at": "2026-10-19T06:15:19.420166+00:00",
+    "executed": "data\\executed_notebooks\\MP18.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:24.650852+00:00"
+  },
+  {
+    "source": "notebooks\\MP19.ipynb",
+    "source_sha256": "8a56ca315a46b1cbd8dbc3bc3a2d5991a453ddc9a895f3df6c9e7b9c690557d1",
+    "started_at": "2026-10-19T06:15:24.657586+00:00",
+    "executed": "data\\executed_notebooks\\MP19.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:33.144987+00:00"
+  },
+  {
+    "source": "notebooks\\MP20.ipynb",
+    "source_sha256": "b9314d9daa2ed9831fac47d64337cbebeacf059a5ac737c214a65c08feea83fc",
+    "started_at": "2026-10-19T06:15:33.153282+00:00",
+    "executed": "data\\executed_notebooks\\MP20.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:38.617094+00:00"
+  },
+  {
+    "source": "notebooks\\MP21.ipynb",
+    "source_sha256": "d534d498ef09588354c3d0dcbe4927dac0e3f7551d1e76088ad8e41dfeb7a9e4",
+    "started_at": "2026-10-19T06:15:38.621207+00:00",
+    "executed": "data\\executed_notebooks\\MP21.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:44.002889+00:00"
+  },
+  {
+    "source": "notebooks\\MP22.ipynb",
+    "source_sha256": "63f1a87327435e872904771c9f8b74eca86c79dd1c57d51cf42d3d10923993b2",
+    "started_at": "2026-10-19T06:15:44.013824+00:00",
+    "executed": "data\\executed_notebooks\\MP22.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:49.880987+00:00"
+  },
+  {
+    "source": "notebooks\\MP23.ipynb",
+    "source_sha256": "7c0262f8e44a434b32b539023ec2a0cfc994a32fb671bcf0fbc6846a738c98ac",
+    "started_at": "2026-10-19T06:15:49.885588+00:00",
+    "executed": "data\\executed_notebooks\\MP23.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:15:55.965271+00:00"
+  },
+  {
+    "source": "notebooks\\MP24.ipynb",
+    "source_sha256": "452fa452aa7751be83e654da4d33fdf2b69d02ced3ba1a66bce97c086162d92e",
+    "started_at": "2026-10-19T06:15:55.968981+00:00",
+    "executed": "data\\executed_notebooks\\MP24.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:01.806278+00:00"
+  },
+  {
+    "source": "notebooks\\MP25.ipynb",
+    "source_sha256": "a13188701e12ffdfdfce4e9b62184b23de88613e5abaf89cf374245c2b7a307a",
+    "started_at": "2026-10-19T06:16:01.810948+00:00",
+    "executed": "data\\executed_notebooks\\MP25.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:07.579278+00:00"
+  },
+  {
+    "source": "notebooks\\MP26.ipynb",
+    "source_sha256": "859cf8907cbac9ef157995928bc902026c4c3c0ce16499587d1181a44e91d764",
+    "started_at": "2026-10-19T06:16:07.594340+00:00",
+    "executed": "data\\executed_notebooks\\MP26.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:13.045396+00:00"
+  },
+  {
+    "source": "notebooks\\MP27.ipynb",
+    "source_sha256": "b4b3cd22b3bef8c40b7a3d3213ec5ee20c79888dcd01bc4857fb85991efb8184",
+    "started_at": "2026-10-19T06:16:13.052461+00:00",
+    "executed": "data\\executed_notebooks\\MP27.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:18.851542+00:00"
+  },
+  {
+    "source": "notebooks\\MP28.ipynb",
+    "source_sha256": "1a35d541060287ec939f0663d02e7fc1b0d4201adb6c2d153eefd53d99b9acf3",
+    "started_at": "2026-10-19T06:16:18.857074+00:00",
+    "executed": "data\\executed_notebooks\\MP28.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:25.432545+00:00"
+  },
+  {
+    "source": "notebooks\\MP29.ipynb",
+    "source_sha256": "c9764ab40a653a538c273095f7261b7bc282b4a4ea5e5c3ad4562ac8c528fa80",
+    "started_at": "2026-10-19T06:16:25.436813+00:00",
+    "executed": "data\\executed_notebooks\\MP29.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:31.764418+00:00"
+  },
+  {
+    "source": "notebooks\\MP30.ipynb",
+    "source_sha256": "d41a33561651f4cb2db9c82032b8fbc209414ce9729641a5cda9c7ab9205dd02",
+    "started_at": "2026-10-19T06:16:31.766981+00:00",
+    "executed": "data\\executed_notebooks\\MP30.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:37.715473+00:00"
+  },
+  {
+    "source": "notebooks\\MP31.ipynb",
+    "source_sha256": "88042688bc78d619ccd9662cb0995aa67f0b5e1a73144a0cfb3d47174ab0439d",
+    "started_at": "2026-10-19T06:16:37.723946+00:00",
+    "executed": "data\\executed_notebooks\\MP31.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:43.299943+00:00"
+  },
+  {
+    "source": "notebooks\\MP32.ipynb",
+    "source_sha256": "ce2fb6d3ded03ae739b8f0a1975a26c984d92d0cc7d4bfaf25d74fcbd698ff98",
+    "started_at": "2026-10-19T06:16:43.299943+00:00",
+    "executed": "data\\executed_notebooks\\MP32.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:48.919899+00:00"
+  },
+  {
+    "source": "notebooks\\MP33.ipynb",
+    "source_sha256": "4ae63746849af98cb2b102b66b5ca3a27595ad72efcea7ae149d57da7b33a48c",
+    "started_at": "2026-10-19T06:16:48.922324+00:00",
+    "executed": "data\\executed_notebooks\\MP33.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:54.235599+00:00"
+  },
+  {
+    "source": "notebooks\\MP34.ipynb",
+    "source_sha256": "089242eaf8b5cb7c291e3b59522f9e52c48fae9ba3a660f7689191c3b74e5499",
+    "started_at": "2026-10-19T06:16:54.237108+00:00",
+    "executed": "data\\executed_notebooks\\MP34.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:16:59.815042+00:00"
+  },
+  {
+    "source": "notebooks\\MP35.ipynb",
+    "source_sha256": "9930f9195db4a4da08f402e88a6ee524b3c39d823506cfc8f13aae8c783dd047",
+    "started_at": "2026-10-19T06:16:59.820632+00:00",
+    "executed": "data\\executed_notebooks\\MP35.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:17:05.566271+00:00"
+  },
+  {
+    "source": "notebooks\\MP36.ipynb",
+    "source_sha256": "639e634542de27709ae4b0e036c770ad7c076c1717090fff268c5739525c7e83",
+    "started_at": "2026-10-19T06:17:05.573330+00:00",
+    "executed": "data\\executed_notebooks\\MP36.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:17:11.282565+00:00"
+  },
+  {
+    "source": "notebooks\\MP37.ipynb",
+    "source_sha256": "c6d65d039351d59169700223b619ca95e3c8a7e3bbaf5ce6b164a38e2a467453",
+    "started_at": "2026-10-19T06:17:11.285238+00:00",
+    "executed": "data\\executed_notebooks\\MP37.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:17:16.608134+00:00"
+  },
+  {
+    "source": "notebooks\\MP38.ipynb",
+    "source_sha256": "2fb064e4b2b1cd23c547fd51b559ad1230097aa2f1419c0613d498bf77d4d20c",
+    "started_at": "2026-10-19T06:17:16.610641+00:00",
+    "executed": "data\\executed_notebooks\\MP38.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:17:23.033582+00:00"
+  },
+  {
+    "source": "notebooks\\MP39.ipynb",
+    "source_sha256": "6ca60e49a62c521da9fee36fc1a0a14740c5c9da4b51e756ef543a72845f0820",
+    "started_at": "2026-10-19T06:17:23.039038+00:00",
+    "executed": "data\\executed_notebooks\\MP39.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:17:29.087944+00:00"
+  },
+  {
+    "source": "notebooks\\MP40.ipynb",
+    "source_sha256": "c8d8136e4acaa0ba3a9c51fd3cb9169018502f7480a230cccd4ba9d85644908f",
+    "started_at": "2026-10-19T06:17:29.096830+00:00",
+    "executed": "data\\executed_notebooks\\MP40.executed.ipynb",
+    "code_cells": 2,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-19T06:17:35.336587+00:00"
   }
 ]

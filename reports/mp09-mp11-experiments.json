@@ -1,0 +1,122 @@
+{
+  "source": {
+    "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "region_id": "ROI_00006",
+    "split": "train",
+    "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "acquisition_time": "2021-09-17"
+  },
+  "bands": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "units": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "window": [
+    0,
+    0,
+    64,
+    64
+  ],
+  "protocol": {
+    "range": 1.0,
+    "border": 0,
+    "ssim_window": 7,
+    "ssim_moments": "population",
+    "padding": "none; valid windows only",
+    "aggregation": "equal weight to all bands and valid windows",
+    "clipping": false,
+    "seed": 17
+  },
+  "rows": [
+    {
+      "case": "identical",
+      "mse": 0.0,
+      "psnr_db": "positive infinity",
+      "ssim": 1.0,
+      "rmse_by_band": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "case": "blur",
+      "mse": 1.2931455623076013e-05,
+      "psnr_db": 48.883525862187234,
+      "ssim": 0.9893761786792742,
+      "rmse_by_band": [
+        0.004133236050445669,
+        0.003116791896867061,
+        0.0027215480444423164,
+        0.0041858053892908495
+      ]
+    },
+    {
+      "case": "contrast",
+      "mse": 1.0426163864165543e-05,
+      "psnr_db": 49.81875453709438,
+      "ssim": 0.9973512209033093,
+      "rmse_by_band": [
+        0.003780572069588695,
+        0.003052493856487918,
+        0.002636814107103646,
+        0.003337877005521735
+      ]
+    },
+    {
+      "case": "noise 0.01",
+      "mse": 9.99348028751739e-05,
+      "psnr_db": 40.00283239857637,
+      "ssim": 0.9118169089961349,
+      "rmse_by_band": [
+        0.010081048983035482,
+        0.009954933868493184,
+        0.010068814135437105,
+        0.009880786227941809
+      ]
+    },
+    {
+      "case": "matched-MSE noise",
+      "mse": 1.2931455623076013e-05,
+      "psnr_db": 48.883525862187234,
+      "ssim": 0.9876571259788245,
+      "rmse_by_band": [
+        0.003616342074526304,
+        0.003667750973978419,
+        0.003525381200205028,
+        0.003573119460420562
+      ]
+    }
+  ],
+  "range_sensitivity": [
+    {
+      "noise_std": 0.005,
+      "psnr_range_1.0": 46.023432311856,
+      "psnr_range_255.0": 94.15423592053511
+    },
+    {
+      "noise_std": 0.01,
+      "psnr_range_1.0": 40.00283239857637,
+      "psnr_range_255.0": 88.13363600725549
+    },
+    {
+      "noise_std": 0.02,
+      "psnr_range_1.0": 33.98223248529675,
+      "psnr_range_255.0": 82.11303609397586
+    }
+  ],
+  "aggregation_example": {
+    "per_image_mse": [
+      0.01,
+      0.0001
+    ],
+    "mean_image_psnr_db": 30.0,
+    "psnr_of_mean_mse_db": 22.967086218813385
+  },
+  "limitations": "One training crop and controlled distortions; no model ranking or sensor-quality claim. Incorrect range 255 is included only as an error demonstration."
+}
