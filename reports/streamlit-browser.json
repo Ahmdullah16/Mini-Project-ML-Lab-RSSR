@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8501",
+  "verification": "Browser clicked Estimate super-resolution, displayed baseline/SR and provenance, downloaded PNG",
+  "download_shape": [
+    32,
+    32
+  ],
+  "download_sha256": "f60390db9011b001a3add70da31c15a2c7a934b3480c644b826946e3574da8c2",
+  "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+  "public_deployment": false
+}

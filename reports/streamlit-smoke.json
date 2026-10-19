@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "method": "Streamlit AppTest executes actual model; not public HTTP verification",
+  "shape": [
+    32,
+    32,
+    3
+  ],
+  "metadata": {
+    "run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+    "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+    "status": "pilot synthetic degradation on NAIP; not a research-validated model",
+    "scale": 2,
+    "sensor": "NAIP aerial RGB",
+    "acquisition_time": "2021-09-17",
+    "reference_metrics": "unavailable: no HR reference",
+    "display_scaling": "fixed [0,1], clipped for RGB display only",
+    "tiling": {
+      "tile": 128,
+      "halo": 32,
+      "note": "approximate context for globally pooled models"
+    },
+    "model_version": "b94966013b046b7f2b8e542d6161786d67e750c0",
+    "runtime_seconds": 0.1276269000081811,
+    "inference_time": "2026-10-19T06:30:42.492612+00:00",
+    "storage": "temporary session; not durable",
+    "source": "OpenSR ROI_00006 training scene; synthetic x2 LR, uint8 display quantization",
+    "license": "NAIP public domain; retain USDA/OpenSR attribution",
+    "input_kind": "cached licensed training example"
+  },
+  "process_rss_bytes": 237821952,
+  "total_seconds": 11.618046099989442
+}

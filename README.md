@@ -2,11 +2,13 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02–MP11 have expanded explanations, solutions and measured real training-crop experiments; MP12–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
+**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02–MP15 have expanded explanations, solutions and measured real training-crop experiments; MP16–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
 
 Measured [three-seed ablations](reports/ablation-pilot.md) still trail bicubic. The [local HTTP demo](reports/demo-http.json) passed inference; no public deployment is claimed.
 
 Read [actual progress](docs/progress.md), [audit](docs/audit.md), [setup](docs/setup.md), [protocol](docs/protocol.md), [dataset cards](docs/dataset-cards.md), [architecture](docs/architecture.md), [literature](docs/literature.md), and [next session](docs/next_session.md).
+
+See [Streamlit deployment instructions](docs/streamlit-deployment.md) for the stateless Community Cloud target, public checksum-pinned model and exact dashboard settings. Public hosting is not yet verified.
 
 ## Quickstart
 

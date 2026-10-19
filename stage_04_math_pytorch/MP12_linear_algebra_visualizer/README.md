@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded [notebook](../../notebooks/MP12.ipynb) passed a real isolated kernel. [Measured evidence](../../reports/mp12-svd.json) includes checksums and actual outcomes. Reproduce with `python scripts/linear_experiment.py`. Worked solutions are provided; learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Approximate grayscale images at several SVD ranks; deliver reconstruction/error curves and a memory comparison.
+**Implemented and executed; evidence linked above.** Approximate grayscale images at several SVD ranks; deliver reconstruction/error curves and a memory comparison.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- A documented script or notebook and exact run command added during implementation; supplied in the linked notebook and experiment script.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 
