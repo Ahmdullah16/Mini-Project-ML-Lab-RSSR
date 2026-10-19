@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded notebook covers weighted minibatch loss, Dataset/DataLoader, deterministic overfit, checkpoints and recovery. Measured evidence: [pipeline report](../../reports/mp16-pipeline.json). Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Plan a tiny regression overfit and seeded rerun; deliver a training specification, split manifest, and checkpoint/resume acceptance checks.
+**Executed:** `python scripts/pipeline_experiment.py` trains a seeded tiny regression twice and compares uninterrupted production training with checkpoint recovery. The notebook specifies configuration, split limitations and real geographic-study evidence.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- [Expanded notebook](../../notebooks/MP16.ipynb) and the executable script `scripts/pipeline_experiment.py`.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 
