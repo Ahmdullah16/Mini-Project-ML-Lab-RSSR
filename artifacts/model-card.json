@@ -1,0 +1,36 @@
+{
+  "name": "RGB CNN engineering pilot v1",
+  "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+  "training_run": "b5f690d95fe4422b88f6f728ce6d6c2c",
+  "config": {
+    "seed": 17,
+    "steps": 100,
+    "batch_size": 4,
+    "lr": 0.001,
+    "validate_every": 20,
+    "consistency_weight": 0,
+    "model": {
+      "bands": 3,
+      "scale": 2,
+      "width": 16,
+      "kind": "cnn",
+      "gate": false,
+      "fusion": "concat",
+      "window": 4
+    }
+  },
+  "training_manifest_sha256": "219767994cdb5b60ea100b287450fb0092cad5e3cca058522da472511f34a324",
+  "training_commit": "dadf3190b62232c379fcf7e7c1b46a8d01113a56",
+  "training_dirty": true,
+  "training_seconds": 1.0098137999957544,
+  "data": "Public NAIP aerial imagery via checksum-pinned OpenSR dataset; synthetic x2 degradation; fixed DN/10000 scaling, physical calibration unverified.",
+  "license": "NAIP public-domain source imagery; retain USDA and OpenSR attribution. Model artifact released by repository owner for this authorized educational demo.",
+  "limitations": "100-step CPU training pilot. Not a research-validated or publication model. No scientific spectral or cross-sensor fidelity claim. RGB display only.",
+  "sample": {
+    "sha256": "b74f4daaf333b42349d3d2b61ec610808cf1b1c4a48ed6c70e55ab6b6eea9ca6",
+    "acquisition_date": "2021-09-17",
+    "source": "ROI_00006 NAIP training scene",
+    "processing": "Synthetic x2 LR, fixed numerical scaling, uint8 display quantization",
+    "license": "NAIP public domain; retain USDA/OpenSR attribution"
+  }
+}
