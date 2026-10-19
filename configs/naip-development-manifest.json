@@ -1,0 +1,100 @@
+{
+  "name": "OpenSR NAIP three-scene engineering pilot expanded development snapshot",
+  "version": "100@e4600b9c74a621adeec047e5f6cc7a2d70a58134-development-v2",
+  "source_url": "https://huggingface.co/datasets/isp-uv-es/opensr-test",
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "citation": "Aybar et al., A Comprehensive Benchmark for Optical Remote Sensing Image Super-Resolution (2024), IEEE document 10530998",
+  "sensor": "NAIP aerial imagery (not satellite)",
+  "bands": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "units": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "divisor": 10000.0,
+  "retrieval_time": "2026-10-18T06:00:36.741381+00:00",
+  "scenes": [
+    {
+      "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "region_id": "ROI_00006",
+      "split": "train",
+      "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+      "acquisition_time": "2021-09-17"
+    },
+    {
+      "id": "HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+      "region_id": "ROI_00270",
+      "split": "validation",
+      "path": "raw/HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+      "sha256": "882da1a22c930e054d5b6b9e5b7ddd33b7a77abb47f84676142b86b7bc1a55bf",
+      "acquisition_time": "2021-09-09"
+    },
+    {
+      "id": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+      "region_id": "ROI_00319",
+      "split": "test",
+      "path": "raw/HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+      "sha256": "671335fdb7ada3e281a8961fe3e4dfe0d6f4daea1084d45777794ccb583c85ef",
+      "acquisition_time": "2019-06-27"
+    },
+    {
+      "id": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "region_id": "ROI_00399",
+      "split": "train",
+      "path": "raw/HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "sha256": "6cfe72c18497d749a6628e0f394417ad99f3ec2b0a1e356e182f4d15396ca521",
+      "acquisition_time": "2021-09-09"
+    },
+    {
+      "id": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "region_id": "ROI_00438",
+      "split": "train",
+      "path": "raw/HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "sha256": "c1393e5ed2e28e0828209912b870fec8f7fda457bfbbe8173293f583b2d25e1e",
+      "acquisition_time": "2021-09-19"
+    },
+    {
+      "id": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "region_id": "ROI_00456",
+      "split": "train",
+      "path": "raw/HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "sha256": "88c5f9f976aa68974668bacc45d01f3fe65ed72c530f08bbd973b66cee83919b",
+      "acquisition_time": "2020-05-21"
+    },
+    {
+      "id": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+      "region_id": "ROI_00565",
+      "split": "validation",
+      "path": "raw/HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+      "sha256": "6d2cf0fa04b5acc56306debcad02c9f7d26bfe201b3e876e3f348adc538f95cd",
+      "acquisition_time": "2020-08-28"
+    },
+    {
+      "id": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+      "region_id": "ROI_01566",
+      "split": "validation",
+      "path": "raw/HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+      "sha256": "4d3482ec73a8028c4b8cd2d7d467dc45c82b776f908807d14c7c946a97fd1feb",
+      "acquisition_time": "2021-11-13"
+    },
+    {
+      "id": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+      "region_id": "ROI_01619",
+      "split": "validation",
+      "path": "raw/HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+      "sha256": "9c2ab26200708a5f3bc8e1e7d82437767b0a63bf403548086b4301aca47a6875",
+      "acquisition_time": "2019-09-26"
+    }
+  ]
+}

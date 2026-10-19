@@ -2,7 +2,7 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02 now has expanded explanations, solutions and a measured real training-crop experiment; MP03–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
+**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02–MP11 have expanded explanations, solutions and measured real training-crop experiments; MP12–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
 
 Measured [three-seed ablations](reports/ablation-pilot.md) still trail bicubic. The [local HTTP demo](reports/demo-http.json) passed inference; no public deployment is claimed.
 
@@ -24,9 +24,9 @@ rssr export data/catalog.sqlite reports/export
 
 The pilot uses three real aerial scenes and **synthetic** degradation, not real cross-sensor satellite pairs. It evaluates validation only. Source imagery, SQLite and checkpoints stay in ignored data/. The default download is about 5.6 MB plus dependencies. No training or downloads occur at import. Research settings are templates, not measured results.
 
-src/rssr/: reusable code; configs/: explicit settings; 	ests/: offline checks; 
-otebooks/: MP02–MP40; original stage folders: authoritative briefs and preserved MP01; pp/: Gradio demo; 
-eports/: measured small summaries; docs/: research and operation guidance.
+`src/rssr/`: reusable code; `configs/`: explicit settings; `tests/`: offline checks; `notebooks/`: MP02–MP40; original stage folders: authoritative briefs and MP01; `app/`: Gradio demo; `reports/`: measured summaries; `docs/`: guidance.
+
+See [portable setup](docs/portable-setup.md), [geographic results](reports/geographic-study.md), and [submission readiness](docs/submission_readiness.md).
 
 ## Complete 40-project roadmap
 

@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded [notebook](../../notebooks/MP11.ipynb) executed in a real kernel. [Measured experiment](../../reports/mp09-mp11-experiments.json) records the checksummed training crop and controlled settings. Reproduce with `python scripts/metric_experiments.py`. Worked solutions are included; learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Design static metric tables, side-by-side crops, and error maps for identical, noisy, and blurred fixtures; deliver a dashboard specification and verified metric examples.
+**Implemented and executed on synthetic fixtures and the recorded training crop.** Design static metric tables, side-by-side crops, and error maps for identical, noisy, and blurred fixtures; deliver a dashboard specification and verified metric examples.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- A documented script or notebook and exact run command added during implementation; provided in the linked notebook and experiment script.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 

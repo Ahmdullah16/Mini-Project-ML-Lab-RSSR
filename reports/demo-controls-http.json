@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "sample_output_size": [
+    32,
+    32
+  ],
+  "png_download": true,
+  "json_download": true,
+  "fresh_geotiff_download": true,
+  "fresh_cache_hit": true,
+  "provider_item_id": "S2A_11TQH_20261016_1_L2A",
+  "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e"
+}

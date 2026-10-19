@@ -1,0 +1,17 @@
+{
+  "models": [
+    "cnn",
+    "hybrid"
+  ],
+  "seeds": [
+    17,
+    23,
+    41
+  ],
+  "steps": 1000,
+  "zero_residual": true,
+  "validation_interval": 100,
+  "selection": "lowest mean validation L1; equal patches per scene",
+  "test_access": false,
+  "limitations": "Four validation scenes, synthetic NAIP degradation; not satellite generalization."
+}

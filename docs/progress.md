@@ -1,5 +1,15 @@
 # Progress
 
+## Latest validation — 2026-10-19
+
+MP05–MP11 expanded and executed with exit 0; seven new degradation/metric tests and three inspected figures. Six geographic runs completed: mean CNN validation delta +1.5709 dB, hybrid +1.3337 dB; held-out test unused. See reports/geographic-study.md. New fresh-output paths are portable, with relocation/corruption/deduplication checks. Portable bundle launch and HTTP output downloads passed (reports/portable-demo-http.json).
+
+Isolated Python 3.12 suite passed 64 tests and four subtests in 13.39 seconds without warnings. Earlier run without writable TEMP failed due sandbox paths; corrected environment passed. Cache fixture initially lacked a required ingestion timestamp; corrected. The GeoTIFF warning was caused by accidental alpha metadata in the test fixture; explicit non-alpha multispectral storage resolved it.
+
+Next incomplete teaching task: MP12 Linear Algebra Visualizer. MP12–MP40 still need full implementations. Incremental watermark/scheduler recovery, real paired satellite evaluation, final selection/test, report/slides/package and public deployment remain incomplete. All 40 current notebooks passed the isolated batch with process exit 0; source hashes verified. Do not claim submission readiness.
+
+## Historical milestone
+
 Last reconciled: 2026-10-19. No learner mastery or completed research claim.
 
 ## Implemented and executed

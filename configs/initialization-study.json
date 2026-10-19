@@ -1,0 +1,16 @@
+{
+  "hypothesis": "Random residual initialization may dominate the weak 100-step pilot. Compare random versus zero residual at a common 1000-step budget.",
+  "seeds": [
+    17,
+    23,
+    41
+  ],
+  "models": [
+    "cnn",
+    "hybrid"
+  ],
+  "steps": 1000,
+  "selection": "lowest validation L1 at 100-step intervals",
+  "test_access": false,
+  "limitations": "Single validation scene; no geographic inference or model finalization."
+}

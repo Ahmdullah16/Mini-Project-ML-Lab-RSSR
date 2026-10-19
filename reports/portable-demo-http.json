@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "port": 7862,
+  "output_shapes": [
+    32,
+    32
+  ],
+  "png_download": true,
+  "json_download": true,
+  "checkpoint_sha256": "3005be1f47ac717e240a26c66e94099dcd73244c5f6192c203eda5a215e53e1f",
+  "source": "fresh-clone quickstart bundle, launched without retraining"
+}

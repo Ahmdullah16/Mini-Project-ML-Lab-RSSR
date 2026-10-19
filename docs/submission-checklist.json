@@ -21,7 +21,7 @@
     "status": "passed",
     "acceptance": "Preserve source syllabus, old runs, inspect branches/PRs",
     "implementation_or_evidence": "docs/import-manifest.json",
-    "assessment": "PRs 1\u20133 merged externally; current work is isolated on feat/submission-pipeline."
+    "assessment": "PRs 1\u20134 merged externally; preserved in feat/development-validation history."
   },
   {
     "id": "3a",
@@ -37,7 +37,7 @@
     "status": "failed",
     "acceptance": "Every lesson has defined mathematics, worked examples, exercises, solutions and appropriate real experiments",
     "implementation_or_evidence": "notebooks",
-    "assessment": "MP01\u201304 expanded; MP05\u201340 still introductory."
+    "assessment": "MP01\u2013MP11 expanded; MP12\u2013MP40 still introductory. Full educational acceptance remains incomplete."
   },
   {
     "id": "4a",
@@ -53,7 +53,7 @@
     "status": "failed",
     "acceptance": "Fresh checkout/environment quickstart, pinned dependencies and relocatable assets",
     "implementation_or_evidence": "scripts/portable_quickstart.py",
-    "assessment": "Relative prepared paths implemented; fresh-checkout execution in progress."
+    "assessment": "Fresh clone/isolated environment quickstart passed; Windows lock recorded. Linux dependency lock and legacy database path migration remain unverified."
   },
   {
     "id": "5a",
@@ -77,7 +77,7 @@
     "status": "passed",
     "acceptance": "Pinned source versions, checksums, licensing and geographic split",
     "implementation_or_evidence": "configs/naip-pilot-manifest.json",
-    "assessment": "Three NAIP scenes; fixed numerical scaling, not verified reflectance."
+    "assessment": "Nine checksum-pinned NAIP scenes, with four train/four validation/one preserved test; numerical scaling is not verified reflectance."
   },
   {
     "id": "6b",
@@ -85,7 +85,7 @@
     "status": "failed",
     "acceptance": "Multiple independent train/validation regions and suitable paired satellite data",
     "implementation_or_evidence": "docs/dataset-cards.md",
-    "assessment": "Current research validation has one scene."
+    "assessment": "Four independent validation scenes now evaluated; suitable real paired satellite data remains absent."
   },
   {
     "id": "7a",
@@ -173,7 +173,7 @@
     "status": "failed",
     "acceptance": "Spectral, robustness, alignment, downstream when justified, geographic CI",
     "implementation_or_evidence": "reports/ablation-pilot.md",
-    "assessment": "One scene cannot support geographic confidence intervals."
+    "assessment": "Four validation scenes and three seeds now measured, but robustness, downstream validity and geographic confidence intervals remain incomplete."
   },
   {
     "id": "11c",
@@ -202,10 +202,10 @@
   {
     "id": "12b",
     "requirement": "All notebooks clean exits",
-    "status": "failed",
+    "status": "passed",
     "acceptance": "All final notebook versions in isolated kernels with clean process exits",
     "implementation_or_evidence": "scripts/execute_notebooks.py",
-    "assessment": "Earlier cell evidence exists; final clean-environment batch pending."
+    "assessment": "All 40 current notebooks passed real isolated Python 3.12 kernels, complete process exit 0, source hashes verified; local TCP warning documented."
   },
   {
     "id": "13a",
@@ -221,7 +221,7 @@
     "status": "failed",
     "acceptance": "Samples, compatible models, AOI, metadata, downloads, scientific export",
     "implementation_or_evidence": "app/demo.py",
-    "assessment": "Catalog/upload/basic comparison implemented; remaining controls in progress."
+    "assessment": "Samples, model selection, AOI and downloads implemented and HTTP-tested. Uploaded multispectral GeoTIFF UI and public host checks remain incomplete."
   },
   {
     "id": "13c",
@@ -245,7 +245,7 @@
     "status": "failed",
     "acceptance": "README, briefs, progress and evidence agree",
     "implementation_or_evidence": "README.md",
-    "assessment": "Known stale introductory-status text being reconciled."
+    "assessment": "README and MP05\u2013MP11 briefs reconciled; older historical checkpoint notes explicitly superseded."
   },
   {
     "id": "15a",
@@ -253,7 +253,7 @@
     "status": "passed",
     "acceptance": "Offline regression suite and real-data smoke integration",
     "implementation_or_evidence": "tests",
-    "assessment": "Last full suite 51 tests plus four subtests; new targeted tests pass; final full run pending."
+    "assessment": "Isolated Python 3.12 suite: 64 tests plus four subtests passed in 13.39 seconds; no warnings."
   },
   {
     "id": "15b",
