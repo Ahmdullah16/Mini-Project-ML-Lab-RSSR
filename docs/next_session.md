@@ -13,3 +13,5 @@ Research: six geographic development runs over four train/four validation scenes
 Local full suite at Streamlit checkpoint: 73 tests plus four subtests passed in 7.46 s without warnings; 40 IDs/394 links. MP16 subsequently executed its assertions and notebook. Notebook hashes reflect Windows working-file line endings. No learner mastery or overall completion claim.
 
 Environment: work/clean-venv is isolated but editable to work/submission-clean; set PYTHONPATH to this repo/src. work/streamlit-venv is the isolated deployment-only environment. Use PYTHONUTF8=1 and writable work/tmp caches. CPU only, zero GPU-hours; historical retry overhead incompletely measured; remain within 2 GB authorized download budget. Publish MP17–MP18 checkpoint as a new draft PR and verify exact-head CI. PRs #7 and #8 were merged externally; do not update those closed PRs.
+
+The user added .devcontainer/devcontainer.json on main at a7ae3cd. It was preserved and corrected to Python 3.12, the tested app/requirements.txt and enabled request protections. JSON/startup assertions passed; Docker is unavailable, so container startup remains unverified.
