@@ -1,4 +1,4 @@
-name: Offline validation
+name: Validation
 on: [push, pull_request]
 jobs:
   tests:
@@ -12,6 +12,8 @@ jobs:
       - run: pip install -e '.[dev]'
       - run: python -m pytest -q
       - run: python scripts/check_structure.py
+      - name: Rebuild frozen data from pinned public sources
+        run: python scripts/rebuild_frozen_data.py --data-root data/ci-frozen-rebuild
   streamlit:
     runs-on: ubuntu-latest
     steps:

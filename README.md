@@ -2,7 +2,7 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Working public engineering demo; laboratory and final submission still in progress.** The original 40 IDs and nine stages are preserved. MP01–MP25 have expanded lessons and real-kernel execution evidence; full project criteria and learner mastery are not automatically complete. MP26–MP40 still need full expansion.
+**Working public engineering demo; laboratory and final submission still in progress.** The original 40 IDs and nine stages are preserved. MP01–MP26 have expanded lessons and real-kernel execution evidence; full project criteria and learner mastery are not automatically complete. MP27–MP40 still need full expansion.
 
 The [existing public app](https://mini-project-ml-lab-rssr.streamlit.app/) passed actual sample/upload inference, size/error checks, repeated requests and fresh Sentinel GeoTIFF export; see [recorded browser evidence](reports/public-browser-validation.json). The new frozen CNN/hybrid selector is tested locally but not yet verified on the public host.
 
