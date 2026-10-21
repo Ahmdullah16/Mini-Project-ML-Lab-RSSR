@@ -27,7 +27,7 @@ def request_json(url,body=None):
             time.sleep(2**attempt)
 
 
-def refresh(config,root,fetch=request_json,resume_job=None):
+def refresh(config,root,fetch=request_json,resume_job=None,job_id=None):
     # Queries overlap intentionally: provider IDs make repeats idempotent. A frozen
     # research manifest never reads this catalog automatically.
     if config.get("max_pages",2) not in range(1,11):
@@ -44,7 +44,7 @@ def refresh(config,root,fetch=request_json,resume_job=None):
             raise ValueError('Resume requires an unfinished job with an identical configuration and saved cursor')
         saved=json.loads(previous[2]); url=saved['href']
         body=saved.get('body') if saved.get('method','GET')=='POST' else None
-    jid=uuid.uuid4().hex; dataset="stac:"+config["endpoint"]
+    jid=job_id or uuid.uuid4().hex; dataset="stac:"+config["endpoint"]
     with db:
         db.execute("INSERT OR IGNORE INTO datasets VALUES(?,?,?,?,?,?,?)",(dataset,"Live STAC metadata","rolling",config["endpoint"],"Asset-specific; verify before downloading","Provider STAC metadata",config_hash(config)))
         db.execute("INSERT INTO ingestion_jobs(id,provider,query_config,start_time,status) VALUES(?,?,?,?,?)",(jid,config["endpoint"],json.dumps(config),now(),"running"))

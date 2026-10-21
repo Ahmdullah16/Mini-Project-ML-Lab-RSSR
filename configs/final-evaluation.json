@@ -1,0 +1,71 @@
+{
+  "protocol": "final-synthetic-naip-v1",
+  "selection": "best validation scene-mean PSNR seed within CNN/attention/hybrid RGBNIR and CNN/hybrid RGB; attention is best four-band mean architecture. No hybrid superiority claimed.",
+  "selected": [
+    {
+      "bands": 4,
+      "variant": "cnn",
+      "seed": 17,
+      "run_id": "35931a32a3974ba2bdc5e212ee60b0fa",
+      "checkpoint_sha256": "7240cbb0a216c5b89af71f4389e96d08b432a1485bf0c6171e52ba3a4b82d56b",
+      "manifest_path": "data\\prepared\\5478ce0faa52-x2-p32-n16-portable-v1\\manifest.json",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e"
+    },
+    {
+      "bands": 4,
+      "variant": "attention",
+      "seed": 17,
+      "run_id": "55b89952c8964daebd5cb6913336918d",
+      "checkpoint_sha256": "4886ca54219911715aeaa4e1ec51b92a381801ec895130ce2475a3634a269aab",
+      "manifest_path": "data\\prepared\\5478ce0faa52-x2-p32-n16-portable-v1\\manifest.json",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e"
+    },
+    {
+      "bands": 4,
+      "variant": "hybrid",
+      "seed": 17,
+      "run_id": "062190a95045466ca70493b02c1a70ec",
+      "checkpoint_sha256": "867a6f95c79450ea7be112452752f9db5481be3b6e3dfa424f6373dac2c7794d",
+      "manifest_path": "data\\prepared\\5478ce0faa52-x2-p32-n16-portable-v1\\manifest.json",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e"
+    },
+    {
+      "bands": 3,
+      "variant": "cnn",
+      "seed": 17,
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "manifest_path": "data\\prepared\\90d092c8bc2d-x2-p32-n16-portable-v1\\manifest.json",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3"
+    },
+    {
+      "bands": 3,
+      "variant": "hybrid",
+      "seed": 23,
+      "run_id": "8518d712e5fa4578bececede9dc40ba0",
+      "checkpoint_sha256": "f6a64bb62d6209224be9fc924b57ef5c989f6869e4c7b925f7d1773bd2a780fc",
+      "manifest_path": "data\\prepared\\90d092c8bc2d-x2-p32-n16-portable-v1\\manifest.json",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3"
+    }
+  ],
+  "official_rgb": {
+    "url": "https://github.com/JingyunLiang/SwinIR/releases/download/v0.0/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth",
+    "sha256": "193b229909ca89cd8b55de9c9e7fce146ae759d59dfcd78d8feb9dd1d6fa0fd7",
+    "bytes": 17147989,
+    "transferred_bytes": 17147989,
+    "code_commit": "6545850fbf8df298df73d81f3e8cba638787c8bd",
+    "source": "Official JingyunLiang/SwinIR release v0.0",
+    "pretraining": "DIV2K natural RGB, bicubic x2; domain/degradation mismatch to NAIP synthetic Gaussian+area"
+  },
+  "metric_protocol": {
+    "data_range": 1,
+    "border": 2,
+    "clipping": false,
+    "ssim": "uniform 7x7 population",
+    "sam": "radians excluding zero-norm spectra",
+    "aggregation": "per-tile metrics then per-scene means; one test scene, no geographic CI"
+  },
+  "heldout": "original test scene only, 16 deterministic nonoverlapping 32x32 HR patches; same synthetic Gaussian .8 + area x2",
+  "decision": "No training, hyperparameter, checkpoint or protocol changes based on test results. Report all selected models and baselines including losses.",
+  "limitations": "One test scene cannot establish geographic or cross-sensor generalization. Official SwinIR has different pretraining and degradation."
+}

@@ -18,6 +18,7 @@ sys.path.insert(0,str(ROOT/'src'))
 from rssr.display import predict_rgb
 from rssr.experiment import load_model
 from rssr.hosted_assets import fetch_asset
+from rssr.build_info import build_identity
 
 CONFIG=json.loads((ROOT/'configs/hosted-model.json').read_text(encoding='utf-8'))
 CACHE=Path(os.environ.get('RSSR_ASSET_CACHE',str(Path(tempfile.gettempdir())/'rssr-public-assets-v1')))
@@ -48,6 +49,8 @@ st.set_page_config(page_title='Remote sensing SR pilot',layout='wide')
 st.title('Remote sensing super-resolution pilot')
 st.warning(CONFIG['limitations'])
 st.caption('Stateless demo: uploads and results are temporary. Cached model/example files can be rebuilt after a restart. Local SQLite and cached satellite files are not durable storage.')
+with st.expander('Application version'):
+    st.json(build_identity(ROOT))
 st.selectbox('Model',[CONFIG['label']],key='model_label')
 choice=st.radio('Input',['Licensed example (cached acquisition)','Upload'],horizontal=True)
 upload=st.file_uploader('PNG or JPEG, up to 512×512 pixels and 8 MB',type=['png','jpg','jpeg']) if choice=='Upload' else None
@@ -65,7 +68,7 @@ if st.button('Estimate super-resolution',type='primary'):
             baseline,sr,meta=predict_rgb(image,model,state,CONFIG['checkpoint']['sha256'],max_side=512)
             runtime=time.perf_counter()-started
         finally: lock.release()
-        meta.update(model_version=CONFIG['version'],runtime_seconds=runtime,inference_time=datetime.now(timezone.utc).isoformat(),storage='temporary session; not durable')
+        meta.update(model_version=CONFIG['version'],runtime_seconds=runtime,inference_time=datetime.now(timezone.utc).isoformat(),storage='temporary session; not durable',application=build_identity(ROOT),input_shape=list(image.shape),output_shape=list(sr.shape))
         if choice.startswith('Licensed'):
             meta.update(sensor=CONFIG['sample']['sensor'],acquisition_time=CONFIG['sample']['acquisition_time'],source=CONFIG['sample']['source'],license=CONFIG['sample']['license'],input_kind='cached licensed training example')
         else: meta['input_kind']='user upload; provenance unverified'

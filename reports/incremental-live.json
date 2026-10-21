@@ -1,0 +1,36 @@
+{
+  "runs": [
+    {
+      "job_id": "085048f64e3e4d41aa30c2cf25d22c06",
+      "resumed_from": null,
+      "items_found": 5,
+      "items_added": 5,
+      "status": "partial",
+      "asset_downloads": 0,
+      "stream_id": "45ce2d9a7ab3f70784f5f445abffff9ac3325530d1098be618ba0816b5fc9316",
+      "watermark": null
+    },
+    {
+      "job_id": "2f69404d0ee64ab39dfe49da319037d8",
+      "resumed_from": "085048f64e3e4d41aa30c2cf25d22c06",
+      "items_found": 3,
+      "items_added": 3,
+      "status": "partial",
+      "asset_downloads": 0,
+      "stream_id": "45ce2d9a7ab3f70784f5f445abffff9ac3325530d1098be618ba0816b5fc9316",
+      "watermark": null
+    },
+    {
+      "job_id": "f3f66d7a10614f5e9f29e611f7b76059",
+      "resumed_from": "2f69404d0ee64ab39dfe49da319037d8",
+      "items_found": 0,
+      "items_added": 0,
+      "status": "completed",
+      "asset_downloads": 0,
+      "stream_id": "45ce2d9a7ab3f70784f5f445abffff9ac3325530d1098be618ba0816b5fc9316",
+      "watermark": "2026-10-19T17:15:25.028232+00:00"
+    }
+  ],
+  "asset_downloads": 0,
+  "limitations": "Bounded metadata-only ticks; no always-running scheduler installed"
+}
