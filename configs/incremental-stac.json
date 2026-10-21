@@ -1,0 +1,29 @@
+{
+  "start_time": "2026-10-01T00:00:00Z",
+  "overlap_hours": 48,
+  "query": {
+    "endpoint": "https://earth-search.aws.element84.com/v1",
+    "bbox": [
+      -114,
+      43,
+      -113.9,
+      43.1
+    ],
+    "collections": [
+      "sentinel-2-l2a"
+    ],
+    "bands": [
+      "red",
+      "green",
+      "blue",
+      "nir"
+    ],
+    "query": {
+      "eo:cloud_cover": {
+        "lt": 20
+      }
+    },
+    "limit": 5,
+    "max_pages": 1
+  }
+}

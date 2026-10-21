@@ -10,7 +10,7 @@ import threading
 import time
 
 import numpy as np
-from PIL import Image, ImageOps
+from PIL import Image
 import streamlit as st
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -18,26 +18,21 @@ sys.path.insert(0,str(ROOT/'src'))
 from rssr.display import predict_rgb
 from rssr.experiment import load_model
 from rssr.hosted_assets import fetch_asset
+from rssr.build_info import build_identity
+from rssr.uploads import decode_image
 
-CONFIG=json.loads((ROOT/'configs/hosted-model.json').read_text(encoding='utf-8'))
+BASE_CONFIG=json.loads((ROOT/'configs/hosted-model.json').read_text(encoding='utf-8'))
+CATALOG=[BASE_CONFIG]+json.loads((ROOT/'configs/hosted-models.json').read_text(encoding='utf-8'))['models']
 CACHE=Path(os.environ.get('RSSR_ASSET_CACHE',str(Path(tempfile.gettempdir())/'rssr-public-assets-v1')))
 
 
 @st.cache_resource(show_spinner='Downloading and verifying the trained pilot checkpoint…')
-def resources():
-    path=fetch_asset(CONFIG['checkpoint'],CACHE)
+def resources(specification):
+    path=fetch_asset(specification['checkpoint'],CACHE)
     model,state=load_model(path)
     if model.bands!=3 or model.scale!=2:
         raise ValueError('Hosted checkpoint must be compatible x2 RGB')
     return model,state,path,threading.Lock()
-
-
-def decode_image(data):
-    if len(data)>8*1024*1024: raise ValueError('Image file must be at most 8 MB')
-    with Image.open(io.BytesIO(data)) as image:
-        if max(image.size)>512 or min(image.size)<1: raise ValueError('Choose an image at most 512 pixels per side')
-        if image.mode not in ('RGB','L'): raise ValueError('Use opaque RGB or grayscale PNG/JPEG; remove transparency first')
-        return np.asarray(ImageOps.exif_transpose(image).convert('RGB')).copy()
 
 
 def png_bytes(image):
@@ -45,10 +40,13 @@ def png_bytes(image):
 
 
 st.set_page_config(page_title='Remote sensing SR pilot',layout='wide')
-st.title('Remote sensing super-resolution pilot')
-st.warning(CONFIG['limitations'])
+st.title('Remote sensing super-resolution laboratory')
 st.caption('Stateless demo: uploads and results are temporary. Cached model/example files can be rebuilt after a restart. Local SQLite and cached satellite files are not durable storage.')
-st.selectbox('Model',[CONFIG['label']],key='model_label')
+with st.expander('Application version'):
+    st.json(build_identity(ROOT))
+selected=st.selectbox('Model',[entry['label'] for entry in CATALOG],key='model_label')
+CONFIG=next(entry for entry in CATALOG if entry['label']==selected)
+st.warning(CONFIG['limitations'])
 choice=st.radio('Input',['Licensed example (cached acquisition)','Upload'],horizontal=True)
 upload=st.file_uploader('PNG or JPEG, up to 512×512 pixels and 8 MB',type=['png','jpg','jpeg']) if choice=='Upload' else None
 if choice.startswith('Licensed'):
@@ -58,14 +56,14 @@ if st.button('Estimate super-resolution',type='primary'):
         if choice=='Upload' and upload is None: raise ValueError('Choose an image to upload')
         data=upload.getvalue() if choice=='Upload' else fetch_asset(CONFIG['sample'],CACHE).read_bytes()
         image=decode_image(data)
-        model,state,path,lock=resources()
+        model,state,path,lock=resources(CONFIG)
         if not lock.acquire(blocking=False): raise ValueError('The CPU is serving another request. Please retry shortly.')
         try:
             started=time.perf_counter()
             baseline,sr,meta=predict_rgb(image,model,state,CONFIG['checkpoint']['sha256'],max_side=512)
             runtime=time.perf_counter()-started
         finally: lock.release()
-        meta.update(model_version=CONFIG['version'],runtime_seconds=runtime,inference_time=datetime.now(timezone.utc).isoformat(),storage='temporary session; not durable')
+        meta.update(model_name=CONFIG['label'],model_version=CONFIG['version'],runtime_seconds=runtime,inference_time=datetime.now(timezone.utc).isoformat(),storage='temporary session; not durable',application=build_identity(ROOT),input_shape=list(image.shape),output_shape=list(sr.shape))
         if choice.startswith('Licensed'):
             meta.update(sensor=CONFIG['sample']['sensor'],acquisition_time=CONFIG['sample']['acquisition_time'],source=CONFIG['sample']['source'],license=CONFIG['sample']['license'],input_kind='cached licensed training example')
         else: meta['input_kind']='user upload; provenance unverified'
@@ -75,9 +73,10 @@ if st.button('Estimate super-resolution',type='primary'):
 if 'result' in st.session_state:
     result=st.session_state['result']
     st.subheader('Latest completed inference')
+    st.caption('Result model: '+result['metadata'].get('model_name','Original CNN pilot'))
     enhance=st.checkbox('Enhance preview contrast (does not change inference or downloads)',value=True)
     low,high=np.percentile(result['input'],[2,98])
-    for column,key,label in zip(st.columns(3),['input','baseline','sr'],['Input LR','Bicubic baseline','Pilot SR estimate']):
+    for column,key,label in zip(st.columns(3),['input','baseline','sr'],['Input LR','Bicubic baseline','SR estimate']):
         preview=result[key]
         if enhance and high>low:
             preview=np.rint(np.clip((preview.astype(float)-low)/(high-low),0,1)*255).astype(np.uint8)
@@ -104,7 +103,7 @@ with st.expander('On-demand Sentinel acquisition and georeferenced output'):
             if start>end: raise ValueError('Start date must not be after end date')
             if (end-start).days>366: raise ValueError('Use an acquisition interval no longer than one year')
             bounds=[float(v.strip()) for v in bbox.split(',')]
-            model,state,path,lock=resources()
+            model,state,path,lock=resources(CONFIG)
             if not lock.acquire(blocking=False): raise ValueError('The CPU is busy. Please retry shortly.')
             try:
                 started=time.perf_counter()

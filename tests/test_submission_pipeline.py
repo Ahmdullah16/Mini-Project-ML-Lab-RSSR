@@ -28,7 +28,7 @@ def test_migration_preserves_v1_rows(tmp_path):
     db.execute("INSERT INTO datasets VALUES('saved','name','1','url','license','citation','hash')")
     db.commit(); db.close()
     db=connect(p)
-    assert db.execute('SELECT version FROM schema_versions').fetchone()[0]==2
+    assert db.execute('SELECT version FROM schema_versions').fetchone()[0]==3
     assert db.execute("SELECT name FROM datasets WHERE id='saved'").fetchone()[0]=='name'
     assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
     db.close()

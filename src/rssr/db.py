@@ -22,7 +22,7 @@ def connect(path):
     db.execute("PRAGMA foreign_keys=ON")
     db.execute('CREATE TABLE IF NOT EXISTS schema_versions(version INTEGER PRIMARY KEY)')
     versions = [r[0] for r in db.execute("SELECT version FROM schema_versions")]
-    if versions not in ([],[1],[2]):
+    if versions not in ([],[1],[2],[3]):
         db.close(); raise ValueError("Unsupported schema migration version")
     db.executescript(SCHEMA)
     # Additive v1 -> v2 migration; existing experiment rows are untouched.
@@ -32,15 +32,19 @@ def connect(path):
             ingestion_time TEXT NOT NULL, inference_time TEXT, status TEXT NOT NULL,
             source_path TEXT, source_sha256 TEXT, checkpoint_sha256 TEXT NOT NULL,
             output_path TEXT, output_sha256 TEXT, provenance TEXT NOT NULL, failure TEXT)''')
+        db.execute('''CREATE TABLE IF NOT EXISTS ingestion_streams(
+            id TEXT PRIMARY KEY, configuration TEXT NOT NULL, watermark TEXT,
+            pending_query TEXT, active_job TEXT, lease_token TEXT, lease_until REAL,
+            updated_at TEXT NOT NULL)''')
         db.execute('DELETE FROM schema_versions')
-        db.execute('INSERT INTO schema_versions VALUES(2)')
+        db.execute('INSERT INTO schema_versions VALUES(3)')
     return db
 
 
 def export(db, directory):
     import csv
     directory = Path(directory); directory.mkdir(parents=True,exist_ok=True)
-    for table in ("datasets","scenes","pairs_or_tiles","pair_sources","runs","metrics","artifacts","ingestion_jobs","inference_jobs"):
+    for table in ("datasets","scenes","pairs_or_tiles","pair_sources","runs","metrics","artifacts","ingestion_jobs","inference_jobs","ingestion_streams"):
         cur = db.execute(f"SELECT * FROM {table}")
         names = [d[0] for d in cur.description]; rows = cur.fetchall()
         with (directory/f"{table}.csv").open("w",newline="",encoding="utf-8") as f:

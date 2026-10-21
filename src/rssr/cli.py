@@ -12,6 +12,7 @@ def main():
     d=sub.add_parser("evaluate"); d.add_argument("checkpoint"); d.add_argument("manifest"); d.add_argument("--root",default="data"); d.add_argument("--split",choices=["validation","test"],default="validation"); d.add_argument("--frozen-selection",action="store_true")
     d=sub.add_parser("export"); d.add_argument("database"); d.add_argument("directory")
     d=sub.add_parser("refresh"); d.add_argument("config"); d.add_argument("--root",default="data"); d.add_argument("--resume-job")
+    d=sub.add_parser("refresh-incremental"); d.add_argument("config"); d.add_argument("--root",default="data")
     d=sub.add_parser("infer"); d.add_argument("checkpoint"); d.add_argument("input"); d.add_argument("output"); d.add_argument("--divisor",type=float,required=True)
     args=p.parse_args()
     if args.command=="download":
@@ -37,6 +38,9 @@ def main():
     elif args.command=="refresh":
         from .ingest import refresh
         print(refresh(json.loads(Path(args.config).read_text()),args.root,resume_job=args.resume_job))
+    elif args.command=="refresh-incremental":
+        from .scheduler import tick
+        print(tick(json.loads(Path(args.config).read_text()),args.root))
     elif args.command=="infer":
         from .inference import geotiff
         print(geotiff(args.checkpoint,args.input,args.output,args.divisor))
