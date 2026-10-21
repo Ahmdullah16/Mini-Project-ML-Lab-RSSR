@@ -8,7 +8,7 @@ Assessment: 2026-10-21. **Not submission-ready and not publication-ready.** Pass
 | 1b Exact resource accounting | failed | Account for all wire bytes and compute. `reports/environment-continuation.json` | New COG transfers counted; historical retry overhead unknown. |
 | 2 Audit and preserve | passed | Preserve source syllabus, old runs, inspect branches/PRs. `docs/import-manifest.json` | PRs 1–4 merged externally; preserved in feat/development-validation history. |
 | 3a 40 IDs and nine stages | passed | Unique authoritative IDs/titles/objectives and prerequisites. `docs/syllabus.json` | Structure checker verified IDs; mastery remains unassessed. |
-| 3b Full teaching deliverables | failed | Every lesson has defined mathematics, worked examples, exercises, solutions and appropriate real experiments. `notebooks` | MP01–MP25 expanded and executed; MP26–MP40 need full expansion. MP20 independent SRCNN held-out table remains pending; learner mastery unassessed. |
+| 3b Full teaching deliverables | failed | Every lesson has defined mathematics, worked examples, exercises, solutions and appropriate real experiments. `notebooks` | MP01–MP26 expanded and executed; MP27–MP40 need full expansion. MP20 independent SRCNN held-out table remains pending; learner mastery unassessed. |
 | 4a Shared CLI/code | passed | Separate reusable data, training, metrics, inference, database modules. `src/rssr/cli.py` | Existing offline tests and local workflows; new fresh workflow has an explicit script. |
 | 4b Portable reproducibility | failed | Fresh checkout/environment quickstart, pinned dependencies and relocatable assets. `scripts/portable_quickstart.py` | Fresh clone/isolated environment quickstart passed; Windows lock recorded. Linux dependency lock and legacy database path migration remain unverified. |
 | 5a Synthetic SR pipeline | passed | Licensed real subset through training/validation/inference/database. `reports/pilot-runs.json` | Executed engineering pilot only. |
@@ -36,9 +36,9 @@ Assessment: 2026-10-21. **Not submission-ready and not publication-ready.** Pass
 | 14a Submission artifacts | failed | Final report, slides, examiner guide, executed notebook bundle and manifest. `reports/research-draft.md` | Preliminary report and figures only; package incomplete. |
 | 14b Consistent documentation | failed | README, briefs, progress and evidence agree. `README.md` | README and MP05–MP11 briefs reconciled; older historical checkpoint notes explicitly superseded. |
 | 15a Local tests | passed | Offline regression suite and real-data smoke integration. `tests` | 85 tests plus four subtests passed in 34.13 seconds; 412 relative Markdown links and all 40 IDs passed. |
-| 15b Final commit CI | failed | CI passes on actual submission commit. `.github/workflows/test.yml` | Latest prior lesson CI passed at 755012de (PR #9). New integration changes require CI on their published commit. |
+| 15b Final commit CI | failed | CI passes on actual submission commit. `.github/workflows/test.yml` | Integration head 1baf021 passed both Linux jobs, run 39578629874. MP26/rebuild follow-up CI still pending. |
 | 15c Review/checkpoints | passed | Validated commits, resumable exact next actions, no automatic merge. `docs/next_session.md` | Submission work checkpoint maintained; no institutional submission authorized. |
 
 ## Teaching acceptance
 
-MP01–MP25 have expanded lessons; MP26–MP40 need full expansion. Project completion checklists remain authoritative and learner mastery is unassessed. All current notebooks have real-kernel evidence; expanded MP19–MP25 were rerun with exit 0; a final full-batch candidate run remains required.
+MP01–MP26 have expanded lessons; MP27–MP40 need full expansion. Project completion checklists remain authoritative and learner mastery is unassessed. All current notebooks have real-kernel evidence; expanded MP19–MP25 were rerun with exit 0; a final full-batch candidate run remains required.

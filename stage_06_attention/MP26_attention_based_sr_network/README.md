@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded notebook and [measured comparison](../../reports/mp26-attention-sr.json) connect the completed three-seed development study to learning curves, model shapes, compute overhead and limitations. Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Compare a residual CNN with its attention-equipped counterpart using matched splits and budgets; deliver learning curves, quality metrics, and compute-overhead measurements.
+**Executed development comparison; see evidence and limitations.** Compare a residual CNN with its attention-equipped counterpart using matched splits and budgets; deliver learning curves, quality metrics, and compute-overhead measurements.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- Run `python scripts/attention_sr_evidence.py` to export existing development records; read the expanded notebook without retraining.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 

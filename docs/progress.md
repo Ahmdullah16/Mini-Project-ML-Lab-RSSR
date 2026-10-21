@@ -1,3 +1,16 @@
+# Latest continuation — 2026-10-21
+
+PR #11 is a draft on `feat/submission-integration`. Published commit `1baf02121ca9814e3533ec9ed41957846cb5f7b8` passed both Linux CI jobs, run 39578629874, including all three hosted checkpoints and max-size inference. Its tree matches local `ce10a0f`. The pre-test local freeze `9109766` is preserved as tree-equivalent remote parent `f9e4880`; remote publication was later, not evidence of test timing. No PR was merged by the agent.
+
+MP26 now expanded and executed successfully; its six recorded development curves and compute table are in `reports/mp26-attention-sr.json`. No new training or test evaluation. MP01–MP26 are expanded; MP27–MP40 still need full expansion, and earlier project-specific exceptions such as MP20's independent SRCNN test table remain explicit.
+
+`scripts/rebuild_frozen_data.py` downloaded 16,883,208 raw bytes plus 142,290 manifest bytes into a new empty directory. All 144 RGB and 144 RGBNIR tiles matched frozen checksums and complete manifest structures. Original-byte manifests restored only after equality checks. SQLite integrity and foreign keys passed; repeat used zero raw bytes; controlled corruption was rejected, then restoration recovered successfully. Evidence: `reports/frozen-data-rebuild.json`; instructions: `docs/frozen-reproduction.md`. Linux rebuild added to CI, pending the next published head. Existing held-out result remains unchanged.
+
+Next: publish this MP26/rebuild follow-up and verify its Linux CI; continue MP27–MP40, portable four-band research checkpoints, normalized external database, paired cross-sensor feasibility, final report/slides/package and final all-notebook gates. Existing public pilot remains available; new model selector has not been verified deployed. No new host/paid resource is needed. Durable external account credentials remain absent.
+
+---
+Earlier checkpoint (superseded where noted):
+
 # Current checkpoint — 2026-10-21
 
 Preserve branch `feat/submission-integration`. Main advanced to `5d6a2ea` through external merge PR #10 (frozen RGB artifacts); no open PRs at this check. Do not merge PRs or overwrite existing work. The source integration remains local until published and CI verified.

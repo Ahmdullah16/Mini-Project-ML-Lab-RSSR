@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "raw_bytes_transferred_this_run": 16883208,
+  "manifest_asset_bytes_if_empty_cache": 142290,
+  "results": [
+    {
+      "bands": 4,
+      "tiles_verified": 144,
+      "manifest": "prepared/5478ce0faa52-x2-p32-n16-portable-v1/manifest.json",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e"
+    },
+    {
+      "bands": 3,
+      "tiles_verified": 144,
+      "manifest": "prepared/90d092c8bc2d-x2-p32-n16-portable-v1/manifest.json",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3"
+    }
+  ],
+  "database_integrity": "passed",
+  "model_evaluation": "not performed; existing frozen test results unchanged",
+  "repeat_raw_bytes_transferred": 0,
+  "corrupt_tile_rejected": true,
+  "recovery_after_restoring_fixture": "passed",
+  "environment": "Windows Python 3.12 isolated clean-venv, empty new destination; Linux CI separate"
+}
