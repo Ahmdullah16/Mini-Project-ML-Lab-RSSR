@@ -6,6 +6,7 @@ import argparse
 import json
 from pathlib import Path
 import shutil
+import zipfile
 import torch
 from rssr.core import digest
 from rssr.data import download, prepare
@@ -41,6 +42,14 @@ def rebuild(data_root):
         rebuilt = json.loads(prepared_path.read_text(encoding='utf-8'))
         if rebuilt != expected:
             differing = [key for key in expected if rebuilt.get(key) != expected[key]]
+            for key in differing:
+                if isinstance(expected[key], list):
+                    for actual, wanted in zip(rebuilt[key], expected[key]):
+                        if actual != wanted:
+                            print('First difference', key, {k: {'actual': actual.get(k), 'expected': v} for k, v in wanted.items() if actual.get(k) != v}, flush=True)
+                            break
+            with zipfile.ZipFile(prepared_path.parent / rebuilt['tiles'][0]['path']) as archive:
+                print('NPZ container metadata', [(i.filename, i.create_system, i.external_attr, i.date_time) for i in archive.infolist()], flush=True)
             raise ValueError(f'Rebuilt {bands}-band data differs from frozen record: {differing}; no canonical manifest installed')
         for tile in expected['tiles']:
             if digest(prepared_path.parent/tile['path']) != tile['sha256']:
