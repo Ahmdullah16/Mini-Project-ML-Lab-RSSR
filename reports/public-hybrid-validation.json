@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-21",
+  "url": "https://mini-project-ml-lab-rssr.streamlit.app/",
+  "status": "public hybrid inference and downloads verified after waking sleeping existing app",
+  "provenance": {
+    "run_id": "8518d712e5fa4578bececede9dc40ba0",
+    "checkpoint_sha256": "5cb8b9f45bc449bc6ff7ba4bf151a5ef1c70c0556d13c3b9f1c625995d7713f3",
+    "status": "Frozen 1000-step NAIP synthetic-x2 development model; one held-out aerial scene evaluated; real satellite generalization and physical calibration unvalidated",
+    "scale": 2,
+    "sensor": "NAIP aerial RGB",
+    "acquisition_time": "2021-09-17",
+    "reference_metrics": "unavailable: no HR reference",
+    "display_scaling": "fixed [0,1], clipped for RGB display only",
+    "tiling": {
+      "tile": 128,
+      "halo": 32,
+      "note": "approximate context for globally pooled models"
+    },
+    "model_name": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+    "model_version": "b21b797a2c43f3a45879cd6778be4cd81600f2e7",
+    "runtime_seconds": 0.010047639007098041,
+    "inference_time": "2026-10-21T09:48:47.835952+00:00",
+    "storage": "temporary session; not durable",
+    "application": {
+      "git_commit": "624cb1fd526eec6942c47e348bd4d13b55a06ce1",
+      "entrypoint_sha256": "a7e04d03e700d1d5014a2ae187827938f25fd035271ceb5529c0d39128505614"
+    },
+    "input_shape": [
+      16,
+      16,
+      3
+    ],
+    "output_shape": [
+      32,
+      32,
+      3
+    ],
+    "source": "OpenSR ROI_00006 training scene; synthetic x2 LR, uint8 display quantization",
+    "license": "NAIP public domain; retain USDA/OpenSR attribution",
+    "input_kind": "cached licensed training example"
+  },
+  "download_shape": [
+    32,
+    32,
+    3
+  ],
+  "finite": true,
+  "png_sha256": "56cfdb2d8d89f295a24fcf3d20a537a69c0181154cb0695573b65467b253c6d4",
+  "deployed_entrypoint_matches_git_blob": true,
+  "restart_scope": "Observed free-host sleep/wake and successful request; no proof that every server cache was empty",
+  "limits": "Training example; not independent accuracy. Fresh Sentinel checks from earlier pilot are separate. No persistent storage claim."
+}

@@ -12,6 +12,7 @@ from rssr.core import digest
 from rssr.data import download, prepare
 from rssr.db import connect
 from rssr.hosted_assets import fetch_asset
+from rssr.frozen_portability import frozen_npz_bytes, reconcile_wgs84_roundoff
 
 ASSET_ROOT = 'https://raw.githubusercontent.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/b21b797a2c43f3a45879cd6778be4cd81600f2e7/artifacts/'
 ASSETS = {
@@ -40,6 +41,21 @@ def rebuild(data_root):
         expected = json.loads(expected_path.read_text(encoding='utf-8'))
         prepared_path = prepare(source_path, data_root)
         rebuilt = json.loads(prepared_path.read_text(encoding='utf-8'))
+        roundoff_scenes = reconcile_wgs84_roundoff(rebuilt['scenes'], expected['scenes'])
+        if len(rebuilt['tiles']) != len(expected['tiles']):
+            raise ValueError('Frozen tile count differs')
+        normalized_files = 0
+        for tile, wanted in zip(rebuilt['tiles'], expected['tiles']):
+            if tile['id'] != wanted['id'] or tile['path'] != wanted['path']:
+                raise ValueError('Frozen tile identity differs')
+            path = prepared_path.parent / tile['path']
+            original = path.read_bytes()
+            canonical = frozen_npz_bytes(original, wanted['sha256'])
+            if canonical != original:
+                temporary = path.with_suffix('.canonical.tmp')
+                temporary.write_bytes(canonical); temporary.replace(path)
+                normalized_files += 1
+            tile['sha256'] = digest(path)
         if rebuilt != expected:
             differing = [key for key in expected if rebuilt.get(key) != expected[key]]
             for key in differing:
@@ -58,7 +74,14 @@ def rebuild(data_root):
         # verification do we install the published original bytes for frozen hashes.
         shutil.copyfile(expected_path, prepared_path)
         assert digest(prepared_path) == ASSETS[f'prepared-{bands}band.json'][0]
+        db = connect(data_root/'catalog.sqlite')
+        with db:
+            for tile in expected['tiles']:
+                db.execute('UPDATE pairs_or_tiles SET checksums=? WHERE id=?', (tile['sha256'], tile['id']))
+        db.close()
         results.append({'bands': bands, 'tiles_verified': len(expected['tiles']),
+                        'normalized_zip_creator_files': normalized_files,
+                        'derived_bounds_roundoff_scenes': roundoff_scenes,
                         'manifest': prepared_path.relative_to(data_root).as_posix(),
                         'manifest_sha256': digest(prepared_path)})
     db = connect(data_root/'catalog.sqlite')
