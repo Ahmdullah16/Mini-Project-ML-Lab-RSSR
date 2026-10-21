@@ -2,13 +2,15 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering pilot in progress. No research-validated final model or public deployment is claimed.** The original 40-project syllabus and MP01 are preserved. All 40 notebooks have real-kernel execution records. MP02–MP18 have expanded explanations, solutions and measured real training-crop experiments; MP19–MP40 remain introductory implementations with full criteria pending. Learner mastery is unassessed.
+**Working public engineering demo; laboratory and final submission still in progress.** The original 40 IDs and nine stages are preserved. MP01–MP25 have expanded lessons and real-kernel execution evidence; full project criteria and learner mastery are not automatically complete. MP26–MP40 still need full expansion.
 
-Measured [three-seed ablations](reports/ablation-pilot.md) still trail bicubic. The [local HTTP demo](reports/demo-http.json) passed inference; no public deployment is claimed.
+The [existing public app](https://mini-project-ml-lab-rssr.streamlit.app/) passed actual sample/upload inference, size/error checks, repeated requests and fresh Sentinel GeoTIFF export; see [recorded browser evidence](reports/public-browser-validation.json). The new frozen CNN/hybrid selector is tested locally but not yet verified on the public host.
+
+Earlier negative [pilot ablations](reports/ablation-pilot.md) are preserved. The larger development study and [frozen held-out results](reports/final-heldout.json) show limited synthetic NAIP improvements; RGB CNN and hybrid are close. One test scene does not validate cross-sensor generalization or establish hybrid novelty. See [development robustness and efficiency](reports/development-benchmark.md).
 
 Read [actual progress](docs/progress.md), [audit](docs/audit.md), [setup](docs/setup.md), [protocol](docs/protocol.md), [dataset cards](docs/dataset-cards.md), [architecture](docs/architecture.md), [literature](docs/literature.md), and [next session](docs/next_session.md).
 
-See [Streamlit deployment instructions](docs/streamlit-deployment.md) for the stateless Community Cloud target, public checksum-pinned model and exact dashboard settings. Public hosting is not yet verified.
+See [Streamlit deployment instructions](docs/streamlit-deployment.md) for the stateless Community Cloud target, public checksum-pinned model and exact dashboard settings. Existing pilot hosting is verified; the updated selector still needs deployment verification.
 
 ## Quickstart
 

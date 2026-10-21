@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded notebook and [executed experiment report](../../reports/mp19-mp22-cnn.json) provide mathematics, implementation, measured comparisons, exercises and solutions. Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Plan a compact SRCNN comparison with bicubic on fixed image pairs; deliver an architecture diagram, validation curves, and held-out metric table.
+**Teaching experiment executed; see notebook for remaining scientific limits.** Plan a compact SRCNN comparison with bicubic on fixed image pairs; deliver an architecture diagram, validation curves, and held-out metric table.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- Run `python scripts/cnn_lessons_experiment.py`; see the corresponding expanded notebook and reports/mp19-mp22-cnn.json.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 
@@ -55,3 +55,5 @@ Write down variable dimensions and units before coding. Work through one small n
 - [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
 - [ ] Document data licenses, environment, limitations, and any deviations from the brief.
 - [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+
+The independent held-out SRCNN table remains pending. This teaching model reports validation only and does not reuse the frozen research test for further selection.

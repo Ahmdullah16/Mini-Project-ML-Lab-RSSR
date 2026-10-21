@@ -1,3 +1,28 @@
+# Current checkpoint — 2026-10-21
+
+Preserve branch `feat/submission-integration`. Main advanced to `5d6a2ea` through external merge PR #10 (frozen RGB artifacts); no open PRs at this check. Do not merge PRs or overwrite existing work. The source integration remains local until published and CI verified.
+
+MP01–MP22 expanded and executed; MP23–MP25 have executed attention comparisons and expanded notebooks; all three passed real kernels. MP20's separate held-out SRCNN table remains unfulfilled; none of these statuses asserts learner mastery. MP26–MP40 still need full lesson expansion, even where underlying research experiments exist.
+
+Research: 36 development records completed, with 30 new and six reused runs. Freeze protocol was committed at `9109766` BEFORE the single held-out evaluation. `reports/final-heldout.json` contains the executed results; do not retune or overwrite. RGB held-out mean PSNR: bicubic 48.5183, CNN 50.2614, hybrid 50.2459, official SwinIR 48.9897 dB. One scene and synthetic degradation cannot establish cross-sensor/general geographic validity. No hybrid superiority claim. Official SwinIR has different pretraining/degradation. Robustness/spectral/CPU-efficiency evidence is in `reports/development-benchmark.json`.
+
+Public app https://mini-project-ml-lab-rssr.streamlit.app/ recovered at the same URL. Recorded tests passed sample, uploaded RGB, repeat-byte equality, maximum 512→1024, corrupt/transparent/oversized input rejection, and actual Sentinel acquisition with georeferenced downloadable output. This evidence is from the existing pilot deployment; no new deployment is claimed. Exact deployed source identity remains unverified.
+
+New local Streamlit model selector preserves the pilot and adds genuine frozen RGB CNN/hybrid. Immutable artifact commit `b21b797a2c43f3a45879cd6778be4cd81600f2e7` contains downloadable SHA-verified weights and original-byte dataset manifests. All three models passed AppTest and actual maximum-size inference in the deployment-only environment; RSS after inference, not peak, was 259–283 MB. The new selector has not been verified on the public host. New code reports source identity and gives friendly bounded-upload errors. Preserve Gradio and stateless hosting; local caches/SQLite are not durable.
+
+Ingestion scheduler/schema v3 is committed: leases, durable pending windows, page/cursor recovery, crash reconciliation and overlap watermark. Four scheduler tests and live metadata-only pagination passed; no external always-running scheduler was installed. No external-storage account credentials are configured. Offline S3/PostgreSQL tests do not establish live durability or complete the normalized external database requirement.
+
+Validation before attention additions: 83 tests plus four subtests passed in 12.01 seconds. MP19–MP22 passed real kernels. Attention comparison ran CPU seed23, 300 updates, four train/four validation scenes: reconstruction PSNR off35.0253, fixed0.5 35.1894, channel35.1721, spatial35.6038, combined35.6899 dB. This is same-grid teaching reconstruction, not SR or a new research test. See `reports/mp23-mp25-attention.json`; focused attention tests passed.
+
+Latest checks: 85 tests and four subtests passed in 34.13 seconds; 412 relative links/40 IDs passed; existing held-out result was preserved without repeat evaluation.
+
+Next: commit validated checkpoint, integrate main's additive artifact merge, publish a reviewable draft PR and verify exact-head CI. Continue MP26–MP40, frozen dataset/checkpoint rebuild in a fresh checkout (Windows separators fixed in script consumers; original manifest byte/hash portability still needs validation), four-band portable checkpoints, normalized durable DB, real paired satellite feasibility, final report/slides/package and final all-notebook gates. Do not mark whole project submission-ready.
+
+Environment: isolated `work/clean-venv` points editably at an older clone; set PYTHONPATH to current src. Use PYTHONUTF8=1 and writable work/tmp for Jupyter. CPU only; zero GPU. Keep within original 2 GB downloads/2 GPU-hours authorization; prior retry download overhead is incompletely measured. No new imagery/downloads for attention lessons.
+
+---
+Historical notes follow; the checkpoint above supersedes conflicting old status claims.
+
 # Current progress — 2026-10-19
 
 Latest resumable state: [next session](next_session.md). MP01–MP18 expanded; MP19–MP40 pending full implementation. Streamlit stateless deployment prepared with genuine public checkpoint; local inference/restart checks passed, public URL unverified. Durable external storage remains a separate incomplete requirement. See [deployment settings](streamlit-deployment.md).

@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+Expanded notebook and [experiment report](../../reports/mp23-mp25-attention.json) provide implementations, controlled comparisons, gate plots, exercises and solutions. Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Compare uniform, learned, and disabled channel gates; deliver gate plots and parameter-overhead measurements.
+**Implemented teaching experiment; measured evidence in the linked report.** Compare uniform, learned, and disabled channel gates; deliver gate plots and parameter-overhead measurements.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
+- Run `python scripts/attention_lessons_experiment.py` and the corresponding notebook.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 

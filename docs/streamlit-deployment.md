@@ -4,7 +4,7 @@ The first deployment target is Streamlit Community Cloud. The app is deliberatel
 
 ## Dashboard settings
 
-Connect your GitHub account at https://share.streamlit.io/ using the normal dashboard. Choose Create app, then:
+The existing app is https://mini-project-ml-lab-rssr.streamlit.app/. Preserve it; do not create another deployment. Its configured settings are:
 
 - Repository: `Ahmdullah16/Mini-Project-ML-Lab-RSSR`
 - Branch: `main`
@@ -12,7 +12,7 @@ Connect your GitHub account at https://share.streamlit.io/ using the normal dash
 - Advanced settings: Python **3.12**
 - Secrets: **none required** for the stateless demo
 
-Use only the free Community Cloud deployment. The adjacent `app/requirements.txt` pins CPU PyTorch and runtime dependencies; no GPU, training job or paid service starts on import. Click Deploy after the branch has the committed app. A working public URL still requires an actual sample inference and restart check; neither GitHub access nor a local test proves public hosting works.
+Use only the free Community Cloud deployment. The adjacent `app/requirements.txt` pins CPU PyTorch and runtime dependencies; no GPU, training job or paid service starts on import. Recorded public sample, upload, error/size, repeat and Sentinel export checks passed. The new model selector is not yet deployed/verified publicly. Keep main until the integration PR is reviewed; after an authorized update, verify Application version, chosen model/checkpoint hash and an actual output. Empty-cache recovery is locally verified; hosted cold restart is not yet verified.
 
 Official documentation checked 2026-10-19: [deployment](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app) and [dependency discovery](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies). Community Cloud uses Linux and searches the entry-point directory for its dependency file before the repository root. The local environment is Windows; Linux installation is checked by the review branch CI job, not assumed from Windows success.
 
@@ -53,3 +53,7 @@ An operator needs an existing authorized object bucket and PostgreSQL database, 
 - `RSSR_DATABASE_URL`: PostgreSQL connection URI with TLS required (`sslmode=require`) and permission to create/insert/select `rssr_external_artifacts`.
 
 Install the optional SDKs only when enabling this adapter: `python -m pip install boto3 "psycopg[binary]"`. Inject the secret values into environment variables, call `from_environment()`, then explicitly call `persist(content, provenance)` for approved research outputs. Object upload precedes the database transaction. A database failure can leave a content-addressed orphan object but cannot report successful persistence; retries reuse its content key. Administrative cleanup of orphan objects is an operator task. Do not infer that this artifact adapter replaces the complete durable research database.
+
+## Frozen RGB model catalog
+
+`configs/hosted-models.json` pins genuine CNN/hybrid inference-only checkpoints at immutable artifact commit b21b797a2c43f3a45879cd6778be4cd81600f2e7, preserving original training-checkpoint provenance. The original pilot remains the default. `python scripts/check_model_catalog.py` downloads/verifies every model in an empty temporary cache and executes sample plus maximum 512-pixel CPU inference. See `reports/model-catalog-check.json`; RSS is sampled after inference, not a guaranteed peak. None of this claims local SQLite survives host restarts.

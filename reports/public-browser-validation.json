@@ -1,0 +1,182 @@
+{
+  "url": "https://mini-project-ml-lab-rssr.streamlit.app/",
+  "sample": {
+    "shape": [
+      32,
+      32,
+      3
+    ],
+    "sha256": "5d3fbd1192a05aa7a138dfda25034e2692282b6909d9f7e95d0a8810bd93974e",
+    "provenance": {
+      "run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+      "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+      "status": "pilot synthetic degradation on NAIP; not a research-validated model",
+      "scale": 2,
+      "sensor": "NAIP aerial RGB",
+      "acquisition_time": "2021-09-17",
+      "reference_metrics": "unavailable: no HR reference",
+      "display_scaling": "fixed [0,1], clipped for RGB display only",
+      "tiling": {
+        "tile": 128,
+        "halo": 32,
+        "note": "approximate context for globally pooled models"
+      },
+      "model_version": "b94966013b046b7f2b8e542d6161786d67e750c0",
+      "runtime_seconds": 0.0014123389992164448,
+      "inference_time": "2026-10-19T12:12:12.060402+00:00",
+      "storage": "temporary session; not durable",
+      "source": "OpenSR ROI_00006 training scene; synthetic x2 LR, uint8 display quantization",
+      "license": "NAIP public domain; retain USDA/OpenSR attribution",
+      "input_kind": "cached licensed training example"
+    }
+  },
+  "satellite": {
+    "output": {
+      "shape": [
+        3,
+        512,
+        512
+      ],
+      "crs": "EPSG:32611",
+      "transform": [
+        5.0,
+        0.0,
+        747130.0,
+        0.0,
+        -5.0,
+        4772170.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bounds": [
+        747130.0,
+        4769610.0,
+        749690.0,
+        4772170.0
+      ],
+      "finite": true
+    },
+    "provenance": {
+      "provider_item_id": "S2A_11TQH_20261016_1_L2A",
+      "query": {
+        "bbox": [
+          -114.0,
+          43.0,
+          -113.9,
+          43.1
+        ],
+        "datetime": "2026-09-19T00:00:00Z/2026-10-19T23:59:59Z",
+        "query": {
+          "eo:cloud_cover": {
+            "lt": 20
+          }
+        },
+        "collections": [
+          "sentinel-2-l2a"
+        ],
+        "limit": 1,
+        "sortby": [
+          {
+            "field": "properties.datetime",
+            "direction": "desc"
+          }
+        ]
+      },
+      "acquisition_time": "2026-10-16T18:42:34.462000Z",
+      "availability_time": "2026-10-17T01:01:39.293Z",
+      "ingestion_time": "2026-10-19T12:12:37.807664+00:00",
+      "asset_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/11/T/QH/2026/10/S2A_11TQH_20261016_1_L2A/TCI.tif",
+      "license_links": [
+        "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+      ],
+      "attribution": "Contains modified Copernicus Sentinel data; provider Element 84 Sentinel COG archive",
+      "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+      "checkpoint_run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+      "domain_limitation": "NAIP-trained RGB display pilot applied to Sentinel TCI; cross-sensor quality unvalidated; not reflectance or scientific spectral inference",
+      "reference_metrics": null,
+      "cloud_mask": "item-level cloud filter only; no pixel-level cloud mask",
+      "window": [
+        4717,
+        2783,
+        256,
+        256
+      ],
+      "crs": "EPSG:32611",
+      "source_transform": [
+        10.0,
+        0.0,
+        747130.0,
+        0.0,
+        -10.0,
+        4772170.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "valid_fraction": 1.0,
+      "transfer": {
+        "bytes_received": 1900544,
+        "requests": 2,
+        "budget_bytes": 32000000,
+        "etag": "\"50181b7396d6ec5d0adfa96fa041aac1-35\"",
+        "source_size": 288176396,
+        "errors": []
+      },
+      "source_sha256": "63235f848c600ad73af967d09c6cc1f032dd06453cffe3481eb9a6ff0cd4036c",
+      "inference_time": "2026-10-19T12:12:39.024154+00:00",
+      "output_sha256": "c6d450813f50a0e8a68063533db78cc5787ec10af2a4ad7d9f8b2497da03c3a3",
+      "source_path": "fresh/32b04d2b8f5a5f535f30dee9bd09ccbb88ddaac3581f8347f87e28a6e216c9f9/source.tif",
+      "output_path": "fresh/32b04d2b8f5a5f535f30dee9bd09ccbb88ddaac3581f8347f87e28a6e216c9f9/sr.tif",
+      "status": "completed",
+      "runtime_seconds": 1.4974280200040084,
+      "refresh_time": "2026-10-19T12:12:39.032712+00:00",
+      "storage": "temporary; local database removed after request"
+    }
+  },
+  "verification": "Actual public browser inference and both downloads, then local pixel/hash/CRS checks",
+  "commit_identity": "Not exposed by deployed app; checkpoint identity verified; source commit not yet verified",
+  "upload": {
+    "input_shape": [
+      32,
+      48,
+      3
+    ],
+    "output_shape": [
+      64,
+      96,
+      3
+    ],
+    "repeat_bytes_equal": true,
+    "output_sha256": "25b2edaf204a69b5859aef9da09cfbce8f384fcafc95c26d1a009ca3a3081464"
+  },
+  "interruption": {
+    "observed": "2026-10-19",
+    "status": "During oversize-upload testing app changed to not found/no access; reload redirected to share.streamlit.io/errors/not_found",
+    "pending": [
+      "deployed commit identity"
+    ],
+    "hosting_modified_by_agent": false
+  },
+  "recovered_same_url": true,
+  "invalid_inputs": {
+    "513_pixel": "rejected with 512-pixel limit message",
+    "corrupt_png": "rejected with unreadable-image error",
+    "RGBA": "rejected with opaque RGB/grayscale message",
+    "over_8_MiB": "8 MiB + 1 byte rejected by uploader: File must be 8.0MB or smaller."
+  },
+  "maximum_size": {
+    "input_shape": [
+      512,
+      512,
+      3
+    ],
+    "output_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "finite": true,
+    "public_runtime_seconds": 0.184
+  }
+}

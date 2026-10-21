@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/JingyunLiang/SwinIR/releases/download/v0.0/002_lightweightSR_DIV2K_s64w8_SwinIR-S_x2.pth",
+  "sha256": "193b229909ca89cd8b55de9c9e7fce146ae759d59dfcd78d8feb9dd1d6fa0fd7",
+  "bytes": 17147989,
+  "transferred_bytes": 17147989,
+  "code_commit": "6545850fbf8df298df73d81f3e8cba638787c8bd",
+  "source": "Official JingyunLiang/SwinIR release v0.0",
+  "pretraining": "DIV2K natural RGB, bicubic x2; domain/degradation mismatch to NAIP synthetic Gaussian+area"
+}
