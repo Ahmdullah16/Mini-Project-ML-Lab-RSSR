@@ -28,6 +28,7 @@ if a.worker:
     monitor=threading.Thread(target=sample,daemon=True); monitor.start()
     try:
         app=AppTest.from_file(str(root/'app/streamlit_app.py')).run(timeout=60)
+        app.radio(key='section').set_value('Live SR').run(timeout=60)
         assert not app.exception
         app.button[0].click().run(timeout=120)
         assert not app.exception and not app.error

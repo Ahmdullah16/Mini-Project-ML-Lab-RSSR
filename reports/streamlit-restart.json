@@ -22,8 +22,8 @@
         1024,
         3
       ],
-      "maximum_input_seconds": 0.3822611999930814,
-      "sampled_peak_rss_bytes": 292446208,
+      "maximum_input_seconds": 0.4857923000017763,
+      "sampled_peak_rss_bytes": 380399616,
       "invalid_inputs_rejected": true,
       "fresh_cache_files": 2
     },
@@ -46,8 +46,8 @@
         1024,
         3
       ],
-      "maximum_input_seconds": 0.7311463999794796,
-      "sampled_peak_rss_bytes": 300412928,
+      "maximum_input_seconds": 0.6059797999987495,
+      "sampled_peak_rss_bytes": 375549952,
       "invalid_inputs_rejected": true,
       "fresh_cache_files": 2
     }

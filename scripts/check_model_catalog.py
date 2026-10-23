@@ -19,6 +19,7 @@ results=[]
 with tempfile.TemporaryDirectory(prefix='rssr-catalog-') as folder:
     os.environ['RSSR_ASSET_CACHE']=folder
     app=AppTest.from_file(str(root/'app/streamlit_app.py')).run(timeout=60)
+    app.radio(key='section').set_value('Live SR').run(timeout=60)
     for entry in catalog:
         app.selectbox[0].select(entry['label']).run(timeout=60)
         app.button[0].click().run(timeout=120)
