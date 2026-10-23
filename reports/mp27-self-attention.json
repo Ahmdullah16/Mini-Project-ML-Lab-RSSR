@@ -1,0 +1,215 @@
+{
+  "seed": 27,
+  "device": "CPU",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "task": "Untrained attention demonstration, not SR accuracy",
+  "source": {
+    "scene": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "split": "train",
+    "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+    "window": [
+      238,
+      238,
+      8,
+      8
+    ],
+    "shape": [
+      64,
+      3
+    ],
+    "units": "stored uint16 values divided by fixed 10000; physical calibration unverified"
+  },
+  "hand_example": {
+    "weights": [
+      [
+        0.6697615493266569,
+        0.3302384506733431
+      ]
+    ],
+    "output": [
+      [
+        13.302384506733432
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 0.1,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 4.158751348439715,
+      "mean_largest_weight": 0.016183967211834675,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 0.1,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 4.158839181845353,
+      "mean_largest_weight": 0.015945384077864975,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 1.0,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 3.155477215359636,
+      "mean_largest_weight": 0.19893330634390038,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 1.0,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 3.747971728220303,
+      "mean_largest_weight": 0.09326126998686148,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 10.0,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 0.018800671355789427,
+      "mean_largest_weight": 0.9922408801394892,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 10.0,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 0.03609660751117008,
+      "mean_largest_weight": 0.9859582175498436,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 100.0,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 3.984678472221822e-31,
+      "mean_largest_weight": 1.0,
+      "max_row_sum_error": 0.0,
+      "output_finite": true
+    },
+    {
+      "input": "synthetic_normal",
+      "feature_scale": 100.0,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 1.6861609670730224e-18,
+      "mean_largest_weight": 1.0,
+      "max_row_sum_error": 0.0,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 0.1,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 4.1588830833244135,
+      "mean_largest_weight": 0.015625224509280104,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 0.1,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 4.15888308334792,
+      "mean_largest_weight": 0.01562512962023367,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 1.0,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 4.158882730908014,
+      "mean_largest_weight": 0.015647461462552102,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 1.0,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 4.158882965856708,
+      "mean_largest_weight": 0.015637965534757273,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 10.0,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 4.155495758357517,
+      "mean_largest_weight": 0.01797733820944129,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 10.0,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 4.157734221684418,
+      "mean_largest_weight": 0.01695683185728409,
+      "max_row_sum_error": 2.220446049250313e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 100.0,
+      "divide_by_sqrt_d": false,
+      "mean_entropy_nats": 0.7085353452604333,
+      "mean_largest_weight": 0.8382112771853548,
+      "max_row_sum_error": 5.551115123125783e-16,
+      "output_finite": true
+    },
+    {
+      "input": "naip_train_rgb",
+      "feature_scale": 100.0,
+      "divide_by_sqrt_d": true,
+      "mean_entropy_nats": 1.8786706797843928,
+      "mean_largest_weight": 0.5185494410272362,
+      "max_row_sum_error": 4.440892098500626e-16,
+      "output_finite": true
+    }
+  ],
+  "memory": [
+    {
+      "tokens": 16,
+      "float32_score_bytes": 1024
+    },
+    {
+      "tokens": 64,
+      "float32_score_bytes": 16384
+    },
+    {
+      "tokens": 128,
+      "float32_score_bytes": 65536
+    },
+    {
+      "tokens": 256,
+      "float32_score_bytes": 262144
+    },
+    {
+      "tokens": 512,
+      "float32_score_bytes": 1048576
+    },
+    {
+      "tokens": 1024,
+      "float32_score_bytes": 4194304
+    },
+    {
+      "tokens": 4096,
+      "float32_score_bytes": 67108864
+    }
+  ],
+  "memory_scope": "Analytical one-head score matrix only, not measured peak RAM; NumPy demo uses float64",
+  "seconds": 0.12248900000122376
+}

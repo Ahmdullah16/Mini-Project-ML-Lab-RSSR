@@ -1,54 +1,57 @@
 # MP28 — Multi-Head Self-Attention
 
-**Status: In progress** · **Curriculum: proposed for review**
+**Status: Complete (implementation and teaching deliverables)** · Learner mastery unassessed.
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+## Objectives and prerequisites
 
-## Learning objectives
+Understand feature projections, head splitting, concatenation and output projection; hand-check shapes and parameter counts. Prerequisite: [MP27](../MP27_self_attention_from_scratch/README.md) and matrix multiplication. This is a bias-free, untrained CPU NumPy implementation, not a full Transformer.
 
-- Attention heads, feature projections and concatenation.
-- Explain the mathematical model below and its assumptions in your own words.
-- Interpret the planned comparison using evidence and identify a limitation.
+## Mathematics and worked example
 
-## Prerequisites
+For X[N,D], project Q=XWq, K=XWk, V=XWv using D×D matrices. Split into h heads with d=D/h; D must be divisible by h. Each head computes softmax(QjKjᵀ/√d)Vj of shape N×d. Concatenating gives N×D, then multiplication by Wo[D,D] gives N×D. Attention probabilities stack into h×N×N. No batch dimension, dropout, masks or positional encoding is included.
 
-[MP27 — Self-Attention from Scratch](../../stage_07_transformers/MP27_self_attention_from_scratch/README.md) and the earlier foundations in the roadmap.
+For N=3,D=4,h=2: two3×2 outputs concatenate to3×4; maps are2×3×3. Four bias-free projections contain4D²=64 entries, independent of head count at fixed D. With X=I₂ and identity projections, two scalar heads yield output[[p,0.5],[0.5,p]], where p=e/(e+1)=0.731059. The notebook independently checks this value.
 
-Read the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.
+## Files and commands
 
-## Mathematics
+[Implementation](multihead_tools.py) · [Tests](test_multihead_tools.py) · [Experiment](experiment.py) · [Runner](run_notebook.py) · [Validation](VALIDATION.md) · [Canonical notebook](../../notebooks/MP28.ipynb).
 
-Use head_j = Attention(QWq_j, KWk_j, VWv_j), then concatenate heads and apply output projection Wo; require divisible head dimensions.
+From repository root in the [development environment](../../docs/setup.md):
 
-Write down variable dimensions and units before coding. Work through one small numerical example and define edge cases; equations here specify topics to study, not measured results.
+```bash
+python -m unittest discover -s stage_07_transformers/MP28_multi_head_self_attention -p "test_*.py" -v
+python stage_07_transformers/MP28_multi_head_self_attention/experiment.py
+python stage_07_transformers/MP28_multi_head_self_attention/run_notebook.py
+```
 
-## Experiments
+The experiment reuses the pinned local training raster; [rebuild instructions](../../docs/frozen-reproduction.md). It never downloads automatically. The notebook reads committed measured evidence without requiring imagery. Its seven cells run in a real Jupyter kernel; outputs remain in ignored data/executed_notebooks.
 
-**Planned; not run.** Compare one and multiple heads on tiny token sequences; deliver hand-checked tensor shapes, attention maps, and parameter counts.
+## Executed experiment
 
-1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
-2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
-3. Record settings, seeds, package versions, runtime/device, and observations. Training projects must keep validation and held-out test data separate.
-4. Compare outcomes, explain failure cases, and record limitations. Do not tune on the test set.
+Seed28, width4, sixteen tokens; identical Q/K/V/O matrices across1,2,4 heads. A Gaussian fixture precedes a valid4×4 NAIP training RGB crop embedded to width4 by a fixed3×4 random matrix. The embedding adds12 entries separately from the64 attention-projection entries. All six conditions produced finite outputs and normalized maps. Map arrays occupy2048,4096,8192 bytes for1,2,4 heads in float64, excluding other allocations. See [source, settings and measurements](../../reports/mp28-multihead.json).
 
-## Deliverables
+![Hand-checked maps](../../reports/mp28-hand-heads.png)
+![Fixed-width head comparison](../../reports/mp28-attention-maps.png)
 
-- The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
-- An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
-- A short reflection: what was learned, what failed, and the next question.
+Different subspaces create different attention maps even without learning. This is not evidence of semantic specialization or better SR. The real normalized crop remains close to uniform; input scale affects the comparison. Parameter count stays constant while map storage increases with heads. Holding per-head width instead would confound the comparison by increasing total width and parameters.
 
-## References
+## Exercises, reflection and limitations
 
-- [Stage reference: Transformers](https://arxiv.org/abs/1706.03762)
+Before notebook solutions, predict D=4,h=3 behavior, zero output projection, and whether concatenation introduces positions. Answers: reject incompatible dimensions; zero output; no positional information. Learned: shape-preserving heads can compare different feature subspaces. Next: residuals, normalization and feed-forward networks in MP29.
 
-## Completion criteria
+All calculations use float64. The experiment is untrained and does not use validation/test data or report SR quality. NAIP aerial imagery is public domain with USDA/OpenSR attribution; the dataset card declares MIT. Values are DN/10000, physical calibration unverified. Source SHA and crop are in the measured report. No paid service or new dataset download.
 
-- [ ] Explain the learning objectives and solve the small mathematical example.
-- [ ] Implement and run the planned experiment with a documented command and reproducible inputs.
-- [ ] Verify relevant numerical, shape, and edge-case checks; record the actual outcomes.
-- [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
-- [ ] Document data licenses, environment, limitations, and any deviations from the brief.
-- [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+## Completion criteria and evidence
+
+- [x] Explain objectives and solve a small hand example (notebook sections1–2).
+- [x] Implement and run one/multiple-head comparison (six conditions).
+- [x] Verify numerical, shape, invalid-input and permutation contracts (five tests).
+- [x] Deliver maps, shape trace and parameter counts with limited interpretation.
+- [x] Document provenance, environment and deviations (report/validation).
+- [x] Link evidence in progress; keep learner mastery unassessed.
+
+## Reference
+
+Vaswani et al., [Attention Is All You Need](https://arxiv.org/abs/1706.03762), multi-head attention. No full paper reproduction is claimed.

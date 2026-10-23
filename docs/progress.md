@@ -1,3 +1,15 @@
+# MP28 implementation complete — 2026-10-23
+
+MP28 **Complete (implementation and teaching deliverables)**: local multi-head code, five tests, real-kernel seven-cell notebook, runner, measured one/two/four-head comparison, head maps and parameter counts. [Validation](../stage_07_transformers/MP28_multi_head_self_attention/VALIDATION.md). Learner mastery unassessed; MP29–MP40 remain incomplete. Both new lessons use existing training data only.
+
+October23 public retry of the confirmed app URL redirected twice to Streamlit's not-found/no-access page. Public deployment/source identity cannot currently be verified; account visibility restoration is external. Local showcase navigation/error states passed after setting a consistent60-second AppTest timeout for cold imports; the earlier3-second timeout failure is not counted as a pass.
+
+# MP27 implementation complete — 2026-10-23
+
+MP27 **Complete (implementation and teaching deliverables)**: local implementation, tests, notebook runner, eight-cell lesson, hand example, real training-crop experiment, feature-scale and analytical-memory plots. Six tests and real Jupyter execution passed; [criterion-level validation](../stage_07_transformers/MP27_self_attention_from_scratch/VALIDATION.md). Learner mastery unassessed. MP01–MP26 remain expanded with their original exceptions; MP28–MP40 remain incomplete. No frozen result was changed.
+
+Showcase PR15 head `04e7c2e536d8abe6e28b27d29f7a75325f86a0ac` passed both Linux jobs, run39989197874, including fresh data reconstruction, navigation, clean app installation and all-model inference. No agent merge or new public showcase verification.
+
 # Research showcase checkpoint — 2026-10-23
 
 Recovered and validated seven-section Streamlit showcase, shared measured-results index, source downloads, learning curves, project navigation and synchronized image zoom. Local 89 tests plus 4 subtests, all-model inference, fresh-cache restart and desktop/mobile checks passed on October 21; see [validation](../reports/showcase-validation.md). Publication and public verification of this showcase remain pending. No lessons were marked complete by this interface change.

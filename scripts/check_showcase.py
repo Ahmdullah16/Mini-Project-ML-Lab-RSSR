@@ -8,8 +8,9 @@ root=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(root/'src'))
 sections=['Overview','Live SR','Results','Methodology & Data','Mini-projects','Satellite Explorer','Downloads & Reproducibility']
 with patch('urllib.request.urlopen',side_effect=AssertionError('Network access on navigation')):
-    app=AppTest.from_file(str(root/'app/streamlit_app.py')).run(timeout=60)
+    app=AppTest.from_file(str(root/'app/streamlit_app.py'),default_timeout=60).run()
     for section in sections:
+        print('Checking',section,flush=True)
         app.radio(key='section').set_value(section).run(timeout=60)
         assert not app.exception and not app.error,(section,app.exception,app.error)
     app.radio(key='section').set_value('Results').run(timeout=60)

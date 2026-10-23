@@ -23,6 +23,8 @@ def test_frozen_metrics_are_exact_and_partitioned(index):
 def test_sources_projects_and_negative_results_preserved(index):
     assert len(index['projects'])==40
     assert len({p['stage'] for p in index['projects']})==9
+    for ident in ['MP27','MP28']:
+        assert next(p for p in index['projects'] if p['id']==ident)['status'].startswith('Complete implementation')
     for project in index['projects']:
         assert (ROOT/project['brief']).is_file() and (ROOT/project['notebook']).is_file()
     negative=[r for r in index['rows'] if r['metric']=='delta_psnr' and r['value']<0]

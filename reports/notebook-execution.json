@@ -99,24 +99,6 @@
     "finished_at": "2026-10-19T06:14:45.924012+00:00"
   },
   {
-    "source": "notebooks\\MP27.ipynb",
-    "source_sha256": "b4b3cd22b3bef8c40b7a3d3213ec5ee20c79888dcd01bc4857fb85991efb8184",
-    "started_at": "2026-10-19T06:16:13.052461+00:00",
-    "executed": "data\\executed_notebooks\\MP27.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-19T06:16:18.851542+00:00"
-  },
-  {
-    "source": "notebooks\\MP28.ipynb",
-    "source_sha256": "1a35d541060287ec939f0663d02e7fc1b0d4201adb6c2d153eefd53d99b9acf3",
-    "started_at": "2026-10-19T06:16:18.857074+00:00",
-    "executed": "data\\executed_notebooks\\MP28.executed.ipynb",
-    "code_cells": 2,
-    "status": "passed-real-jupyter-kernel",
-    "finished_at": "2026-10-19T06:16:25.432545+00:00"
-  },
-  {
     "source": "notebooks\\MP29.ipynb",
     "source_sha256": "c9764ab40a653a538c273095f7261b7bc282b4a4ea5e5c3ad4562ac8c528fa80",
     "started_at": "2026-10-19T06:16:25.436813+00:00",
@@ -358,5 +340,23 @@
     "code_cells": 2,
     "status": "passed-real-jupyter-kernel",
     "finished_at": "2026-10-21T09:40:58.474231+00:00"
+  },
+  {
+    "source": "notebooks\\MP27.ipynb",
+    "source_sha256": "904f5dff7d1c1f2654d5317479c4f21cf04a2dc387b1975211221dc5bddd3cc8",
+    "started_at": "2026-10-23T16:47:31.025960+00:00",
+    "executed": "data\\executed_notebooks\\MP27.executed.ipynb",
+    "code_cells": 8,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-23T16:47:36.926736+00:00"
+  },
+  {
+    "source": "notebooks\\MP28.ipynb",
+    "source_sha256": "af3c7070943c569f56babe184e0cfbcd0c0f17a1022cc9f2b0e56dc93c499ea8",
+    "started_at": "2026-10-23T16:54:47.542594+00:00",
+    "executed": "data\\executed_notebooks\\MP28.executed.ipynb",
+    "code_cells": 7,
+    "status": "passed-real-jupyter-kernel",
+    "finished_at": "2026-10-23T16:54:51.605798+00:00"
   }
 ]
