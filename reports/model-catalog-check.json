@@ -4,8 +4,8 @@
       "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
       "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
       "run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
-      "max_size_seconds": 0.342243299999609,
-      "rss_after_inference_bytes": 258912256,
+      "max_size_seconds": 0.6055532999998832,
+      "rss_after_inference_bytes": 340127744,
       "maximum_output_shape": [
         1024,
         1024,
@@ -17,8 +17,8 @@
       "model": "RGB CNN v2 \u2014 1000 training steps",
       "checkpoint_sha256": "703b11deed506600f4f9504deb1e1fa662107db05086ce40be5179ae8cfab2af",
       "run_id": "fe25142d97e348209a906b05eee28ee4",
-      "max_size_seconds": 0.2374904999996943,
-      "rss_after_inference_bytes": 261324800,
+      "max_size_seconds": 0.5829537999998138,
+      "rss_after_inference_bytes": 345796608,
       "maximum_output_shape": [
         1024,
         1024,
@@ -30,8 +30,8 @@
       "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
       "checkpoint_sha256": "5cb8b9f45bc449bc6ff7ba4bf151a5ef1c70c0556d13c3b9f1c625995d7713f3",
       "run_id": "8518d712e5fa4578bececede9dc40ba0",
-      "max_size_seconds": 0.6258425999985775,
-      "rss_after_inference_bytes": 283303936,
+      "max_size_seconds": 1.4576760999989347,
+      "rss_after_inference_bytes": 362373120,
       "maximum_output_shape": [
         1024,
         1024,

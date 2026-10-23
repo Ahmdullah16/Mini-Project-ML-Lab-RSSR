@@ -22,5 +22,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r app/requirements.txt
+      - run: python scripts/check_showcase.py
       - run: python scripts/check_streamlit.py
       - run: python scripts/check_model_catalog.py

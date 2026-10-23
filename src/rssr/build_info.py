@@ -12,4 +12,7 @@ def build_identity(root):
         if len(commit)!=40 or any(c not in '0123456789abcdef' for c in commit):commit='unavailable'
     except (OSError,subprocess.SubprocessError):commit='unavailable'
     source=root/'app/streamlit_app.py'
-    return {'git_commit':commit,'entrypoint_sha256':hashlib.sha256(source.read_bytes()).hexdigest()}
+    modules = ['app/showcase.py', 'app/inference_ui.py', 'src/rssr/evidence.py']
+    return {'git_commit':commit,'entrypoint_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+            'module_sha256':{name:hashlib.sha256((root/name).read_bytes()).hexdigest()
+                             for name in modules if (root/name).is_file()}}

@@ -1,3 +1,16 @@
+# Research showcase checkpoint — 2026-10-23
+
+Recovered and validated seven-section Streamlit showcase, shared measured-results index, source downloads, learning curves, project navigation and synchronized image zoom. Local 89 tests plus 4 subtests, all-model inference, fresh-cache restart and desktop/mobile checks passed on October 21; see [validation](../reports/showcase-validation.md). Publication and public verification of this showcase remain pending. No lessons were marked complete by this interface change.
+
+# Verified portability fix — 2026-10-21
+
+PR #14 code commit `104369288a54ee714a330f78eb028969484381a6` passed both Linux jobs (run39647819460): fresh reconstruction of all288 frozen tiles, database checks, clean deployment install and inference for all3 models. Local87 tests plus4 subtests and419 links/40 IDs passed. Only platform ZIP metadata and sub-micrometre derived-coordinate roundoff are normalized; exact frozen pixel-file hashes remain required. The preceding Linux failures are resolved on this branch.
+
+Actual public hybrid inference, downloaded PNG/provenance and deployed source identity were verified after sleep/wake; see [public evidence](../reports/public-hybrid-validation.json). MP01–MP26 expanded and executed; MP27–MP40 and other [readiness](submission_readiness.md) gaps remain. See [latest checkpoint](next_session.md) before continuing. This is not a complete-submission claim.
+
+---
+Earlier checkpoint follows and is superseded where inconsistent.
+
 # Latest continuation — 2026-10-21
 
 PR #11 is a draft on `feat/submission-integration`. Published commit `1baf02121ca9814e3533ec9ed41957846cb5f7b8` passed both Linux CI jobs, run 39578629874, including all three hosted checkpoints and max-size inference. Its tree matches local `ce10a0f`. The pre-test local freeze `9109766` is preserved as tree-equivalent remote parent `f9e4880`; remote publication was later, not evidence of test timing. No PR was merged by the agent.
