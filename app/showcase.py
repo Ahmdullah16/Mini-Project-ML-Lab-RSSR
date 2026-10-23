@@ -53,7 +53,8 @@ if section=='Overview':
     a,b,c=st.columns(3)
     a.metric('Frozen test scenes','1',help='One held-out NAIP aerial scene; 16 fixed patches. Not broad geographic validation.')
     b.metric('Development run records','36',help='Includes six reused runs; not 36 new training jobs.')
-    c.metric('Expanded lessons','26 / 40',help='Execution recorded; full criteria and mastery remain unassessed.')
+    expanded=sum(not p['status'].startswith('Introductory') for p in index['projects'])
+    c.metric('Expanded lessons',f'{expanded} / 40',help='See each project for criterion-level completion; learner mastery remains unassessed.')
     st.subheader('What the experiments support')
     test=pd.DataFrame([r for r in index['rows'] if r['study']=='Frozen held-out evaluation' and r['bands']==3 and r['metric']=='psnr'])
     metric_chart(test, 'PSNR · dB')
@@ -65,7 +66,7 @@ if section=='Overview':
         st.caption('Compact educational architecture; not an exact RCAN, CBAM or SwinIR reproduction.')
     with right:
         st.subheader('Completion, without shortcuts')
-        st.markdown('**Engineering:** public hybrid inference recorded; stateless service.\n\n**Education:** MP01–MP26 expanded; MP27–MP40 pending.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
+        st.markdown(f'**Engineering:** public hybrid inference recorded; stateless service.\n\n**Education:** {expanded} lessons expanded; inspect project-specific completion criteria.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
     with st.expander('Why remote sensing needs more than sharper previews'):
         st.write('Generated texture can look convincing without matching the ground. Sensor response, registration, sampling and physical calibration matter. Display previews and synthetic PSNR do not establish reflectance or downstream accuracy.')
 elif section=='Live SR':

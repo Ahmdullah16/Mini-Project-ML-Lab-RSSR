@@ -94,9 +94,10 @@ def build_index(root):
     for project in json.loads((root/'docs/syllabus.json').read_text(encoding='utf-8')):
         ident=project['id'];number=int(ident[2:]);brief=Path(project['brief'])
         notebook=brief.parent/'digital_image_explorer.ipynb' if number==1 else Path(f'notebooks/{ident}.ipynb')
+        complete = '**Status: Complete (implementation and teaching deliverables)**' in (root/brief).read_text(encoding='utf-8')
         projects.append({'id':ident,'title':project['title'],'objective':project['objective'],
                          'stage':brief.parts[0], 'brief':brief.as_posix(),'notebook':notebook.as_posix(),
-                         'status':'Expanded / execution recorded; criteria not all assessed' if number<=26 else 'Introductory / full expansion pending',
+                         'status':'Complete implementation and teaching deliverables; learner mastery unassessed' if complete else ('Expanded / execution recorded; criteria not all assessed' if number<=26 else 'Introductory / full expansion pending'),
                          'exception':'Independent held-out SRCNN table pending' if number==20 else None})
     if len(projects)!=40 or len({p['stage'] for p in projects})!=9:
         raise ValueError('Syllabus identity/stage mismatch')
