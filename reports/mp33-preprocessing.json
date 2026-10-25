@@ -1,0 +1,378 @@
+{
+  "recorded_at": "2026-10-25T12:24:13.703399+00:00",
+  "source": {
+    "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "region_id": "ROI_00006",
+    "split": "train",
+    "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "acquisition_time": "2021-09-17"
+  },
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "sensor": "NAIP aerial imagery (not satellite)",
+  "window": [
+    238,
+    238,
+    128,
+    128
+  ],
+  "crs": "EPSG:32611",
+  "band_order": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "statistics": {
+    "fit_split": "train",
+    "bands": [
+      {
+        "mean": 1360.82177734375,
+        "std": 151.01844555489774,
+        "scale": 151.01844555489774,
+        "count": 16384,
+        "constant_band": false
+      },
+      {
+        "mean": 1068.4351196289062,
+        "std": 123.99714239757306,
+        "scale": 123.99714239757306,
+        "count": 16384,
+        "constant_band": false
+      },
+      {
+        "mean": 816.3966674804688,
+        "std": 98.74993790112653,
+        "scale": 98.74993790112653,
+        "count": 16384,
+        "constant_band": false
+      },
+      {
+        "mean": 1942.4320068359375,
+        "std": 139.89577250238486,
+        "scale": 139.89577250238486,
+        "count": 16384,
+        "constant_band": false
+      }
+    ],
+    "convention": "population std; constant bands use scale1"
+  },
+  "normalized_dtype": "float32",
+  "normalized_units": "dimensionless z-score; not reflectance; not used by existing frozen SR models",
+  "normalized_band_means": [
+    7.450580596923828e-09,
+    0.0,
+    7.450580596923828e-09,
+    0.0
+  ],
+  "normalized_band_stds": [
+    1.0,
+    1.0,
+    1.0,
+    0.9999999403953552
+  ],
+  "patch_size": 32,
+  "accepted_patches": 16,
+  "edge_policy": {
+    "rejected_full_patches": 0,
+    "bottom_rows_dropped": 0,
+    "right_columns_dropped": 0
+  },
+  "patches": [
+    {
+      "row": 0,
+      "column": 0,
+      "transform": [
+        2.5,
+        0.0,
+        794205.0,
+        0.0,
+        -2.5,
+        4933305.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 0,
+      "column": 32,
+      "transform": [
+        2.5,
+        0.0,
+        794285.0,
+        0.0,
+        -2.5,
+        4933305.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 0,
+      "column": 64,
+      "transform": [
+        2.5,
+        0.0,
+        794365.0,
+        0.0,
+        -2.5,
+        4933305.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 0,
+      "column": 96,
+      "transform": [
+        2.5,
+        0.0,
+        794445.0,
+        0.0,
+        -2.5,
+        4933305.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 32,
+      "column": 0,
+      "transform": [
+        2.5,
+        0.0,
+        794205.0,
+        0.0,
+        -2.5,
+        4933225.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 32,
+      "column": 32,
+      "transform": [
+        2.5,
+        0.0,
+        794285.0,
+        0.0,
+        -2.5,
+        4933225.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 32,
+      "column": 64,
+      "transform": [
+        2.5,
+        0.0,
+        794365.0,
+        0.0,
+        -2.5,
+        4933225.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 32,
+      "column": 96,
+      "transform": [
+        2.5,
+        0.0,
+        794445.0,
+        0.0,
+        -2.5,
+        4933225.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 64,
+      "column": 0,
+      "transform": [
+        2.5,
+        0.0,
+        794205.0,
+        0.0,
+        -2.5,
+        4933145.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 64,
+      "column": 32,
+      "transform": [
+        2.5,
+        0.0,
+        794285.0,
+        0.0,
+        -2.5,
+        4933145.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 64,
+      "column": 64,
+      "transform": [
+        2.5,
+        0.0,
+        794365.0,
+        0.0,
+        -2.5,
+        4933145.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 64,
+      "column": 96,
+      "transform": [
+        2.5,
+        0.0,
+        794445.0,
+        0.0,
+        -2.5,
+        4933145.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 96,
+      "column": 0,
+      "transform": [
+        2.5,
+        0.0,
+        794205.0,
+        0.0,
+        -2.5,
+        4933065.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 96,
+      "column": 32,
+      "transform": [
+        2.5,
+        0.0,
+        794285.0,
+        0.0,
+        -2.5,
+        4933065.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 96,
+      "column": 64,
+      "transform": [
+        2.5,
+        0.0,
+        794365.0,
+        0.0,
+        -2.5,
+        4933065.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "row": 96,
+      "column": 96,
+      "transform": [
+        2.5,
+        0.0,
+        794445.0,
+        0.0,
+        -2.5,
+        4933065.0
+      ],
+      "valid_fraction": 1.0,
+      "shape": [
+        4,
+        32,
+        32
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2"
+  },
+  "limits": "Training crop only; no learned preprocessing from validation/test, no cloud mask or reflectance calibration. Per-band z-scoring changes spectral vector angles; do not use these z-scores for physical SAM. Existing DN/10000 inference remains unchanged."
+}

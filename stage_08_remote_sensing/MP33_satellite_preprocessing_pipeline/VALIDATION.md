@@ -1,11 +1,11 @@
-# MP33 validation
+# MP33 validation — 2026-10-25
 
-This project now has the MP01-style local file layout. Existing scientific results and original notebook execution evidence are preserved; see [progress](../../docs/progress.md). Expanded content through MP31 does not automatically satisfy every earlier project criterion. MP32–MP40 remain introductory until their full experiments are completed.
+Complete implementation and teaching deliverables; learner mastery unassessed.
 
-Local-folder test and execution outcomes are recorded below. No data acquisition, held-out evaluation or retraining is authorized by this file.
+`python -m pytest -q stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline`: 3 tests passed (3 affine deprecation warnings). Tests cover finite/nodata means, training-only fitting, fixed-stat application, constant/empty bands, zero-based band ordering, invalid patch rejection, full-patch edges and translated affine coordinates.
 
-## Local-folder validation — 2026-10-25
+`python stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/experiment.py`: synthetic hand checks and pinned training-raster experiment passed. Sixteen valid32×32 four-band patches; normalized means within7.5e-9 of zero and standard deviations within6e-8 of one. These verify normalization, not SR quality. No download, training, validation/test fitting or frozen-result changes.
 
-Passed 1 local tests with pytest; the notebook passed a real Jupyter kernel from this project directory (2 code cells). Source SHA-256: `b3e9bfa439960bbde7d53c3ef961201cd57634759817bfd93b9e04d4b91c25ae`.
+`python scripts/execute_project_notebooks.py --only MP33`: real kernel passed 5 code cells. Source SHA-256 `6f5c8b1412447204238645896f2fb8514cd45edcc2dd4847d22e6e86fa6328f0`. Notebook includes numerical examples, recorded metadata, exercises/solutions and interpretation.
 
-Commands from this directory: `python -m pytest -q test_mp33_tools.py` and `python run_notebook.py`. Records: [folder tests](../../reports/project-folder-tests.json), [kernel execution](../../reports/project-notebook-execution.json). Outputs are temporary under ignored data/executed_notebooks/project_folders. Original central notebook evidence remains historical. This validates the current lesson scope, not unfinished completion criteria.
+[Measured record](../../reports/mp33-preprocessing.json) · [Kernel evidence](../../reports/project-notebook-execution.json). The data are cached NAIP aerial imagery, not a fresh satellite observation. Per-band standardization alters spectral angles and is not inserted into existing model inference. CRS, masks, license, checksum and environment are retained in the record.

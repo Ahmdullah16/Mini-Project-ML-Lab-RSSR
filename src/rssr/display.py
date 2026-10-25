@@ -19,11 +19,17 @@ def predict_rgb(image,model,state,checkpoint_sha256,max_side=1024):
     x=torch.from_numpy(a.astype(np.float32)/255).permute(2,0,1)
     torch.set_num_threads(2)
     y=tiled(model,x[None])[0]
+    if not torch.isfinite(y).all():raise ValueError('Model produced nonfinite output; no display image exported')
     baseline=resize(x,model.scale)
     display=lambda v:np.rint(v.permute(1,2,0).numpy().clip(0,1)*255).astype(np.uint8)
     metadata={'run_id':state['run_id'],'checkpoint_sha256':checkpoint_sha256,
               'status':state['provenance'],'scale':model.scale,'sensor':'user supplied; unverified',
               'acquisition_time':'unknown','reference_metrics':'unavailable: no HR reference',
               'display_scaling':'fixed [0,1], clipped for RGB display only',
+              'input_dtype':str(a.dtype),'input_channel_order':'RGB','input_range_uint8':[int(a.min()),int(a.max())],
+              'input_channel_means_uint8':a.mean(axis=(0,1)).tolist(),
+              'raw_output_range_normalized':[float(y.min()),float(y.max())],
+              'display_clipped_scalar_fraction':float(((y<0)|(y>1)).float().mean()),
+              'output_dtype':'uint8','physical_pixel_spacing':'unknown for unreferenced RGB inputs',
               'tiling':{'tile':128,'halo':32,'note':'approximate context for globally pooled models'}}
     return display(baseline),display(y),metadata

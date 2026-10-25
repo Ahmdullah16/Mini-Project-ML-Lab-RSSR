@@ -359,7 +359,7 @@
     "tests": [
       "test_mp33_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Complete implementation and teaching deliverables; learner mastery unassessed"
   },
   {
     "id": "MP34",
@@ -370,7 +370,7 @@
     "tests": [
       "test_mp34_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Complete implementation and teaching deliverables; learner mastery unassessed"
   },
   {
     "id": "MP35",

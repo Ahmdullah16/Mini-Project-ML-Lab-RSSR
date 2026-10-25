@@ -1,0 +1,13 @@
+{
+  "version": "inference-diagnostic-v1",
+  "purpose": "Diagnose published RGB inference preprocessing, clipping and approximate tiling without selecting or training models",
+  "models": "All three checksum-pinned hosted catalog entries; unchanged weights",
+  "inputs": ["129x131 synthetic RGB ramps and hard edges", "260x264 pinned NAIP training crop at column100,row100; Gaussian sigma0.8 and area x2 then uint8 RGB display quantization"],
+  "training_manifest": "configs/naip-pilot-manifest.json",
+  "split": "train only; no validation selection and no test access",
+  "normalization": "uint8 HWC RGB converted to float32 CHW /255; source crop fixed DN/10000 before synthetic degradation",
+  "tiling": {"tile": 128, "halo": 32, "scale": 2, "seam_band_radius_hr_pixels": 2},
+  "measurements": ["float full-versus-tiled MAE and maximum absolute difference", "seam-band versus non-seam difference", "raw SR out-of-range fraction", "display uint8 disagreement fraction", "exact shared predict_rgb output agreement", "input quantization absolute error"],
+  "interpretation": "Differences measure implementation context, not HR accuracy. Global channel pooling makes tiled context approximate. Clipping/quantization are display transformations. No quality-gain, geographic generalization or default-model selection claim.",
+  "budget": "CPU only, two threads, bounded inputs, three checkpoints, no optimizer steps or data downloads"
+}

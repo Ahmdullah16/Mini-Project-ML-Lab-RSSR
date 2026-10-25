@@ -1,0 +1,244 @@
+{
+  "protocol": "inference-diagnostic-v1",
+  "protocol_sha256": "f646821ff951059a8343a8599250491f59c965c003bfea85b1ddcd6d50c650d7",
+  "recorded_at": "2026-10-25T12:18:35.238333+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "threads": 2
+  },
+  "source": {
+    "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "region_id": "ROI_00006",
+    "split": "train",
+    "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "acquisition_time": "2021-09-17"
+  },
+  "source_window": [
+    100,
+    100,
+    264,
+    260
+  ],
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "normalization": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "input_quantization": {
+    "mae_normalized": 0.0009849129951721004,
+    "max_abs_normalized": 0.0019607541900055064
+  },
+  "rows": [
+    {
+      "input": "synthetic_rgb_edges",
+      "input_sha256": "f981b5208f2b23818d27c2e70b15eb22d3b5f9678afc908d8d85d4d176e74210",
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+      "run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+      "model_config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4
+      },
+      "training_steps": 100,
+      "full_seconds": 0.03345369999988179,
+      "tiled_seconds": 0.040800999999191845,
+      "timing_scope": "single diagnostic forwards, not warmed efficiency benchmark",
+      "shared_display_exact": true,
+      "mae_normalized": 1.1786152909140024e-09,
+      "max_abs_normalized": 2.384185791015625e-07,
+      "seam_mae_normalized": 1.9752100418088355e-08,
+      "nonseam_mae_normalized": 5.936236333652038e-10,
+      "seam_spatial_pixels": 2064,
+      "output_shape_chw": [
+        3,
+        258,
+        262
+      ],
+      "tiled_out_of_range_fraction": 0.34214549184369886,
+      "full_out_of_range_fraction": 0.34214549184369886,
+      "uint8_disagreement_fraction": 0.0
+    },
+    {
+      "input": "synthetic_rgb_edges",
+      "input_sha256": "f981b5208f2b23818d27c2e70b15eb22d3b5f9678afc908d8d85d4d176e74210",
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "checkpoint_sha256": "703b11deed506600f4f9504deb1e1fa662107db05086ce40be5179ae8cfab2af",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "model_config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      },
+      "training_steps": 1000,
+      "full_seconds": 0.02289039999959641,
+      "tiled_seconds": 0.02933130000019446,
+      "timing_scope": "single diagnostic forwards, not warmed efficiency benchmark",
+      "shared_display_exact": true,
+      "mae_normalized": 3.4652485463864576e-10,
+      "max_abs_normalized": 1.1920928955078125e-07,
+      "seam_mae_normalized": 6.1360951898094914e-09,
+      "nonseam_mae_normalized": 1.6417618266476088e-10,
+      "seam_spatial_pixels": 2064,
+      "output_shape_chw": [
+        3,
+        258,
+        262
+      ],
+      "tiled_out_of_range_fraction": 0.09936485393613034,
+      "full_out_of_range_fraction": 0.09936485393613034,
+      "uint8_disagreement_fraction": 0.0
+    },
+    {
+      "input": "synthetic_rgb_edges",
+      "input_sha256": "f981b5208f2b23818d27c2e70b15eb22d3b5f9678afc908d8d85d4d176e74210",
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "checkpoint_sha256": "5cb8b9f45bc449bc6ff7ba4bf151a5ef1c70c0556d13c3b9f1c625995d7713f3",
+      "run_id": "8518d712e5fa4578bececede9dc40ba0",
+      "model_config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      },
+      "training_steps": 1000,
+      "full_seconds": 0.07082839999930002,
+      "tiled_seconds": 0.0864252999999735,
+      "timing_scope": "single diagnostic forwards, not warmed efficiency benchmark",
+      "shared_display_exact": true,
+      "mae_normalized": 4.252284758513087e-06,
+      "max_abs_normalized": 0.0017167925834655762,
+      "seam_mae_normalized": 5.142739132620955e-05,
+      "nonseam_mae_normalized": 2.7664546303966626e-06,
+      "seam_spatial_pixels": 2064,
+      "output_shape_chw": [
+        3,
+        258,
+        262
+      ],
+      "tiled_out_of_range_fraction": 0.20685642148450598,
+      "full_out_of_range_fraction": 0.206821902676687,
+      "uint8_disagreement_fraction": 0.0009369390693729412
+    },
+    {
+      "input": "pinned_training_crop",
+      "input_sha256": "e09817825610fd06bbfe472b295ccd0595097d0149544226bae3542f582ea2b9",
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+      "run_id": "b5f690d95fe4422b88f6f728ce6d6c2c",
+      "model_config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4
+      },
+      "training_steps": 100,
+      "full_seconds": 0.010202299999946263,
+      "tiled_seconds": 0.019359300000360236,
+      "timing_scope": "single diagnostic forwards, not warmed efficiency benchmark",
+      "shared_display_exact": true,
+      "mae_normalized": 2.808259581537699e-10,
+      "max_abs_normalized": 4.470348358154297e-08,
+      "seam_mae_normalized": 3.499623674612779e-09,
+      "nonseam_mae_normalized": 1.8023852951442583e-10,
+      "seam_spatial_pixels": 2080,
+      "output_shape_chw": [
+        3,
+        260,
+        264
+      ],
+      "tiled_out_of_range_fraction": 0.0,
+      "full_out_of_range_fraction": 0.0,
+      "uint8_disagreement_fraction": 0.0
+    },
+    {
+      "input": "pinned_training_crop",
+      "input_sha256": "e09817825610fd06bbfe472b295ccd0595097d0149544226bae3542f582ea2b9",
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "checkpoint_sha256": "703b11deed506600f4f9504deb1e1fa662107db05086ce40be5179ae8cfab2af",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "model_config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "kind": "cnn",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      },
+      "training_steps": 1000,
+      "full_seconds": 0.019112899999527144,
+      "tiled_seconds": 0.03410299999995914,
+      "timing_scope": "single diagnostic forwards, not warmed efficiency benchmark",
+      "shared_display_exact": true,
+      "mae_normalized": 8.309629789923362e-11,
+      "max_abs_normalized": 1.4901161193847656e-08,
+      "seam_mae_normalized": 1.057737674086522e-09,
+      "nonseam_mae_normalized": 5.263875489338086e-11,
+      "seam_spatial_pixels": 2080,
+      "output_shape_chw": [
+        3,
+        260,
+        264
+      ],
+      "tiled_out_of_range_fraction": 0.0,
+      "full_out_of_range_fraction": 0.0,
+      "uint8_disagreement_fraction": 4.856254856254856e-06
+    },
+    {
+      "input": "pinned_training_crop",
+      "input_sha256": "e09817825610fd06bbfe472b295ccd0595097d0149544226bae3542f582ea2b9",
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "checkpoint_sha256": "5cb8b9f45bc449bc6ff7ba4bf151a5ef1c70c0556d13c3b9f1c625995d7713f3",
+      "run_id": "8518d712e5fa4578bececede9dc40ba0",
+      "model_config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "kind": "hybrid",
+        "gate": false,
+        "fusion": "concat",
+        "window": 4,
+        "zero_residual": true
+      },
+      "training_steps": 1000,
+      "full_seconds": 0.05811110000104236,
+      "tiled_seconds": 0.0756732000008924,
+      "timing_scope": "single diagnostic forwards, not warmed efficiency benchmark",
+      "shared_display_exact": true,
+      "mae_normalized": 8.819944087036747e-09,
+      "max_abs_normalized": 3.1813979148864746e-06,
+      "seam_mae_normalized": 1.3534116964691726e-07,
+      "nonseam_mae_normalized": 4.866155788290481e-09,
+      "seam_spatial_pixels": 2080,
+      "output_shape_chw": [
+        3,
+        260,
+        264
+      ],
+      "tiled_out_of_range_fraction": 0.0,
+      "full_out_of_range_fraction": 0.0,
+      "uint8_disagreement_fraction": 0.0
+    }
+  ],
+  "limits": "Implementation diagnostics only; no new reference-accuracy/quality gain, training, validation selection or test access. Synthetic/NAIP aerial domain cannot establish uploaded-satellite fidelity."
+}
