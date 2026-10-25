@@ -7,3 +7,9 @@ Executed the three README commands using Python3.12.14 / NumPy2.5.4, CPU. All fi
 All seven notebook code cells passed in a real Jupyter kernel, exit0; [execution record](../../reports/notebook-execution.json). Two plots were captured for visual review. The pre-existing local kernel TCP transport warning appeared, with no execution error.
 
 The [measured report](../../reports/mp28-multihead.json) records seed, software, source hash/license/crop and all maps. Arrays have shapes[heads,16,16]; projection counts stay64 and float64 map sizes increase2048→4096→8192 bytes. These are actual array sizes, not measured peak RAM. Different random maps do not establish task benefit. No positions, biases, dropout, masks, trained model or SR metric is included; these are explicitly outside this primitive's scope.
+
+## Local-folder validation — 2026-10-25
+
+Passed 5 local tests with pytest; the notebook passed a real Jupyter kernel from this project directory (7 code cells). Source SHA-256: `6b8875a4d4e800cf6ccc8263a0b8aed2c7ea392dc8ba461a4f311bb749988868`.
+
+Commands from this directory: `python -m pytest -q test_multihead_tools.py` and `python run_notebook.py`. Records: [folder tests](../../reports/project-folder-tests.json), [kernel execution](../../reports/project-notebook-execution.json). Outputs are temporary under ignored data/executed_notebooks/project_folders. Original central notebook evidence remains historical. This validates the current lesson scope, not unfinished completion criteria.

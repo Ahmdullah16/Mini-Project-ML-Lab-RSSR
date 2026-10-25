@@ -91,9 +91,10 @@ def build_index(root):
                           'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
                           'coverage':'normalized metrics' if path.name in normalized else 'source artifact; not a comparable metric table'})
     projects=[]
+    folders={p['id']:p for p in json.loads((root/'docs/project_folders.json').read_text(encoding='utf-8'))}
     for project in json.loads((root/'docs/syllabus.json').read_text(encoding='utf-8')):
         ident=project['id'];number=int(ident[2:]);brief=Path(project['brief'])
-        notebook=brief.parent/'digital_image_explorer.ipynb' if number==1 else Path(f'notebooks/{ident}.ipynb')
+        notebook=Path(folders[ident]['notebook'])
         complete = '**Status: Complete (implementation and teaching deliverables)**' in (root/brief).read_text(encoding='utf-8')
         projects.append({'id':ident,'title':project['title'],'objective':project['objective'],
                          'stage':brief.parts[0], 'brief':brief.as_posix(),'notebook':notebook.as_posix(),

@@ -2,7 +2,7 @@
 
 [Laboratory home](../README.md) · [Progress](../docs/progress.md)
 
-Work through MP27–MP31 in order. All projects are **Not started**; the curriculum is proposed for review.
+Work through MP27–MP31 in order. All five projects have **complete implementation and teaching deliverables**, each with reusable code, tests, a real-kernel notebook runner and a criterion-level VALIDATION.md. Learner mastery remains unassessed. The measured demonstrations use existing training data; MP31 reuses development evidence without repeating training or the frozen test.
 
 - [MP27 — Self-Attention from Scratch](MP27_self_attention_from_scratch/README.md): Queries, keys, values, scaled dot-product attention and softmax.
 - [MP28 — Multi-Head Self-Attention](MP28_multi_head_self_attention/README.md): Attention heads, feature projections and concatenation.

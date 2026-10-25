@@ -1,0 +1,441 @@
+[
+  {
+    "id": "MP01",
+    "directory": "stage_01_python_numpy/MP01_digital_image_explorer",
+    "notebook": "stage_01_python_numpy/MP01_digital_image_explorer/digital_image_explorer.ipynb",
+    "tools": "image_tools.py",
+    "tests": [
+      "test_image_tools.py"
+    ],
+    "scope": "Original MP01 preserved"
+  },
+  {
+    "id": "MP02",
+    "directory": "stage_01_python_numpy/MP02_numpy_image_laboratory",
+    "notebook": "stage_01_python_numpy/MP02_numpy_image_laboratory/numpy_image_laboratory.ipynb",
+    "legacy_notebook": "notebooks/MP02.ipynb",
+    "tools": "mp02_tools.py",
+    "tests": [
+      "test_mp02_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP03",
+    "directory": "stage_01_python_numpy/MP03_image_resizing_laboratory",
+    "notebook": "stage_01_python_numpy/MP03_image_resizing_laboratory/image_resizing_laboratory.ipynb",
+    "legacy_notebook": "notebooks/MP03.ipynb",
+    "tools": "mp03_tools.py",
+    "tests": [
+      "test_mp03_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP04",
+    "directory": "stage_01_python_numpy/MP04_image_comparison_tool",
+    "notebook": "stage_01_python_numpy/MP04_image_comparison_tool/image_comparison_tool.ipynb",
+    "legacy_notebook": "notebooks/MP04.ipynb",
+    "tools": "mp04_tools.py",
+    "tests": [
+      "test_mp04_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP05",
+    "directory": "stage_02_image_processing/MP05_gaussian_blur_simulator",
+    "notebook": "stage_02_image_processing/MP05_gaussian_blur_simulator/gaussian_blur_simulator.ipynb",
+    "legacy_notebook": "notebooks/MP05.ipynb",
+    "tools": "mp05_tools.py",
+    "tests": [
+      "test_mp05_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP06",
+    "directory": "stage_02_image_processing/MP06_low_resolution_image_generator",
+    "notebook": "stage_02_image_processing/MP06_low_resolution_image_generator/low_resolution_image_generator.ipynb",
+    "legacy_notebook": "notebooks/MP06.ipynb",
+    "tools": "mp06_tools.py",
+    "tests": [
+      "test_mp06_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP07",
+    "directory": "stage_02_image_processing/MP07_synthetic_degradation_laboratory",
+    "notebook": "stage_02_image_processing/MP07_synthetic_degradation_laboratory/synthetic_degradation_laboratory.ipynb",
+    "legacy_notebook": "notebooks/MP07.ipynb",
+    "tools": "mp07_tools.py",
+    "tests": [
+      "test_mp07_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP08",
+    "directory": "stage_02_image_processing/MP08_frequency_domain_image_explorer",
+    "notebook": "stage_02_image_processing/MP08_frequency_domain_image_explorer/frequency_domain_image_explorer.ipynb",
+    "legacy_notebook": "notebooks/MP08.ipynb",
+    "tools": "mp08_tools.py",
+    "tests": [
+      "test_mp08_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP09",
+    "directory": "stage_03_metrics/MP09_mse_and_psnr_from_scratch",
+    "notebook": "stage_03_metrics/MP09_mse_and_psnr_from_scratch/mse_and_psnr_from_scratch.ipynb",
+    "legacy_notebook": "notebooks/MP09.ipynb",
+    "tools": "mp09_tools.py",
+    "tests": [
+      "test_mp09_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP10",
+    "directory": "stage_03_metrics/MP10_ssim_evaluation_tool",
+    "notebook": "stage_03_metrics/MP10_ssim_evaluation_tool/ssim_evaluation_tool.ipynb",
+    "legacy_notebook": "notebooks/MP10.ipynb",
+    "tools": "mp10_tools.py",
+    "tests": [
+      "test_mp10_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP11",
+    "directory": "stage_03_metrics/MP11_super_resolution_evaluation_dashboard",
+    "notebook": "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/super_resolution_evaluation_dashboard.ipynb",
+    "legacy_notebook": "notebooks/MP11.ipynb",
+    "tools": "mp11_tools.py",
+    "tests": [
+      "test_mp11_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP12",
+    "directory": "stage_04_math_pytorch/MP12_linear_algebra_visualizer",
+    "notebook": "stage_04_math_pytorch/MP12_linear_algebra_visualizer/linear_algebra_visualizer.ipynb",
+    "legacy_notebook": "notebooks/MP12.ipynb",
+    "tools": "mp12_tools.py",
+    "tests": [
+      "test_mp12_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP13",
+    "directory": "stage_04_math_pytorch/MP13_gradient_descent_from_scratch",
+    "notebook": "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/gradient_descent_from_scratch.ipynb",
+    "legacy_notebook": "notebooks/MP13.ipynb",
+    "tools": "mp13_tools.py",
+    "tests": [
+      "test_mp13_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP14",
+    "directory": "stage_04_math_pytorch/MP14_neural_network_from_scratch",
+    "notebook": "stage_04_math_pytorch/MP14_neural_network_from_scratch/neural_network_from_scratch.ipynb",
+    "legacy_notebook": "notebooks/MP14.ipynb",
+    "tools": "mp14_tools.py",
+    "tests": [
+      "test_mp14_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP15",
+    "directory": "stage_04_math_pytorch/MP15_first_pytorch_neural_network",
+    "notebook": "stage_04_math_pytorch/MP15_first_pytorch_neural_network/first_pytorch_neural_network.ipynb",
+    "legacy_notebook": "notebooks/MP15.ipynb",
+    "tools": "mp15_tools.py",
+    "tests": [
+      "test_mp15_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP16",
+    "directory": "stage_04_math_pytorch/MP16_reusable_training_pipeline",
+    "notebook": "stage_04_math_pytorch/MP16_reusable_training_pipeline/reusable_training_pipeline.ipynb",
+    "legacy_notebook": "notebooks/MP16.ipynb",
+    "tools": "mp16_tools.py",
+    "tests": [
+      "test_mp16_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP17",
+    "directory": "stage_05_cnn_sr/MP17_convolution_playground",
+    "notebook": "stage_05_cnn_sr/MP17_convolution_playground/convolution_playground.ipynb",
+    "legacy_notebook": "notebooks/MP17.ipynb",
+    "tools": "mp17_tools.py",
+    "tests": [
+      "test_mp17_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP18",
+    "directory": "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory",
+    "notebook": "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/cnn_edge_detection_laboratory.ipynb",
+    "legacy_notebook": "notebooks/MP18.ipynb",
+    "tools": "mp18_tools.py",
+    "tests": [
+      "test_mp18_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP19",
+    "directory": "stage_05_cnn_sr/MP19_cnn_image_reconstruction",
+    "notebook": "stage_05_cnn_sr/MP19_cnn_image_reconstruction/cnn_image_reconstruction.ipynb",
+    "legacy_notebook": "notebooks/MP19.ipynb",
+    "tools": "mp19_tools.py",
+    "tests": [
+      "test_mp19_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP20",
+    "directory": "stage_05_cnn_sr/MP20_srcnn_implementation",
+    "notebook": "stage_05_cnn_sr/MP20_srcnn_implementation/srcnn_implementation.ipynb",
+    "legacy_notebook": "notebooks/MP20.ipynb",
+    "tools": "mp20_tools.py",
+    "tests": [
+      "test_mp20_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP21",
+    "directory": "stage_05_cnn_sr/MP21_residual_cnn_super_resolution",
+    "notebook": "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/residual_cnn_super_resolution.ipynb",
+    "legacy_notebook": "notebooks/MP21.ipynb",
+    "tools": "mp21_tools.py",
+    "tests": [
+      "test_mp21_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP22",
+    "directory": "stage_05_cnn_sr/MP22_upsampling_architecture_comparison",
+    "notebook": "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/upsampling_architecture_comparison.ipynb",
+    "legacy_notebook": "notebooks/MP22.ipynb",
+    "tools": "mp22_tools.py",
+    "tests": [
+      "test_mp22_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP23",
+    "directory": "stage_06_attention/MP23_channel_attention_from_scratch",
+    "notebook": "stage_06_attention/MP23_channel_attention_from_scratch/channel_attention_from_scratch.ipynb",
+    "legacy_notebook": "notebooks/MP23.ipynb",
+    "tools": "mp23_tools.py",
+    "tests": [
+      "test_mp23_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP24",
+    "directory": "stage_06_attention/MP24_spatial_attention_from_scratch",
+    "notebook": "stage_06_attention/MP24_spatial_attention_from_scratch/spatial_attention_from_scratch.ipynb",
+    "legacy_notebook": "notebooks/MP24.ipynb",
+    "tools": "mp24_tools.py",
+    "tests": [
+      "test_mp24_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP25",
+    "directory": "stage_06_attention/MP25_combined_attention_module",
+    "notebook": "stage_06_attention/MP25_combined_attention_module/combined_attention_module.ipynb",
+    "legacy_notebook": "notebooks/MP25.ipynb",
+    "tools": "mp25_tools.py",
+    "tests": [
+      "test_mp25_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP26",
+    "directory": "stage_06_attention/MP26_attention_based_sr_network",
+    "notebook": "stage_06_attention/MP26_attention_based_sr_network/attention_based_sr_network.ipynb",
+    "legacy_notebook": "notebooks/MP26.ipynb",
+    "tools": "mp26_tools.py",
+    "tests": [
+      "test_mp26_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP27",
+    "directory": "stage_07_transformers/MP27_self_attention_from_scratch",
+    "notebook": "stage_07_transformers/MP27_self_attention_from_scratch/self_attention_from_scratch.ipynb",
+    "legacy_notebook": "notebooks/MP27.ipynb",
+    "tools": "attention_tools.py",
+    "tests": [
+      "test_attention_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP28",
+    "directory": "stage_07_transformers/MP28_multi_head_self_attention",
+    "notebook": "stage_07_transformers/MP28_multi_head_self_attention/multi_head_self_attention.ipynb",
+    "legacy_notebook": "notebooks/MP28.ipynb",
+    "tools": "multihead_tools.py",
+    "tests": [
+      "test_multihead_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP29",
+    "directory": "stage_07_transformers/MP29_transformer_encoder_block",
+    "notebook": "stage_07_transformers/MP29_transformer_encoder_block/transformer_encoder_block.ipynb",
+    "legacy_notebook": "notebooks/MP29.ipynb",
+    "tools": "encoder_tools.py",
+    "tests": [
+      "test_encoder_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP30",
+    "directory": "stage_07_transformers/MP30_image_patches_and_window_attention",
+    "notebook": "stage_07_transformers/MP30_image_patches_and_window_attention/image_patches_and_window_attention.ipynb",
+    "legacy_notebook": "notebooks/MP30.ipynb",
+    "tools": "window_tools.py",
+    "tests": [
+      "test_window_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP31",
+    "directory": "stage_07_transformers/MP31_transformer_based_sr_baseline",
+    "notebook": "stage_07_transformers/MP31_transformer_based_sr_baseline/transformer_based_sr_baseline.ipynb",
+    "legacy_notebook": "notebooks/MP31.ipynb",
+    "tools": "benchmark_tools.py",
+    "tests": [
+      "test_benchmark_tools.py"
+    ],
+    "scope": "Expanded existing lesson"
+  },
+  {
+    "id": "MP32",
+    "directory": "stage_08_remote_sensing/MP32_satellite_image_explorer",
+    "notebook": "stage_08_remote_sensing/MP32_satellite_image_explorer/satellite_image_explorer.ipynb",
+    "legacy_notebook": "notebooks/MP32.ipynb",
+    "tools": "mp32_tools.py",
+    "tests": [
+      "test_mp32_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP33",
+    "directory": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline",
+    "notebook": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/satellite_preprocessing_pipeline.ipynb",
+    "legacy_notebook": "notebooks/MP33.ipynb",
+    "tools": "mp33_tools.py",
+    "tests": [
+      "test_mp33_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP34",
+    "directory": "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder",
+    "notebook": "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/satellite_hr_lr_pair_builder.ipynb",
+    "legacy_notebook": "notebooks/MP34.ipynb",
+    "tools": "mp34_tools.py",
+    "tests": [
+      "test_mp34_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP35",
+    "directory": "stage_08_remote_sensing/MP35_geographic_dataset_splitting",
+    "notebook": "stage_08_remote_sensing/MP35_geographic_dataset_splitting/geographic_dataset_splitting.ipynb",
+    "legacy_notebook": "notebooks/MP35.ipynb",
+    "tools": "mp35_tools.py",
+    "tests": [
+      "test_mp35_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP36",
+    "directory": "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation",
+    "notebook": "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/cross_sensor_dataset_investigation.ipynb",
+    "legacy_notebook": "notebooks/MP36.ipynb",
+    "tools": "mp36_tools.py",
+    "tests": [
+      "test_mp36_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP37",
+    "directory": "stage_09_hybrid_research/MP37_feature_fusion_laboratory",
+    "notebook": "stage_09_hybrid_research/MP37_feature_fusion_laboratory/feature_fusion_laboratory.ipynb",
+    "legacy_notebook": "notebooks/MP37.ipynb",
+    "tools": "mp37_tools.py",
+    "tests": [
+      "test_mp37_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP38",
+    "directory": "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model",
+    "notebook": "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/hybrid_cnn_attention_transformer_sr_model.ipynb",
+    "legacy_notebook": "notebooks/MP38.ipynb",
+    "tools": "mp38_tools.py",
+    "tests": [
+      "test_mp38_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP39",
+    "directory": "stage_09_hybrid_research/MP39_controlled_ablation_study",
+    "notebook": "stage_09_hybrid_research/MP39_controlled_ablation_study/controlled_ablation_study.ipynb",
+    "legacy_notebook": "notebooks/MP39.ipynb",
+    "tools": "mp39_tools.py",
+    "tests": [
+      "test_mp39_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  },
+  {
+    "id": "MP40",
+    "directory": "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark",
+    "notebook": "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/robustness_and_efficiency_benchmark.ipynb",
+    "legacy_notebook": "notebooks/MP40.ipynb",
+    "tools": "mp40_tools.py",
+    "tests": [
+      "test_mp40_tools.py"
+    ],
+    "scope": "Introductory implementation; full criteria pending"
+  }
+]

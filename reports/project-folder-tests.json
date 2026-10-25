@@ -1,0 +1,410 @@
+{
+  "date": "2026-10-25",
+  "python": "3.12.14",
+  "command": "python -m pytest -q stage_01_python_numpy stage_02_image_processing stage_03_metrics stage_04_math_pytorch stage_05_cnn_sr stage_06_attention stage_07_transformers stage_08_remote_sensing stage_09_hybrid_research",
+  "pytest_passed": 111,
+  "subtests_passed": 17,
+  "warnings": "4 affine PendingDeprecationWarnings; no failures",
+  "projects": [
+    {
+      "id": "MP01",
+      "tests_passed": 10,
+      "test_files": [
+        "test_image_tools.py"
+      ],
+      "test_sha256": {
+        "test_image_tools.py": "359e0810ac1a9e6f6eac65327feae79c536d64d96eb06374c890934819050fdc"
+      }
+    },
+    {
+      "id": "MP02",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp02_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp02_tools.py": "76b356ac4468cb2afbf5e1e7e1db20bef461730b4654b5fb4239356c478b7b20"
+      }
+    },
+    {
+      "id": "MP03",
+      "tests_passed": 6,
+      "test_files": [
+        "test_mp03_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp03_tools.py": "12f07bdcfe944f33bfc32b6e301f230c0a247be23a5b6f78c64c02633eb790f7"
+      }
+    },
+    {
+      "id": "MP04",
+      "tests_passed": 6,
+      "test_files": [
+        "test_mp04_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp04_tools.py": "af8b99c0732f8d620f77cfb478cc4e2266ae06c688ce4955562630cb738eced1"
+      }
+    },
+    {
+      "id": "MP05",
+      "tests_passed": 4,
+      "test_files": [
+        "test_mp05_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp05_tools.py": "d6f4d8666b6ac87b0149e1a7bdf79c7f6e106d7bbc28ec7f2d90a3c79684d38f"
+      }
+    },
+    {
+      "id": "MP06",
+      "tests_passed": 4,
+      "test_files": [
+        "test_mp06_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp06_tools.py": "1f6d44c3514aa6f813a2a3b9bbe60769189e502d6f7415b02cc05acdb1b9cca2"
+      }
+    },
+    {
+      "id": "MP07",
+      "tests_passed": 4,
+      "test_files": [
+        "test_mp07_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp07_tools.py": "4b0ca4aac64b923f60723ca2622cc723eef3ce865d43fcce3a7b44907067fe25"
+      }
+    },
+    {
+      "id": "MP08",
+      "tests_passed": 4,
+      "test_files": [
+        "test_mp08_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp08_tools.py": "6978d47543e10218f41ea051de7855608fd30be31d8a5e2407d68372ced4b5aa"
+      }
+    },
+    {
+      "id": "MP09",
+      "tests_passed": 3,
+      "test_files": [
+        "test_mp09_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp09_tools.py": "bfe0a79553ad68e5be95c1739a6e99d9a3e805005373bfc99791ad2a0dc3ad86"
+      }
+    },
+    {
+      "id": "MP10",
+      "tests_passed": 3,
+      "test_files": [
+        "test_mp10_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp10_tools.py": "9f65be218c775b78bf6bfeeb6db9b333728431251296f7ad6b0f2259a3bb7681"
+      }
+    },
+    {
+      "id": "MP11",
+      "tests_passed": 3,
+      "test_files": [
+        "test_mp11_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp11_tools.py": "af1cb187d0793f02eaa596d59b98ee4df32f06c7c637db4533bc2ee1642c49b9"
+      }
+    },
+    {
+      "id": "MP12",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp12_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp12_tools.py": "c64a513d6cd4571c9fa1b3b6856500e3a150ae0494da768c387ff0488838e050"
+      }
+    },
+    {
+      "id": "MP13",
+      "tests_passed": 3,
+      "test_files": [
+        "test_mp13_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp13_tools.py": "782068292425a79ecccf61ba84179d220bc7a1aec5ca483c089dfff545836edd"
+      }
+    },
+    {
+      "id": "MP14",
+      "tests_passed": 3,
+      "test_files": [
+        "test_mp14_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp14_tools.py": "989ca21d29df74ecf25692823fc61ca993cd54515f6886d426a49fa07b602be1"
+      }
+    },
+    {
+      "id": "MP15",
+      "tests_passed": 3,
+      "test_files": [
+        "test_mp15_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp15_tools.py": "474f9493c08d77efae1cace718949b664edf4683478e982c7f5b6471571f1aa3"
+      }
+    },
+    {
+      "id": "MP16",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp16_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp16_tools.py": "b0d974a3903487db11ee799c541be4427aca6aff41f5099d4f032a4ad4622247"
+      }
+    },
+    {
+      "id": "MP17",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp17_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp17_tools.py": "d35f0a709e94aefe00601fe00173091814eefead22d46b7a614bb33ee5814d28"
+      }
+    },
+    {
+      "id": "MP18",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp18_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp18_tools.py": "df7a64d50ff7f06978c1d285f1c754c144db81162b25ef94a1398ef5be69175d"
+      }
+    },
+    {
+      "id": "MP19",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp19_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp19_tools.py": "b9203d1fbe1a79e8d83fa8d2e33f4803a075c63b002525d2874471775c85797a"
+      }
+    },
+    {
+      "id": "MP20",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp20_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp20_tools.py": "8ed14a2a4421592707ec381e7e1c0bdd24e74507b4dd30005fcf23c41e65993d"
+      }
+    },
+    {
+      "id": "MP21",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp21_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp21_tools.py": "7ce61efbeb1b85ac04aafcaa067595fb620fc601a63b2f55693c48228c525c10"
+      }
+    },
+    {
+      "id": "MP22",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp22_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp22_tools.py": "b39b344218cc06d0927fb735c379e9953b29d67aeddc2585b51c12471bd075f4"
+      }
+    },
+    {
+      "id": "MP23",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp23_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp23_tools.py": "a30ec589ab153b527775ad9db0f548723d990c0dd4b6a066472e6ce54777b5e0"
+      }
+    },
+    {
+      "id": "MP24",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp24_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp24_tools.py": "a6fc4245593620d521975f7a875fd7a3aceef07a5861b267e7b3244102014c76"
+      }
+    },
+    {
+      "id": "MP25",
+      "tests_passed": 2,
+      "test_files": [
+        "test_mp25_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp25_tools.py": "fb53462216dc14d8b44afa46d356da98669830502cdf95b393806b2b49806f2b"
+      }
+    },
+    {
+      "id": "MP26",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp26_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp26_tools.py": "e753a9a1f1292bf261db34db8b380eacab72a3618cdaf09d8513df9572eb855d"
+      }
+    },
+    {
+      "id": "MP27",
+      "tests_passed": 6,
+      "test_files": [
+        "test_attention_tools.py"
+      ],
+      "test_sha256": {
+        "test_attention_tools.py": "6c3f97c2e88d24ac659d8db1d36f846f51e4f22850388062ba5ab44449d50dd4"
+      }
+    },
+    {
+      "id": "MP28",
+      "tests_passed": 5,
+      "test_files": [
+        "test_multihead_tools.py"
+      ],
+      "test_sha256": {
+        "test_multihead_tools.py": "05954b1d9bc45caa9d24a3fd9c56d1efe748e7563593abba0b7e6aa351272a48"
+      }
+    },
+    {
+      "id": "MP29",
+      "tests_passed": 5,
+      "test_files": [
+        "test_encoder_tools.py"
+      ],
+      "test_sha256": {
+        "test_encoder_tools.py": "7f11760d1a9317db399b37de6b776aa31c1bee3af375100fd5f39414716044c0"
+      }
+    },
+    {
+      "id": "MP30",
+      "tests_passed": 5,
+      "test_files": [
+        "test_window_tools.py"
+      ],
+      "test_sha256": {
+        "test_window_tools.py": "2a6643d161011ecb5d23c545a37c1722df241a35debf730d0de7df9494dc41c4"
+      }
+    },
+    {
+      "id": "MP31",
+      "tests_passed": 3,
+      "test_files": [
+        "test_benchmark_tools.py"
+      ],
+      "test_sha256": {
+        "test_benchmark_tools.py": "7e68adc2627dac7498dafe8214b17c67bd3a99d7da45163df14a6478214f2653"
+      }
+    },
+    {
+      "id": "MP32",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp32_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp32_tools.py": "5157efac71ff4a2d8b6b6b48fe56fdcbbe54275a854f1ba50e6971f25464e1ad"
+      }
+    },
+    {
+      "id": "MP33",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp33_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp33_tools.py": "67a3d95b186a4ac039a36611ed2d1345c38b3aa0bfbd5d7abef54464c4770d35"
+      }
+    },
+    {
+      "id": "MP34",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp34_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp34_tools.py": "e98f2bb94e91026d3c0f3d44967cebd7eb0de91068073b07238aaed149e4021b"
+      }
+    },
+    {
+      "id": "MP35",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp35_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp35_tools.py": "20b8dc18794b5c3cd6edce4dda189d6316dca35fae2fa8e57a1d9dbd1544af2d"
+      }
+    },
+    {
+      "id": "MP36",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp36_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp36_tools.py": "82194dd72c84a6bd122c8084c4da6ff6b5747715c15ba23058d54aa112bb2a21"
+      }
+    },
+    {
+      "id": "MP37",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp37_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp37_tools.py": "16bef3c2279698ce8206dd694e046ec7cc79b91eef1abc055bdccd45c7f3ba03"
+      }
+    },
+    {
+      "id": "MP38",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp38_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp38_tools.py": "504a6900f946b42fb84703080d0ed1a9d004959155384dff54df8d39eb62a2b9"
+      }
+    },
+    {
+      "id": "MP39",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp39_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp39_tools.py": "d322f7b844216b8438ccc009381e11d56db93aa9420532c0376d6ddc8731445a"
+      }
+    },
+    {
+      "id": "MP40",
+      "tests_passed": 1,
+      "test_files": [
+        "test_mp40_tools.py"
+      ],
+      "test_sha256": {
+        "test_mp40_tools.py": "bc1c694604b781b683f10e70f68d99c75886ac4df00298b49864e5ace7a686b3"
+      }
+    }
+  ]
+}
