@@ -261,15 +261,6 @@
     "finished_at": "2026-10-25T08:00:57.919159+00:00"
   },
   {
-    "id": "MP32",
-    "source": "stage_08_remote_sensing/MP32_satellite_image_explorer/satellite_image_explorer.ipynb",
-    "source_sha256": "420ca2c970fe2fc662fd24e7f82545f08491d1df773dc23f5c1dc6005f826568",
-    "started_at": "2026-10-25T08:01:03.476102+00:00",
-    "status": "passed-real-jupyter-kernel",
-    "code_cells": 2,
-    "finished_at": "2026-10-25T08:01:08.630568+00:00"
-  },
-  {
     "id": "MP33",
     "source": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/satellite_preprocessing_pipeline.ipynb",
     "source_sha256": "b3e9bfa439960bbde7d53c3ef961201cd57634759817bfd93b9e04d4b91c25ae",
@@ -349,5 +340,14 @@
     "status": "passed-real-jupyter-kernel",
     "code_cells": 6,
     "finished_at": "2026-10-25T08:03:03.587177+00:00"
+  },
+  {
+    "id": "MP32",
+    "source": "stage_08_remote_sensing/MP32_satellite_image_explorer/satellite_image_explorer.ipynb",
+    "source_sha256": "f4c92dd218437ede150547a71c4e9f833e6efb09ba5b004b3a8c668e05b355f6",
+    "started_at": "2026-10-25T08:21:34.082904+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 5,
+    "finished_at": "2026-10-25T08:21:38.159937+00:00"
   }
 ]

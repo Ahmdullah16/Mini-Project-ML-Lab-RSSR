@@ -1,0 +1,11 @@
+{
+  "requested_url": "https://mini-project-ml-lab-rssr.streamlit.app/",
+  "observed_url": "https://share.streamlit.io/app/mini-project-ml-lab-rssr/",
+  "date": "2026-10-25",
+  "visible_message": "You do not have access to this app or it does not exist",
+  "browser_state": "Signed out; Sign in and Sign up visible",
+  "cause": "Unknown: no authorized owner dashboard session available",
+  "deployed_commit": null,
+  "public_inference_verified": false,
+  "remaining_owner_action": "Sign in to Streamlit Community Cloud as the app owner; locate this existing app, inspect visibility, repository/branch/entry point and build logs. Expected repository Ahmdullah16/Mini-Project-ML-Lab-RSSR, main, app/streamlit_app.py; these settings are expected, not observed. Restore public access if private; diagnose any failed build before changing configuration. Preserve the existing URL."
+}

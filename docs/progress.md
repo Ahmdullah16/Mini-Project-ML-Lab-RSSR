@@ -1,3 +1,17 @@
+# Explicit model comparison — 2026-10-25
+
+Live SR now offers Compare models: three genuine published RGB×2 checkpoints, one decoded input, sequential bounded execution, input/checkpoint/version/settings identities, recoverable per-model errors, synchronized crop/zoom, shared preview-only contrast, individual PNGs and ZIP provenance. Unsupported standalone models/perceptual mode and absent HR are labeled honestly. [Actual inference validation](../reports/comparison-validation.json), [browser/export check](../reports/comparison-browser-check.json).
+
+Two identity/alignment/ZIP tests passed; all three real models ran; selection changes preserved labels, matching cached results skipped recomputation, a controlled failure retained successful results and retry recovered. Seven-section/error/filter checks passed, six affected comparison/index/interpretation tests passed, 818 links valid. No improvement in fidelity claimed; no frozen results changed. Numerical equations/controlled example added beneath measured Results.
+
+# MP32 and result interpretation — 2026-10-25
+
+MP32 **Complete (implementation and teaching deliverables)**; three local tests, synthetic/real training-raster experiment and real-kernel notebook passed. [Validation](../stage_08_remote_sensing/MP32_satellite_image_explorer/VALIDATION.md). Learner mastery unassessed. MP33–MP40 and earlier exceptions remain unfinished.
+
+Added reusable source-driven metric definitions, filtered observations and protocol/task isolation; overview navigation actions, derived run counts, reconstruction dimensions and satellite interpretation. Four affected index/interpretation tests passed. Seven-section navigation passed before the final additional filter assertions; see latest checkpoint for their outcome. No frozen metrics changed.
+
+PR17 CI40175306388 succeeded and PR17 was merged externally as199bb10. Public URL checked October25 still redirects to not-found/no-access; available browser is signed out. Repository/branch/entry point/build logs cannot be diagnosed without the owner's Streamlit dashboard. No deployment mutation or new public inference claim.
+
 # All project-folder deliverables populated — 2026-10-25
 
 MP01 preserved; MP02–MP40 now contain a local notebook, tools, tests, runner and VALIDATION.md alongside README.md. Shared implementations are reused. All 40 IDs and folder layouts passed validation; 111 local tests +17 subtests passed; all 39 relocated notebooks passed real kernels. Two evidence-index tests and seven local showcase sections/error states passed. App links now target local notebooks. See [workflow](project_folder_workflow.md), [tests](../reports/project-folder-tests.json) and [execution](../reports/project-notebook-execution.json).

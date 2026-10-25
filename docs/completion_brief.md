@@ -1,40 +1,142 @@
-Complete this existing project and turn its Streamlit app into a polished, evidence-backed research showcase.
+Continue completing and improving this existing project:
 
-Repo: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR
+Repository: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR
 App: https://mini-project-ml-lab-rssr.streamlit.app/
 
-RESUME, DO NOT RESTART
-Read AGENTS.md, the latest section of docs/next_session.md, submission_readiness.md, git status, recent commits and open PRs. Reconcile actual state before editing. Latest known state: MP01–MP26 expanded, MP27–MP40 incomplete; frozen held-out evaluation exists; live app exposes pilot CNN, CNN v2 and hybrid v2. Preserve all work, checkpoints, negative findings and frozen test results.
+Read AGENTS.md, completion_brief.md, next_session.md, submission_readiness.md and current git state. Incorporate this request into the persistent brief. Preserve completed implementations, original images, checkpoints, recorded findings and frozen test results. Execute changes rather than only proposing them.
 
-WORK EFFICIENTLY
-Save this complete brief as docs/completion_brief.md. Maintain a compact docs/next_session.md containing branch/commit, dirty files, completed task IDs, validation evidence, blockers and exact next commands; archive historical narratives elsewhere. Read only relevant files/diffs, batch independent checks, reuse verified artifacts and avoid repeated audits, downloads, training or full-suite runs. Run affected checks per change and full acceptance gates at release. Keep chat updates brief. Efficiency must not reduce implementation or scientific quality.
+GOAL
+Improve reconstruction clarity and build a polished research app that displays outputs from all available compatible models, with conceptual and mathematical explanations beneath each comparison. Complete remaining original requirements as well.
 
-PRIORITY 1 — PRESENT THE RESEARCH IN THE APP
-Preserve the existing URL and inference functionality. Build clear navigation with:
-1. Overview: project objective, motivation, approach, verified findings and actual completion status.
-2. Live SR: all compatible checkpoints, licensed examples/uploads, LR/bicubic/SR comparison, synchronized zoom or before/after view, runtime, provenance and downloads.
-3. Results: searchable/filterable measured tables, training curves, baseline comparisons, ablations, robustness, spectral metrics and efficiency charts.
-4. Methodology & Data: architecture diagrams, equations, tensor shapes, dataset provenance, geographic splits and evaluation protocol.
-5. Mini-projects: all 40 projects grouped into nine stages, with accurate status, explanations, outputs and notebook/code links.
-6. Satellite Explorer: existing bounded acquisition/inference, timestamps, imagery preview and GeoTIFF/provenance downloads; explain freshness and domain limitations.
-7. Downloads & Reproducibility: report, slides, result CSV/JSON, references, environment/setup instructions and artifact manifest.
+1. INSPECT THE PROVIDED EXAMPLES
+Identify the original LR image, our SR output, ChatGPT-generated enhancement and explanatory illustration using provenance, dimensions and actual content—not filenames alone. If these attachments are unavailable in this Codex workspace, request their upload once while continuing independent work.
 
-Use a consistent professional theme, readable typography, restrained colors, good spacing, accessible contrast and responsive layouts. Show meaningful figures and short interpretations, not walls of JSON. Keep technical provenance available in expanders. Verify desktop/mobile layout and empty/error states.
+Compare identical spatial regions at matched display scale. Inspect buildings, roads, riverbanks, vegetation, blur, noise, halos, repeated textures and geometric changes. Do not treat the generated enhancement or AOI illustration as measured HR ground truth or training labels.
 
-Create one validated results/artifact index that reads existing measured reports; drive app charts, tables and downloadable reports from it. Include all recorded experiments through filters rather than overwhelming the landing page. Keep training/validation/test, RGB/multispectral, synthetic/cross-sensor and historical/final results separate. Show dataset, sample count, units, protocol and source run. Never invent missing values or hide negative results. Do not claim hybrid superiority when evidence does not support it. Never compute HR-reference metrics for uploads without valid references.
+Explain the distinction between:
+- More output pixels.
+- Visually sharper texture.
+- Accurate recovery of real spatial detail.
 
-Lazy-load models, cache small immutable results and avoid training, bulk downloads or expensive computation on page navigation. Missing optional storage credentials must not disable the public showcase.
+Do not promise ChatGPT-equivalent quality or physical detail recovery that the available data cannot support.
 
-PRIORITY 2 — FINISH THE PROJECT
-Complete MP27–MP40 and earlier unmet criteria against their briefs. Finish portable research artifacts, applicable cross-sensor work, normalized external-storage integration and remaining original requirements. Do not silently reduce scope; document concrete external blockers while completing independent work. Preserve the frozen held-out evaluation—no retuning or unnecessary repeat evaluation.
+2. IMPROVE QUALITY THROUGH CONTROLLED EXPERIMENTS
+First diagnose preprocessing and inference: band order, normalization, clipping, dtype, checkpoint selection, color conversion, degradation mismatch, padding, tiled seams and display resizing. Verify that the intended trained model actually runs.
 
-Produce the final report, presentation, examiner demo guide and reproducible submission package from actual evidence. Keep educational completion, engineering readiness and research limitations distinct.
+Compare bicubic, existing CNN, attention, Transformer and hybrid models under matched input/scale conditions. Inspect training sufficiency and geographic/domain mismatch. Investigate suitable licensed pretrained restoration/SR models using official sources; record model identity, license, weights, training domain and limitations.
 
-PRIORITY 3 — VERIFY AND RELEASE
-Test clean installation, artifact/checkpoint checksums, all changed notebooks, result-index consistency, navigation, each public model, uploads/rejections, downloads and bounded satellite inference. Verify final notebooks/tests/links and CI on the candidate release commit. Test restart recovery and external durability only where claimed.
+Maintain two clearly labeled modes:
+A. Scientific reconstruction: prioritize fidelity, geometry, spectral consistency and reproducibility.
+B. Optional perceptual enhancement: prioritize visual appeal while warning that plausible details may be synthesized. Keep this RGB-only unless independently justified for other bands.
 
-Record the deployed source/checkpoint identity. Distinguish code committed, PR pending, deployed and publicly verified. Preserve the working app; use reviewable commits/PRs and existing merge restrictions. Do not claim a local preview is deployed.
+Keep baseline SR, optional postprocessing and perceptual enhancement separately selectable and downloadable. Never hide sharpening or contrast adjustments inside the reported model output.
 
-Continue through implementation, not just planning. Ask only for exact missing access or resources; do not request secrets in chat or activate paid services. Checkpoint after each meaningful milestone so interruption loses minimal work.
+Investigate losses incrementally:
+L = λrec Lrec + λedge Ledge + λspec Lspec + λcons Lcons.
+Define each implemented term, its units, masks and weights. Use spectral terms only with meaningful compatible bands and a consistency operator only when justified. Consider perceptual/adversarial objectives only in the explicitly labeled perceptual experiment.
 
-Finish with verified changes, tests, deployed URL/version, submission artifacts and precise remaining blockers. Never mark the entire project complete merely because the website loads.
+Tune on training/validation data only. Preserve the frozen benchmark; new experiments require a versioned protocol and appropriate independent evaluation. Do not tune against previously observed test scores. Retain unsuccessful experiments.
+
+Use validation evidence to choose defaults. Do not select a model solely because its architecture is more complex.
+
+3. ADD “COMPARE MODELS” TO THE EXISTING STREAMLIT APP
+Extend the current showcase rather than rebuilding it. Allow users to select available models and run comparisons explicitly.
+
+Display a responsive gallery:
+Original LR → bicubic → CNN → attention/Transformer variants → hybrid → optional perceptual result → genuine HR reference, when available.
+
+Only show outputs actually computed or clearly labeled precomputed examples. Label unavailable models honestly. Account for incompatible scale/band requirements; never silently resize outputs to manufacture a fair comparison.
+
+Provide:
+- Matched display scaling and synchronized crop/zoom.
+- Before/after slider where practical.
+- Full-image and detail-crop views.
+- Individual downloads and a comparison bundle.
+- Model/checkpoint, native scale, input/output dimensions, bands, runtime and provenance.
+- Clear stage progress and recoverable errors.
+- Lazy loading, sequential bounded execution and caching suited to the existing free host.
+
+A model selection change must not mislabel an older result. Keep results keyed to input hash, model/checkpoint, preprocessing and settings.
+
+4. PUT MATHEMATICS AND INTERPRETATION BELOW RESULTS
+Create reusable metric-definition and interpretation components. For each displayed metric explain:
+what it measures → formula → symbols/units → computed value → preferable direction → comparison → limitations.
+
+For a valid aligned HR reference x and prediction x̂, define N as the number of valid scalar samples and show:
+
+MSE = (1/N) Σ(x̂ᵢ − xᵢ)²
+RMSE = √MSE
+MAE = (1/N) Σ|x̂ᵢ − xᵢ|
+PSNR = 10 log10(L²/MSE)
+
+L is the declared data range, not an arbitrary per-image maximum. Handle exact equality, empty masks and invalid values explicitly.
+
+Explain SSIM using:
+SSIM(x,y) =
+[(2μxμy + C1)(2σxy + C2)] /
+[(μx² + μy² + C1)(σx² + σy² + C2)]
+State the actual implementation’s window, constants, covariance convention, channels and aggregation.
+
+Where bands are scientifically compatible:
+SAM = arccos[(x·x̂)/(||x|| ||x̂||)]
+State radians/degrees, zero-vector handling and averaging. Explain why RGB display color is not calibrated multispectral reflectance.
+
+For efficiency, show measured runtime, parameters and memory with hardware, input size, warm-up and scope. Distinguish sampled RSS from peak memory and partial MAC counts from full FLOPs.
+
+Show baseline differences:
+ΔPSNR = PSNRmodel − PSNRbaseline
+RMSE reduction (%) = 100(RMSEbaseline − RMSEmodel)/RMSEbaseline
+Handle zero denominators. Do not present percentages of decibel values as meaningful quality improvements.
+
+Show numerical substitution for a selected example or small crop, with formulas matching the actual implementation.
+
+For arbitrary uploads without HR:
+- Mark PSNR/SSIM/MAE/RMSE against HR as unavailable.
+- A model-to-bicubic difference is disagreement, not ground-truth error.
+- Edge energy, Laplacian variance or other sharpness descriptors must be labeled as descriptors that noise/oversharpening can increase.
+- If displaying ||D(x̂)−y||, document D and explain that low LR-consistency error does not prove correct HR detail.
+
+Do not create a single “accuracy percentage” from unrelated metrics.
+
+5. EXPLAIN WHAT IS HAPPENING VISUALLY
+Under every result, provide a short evidence-based interpretation:
+- What changed relative to the input/baseline?
+- Which measured properties improved or worsened?
+- Are edges clearer, textures smoother, colors shifted or artifacts visible?
+- Does this indicate measured fidelity or only visual sharpness?
+- What cannot be concluded?
+
+For image properties explain dimensions, scale factor, channels, dtype, range, pixel spacing and file size. Explain that ×2 produces four times as many pixels but does not prove twice the physical resolving power. Compression affects file size independently of quality.
+
+Keep raw inference and display enhancement separate. Use shared contrast settings for fair previews. Never silently stretch every model independently.
+
+Use accurately labeled heatmaps with colorbars:
+- Prediction minus valid HR: reconstruction error.
+- Prediction minus bicubic: baseline disagreement.
+- Gradient/edge map: structural descriptor.
+
+Do not describe attention maps as proof of causal explanation or confidence unless that interpretation is validated.
+
+6. MAKE THE ENTIRE RESEARCH SHOWCASE PRESENTABLE
+Improve existing Overview, Live SR, Results, Methodology & Data, Mini-projects, Satellite Explorer and Downloads sections.
+
+Use readable typography, consistent spacing/colors, accessible controls, responsive cards and concise explanations. Show equations/details in expanders beneath clear plain-language findings.
+
+Present all recorded studies through filters: baselines, ablations, training curves, robustness, spectral behavior, efficiency and failure cases. Retain dataset, split, scene count, units, protocol and source links. Do not pool incompatible studies or treat repeated patches/seeds as independent geographic evidence.
+
+For every mini-project show objective, concept, experiment, output, interpretation and connection to the major project, with actual completion evidence.
+
+For satellite outputs explain AOI, CRS, acquisition time, retrieval time, bands, cloud/nodata handling and georeferencing. Validate geographic labels against metadata. Do not infer north from image orientation. Compute distances geodesically or with an appropriate projection; a longitude degree is not a constant 111 km at every latitude.
+
+7. COMPLETE, VALIDATE AND DELIVER
+Continue all outstanding tasks from the current readiness checklist, including remaining lessons, portable checkpoints, applicable research studies, external persistence, final report, presentation and reproducible submission package. Keep externally blocked tasks explicit while completing independent work.
+
+Generate app tables, explanations, report figures and downloads from one validated evidence source. Add meaningful checks for metric correctness, comparison alignment, model/result labeling, missing-reference handling, exports and UI failure states.
+
+Verify clean installation, final notebooks, required tests, links and CI. Diagnose the existing app’s access/deployment issue using authorized access, then verify actual public inference and downloads. Do not declare a local preview publicly deployed.
+
+Respect current review/merge restrictions and resource budgets. Ask only for concrete missing access or additional resources; never request secrets in chat or activate paid services without approval.
+
+Work efficiently: targeted reads, reuse verified artifacts, affected tests per change, final full checks at release. Maintain compact resumable checkpoints after each milestone.
+
+Finish with implemented changes, measured quality gains/tradeoffs, test evidence, verified app/version, submission artifacts and remaining blockers. Do not claim scientific accuracy, novelty or completion beyond the evidence.

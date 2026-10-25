@@ -1,11 +1,12 @@
-# MP32 validation
+# MP32 validation — 2026-10-25
 
-This project now has the MP01-style local file layout. Existing scientific results and original notebook execution evidence are preserved; see [progress](../../docs/progress.md). Expanded content through MP31 does not automatically satisfy every earlier project criterion. MP32–MP40 remain introductory until their full experiments are completed.
+Implementation and teaching deliverables complete; learner mastery unassessed.
 
-Local-folder test and execution outcomes are recorded below. No data acquisition, held-out evaluation or retraining is authorized by this file.
+- `python -m pytest -q stage_08_remote_sensing/MP32_satellite_image_explorer`: 3 tests passed; six affine deprecation warnings. Checks center/corner geometry, cropped transforms, nodata, bounded windows, nonfinite and empty-mask statistics.
+- `python stage_08_remote_sensing/MP32_satellite_image_explorer/experiment.py`: executed synthetic fixture and SHA-256-verified training crop. Four bands; EPSG:32611; 2.5-m pixels; 16,384 valid pixels per band. No download, optimization or test access.
+- `python scripts/execute_project_notebooks.py --only MP32`: real kernel passed, 5 code cells. Source SHA-256 `f4c92dd218437ede150547a71c4e9f833e6efb09ba5b004b3a8c668e05b355f6`. Figure visually inspected; fixed-range previews intentionally retain dark values rather than silently applying different stretches.
+- All 40 project layouts and 817 relative Markdown links passed before this validation update.
 
-## Local-folder validation — 2026-10-25
+Evidence: [measured metadata/statistics](../../reports/mp32-raster-explorer.json), [band views](../../reports/mp32-band-views.png), [kernel record](../../reports/project-notebook-execution.json). Source license, versions, checksum and training-only selection are recorded. The historical project-folder test report remains an October25 earlier snapshot; this document records the expanded three-test scope.
 
-Passed 1 local tests with pytest; the notebook passed a real Jupyter kernel from this project directory (2 code cells). Source SHA-256: `420ca2c970fe2fc662fd24e7f82545f08491d1df773dc23f5c1dc6005f826568`.
-
-Commands from this directory: `python -m pytest -q test_mp32_tools.py` and `python run_notebook.py`. Records: [folder tests](../../reports/project-folder-tests.json), [kernel execution](../../reports/project-notebook-execution.json). Outputs are temporary under ignored data/executed_notebooks/project_folders. Original central notebook evidence remains historical. This validates the current lesson scope, not unfinished completion criteria.
+The experiment is an aerial raster inspection, not satellite generalization. Masks do not establish cloud-free pixels; DN/10000 is not calibrated reflectance. Full cross-sensor work remains separate.

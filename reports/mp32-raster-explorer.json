@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-10-25T08:20:13.083356+00:00",
+  "question": "How do raster coordinates, nodata and band choice affect interpretation?",
+  "source": {
+    "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "region_id": "ROI_00006",
+    "split": "train",
+    "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "acquisition_time": "2021-09-17"
+  },
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "sensor": "NAIP aerial imagery (not satellite)",
+  "bands": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "units": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "metadata": {
+    "width": 484,
+    "height": 484,
+    "bands": 4,
+    "dtype": "uint16",
+    "crs": "EPSG:32611",
+    "crs_units": "metre",
+    "nodata": 65535.0,
+    "pixel_size": [
+      2.5,
+      2.5
+    ],
+    "transform": [
+      2.5,
+      0.0,
+      794205.0,
+      0.0,
+      -2.5,
+      4933305.0
+    ],
+    "window": [
+      238,
+      238,
+      128,
+      128
+    ],
+    "first_pixel_center": [
+      794206.25,
+      4933303.75
+    ],
+    "statistics": [
+      {
+        "valid_pixels": 16384,
+        "minimum": 707.0,
+        "maximum": 2006.0,
+        "mean": 1360.82177734375
+      },
+      {
+        "valid_pixels": 16384,
+        "minimum": 562.0,
+        "maximum": 1646.0,
+        "mean": 1068.4351196289062
+      },
+      {
+        "valid_pixels": 16384,
+        "minimum": 387.0,
+        "maximum": 1288.0,
+        "mean": 816.3966674804688
+      },
+      {
+        "valid_pixels": 16384,
+        "minimum": 1570.0,
+        "maximum": 2333.0,
+        "mean": 1942.4320068359375
+      }
+    ]
+  },
+  "synthetic_statistics": [
+    {
+      "valid_pixels": 3,
+      "minimum": 1.0,
+      "maximum": 5.0,
+      "mean": 3.0
+    },
+    {
+      "valid_pixels": 3,
+      "minimum": 2.0,
+      "maximum": 6.0,
+      "mean": 4.0
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2"
+  },
+  "display": {
+    "divisor": 10000.0,
+    "range": [
+      0,
+      1
+    ],
+    "rgb_bands": [
+      0,
+      1,
+      2
+    ],
+    "false_colour_bands": [
+      3,
+      0,
+      1
+    ]
+  },
+  "limits": "One cached aerial training crop, not fresh satellite imagery. Nodata is not a cloud mask. DN scaling does not establish reflectance. No model or HR-reference accuracy experiment."
+}
