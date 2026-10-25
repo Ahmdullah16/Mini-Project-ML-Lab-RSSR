@@ -2,7 +2,7 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering demo implemented; laboratory and final submission still in progress.** Public access was unavailable at the last October 23 verification; the existing deployment configuration is preserved. The original 40 IDs and nine stages are preserved. MP01–MP34 have expanded lessons and real-kernel execution evidence; full project criteria and learner mastery are not automatically complete. MP35–MP40 still need full expansion. Every project folder contains its own notebook, tools, tests, runner and validation record; see [folder manifest](docs/project_folders.json).
+**Engineering demo implemented; laboratory and final submission still in progress.** Public access was unavailable at the last October 23 verification; the existing deployment configuration is preserved. The original 40 IDs and nine stages are preserved. MP01–MP35 have expanded lessons and real-kernel execution evidence; full project criteria and learner mastery are not automatically complete. MP36–MP40 still need full expansion. Every project folder contains its own notebook, tools, tests, runner and validation record; see [folder manifest](docs/project_folders.json).
 
 The [existing public app](https://mini-project-ml-lab-rssr.streamlit.app/) passed actual sample/upload inference, size/error checks, repeated requests and fresh Sentinel GeoTIFF export; see [recorded browser evidence](reports/public-browser-validation.json). The new frozen CNN/hybrid selector is tested locally but not yet verified on the public host.
 
@@ -93,7 +93,7 @@ Each title links to a brief covering learning objectives, prerequisites, mathema
 | MP25 | [Combined Attention Module](stage_06_attention/MP25_combined_attention_module/README.md) | Channel attention, spatial attention and CBAM-style integration. |
 | MP26 | [Attention-Based SR Network](stage_06_attention/MP26_attention_based_sr_network/README.md) | Residual attention blocks and SR performance comparisons. |
 
-### Stage 07 — Transformers (MP27–MP34)
+### Stage 07 — Transformers (MP27–MP31)
 
 | Project | Title | Objective |
 | --- | --- | --- |

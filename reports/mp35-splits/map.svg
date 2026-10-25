@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+<rect width="900" height="600" fill="white"/>
+<g font-family="sans-serif" font-size="14"><text x="30" y="30">MP35: existing scene centers (WGS84 longitude / latitude degrees)</text>
+<text x="30" y="55">Blue: train; orange: validation; purple: test. No metric-distance claim.</text>
+<path d="M70,90 V530" stroke="#ddd"/><text x="70" y="555">-114</text>
+<path d="M166,90 V530" stroke="#ddd"/><text x="166" y="555">-112</text>
+<path d="M262,90 V530" stroke="#ddd"/><text x="262" y="555">-110</text>
+<path d="M358,90 V530" stroke="#ddd"/><text x="358" y="555">-108</text>
+<path d="M454,90 V530" stroke="#ddd"/><text x="454" y="555">-106</text>
+<path d="M550,90 V530" stroke="#ddd"/><text x="550" y="555">-104</text>
+<path d="M646,90 V530" stroke="#ddd"/><text x="646" y="555">-102</text>
+<path d="M742,90 V530" stroke="#ddd"/><text x="742" y="555">-100</text>
+<path d="M70,498 H840" stroke="#ddd"/><text x="30" y="498">32</text>
+<path d="M70,434 H840" stroke="#ddd"/><text x="30" y="434">34</text>
+<path d="M70,370 H840" stroke="#ddd"/><text x="30" y="370">36</text>
+<path d="M70,306 H840" stroke="#ddd"/><text x="30" y="306">38</text>
+<path d="M70,242 H840" stroke="#ddd"/><text x="30" y="242">40</text>
+<path d="M70,178 H840" stroke="#ddd"/><text x="30" y="178">42</text>
+<path d="M70,114 H840" stroke="#ddd"/><text x="30" y="114">44</text>
+<circle cx="103.62073827347831" cy="98.2239422825487" r="5" fill="#1768ac"/><text x="111.62073827347831" y="91.2239422825487">ROI_00006</text>
+<circle cx="754.2037950749032" cy="296.29316239992204" r="5" fill="#ac5000"/><text x="762.2037950749032" y="289.29316239992204">ROI_00270</text>
+<circle cx="781.5717930172264" cy="352.4558683830546" r="5" fill="#7824a5"/><text x="789.5717930172264" y="345.4558683830546">ROI_00319</text>
+<circle cx="749.9575932086539" cy="280.56674156272175" r="5" fill="#1768ac"/><text x="757.9575932086539" y="273.56674156272175">ROI_00399</text>
+<circle cx="777.6813110151172" cy="419.6715119694761" r="5" fill="#1768ac"/><text x="785.6813110151172" y="412.6715119694761">ROI_00438</text>
+<circle cx="575.3165357055564" cy="396.1470779702822" r="5" fill="#1768ac"/><text x="583.3165357055564" y="389.1470779702822">ROI_00456</text>
+<circle cx="687.6732429297572" cy="412.9728307541686" r="5" fill="#ac5000"/><text x="695.6732429297572" y="405.9728307541686">ROI_00565</text>
+<circle cx="148.70721308447037" cy="495.82900065549734" r="5" fill="#ac5000"/><text x="156.70721308447037" y="488.82900065549734">ROI_01566</text>
+<circle cx="177.15142140028797" cy="151.77072097633686" r="5" fill="#ac5000"/><text x="185.15142140028797" y="144.77072097633686">ROI_01619</text>
+</g></svg>
