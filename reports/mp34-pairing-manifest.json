@@ -1,0 +1,210 @@
+{
+  "recorded_at": "2026-10-25T18:13:25.872445+00:00",
+  "source": {
+    "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "region_id": "ROI_00006",
+    "split": "train",
+    "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+    "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+    "acquisition_time": "2021-09-17"
+  },
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "bands": [
+    "red",
+    "green",
+    "blue",
+    "nir"
+  ],
+  "units": "stored uint16 values divided by fixed 10000; physical calibration unverified",
+  "crop": [
+    238,
+    238,
+    64,
+    64
+  ],
+  "rows": [
+    {
+      "crs": "EPSG:32611",
+      "scale": 2,
+      "hr_shape": [
+        4,
+        64,
+        64
+      ],
+      "lr_shape": [
+        4,
+        32,
+        32
+      ],
+      "hr_transform": [
+        2.5,
+        0.0,
+        794205.0,
+        0.0,
+        -2.5,
+        4933305.0
+      ],
+      "lr_transform": [
+        5.0,
+        0.0,
+        794205.0,
+        0.0,
+        -5.0,
+        4933305.0
+      ],
+      "hr_corners": [
+        [
+          794205.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933145.0
+        ],
+        [
+          794205.0,
+          4933145.0
+        ]
+      ],
+      "lr_corners": [
+        [
+          794205.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933145.0
+        ],
+        [
+          794205.0,
+          4933145.0
+        ]
+      ],
+      "operator": {
+        "sigma_hr_pixels": 0.8,
+        "scale": 2,
+        "noise_std_input_units": 0.0,
+        "seed": 0,
+        "blur": "normalized Gaussian radius ceil(3sigma), replicate boundary",
+        "sampling": "nonoverlapping area mean; no clipping"
+      },
+      "validity": "fully valid HR required; no cloud or sensor-calibration claim",
+      "hr_file": "data/teaching/mp34/hr.npy",
+      "lr_file": "data/teaching/mp34/lr-x2.npy",
+      "hr_sha256": "35eafe6688fdfa5930e3b7aece43afacf5c9baa44efab762309a48e4366e64c2",
+      "lr_sha256": "137bb97aa8a8f236d8e1b38726177a582e3a5cff56f123680c938ae292f6cd45",
+      "dtype": "float32",
+      "hr_range": [
+        0.05939999967813492,
+        0.2231999933719635
+      ],
+      "lr_range": [
+        0.06270875036716461,
+        0.21267801523208618
+      ]
+    },
+    {
+      "crs": "EPSG:32611",
+      "scale": 4,
+      "hr_shape": [
+        4,
+        64,
+        64
+      ],
+      "lr_shape": [
+        4,
+        16,
+        16
+      ],
+      "hr_transform": [
+        2.5,
+        0.0,
+        794205.0,
+        0.0,
+        -2.5,
+        4933305.0
+      ],
+      "lr_transform": [
+        10.0,
+        0.0,
+        794205.0,
+        0.0,
+        -10.0,
+        4933305.0
+      ],
+      "hr_corners": [
+        [
+          794205.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933145.0
+        ],
+        [
+          794205.0,
+          4933145.0
+        ]
+      ],
+      "lr_corners": [
+        [
+          794205.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933305.0
+        ],
+        [
+          794365.0,
+          4933145.0
+        ],
+        [
+          794205.0,
+          4933145.0
+        ]
+      ],
+      "operator": {
+        "sigma_hr_pixels": 0.8,
+        "scale": 4,
+        "noise_std_input_units": 0.0,
+        "seed": 0,
+        "blur": "normalized Gaussian radius ceil(3sigma), replicate boundary",
+        "sampling": "nonoverlapping area mean; no clipping"
+      },
+      "validity": "fully valid HR required; no cloud or sensor-calibration claim",
+      "hr_file": "data/teaching/mp34/hr.npy",
+      "lr_file": "data/teaching/mp34/lr-x4.npy",
+      "hr_sha256": "35eafe6688fdfa5930e3b7aece43afacf5c9baa44efab762309a48e4366e64c2",
+      "lr_sha256": "2dc0c3ca2eaa030fbedf3ce5f6dd2eff21aa7714d5fad00f6692b64b6ece8c7d",
+      "dtype": "float32",
+      "hr_range": [
+        0.05939999967813492,
+        0.2231999933719635
+      ],
+      "lr_range": [
+        0.06418054550886154,
+        0.20819400250911713
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "rasterio": "1.5.2"
+  },
+  "limits": "Synthetic pairs from one aerial training crop, not a real paired cross-sensor dataset. No model training/test evaluation; paired arrays are ignored rebuildable outputs."
+}

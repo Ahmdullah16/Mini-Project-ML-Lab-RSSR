@@ -2,7 +2,7 @@
 
 [Laboratory home](../README.md) · [Progress](../docs/progress.md)
 
-Work through MP32–MP36 in order. All projects are **Not started**; the curriculum is proposed for review.
+Work through MP32–MP36 in order. MP32–MP34 have completed implementation and teaching deliverables with local tests, real-kernel notebooks and training-raster experiment records. Learner mastery remains unassessed. MP35–MP36 have introductory materials and still need full expansion; cross-sensor validation remains a separate research requirement.
 
 - [MP32 — Satellite Image Explorer](MP32_satellite_image_explorer/README.md): Satellite bands, spatial resolution, GeoTIFF and raster metadata.
 - [MP33 — Satellite Preprocessing Pipeline](MP33_satellite_preprocessing_pipeline/README.md): Band selection, normalization, invalid pixels and patch extraction.

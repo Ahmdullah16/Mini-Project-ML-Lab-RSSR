@@ -261,24 +261,6 @@
     "finished_at": "2026-10-25T08:00:57.919159+00:00"
   },
   {
-    "id": "MP33",
-    "source": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/satellite_preprocessing_pipeline.ipynb",
-    "source_sha256": "b3e9bfa439960bbde7d53c3ef961201cd57634759817bfd93b9e04d4b91c25ae",
-    "started_at": "2026-10-25T08:01:08.636797+00:00",
-    "status": "passed-real-jupyter-kernel",
-    "code_cells": 2,
-    "finished_at": "2026-10-25T08:01:13.612057+00:00"
-  },
-  {
-    "id": "MP34",
-    "source": "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/satellite_hr_lr_pair_builder.ipynb",
-    "source_sha256": "f34b42cb3c8ee8fc8247fc4dc39575025c2a7d151af3c57d0b05887e89cae176",
-    "started_at": "2026-10-25T08:01:13.618248+00:00",
-    "status": "passed-real-jupyter-kernel",
-    "code_cells": 2,
-    "finished_at": "2026-10-25T08:01:20.802131+00:00"
-  },
-  {
     "id": "MP35",
     "source": "stage_08_remote_sensing/MP35_geographic_dataset_splitting/geographic_dataset_splitting.ipynb",
     "source_sha256": "83231732e82dc04886fd7d2121ece8b9f5ccdb223596c7d505a07af85eecea89",
@@ -349,5 +331,23 @@
     "status": "passed-real-jupyter-kernel",
     "code_cells": 5,
     "finished_at": "2026-10-25T08:21:38.159937+00:00"
+  },
+  {
+    "id": "MP33",
+    "source": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/satellite_preprocessing_pipeline.ipynb",
+    "source_sha256": "6f5c8b1412447204238645896f2fb8514cd45edcc2dd4847d22e6e86fa6328f0",
+    "started_at": "2026-10-25T12:24:14.604135+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 5,
+    "finished_at": "2026-10-25T12:24:16.037645+00:00"
+  },
+  {
+    "id": "MP34",
+    "source": "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/satellite_hr_lr_pair_builder.ipynb",
+    "source_sha256": "d3ca4a6bfdb8cc6f4bf401c6bb3a3b26f1a1afe60127ca66623efc4adcfd49f0",
+    "started_at": "2026-10-25T18:14:40.208034+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 5,
+    "finished_at": "2026-10-25T18:14:45.759757+00:00"
   }
 ]

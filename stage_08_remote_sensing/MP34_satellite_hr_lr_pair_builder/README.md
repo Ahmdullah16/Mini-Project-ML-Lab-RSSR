@@ -1,58 +1,39 @@
 # MP34 — Satellite HR–LR Pair Builder
 
-**Status: In progress** · **Curriculum: proposed for review**
+**Status: Complete (implementation and teaching deliverables)** · Learner mastery unassessed.
 
-[Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
+[Home](../../README.md) · [Stage](../README.md) · [Progress](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+## Objectives and prerequisites
 
-## Learning objectives
+Construct reproducible aligned synthetic×2/×4 HR/LR pairs with explicit bands, masks, units and geographic transforms. Prerequisite [MP33](../MP33_satellite_preprocessing_pipeline/README.md). Scientific pair arrays remain distinct from clipped RGB display exports.
 
-- Paired data, synthetic degradation and alignment.
-- Explain the mathematical model below and its assumptions in your own words.
-- Interpret the planned comparison using evidence and identify a limitation.
+## Mathematics and controls
 
-## Prerequisites
+y=D_s(k*x)+n with CHW float input, Gaussianσ=.8 HR pixels (radiusceil(3σ), normalized kernel, replicate edges), area downsampling and optional seeded additive Gaussian noise. Recorded real pairs use noise0. Shapes must be divisible by s. T_LR=T_HR×Scale(s,s), retaining CRS and exterior corners. All HR values must be finite/valid; invalid patches are rejected before blur. No silent padding, cropping or clipping.
 
-[MP33 — Satellite Preprocessing Pipeline](../../stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/README.md) and the earlier foundations in the roadmap.
+Hand example: [0,1;4,5] averages to2.5; a4×4 ramp averages to7.5 at×4. The lesson includes rotated-affine checks, center/corner distinctions and exercises with solutions.
 
-Read the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.
+## Executed experiment and deliverables
 
-## Mathematics
+[Experiment](experiment.py) runs synthetic checks, verifies the training-source checksum and builds two pairs from a64×64 four-band NAIP aerial crop. HR2.5-m spacing becomes LR5m/10m; both retain a160×160-m footprint in EPSG:32611. [Pairing manifest](../../reports/mp34-pairing-manifest.json) records source/license, window, shapes, transforms, units, exact NPY hashes and environment. Rebuild ignored arrays with `python experiment.py`; run the lesson with `python run_notebook.py`. No data download or model training.
 
-Model y = D_s(k * x) + n and relate integer scale to ground sampling distance and affine transforms.
+## Interpretation and limitations
 
-Write down variable dimensions and units before coding. Work through one small numerical example and define edge cases; equations here specify topics to study, not measured results.
-
-## Experiments
-
-**Planned; not run.** Plan aligned ×2 and ×4 synthetic satellite pairs; deliver a pairing manifest, exact shape/alignment checks, and documented blur/resampling choices.
-
-1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
-2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
-3. Record settings, seeds, package versions, runtime/device, and observations. Training projects must keep validation and held-out test data separate.
-4. Compare outcomes, explain failure cases, and record limitations. Do not tune on the test set.
-- Remote sensing: preserve CRS, affine transform, band meaning, nodata, physical units, and source licenses. Split by region/scene before tiling.
-
-## Deliverables
-
-- The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
-- An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
-- A short reflection: what was learned, what failed, and the next question.
-
-## References
-
-- [Stage reference: Remote sensing](https://rasterio.readthedocs.io/en/stable/)
+Matching extents and shapes verify the synthetic geometry, not real sensor compatibility. Different bands, point-spread functions, timing, registration or calibration require a separate cross-sensor protocol. Fixed DN/10000 is not verified reflectance. Fully valid masks do not establish cloud-free observations. ×4 pairs cannot be fed silently to×2 models. This feeds MP35 geographic separation and the major project's declared synthetic pipeline.
 
 ## Completion criteria
 
-- [ ] Explain the learning objectives and solve the small mathematical example.
-- [ ] Implement and run the planned experiment with a documented command and reproducible inputs.
-- [ ] Verify relevant numerical, shape, and edge-case checks; record the actual outcomes.
-- [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
-- [ ] Document data licenses, environment, limitations, and any deviations from the brief.
-- [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+- [x] Derive degradation, shape and transform equations with numerical examples.
+- [x] Execute synthetic fixtures and pinned training-only×2/×4 pairing.
+- [x] Check constants, area arithmetic, rotated corners, invalid pixels, shapes and seeded noise.
+- [x] Deliver a pairing manifest with rebuildable artifact hashes and exact settings.
+- [x] Record license, environment, interpretation, limitations and exercises/solutions.
+- [x] Link [validation](VALIDATION.md) and progress without learner-mastery claims.
+
+## References
+
+[Shared degradation implementation](../../src/rssr/core.py) · [Rasterio georeferencing](https://rasterio.readthedocs.io/en/stable/topics/georeferencing.html) · [Pinned manifest](../../configs/naip-pilot-manifest.json).
 
 ## Project-folder files
 

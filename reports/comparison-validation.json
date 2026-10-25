@@ -10,6 +10,24 @@
       "acquisition_time": "unknown",
       "reference_metrics": "unavailable: no HR reference",
       "display_scaling": "fixed [0,1], clipped for RGB display only",
+      "input_dtype": "uint8",
+      "input_channel_order": "RGB",
+      "input_range_uint8": [
+        13,
+        40
+      ],
+      "input_channel_means_uint8": [
+        30.20703125,
+        24.04296875,
+        18.96875
+      ],
+      "raw_output_range_normalized": [
+        0.0470014363527298,
+        0.17638370394706726
+      ],
+      "display_clipped_scalar_fraction": 0.0,
+      "output_dtype": "uint8",
+      "physical_pixel_spacing": "unknown for unreferenced RGB inputs",
       "tiling": {
         "tile": 128,
         "halo": 32,
@@ -29,11 +47,11 @@
         32,
         3
       ],
-      "runtime_seconds": 0.0063120999993770965,
+      "runtime_seconds": 0.10166530000060447,
       "runtime_scope": "CPU inference plus display conversion; excludes download/model load",
-      "computed_at": "2026-10-25T12:04:56.612835+00:00",
+      "computed_at": "2026-10-25T12:19:58.663410+00:00",
       "settings": {
-        "pipeline": "rgb-display-v1",
+        "pipeline": "rgb-display-v2-diagnostics",
         "input": "uint8 RGB /255",
         "scale": 2,
         "tile": 128,
@@ -42,15 +60,15 @@
         "max_side": 512
       },
       "application": {
-        "git_commit": "d620cf90531bb7abf7722112fc4335dff35d7442",
+        "git_commit": "3d41dd7a81e3caa646c864c92e0d290fa8d1804a",
         "entrypoint_sha256": "d1ab669573e42b3db023e139274bd18f779d5b0e420e239eb9a8966b8dc0af48",
         "module_sha256": {
           "app/showcase.py": "cfea6f1f41514b6c78cea68537589686c713c4f3b1eb34741d5293e2ade2669c",
           "app/inference_ui.py": "e47e893b05402c93f759b75096deffff093febc07a8869f2db7261fc490a5c8d",
-          "app/compare_ui.py": "30833e456760ba120323781f961cd7f3b03d07459a2c017b01730f279afa7d30",
+          "app/compare_ui.py": "ff7132c341981c10d4795014d2a7179b0f65f6c151d4d5a2e7999ef686508d40",
           "src/rssr/evidence.py": "d251bd801d6c8526d378e423be9d207efb0a2734b3e5bec7ab0ae4179918bf82",
           "src/rssr/interpretation.py": "f8e276450fe0cd4ff1bec9a211aab791bcb60b1901003302f00a8ce4bbfbed7d",
-          "src/rssr/comparison.py": "b946f207d99ce8e4466fb723845d4f6185e4143d42764edafc5bfe1d5448df6c"
+          "src/rssr/comparison.py": "26c43e2e7bbb0ea45beceb7ff9e66f488f18f072a9317ede4c7289b5c7d73edd"
         }
       }
     },
@@ -63,6 +81,24 @@
       "acquisition_time": "unknown",
       "reference_metrics": "unavailable: no HR reference",
       "display_scaling": "fixed [0,1], clipped for RGB display only",
+      "input_dtype": "uint8",
+      "input_channel_order": "RGB",
+      "input_range_uint8": [
+        13,
+        40
+      ],
+      "input_channel_means_uint8": [
+        30.20703125,
+        24.04296875,
+        18.96875
+      ],
+      "raw_output_range_normalized": [
+        0.04894784465432167,
+        0.1613408774137497
+      ],
+      "display_clipped_scalar_fraction": 0.0,
+      "output_dtype": "uint8",
+      "physical_pixel_spacing": "unknown for unreferenced RGB inputs",
       "tiling": {
         "tile": 128,
         "halo": 32,
@@ -82,11 +118,11 @@
         32,
         3
       ],
-      "runtime_seconds": 0.0015812999999980093,
+      "runtime_seconds": 0.0027651000000332715,
       "runtime_scope": "CPU inference plus display conversion; excludes download/model load",
-      "computed_at": "2026-10-25T12:04:56.666282+00:00",
+      "computed_at": "2026-10-25T12:19:58.716344+00:00",
       "settings": {
-        "pipeline": "rgb-display-v1",
+        "pipeline": "rgb-display-v2-diagnostics",
         "input": "uint8 RGB /255",
         "scale": 2,
         "tile": 128,
@@ -95,15 +131,15 @@
         "max_side": 512
       },
       "application": {
-        "git_commit": "d620cf90531bb7abf7722112fc4335dff35d7442",
+        "git_commit": "3d41dd7a81e3caa646c864c92e0d290fa8d1804a",
         "entrypoint_sha256": "d1ab669573e42b3db023e139274bd18f779d5b0e420e239eb9a8966b8dc0af48",
         "module_sha256": {
           "app/showcase.py": "cfea6f1f41514b6c78cea68537589686c713c4f3b1eb34741d5293e2ade2669c",
           "app/inference_ui.py": "e47e893b05402c93f759b75096deffff093febc07a8869f2db7261fc490a5c8d",
-          "app/compare_ui.py": "30833e456760ba120323781f961cd7f3b03d07459a2c017b01730f279afa7d30",
+          "app/compare_ui.py": "ff7132c341981c10d4795014d2a7179b0f65f6c151d4d5a2e7999ef686508d40",
           "src/rssr/evidence.py": "d251bd801d6c8526d378e423be9d207efb0a2734b3e5bec7ab0ae4179918bf82",
           "src/rssr/interpretation.py": "f8e276450fe0cd4ff1bec9a211aab791bcb60b1901003302f00a8ce4bbfbed7d",
-          "src/rssr/comparison.py": "b946f207d99ce8e4466fb723845d4f6185e4143d42764edafc5bfe1d5448df6c"
+          "src/rssr/comparison.py": "26c43e2e7bbb0ea45beceb7ff9e66f488f18f072a9317ede4c7289b5c7d73edd"
         }
       }
     },
@@ -116,6 +152,24 @@
       "acquisition_time": "unknown",
       "reference_metrics": "unavailable: no HR reference",
       "display_scaling": "fixed [0,1], clipped for RGB display only",
+      "input_dtype": "uint8",
+      "input_channel_order": "RGB",
+      "input_range_uint8": [
+        13,
+        40
+      ],
+      "input_channel_means_uint8": [
+        30.20703125,
+        24.04296875,
+        18.96875
+      ],
+      "raw_output_range_normalized": [
+        0.049010418355464935,
+        0.16356520354747772
+      ],
+      "display_clipped_scalar_fraction": 0.0,
+      "output_dtype": "uint8",
+      "physical_pixel_spacing": "unknown for unreferenced RGB inputs",
       "tiling": {
         "tile": 128,
         "halo": 32,
@@ -135,11 +189,11 @@
         32,
         3
       ],
-      "runtime_seconds": 0.008202299999538809,
+      "runtime_seconds": 0.06895380000059959,
       "runtime_scope": "CPU inference plus display conversion; excludes download/model load",
-      "computed_at": "2026-10-25T12:04:56.726177+00:00",
+      "computed_at": "2026-10-25T12:19:58.848551+00:00",
       "settings": {
-        "pipeline": "rgb-display-v1",
+        "pipeline": "rgb-display-v2-diagnostics",
         "input": "uint8 RGB /255",
         "scale": 2,
         "tile": 128,
@@ -148,20 +202,20 @@
         "max_side": 512
       },
       "application": {
-        "git_commit": "d620cf90531bb7abf7722112fc4335dff35d7442",
+        "git_commit": "3d41dd7a81e3caa646c864c92e0d290fa8d1804a",
         "entrypoint_sha256": "d1ab669573e42b3db023e139274bd18f779d5b0e420e239eb9a8966b8dc0af48",
         "module_sha256": {
           "app/showcase.py": "cfea6f1f41514b6c78cea68537589686c713c4f3b1eb34741d5293e2ade2669c",
           "app/inference_ui.py": "e47e893b05402c93f759b75096deffff093febc07a8869f2db7261fc490a5c8d",
-          "app/compare_ui.py": "30833e456760ba120323781f961cd7f3b03d07459a2c017b01730f279afa7d30",
+          "app/compare_ui.py": "ff7132c341981c10d4795014d2a7179b0f65f6c151d4d5a2e7999ef686508d40",
           "src/rssr/evidence.py": "d251bd801d6c8526d378e423be9d207efb0a2734b3e5bec7ab0ae4179918bf82",
           "src/rssr/interpretation.py": "f8e276450fe0cd4ff1bec9a211aab791bcb60b1901003302f00a8ce4bbfbed7d",
-          "src/rssr/comparison.py": "b946f207d99ce8e4466fb723845d4f6185e4143d42764edafc5bfe1d5448df6c"
+          "src/rssr/comparison.py": "26c43e2e7bbb0ea45beceb7ff9e66f488f18f072a9317ede4c7289b5c7d73edd"
         }
       }
     }
   ],
-  "total_check_seconds": 1.0961234000005788,
+  "total_check_seconds": 1.2655219000007492,
   "selection_change_preserves_labels": true,
   "matching_identity_cache_reused": true,
   "partial_failure_and_retry_passed": true

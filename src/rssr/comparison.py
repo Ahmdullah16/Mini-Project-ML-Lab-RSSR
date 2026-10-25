@@ -6,7 +6,7 @@ import zipfile
 import numpy as np
 from PIL import Image
 
-SETTINGS={'pipeline':'rgb-display-v1','input':'uint8 RGB /255','scale':2,'tile':128,'halo':32,
+SETTINGS={'pipeline':'rgb-display-v2-diagnostics','input':'uint8 RGB /255','scale':2,'tile':128,'halo':32,
           'output':'fixed [0,1] clipping and uint8 quantization; no sharpening','max_side':512}
 
 def input_digest(image):

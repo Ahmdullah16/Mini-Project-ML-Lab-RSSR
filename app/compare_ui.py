@@ -12,6 +12,14 @@ def render_compare():
     st.caption('Scientific reconstruction workflow: native ×2 RGB outputs, no hidden sharpening. PNGs are clipped/quantized display exports, not calibrated multispectral products. Perceptual enhancement is not yet available.')
     selected=st.multiselect('Models to compute',[s['label'] for s in CATALOG],default=[s['label'] for s in CATALOG],key='compare_models')
     st.info('Available: published CNN pilot, CNN v2 and hybrid v2. Standalone attention/Transformer research checkpoints are not currently portable compatible RGB options; no output is substituted for them. Genuine HR is unavailable for this input workflow.')
+    diagnostic=ROOT/'reports/inference-diagnostic-v1.json'
+    if diagnostic.is_file():
+        with st.expander('What the inference diagnostic measured'):
+            record=json.loads(diagnostic.read_text(encoding='utf-8'))
+            st.write('Question: does preprocessing or tiled context alter the declared output? These six runs compare full-frame and tiled inference on synthetic RGB edges and one cached training crop. They do not measure reconstruction accuracy or evaluate the frozen test.')
+            st.dataframe([{'Input':r['input'],'Model':r['model'],'Float MAE (normalized)':r['mae_normalized'],'Maximum difference':r['max_abs_normalized'],'Displayed values changed (%)':100*r['uint8_disagreement_fraction'],'Clipped raw values (%)':100*r['tiled_out_of_range_fraction']} for r in record['rows']],hide_index=True,width='stretch')
+            st.caption('Lower full/tiled difference means closer implementation agreement, not better HR fidelity. Global pooling can change with context. Clipping fractions count channel samples, not independent pixels or error rates. Synthetic extremes are not representative of the training crop.')
+            st.download_button('Download inference diagnostic',diagnostic.read_bytes(),'inference-diagnostic-v1.json','application/json')
     choice=st.radio('Comparison input',['Licensed cached training example','Upload'],key='compare_input')
     upload=st.file_uploader('Comparison RGB PNG/JPEG, ≤512×512 and 8 MB',type=['png','jpg','jpeg'],key='compare_upload') if choice=='Upload' else None
     if st.button('Run selected models',type='primary'):
@@ -71,6 +79,9 @@ def render_compare():
     for result in batch['results']:
         meta=result['metadata'];disagreement=float(np.abs(result['sr'].astype(float)-result['baseline'].astype(float)).mean())
         st.write(f"{meta['model_name']}: {meta['runtime_seconds']:.3f} s CPU. Mean absolute difference from bicubic: {disagreement:.3f} uint8 levels; this is disagreement, not reference error or accuracy.")
+        clipped=meta.get('display_clipped_scalar_fraction')
+        if clipped is not None:
+            st.caption(f"RGB uint8 input range {meta['input_range_uint8']}; raw normalized SR range {meta['raw_output_range_normalized']}. Display clipping affected {100*clipped:.4f}% of channel values. PNG compression changes file size independently of fidelity; unreferenced RGB has unknown physical pixel spacing.")
         st.download_button('Download '+meta['model_name'],png_bytes(result['sr']),result['key'][:12]+'.png','image/png',key='png-'+result['key'])
         with st.expander('Provenance · '+meta['model_name']):st.json(meta)
     st.download_button('Download comparison bundle',comparison_bundle(batch),'rssr-comparison.zip','application/zip')

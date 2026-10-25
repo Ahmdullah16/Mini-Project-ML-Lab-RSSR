@@ -1,3 +1,15 @@
+# MP34 pairing milestone — 2026-10-25
+
+MP34 **Complete (implementation and teaching deliverables)**. Three tests, synthetic/real training-only pairing experiment and five-code-cell notebook passed. Four-band64×64 HR generated aligned×2/×4 LR with exact common corners; hashes and metadata in [pairing manifest](../reports/mp34-pairing-manifest.json), [validation](../stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/VALIDATION.md). No new training/download/test evaluation. MP35–MP40 and earlier exceptions remain unfinished; learner mastery unassessed.
+
+The updated seven-section showcase navigation/error/filter checks completed with zero navigation network access. Inference diagnostic and comparison behavior remain as recorded below. Frozen final-heldout.json and final-evaluation.json are unchanged from main. External public visibility/storage blockers remain.
+
+# Inference diagnostic and MP33 — 2026-10-25
+
+PR18 CI40191897702 passed and PR18 was merged externally0c7d91c. Preserved and integrated. Versioned training-only inference protocol3d41dd7 executed six actual runs; no preprocessing mismatch demonstrated. Input quantization and approximate hybrid tile context were measured, with no accuracy-gain claim. [Diagnostic interpretation](../reports/inference-diagnostic-v1.md). Added nonfinite-output guard and explicit clipping/range metadata; six affected diagnostic/comparison tests and actual three-model cache/retry check passed.
+
+MP33 **Complete (implementation and teaching deliverables)**: train-only normalization, frozen application, per-band validity, georeferenced patch extraction, synthetic and pinned real training experiment, notebook, exercises/solutions and [validation](../stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/VALIDATION.md). Three tests and real kernel passed. Sixteen valid patches; existing frozen model preprocessing unchanged. MP34–MP40 and earlier unmet criteria remain unfinished; learner mastery unassessed.
+
 # Explicit model comparison — 2026-10-25
 
 Live SR now offers Compare models: three genuine published RGB×2 checkpoints, one decoded input, sequential bounded execution, input/checkpoint/version/settings identities, recoverable per-model errors, synchronized crop/zoom, shared preview-only contrast, individual PNGs and ZIP provenance. Unsupported standalone models/perceptual mode and absent HR are labeled honestly. [Actual inference validation](../reports/comparison-validation.json), [browser/export check](../reports/comparison-browser-check.json).
