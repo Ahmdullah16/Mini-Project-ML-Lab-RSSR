@@ -1,0 +1,122 @@
+{
+  "original_assignments_preserved": true,
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "scenes": [
+    {
+      "id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "region_id": "ROI_00006",
+      "split": "train",
+      "path": "raw/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+      "acquisition_time": "2021-09-17",
+      "wgs84_bounds": [
+        -113.30750560875087,
+        44.487320169584464,
+        -113.29163029652086,
+        44.498683437756235
+      ],
+      "source_crs": "EPSG:32611",
+      "source_transform": [
+        2.5,
+        0.0,
+        793610.0,
+        0.0,
+        -2.5,
+        4933900.0
+      ],
+      "shape": [
+        4,
+        484,
+        484
+      ]
+    },
+    {
+      "id": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "region_id": "ROI_00399",
+      "split": "train",
+      "path": "raw/HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+      "sha256": "6cfe72c18497d749a6628e0f394417ad99f3ec2b0a1e356e182f4d15396ca521",
+      "acquisition_time": "2021-09-09",
+      "wgs84_bounds": [
+        -99.84124634724179,
+        38.7892881091233,
+        -99.8271872690643,
+        38.80029054320659
+      ],
+      "source_crs": "EPSG:32614",
+      "source_transform": [
+        2.5,
+        0.0,
+        426950.0,
+        0.0,
+        -2.5,
+        4294940.0
+      ],
+      "shape": [
+        4,
+        484,
+        484
+      ]
+    },
+    {
+      "id": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "region_id": "ROI_00438",
+      "split": "train",
+      "path": "raw/HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+      "sha256": "c1393e5ed2e28e0828209912b870fec8f7fda457bfbbe8173293f583b2d25e1e",
+      "acquisition_time": "2021-09-19",
+      "wgs84_bounds": [
+        -99.26324205041706,
+        34.44229543436816,
+        -99.25003665728639,
+        34.45323506753958
+      ],
+      "source_crs": "EPSG:32614",
+      "source_transform": [
+        2.5,
+        0.0,
+        475820.0,
+        0.0,
+        -2.5,
+        3812440.0
+      ],
+      "shape": [
+        4,
+        484,
+        484
+      ]
+    },
+    {
+      "id": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "region_id": "ROI_00456",
+      "split": "train",
+      "path": "raw/HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+      "sha256": "88c5f9f976aa68974668bacc45d01f3fe65ed72c530f08bbd973b66cee83919b",
+      "acquisition_time": "2020-05-21",
+      "wgs84_bounds": [
+        -103.47931669679029,
+        35.17736658328468,
+        -103.46582764881154,
+        35.18844104357268
+      ],
+      "source_crs": "EPSG:32613",
+      "source_transform": [
+        2.5,
+        0.0,
+        638470.0,
+        0.0,
+        -2.5,
+        3895000.0
+      ],
+      "shape": [
+        4,
+        484,
+        484
+      ]
+    }
+  ]
+}

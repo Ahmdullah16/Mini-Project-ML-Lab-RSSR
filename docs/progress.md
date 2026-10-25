@@ -1,3 +1,7 @@
+# MP35 geographic split milestone — 2026-10-25
+
+MP35 **Complete (implementation and teaching deliverables)**. Twelve tests, nine cached checksum/header inspections, 24 cross-split checks, split manifests, scene-center map and four-code-cell real-kernel notebook passed. [Audit](../reports/mp35-geographic-splits.json) and [validation](../stage_08_remote_sensing/MP35_geographic_dataset_splitting/VALIDATION.md). Existing 4/4/1 assignments and frozen results preserved. MP36–MP40, earlier exceptions and learner mastery remain unfinished.
+
 # MP34 pairing milestone — 2026-10-25
 
 MP34 **Complete (implementation and teaching deliverables)**. Three tests, synthetic/real training-only pairing experiment and five-code-cell notebook passed. Four-band64×64 HR generated aligned×2/×4 LR with exact common corners; hashes and metadata in [pairing manifest](../reports/mp34-pairing-manifest.json), [validation](../stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/VALIDATION.md). No new training/download/test evaluation. MP35–MP40 and earlier exceptions remain unfinished; learner mastery unassessed.

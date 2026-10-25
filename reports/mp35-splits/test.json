@@ -1,0 +1,35 @@
+{
+  "original_assignments_preserved": true,
+  "license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "scenes": [
+    {
+      "id": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+      "region_id": "ROI_00319",
+      "split": "test",
+      "path": "raw/HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+      "url": "https://huggingface.co/datasets/isp-uv-es/opensr-test/resolve/e4600b9c74a621adeec047e5f6cc7a2d70a58134/100/naip/hr/HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+      "sha256": "671335fdb7ada3e281a8961fe3e4dfe0d6f4daea1084d45777794ccb583c85ef",
+      "acquisition_time": "2019-06-27",
+      "wgs84_bounds": [
+        -99.18235975189343,
+        36.542790040095355,
+        -99.16881553905547,
+        36.553718185963724
+      ],
+      "source_crs": "EPSG:32614",
+      "source_transform": [
+        2.5,
+        0.0,
+        483680.0,
+        0.0,
+        -2.5,
+        4045380.0
+      ],
+      "shape": [
+        4,
+        484,
+        484
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "recorded_at": "2026-10-25T18:22:28.306074+00:00",
+  "manifest": "configs/naip-development-manifest.json",
+  "manifest_sha256": "5478ce0faa52cdfc99b46d3216cec636883bf22afac5fe818bf80b06f5e66cad",
+  "audit": {
+    "buffer_degrees": 0.02,
+    "cross_split_pairs": [
+      {
+        "a": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+        "b": "HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+        "max_axis_clearance_degrees": 13.53890132379523
+      },
+      {
+        "a": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+        "b": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "max_axis_clearance_degrees": 14.109270544627435
+      },
+      {
+        "a": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+        "b": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+        "max_axis_clearance_degrees": 12.153085182195326
+      },
+      {
+        "a": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+        "b": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+        "max_axis_clearance_degrees": 12.41395105279188
+      },
+      {
+        "a": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+        "b": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+        "max_axis_clearance_degrees": 1.662157822938326
+      },
+      {
+        "a": "HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+        "b": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "max_axis_clearance_degrees": 1.7441244426134759
+      },
+      {
+        "a": "HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+        "b": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+        "max_axis_clearance_degrees": 0.4804533876956327
+      },
+      {
+        "a": "HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+        "b": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+        "max_axis_clearance_degrees": 3.84460756103762
+      },
+      {
+        "a": "HR__ROI_00270__m_3809943_sw_14_060_20210909.tif",
+        "b": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+        "max_axis_clearance_degrees": 3.713098676085906
+      },
+      {
+        "a": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "b": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+        "max_axis_clearance_degrees": 2.2355699231595736
+      },
+      {
+        "a": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "b": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+        "max_axis_clearance_degrees": 2.0895549725557743
+      },
+      {
+        "a": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "b": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+        "max_axis_clearance_degrees": 4.283467896918111
+      },
+      {
+        "a": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "b": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+        "max_axis_clearance_degrees": 1.942710011707831
+      },
+      {
+        "a": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "b": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+        "max_axis_clearance_degrees": 13.171417800328868
+      },
+      {
+        "a": "HR__ROI_00319__m_3609931_se_14_060_20190627.tif",
+        "b": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+        "max_axis_clearance_degrees": 12.577851291787624
+      },
+      {
+        "a": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+        "b": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+        "max_axis_clearance_degrees": 4.126621587231142
+      },
+      {
+        "a": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+        "b": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+        "max_axis_clearance_degrees": 12.512531204980505
+      },
+      {
+        "a": "HR__ROI_00399__m_3809910_sw_14_060_20210909.tif",
+        "b": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+        "max_axis_clearance_degrees": 11.91896469643926
+      },
+      {
+        "a": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+        "b": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+        "max_axis_clearance_degrees": 1.8618277131841978
+      },
+      {
+        "a": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+        "b": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+        "max_axis_clearance_degrees": 13.090535501805235
+      },
+      {
+        "a": "HR__ROI_00438__m_3409938_ne_14_060_20210919.tif",
+        "b": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+        "max_axis_clearance_degrees": 12.496968993263991
+      },
+      {
+        "a": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+        "b": "HR__ROI_00565__m_3410123_se_14_060_20200828.tif",
+        "max_axis_clearance_degrees": 2.3272825344860024
+      },
+      {
+        "a": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+        "b": "HR__ROI_01566__m_3211262_nw_12_060_20211113.tif",
+        "max_axis_clearance_degrees": 8.874460855432005
+      },
+      {
+        "a": "HR__ROI_00456__m_3510353_sw_13_060_20200521.tif",
+        "b": "HR__ROI_01619__m_4211110_ne_12_060_20190926.tif",
+        "max_axis_clearance_degrees": 8.280894346890761
+      }
+    ],
+    "counts": {
+      "train": 4,
+      "validation": 4,
+      "test": 1
+    },
+    "rule": "At least one axis must have gap strictly greater than buffer; not a geodesic distance."
+  },
+  "source_license": "MIT dataset-card declaration; NAIP public-domain source imagery; retain USDA and OpenSR attribution",
+  "source_citation": "Aybar et al., A Comprehensive Benchmark for Optical Remote Sensing Image Super-Resolution (2024), IEEE document 10530998",
+  "environment": {
+    "python": "3.12.14",
+    "rasterio": "1.5.2"
+  },
+  "scope": "Cached file checksums and raster headers only; no pixel reads, training or test metrics. Existing frozen assignments unchanged.",
+  "limitations": "Envelope separation is not statistical independence. One test region cannot establish geographic generalization. Angular buffer varies in physical length with latitude."
+}
