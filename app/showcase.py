@@ -24,7 +24,8 @@ st.markdown('''<style>
 def evidence(fingerprint):
     return build_index(ROOT)
 
-fingerprint=tuple((p.name,p.stat().st_mtime_ns) for p in sorted((ROOT/'reports').glob('*')) if p.is_file())
+evidence_paths=[*(ROOT/'reports').glob('*'),ROOT/'docs/project_folders.json',ROOT/'docs/syllabus.json',*ROOT.glob('stage_*/MP*/README.md')]
+fingerprint=tuple((p.relative_to(ROOT).as_posix(),p.stat().st_mtime_ns) for p in sorted(evidence_paths) if p.is_file())
 try:index=evidence(fingerprint)
 except (OSError,ValueError,KeyError) as error:
     st.error(f'Evidence could not be loaded: {error}. No results have been substituted.');st.stop()

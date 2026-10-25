@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Expanded [notebook](../../notebooks/MP10.ipynb) executed in a real kernel. [Measured experiment](../../reports/mp09-mp11-experiments.json) records the checksummed training crop and controlled settings. Reproduce with `python scripts/metric_experiments.py`. Worked solutions are included; learner mastery remains unassessed.
+Expanded [notebook](ssim_evaluation_tool.ipynb) executed in a real kernel. [Measured experiment](../../reports/mp09-mp11-experiments.json) records the checksummed training crop and controlled settings. Reproduce with `python scripts/metric_experiments.py`. Worked solutions are included; learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -52,3 +52,16 @@ Write down variable dimensions and units before coding. Work through one small n
 - [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
 - [ ] Document data licenses, environment, limitations, and any deviations from the brief.
 - [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+
+## Project-folder files
+
+This folder now contains the [local notebook](ssim_evaluation_tool.ipynb), [local tools](mp10_tools.py), [tests](test_mp10_tools.py), [runner](run_notebook.py) and [validation](VALIDATION.md), following MP01's layout. Shared algorithms stay in src/rssr where applicable; local tools expose their API without divergent copies. Original notebooks/ snapshots and historical execution records are retained. This is the canonical notebook location for subsequent work.
+
+From this directory, in the repository development environment:
+
+```bash
+python -m pytest -q test_mp10_tools.py
+python run_notebook.py
+```
+
+File presence does not imply that all scientific or educational criteria are complete. The status and remaining criteria above remain authoritative.

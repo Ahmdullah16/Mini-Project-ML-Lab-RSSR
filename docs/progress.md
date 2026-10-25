@@ -1,3 +1,15 @@
+# All project-folder deliverables populated — 2026-10-25
+
+MP01 preserved; MP02–MP40 now contain a local notebook, tools, tests, runner and VALIDATION.md alongside README.md. Shared implementations are reused. All 40 IDs and folder layouts passed validation; 111 local tests +17 subtests passed; all 39 relocated notebooks passed real kernels. Two evidence-index tests and seven local showcase sections/error states passed. App links now target local notebooks. See [workflow](project_folder_workflow.md), [tests](../reports/project-folder-tests.json) and [execution](../reports/project-notebook-execution.json).
+
+This completes the requested file-layout milestone, not every mini-project criterion. MP32–MP40 remain introductory; MP20 and other earlier checklist gaps remain open. MP27–MP31 implementation/teaching status remains complete. No frozen test results, datasets or training checkpoints were regenerated. Candidate remote CI and public verification remain pending.
+
+# Stage07 implementation complete — 2026-10-23
+
+MP27–MP31 **Complete (implementation and teaching deliverables)**; learner mastery unassessed. Added MP29 encoder/positions/shape trace, MP30 reversible patches and non-wrapping window connectivity, MP31 measured Transformer/CNN benchmark export and failure analysis. Each has local implementation/tests/runner/VALIDATION.md. Five, five and three new tests passed; all three six-cell notebooks passed real kernels; five new figures visually inspected. See [stage07](../stage_07_transformers/README.md). No new optimization, acquisition or frozen-test evaluation. MP32–MP40 and earlier unmet criteria remain unfinished.
+
+PR16 head `c8a1757555b582d6c17203d5491bcc84066a7615` passed both Linux jobs, run39991113761, and was merged externally as75412c3. New stage07 follow-up candidate CI remains pending publication. Public access blocker below remains unresolved after the confirmed-URL retry.
+
 # MP28 implementation complete — 2026-10-23
 
 MP28 **Complete (implementation and teaching deliverables)**: local multi-head code, five tests, real-kernel seven-cell notebook, runner, measured one/two/four-head comparison, head maps and parameter counts. [Validation](../stage_07_transformers/MP28_multi_head_self_attention/VALIDATION.md). Learner mastery unassessed; MP29–MP40 remain incomplete. Both new lessons use existing training data only.

@@ -20,4 +20,4 @@ rssr = "rssr.cli:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "stage_01_python_numpy/MP01_digital_image_explorer", "stage_07_transformers/MP27_self_attention_from_scratch", "stage_07_transformers/MP28_multi_head_self_attention"]
+testpaths = ["tests", "stage_01_python_numpy", "stage_02_image_processing", "stage_03_metrics", "stage_04_math_pytorch", "stage_05_cnn_sr", "stage_06_attention", "stage_07_transformers", "stage_08_remote_sensing", "stage_09_hybrid_research"]

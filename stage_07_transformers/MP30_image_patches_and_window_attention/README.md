@@ -1,56 +1,70 @@
 # MP30 — Image Patches and Window Attention
 
-**Status: In progress** · **Curriculum: proposed for review**
+**Status: Complete (implementation and teaching deliverables)** · Learner mastery unassessed.
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+## Objectives and prerequisites
 
-## Learning objectives
+Implement reversible patch ordering, distinguish patchification from learned embedding, compare global/local/shifted connectivity and estimate attention storage. Prerequisite: [MP29](../MP29_transformer_encoder_block/README.md).
 
-- Patch embeddings, tokens, local windows and attention complexity.
-- Explain the mathematical model below and its assumptions in your own words.
-- Interpret the planned comparison using evidence and identify a limitation.
+## Mathematics, ordering and hand example
 
-## Prerequisites
+For H×W×C pixels and patch sizeP, N=(H/P)(W/P) tokens each holdP²C values. Require exact divisibility; no implicit padding. Token rows follow patch-grid row-major order. Within a token, rows, columns, channels flatten in that order. A4×4 single-channel ramp gives first2×2 token[0,1,4,5], second[2,3,6,7]. Inversion preserves original dtype and values. Shuffling tokens requires tracking their original spatial indices; a learned embedding is separate and need not be reversible.
 
-[MP29 — Transformer Encoder Block](../../stage_07_transformers/MP29_transformer_encoder_block/README.md) and the earlier foundations in the roadmap.
+Global score storage is N² entries, local M×M token windows use NM² for complete windows. Pairwise work is O(N²d) versus O(NM²d), excluding projections/FFN. For4×4 tokens and M=2:256 global versus64 local entries,1024 versus256 float32 bytes. Analytical counts are not peak RAM.
 
-Read the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.
+## Files and exact commands
 
-## Mathematics
+[Implementation](window_tools.py) · [Tests](test_window_tools.py) · [Experiment](experiment.py) · [Runner](run_notebook.py) · [Validation](VALIDATION.md) · [Canonical notebook](image_patches_and_window_attention.ipynb).
 
-Use N = (H/P)(W/P) patch tokens and compare global O(N²d) with local O(NM²d) attention for M × M windows.
+From repository root in the [development environment](../../docs/setup.md):
 
-Write down variable dimensions and units before coding. Work through one small numerical example and define edge cases; equations here specify topics to study, not measured results.
+```bash
+python -m unittest discover -s stage_07_transformers/MP30_image_patches_and_window_attention -p "test_*.py" -v
+python stage_07_transformers/MP30_image_patches_and_window_attention/experiment.py
+python stage_07_transformers/MP30_image_patches_and_window_attention/run_notebook.py
+```
 
-## Experiments
+Experiment requires the existing pinned training raster; [rebuild instructions](../../docs/frozen-reproduction.md). No automatic download. Notebook uses committed measured evidence plus synthetic checks; executed output is ignored under data/executed_notebooks.
 
-**Planned; not run.** Patchify and reconstruct an image, then compare global and local/shifted window connectivity; deliver round-trip checks, positional-order notes, and memory estimates.
+## Executed experiments and interpretation
 
-1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
-2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
-3. Record settings, seeds, package versions, runtime/device, and observations. Training projects must keep validation and held-out test data separate.
-4. Compare outcomes, explain failure cases, and record limitations. Do not tune on the test set.
+Synthetic ramp first, then a valid8×8 RGB training crop; patch sizes1,2,4. All six round trips were exact. Real pixels stay uint16, without resampling or calibration. Source checksum, license, crop and software are in the [measured report](../../reports/mp30-windows.json).
 
-## Deliverables
+![Connectivity](../../reports/mp30-connectivity.png)
+![Analytical memory](../../reports/mp30-memory.png)
 
-- The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
-- An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
-- A short reflection: what was learned, what failed, and the next question.
+On a4×4 token grid:256 global pairs,64 aligned-local pairs,36 shifted/clipped pairs,144 reachable pairs after local then shifted layers. Shifted boundaries connect some prior window neighbors but do not wrap opposite image edges. The two-layer paths are not fully global. This is a clipped-boundary educational adjacency model, not Swin's cyclic-shift/masking implementation, and it does not compute learned attention probabilities.
 
-## References
+## Practice, reflection and limits
 
-- [Stage reference: Transformers](https://arxiv.org/abs/1706.03762)
-- [Swin Transformer](https://arxiv.org/abs/2103.14030)
-- [SwinIR](https://arxiv.org/abs/2108.10257)
+Predict tokens for32×32 pixels/P=4, diagnose shuffled patch positions, and compare two-layer versus global connectivity before notebook solutions. Answers:64; inverse order must be tracked;144<256 in this example. Learned: exact patch reconstruction is independent from model quality. Next: measured Transformer/CNN restoration comparison (MP31).
+
+NAIP is public-domain aerial data, USDA/OpenSR attribution retained, dataset-card MIT. No reflectance inference, training, downloads, validation/test access or SR-quality metric. Adjacency allocation is capped at4096 tokens; larger storage estimates are analytical. Learner mastery unassessed.
 
 ## Completion criteria
 
-- [ ] Explain the learning objectives and solve the small mathematical example.
-- [ ] Implement and run the planned experiment with a documented command and reproducible inputs.
-- [ ] Verify relevant numerical, shape, and edge-case checks; record the actual outcomes.
-- [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
-- [ ] Document data licenses, environment, limitations, and any deviations from the brief.
-- [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+- [x] Explain patch dimensions and hand-compute ordering/storage.
+- [x] Execute synthetic and real round trips plus connectivity comparisons.
+- [x] Verify exact values/dtype, order, boundary behavior and invalid inputs (five tests).
+- [x] Produce interpreted connectivity/memory figures and positional notes.
+- [x] Record license, source hash, software and clipped-window deviation.
+- [x] Link evidence in progress without claiming learner assessment.
+
+## References
+
+[Swin Transformer](https://arxiv.org/abs/2103.14030) · [SwinIR](https://arxiv.org/abs/2108.10257). Only connectivity concepts are illustrated; neither network is reproduced here.
+
+## Project-folder files
+
+This folder now contains the [local notebook](image_patches_and_window_attention.ipynb), [local tools](window_tools.py), [tests](test_window_tools.py), [runner](run_notebook.py) and [validation](VALIDATION.md), following MP01's layout. Shared algorithms stay in src/rssr where applicable; local tools expose their API without divergent copies. Original notebooks/ snapshots and historical execution records are retained. This is the canonical notebook location for subsequent work.
+
+From this directory, in the repository development environment:
+
+```bash
+python -m pytest -q test_window_tools.py
+python run_notebook.py
+```
+
+File presence does not imply that all scientific or educational criteria are complete. The status and remaining criteria above remain authoritative.

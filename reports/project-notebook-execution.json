@@ -1,0 +1,353 @@
+[
+  {
+    "id": "MP02",
+    "source": "stage_01_python_numpy/MP02_numpy_image_laboratory/numpy_image_laboratory.ipynb",
+    "source_sha256": "f73fa80b8573d79439cb0e4f0446e6314786cd55c358b058057468629e0df0f2",
+    "started_at": "2026-10-25T07:59:22.075320+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 5,
+    "finished_at": "2026-10-25T07:59:25.500554+00:00"
+  },
+  {
+    "id": "MP03",
+    "source": "stage_01_python_numpy/MP03_image_resizing_laboratory/image_resizing_laboratory.ipynb",
+    "source_sha256": "fd83d906df6f61572e4e60306c48ddedd7261ae272fae5df129f9b4d11f9cf98",
+    "started_at": "2026-10-25T07:59:25.504589+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:27.857458+00:00"
+  },
+  {
+    "id": "MP04",
+    "source": "stage_01_python_numpy/MP04_image_comparison_tool/image_comparison_tool.ipynb",
+    "source_sha256": "69ccec42ce820c46e1be95ca53beec9633b4da2ce75d68f14fc20dc4c4e6e4bd",
+    "started_at": "2026-10-25T07:59:27.864744+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:29.754992+00:00"
+  },
+  {
+    "id": "MP05",
+    "source": "stage_02_image_processing/MP05_gaussian_blur_simulator/gaussian_blur_simulator.ipynb",
+    "source_sha256": "2a89ce25157b78aed66add153bb42def7c161fe0982b898e5363e11de4b610e6",
+    "started_at": "2026-10-25T07:59:29.764646+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:31.803716+00:00"
+  },
+  {
+    "id": "MP06",
+    "source": "stage_02_image_processing/MP06_low_resolution_image_generator/low_resolution_image_generator.ipynb",
+    "source_sha256": "b5779aa05fcd78193b32aeceeb2fa85f1d12f95901ff2701b055f3b781a842e7",
+    "started_at": "2026-10-25T07:59:31.806540+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 3,
+    "finished_at": "2026-10-25T07:59:33.511209+00:00"
+  },
+  {
+    "id": "MP07",
+    "source": "stage_02_image_processing/MP07_synthetic_degradation_laboratory/synthetic_degradation_laboratory.ipynb",
+    "source_sha256": "3f119be5d4bb00cc92d02955ccdb789e66764d254c0faf987af03e2541b6b6d0",
+    "started_at": "2026-10-25T07:59:33.513308+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 3,
+    "finished_at": "2026-10-25T07:59:35.203983+00:00"
+  },
+  {
+    "id": "MP08",
+    "source": "stage_02_image_processing/MP08_frequency_domain_image_explorer/frequency_domain_image_explorer.ipynb",
+    "source_sha256": "ca4d684abc599c3db41fcb668d48a03b2c68599268fc1225ac894fb3c1467189",
+    "started_at": "2026-10-25T07:59:35.203983+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:37.390217+00:00"
+  },
+  {
+    "id": "MP09",
+    "source": "stage_03_metrics/MP09_mse_and_psnr_from_scratch/mse_and_psnr_from_scratch.ipynb",
+    "source_sha256": "466612ed5173a8261a4f6c987feb15a37e421c03578fb3440727909b8d56d0af",
+    "started_at": "2026-10-25T07:59:37.399106+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:39.124884+00:00"
+  },
+  {
+    "id": "MP10",
+    "source": "stage_03_metrics/MP10_ssim_evaluation_tool/ssim_evaluation_tool.ipynb",
+    "source_sha256": "82209de472a6555c3dc5cbebc26b888426a50316938519034eb8df69be545d16",
+    "started_at": "2026-10-25T07:59:39.130779+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:40.621588+00:00"
+  },
+  {
+    "id": "MP11",
+    "source": "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/super_resolution_evaluation_dashboard.ipynb",
+    "source_sha256": "1c5a3eb9da4e0333c35a4c4c8a04cda0214d48809c99e55405f555fcc5199033",
+    "started_at": "2026-10-25T07:59:40.628364+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:42.369869+00:00"
+  },
+  {
+    "id": "MP12",
+    "source": "stage_04_math_pytorch/MP12_linear_algebra_visualizer/linear_algebra_visualizer.ipynb",
+    "source_sha256": "448b224380c3b269b52ad676828983bf72200edf315ca60705da8235265d119e",
+    "started_at": "2026-10-25T07:59:42.377977+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 5,
+    "finished_at": "2026-10-25T07:59:43.910574+00:00"
+  },
+  {
+    "id": "MP13",
+    "source": "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/gradient_descent_from_scratch.ipynb",
+    "source_sha256": "68ee2c6f95a19768b83cc37a05adb07feac0109249e247a60d9e666a369fb277",
+    "started_at": "2026-10-25T07:59:43.919597+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:45.782130+00:00"
+  },
+  {
+    "id": "MP14",
+    "source": "stage_04_math_pytorch/MP14_neural_network_from_scratch/neural_network_from_scratch.ipynb",
+    "source_sha256": "0f0c346c8b137d80c7a2eac3b0a9d145880e357df6a7178a71693699bd5b6345",
+    "started_at": "2026-10-25T07:59:45.785713+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:47.353276+00:00"
+  },
+  {
+    "id": "MP15",
+    "source": "stage_04_math_pytorch/MP15_first_pytorch_neural_network/first_pytorch_neural_network.ipynb",
+    "source_sha256": "ae56c39be6433d56146abc12425ab55b9ee1b4fb9a9a9a86979984592f454162",
+    "started_at": "2026-10-25T07:59:47.357464+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-25T07:59:55.219102+00:00"
+  },
+  {
+    "id": "MP16",
+    "source": "stage_04_math_pytorch/MP16_reusable_training_pipeline/reusable_training_pipeline.ipynb",
+    "source_sha256": "32e7368b4f7fe47e716f71a7a276f9aec391ed01dbfef426a60aa030caac70d8",
+    "started_at": "2026-10-25T07:59:55.222958+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T07:59:59.716526+00:00"
+  },
+  {
+    "id": "MP17",
+    "source": "stage_05_cnn_sr/MP17_convolution_playground/convolution_playground.ipynb",
+    "source_sha256": "0902685e7808f634c1f5c568d618c669b57ed40e6874fc6b0dbe5329bd18d3b7",
+    "started_at": "2026-10-25T07:59:59.722924+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 3,
+    "finished_at": "2026-10-25T08:00:01.270165+00:00"
+  },
+  {
+    "id": "MP18",
+    "source": "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/cnn_edge_detection_laboratory.ipynb",
+    "source_sha256": "f3da7bc6bdda2cb848da6aafacd5b53e7a6a05502d216ef6fb1be62e47bb3709",
+    "started_at": "2026-10-25T08:00:01.274560+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:05.120904+00:00"
+  },
+  {
+    "id": "MP19",
+    "source": "stage_05_cnn_sr/MP19_cnn_image_reconstruction/cnn_image_reconstruction.ipynb",
+    "source_sha256": "f28928bd0af44d681c6f323156290ff1d1c04142456f749a5142d4714878b176",
+    "started_at": "2026-10-25T08:00:05.123510+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:08.855639+00:00"
+  },
+  {
+    "id": "MP20",
+    "source": "stage_05_cnn_sr/MP20_srcnn_implementation/srcnn_implementation.ipynb",
+    "source_sha256": "e6398589684f72233ff0ac78de987b5089cb5b43b3c0b6e248aa818733ffc203",
+    "started_at": "2026-10-25T08:00:08.859880+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:12.453423+00:00"
+  },
+  {
+    "id": "MP21",
+    "source": "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/residual_cnn_super_resolution.ipynb",
+    "source_sha256": "c230411243507315b457d9c8c5f68851fb080721b822d3e71c807c9cd9ad294e",
+    "started_at": "2026-10-25T08:00:12.458268+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:17.085952+00:00"
+  },
+  {
+    "id": "MP22",
+    "source": "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/upsampling_architecture_comparison.ipynb",
+    "source_sha256": "9f7025dc0ab38914fbdd1ee70bacbf47d579d4fa6de72ba42c4c22288cf17ce3",
+    "started_at": "2026-10-25T08:00:17.085952+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:20.892047+00:00"
+  },
+  {
+    "id": "MP23",
+    "source": "stage_06_attention/MP23_channel_attention_from_scratch/channel_attention_from_scratch.ipynb",
+    "source_sha256": "400e5b247b4c6106e7515adfd92b6d68cbbaf5c12b97fdcfedbc25633d571e12",
+    "started_at": "2026-10-25T08:00:20.901003+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:26.301596+00:00"
+  },
+  {
+    "id": "MP24",
+    "source": "stage_06_attention/MP24_spatial_attention_from_scratch/spatial_attention_from_scratch.ipynb",
+    "source_sha256": "257004b27a9dc03b40894c19bf580657502d3757654058d54f493b42af7d1c12",
+    "started_at": "2026-10-25T08:00:26.305520+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:31.361650+00:00"
+  },
+  {
+    "id": "MP25",
+    "source": "stage_06_attention/MP25_combined_attention_module/combined_attention_module.ipynb",
+    "source_sha256": "adb2ef6c801fa72223ad76bf85678626a3cfa819435a0b4cbadea93b48d779ae",
+    "started_at": "2026-10-25T08:00:31.365671+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:36.234474+00:00"
+  },
+  {
+    "id": "MP26",
+    "source": "stage_06_attention/MP26_attention_based_sr_network/attention_based_sr_network.ipynb",
+    "source_sha256": "126dd075f098089c90ab9c5c01a4c29c46180e14ea4bb6edbabe534f22ccd7f5",
+    "started_at": "2026-10-25T08:00:36.240307+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:00:40.816826+00:00"
+  },
+  {
+    "id": "MP27",
+    "source": "stage_07_transformers/MP27_self_attention_from_scratch/self_attention_from_scratch.ipynb",
+    "source_sha256": "61a362548dde6913953d03281cf6f6a7e8057ebfe64de45a0193f98a1e812e18",
+    "started_at": "2026-10-25T08:00:40.820164+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 8,
+    "finished_at": "2026-10-25T08:00:44.557356+00:00"
+  },
+  {
+    "id": "MP28",
+    "source": "stage_07_transformers/MP28_multi_head_self_attention/multi_head_self_attention.ipynb",
+    "source_sha256": "6b8875a4d4e800cf6ccc8263a0b8aed2c7ea392dc8ba461a4f311bb749988868",
+    "started_at": "2026-10-25T08:00:44.566125+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 7,
+    "finished_at": "2026-10-25T08:00:48.020080+00:00"
+  },
+  {
+    "id": "MP29",
+    "source": "stage_07_transformers/MP29_transformer_encoder_block/transformer_encoder_block.ipynb",
+    "source_sha256": "dc7cf2cedd256734ad7d1b1539ae9c96283e1757fa739e34d426be9de0497a46",
+    "started_at": "2026-10-25T08:00:48.028114+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 6,
+    "finished_at": "2026-10-25T08:00:54.304246+00:00"
+  },
+  {
+    "id": "MP30",
+    "source": "stage_07_transformers/MP30_image_patches_and_window_attention/image_patches_and_window_attention.ipynb",
+    "source_sha256": "30ebdc8e6418133f53d62b6c032f19adcd0dd0e398e4834e7a20fa018bb75fdd",
+    "started_at": "2026-10-25T08:00:54.308261+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 6,
+    "finished_at": "2026-10-25T08:00:57.919159+00:00"
+  },
+  {
+    "id": "MP32",
+    "source": "stage_08_remote_sensing/MP32_satellite_image_explorer/satellite_image_explorer.ipynb",
+    "source_sha256": "420ca2c970fe2fc662fd24e7f82545f08491d1df773dc23f5c1dc6005f826568",
+    "started_at": "2026-10-25T08:01:03.476102+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:08.630568+00:00"
+  },
+  {
+    "id": "MP33",
+    "source": "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/satellite_preprocessing_pipeline.ipynb",
+    "source_sha256": "b3e9bfa439960bbde7d53c3ef961201cd57634759817bfd93b9e04d4b91c25ae",
+    "started_at": "2026-10-25T08:01:08.636797+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:13.612057+00:00"
+  },
+  {
+    "id": "MP34",
+    "source": "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/satellite_hr_lr_pair_builder.ipynb",
+    "source_sha256": "f34b42cb3c8ee8fc8247fc4dc39575025c2a7d151af3c57d0b05887e89cae176",
+    "started_at": "2026-10-25T08:01:13.618248+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:20.802131+00:00"
+  },
+  {
+    "id": "MP35",
+    "source": "stage_08_remote_sensing/MP35_geographic_dataset_splitting/geographic_dataset_splitting.ipynb",
+    "source_sha256": "83231732e82dc04886fd7d2121ece8b9f5ccdb223596c7d505a07af85eecea89",
+    "started_at": "2026-10-25T08:01:20.806806+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:25.113922+00:00"
+  },
+  {
+    "id": "MP36",
+    "source": "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/cross_sensor_dataset_investigation.ipynb",
+    "source_sha256": "997c257bd4acc609b64c696ad9e7631435b59213e4257ff366688ef2bcb019bf",
+    "started_at": "2026-10-25T08:01:25.117242+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:29.150317+00:00"
+  },
+  {
+    "id": "MP37",
+    "source": "stage_09_hybrid_research/MP37_feature_fusion_laboratory/feature_fusion_laboratory.ipynb",
+    "source_sha256": "205d4450d3bd1d56f0312d9c96ae56688398414a28226efb73645b139050cb51",
+    "started_at": "2026-10-25T08:01:29.156111+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:33.414041+00:00"
+  },
+  {
+    "id": "MP38",
+    "source": "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/hybrid_cnn_attention_transformer_sr_model.ipynb",
+    "source_sha256": "d5b0e1f2c242854575d54efff6c1b7515b4b410aa331b038b6b11430a8f30bb1",
+    "started_at": "2026-10-25T08:01:33.416407+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:37.051595+00:00"
+  },
+  {
+    "id": "MP39",
+    "source": "stage_09_hybrid_research/MP39_controlled_ablation_study/controlled_ablation_study.ipynb",
+    "source_sha256": "9bd0a1920d39fa5cb545ba0eae9ae6161fb955ce50c26d6f35df36dd14db5194",
+    "started_at": "2026-10-25T08:01:37.066438+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:40.868719+00:00"
+  },
+  {
+    "id": "MP40",
+    "source": "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/robustness_and_efficiency_benchmark.ipynb",
+    "source_sha256": "75c5ebd18f2dcd51e4558d5c866cfaefa382a966281ea69c1b7d80a05e831723",
+    "started_at": "2026-10-25T08:01:40.872740+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 2,
+    "finished_at": "2026-10-25T08:01:44.896158+00:00"
+  },
+  {
+    "id": "MP31",
+    "source": "stage_07_transformers/MP31_transformer_based_sr_baseline/transformer_based_sr_baseline.ipynb",
+    "source_sha256": "dbe74505107fcddffafd40566f6561ad5646d7010cf82cea5b457637a2f12eb3",
+    "started_at": "2026-10-25T08:02:58.914791+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 6,
+    "finished_at": "2026-10-25T08:03:03.587177+00:00"
+  }
+]

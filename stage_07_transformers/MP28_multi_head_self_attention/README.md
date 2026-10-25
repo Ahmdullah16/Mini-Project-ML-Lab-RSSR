@@ -16,7 +16,7 @@ For N=3,D=4,h=2: two3×2 outputs concatenate to3×4; maps are2×3×3. Four bias-
 
 ## Files and commands
 
-[Implementation](multihead_tools.py) · [Tests](test_multihead_tools.py) · [Experiment](experiment.py) · [Runner](run_notebook.py) · [Validation](VALIDATION.md) · [Canonical notebook](../../notebooks/MP28.ipynb).
+[Implementation](multihead_tools.py) · [Tests](test_multihead_tools.py) · [Experiment](experiment.py) · [Runner](run_notebook.py) · [Validation](VALIDATION.md) · [Canonical notebook](multi_head_self_attention.ipynb).
 
 From repository root in the [development environment](../../docs/setup.md):
 
@@ -55,3 +55,16 @@ All calculations use float64. The experiment is untrained and does not use valid
 ## Reference
 
 Vaswani et al., [Attention Is All You Need](https://arxiv.org/abs/1706.03762), multi-head attention. No full paper reproduction is claimed.
+
+## Project-folder files
+
+This folder now contains the [local notebook](multi_head_self_attention.ipynb), [local tools](multihead_tools.py), [tests](test_multihead_tools.py), [runner](run_notebook.py) and [validation](VALIDATION.md), following MP01's layout. Shared algorithms stay in src/rssr where applicable; local tools expose their API without divergent copies. Original notebooks/ snapshots and historical execution records are retained. This is the canonical notebook location for subsequent work.
+
+From this directory, in the repository development environment:
+
+```bash
+python -m pytest -q test_multihead_tools.py
+python run_notebook.py
+```
+
+File presence does not imply that all scientific or educational criteria are complete. The status and remaining criteria above remain authoritative.

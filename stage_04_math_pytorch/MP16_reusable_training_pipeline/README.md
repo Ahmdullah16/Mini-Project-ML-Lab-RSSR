@@ -36,7 +36,7 @@ Write down variable dimensions and units before coding. Work through one small n
 ## Deliverables
 
 - The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- [Expanded notebook](../../notebooks/MP16.ipynb) and the executable script `scripts/pipeline_experiment.py`.
+- [Expanded notebook](reusable_training_pipeline.ipynb) and the executable script `scripts/pipeline_experiment.py`.
 - An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
 - A short reflection: what was learned, what failed, and the next question.
 
@@ -52,3 +52,16 @@ Write down variable dimensions and units before coding. Work through one small n
 - [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
 - [ ] Document data licenses, environment, limitations, and any deviations from the brief.
 - [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+
+## Project-folder files
+
+This folder now contains the [local notebook](reusable_training_pipeline.ipynb), [local tools](mp16_tools.py), [tests](test_mp16_tools.py), [runner](run_notebook.py) and [validation](VALIDATION.md), following MP01's layout. Shared algorithms stay in src/rssr where applicable; local tools expose their API without divergent copies. Original notebooks/ snapshots and historical execution records are retained. This is the canonical notebook location for subsequent work.
+
+From this directory, in the repository development environment:
+
+```bash
+python -m pytest -q test_mp16_tools.py
+python run_notebook.py
+```
+
+File presence does not imply that all scientific or educational criteria are complete. The status and remaining criteria above remain authoritative.

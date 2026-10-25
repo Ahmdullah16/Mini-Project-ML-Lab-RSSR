@@ -1,0 +1,234 @@
+{
+  "source_hashes": {
+    "reports/submission-study.json": "ea89133e18278674beeafd09458c86ccedbd607738d4ea9bf5b6ea118ee449d1",
+    "reports/development-benchmark.json": "69472bbfd0a628c0ce81bc349d1a7af4a37214eb2b5a6fea834d4117b9c3aac4"
+  },
+  "rows": [
+    {
+      "model": "cnn",
+      "seed": 17,
+      "run_id": "35931a32a3974ba2bdc5e212ee60b0fa",
+      "checkpoint_sha256": "7240cbb0a216c5b89af71f4389e96d08b432a1485bf0c6171e52ba3a4b82d56b",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "model_psnr": 42.55350975489227,
+      "bicubic_psnr": 40.70057468088973,
+      "delta_psnr": 1.8529350740025414,
+      "parameters": 7552,
+      "training_seconds": 5.426200199988671,
+      "config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      }
+    },
+    {
+      "model": "cnn",
+      "seed": 23,
+      "run_id": "a328bb8c59974c20946b4781ad1caf16",
+      "checkpoint_sha256": "39decb07de4d235afd6b5f7e91fd29e7be6a8d0596c6bbd0d53ed65d282e43af",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "model_psnr": 41.98997537390278,
+      "bicubic_psnr": 40.70057468088973,
+      "delta_psnr": 1.289400693013052,
+      "parameters": 7552,
+      "training_seconds": 5.420254900003783,
+      "config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      }
+    },
+    {
+      "model": "cnn",
+      "seed": 41,
+      "run_id": "8a7e8ac6e42a40c99a8288c896da5617",
+      "checkpoint_sha256": "74755fb5b992e9c9e4781b72ae306129760256cae6df2bea3afabc6c5ef55725",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "model_psnr": 42.27101284138756,
+      "bicubic_psnr": 40.70057468088973,
+      "delta_psnr": 1.5704381604978312,
+      "parameters": 7552,
+      "training_seconds": 7.10242000001017,
+      "config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      }
+    },
+    {
+      "model": "transformer",
+      "seed": 17,
+      "run_id": "45f47dd1d2024e6fab978c12e072751b",
+      "checkpoint_sha256": "94a0f664045d0d40de99298051bbd53be175391fe2ed2f9a0a939224efcf718a",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "model_psnr": 41.46576137410781,
+      "bicubic_psnr": 40.70057468088973,
+      "delta_psnr": 0.7651866932180766,
+      "parameters": 5392,
+      "training_seconds": 17.58886910000001,
+      "config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "transformer",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      }
+    },
+    {
+      "model": "transformer",
+      "seed": 23,
+      "run_id": "d2540885f0114c688082b97650617a27",
+      "checkpoint_sha256": "e61d4cefec81a129fb1dff94ec9751fced6b2724e77f258f7485b659bbce2936",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "model_psnr": 41.034242699725176,
+      "bicubic_psnr": 40.70057468088973,
+      "delta_psnr": 0.33366801883544817,
+      "parameters": 5392,
+      "training_seconds": 14.149626900005387,
+      "config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "transformer",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      }
+    },
+    {
+      "model": "transformer",
+      "seed": 41,
+      "run_id": "6096eb29dd6a48b7b42aaf24ac05e134",
+      "checkpoint_sha256": "8e69a1cd46726c44c044ed18bed87e8e3830aa9c7573c1c8948c349299ba92ac",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "model_psnr": 41.4557294971533,
+      "bicubic_psnr": 40.70057468088973,
+      "delta_psnr": 0.7551548162635715,
+      "parameters": 5392,
+      "training_seconds": 22.546465499995975,
+      "config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "transformer",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "model": "cnn",
+      "mean_delta_db": 1.570924642504475,
+      "seed_sd_delta_db": 0.28176750546835394,
+      "parameters": 7552
+    },
+    {
+      "model": "transformer",
+      "mean_delta_db": 0.6180031761056988,
+      "seed_sd_delta_db": 0.2462925514174783,
+      "parameters": 5392
+    }
+  ],
+  "efficiency": [
+    {
+      "bands": 4,
+      "variant": "cnn",
+      "parameters": 7552,
+      "input_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "warmup": 5,
+      "repetitions": 20,
+      "median_seconds": 0.003778200000851939,
+      "p95_seconds": 0.007978860000275746,
+      "sampled_process_peak_rss_bytes": 223006720,
+      "conv_linear_attention_macs": 30670848,
+      "counted_flops_at_2_per_mac": 61341696,
+      "excluded_ops": "normalization, activations, pooling, softmax, interpolation and elementwise operations; not total FLOPs"
+    }
+  ],
+  "benchmark_environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "threads": 2,
+    "dtype": "float32",
+    "gpu_memory": "not applicable; no GPU used"
+  },
+  "protocol": "Existing four-train/four-validation NAIP scenes;16 patches/scene; RGBNIR; synthetic x2 sigma.8 area LR; range1 border2; per-scene aggregation; Adam .001 batch4 L1;1000 updates; min validation L1 checkpoint every100; seeds17/23/41",
+  "scope": "Read-only teaching export of previously executed validation/efficiency; no new training, timing, checkpoint inference or held-out evaluation",
+  "limitations": "Unshifted educational window Transformer, not faithful SwinIR. Equal updates are not equal parameters/time. Seed SD is not geographic confidence. Four validation scenes and no calibrated reflectance. Partial MACs/RSS limitations retained in efficiency rows."
+}

@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Expanded notebook, reusable NumPy implementation, worked solutions, meaningful tests and real training-crop experiments are executed. See [measured evidence](../../reports/mp03-mp04-experiments.json) and [notebook](../../notebooks/MP03.ipynb). Learner mastery remains unassessed.
+Expanded notebook, reusable NumPy implementation, worked solutions, meaningful tests and real training-crop experiments are executed. See [measured evidence](../../reports/mp03-mp04-experiments.json) and [notebook](image_resizing_laboratory.ipynb). Learner mastery remains unassessed.
 
 ## Learning objectives
 
@@ -52,3 +52,16 @@ Write down variable dimensions and units before coding. Work through one small n
 - [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
 - [ ] Document data licenses, environment, limitations, and any deviations from the brief.
 - [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+
+## Project-folder files
+
+This folder now contains the [local notebook](image_resizing_laboratory.ipynb), [local tools](mp03_tools.py), [tests](test_mp03_tools.py), [runner](run_notebook.py) and [validation](VALIDATION.md), following MP01's layout. Shared algorithms stay in src/rssr where applicable; local tools expose their API without divergent copies. Original notebooks/ snapshots and historical execution records are retained. This is the canonical notebook location for subsequent work.
+
+From this directory, in the repository development environment:
+
+```bash
+python -m pytest -q test_mp03_tools.py
+python run_notebook.py
+```
+
+File presence does not imply that all scientific or educational criteria are complete. The status and remaining criteria above remain authoritative.
