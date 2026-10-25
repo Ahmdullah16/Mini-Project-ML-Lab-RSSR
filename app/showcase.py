@@ -9,6 +9,7 @@ import streamlit as st
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'app'))
 from rssr.evidence import build_index
+from rssr.interpretation import explain_selection, metric_definition
 from rssr.build_info import build_identity
 REPO='https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR'
 SECTIONS=['Overview','Live SR','Results','Methodology & Data','Mini-projects','Satellite Explorer','Downloads & Reproducibility']
@@ -48,18 +49,51 @@ def metric_chart(frame, title):
         tooltip=['model:N', 'value:Q'])
     st.altair_chart(chart, width='stretch')
 
+def navigate(section):
+    st.session_state['section']=section
+
+def explain_results(frame):
+    explanation=explain_selection(frame.to_dict('records'))
+    if not explanation['available']:
+        st.info(explanation.get('message','Values unavailable.'));return
+    st.markdown('**Question:** '+explanation['question'])
+    st.write(explanation['explanation'])
+    st.caption('Direction: '+explanation['direction']+'. Horizontal axis: '+explanation['context']['unit']+'; vertical axis: model. Blue bars identify recorded means, not confidence or quality categories.')
+    st.markdown('**Observed in this selection:** '+explanation['observation'])
+    with st.expander('Inputs, aggregation, source records and limits'):
+        st.write(explanation['context'])
+        st.write(explanation['aggregation']);st.write(explanation['limits'])
+        for source in explanation['sources']:
+            st.markdown(f'[{source}]({REPO}/blob/main/{source})')
+    with st.expander('Metric mathematics and a controlled numerical example'):
+        st.latex(r'\mathrm{MSE}=\frac{1}{N}\sum_i(\hat{x}_i-x_i)^2,\quad \mathrm{RMSE}=\sqrt{\mathrm{MSE}},\quad \mathrm{MAE}=\frac{1}{N}\sum_i|\hat{x}_i-x_i|')
+        st.latex(r'\mathrm{PSNR}=10\log_{10}(L^2/\mathrm{MSE})')
+        st.write('N counts valid scalar samples, including channels. L is the declared range, not an image maximum. Exact equality gives zero error and infinite PSNR; an empty valid mask is undefined. Nonfinite inputs must be rejected or masked before computation.')
+        st.latex(r'\mathrm{SSIM}=\frac{(2\mu_x\mu_y+C_1)(2\sigma_{xy}+C_2)}{(\mu_x^2+\mu_y^2+C_1)(\sigma_x^2+\sigma_y^2+C_2)}')
+        st.write('μ denotes local mean, σ² population variance and σxy population covariance. Shared evaluator: uniform 7×7 fully valid windows, C1=(0.01L)², C2=(0.03L)², then average over windows and channels. An undersized/no-valid-window result is unavailable.')
+        st.latex(r'\mathrm{SAM}=\arccos\!\left(\frac{x\cdot\hat{x}}{\|x\|\,\|\hat{x}\|}\right)')
+        st.write('SAM averages radians over valid spectral vectors; zero-norm products ≤1e-12 are excluded. Cosines are clipped to [-1,1]. RGB display values do not establish calibrated multispectral reflectance.')
+        st.latex(r'\Delta\mathrm{PSNR}=\mathrm{PSNR}_{model}-\mathrm{PSNR}_{bicubic},\quad \mathrm{RMSE\ reduction}=100\frac{\mathrm{RMSE}_{bicubic}-\mathrm{RMSE}_{model}}{\mathrm{RMSE}_{bicubic}}')
+        st.write('RMSE percentage is unavailable when the baseline denominator is zero. A percentage of a dB value is not a meaningful quality improvement. Mean PSNR cannot be inverted into mean MSE.')
+        st.write('Controlled teaching example (not a research observation): x=[0.1,0.2], prediction=[0.2,0.2], two valid scalar samples, L=1. MSE=(0.1²+0²)/2=0.005; RMSE≈0.07071; MAE=0.05; PSNR≈23.0103 dB. This calculation requires a genuine aligned reference when used on images.')
+
 if section=='Overview':
     st.title('More pixels. Measured evidence.')
     st.markdown('Explore how convolution, attention and windowed Transformers reconstruct detail in remote-sensing imagery—and where the evidence stops.')
+    st.write('Research question: under the same synthetic degradation and validation budget, does combining CNN, attention and Transformer features improve reconstruction over simpler baselines?')
+    for col,label,target in zip(st.columns(3),['Try inference','Explore results','Read methodology'],['Live SR','Results','Methodology & Data']):
+        col.button(label,on_click=navigate,args=(target,),width='stretch')
     a,b,c=st.columns(3)
-    a.metric('Frozen test scenes','1',help='One held-out NAIP aerial scene; 16 fixed patches. Not broad geographic validation.')
-    b.metric('Development run records','36',help='Includes six reused runs; not 36 new training jobs.')
+    frozen_rows=[r for r in index['rows'] if r['study']=='Frozen held-out evaluation']
+    a.metric('Frozen test scenes',max(r['scenes'] for r in frozen_rows),help='Count from frozen source records; not summed across models.')
+    b.metric('Development run records',len({r['run_id'] for r in index['rows'] if r['study']=='Development seed summaries'}),help='Distinct source run IDs; includes reused runs, not all new training jobs.')
     expanded=sum(not p['status'].startswith('Introductory') for p in index['projects'])
     c.metric('Expanded lessons',f'{expanded} / 40',help='See each project for criterion-level completion; learner mastery remains unassessed.')
     st.subheader('What the experiments support')
     test=pd.DataFrame([r for r in index['rows'] if r['study']=='Frozen held-out evaluation' and r['bands']==3 and r['metric']=='psnr'])
     metric_chart(test, 'PSNR · dB')
     st.caption('RGB · test · synthetic NAIP x2 · one scene / 16 patches · range 1, border 2. Official SwinIR has different pretraining. Higher PSNR is better; bars are not uncertainty intervals.')
+    explain_results(test)
     st.info('CNN and hybrid are effectively tied in this small experiment. More elaborate architecture does not establish superiority or novelty.')
     left,right=st.columns(2)
     with left:
@@ -67,13 +101,18 @@ if section=='Overview':
         st.caption('Compact educational architecture; not an exact RCAN, CBAM or SwinIR reproduction.')
     with right:
         st.subheader('Completion, without shortcuts')
-        st.markdown(f'**Engineering:** public hybrid inference recorded; stateless service.\n\n**Education:** {expanded} lessons expanded; inspect project-specific completion criteria.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
+        st.markdown(f'**Engineering:** historical public hybrid inference recorded; current public access unverified. Stateless service.\n\n**Education:** {expanded} lessons expanded; inspect project-specific completion criteria.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
     with st.expander('Why remote sensing needs more than sharper previews'):
         st.write('Generated texture can look convincing without matching the ground. Sensor response, registration, sampling and physical calibration matter. Display previews and synthetic PSNR do not establish reflectance or downstream accuracy.')
 elif section=='Live SR':
     st.title('Inspect a reconstruction');st.caption('Choose a genuine checkpoint and compare a shared crop. Uploads without references receive no invented accuracy metrics.')
-    from inference_ui import render_live
-    render_live()
+    workflow=st.radio('Inference workflow',['Single model','Compare models'],horizontal=True,key='inference_workflow')
+    if workflow=='Single model':
+        from inference_ui import render_live
+        render_live()
+    else:
+        from compare_ui import render_compare
+        render_compare()
 elif section=='Results':
     st.title('The evidence, including the misses')
     st.caption('Each view retains its study, split, bands and protocol. Historical pilots and teaching reconstruction are not frozen test results.')
@@ -84,10 +123,13 @@ elif section=='Results':
         a,b=st.columns(2);bands=a.selectbox('Bands',sorted(frame.bands.unique()),format_func=lambda n:'RGB' if n==3 else 'RGB + NIR');frame=frame[frame.bands==bands]
         metric=b.selectbox('Metric',list(dict.fromkeys(frame.metric)));frame=frame[frame.metric==metric]
         condition=st.selectbox('Condition',list(dict.fromkeys(frame.condition)));frame=frame[frame.condition==condition]
+        task=st.selectbox('Task',list(dict.fromkeys(frame.task)));frame=frame[frame.task==task]
+        protocol=st.selectbox('Protocol',list(dict.fromkeys(frame.protocol)));frame=frame[frame.protocol==protocol]
         query=st.text_input('Search model or source run',placeholder='hybrid, bicubic, run ID…')
         if query:frame=frame[frame.model.str.contains(query,case=False,regex=False)|frame.run_id.fillna('').str.contains(query,case=False,regex=False)]
         if frame.empty:st.info('No recorded values match. Clear the search to restore the table.')
         else:
+            explain_results(frame)
             metric_chart(frame.groupby('model',sort=False).value.mean().reset_index(), metric+' · '+frame.iloc[0]['unit'])
             st.caption(f"{frame.iloc[0]['unit']} · {frame.iloc[0]['split']} · {frame.iloc[0]['task']} · {frame.iloc[0]['dataset']}. Chart averages displayed rows; the table retains every source record. Do not pool different studies.")
             st.dataframe(frame[['model','value','unit','split','scenes','tiles','seed','run_id','condition','protocol','source']],hide_index=True,width='stretch')
@@ -102,6 +144,9 @@ elif section=='Results':
         curves['series']=curves.model+' · seed '+curves.seed.astype(str)
         st.line_chart(curves.pivot(index='step',columns='series',values=metric))
         st.caption('Recorded MP26 development: 1000 steps, Adam .001, batch 4, seeds 17/23/41. Training points are minibatch losses; validation selects checkpoints. No test tuning.')
+        st.write(metric_definition(metric)['explanation'])
+        st.caption('Question: how does the recorded loss change over optimizer steps? Horizontal axis: step; vertical axis: normalized-DN absolute error. Each colored line is one model/seed, not a confidence interval. Compare training and validation trends before claiming overfitting; these views alone do not establish its cause.')
+        st.markdown(f'[Curve source]({REPO}/blob/main/reports/mp26-attention-sr.json)')
     else:
         query=st.text_input('Search recorded artifacts',placeholder='ablation, pilot, mp…')
         artifacts=[a for a in index['artifacts'] if query.lower() in a['path'].lower()]

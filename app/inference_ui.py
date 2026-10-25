@@ -74,6 +74,8 @@ def render_live():
         result=st.session_state['result']
         st.subheader('Latest completed inference')
         st.caption('Result model: '+result['metadata'].get('model_name','Original CNN pilot'))
+        st.write(f"RGB input: {result['input'].shape[1]}×{result['input'].shape[0]} pixels → SR: {result['sr'].shape[1]}×{result['sr'].shape[0]} pixels. ×2 doubles each spatial dimension; it does not establish recovered physical detail.")
+        st.caption('LR is the supplied low-resolution image. Bicubic is fixed interpolation; the CNN or hybrid estimates a learned correction. All panels show the same spatial crop. Without an aligned HR reference, apparent sharpness is not accuracy and no PSNR/SSIM is reported.')
         enhance=st.checkbox('Enhance preview contrast (does not change inference or downloads)',value=True)
         low,high=np.percentile(result['input'],[2,98])
         zoom=st.slider('Synchronized zoom',1,4,1)
@@ -101,6 +103,10 @@ def render_satellite():
     CONFIG=model_choice()
     st.caption('Explicit provider request; up to 32 MB, one 256×256 RGB display crop. Item-level cloud filtering only. Cross-sensor quality is unvalidated. No HR reference metrics are available. Results remain temporary.')
     bbox=st.text_input('AOI west,south,east,north',value='-114,43,-113.9,43.1')
+    with st.expander('How to interpret satellite inputs and outputs'):
+        st.write('AOI is a longitude/latitude bounding box in degrees. The raster CRS defines map coordinates; pixel size is measured in its CRS units. The output GeoTIFF preserves georeferencing with a finer sampling grid, not proven finer physical resolution.')
+        st.write('Acquisition is when the sensor observed the scene; retrieval/refresh is when this request obtained it. A current request can return an older acquisition. Cached examples are labeled separately. The cloud limit is item-level filtering, not a per-pixel cloud mask; nodata identifies invalid samples, not all clouds.')
+        st.write('The RGB display uses three bands and a preview stretch. Downloads preserve output values and provenance. Models were developed on synthetic NAIP aerial data; real satellite cross-sensor accuracy remains unvalidated.')
     today=datetime.now(timezone.utc).date()
     start=st.date_input('Acquisition start',value=today-timedelta(days=30))
     end=st.date_input('Acquisition end',value=today)

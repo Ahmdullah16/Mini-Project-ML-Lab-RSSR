@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-25",
+  "scope": "local browser localhost:8521; not public deployment",
+  "computed_models": 3,
+  "input_sha256": "628cc501aff6d92bea3bd84b92b437c3e7fdc574a500365e1815a855f4eab48c",
+  "zip_entries": 6,
+  "zip_integrity": "read successfully; 3 model outputs + LR + bicubic + provenance",
+  "preview": "matched panel layout inspected; fixed display output is dark; optional shared LR-derived contrast explicitly selectable",
+  "quality_gain": "not evaluated; no HR reference"
+}

@@ -1,58 +1,37 @@
 # MP32 — Satellite Image Explorer
 
-**Status: In progress** · **Curriculum: proposed for review**
+**Status: Complete (implementation and teaching deliverables)** · Learner mastery unassessed.
 
-[Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
+[Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+## Objective and prerequisites
 
-## Learning objectives
+Interpret bands, spatial resolution, GeoTIFF metadata, affine coordinates and nodata before super-resolution. Prerequisite: [MP31](../../stage_07_transformers/MP31_transformer_based_sr_baseline/README.md). The openly licensed example is NAIP aerial imagery, explicitly not satellite evidence.
 
-- Satellite bands, spatial resolution, GeoTIFF and raster metadata.
-- Explain the mathematical model below and its assumptions in your own words.
-- Interpret the planned comparison using evidence and identify a limitation.
+## Mathematics and conventions
 
-## Prerequisites
+Arrays use CHW band/row/column order. Pixel centers map through x=a(c+0.5)+b(r+0.5)+c₀, y=d(c+0.5)+e(r+0.5)+f₀. CRS units are preserved. With 10-m north-up pixels and corner (100,200), row2/column3 maps to (135,175). Per-band means include only masked-valid finite samples; empty means are unavailable. Nodata is not a cloud mask. The notebook includes hand examples, exercises and separate solutions.
 
-[MP31 — Transformer-Based SR Baseline](../../stage_07_transformers/MP31_transformer_based_sr_baseline/README.md) and the earlier foundations in the roadmap.
+## Executed experiment and outputs
 
-Read the root setup guide. Use synthetic inputs first and document any external dataset source, license, and preprocessing. References are reading suggestions; a compact educational model need not reproduce a full published architecture.
+Synthetic masked two-band fixture first; then a SHA-256-verified cached NAIP training raster, bounded 128×128 crop at column238/row238. [Experiment](experiment.py) records geometry, band statistics, license, source and environment in [measured JSON](../../reports/mp32-raster-explorer.json). [Figure](../../reports/mp32-band-views.png) compares RGB, NIR/red/green false colour and labeled band distributions. Reproduce with `python experiment.py` after restoring the pinned training raster; no automatic downloads. Run `python run_notebook.py` to execute the lesson from recorded evidence.
 
-## Mathematics
+## Interpretation and limitations
 
-Interpret affine pixel-to-map transforms, coordinate reference systems, nodata masks, and band statistics.
+Band means and histograms describe this crop only. NIR/red/green assigns NIR to screen red; color differences do not establish vegetation health or model accuracy. Fixed DN/10000 preview scaling is not verified reflectance. CRS/transform must change consistently with resampling; ×2 pixel density does not prove recovered physical detail. Acquisition and retrieval dates are different. This is historical aerial imagery, not fresh satellite acquisition, cloud-free evidence or cross-sensor validation. These conventions feed MP33 preprocessing and MP34 paired data.
 
-Write down variable dimensions and units before coding. Work through one small numerical example and define edge cases; equations here specify topics to study, not measured results.
+## Completion criteria and validation
 
-## Experiments
-
-**Planned; not run.** Inspect one openly licensed raster and a synthetic georeferenced fixture; deliver a metadata sheet and masked band visualizations.
-
-1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
-2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
-3. Record settings, seeds, package versions, runtime/device, and observations. Training projects must keep validation and held-out test data separate.
-4. Compare outcomes, explain failure cases, and record limitations. Do not tune on the test set.
-- Remote sensing: preserve CRS, affine transform, band meaning, nodata, physical units, and source licenses. Split by region/scene before tiling.
-
-## Deliverables
-
-- The project-specific plots, tables, specifications, or reports named in the experiment above, when the project is implemented.
-- A documented script or notebook and exact run command added during implementation; none is supplied in this scaffold.
-- An experiment record with data provenance, configuration, checks, results, and interpretation. Keep large data, weights, and generated artifacts outside Git; link a reproducible artifact manifest instead.
-- A short reflection: what was learned, what failed, and the next question.
+- [x] Explain affine coordinates, units, masks and band semantics with numerical examples.
+- [x] Execute deterministic synthetic checks and pinned licensed-raster inspection.
+- [x] Test coordinate centers/corners, window bounds, per-band nodata, nonfinite and empty-mask handling.
+- [x] Produce metadata sheet, masked band views and measured distributions with limitations.
+- [x] Record license, source checksum, environment, rerun commands, exercises and solutions.
+- [x] Link [validation](VALIDATION.md) and progress; keep learner mastery unassessed.
 
 ## References
 
-- [Stage reference: Remote sensing](https://rasterio.readthedocs.io/en/stable/)
-
-## Completion criteria
-
-- [ ] Explain the learning objectives and solve the small mathematical example.
-- [ ] Implement and run the planned experiment with a documented command and reproducible inputs.
-- [ ] Verify relevant numerical, shape, and edge-case checks; record the actual outcomes.
-- [ ] Produce the project-specific deliverables and interpret the baseline comparison without unsupported claims.
-- [ ] Document data licenses, environment, limitations, and any deviations from the brief.
-- [ ] Link evidence in the progress tracker and change status only after all criteria are met.
+[Rasterio georeferencing](https://rasterio.readthedocs.io/en/stable/topics/georeferencing.html) · [Rasterio masks](https://rasterio.readthedocs.io/en/stable/topics/masks.html) · [Pinned dataset manifest](../../configs/naip-pilot-manifest.json).
 
 ## Project-folder files
 

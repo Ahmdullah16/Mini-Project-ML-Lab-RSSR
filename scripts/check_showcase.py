@@ -9,11 +9,23 @@ sys.path.insert(0,str(root/'src'))
 sections=['Overview','Live SR','Results','Methodology & Data','Mini-projects','Satellite Explorer','Downloads & Reproducibility']
 with patch('urllib.request.urlopen',side_effect=AssertionError('Network access on navigation')):
     app=AppTest.from_file(str(root/'app/streamlit_app.py'),default_timeout=60).run()
+    app.button[0].click().run()
+    assert app.radio(key='section').value=='Live SR'
     for section in sections:
         print('Checking',section,flush=True)
         app.radio(key='section').set_value(section).run(timeout=60)
         assert not app.exception and not app.error,(section,app.exception,app.error)
     app.radio(key='section').set_value('Results').run(timeout=60)
+    def choose(label,value):
+        next(w for w in app.selectbox if w.label==label).set_value(value).run()
+    choose('Study','CPU efficiency')
+    choose('Metric','sampled_process_peak_rss_bytes')
+    assert any('Not exact allocator peak' in w.value for w in app.markdown)
+    choose('Study','Teaching experiments')
+    assert any(w.label=='Protocol' for w in app.selectbox)
+    choose('Study','Frozen held-out evaluation')
+    choose('Metric','sam_rad')
+    assert any('norm products' in w.value for w in app.markdown)
     app.text_input[0].set_value('no-such-model-xyz').run()
     assert not app.exception and any('No recorded values' in i.value for i in app.info)
     app.radio(key='result_view').set_value('Learning curves').run()

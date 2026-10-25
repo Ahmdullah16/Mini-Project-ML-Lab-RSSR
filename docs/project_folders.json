@@ -348,7 +348,7 @@
     "tests": [
       "test_mp32_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Complete implementation and teaching deliverables; learner mastery unassessed"
   },
   {
     "id": "MP33",
