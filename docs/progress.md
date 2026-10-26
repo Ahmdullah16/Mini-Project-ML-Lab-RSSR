@@ -1,3 +1,7 @@
+# Evidence-derived paper milestone — 2026-10-26
+
+PR23 passed CI40280953883 and was externally merged at dffe38c; integrated locally at951aab0. [Working IEEE-style paper](../paper/README.md) now separates historical pilot, geographic validation, frozen single-scene test and unexecuted v2 design. Four tables and numerical interpretation are generated from unchanged source JSON, with hashes and row pointers in [paper evidence](../reports/paper-evidence.json). Three generator/provenance tests passed; seven claim-source hashes and891 relative links passed. No new training, imagery transfer or test inference ran. Built-in LaTeX first compilation timed out during compiler package/font initialization; retry requested; PDF compilation/layout remain unverified. Submission remains incomplete.
+
 # MP36 numerical evidence milestone — 2026-10-26
 
 PR22 passed CI40280123380 and was externally merged. MP36 remains **In progress**: seven numerical tests, analytical report and four-code-cell real notebook passed, illustrating registration/calibration/spectral mismatch without claiming sensor evaluation. [Evidence](../reports/mp36-numerical-examples.json), [validation](../stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/VALIDATION.md). WorldStrat v1.1 source-size audit added. Official SEN2VENµS paper/correction direct retrieval returned429; methodology gate remains open. No archives/training/frozen evaluation ran.

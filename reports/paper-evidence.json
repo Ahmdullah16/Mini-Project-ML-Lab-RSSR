@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "kind": "derived_tables_not_new_experiments",
+  "sources": {
+    "reports/ablation-pilot-runs.json": {
+      "sha256_utf8_lf": "8a1cb548e39aaa530783bb1d63407914446bd85c8632bc710beb995c827a485e"
+    },
+    "reports/geographic-study.json": {
+      "sha256_utf8_lf": "369d8fa4228ce1ade2b7f561c8840a9748b7c8944ef7306508486e4dff987420"
+    },
+    "reports/final-heldout.json": {
+      "sha256_utf8_lf": "5c92d4d172e41f6798ed4668f504ec89d0590b12c2580620ca1b769eb27f56b9"
+    },
+    "references.bib": {
+      "sha256_utf8_lf": "489dc284f5cd8bff0b0696c3ae63d0c2c061ee77f67d8ded423c39656914f652"
+    }
+  },
+  "rows": [
+    {
+      "table": "pilot",
+      "row": "cnn",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/0",
+        "/1",
+        "/2"
+      ],
+      "mean_psnr_db": 36.480696951288984,
+      "sample_seed_sd_db": 1.4000200202531432
+    },
+    {
+      "table": "pilot",
+      "row": "cnn_attention",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/3",
+        "/4",
+        "/5"
+      ],
+      "mean_psnr_db": 42.54243778890862,
+      "sample_seed_sd_db": 0.7804546708861944
+    },
+    {
+      "table": "pilot",
+      "row": "cnn_transformer",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/6",
+        "/7",
+        "/8"
+      ],
+      "mean_psnr_db": 38.752372422070195,
+      "sample_seed_sd_db": 1.1036282121846217
+    },
+    {
+      "table": "pilot",
+      "row": "hybrid",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/9",
+        "/10",
+        "/11"
+      ],
+      "mean_psnr_db": 43.68694359735831,
+      "sample_seed_sd_db": 0.3710629175467333
+    },
+    {
+      "table": "pilot",
+      "row": "hybrid_add",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/12",
+        "/13",
+        "/14"
+      ],
+      "mean_psnr_db": 42.54399542451452,
+      "sample_seed_sd_db": 0.22765141116430826
+    },
+    {
+      "table": "pilot",
+      "row": "hybrid_consistency",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/21",
+        "/22",
+        "/23"
+      ],
+      "mean_psnr_db": 43.67341051705313,
+      "sample_seed_sd_db": 0.3570636142966582
+    },
+    {
+      "table": "pilot",
+      "row": "hybrid_constant_gate",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/18",
+        "/19",
+        "/20"
+      ],
+      "mean_psnr_db": 45.06246214302649,
+      "sample_seed_sd_db": 0.15387746826819523
+    },
+    {
+      "table": "pilot",
+      "row": "hybrid_gate",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/15",
+        "/16",
+        "/17"
+      ],
+      "mean_psnr_db": 45.21218571206863,
+      "sample_seed_sd_db": 0.09525680023892086
+    },
+    {
+      "table": "pilot",
+      "row": "bicubic",
+      "source": "reports/ablation-pilot-runs.json",
+      "pointers": [
+        "/0/bicubic_psnr",
+        "/1/bicubic_psnr",
+        "/2/bicubic_psnr",
+        "/3/bicubic_psnr",
+        "/4/bicubic_psnr",
+        "/5/bicubic_psnr",
+        "/6/bicubic_psnr",
+        "/7/bicubic_psnr",
+        "/8/bicubic_psnr",
+        "/9/bicubic_psnr",
+        "/10/bicubic_psnr",
+        "/11/bicubic_psnr",
+        "/12/bicubic_psnr",
+        "/13/bicubic_psnr",
+        "/14/bicubic_psnr",
+        "/15/bicubic_psnr",
+        "/16/bicubic_psnr",
+        "/17/bicubic_psnr",
+        "/18/bicubic_psnr",
+        "/19/bicubic_psnr",
+        "/20/bicubic_psnr",
+        "/21/bicubic_psnr",
+        "/22/bicubic_psnr",
+        "/23/bicubic_psnr"
+      ],
+      "psnr_db": 45.8104369217606
+    },
+    {
+      "table": "geographic_validation",
+      "row": "cnn",
+      "source": "reports/geographic-study.json",
+      "pointers": [
+        "/0",
+        "/1",
+        "/2"
+      ],
+      "mean_scene_delta_db": 1.570924642504475,
+      "sample_seed_sd_db": 0.28176750546835394
+    },
+    {
+      "table": "geographic_validation",
+      "row": "hybrid",
+      "source": "reports/geographic-study.json",
+      "pointers": [
+        "/3",
+        "/4",
+        "/5"
+      ],
+      "mean_scene_delta_db": 1.3336957617994483,
+      "sample_seed_sd_db": 0.2736584103409262
+    },
+    {
+      "table": "frozen_3_band",
+      "row": "bicubic",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/6"
+      ],
+      "psnr_db": 48.51827441928921,
+      "ssim": 0.9817471643099488
+    },
+    {
+      "table": "frozen_3_band",
+      "row": "bilinear",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/7"
+      ],
+      "psnr_db": 47.41424529496561,
+      "ssim": 0.9765008278894128
+    },
+    {
+      "table": "frozen_3_band",
+      "row": "cnn",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/8"
+      ],
+      "psnr_db": 50.261407288105204,
+      "ssim": 0.988360623677574
+    },
+    {
+      "table": "frozen_3_band",
+      "row": "hybrid",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/9"
+      ],
+      "psnr_db": 50.24594942532963,
+      "ssim": 0.9883415401824337
+    },
+    {
+      "table": "frozen_3_band",
+      "row": "nearest",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/10"
+      ],
+      "psnr_db": 47.63789058577291,
+      "ssim": 0.978194033110036
+    },
+    {
+      "table": "frozen_3_band",
+      "row": "official_swinir",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/11"
+      ],
+      "psnr_db": 48.98966276703189,
+      "ssim": 0.9849111140638542
+    },
+    {
+      "table": "frozen_4_band",
+      "row": "attention",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/0"
+      ],
+      "psnr_db": 46.61039612754235,
+      "ssim": 0.9806664096960139
+    },
+    {
+      "table": "frozen_4_band",
+      "row": "bicubic",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/1"
+      ],
+      "psnr_db": 44.76438198186202,
+      "ssim": 0.9689368649709161
+    },
+    {
+      "table": "frozen_4_band",
+      "row": "bilinear",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/2"
+      ],
+      "psnr_db": 43.65501460779061,
+      "ssim": 0.9600262893700267
+    },
+    {
+      "table": "frozen_4_band",
+      "row": "cnn",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/3"
+      ],
+      "psnr_db": 46.458980557477936,
+      "ssim": 0.9800813183896947
+    },
+    {
+      "table": "frozen_4_band",
+      "row": "hybrid",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/4"
+      ],
+      "psnr_db": 46.23964825114393,
+      "ssim": 0.9788706447120977
+    },
+    {
+      "table": "frozen_4_band",
+      "row": "nearest",
+      "source": "reports/final-heldout.json",
+      "pointers": [
+        "/summary/5"
+      ],
+      "psnr_db": 43.85848706532964,
+      "ssim": 0.9635437629633047
+    }
+  ],
+  "frozen_protocol_hash": "1b2e0f441cdca1810e5f108682d34c4d593586696690d18b44c9507e2051b418",
+  "freeze_commit": "91097668966bfa970e87cf1460139aca77b3c19a",
+  "limitations": [
+    "No new inference or training",
+    "No cross-sensor evidence",
+    "Seed SD is not geographic uncertainty",
+    "Separate band protocols",
+    "Source dirty-worktree flags and checkpoint hashes remain in source records"
+  ]
+}
