@@ -1,3 +1,7 @@
+# Research design and CI repair — 2026-10-26
+
+[Research questions](research_questions.md) and [protocol v2](protocol-v2.md) committed before new test inspection; execution remains gated. [Claim/evidence register](claim_evidence.json) pins7 source records with limitations. MP36 official-source review advanced to SEN2VENµS v2; no archives/training executed. PR21's tests job passed but Streamlit failed on a stale selector in the catalog validation script. Corrected keyed-control catalog check passed locally for all3 models; [new evidence](../reports/scale-model-catalog-check.json). Replacement CI pending; external merge is not a passing-CI claim.
+
 # Exact-scale execution milestone — 2026-10-26
 
 Implemented the corrected maximum INPUT contract (each side1..1024) and visible ×2/4/8/16/32/64 choices across the scale workflows. Explicit native ×2 cascades write incremental BigTIFF stages; preflight shows exact dimensions, pixels and configured estimates. Streamlit rejects above1,048,576 output pixels without resizing and exports exact-input/model local jobs. Scientific GeoTIFF remains float32; display cascades explicitly quantize between stages. [Execution guide](scale-execution.md).
