@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "scope": "paper build, not scientific acceptance",
+  "compiler": {
+    "tool": "compile_latex_document",
+    "kind": "success",
+    "message": "The current source compiled successfully with the desktop editor's compiler.",
+    "previous_attempt": "timed out during compiler package/font initialization",
+    "interrupted_retry": "result unavailable after turn interruption"
+  },
+  "source_sha256_utf8_lf": {
+    "paper/main.tex": "1e914bb69c39c01e4e0345cf2b2b2b5b2a248b52b0ddb5eb3c0b307f8e1e352e",
+    "paper/generated/results.tex": "60fb030b6d5abb83734268cd9ea940adfc59dbf9cf5b1111363484ed1204d957",
+    "paper/generated/interpretation.tex": "6fe1975845d615bc33e7067a5e1049e52e01a6fb49286c69d6bd5492e8e80af5",
+    "paper/references.bib": "489dc284f5cd8bff0b0696c3ae63d0c2c061ee77f67d8ded423c39656914f652"
+  },
+  "local_validation": {
+    "targeted_tests": 3,
+    "generated_files_check": "passed",
+    "claim_hashes": 7,
+    "relative_links": 891
+  },
+  "ci": {
+    "pr": 24,
+    "head": "c9cf4eabcb422a42dc0b70232e815d9f40fe6d29",
+    "run": 40282443346,
+    "conclusion": "success"
+  },
+  "not_verified": [
+    "PDF visual layout review",
+    "submission readiness",
+    "new geographic or cross-sensor study",
+    "current public deployment"
+  ]
+}

@@ -1,6 +1,10 @@
+# Cross-sensor intake milestone — 2026-10-26
+
+[Compatibility matrix and resource proposal](cross-sensor-intake.md) now distinguish verified source statements from pair-level unknowns. Metadata-only admission CLI passed21 targeted synthetic tests. No imagery download, registration fitting or new accuracy study ran. MP36 remains In progress; publisher access, calibration/registration policy and resource approval remain gates. Existing paper and frozen results preserved.
+
 # Evidence-derived paper milestone — 2026-10-26
 
-PR23 passed CI40280953883 and was externally merged at dffe38c; integrated locally at951aab0. [Working IEEE-style paper](../paper/README.md) now separates historical pilot, geographic validation, frozen single-scene test and unexecuted v2 design. Four tables and numerical interpretation are generated from unchanged source JSON, with hashes and row pointers in [paper evidence](../reports/paper-evidence.json). Three generator/provenance tests passed; seven claim-source hashes and891 relative links passed. No new training, imagery transfer or test inference ran. Built-in LaTeX first compilation timed out during compiler package/font initialization; retry requested; PDF compilation/layout remain unverified. Submission remains incomplete.
+PR23 passed CI40280953883 and was externally merged at dffe38c; integrated locally at951aab0. [Working IEEE-style paper](../paper/README.md) now separates historical pilot, geographic validation, frozen single-scene test and unexecuted v2 design. Four tables and numerical interpretation are generated from unchanged source JSON, with hashes and row pointers in [paper evidence](../reports/paper-evidence.json). Three generator/provenance tests passed; seven claim-source hashes and891 relative links passed. No new training, imagery transfer or test inference ran. Desktop LaTeX compilation subsequently passed; PDF visual layout remains unverified. PR24 passed CI40282443346 and was externally merged07d9002. Build evidence: reports/paper-build-validation.json. Submission remains incomplete.
 
 # MP36 numerical evidence milestone — 2026-10-26
 
