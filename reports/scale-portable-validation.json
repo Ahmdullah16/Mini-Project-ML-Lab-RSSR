@@ -1,0 +1,12 @@
+{
+  "scope": "Actual cached pilot; synthetic 5x3 input; no public server.",
+  "portable_job_dry_run_no_output": true,
+  "portable_job_x8_output": [
+    40,
+    24
+  ],
+  "gradio_callback_x4_output": [
+    20,
+    12
+  ]
+}

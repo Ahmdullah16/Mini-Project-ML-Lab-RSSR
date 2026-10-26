@@ -122,3 +122,8 @@ Each title links to a brief covering learning objectives, prerequisites, mathema
 | MP39 | [Controlled Ablation Study](stage_09_hybrid_research/MP39_controlled_ablation_study/README.md) | CNN, CNN + Attention, CNN + Transformer, full hybrid. |
 | MP40 | [Robustness and Efficiency Benchmark](stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/README.md) | Blur, noise, cross-sensor shift, parameters, FLOPs, inference time and GPU memory. |
 
+
+
+### Exact-scale inference
+
+Input width and height may each be up to1024, including odd rectangles. Select ×2/4/8/16/32/64 with an exact dimensions/resource plan before execution. Large requests use disk-backed native ×2 cascades and portable local/Colab jobs. See [scale execution and validation](docs/scale-execution.md). Additional pixels do not establish recovered detail; hosted execution has a configured output-pixel limit.

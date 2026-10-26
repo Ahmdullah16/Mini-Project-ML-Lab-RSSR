@@ -36,7 +36,7 @@ The pilot is not a final research model. Its public example was acquired on 2021
 
 ## Limits and recovery
 
-Uploads accept opaque RGB/grayscale PNG or JPEG, at most 512 pixels per side and 8 MB. Inference uses 128-pixel tiles with a 32-pixel halo and serialized CPU access. The optional Sentinel workflow explicitly queries a bounded interval and AOI, downloads at most 32 MB, validates masks/bands/CRS, then offers a GeoTIFF and provenance. Its SQLite scratch directory is removed after the request; acquisition, ingestion, inference and refresh timestamps remain in the downloadable metadata.
+Uploads accept opaque RGB/grayscale PNG or JPEG, at most 1024 pixels per side and 8 MB (arbitrary rectangular/odd shapes). Inference uses 128-pixel tiles with a 32-pixel halo and serialized CPU access. The optional Sentinel workflow explicitly queries a bounded interval and AOI, downloads at most 32 MB, validates masks/bands/CRS, then offers a GeoTIFF and provenance. Its SQLite scratch directory is removed after the request; acquisition, ingestion, inference and refresh timestamps remain in the downloadable metadata.
 
 Clear the app's temporary result or restart the app to discard a session. A restart can rebuild public model/example caches. If GitHub artifact access is unavailable or checksum validation fails, the UI reports failure instead of substituting random weights. A provider failure does not become a successful fresh-data result.
 
@@ -57,3 +57,8 @@ Install the optional SDKs only when enabling this adapter: `python -m pip instal
 ## Frozen RGB model catalog
 
 `configs/hosted-models.json` pins genuine CNN/hybrid inference-only checkpoints at immutable artifact commit b21b797a2c43f3a45879cd6778be4cd81600f2e7, preserving original training-checkpoint provenance. The original pilot remains the default. `python scripts/check_model_catalog.py` downloads/verifies every model in an empty temporary cache and executes sample plus maximum 512-pixel CPU inference. See `reports/model-catalog-check.json`; RSS is sampled after inference, not a guaranteed peak. None of this claims local SQLite survives host restarts.
+
+
+## Exact scale execution (2026-10-26)
+
+The upload/compare workflow now requires preflight and exposes ×2 through ×64. The configured free-host limit is 1,048,576 output pixels per model; larger requests export a portable job without changing input or requested scale. Full-resolution BigTIFF stages are disk-backed and previews bounded. See [scale execution](scale-execution.md). Prior 512-input tests above are historical evidence, not the new maximum-input contract. This rollout is locally verified, not publicly deployed.

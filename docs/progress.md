@@ -1,3 +1,13 @@
+# Exact-scale execution milestone — 2026-10-26
+
+Implemented the corrected maximum INPUT contract (each side1..1024) and visible ×2/4/8/16/32/64 choices across the scale workflows. Explicit native ×2 cascades write incremental BigTIFF stages; preflight shows exact dimensions, pixels and configured estimates. Streamlit rejects above1,048,576 output pixels without resizing and exports exact-input/model local jobs. Scientific GeoTIFF remains float32; display cascades explicitly quantize between stages. [Execution guide](scale-execution.md).
+
+Validation:58 targeted tests passed; eight scientific/fresh-cache tests rerun after final-output atomic rename passed. Three actual published models ran all six scales on small odd fixtures;1024×1024→2048×2048 executed; disk/full-tile seam comparisons recorded in [scale validation](../reports/scale-validation.json). Three-model UI comparison/cache/retry, exact-source satellite fixture, portable RGB job/Gradio callback and two-process empty-cache restart checks passed. Reports are local synthetic/implementation evidence, not new frozen scientific results. Full65536-square execution and public deployment remain unverified. MP36 and broader research remain unfinished.
+
+# MP36 investigation started — 2026-10-25
+
+Official source review and [preliminary feasibility matrix](../reports/mp36-feasibility.md) recorded. MP36 remains **In progress**: newer dataset version, license-file reconciliation, numerical examples/tests and full notebook are pending. No archive download or cross-sensor evaluation ran. MP35 is published in [draft PR20](https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/20).
+
 # MP35 geographic split milestone — 2026-10-25
 
 MP35 **Complete (implementation and teaching deliverables)**. Twelve tests, nine cached checksum/header inspections, 24 cross-split checks, split manifests, scene-center map and four-code-cell real-kernel notebook passed. [Audit](../reports/mp35-geographic-splits.json) and [validation](../stage_08_remote_sensing/MP35_geographic_dataset_splitting/VALIDATION.md). Existing 4/4/1 assignments and frozen results preserved. MP36–MP40, earlier exceptions and learner mastery remain unfinished.

@@ -1,0 +1,338 @@
+{
+  "recorded_date": "2026-10-26",
+  "scope": "Synthetic inputs, actual pinned published checkpoints; no scientific quality claim or frozen evaluation.",
+  "rows": [
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 2,
+      "output": [
+        10,
+        6
+      ],
+      "runtime_seconds": 0.16437410000071395
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 4,
+      "output": [
+        20,
+        12
+      ],
+      "runtime_seconds": 0.02878729999792995
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 8,
+      "output": [
+        40,
+        24
+      ],
+      "runtime_seconds": 0.04227259999970556
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 16,
+      "output": [
+        80,
+        48
+      ],
+      "runtime_seconds": 0.0555781000002753
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 32,
+      "output": [
+        160,
+        96
+      ],
+      "runtime_seconds": 0.12239920000138227
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 64,
+      "output": [
+        320,
+        192
+      ],
+      "runtime_seconds": 0.1510706000008213
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        129,
+        131,
+        3
+      ],
+      "scale": 2,
+      "existing_tiled_equal": true,
+      "whole_frame_uint8_max_difference": 0.0,
+      "seam_strip_mae_uint8": 0.0,
+      "other_mae_uint8": 0.0
+    },
+    {
+      "model": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+      "input_shape": [
+        1024,
+        1024,
+        3
+      ],
+      "scale": 2,
+      "output": [
+        2048,
+        2048
+      ],
+      "runtime_seconds": 2.800213900001836,
+      "full_export_bytes": 12583952
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 2,
+      "output": [
+        10,
+        6
+      ],
+      "runtime_seconds": 0.01524779999817838
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 4,
+      "output": [
+        20,
+        12
+      ],
+      "runtime_seconds": 0.02542890000040643
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 8,
+      "output": [
+        40,
+        24
+      ],
+      "runtime_seconds": 0.03714910000053351
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 16,
+      "output": [
+        80,
+        48
+      ],
+      "runtime_seconds": 0.05662060000031488
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 32,
+      "output": [
+        160,
+        96
+      ],
+      "runtime_seconds": 0.07645430000047782
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 64,
+      "output": [
+        320,
+        192
+      ],
+      "runtime_seconds": 0.12452769999799784
+    },
+    {
+      "model": "RGB CNN v2 \u2014 1000 training steps",
+      "input_shape": [
+        129,
+        131,
+        3
+      ],
+      "scale": 2,
+      "existing_tiled_equal": true,
+      "whole_frame_uint8_max_difference": 0.0,
+      "seam_strip_mae_uint8": 0.0,
+      "other_mae_uint8": 0.0
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 2,
+      "output": [
+        10,
+        6
+      ],
+      "runtime_seconds": 0.05901860000085435
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 4,
+      "output": [
+        20,
+        12
+      ],
+      "runtime_seconds": 0.03356340000027558
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 8,
+      "output": [
+        40,
+        24
+      ],
+      "runtime_seconds": 0.05568670000138809
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 16,
+      "output": [
+        80,
+        48
+      ],
+      "runtime_seconds": 0.08103679999840097
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 32,
+      "output": [
+        160,
+        96
+      ],
+      "runtime_seconds": 0.10617129999809549
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "scale": 64,
+      "output": [
+        320,
+        192
+      ],
+      "runtime_seconds": 0.23920299999736017
+    },
+    {
+      "model": "RGB CNN\u2013attention\u2013Transformer hybrid v2 \u2014 1000 training steps",
+      "input_shape": [
+        129,
+        131,
+        3
+      ],
+      "scale": 2,
+      "existing_tiled_equal": true,
+      "whole_frame_uint8_max_difference": 1.0,
+      "seam_strip_mae_uint8": 0.0048449612403100775,
+      "other_mae_uint8": 0.00026450182099330605
+    }
+  ],
+  "sampled_process_peak_rss_bytes": 280973312,
+  "memory_sampling_seconds": 0.05,
+  "memory_limitations": "Sampled process RSS includes imports and reference computations; not exact allocator peak or large-job guarantee.",
+  "maximum_scale_plan_only": {
+    "pipeline": "rgb-disk-cascade-v1",
+    "input_width": 1024,
+    "input_height": 1024,
+    "scale": 64,
+    "output_width": 65536,
+    "output_height": 65536,
+    "output_pixels": 4294967296,
+    "stages": 6,
+    "output_rgb_bytes": 12884901888,
+    "estimated_disk_bytes": 17192452096,
+    "estimated_working_memory_bytes": 536870912,
+    "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+    "host_available": false,
+    "host_output_pixel_limit": 1048576,
+    "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+    "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "rasterio": "1.5.2"
+  }
+}

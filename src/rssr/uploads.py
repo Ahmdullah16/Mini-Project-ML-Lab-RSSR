@@ -8,8 +8,8 @@ def decode_image(data):
     if len(data)>8*1024*1024:raise ValueError('Image file must be at most 8 MB')
     try:
         with Image.open(io.BytesIO(data)) as image:
-            if max(image.size)>512 or min(image.size)<1:
-                raise ValueError('Choose an image at most 512 pixels per side')
+            if max(image.size)>1024 or min(image.size)<1:
+                raise ValueError('Choose an image at most 1024 pixels per side')
             if image.format not in ('PNG','JPEG'):
                 raise ValueError('Choose a PNG or JPEG image')
             if image.mode not in ('RGB','L'):

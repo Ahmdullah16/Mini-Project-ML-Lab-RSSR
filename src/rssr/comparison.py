@@ -7,11 +7,11 @@ import numpy as np
 from PIL import Image
 
 SETTINGS={'pipeline':'rgb-display-v2-diagnostics','input':'uint8 RGB /255','scale':2,'tile':128,'halo':32,
-          'output':'fixed [0,1] clipping and uint8 quantization; no sharpening','max_side':512}
+          'output':'fixed [0,1] clipping and uint8 quantization; no sharpening','max_side':1024}
 
 def input_digest(image):
     image=np.asarray(image)
-    if image.dtype!=np.uint8 or image.ndim!=3 or image.shape[2]!=3 or min(image.shape[:2])<1 or max(image.shape[:2])>512:
+    if image.dtype!=np.uint8 or image.ndim!=3 or image.shape[2]!=3 or min(image.shape[:2])<1 or max(image.shape[:2])>1024:
         raise ValueError('Comparison requires uint8 RGB up to 512×512')
     return hashlib.sha256(str(image.shape).encode()+image.tobytes()).hexdigest()
 

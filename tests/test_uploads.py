@@ -12,7 +12,7 @@ def test_maximum_and_grayscale():
     y=decode_image(encoded(mode='L'));assert y.dtype==np.uint8 and y.shape==(16,16,3)
 
 def test_rejected_inputs_are_clear():
-    for data,message in [(encoded((513,1)),'512'),(encoded(mode='RGBA'),'opaque'),
+    for data,message in [(encoded((1025,1)),'1024'),(encoded(mode='RGBA'),'opaque'),
                          (b'not an image','readable'),(b'0'*(8*1024*1024+1),'8 MB'),
                          (encoded(format='BMP'),'PNG or JPEG')]:
         with pytest.raises(ValueError,match=message):decode_image(data)
