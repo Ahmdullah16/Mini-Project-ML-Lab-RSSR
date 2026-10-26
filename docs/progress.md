@@ -1,3 +1,7 @@
+# MP36 numerical evidence milestone — 2026-10-26
+
+PR22 passed CI40280123380 and was externally merged. MP36 remains **In progress**: seven numerical tests, analytical report and four-code-cell real notebook passed, illustrating registration/calibration/spectral mismatch without claiming sensor evaluation. [Evidence](../reports/mp36-numerical-examples.json), [validation](../stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/VALIDATION.md). WorldStrat v1.1 source-size audit added. Official SEN2VENµS paper/correction direct retrieval returned429; methodology gate remains open. No archives/training/frozen evaluation ran.
+
 # Research design and CI repair — 2026-10-26
 
 [Research questions](research_questions.md) and [protocol v2](protocol-v2.md) committed before new test inspection; execution remains gated. [Claim/evidence register](claim_evidence.json) pins7 source records with limitations. MP36 official-source review advanced to SEN2VENµS v2; no archives/training executed. PR21's tests job passed but Streamlit failed on a stale selector in the catalog validation script. Corrected keyed-control catalog check passed locally for all3 models; [new evidence](../reports/scale-model-catalog-check.json). Replacement CI pending; external merge is not a passing-CI claim.

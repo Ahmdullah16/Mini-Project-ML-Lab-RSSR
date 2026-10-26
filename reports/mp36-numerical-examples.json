@@ -1,0 +1,31 @@
+{
+  "scope": "Synthetic analytical teaching values, not measured sensor calibration or SR quality",
+  "scale_ratios": {
+    "10m_to_5m": 2.0,
+    "20m_to_5m": 4.0,
+    "10m_to_1_5m": 6.666666666666667
+  },
+  "5m_offset_in_5m_pixels": 1.0,
+  "radiometry": {
+    "reference": [
+      0.2,
+      0.4
+    ],
+    "gain": 1.1,
+    "offset": 0.01,
+    "prediction": [
+      0.23000000000000004,
+      0.45000000000000007
+    ],
+    "mse": 0.001700000000000003
+  },
+  "toy_spectral_responses": [
+    0.2,
+    0.8,
+    0.5
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4"
+  }
+}
