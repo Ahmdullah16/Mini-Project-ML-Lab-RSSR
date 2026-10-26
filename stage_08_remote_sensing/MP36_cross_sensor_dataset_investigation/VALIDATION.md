@@ -1,11 +1,11 @@
-# MP36 validation
+# MP36 partial validation — 2026-10-26
 
-This project now has the MP01-style local file layout. Existing scientific results and original notebook execution evidence are preserved; see [progress](../../docs/progress.md). Expanded content through MP31 does not automatically satisfy every earlier project criterion. MP32–MP40 remain introductory until their full experiments are completed.
+Status: In progress. The full investigation and paired-data evaluation are not complete.
 
-Local-folder test and execution outcomes are recorded below. No data acquisition, held-out evaluation or retraining is authorized by this file.
+- Local pytest: **7 passed**. Tests cover noninteger scale, invalid GSD/offset, cast-before-arithmetic, calibrated toy MSE, empty/nonfinite arrays, spectral response mismatch and invalid weights.
+- `experiment.py`: executed synthetic analytical examples only; [record](../../reports/mp36-numerical-examples.json) includes environment and values.
+- `run_notebook.py`: **passed-real-jupyter-kernel**, four code cells; [execution record](../../reports/project-notebook-execution.json). Known local kernel TCP warning; process exited0.
+- No dataset archive transfer, new test-image inspection, model training or frozen test recomputation.
+- Primary official records support version/license/size findings. Paper/correction retrieval returned429, leaving registration-method review open. See [feasibility](../../reports/mp36-feasibility.md).
 
-## Local-folder validation — 2026-10-25
-
-Passed 1 local tests with pytest; the notebook passed a real Jupyter kernel from this project directory (2 code cells). Source SHA-256: `997c257bd4acc609b64c696ad9e7631435b59213e4257ff366688ef2bcb019bf`.
-
-Commands from this directory: `python -m pytest -q test_mp36_tools.py` and `python run_notebook.py`. Records: [folder tests](../../reports/project-folder-tests.json), [kernel execution](../../reports/project-notebook-execution.json). Outputs are temporary under ignored data/executed_notebooks/project_folders. Original central notebook evidence remains historical. This validates the current lesson scope, not unfinished completion criteria.
+Source citations and limitations do not become sensor performance evidence merely because these numerical tests pass.

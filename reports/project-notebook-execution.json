@@ -261,15 +261,6 @@
     "finished_at": "2026-10-25T08:00:57.919159+00:00"
   },
   {
-    "id": "MP36",
-    "source": "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/cross_sensor_dataset_investigation.ipynb",
-    "source_sha256": "997c257bd4acc609b64c696ad9e7631435b59213e4257ff366688ef2bcb019bf",
-    "started_at": "2026-10-25T08:01:25.117242+00:00",
-    "status": "passed-real-jupyter-kernel",
-    "code_cells": 2,
-    "finished_at": "2026-10-25T08:01:29.150317+00:00"
-  },
-  {
     "id": "MP37",
     "source": "stage_09_hybrid_research/MP37_feature_fusion_laboratory/feature_fusion_laboratory.ipynb",
     "source_sha256": "205d4450d3bd1d56f0312d9c96ae56688398414a28226efb73645b139050cb51",
@@ -349,5 +340,14 @@
     "status": "passed-real-jupyter-kernel",
     "code_cells": 4,
     "finished_at": "2026-10-25T18:22:36.420029+00:00"
+  },
+  {
+    "id": "MP36",
+    "source": "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/cross_sensor_dataset_investigation.ipynb",
+    "source_sha256": "1e704aca57ceca7ab4b747947a14e24d952ddf7970c8137a04299642e829ce1c",
+    "started_at": "2026-10-26T06:34:52.904771+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 4,
+    "finished_at": "2026-10-26T06:34:54.394554+00:00"
   }
 ]

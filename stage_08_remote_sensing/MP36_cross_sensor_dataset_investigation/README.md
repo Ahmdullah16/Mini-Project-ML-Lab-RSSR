@@ -4,7 +4,7 @@
 
 [Laboratory home](../../README.md) · [Stage overview](../README.md) · [Progress tracker](../../docs/progress.md)
 
-Introductory notebook execution is verified in `reports/notebook-execution.json`. The full project-specific experiments and completion criteria below remain pending; this is not learner completion.
+The expanded numerical teaching component is now executed: seven tests, four real-kernel notebook cells and an analytical example report. Official dataset/version/license/size investigation is recorded, but registration/correction methodology and complete feasibility acceptance remain open. This is not a completed paired cross-sensor evaluation or learner completion.
 
 ## Learning objectives
 
@@ -26,7 +26,7 @@ Write down variable dimensions and units before coding. Work through one small n
 
 ## Experiments
 
-**Planned; not run.** Investigate WorldStrat and Sen2Venµs documentation, access, licenses, registration, and band compatibility before downloads; deliver a dataset comparison matrix and cross-sensor evaluation feasibility report.
+**Partially executed; not complete.** Investigate WorldStrat and Sen2Venµs documentation, access, licenses, registration, and band compatibility before downloads; deliver a dataset comparison matrix and cross-sensor evaluation feasibility report.
 
 1. Define the question, baseline, controlled variables, input selection, and expected sanity checks before implementation.
 2. Begin with a tiny deterministic fixture, then use a documented sample. Change one factor at a time.
@@ -68,3 +68,18 @@ python run_notebook.py
 ```
 
 File presence does not imply that all scientific or educational criteria are complete. The status and remaining criteria above remain authoritative.
+
+
+## Executed numerical lesson and remaining gate
+
+[Analytical report](../../reports/mp36-numerical-examples.json), [source feasibility matrix](../../reports/mp36-feasibility.md) and [validation](VALIDATION.md) separate source facts, deductions and unresolved questions. Run from repository root:
+
+```bash
+python -m pytest -q stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation
+python stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/experiment.py
+python stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/run_notebook.py
+```
+
+Worked examples:10m/5m gives×2;10m/1.5m gives20/3 (not an integer native model scale). A5m registration offset divided by5m/pixel equals1pixel. For reference[.2,.4] and gain1.1/offset.01, apparent MSE is.0017 despite no SR reconstruction step. Equal-width toy spectral bins with values[.2,.8] produce.2,.8 or.5 under different response weights. The notebook defines symbols, units, exercises and solutions; weights are invented teaching values, not measured sensor response.
+
+Next acceptance gate: verify official registration methodology and published correction, complete the source-specific band/timestamp/mask matrix, and prepare a concrete bounded resource proposal. The paper endpoint returned429; do not infer a registration tolerance. Real paired experiments additionally require the [v2 protocol gates](../../docs/protocol-v2.md). No large download or training was authorized or executed by this lesson.
