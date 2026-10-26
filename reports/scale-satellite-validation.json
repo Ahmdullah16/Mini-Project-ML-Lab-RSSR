@@ -1,0 +1,11 @@
+{
+  "scope": "Offline synthetic georeferenced source; actual cached pilot. No provider acquisition or cross-sensor validation.",
+  "source_job_bytes_equal": true,
+  "actual_output": [
+    20,
+    12
+  ],
+  "scale": 4,
+  "crs": "EPSG:32632",
+  "host_limit_rejection": true
+}

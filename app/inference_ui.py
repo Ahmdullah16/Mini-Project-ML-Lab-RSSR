@@ -24,6 +24,11 @@ CATALOG=[BASE_CONFIG]+json.loads((ROOT/'configs/hosted-models.json').read_text(e
 CACHE=Path(os.environ.get('RSSR_ASSET_CACHE',str(Path(tempfile.gettempdir())/'rssr-public-assets-v1')))
 
 
+@st.cache_resource
+def cpu_lock():
+    return threading.Lock()
+
+
 @st.cache_resource(show_spinner='Downloading and verifying the trained checkpoint…')
 def resources(specification):
     from rssr.experiment import load_model
@@ -31,7 +36,7 @@ def resources(specification):
     model,state=load_model(path)
     if model.bands!=3 or model.scale!=2:
         raise ValueError('Hosted checkpoint must be compatible x2 RGB')
-    return model,state,path,threading.Lock()
+    return model,state,path,cpu_lock()
 
 
 def png_bytes(image):
@@ -45,59 +50,8 @@ def model_choice():
     return CONFIG
 
 def render_live():
-    CONFIG=model_choice()
-    choice=st.radio('Input',['Licensed example (cached acquisition)','Upload'],horizontal=True,key='input_choice')
-    upload=st.file_uploader('PNG or JPEG, up to 512×512 pixels and 8 MB',type=['png','jpg','jpeg']) if choice=='Upload' else None
-    if choice.startswith('Licensed'):
-        st.caption(f"NAIP aerial training example acquired {CONFIG['sample']['acquisition_time']}; synthetic LR, not a fresh satellite query. {CONFIG['sample']['license']}")
-    if st.button('Estimate super-resolution',type='primary'):
-        try:
-            if choice=='Upload' and upload is None: raise ValueError('Choose an image to upload')
-            data=upload.getvalue() if choice=='Upload' else fetch_asset(CONFIG['sample'],CACHE).read_bytes()
-            image=decode_image(data)
-            model,state,path,lock=resources(CONFIG)
-            if not lock.acquire(blocking=False): raise ValueError('The CPU is serving another request. Please retry shortly.')
-            try:
-                started=time.perf_counter()
-                from rssr.display import predict_rgb
-                baseline,sr,meta=predict_rgb(image,model,state,CONFIG['checkpoint']['sha256'],max_side=512)
-                runtime=time.perf_counter()-started
-            finally: lock.release()
-            meta.update(model_name=CONFIG['label'],model_version=CONFIG['version'],runtime_seconds=runtime,inference_time=datetime.now(timezone.utc).isoformat(),storage='temporary session; not durable',application=build_identity(ROOT),input_shape=list(image.shape),output_shape=list(sr.shape))
-            if choice.startswith('Licensed'):
-                meta.update(sensor=CONFIG['sample']['sensor'],acquisition_time=CONFIG['sample']['acquisition_time'],source=CONFIG['sample']['source'],license=CONFIG['sample']['license'],input_kind='cached licensed training example')
-            else: meta['input_kind']='user upload; provenance unverified'
-            st.session_state['result']={'input':image,'baseline':baseline,'sr':sr,'metadata':meta}
-        except Exception as error:
-            st.error(f'Inference did not complete: {error}')
-    if 'result' in st.session_state:
-        result=st.session_state['result']
-        st.subheader('Latest completed inference')
-        st.caption('Result model: '+result['metadata'].get('model_name','Original CNN pilot'))
-        st.write(f"RGB input: {result['input'].shape[1]}×{result['input'].shape[0]} pixels → SR: {result['sr'].shape[1]}×{result['sr'].shape[0]} pixels. ×2 doubles each spatial dimension; it does not establish recovered physical detail.")
-        st.caption('LR is the supplied low-resolution image. Bicubic is fixed interpolation; the CNN or hybrid estimates a learned correction. All panels show the same spatial crop. Without an aligned HR reference, apparent sharpness is not accuracy and no PSNR/SSIM is reported.')
-        enhance=st.checkbox('Enhance preview contrast (does not change inference or downloads)',value=True)
-        low,high=np.percentile(result['input'],[2,98])
-        zoom=st.slider('Synchronized zoom',1,4,1)
-        xcenter=st.slider('Horizontal center',0.0,1.0,0.5)
-        ycenter=st.slider('Vertical center',0.0,1.0,0.5)
-        h,w=result['input'].shape[:2]; ch,cw=max(1,h//zoom),max(1,w//zoom)
-        y0=int((h-ch)*ycenter); x0=int((w-cw)*xcenter)
-        for column,key,label in zip(st.columns(3),['input','baseline','sr'],['Input LR','Bicubic baseline','SR estimate']):
-            scale=1 if key=='input' else 2
-            preview=result[key][y0*scale:(y0+ch)*scale,x0*scale:(x0+cw)*scale]
-            if enhance and high>low:
-                preview=np.rint(np.clip((preview.astype(float)-low)/(high-low),0,1)*255).astype(np.uint8)
-            column.image(preview,caption=label,width='stretch')
-        if enhance: st.caption('All previews use the same input-derived contrast range. Downloaded pixels keep the original fixed display scaling.')
-        st.write(f"Inference runtime: {result['metadata']['runtime_seconds']:.3f} seconds (CPU)")
-        with st.expander('Checkpoint and input provenance'):
-            st.json(result['metadata'])
-        st.download_button('Download SR PNG',png_bytes(result['sr']),'sr-estimate.png','image/png')
-        st.download_button('Download provenance',json.dumps(result['metadata'],indent=2),'provenance.json','application/json')
-        if st.button('Clear temporary result'):
-            del st.session_state['result']; st.rerun()
-    
+    from scale_ui import render_scaled
+    return render_scaled(comparison=False)
 
 def render_satellite():
     CONFIG=model_choice()
@@ -111,7 +65,7 @@ def render_satellite():
     start=st.date_input('Acquisition start',value=today-timedelta(days=30))
     end=st.date_input('Acquisition end',value=today)
     cloud=st.slider('Maximum item cloud cover (%)',0,100,20)
-    if st.button('Acquire satellite crop and infer'):
+    if st.button('Acquire satellite crop for preflight'):
         try:
             from rssr.fresh import acquire_infer,stored_path
             if start>end: raise ValueError('Start date must not be after end date')
@@ -126,23 +80,11 @@ def render_satellite():
             try:
                 started=time.perf_counter()
                 with tempfile.TemporaryDirectory(prefix='rssr-fresh-') as folder:
-                    result=acquire_infer({'bbox':bounds,'datetime':f'{start}T00:00:00Z/{end}T23:59:59Z','query':{'eo:cloud_cover':{'lt':cloud}},'crop_size':256,'max_bytes':32_000_000},path,folder)
+                    result=acquire_infer({'bbox':bounds,'datetime':f'{start}T00:00:00Z/{end}T23:59:59Z','query':{'eo:cloud_cover':{'lt':cloud}},'crop_size':256,'max_bytes':32_000_000,'acquire_only':True},path,folder)
                     result.update(model_name=CONFIG['label'],model_version=CONFIG['version'],application=build_identity(ROOT),runtime_seconds=time.perf_counter()-started,refresh_time=datetime.now(timezone.utc).isoformat(),storage='temporary; local database removed after request')
-                    st.session_state['fresh_result']={'metadata':result,'geotiff':stored_path(folder,result['output_path']).read_bytes()}
+                    st.session_state['fresh_prepared']={'metadata':result,'geotiff':stored_path(folder,result['source_path']).read_bytes(),'model':CONFIG}
             finally: lock.release()
         except Exception as error:
             st.error(f'Satellite request did not complete: {error}')
-    if 'fresh_result' in st.session_state:
-        fresh=st.session_state['fresh_result']
-        import rasterio.io
-        with rasterio.io.MemoryFile(fresh['geotiff']) as memory:
-            with memory.open() as raster:
-                preview=raster.read([1,2,3]).transpose(1,2,0)
-        lo,hi=np.nanpercentile(preview,[2,98])
-        if hi>lo:
-            st.image(np.clip((preview-lo)/(hi-lo),0,1),caption='Contrast-stretched SR preview; GeoTIFF preserves scientific values',width='stretch')
-        st.success('Acquisition and inference completed. Downloads remain temporary.')
-        with st.expander('Satellite timestamps and provenance'):
-            st.json(fresh['metadata'])
-        st.download_button('Download georeferenced SR',fresh['geotiff'],'satellite-sr.tif','image/tiff')
-        st.download_button('Download satellite provenance',json.dumps(fresh['metadata'],indent=2),'satellite-provenance.json','application/json')
+    from satellite_scale_ui import render_satellite_scale
+    render_satellite_scale()

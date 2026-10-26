@@ -140,3 +140,9 @@ Respect current review/merge restrictions and resource budgets. Ask only for con
 Work efficiently: targeted reads, reuse verified artifacts, affected tests per change, final full checks at release. Maintain compact resumable checkpoints after each milestone.
 
 Finish with implemented changes, measured quality gains/tradeoffs, test evidence, verified app/version, submission artifacts and remaining blockers. Do not claim scientific accuracy, novelty or completion beyond the evidence.
+
+## Scale correction — 2026-10-26 (supersedes earlier size limits)
+
+1024×1024 is the maximum INPUT, independently for width and height. Accept rectangular and odd dimensions unchanged. Offer ×2, ×4, ×8, ×16, ×32, ×64; output width=s*input width and height=s*input height, pixels grow by s². 256×128 at ×8 is 2048×1024; 1024×1024 at ×64 is 65536×65536. Never silently resize, crop, lower scale or label interpolation learned SR.
+
+Use verified native models or explicitly labeled cascades, disclose interpolation and intermediate quantization. Show dimensions, pixels, estimated memory/storage and configured/measured availability BEFORE execution. Large local jobs require overlapped tiles, seam checks, incremental disk-backed outputs and separately bounded previews. Keep all scales visible on the free host; rejected requests need a runnable local/Colab job with identical input/model/settings. Do not claim untested large hosted execution. Test odd, rectangular, square and maximum input contracts, exact exported sizes, resource rejection and seams. Preserve frozen scientific results; scaling is not evidence of recovered detail.

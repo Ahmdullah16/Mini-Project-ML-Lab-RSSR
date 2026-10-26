@@ -33,7 +33,7 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Network access o
     app.radio(key='result_view').set_value('Artifact library').run()
     assert not app.exception
     app.radio(key='section').set_value('Live SR').run()
-    app.radio(key='input_choice').set_value('Upload').run()
+    app.radio(key='scaled_livechoice').set_value('Upload').run()
     app.button[0].click().run()
     assert not app.exception and any('Choose an image' in e.value for e in app.error)
     app.radio(key='section').set_value('Satellite Explorer').run()

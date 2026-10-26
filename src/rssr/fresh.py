@@ -24,7 +24,11 @@ def acquire_infer(config,checkpoint,root,fetch=request_json):
     model,state=load_model(checkpoint)
     if model.bands!=3: raise ValueError('Sentinel TCI requires a three-band RGB display checkpoint')
     size=config.get('crop_size',256)
-    if not isinstance(size,int) or not 16<=size<=512: raise ValueError('Crop size must be 16..512')
+    if not isinstance(size,int) or not 16<=size<=1024: raise ValueError('Crop size must be 16..1024')
+    scale=config.get('scale',2)
+    from .scaling import plan
+    plan(size,size,scale)
+    acquire_only=config.get('acquire_only',False)
     query={k:config[k] for k in ('bbox','datetime','query') if k in config}
     query['bbox']=[float(v) for v in query['bbox']]
     bbox = query['bbox']
@@ -43,7 +47,9 @@ def acquire_infer(config,checkpoint,root,fetch=request_json):
     licenses=[l['href'] for l in item.get('links',[]) if l['rel']=='license']
     if not licenses: raise ValueError('Provider license link missing')
     root=Path(root); db=connect(root/'catalog.sqlite'); cp=digest(checkpoint)
-    identity=config_hash({'item':item['id'],'asset':asset['href'],'checkpoint':cp,'bbox':query.get('bbox'),'size':size})
+    identity_data={'item':item['id'],'asset':asset['href'],'checkpoint':cp,'bbox':query.get('bbox'),'size':size}
+    if scale!=2 or acquire_only:identity_data.update(scale=scale,acquire_only=acquire_only)
+    identity=config_hash(identity_data)
     folder=root/'fresh'/identity; folder.mkdir(parents=True,exist_ok=True)
     old=db.execute('SELECT status,output_path,output_sha256 FROM inference_jobs WHERE id=?',(identity,)).fetchone()
     if old and old[0]=='completed':
@@ -63,7 +69,9 @@ def acquire_infer(config,checkpoint,root,fetch=request_json):
                     if left>=right or bottom>=top: raise ValueError('AOI does not intersect raster')
                     row,col=ds.index((left+right)/2,(bottom+top)/2)
                     window=Window(max(0,min(ds.width-size,col-size//2)),max(0,min(ds.height-size,row-size//2)),size,size)
-                    values=ds.read(window=window); valid=(ds.read_masks(window=window)>0).all(0)
+                    values=ds.read(window=window)
+                    if values.shape!=(3,size,size):raise ValueError('Requested crop is not fully available; no silent resizing')
+                    valid=(ds.read_masks(window=window)>0).all(0)
                     if valid.mean()<.8: raise ValueError('Crop has fewer than 80% valid display pixels')
                     profile=ds.profile.copy(); profile.update(width=size,height=size,transform=ds.window_transform(window),driver='GTiff')
                     with rasterio.open(source,'w',**profile) as out:
@@ -71,8 +79,13 @@ def acquire_infer(config,checkpoint,root,fetch=request_json):
                         out.descriptions=('red display','green display','blue display')
                     provenance.update(window=list(window.flatten()),crs=str(ds.crs),source_transform=list(profile['transform']),valid_fraction=float(valid.mean()))
         provenance['transfer']=transfer; provenance['source_sha256']=digest(source)
-        geotiff(checkpoint,source,output,255.)
-        provenance.update(inference_time=now(),output_sha256=digest(output),source_path=source.relative_to(root).as_posix(),output_path=output.relative_to(root).as_posix(),status='completed')
+        if acquire_only:
+            provenance.update(source_path=source.relative_to(root).as_posix(),status='acquired',scale_not_executed=scale)
+            (folder/'provenance.json').write_text(json.dumps(provenance,indent=2),encoding='utf-8')
+            with db:db.execute('UPDATE inference_jobs SET status=?,source_path=?,source_sha256=?,provenance=? WHERE id=?',('acquired',provenance['source_path'],provenance['source_sha256'],json.dumps(provenance),identity))
+            return provenance
+        geotiff(checkpoint,source,output,255.,scale)
+        provenance.update(scale=scale,inference_time=now(),output_sha256=digest(output),source_path=source.relative_to(root).as_posix(),output_path=output.relative_to(root).as_posix(),status='completed')
         (folder/'item.json').write_text(json.dumps(item,indent=2),encoding='utf-8')
         (folder/'provenance.json').write_text(json.dumps(provenance,indent=2),encoding='utf-8')
         with db:

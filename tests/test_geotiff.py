@@ -1,3 +1,4 @@
+import pytest
 import numpy as np
 import rasterio
 from rasterio.transform import from_origin
@@ -6,7 +7,8 @@ from rssr.models import SRModel
 from rssr.inference import geotiff
 
 
-def test_export_preserves_extent_and_mask(tmp_path):
+@pytest.mark.parametrize("scale",[2,4,8,16,32,64])
+def test_export_preserves_extent_and_mask(tmp_path,scale):
     source=tmp_path/'source.tif'; target=tmp_path/'output.tif'
     transform=from_origin(100,200,10,10)
     x=np.ones((4,8,8),dtype=np.uint8)*100; x[:,0,0]=0
@@ -15,8 +17,8 @@ def test_export_preserves_extent_and_mask(tmp_path):
         ds.descriptions=('red','green','blue','nir')
     cfg={'model':{'bands':4,'width':8,'kind':'cnn','scale':2}}
     checkpoint=tmp_path/'model.pt'; torch.save({'model':SRModel(**cfg['model']).state_dict(),'config':cfg,'run_id':'fixture','provenance':'random test fixture'},checkpoint)
-    geotiff(checkpoint,source,target,255)
+    geotiff(checkpoint,source,target,255,scale)
     with rasterio.open(source) as a,rasterio.open(target) as b:
         assert a.bounds==b.bounds and a.crs==b.crs
-        assert b.width==16 and b.height==16 and b.transform.a==5
-        assert np.isnan(b.read()[:,:2,:2]).all()
+        assert b.width==8*scale and b.height==8*scale and b.transform.a==10/scale
+        assert np.isnan(b.read()[:,:scale,:scale]).all()

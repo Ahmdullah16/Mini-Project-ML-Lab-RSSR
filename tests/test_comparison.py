@@ -11,7 +11,7 @@ def test_identity_changes_with_input_checkpoint_and_version():
     assert key!=result_key(x,{**spec,'checkpoint':{'sha256':'b'*64}})
     assert key==result_key(x.copy(),spec)
     with pytest.raises(ValueError):input_digest(x.astype(float))
-    with pytest.raises(ValueError):input_digest(np.zeros((513,1,3),np.uint8))
+    with pytest.raises(ValueError):input_digest(np.zeros((1025,1,3),np.uint8))
 
 def test_native_alignment_and_bundle_labels():
     x=np.zeros((3,4,3),np.uint8);y=np.zeros((6,8,3),np.uint8)

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "verification": "Two independent processes; empty cache each time; public pinned checkpoint downloaded and verified; actual AppTest and configured host-boundary tiled inference",
+  "restart_output_equal": true,
+  "runs": [
+    {
+      "status": "passed",
+      "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+      "sample_output_sha256": "5a6445d0f257ebc32dddda99101753058155c3dfd078c5ece1bec42232ef5925",
+      "sample_shape": [
+        32,
+        32,
+        3
+      ],
+      "host_boundary_fixture_input_shape": [
+        512,
+        512,
+        3
+      ],
+      "host_boundary_fixture_output_shape": [
+        1024,
+        1024,
+        3
+      ],
+      "host_boundary_fixture_seconds": 1.15924509999968,
+      "sampled_peak_rss_bytes": 393396224,
+      "invalid_inputs_rejected": true,
+      "fresh_cache_files": 2
+    },
+    {
+      "status": "passed",
+      "checkpoint_sha256": "56656672c50c222105cc159738b63957dee84b1ef394106f6dc2c782a53d415e",
+      "sample_output_sha256": "5a6445d0f257ebc32dddda99101753058155c3dfd078c5ece1bec42232ef5925",
+      "sample_shape": [
+        32,
+        32,
+        3
+      ],
+      "host_boundary_fixture_input_shape": [
+        512,
+        512,
+        3
+      ],
+      "host_boundary_fixture_output_shape": [
+        1024,
+        1024,
+        3
+      ],
+      "host_boundary_fixture_seconds": 1.0075935999993817,
+      "sampled_peak_rss_bytes": 395857920,
+      "invalid_inputs_rejected": true,
+      "fresh_cache_files": 2
+    }
+  ],
+  "limitations": "Local CPU evidence; no public Streamlit URL or hosted resource limit verification. RSS is sampled, not an exact allocator peak."
+}

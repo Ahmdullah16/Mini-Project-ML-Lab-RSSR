@@ -4,6 +4,12 @@ from pathlib import Path
 
 
 def main():
+    # RGB display jobs have their own preflight parser; scientific infer remains explicit.
+    import sys
+    if len(sys.argv)>1 and sys.argv[1]=='infer-rgb':
+        from .scale_job import main as rgb_main
+        sys.argv.pop(1)
+        return rgb_main()
     p=argparse.ArgumentParser(description="RSSR laboratory: explicit bounded workflows")
     sub=p.add_subparsers(dest="command",required=True)
     d=sub.add_parser("download"); d.add_argument("manifest"); d.add_argument("--root",default="data")
@@ -13,7 +19,7 @@ def main():
     d=sub.add_parser("export"); d.add_argument("database"); d.add_argument("directory")
     d=sub.add_parser("refresh"); d.add_argument("config"); d.add_argument("--root",default="data"); d.add_argument("--resume-job")
     d=sub.add_parser("refresh-incremental"); d.add_argument("config"); d.add_argument("--root",default="data")
-    d=sub.add_parser("infer"); d.add_argument("checkpoint"); d.add_argument("input"); d.add_argument("output"); d.add_argument("--divisor",type=float,required=True)
+    d=sub.add_parser("infer"); d.add_argument("checkpoint"); d.add_argument("input"); d.add_argument("output"); d.add_argument("--divisor",type=float,required=True); d.add_argument("--scale",type=int,choices=[2,4,8,16,32,64],default=2); d.add_argument("--execute",action="store_true")
     args=p.parse_args()
     if args.command=="download":
         from .data import download
@@ -42,8 +48,9 @@ def main():
         from .scheduler import tick
         print(tick(json.loads(Path(args.config).read_text()),args.root))
     elif args.command=="infer":
-        from .inference import geotiff
-        print(geotiff(args.checkpoint,args.input,args.output,args.divisor))
+        from .inference import geotiff,geotiff_plan
+        print(json.dumps(geotiff_plan(args.input,args.scale),indent=2),flush=True)
+        if args.execute:print(geotiff(args.checkpoint,args.input,args.output,args.divisor,args.scale))
 
 
 if __name__=="__main__":
