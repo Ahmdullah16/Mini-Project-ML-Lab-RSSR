@@ -1,0 +1,61 @@
+{
+  "version": "evaluation-v2-design-2026-10-26",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "Synthetic NAIP pipeline executed",
+      "status": "measured",
+      "source": "reports/pilot-runs.json",
+      "limitation": "Aerial synthetic degradation, not real paired satellite SR",
+      "sha256_utf8_lf": "52ed5d03dcc7780e998f19bbbd0b203b321444cbcc9cf0ac324f7fedf4fbd0b1"
+    },
+    {
+      "id": "C02",
+      "claim": "One original held-out scene evaluated",
+      "status": "measured",
+      "source": "reports/final-heldout.json",
+      "limitation": "No geographic confidence interval from one scene",
+      "sha256_utf8_lf": "5c92d4d172e41f6798ed4668f504ec89d0590b12c2580620ca1b769eb27f56b9"
+    },
+    {
+      "id": "C03",
+      "claim": "Pilot gains admit attenuation explanation",
+      "status": "measured",
+      "source": "reports/ablation-pilot.md",
+      "limitation": "Does not prove attention causality",
+      "sha256_utf8_lf": "a6c3187b12ff87cd946e7ecebca069521c5b03aedab48a0b33c84ea6a7ece3cd"
+    },
+    {
+      "id": "C04",
+      "claim": "Geographic development study executed",
+      "status": "measured",
+      "source": "reports/geographic-study.json",
+      "limitation": "Different architecture budgets; four validation scenes",
+      "sha256_utf8_lf": "369d8fa4228ce1ade2b7f561c8840a9748b7c8944ef7306508486e4dff987420"
+    },
+    {
+      "id": "C05",
+      "claim": "Exact scale/export checks executed",
+      "status": "locally-tested",
+      "source": "reports/scale-validation.json",
+      "limitation": "Not HR quality or huge-output execution",
+      "sha256_utf8_lf": "c7217cd809a83844eb62bd2c3d5b6f535ae95d1d8e44da3f21966a6ebcfd77cf"
+    },
+    {
+      "id": "C06",
+      "claim": "Real cross-sensor transfer established",
+      "status": "unavailable",
+      "source": "reports/mp36-feasibility.md",
+      "limitation": "No completed genuine paired evaluation",
+      "sha256_utf8_lf": "85d9a36c5ba4addc18b8c55d16d9b5c0a1da7e4e68bbff9093471c0e294e9f15"
+    },
+    {
+      "id": "C07",
+      "claim": "Matched-budget architecture superiority",
+      "status": "planned",
+      "source": "docs/protocol-v2.md",
+      "limitation": "Unexecuted; no novelty/SOTA claim",
+      "sha256_utf8_lf": "d14e86773549979f1fa7ce2229001b1d7b55194c73ad4915bf9bb56693d1b652"
+    }
+  ]
+}

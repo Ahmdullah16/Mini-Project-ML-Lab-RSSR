@@ -1,6 +1,6 @@
 # Submission readiness
 
-Assessment: 2026-10-25 (teaching/showcase rows updated; older row evidence retains its recorded scope). **Not submission-ready and not publication-ready.** Passed means the stated criterion was observed; failed means incomplete/unverified; blocked means an external prerequisite is missing. Stateless inference and durable research storage are separate requirements.
+Assessment: 2026-10-26 (teaching/showcase rows updated; older row evidence retains its recorded scope). **Not submission-ready and not publication-ready.** Passed means the stated criterion was observed; failed means incomplete/unverified; blocked means an external prerequisite is missing. Stateless inference and durable research storage are separate requirements.
 
 | Original requirement | Status | Acceptance and evidence | Remaining limitation |
 |---|---|---|---|
@@ -31,14 +31,19 @@ Assessment: 2026-10-25 (teaching/showcase rows updated; older row evidence retai
 | 12a Resume and provenance | passed | Exact interrupted resume; configs, seeds, environment, hashes. `tests/test_experiment.py` | Existing equivalence test passed; relocatable prepared manifests tested. |
 | 12b All notebooks clean exits | failed | All final notebook versions in isolated kernels with clean process exits. `scripts/execute_notebooks.py` | All 40 current notebooks passed real isolated Python 3.12 kernels, complete process exit 0, source hashes verified; local TCP warning documented. |
 | 13a Local inference demo | passed | Real upload/inference API and validated output dimensions. `reports/demo-http.json` | Local HTTP inference verified. |
-| 13b Complete demo controls | failed | Samples, compatible models, AOI, metadata, downloads, scientific export. `app/demo.py` | All three published checkpoints passed local AppTest and max-size inference. Existing public pilot passed uploads and fresh Sentinel export. Updated selector public verification pending. |
+| 13b Complete demo controls | failed | Samples, compatible models, AOI, metadata, downloads, scientific export. `app/demo.py` | All3 published checkpoints passed local exact-scale AppTest, export/restart and configured host-boundary checks (reports/scale-*.json). Inputs≤1024 per side; all6 scale choices visible. Huge65536-square execution and current public verification remain unverified. |
 | 13c Public inference deployment | failed | Public URL completes inference and restart/persistence check. `docs/operations.md` | Previous public hybrid inference/source identity recorded in reports/public-hybrid-validation.json. October23 URL retries redirected to not-found/no-access; current public verification blocked by app visibility/access. Empty-cache recovery passed locally; hosted cold restart remains unverified. No persistent-storage claim. |
 | 14a Submission artifacts | failed | Final report, slides, examiner guide, executed notebook bundle and manifest. `reports/research-draft.md` | Preliminary report and figures only; package incomplete. |
 | 14b Consistent documentation | failed | README, briefs, progress and evidence agree. `README.md` | README and MP05–MP11 briefs reconciled; older historical checkpoint notes explicitly superseded. |
 | 15a Local tests | passed | Offline regression suite and real-data smoke integration. `tests` | 85 tests plus four subtests passed in 34.13 seconds; 412 relative Markdown links and all 40 IDs passed. |
-| 15b Final commit CI | failed | CI passes on actual submission commit. `.github/workflows/test.yml` | Showcase head04e7c2e passed both Linux jobs, run39989197874. PR16 passed both Linux jobs (39991113761); current folder-layout candidate CI pending. |
+| 15b Final commit CI | failed | CI passes on actual submission commit. `.github/workflows/test.yml` | PR21 run40265524150: tests job passed, Streamlit failed because check_model_catalog.py used the obsolete positional selector. Updated keyed-control check passed locally for all3 models; replacement CI pending. External merge does not mean CI passed. |
 | 15c Review/checkpoints | passed | Validated commits, resumable exact next actions, no automatic merge. `docs/next_session.md` | Submission work checkpoint maintained; no institutional submission authorized. |
 
 ## Teaching acceptance
 
 MP01–MP35 have expanded lessons; MP27–MP35 implementation checklists are complete, learner mastery unassessed. MP36–MP40 need full expansion. Project completion checklists remain authoritative and learner mastery is unassessed. All current notebooks have real-kernel evidence; expanded MP19–MP25 were rerun with exit 0; a final full-batch candidate run remains required.
+
+
+## Research-first update
+
+[Research questions](research_questions.md) and [protocol v2 design](protocol-v2.md) committed before new experiments. The [claim/evidence register](claim_evidence.json) separates measured, locally-tested, unavailable and planned statements. New region manifests, resource approval, calibrated cross-sensor evaluation, matched budgets and submission artifacts remain open gates. MP36 feasibility identifies SEN2VENµS v2 with corrected license mapping; no dataset archive downloaded.

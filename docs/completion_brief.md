@@ -146,3 +146,8 @@ Finish with implemented changes, measured quality gains/tradeoffs, test evidence
 1024×1024 is the maximum INPUT, independently for width and height. Accept rectangular and odd dimensions unchanged. Offer ×2, ×4, ×8, ×16, ×32, ×64; output width=s*input width and height=s*input height, pixels grow by s². 256×128 at ×8 is 2048×1024; 1024×1024 at ×64 is 65536×65536. Never silently resize, crop, lower scale or label interpolation learned SR.
 
 Use verified native models or explicitly labeled cascades, disclose interpolation and intermediate quantization. Show dimensions, pixels, estimated memory/storage and configured/measured availability BEFORE execution. Large local jobs require overlapped tiles, seam checks, incremental disk-backed outputs and separately bounded previews. Keep all scales visible on the free host; rejected requests need a runnable local/Colab job with identical input/model/settings. Do not claim untested large hosted execution. Test odd, rectangular, square and maximum input contracts, exact exported sizes, resource rejection and seams. Preserve frozen scientific results; scaling is not evidence of recovered detail.
+
+
+## Research-first priority update — 2026-10-26
+
+The [latest complete user brief](research_upgrade_brief.md) overrides conflicting earlier requirements. Prioritize defensible evidence, then submission package, then interface/deployment. Commit research questions and protocol v2 before new experiments/test inspection; retain null findings and frozen results. Large downloads, long training and paid resources require explicit approval with size/compute/cost/purpose. Existing bounded implementation checks remain authorized.
