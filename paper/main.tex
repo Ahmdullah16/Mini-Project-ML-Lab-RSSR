@@ -1,0 +1,83 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,booktabs,graphicx,url}
+\usepackage[hidelinks]{hyperref}
+\title{An Evidence-Bounded Evaluation of Compact Remote-Sensing Super-Resolution Models}
+\author{\IEEEauthorblockN{Project evaluation draft}\IEEEauthorblockA{Mini-Project-ML-Lab-RSSR\\Author and affiliation confirmation pending}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We consolidate existing compact super-resolution experiments on NAIP aerial imagery with synthetically degraded low-resolution inputs. The purpose is an evaluation study, not a claim of architectural novelty. An early residual-gating pilot admits an attenuation explanation. A later development study uses geographically separated scenes, while the preserved final evaluation contains only one held-out scene. Tables are generated directly from versioned experiment records and kept separate by protocol and band count. The available evidence does not establish matched-budget architectural superiority, real cross-sensor transfer, or recovery of physically missing detail. A prospective geographic evaluation design is registered separately but remains unexecuted. This working paper exposes those limitations rather than substituting software completion for scientific validation.
+\end{abstract}
+\begin{IEEEkeywords}
+super-resolution, geographic evaluation, reproducibility, remote sensing, negative results
+\end{IEEEkeywords}
+
+\section{Scope and research questions}
+The study asks whether attention and Transformer modules help under geographic holdout with matched parameter and compute budgets; whether synthetic-degradation training transfers to genuine cross-sensor pairs; and whether pixel metrics agree with edge, spectral and justified downstream measures. Existing runs provide contextual evidence, but do not yet satisfy all three questions. No state-of-the-art or novelty claim is made.
+
+This document separates three statuses: executed historical experiments, locally tested inference software, and proposed future evaluation. In particular, the v2 design was committed after the historical studies. It is not a retrospective preregistration of their outcomes. The final submission, authorship, cross-sensor study and public deployment verification remain incomplete.
+
+\section{Related work and dataset context}
+SRCNN and SwinIR provide established convolutional and Transformer restoration references \cite{dong2014srcnn,liang2021swinir}. Our small teaching architectures are not faithful reproductions of these publications. The recorded official SwinIR comparison uses pretrained weights; its pretraining and domain differ from the locally trained compact models. It is an external control, not a matched-training-budget experiment.
+
+WorldStrat and SEN2VENUS offer routes to paired cross-sensor investigation \cite{cornebise2022worldstrat,michel2022sen2venus}. Their existence does not establish compatibility with this study. Native scale, spectral response, radiometry, dates, masks and registration must be audited before comparing predictions with their reference imagery. Our source review remains open for the SEN2VENUS registration methodology and published correction. No sensor archive was downloaded for this paper-generation step.
+
+\section{Data and executed methods}
+The original pilot used three distinct aerial scenes with training, validation and test assignments declared before tiling. The later development snapshot contains nine scenes: four training, four validation and one preserved test scene. Scene membership is documented in the pinned manifests. Repeated patches from one scene are not independent geographic samples.
+
+Stored digital numbers are divided by a fixed 10,000. This numerical convention is not verified reflectance calibration. Synthetic low-resolution inputs use Gaussian blur followed by area downsampling at scale two; there is no new sensor-registration estimate in these synthetic pairs. The original protocol accepts fully valid patches, excludes invalid values, and uses deterministic patch order. That sampling is not representative random geographic sampling.
+
+The early ablation pilot uses Adam, L1 training, a small fixed step budget and three seeds, comparing residual architectures and gating controls. Parameter counts differ. The later development runs change both training geography and residual initialization; they therefore cannot isolate either change causally. Their seed variation must not be interpreted as a geographic confidence interval. Detailed settings, run IDs and checkpoint hashes remain in the source records, with separate scope labels in the generated evidence manifest.
+
+\section{Metric definitions and aggregation}
+For valid, aligned scalar samples $x_i$ and predictions $\hat{x}_i$, define
+\begin{align}
+\mathrm{MSE}&=N^{-1}\sum_i(\hat{x}_i-x_i)^2,\\
+\mathrm{RMSE}&=\sqrt{\mathrm{MSE}},\quad
+\mathrm{MAE}=N^{-1}\sum_i|\hat{x}_i-x_i|,\\
+\mathrm{PSNR}&=10\log_{10}(R^2/\mathrm{MSE}).
+\end{align}
+The recorded synthetic protocol uses $R=1$, all included bands, no pre-metric clipping, and a two-HR-pixel border crop for scale two. RMSE and MAE retain normalized-DN units; MSE uses squared units. Smaller errors and larger PSNR are preferable only within compatible protocols.
+
+SSIM uses a uniform $7\times7$ window, population moments, $K_1=0.01$, $K_2=0.03$, and fully valid windows. For compatible spectra, SAM is
+\begin{equation}
+\theta=\arccos\!\left(\frac{x^\top\hat{x}}{\|x\|\|\hat{x}\|}\right),
+\end{equation}
+in radians, with zero-norm spectra excluded and numerical cosine clipping. SAM on uncalibrated normalized DN is a numerical descriptor, not proof of physical spectral fidelity. Undefined metrics remain unavailable.
+
+The reported final PSNR is a mean of tile scores for one scene, not PSNR recomputed from a global pooled MSE. A PSNR difference is subtraction in dB. Percentage RMSE improvement is $100(b-m)/b$ for nonzero baseline error $b$; zero baseline yields unavailable. We do not combine unlike units into an accuracy percentage.
+
+\section{Executed evidence}
+\input{generated/results.tex}
+\input{generated/interpretation.tex}
+
+The early pilot remains a negative or inconclusive result. Comparable improvement from fixed residual attenuation weakens a learned-reliability interpretation; it does not prove that gating cannot work under other budgets. The final single-scene ranking cannot establish broad geographic superiority or equivalence. No new test inference was run to generate these tables.
+
+\section{Prospective protocol v2}
+The separately committed design targets five outer geographic folds with at least fifteen eligible independent regions, inner validation, three training seeds, and matched parameter/MAC accounting for the primary hybrid-versus-CNN contrast. Scene-level paired bootstrap intervals would resample regions, not patches or seeds. Shared training sets across folds can induce dependence; small-sample intervals require explicit qualification.
+
+Those experiments have not run. Eligible independent-region manifests, overlap checks, calibration/registration details, model budgets and resource approval are open gates. The old frozen test remains untouched and reported separately. Edge fidelity, radial spectra and downstream measures are planned diagnostics, not measurements supplied by this paper. Downstream evaluation additionally requires suitable independent labels. Perceptual objectives and LPIPS belong only to a separately labeled perceptual study.
+
+\section{Inference implementation and failure modes}
+The locally tested inference workflow accepts each input dimension up to 1024 and offers scales two through sixty-four as native scale-two or explicitly labeled repeated learned cascades. Each dimension grows by $s$ and pixel count by $s^2$. This is an output-grid property, not a statement about true resolving power.
+
+Large outputs use disk-backed tiled stages with context halos. Display cascades clip and quantize between stages, whereas scientific GeoTIFF cascades retain float32 values and masks. Previews are bounded separately. Global pooling makes tiled context approximate. The largest 65536-square case was planned, not executed. Hosted requests above the configured limit use portable exact-input jobs; no current public deployment verification is asserted.
+
+A systematic reference-based failure atlas remains unfinished. Existing synthetic diagnostic checks must not be mislabeled as observed cross-sensor failure distributions. Generative enhancements can invent plausible detail and are never ground-truth references.
+
+\section{Limitations and ethics}
+One held-out scene cannot characterize geographic uncertainty. Architecture budgets are imperfectly matched; pretraining confounds external controls. Numerical DN scaling is not physical calibration. Synthetic degradation is not a validated sensor forward model. These limitations prevent a research-grade superiority or transfer conclusion.
+
+Dataset and imagery licenses must be respected separately from code licenses. The candidate datasets include noncommercial HR terms. Geographic outputs can expose sensitive locations; only appropriately authorized and attributed imagery should be redistributed. Model-generated detail should not support consequential interpretations without independent validation. Inputs and caches on the stateless host are not a durable research database.
+
+\section{Reproducibility checklist and open work}
+\begin{itemize}
+\item Generated tables consume immutable recorded artifacts; canonical text hashes and row identities are in \texttt{reports/paper-evidence.json}.
+\item The claim/evidence register distinguishes measured, locally tested, planned and unavailable statements. It does not infer truth from file presence.
+\item Existing protocol and checkpoint hashes remain preserved. No new training, dataset transfer or frozen-test evaluation is needed to regenerate the paper tables.
+\item Fresh data, v2 execution, complete literature extraction, failure atlas, final notebooks/slides, external persistence and signed-out public verification remain open.
+\item This is a working evaluation paper, not a completed submission. Compiler and generator checks are reported separately from scientific acceptance.
+\end{itemize}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}
