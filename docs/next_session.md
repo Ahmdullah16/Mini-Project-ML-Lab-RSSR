@@ -1,14 +1,25 @@
 # Resume checkpoint — 2026-10-26
 
+## Metadata intake milestone — 2026-10-26
+- Started clean at f17f929; fetched main still07d9002. PR24 CI40282443346 rechecked SUCCESS. Prior local paper-build checkpoint preserved.
+- Added src/rssr/pair_audit.py metadata-only admission CLI and tests/test_pair_audit.py:21 targeted tests passed. Odd rectangular native-scale grid accepted as declarations only; incompatible bounds/bands/units/time/masks/registration blocked. No raster reads, network, training, calibration or scientific acceptance in this module.
+- docs/cross-sensor-intake.md supplies explicit source compatibility/unknown matrix and a bounded one-site development acquisition proposal. Proposed caps are not implemented downloader guarantees or user approval. No archive requested/downloaded; exact provider byte count and correction review remain gates before approval request.
+- NEXT: finish official correction/registration review; freeze task-specific tolerances and independent-region metadata. Implement/test bounded ZIP intake before proposed acquisition. Continue paper visual review and literature/failure-atlas work independently. MP36 remains In progress. Do not rerun frozen evidence.
+
+## Latest publication and compiler milestone
+- Paper implementation committed7da7cb1; PR24 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/24 headc9cf4eabcb422a42dc0b70232e815d9f40fe6d29, treef4c6b807413721b98dbb1d6e33764cb4752d081d matched local commit. CI40282443346 SUCCESS. Externally merged07d9002 and integrated locally; exact merge commit via git log. No agent merge of PR.
+- Desktop compile_latex_document returned SUCCESS for current paper/main.tex after package/font initialization timeout. One interrupted retry result was unavailable; a fresh call confirmed success. reports/paper-build-validation.json pins source hashes and observed build/CI outcomes. PDF visual review remains pending; do not repeat compilation unless source changes or layout review requires it.
+- Publisher DOI/CDN routes still unavailable. Search-indexed primary text mentions SIFT translation matching, but full registration/correction review remains unresolved. No new sensor-method acceptance or archive download.
+
 ## Verified state
 - Local branch feat/mp27-attention. PR23 head7989ce00fc59a891839e7e8307a36ec96d1f774b passed CI40280953883; externally merged origin/main dffe38ce82f953881c2fd600510f286a5911c133. Local integration951aab0 preserves prior checkpoint. Do not merge PRs automatically.
 - Next independent milestone implemented: paper/main.tex IEEE-style evaluation draft, paper/references.bib synced from root, four generated tables and interpretation, reports/paper-evidence.json source hashes/row pointers. scripts/build_paper_evidence.py generates/checks derived content without experiments. Three tests passed (provenance, invalid seeds, inconsistent scene aggregation); seven existing claim hashes and891 links passed. CI now checks generated paper files. No frozen reports/checkpoints, app code or central notebooks changed.
-- Built-in LaTeX project created/open requested; first compilation timed out during compiler package/font initialization; retry requested. PDF compilation and visual layout NOT verified. Retry compile_latex_document on paper folder; do not report PDF success without tool success. Paper remains a draft; authorship pending.
+- Built-in LaTeX project created and compilation now verified, superseding the earlier timeout. Visual layout NOT verified. Paper remains a draft; authorship pending.
 - Source priority attempted: SEN2VENUS paper XML and correction PDF still HTTP429. No archive download. MP36 remains In progress despite seven numerical tests and executed four-cell notebook already passing. Do not repeat these verified lessons/artifacts.
 
 ## Exact next work
 1. Inspect git status/log and latest PR/CI state; publication details appended below when available. Preserve local checkpoints if user merged externally.
-2. Compile paper/main.tex with built-in project compiler, inspect diagnostics and PDF layout. Generator commands from repo root: `../../work/clean-venv/Scripts/python.exe scripts/build_paper_evidence.py --check` and `../../work/clean-venv/Scripts/python.exe -m pytest tests/test_paper_evidence.py -q`. Set PYTHONUTF8=1. No full rerun needed unless source/code changes.
+2. Inspect compiled paper PDF layout and finish missing literature/failure-atlas content; compiler success is already recorded. Generator commands from repo root: `../../work/clean-venv/Scripts/python.exe scripts/build_paper_evidence.py --check` and `../../work/clean-venv/Scripts/python.exe -m pytest tests/test_paper_evidence.py -q`. Set PYTHONUTF8=1. No full rerun needed unless source/code changes.
 3. Finish official registration/correction review for MP36, full sensor/date/mask compatibility matrix and bounded resource proposal. Primary records: SEN2VENUS14603764 (139.5GB full;121.2MB FGMANAUS), WorldStrat15382551 v1.1 (104.1GB total). License mapping in reports/mp36-feasibility.md. Never infer correction contents or calibration from unavailable text. Seek explicit resource approval before archive transfer/long training, with concrete size/compute/cost.
 4. Continue evidence-derived literature/failure-atlas/paper work independently of source access; then MP37–40 and MP20 independent SRCNN table gap. Do not mark full projects complete from scaffolding or synthetic examples.
 

@@ -27,3 +27,5 @@ These commands use the standard library for generation, pytest for tests, and no
 | Cross-sensor source review | [feasibility](../reports/mp36-feasibility.md) | Registration/correction review remains blocked by publisher retrieval |
 
 The project-wide [claim register](../docs/claim_evidence.json) retains measured/planned/unavailable statuses. New figures and the failure atlas must derive from compatible authorized evidence; synthetic fixtures must not be presented as real sensor outcomes. No frozen artifact is regenerated here.
+
+Build status 2026-10-26: desktop compiler returned success for the source hashes recorded in `reports/paper-build-validation.json`. Three targeted tests and PR24 CI40282443346 passed. Visual PDF review remains pending.
