@@ -1,0 +1,257 @@
+{
+  "scope": "Synthetic architecture/initialization checks only",
+  "environment": {
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "threads": 2,
+    "seed": 38
+  },
+  "cases": [
+    {
+      "bands": 3,
+      "input_shape": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "module_shapes": {
+        "head": {
+          "input": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "local": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "context": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "fuse": {
+          "input": [
+            1,
+            16,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "attention": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "tail": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            3,
+            10,
+            14
+          ]
+        },
+        "gate": {
+          "input": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            3,
+            5,
+            7
+          ]
+        }
+      },
+      "parameters": 3524,
+      "zero_residual_max_abs_bicubic_difference": 0.0,
+      "tail_weight_gradient_finite": true,
+      "tail_weight_gradient_nonzero": true,
+      "gate_gradient_max_abs": 0.0
+    },
+    {
+      "bands": 4,
+      "input_shape": [
+        1,
+        4,
+        5,
+        7
+      ],
+      "output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "module_shapes": {
+        "head": {
+          "input": [
+            1,
+            4,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "local": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "context": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "fuse": {
+          "input": [
+            1,
+            16,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "attention": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            8,
+            5,
+            7
+          ]
+        },
+        "tail": {
+          "input": [
+            1,
+            8,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            4,
+            10,
+            14
+          ]
+        },
+        "gate": {
+          "input": [
+            1,
+            4,
+            5,
+            7
+          ],
+          "output": [
+            1,
+            4,
+            5,
+            7
+          ]
+        }
+      },
+      "parameters": 3969,
+      "zero_residual_max_abs_bicubic_difference": 0.0,
+      "tail_weight_gradient_finite": true,
+      "tail_weight_gradient_nonzero": true,
+      "gate_gradient_max_abs": 0.0
+    }
+  ],
+  "optimizer_steps": 0,
+  "limitations": [
+    "Zero residual reproduces bicubic by construction, not learned quality",
+    "No matched-budget quality comparison or real error atlas",
+    "Gate gradient is zero initially when multiplied by a zero residual"
+  ]
+}

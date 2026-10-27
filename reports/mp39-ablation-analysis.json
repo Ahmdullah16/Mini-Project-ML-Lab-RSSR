@@ -1,0 +1,189 @@
+{
+  "scope": "Derived historical one-scene table and separate synthetic bootstrap example",
+  "source": "reports/ablation-pilot-runs.json",
+  "sha256_utf8_lf": "8a1cb548e39aaa530783bb1d63407914446bd85c8632bc710beb995c827a485e",
+  "source_runs": 24,
+  "table": [
+    {
+      "variant": "cnn",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 7552,
+      "mean_psnr_db": 36.480696951288984,
+      "sample_seed_sd_db": 1.4000200202531432,
+      "mean_delta_bicubic_db": -9.329739970471612,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "485ac5c254df4acbabdbc690aedaf2cc",
+        "e6b56a027c0e4c1c881ffe01d567cce2",
+        "099274e7a92847f5a534389021efc3cc"
+      ]
+    },
+    {
+      "variant": "cnn_attention",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 7799,
+      "mean_psnr_db": 42.54243778890862,
+      "sample_seed_sd_db": 0.7804546708861944,
+      "mean_delta_bicubic_db": -3.2679991328519784,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "f4f97dae88b344a79d1457d31249d256",
+        "c3fc96c862e6460aa762253417032045",
+        "6e7d333f0d054df69d82409082eda7a2"
+      ]
+    },
+    {
+      "variant": "cnn_transformer",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 10560,
+      "mean_psnr_db": 38.752372422070195,
+      "sample_seed_sd_db": 1.1036282121846217,
+      "mean_delta_bicubic_db": -7.058064499690405,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "7c548d089e2c44faa4dd376ca7bc0a14",
+        "02733c9b1ab0462c8532ab1c714d5da0",
+        "08524e88ef1d4e56ab34ddf87139c0be"
+      ]
+    },
+    {
+      "variant": "hybrid",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 10807,
+      "mean_psnr_db": 43.68694359735831,
+      "sample_seed_sd_db": 0.3710629175467333,
+      "mean_delta_bicubic_db": -2.123493324402292,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "755cd7e99b5e4cfb96cf0b9a2f22a8dc",
+        "c94c97c014e2497284ce8f5959dde77b",
+        "e80122a3cbad4120a434638cd038f5cf"
+      ]
+    },
+    {
+      "variant": "hybrid_add",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 10279,
+      "mean_psnr_db": 42.54399542451452,
+      "sample_seed_sd_db": 0.22765141116430826,
+      "mean_delta_bicubic_db": -3.2664414972460754,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "1857534397954a67a8fc66442c1d344d",
+        "d8b7920f3464419794e27467ae7316c8",
+        "1fa4d02b91ce49aab05a7e9a4dba43e2"
+      ]
+    },
+    {
+      "variant": "hybrid_consistency",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 10807,
+      "mean_psnr_db": 43.67341051705313,
+      "sample_seed_sd_db": 0.3570636142966582,
+      "mean_delta_bicubic_db": -2.1370264047074676,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "9ae19869d0ce408f8887710a92bbfd8c",
+        "febf934c07de4ce197aa3fe63718e74a",
+        "224eac2ff48e46fa9917867e6febd8a0"
+      ]
+    },
+    {
+      "variant": "hybrid_constant_gate",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 10807,
+      "mean_psnr_db": 45.06246214302649,
+      "sample_seed_sd_db": 0.15387746826819523,
+      "mean_delta_bicubic_db": -0.7479747787341088,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "3be6e7cfe31d46ca81416b763ec6c274",
+        "606cd3ea2c1b448583492823aeecbbc6",
+        "f48f48a2d4734242af45b582b3ae25d6"
+      ]
+    },
+    {
+      "variant": "hybrid_gate",
+      "seeds": [
+        17,
+        23,
+        41
+      ],
+      "parameters": 11467,
+      "mean_psnr_db": 45.21218571206863,
+      "sample_seed_sd_db": 0.09525680023892086,
+      "mean_delta_bicubic_db": -0.598251209691964,
+      "geographic_ci": null,
+      "ci_reason": "Only one validation scene; seeds are not independent regions",
+      "run_ids": [
+        "17a5ba7aeff34c5c843cda428e7a8cd1",
+        "4cc70004041740a68041dbd300870a37",
+        "4f3303ccb40c440097f481918eb1d01d"
+      ]
+    }
+  ],
+  "descriptive_contrasts_db": {
+    "learned_minus_constant_gate": 0.1497235690421448,
+    "consistency_minus_hybrid": -0.013533080305180079
+  },
+  "synthetic_bootstrap_only": {
+    "a": [
+      2,
+      3,
+      4
+    ],
+    "b": [
+      1,
+      2,
+      3
+    ],
+    "seed": 39,
+    "repeats": 1000,
+    "mean_difference": 1.0,
+    "percentile95": [
+      1.0,
+      1.0
+    ]
+  },
+  "limitations": [
+    "No new training, validation inference or test access",
+    "Parameter budgets differ",
+    "No geographic CI from one scene",
+    "Synthetic bootstrap interval is not an experimental confidence interval"
+  ]
+}

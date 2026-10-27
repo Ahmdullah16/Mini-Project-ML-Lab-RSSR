@@ -1,3 +1,22 @@
+# MP40 milestone — 2026-10-27
+
+- MP38 architecture930ad92 and MP39 analysisefd3b96 committed; PR27 externally merged5263e3c and integrated15a0b51 preserving expanded records/checkpoints. PR27 CI40452296078 SUCCESS. No agent PR merge.
+- MP40 now derives30 robustness rows/5 efficiency records and SVG curve figure from unchanged reports/development-benchmark.json.5 tests passed4.84s; experiment and3-cell real kernel passedexit0. Figure visually checked, consistent model colors/units and negative results. Historical artifacts not rerun. Expanded MP38–40 remain In progress for unexecuted scientific requirements.
+- NEXT: publish/review this lesson batch and inspect its CI; continue v2 matched parameter/MAC preflight and metadata-only independent-region manifest work. No new training/test inspection until all protocol/resource gates. MP36 needs v2 lineage/pair validation and exact authorized archive bytes/URL. MP20 independent evidence gap, paper visual review/failure atlas and final package remain.
+- All40 canonical folders retain MP01 layout. No new model quality, cross-sensor transfer or deployment claim. Latest validation supersedes introductory notes; learner mastery unassessed.
+
+# MP39 analysis milestone — 2026-10-27
+
+- MP38 architecture milestone committed930ad92;5 tests and real kernel passed. MP39 now expanded with derived24-run/eight-variant historical table, source hashes, explicit null geographic CIs and separate toy bootstrap.7 tests passed2.35s; standalone report and3-cell kernel passedexit0. No retraining/frozen inference. Both remain In progress for scientific acceptance.
+- PR27 CI40452296078 SUCCESS; check remote before next publication. MP37 complete implementation/teaching scope, learner mastery unassessed.
+- NEXT: MP40 reuse reports/development-benchmark.json robustness/efficiency records (do not regenerate them), expand interpretation/measurement conventions/notebook. Then resume external acquisition gates and paper visual review. Preserve synthetic-vs-measured distinctions and null findings.
+
+# MP38 architecture component — 2026-10-27
+
+- MP37 published draft PR27 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/27 branchfeat/mp37-fusion-lesson head737da4e1e173b76c214a30fd2ce0b5d5d317578d treeb6aef67f2c7db65c80e9e44c5711b8e09380bf38 matches localbed3b21 (milestone4c0a604). PR attached; CI pending when published. PR26 integratedbed3b21 preserving checkpoint/progress.
+- MP38 architecture component expanded: reusable shared-model shape tracing, zero-residual/bicubic identity and gradient checks, diagrams/equation/exercises.5 tests passed7.85s; standalone synthetic experiment and3-cell real kernel passedexit0. No optimizer steps or new scientific inference. Report reports/mp38-architecture.json. Full MP38 stays In progress because matched-budget quality table/error atlas remain unexecuted.
+- NEXT: MP39/MP40 can reuse historical ablation/robustness/efficiency evidence; keep scientific limitations. MP36 exact archive URL/byte count and v2 lineage still pending; no approved acquisition. Paper compiled, visual review pending. Check latest remote before publishing next milestone.
+
 # MP37 milestone — 2026-10-27
 
 - PR26 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/26 head59de5d942a885b8fac2b0a19f342640985fdbce6 published19517dd tree1c7848a224d45bb41dd0ecaffea5178c2885a624. CI40451432276 SUCCESS; externally merged0774232, fetched. Integrate after saving current MP37 changes, preserving checkpoints.

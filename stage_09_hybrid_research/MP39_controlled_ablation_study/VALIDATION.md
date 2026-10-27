@@ -9,3 +9,8 @@ Local-folder test and execution outcomes are recorded below. No data acquisition
 Passed 1 local tests with pytest; the notebook passed a real Jupyter kernel from this project directory (2 code cells). Source SHA-256: `9bd0a1920d39fa5cb545ba0eae9ae6161fb955ce50c26d6f35df36dd14db5194`.
 
 Commands from this directory: `python -m pytest -q test_mp39_tools.py` and `python run_notebook.py`. Records: [folder tests](../../reports/project-folder-tests.json), [kernel execution](../../reports/project-notebook-execution.json). Outputs are temporary under ignored data/executed_notebooks/project_folders. Original central notebook evidence remains historical. This validates the current lesson scope, not unfinished completion criteria.
+
+
+## Expanded historical analysis — 2026-10-27
+
+Seven tests passed2.35s; experiment and expanded three-cell real kernel passedexit0 (known TCP warning). [Derived report](../../reports/mp39-ablation-analysis.json) preserves all24 historical rows via source hash/run IDs, eight variants and three seeds. Geographic CIs remain null; synthetic constant-effect bootstrap is separately labeled. Duplicate seeds/run IDs, mixed manifests, changing parameter counts and nonfinite PSNR are rejected. No new training or frozen evaluation. README/notebook include formulas, controls, negative findings and solved exercises. MP39 remains In progress: independent-region uncertainty and matched-budget acceptance remain unfinished.
