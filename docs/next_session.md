@@ -1,4 +1,15 @@
+# Latest checkpoint — 2026-10-27
+
+- PR25 CI40316598653 SUCCESS; externally merged bff3eab. Integrated6127a67 preserving local publication checkpoint. Current new milestone: archive_intake.py local bounded ZIP listing/selective extraction,21 tests passed0.15s. No network downloader or raster decoder added; no archives acquired.
+- Major source unblock: publisher-provided original/correction full texts on ResearchGate read. Correction fixes public dataset URL. Original method documented in reports/mp36-feasibility.md dated addendum;15m match filter is not a residual guarantee. C06 hash intentionally refreshed, claim remains unavailable. v2 lineage/pair-level validation still open; MP36 NOT complete.
+- Single-attempt archive_transfer.py implemented;7 offline tests passed. No live transfer. Verify exact provider byte count/final URL before a concrete approval request. No large acquisition/training without approval. Finish v2-specific source matrix and independent-region/tolerance gates. Paper source-access sentence and correction bibliography reconciled; desktop compile passed after edit;3 paper provenance tests passed (reports/intake-paper-validation-20261027.json). Continue paper visual review, then remaining lessons.
+- Reuse verified artifact/scale/paper tests; no frozen inference reruns. Local archive tests are synthetic implementation evidence only. Earlier checkpoint below retains context; latest statements supersede stale source-access blockers.
+
 # Resume checkpoint — 2026-10-26
+
+## Publication checkpoint
+- Local milestone90a9245 published as draft PR25 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/25 on feat/cross-sensor-metadata-intake; head5c7506f6a061b95ed7576099266b16bfef8ae253, treed7cf9772fb35287f692b951108749f3e57bc9ae8 exactly matches local milestone. Includes prior paper-build checkpointf17f929. PR attached; CI pending at publication. Check current remote/CI before further edits; no automatic merge.
+- Validation:21 metadata tests passed in0.08s,894 relative links and7 claim hashes passed. This publication note is a local follow-up commit. No new imagery, training, inference or frozen artifact regeneration.
 
 ## Metadata intake milestone — 2026-10-26
 - Started clean at f17f929; fetched main still07d9002. PR24 CI40282443346 rechecked SUCCESS. Prior local paper-build checkpoint preserved.

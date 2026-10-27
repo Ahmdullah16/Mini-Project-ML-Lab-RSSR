@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-27",
+  "kind": "success",
+  "compiler": "desktop compile_latex_document",
+  "source_sha256_utf8_lf": {
+    "paper/main.tex": "6df7c3c24497bacf27c82d98780168e733046a6844024173d8827d40c068189d",
+    "paper/generated/results.tex": "60fb030b6d5abb83734268cd9ea940adfc59dbf9cf5b1111363484ed1204d957",
+    "paper/generated/interpretation.tex": "6fe1975845d615bc33e7067a5e1049e52e01a6fb49286c69d6bd5492e8e80af5",
+    "paper/references.bib": "0ee2a484eda497570bf92cd14d801a0f9e551347e63981b41faf187722f48639"
+  },
+  "tests": {
+    "archive_intake": 21,
+    "archive_transfer": 7,
+    "paper_evidence": 3
+  },
+  "scope": "Synthetic implementation tests and paper compilation; no new scientific evaluation",
+  "visual_review": "pending"
+}

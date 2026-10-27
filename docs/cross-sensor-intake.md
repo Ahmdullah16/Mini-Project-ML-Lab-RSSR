@@ -41,3 +41,17 @@ Exit0 means `declarations_compatible`; exit2 means `blocked`. Neither verifies t
 ## Executed and pending
 
 October26:21 tests passed in0.08s on synthetic metadata. No imagery was opened, acquired, resampled or scored. Pending: full official correction review, justified tolerances, bounded downloader enforcement, acquisition approval, actual metadata/registration/mask validation, independent region manifest and all v2 scientific gates. This work does not close MP36 or the real cross-sensor requirement.
+
+
+## Local archive implementation — 2026-10-27
+
+`python -m rssr.archive_intake archive.zip --expected-md5 <published-md5>` lists and hashes a local ZIP without decoding imagery. Explicit extraction uses `--destination <new-folder> --entry <exact-file-name>` (repeat entry as needed). Archive cap130,000,000 bytes, declared and actual extraction cap512MiB, entry cap10,000 and free disk reserve1GiB are enforced. CRC checks are performed on selected entries; hashes are returned. Unsafe/Windows-reserved names, links, collisions, existing destinations, unknown selections and quota violations fail closed. Partial staging is cleaned after failure. Nested archives are not recursively expanded.
+
+These limits bound archive/file bytes, not total interpreter RAM or wall time; ZIP central-directory parsing allocates metadata before the entry-count check. Network transfer enforcement and raster decoding remain separate unfinished steps. No downloader was executed or added in this milestone.21 targeted archive tests passed, including failure cleanup and Windows raw-name validation. The publisher-provided methodology/correction text has now been read; see the dated addendum in [feasibility](../reports/mp36-feasibility.md). Historical unknown cells above are superseded only for original-paper methodology; v2 file-level verification remains open.
+
+
+## Single-attempt transfer implementation — 2026-10-27
+
+`rssr.archive_transfer.transfer_archive` now requires an exact expected byte count and published MD5, accepts public HTTPS without embedded credentials, rejects redirects/encoded responses, writes a temporary file and records SHA256 after checksum verification. Existing destinations are preserved; failures clean temporary files. No automatic retry or resume. It enforces130,000,000 application-read bytes by default and1GiB disk reserve. The600-second deadline is checked between blocking reads, each with45-second socket timeout; this is not a hard process deadline. Reported bytes exclude TLS/HTTP overhead and OS buffering. The current cap policy therefore bounds application body reads, not all network wire traffic.
+
+Seven offline tests passed0.11s. No live transfer was attempted. Exact provider byte count/final URL still need confirmation before requesting acquisition approval. Existing data.download has different retry semantics and is not used for this intake. CPU/raster array budgets remain separate unimplemented execution gates.
