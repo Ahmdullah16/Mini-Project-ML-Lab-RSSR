@@ -228,3 +228,5 @@ Training integration follow-up: versioned registry configs now route through exi
 ## Architecture budget/seam milestone — 2026-10-27
 
 PR30 CI40505931536 passed and external merge981ec51 integrated locally12c3285. Added tested partial Conv/Linear/MHA accounting, executed448 candidate budget search and7 new-variant tiling checks. Four unit tests passed3.50s; search4.90s. M2 lacks an eligible partial-budget match in searched widths; no match/quality invented. See docs/architecture-preflight.md and reports/architecture-budget-preflight.json / architecture-seam-smoke.json. No training or frozen evidence reruns; all scientific acceptance gates remain.
+
+Historical binding follow-up:39 distinct pilot checkpoints verified against original report SHA256/config, checkpoint/training identity, strict registry load and exact synthetic5x7 output equality.21 incompatible gate/fusion records excluded; M2/M6 still lack trained bindings.11 mapping tests passed0.11s. reports/historical-architecture-bindings.json records per-run provenance, no dataset/test reopening and no deployment mutation. New matched-budget training is not executed.

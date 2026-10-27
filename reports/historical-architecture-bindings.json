@@ -1,0 +1,2081 @@
+{
+  "schema": "historical-cat-binding-v1",
+  "command": "python scripts/bind_legacy_architectures.py",
+  "source_sha256": {
+    "reports/submission-study.json": "ea89133e18278674beeafd09458c86ccedbd607738d4ea9bf5b6ea118ee449d1",
+    "reports/ablation-pilot-runs.json": "29e925ec47f226363a7426debb5169191e1dd9131e645708e4b40b15a533e0f9",
+    "src/rssr/models.py": "722986b37ab67cd39465617dbb9b689612e1822c81dd2c451199e822c8897c6f",
+    "src/rssr/legacy_architecture.py": "b7281654530eb1d6968621b24461dba48664ea843ad80ac2000a1b35e8209ac7",
+    "src/rssr/architecture_registry.py": "509c246aa8d2400e933b10220b26a6758ede2e0ccf340557b137f73aa0cbb54e",
+    "scripts/bind_legacy_architectures.py": "0610f447f66d1ce5b095e70c177dd902a0edd90b24bad6691debe8fd21300629"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "device": "CPU",
+    "threads": 2
+  },
+  "rows": [
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 0,
+      "run_id": "35931a32a3974ba2bdc5e212ee60b0fa",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "7240cbb0a216c5b89af71f4389e96d08b432a1485bf0c6171e52ba3a4b82d56b",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "f8f4ea71ac0fd4b00e73d170201fdd9e563324e49b5c987014452886c155f4d9",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "36fdffd20f998bcb09d69bf14eb8d44ac20ab045eef39532b9cec5f7870bd64f",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7552,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 1,
+      "run_id": "a328bb8c59974c20946b4781ad1caf16",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "39decb07de4d235afd6b5f7e91fd29e7be6a8d0596c6bbd0d53ed65d282e43af",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "35b156a64068dd72999132f5f9ed3a5616bbe0861f78b3967da2b3309ed19d8d",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "ce9ecb50de85f04a762bb9e95cd4775c250d6e31ae584f1ad84d7175fd16c5fd",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7552,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 2,
+      "run_id": "8a7e8ac6e42a40c99a8288c896da5617",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "74755fb5b992e9c9e4781b72ae306129760256cae6df2bea3afabc6c5ef55725",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "41c8e126e90347e71fb94744a0d45b6ccf780b019b4ec0e8e5520b1cb3b14c02",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "113f0c198f7df1e5f3a2177f8bbf4334addc4628288f96010ed275ab14291016",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7552,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 3,
+      "run_id": "55b89952c8964daebd5cb6913336918d",
+      "historical_variant": "attention",
+      "checkpoint_sha256": "4886ca54219911715aeaa4e1ec51b92a381801ec895130ce2475a3634a269aab",
+      "registry_config": {
+        "architecture_id": "cat-v1/M4",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "7666e22953f7d8e71675b78792184db1c07c0fa43cd3b2f43d0716c07ec081ef",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "attention",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "b9016142e6ae2309afadd0fc07cd31b8e43637a269114b6b6bfff14c381e473f",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7799,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 4,
+      "run_id": "e16fcca801534945b3a7a0fdd787ca1d",
+      "historical_variant": "attention",
+      "checkpoint_sha256": "be0c9bbcdc509beae0eb7344b984f4dfa7c0b48d94729329435852ee6da22571",
+      "registry_config": {
+        "architecture_id": "cat-v1/M4",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "33be76b99abdc1de3ad50a0821fb0a83f42940c51c382af2811f3ca18aae5701",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "attention",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "cbb441f64662abc326812b1aa181d75021dcaee69199b34b471bb0dca5c9f907",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7799,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 5,
+      "run_id": "49e654dffed7446793507ea5620b7914",
+      "historical_variant": "attention",
+      "checkpoint_sha256": "8278484fc8c42c1d59ce7d1b4ef4faafceb7efba46a5c867d71fece0ea75c1b9",
+      "registry_config": {
+        "architecture_id": "cat-v1/M4",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "cea5bb6fa9a36b992d7db2b42d0cf4ce248630cfbe3bcd5a70da0b7472aeedfe",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "attention",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "035253dd80e363b85b4172fcdaf1ec3eead6c4df30845ba1bf654a69dd5fb71b",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7799,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 6,
+      "run_id": "45f47dd1d2024e6fab978c12e072751b",
+      "historical_variant": "transformer",
+      "checkpoint_sha256": "94a0f664045d0d40de99298051bbd53be175391fe2ed2f9a0a939224efcf718a",
+      "registry_config": {
+        "architecture_id": "cat-v1/M3",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "ac38abc79e3b4d898865af87fe1c10c42a1fbbaa2bf080961587060c3f28c330",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "transformer",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "118e6621fd6c8a5a8f8f46ad5a82277b636cd1f9f538a72f5c8b81af1068caaf",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 5392,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 7,
+      "run_id": "d2540885f0114c688082b97650617a27",
+      "historical_variant": "transformer",
+      "checkpoint_sha256": "e61d4cefec81a129fb1dff94ec9751fced6b2724e77f258f7485b659bbce2936",
+      "registry_config": {
+        "architecture_id": "cat-v1/M3",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "241e004e7f1efb80bb1a3fcd41045c8e807122c314cf55b9974a8aaa74fa8fd5",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "transformer",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "fa1874be2a4d9bd1cacc2e1abf4d14c90ae366c9d09849345c4005c22bc70656",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 5392,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 8,
+      "run_id": "6096eb29dd6a48b7b42aaf24ac05e134",
+      "historical_variant": "transformer",
+      "checkpoint_sha256": "8e69a1cd46726c44c044ed18bed87e8e3830aa9c7573c1c8948c349299ba92ac",
+      "registry_config": {
+        "architecture_id": "cat-v1/M3",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "e472cd949ef7f0c59b5041f44c212fdb141181c7a4309bceab4fc89c4925b12d",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "transformer",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "6e20b29d9519dbcbff4ebb444f840f80b3382cc34521f07cf5977ce339b1797e",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 5392,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 9,
+      "run_id": "062190a95045466ca70493b02c1a70ec",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "867a6f95c79450ea7be112452752f9db5481be3b6e3dfa424f6373dac2c7794d",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "203e294fa64dd775bf25fdabfcfa5659a752ec7d45c287a25e1ec11df2851681",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "5fbfc47a6828ceff7c5626b9a68cc01699c9ca380954af240639dbc1526c1f8e",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 10,
+      "run_id": "48c9f94601ee40c9984524f174c2543a",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "f52724177c32d3b6aa6081728069b1a3d5df73dd492f83c0309d4dd0367ba119",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "35d5e2a992918f13be1ea77b839cb5acebee752d813198a79f92e7a06ed27f20",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "d8ed19c43341fc0799952faf30e177532810eec521e5f5a3d47e1932256e9396",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 11,
+      "run_id": "9d8898552c6944e4b09d32c6f0611795",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "ec08de393bae01fa3a871c22e2fcdebfd8d8c454dd81572bb926d413eed37a3e",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "e603782265c6b6f67260764c4cd65087b995182da663d9aa67978a4dcb33626a",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "3d251433d5df04a4f8df71a42f9f2da7da5e4e71fd4b269efbc1e7e1742d201b",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 12,
+      "run_id": "bc936afb6cc7403da91e6f34d097d53f",
+      "historical_variant": "hybrid_no_attention",
+      "checkpoint_sha256": "e9a92a9f6e6170ec1114a2d68e568023c0194d17090ec50f86cef45a175183c2",
+      "registry_config": {
+        "architecture_id": "cat-v1/M5",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "d1a8e2267a45e0e793be381ed5a07fe1958f964bbc871774ef0a5e22c8925a70",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true,
+          "use_attention": false
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "1d0e11b384e5ac602f5b5d75ad82232f17021ce92dbf36b36a753ae1c5a46487",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10560,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 13,
+      "run_id": "6951d39671714f02b3c53c9dbc803869",
+      "historical_variant": "hybrid_no_attention",
+      "checkpoint_sha256": "9d4fa612ebe4fe70888c1acec83b0fdd4a59a332107f90b0e7762f7003753a25",
+      "registry_config": {
+        "architecture_id": "cat-v1/M5",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "0adfc6d51a49ed03d11d558692a782e662b849716f95caef14dc47fd44e11feb",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true,
+          "use_attention": false
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "e13cfd18b97dbf0836b23da7deefbb06e1ce8f8ca03997108fbb3eecfcd95b2f",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10560,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 14,
+      "run_id": "ce0c66246f744956af5dd542b1ff98d1",
+      "historical_variant": "hybrid_no_attention",
+      "checkpoint_sha256": "b4024d08e77f92e237a2450e9c7addaa2e92bc7c6401ea65053575eaff289a09",
+      "registry_config": {
+        "architecture_id": "cat-v1/M5",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "27bd613fdc87cc3fe256e77b6255be34decbaf758c91bb726911f54266655b9f",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true,
+          "use_attention": false
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "7f06c79d7e61f99e921ad94a5eb4936edb6456014ac57f0792ebd3712c6a152a",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10560,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 15,
+      "run_id": "2cf665d33fe64258b09abb2b66a22c96",
+      "historical_variant": "hybrid_add",
+      "checkpoint_sha256": "d0a8e9f2c502d758b040d4e297555ff5baa0193f11f577e7f751e61df8a4e95b",
+      "status": "outside registry",
+      "reason": "Non-concat fusion is outside this mapping"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 16,
+      "run_id": "c6f8ce1d866e43b799ac02c7e2be7fd0",
+      "historical_variant": "hybrid_add",
+      "checkpoint_sha256": "f52816a7155051a1affdb6a7759d584f27b7c9e52c63511d15ac00075e000201",
+      "status": "outside registry",
+      "reason": "Non-concat fusion is outside this mapping"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 17,
+      "run_id": "91c42099513445729ce792c2394a2f76",
+      "historical_variant": "hybrid_add",
+      "checkpoint_sha256": "3747ddd7285439bddafb388687850bc0cc2c5cc2d49627be656ebd271e8dc4b5",
+      "status": "outside registry",
+      "reason": "Non-concat fusion is outside this mapping"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 18,
+      "run_id": "749b8a6d6cd64f6aabf76461463008f3",
+      "historical_variant": "hybrid_half",
+      "checkpoint_sha256": "d1ef170add40c126b1256d7bedf3c14c7ef657af655fd05628d2a22f4203e968",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 19,
+      "run_id": "0b7c41c6ebfd4d7984a50697c4aded5b",
+      "historical_variant": "hybrid_half",
+      "checkpoint_sha256": "354885aac8077e5abd4f6ca3c388b5443a193a81d0d89ec88319d45bfb8a465d",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 20,
+      "run_id": "4c64c8feee354422bf1094b06f32445a",
+      "historical_variant": "hybrid_half",
+      "checkpoint_sha256": "ed7a2d52afb952e64de9cd0310e1bf9a06443780588dad3d86b2974f68880284",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 21,
+      "run_id": "229a0354d18945da9bbb0de943c61f1b",
+      "historical_variant": "hybrid_gate",
+      "checkpoint_sha256": "bd48072063367b0afd9c3fa58e5ab7cb128b82e70037c57a43ff8d5aaf08b69d",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 22,
+      "run_id": "06469bd670894864be093006f51231aa",
+      "historical_variant": "hybrid_gate",
+      "checkpoint_sha256": "1562bc04d4eb3a156b0c6424aabf65b04fd2ac9f15da67ecbd889be0cd35bcf1",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 23,
+      "run_id": "4c1d366bca1d4437a52178d6c2426e2c",
+      "historical_variant": "hybrid_gate",
+      "checkpoint_sha256": "c914d6abed3e979d6a77bad47ca2576aa572b87221fb776082079ab01b81b5d3",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 24,
+      "run_id": "0943b36ee6734bc18a1f27cba7f89c4e",
+      "historical_variant": "hybrid_consistency",
+      "checkpoint_sha256": "7efebb3ba3d6a3e3e379073b2a7f597414ac72e36902fea4fc98a456d9500d89",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "2ac6f5b5cd17aabce64407deb38ebdafb1ee426bc88e8240e287d31cbe8aa25f",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.1,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "597b46188eca98596503a594ef565a8d3d3d225aa712b553add3b08baee4bec4",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 25,
+      "run_id": "d498a6ac27664ffbb55317dc336356c5",
+      "historical_variant": "hybrid_consistency",
+      "checkpoint_sha256": "c93727a33c19f68bb7dd1782828f09988b4f28b2c4d9268a7debf4abaa38b0f9",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "3b420bc3285fffe6929dd2dd008325baf9b44d703354993514a2e9af2f251991",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.1,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "fac950262ecb42093b2348977f94c95ac840da43137c274c8c79480e58d34021",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 26,
+      "run_id": "a067db1925874d50939647d0152cdb1a",
+      "historical_variant": "hybrid_consistency",
+      "checkpoint_sha256": "798c712a5e091a799a7f2cf2f459cb04f40d0c2e9abc5989429f0a75ced4dc42",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "491cea838d8a9e328335250f2f7e9e1a819eaaf8056864f16d4e40aa7a84631e",
+      "manifest_sha256": "35043242103a7088274bc8c14c9bb506eec8a8e23d05ce007cced1754f64c09e",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.1,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "e21e3f746ee7d04793be875a652c6c5881b1559127e4a1ab7ab67cc31ee1a68c",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 27,
+      "run_id": "2eef5092518f4bb89a3ec4db2d8df5dd",
+      "historical_variant": "srcnn_educational",
+      "checkpoint_sha256": "7e246969426805648a93d8358be8588ef3de21beac7090598a0f81860f25f805",
+      "status": "outside registry",
+      "reason": "No cat-v1 equivalent"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 28,
+      "run_id": "7d48fdfed18241578366b83efd0bafbb",
+      "historical_variant": "srcnn_educational",
+      "checkpoint_sha256": "9acdc162eef2cf2ece1b89ad73f631a962b550361d9f18aa057fdfec9dce3f73",
+      "status": "outside registry",
+      "reason": "No cat-v1 equivalent"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 29,
+      "run_id": "45d27d9f46b34969a998b467bdcaea0d",
+      "historical_variant": "srcnn_educational",
+      "checkpoint_sha256": "56753ba7cd872776e84419b9bd61a74bbdd6f01e2a1247cfcc5148e46d39fcda",
+      "status": "outside registry",
+      "reason": "No cat-v1 equivalent"
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 30,
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "12f32b52901b0d1a900f4369fdbed740a330ed4ad3b0f01cf64df64d8580e683",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "5860267a168d9c979f63d878fdc44ddb796e02983e7c28d9f3895d6ab30c912b",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 6828,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 31,
+      "run_id": "976ed200944a4b47979468c68375bc74",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "04c7f3d3945b6f8d6788e342b4cd419389f8ddd0990b8499276fdd1098df6924",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "0945c3ed050758018f0e98693dc090055af2b9d2ebfd6128196e91b571736c42",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "1f974838ae94970814e4d804c59d869873e5b04957febdd95c9dea902527aee9",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 6828,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 32,
+      "run_id": "fe0dfe6f574f49fd8c2986099f8527dc",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "56619a21b838162547e2e795668737c194ab51a83eaa338c518b71fd30094835",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "80455f8197ae95cd37d2010d3691d00210695a3112e5a3728defa6f01ce65383",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "439a7cff746d1cce8fbfd768fffe6f4d626a1b5e125fe32076db79c74c14ca01",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 6828,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 33,
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "579104f1cfc2f5463d5ff363adac115ee2cd476e7c8bbb841beaa0fbb293ee77",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "1ac2040b1481e70ffc8082aa61a215dfc6a10908dc38d0c7fa98c4bf9649bead",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10083,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 34,
+      "run_id": "8518d712e5fa4578bececede9dc40ba0",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "f6a64bb62d6209224be9fc924b57ef5c989f6869e4c7b925f7d1773bd2a780fc",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "dc31a3e2bf845414c809a82e35fbcb4f0d9a79ef0bc250a4c9d0b8c4779d6100",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "faf34c2e19a84bc007a7e75b6f703b1bca498870ff9b685f05d8b63aab6e007b",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10083,
+      "deployed": false
+    },
+    {
+      "source": "reports/submission-study.json",
+      "source_row": 35,
+      "run_id": "dc23354b2d684f03afa6cb4ef7f98066",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "638b71bad2a17911ccbd3bdd31ef5958b7f26197fc295f897fedd3e4beebd4f1",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 3,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": true
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "d32a27b14b8fed16ad4ed790ac21fff87df863205fa769f15d3111793841bcfa",
+      "manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+      "selected_step": 1000,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 1000,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 100,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "zero_residual": true
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        3,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "91fba7feb67f5ce950bd5797ba17b83988227224e2cf0b1b5b040a9590429b53",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10083,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 0,
+      "run_id": "485ac5c254df4acbabdbc690aedaf2cc",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "54b5b3202e329d7351944f0a6e9f91befe6a431a994f9afd42ba6960a0997ac5",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "17ad5f82690579066797850d8c4eb93f35fbdbd16002f79253345667c1ced3b1",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "37d7a096b19da477ab849a26c9ea3454914f5a521dc32f05997b0337002ba3ea",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7552,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 1,
+      "run_id": "e6b56a027c0e4c1c881ffe01d567cce2",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "9553d8c32fac8ff0191101e6662ea35a7c8e37dae92f67df68b7e67b84a137a5",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "80d2e404c66c0330ad1d69cd812f2366e45b2173f6b21f7459f1e8b8cec9eaee",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "7756041e49fe586152b78ef3c393c3ae5108c7079f37a299896c60c6098a117e",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7552,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 2,
+      "run_id": "099274e7a92847f5a534389021efc3cc",
+      "historical_variant": "cnn",
+      "checkpoint_sha256": "94e57a4a11c553a60b07ac9ea912c2687865eea5e14ac74334a2cda1aaebae4b",
+      "registry_config": {
+        "architecture_id": "cat-v1/M1",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "180aa80c47a878b3ac392acfb253d4ed7a3c0ce4c13d8809c762f1272241ecf2",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "cnn",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "12a964ec270fb825c2935837f0b8bbc00871e0b2b20746471721186ea0c605c9",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7552,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 3,
+      "run_id": "f4f97dae88b344a79d1457d31249d256",
+      "historical_variant": "cnn_attention",
+      "checkpoint_sha256": "252da5ec49b961fe3743b8d5932e088ec4234801e69189cb5fd281a6e2b8c2a5",
+      "registry_config": {
+        "architecture_id": "cat-v1/M4",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "5674045eea6b70a4a5c6aad1f1304b9201e7cc205e462da397d8e4039a3a5426",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "attention",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "654c696309887138a1be705d7e58db1a50584dbb07e95f251f4868496ebf652d",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7799,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 4,
+      "run_id": "c3fc96c862e6460aa762253417032045",
+      "historical_variant": "cnn_attention",
+      "checkpoint_sha256": "47f8241add892a7cb76be588f3d82be92854ee5525e332bd376372a95d5493a3",
+      "registry_config": {
+        "architecture_id": "cat-v1/M4",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "6c0bfc1bc324f4b9169992900f9c3188eec631f6d1033d239b7007aa5f4f605e",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "attention",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "2c7953f08ddb65f81029f2cc08ed2514fbefa0510ce1c3058db5c79f9ed77b6d",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7799,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 5,
+      "run_id": "6e7d333f0d054df69d82409082eda7a2",
+      "historical_variant": "cnn_attention",
+      "checkpoint_sha256": "c5727a25b15174a49b4410d60f516aebad27b5abea458b534a798e120976118f",
+      "registry_config": {
+        "architecture_id": "cat-v1/M4",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "48ed3fad62d32b8002420633e9eca6d8f16ce1ad8f9c8b09d8d8caf906998485",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "attention",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "14dd41a465c02576338aa70f324fe70336cf2b79b1835c665a6a5923652a60cc",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 7799,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 6,
+      "run_id": "7c548d089e2c44faa4dd376ca7bc0a14",
+      "historical_variant": "cnn_transformer",
+      "checkpoint_sha256": "d323d1db0e91da7bf3dccaa49d532f694662530016d528072310db39d02e2a57",
+      "registry_config": {
+        "architecture_id": "cat-v1/M5",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "9973a9a3ce4c68b3693b57c597a1fd314f1c01e01696b4b583e240c4bdc85347",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "use_attention": false
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "0811672974ef6febf12c947e98ffac3d037aeb40323ca12ffe2498df32d3f3c4",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10560,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 7,
+      "run_id": "02733c9b1ab0462c8532ab1c714d5da0",
+      "historical_variant": "cnn_transformer",
+      "checkpoint_sha256": "b7b9761659402349758c5982575bc36bcd25534d30ea2e3a0eee7be583f4aed0",
+      "registry_config": {
+        "architecture_id": "cat-v1/M5",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "4eee3f04e4806ddd0fbc5b18a099b7021ab5d551b6490208b2447c0d277be5e1",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "use_attention": false
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "49d2b5ba2526a2523cfc08b495c9f320d9e60560aa6ff16b0ff65b3a0fe46b29",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10560,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 8,
+      "run_id": "08524e88ef1d4e56ab34ddf87139c0be",
+      "historical_variant": "cnn_transformer",
+      "checkpoint_sha256": "5c7dfb83bb226da9032ee887485a6bea80485ac7ddcf2fc6730f99eac4c75956",
+      "registry_config": {
+        "architecture_id": "cat-v1/M5",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "035f8c47069ba66e6c84c9b34108f0554dc7c453d5544b4b4072b0c601a76d6b",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4,
+          "use_attention": false
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "9cb171e992bbad4a82d764508e77277edcdb4c8a917721b25b9229ab3b5bd11b",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10560,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 9,
+      "run_id": "755cd7e99b5e4cfb96cf0b9a2f22a8dc",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "6bddfeb1c4e53fa2d94f2d0705ebee39a76640e1c89053c8d6484f63aac889d0",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "55baa1efb462ec72afedeaf3e28067497978d84ae684f4036da4e794b174cdec",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "525adf66c96a181816c1c917851c9c9ec009dff02be8fa968f1136362bd678b9",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 10,
+      "run_id": "c94c97c014e2497284ce8f5959dde77b",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "549d1c4fdb4fb5c89c88808d84504979c5d38667bf8391c9f71bb7f7df13c044",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "c675462255d1deef193903375a870ca89c35399b8e2b5ddeb916510c9be70671",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "c683307d8cdd07a6c316834814032cff0c263fe96e25426524cac07c294c061d",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 11,
+      "run_id": "e80122a3cbad4120a434638cd038f5cf",
+      "historical_variant": "hybrid",
+      "checkpoint_sha256": "d8d01e1fb221f46dcf7cc58d3a463aefb9a6a8db348b2e6cef9a4fe6311716e0",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "55e3bacf0d1c0589dc24ce6301b82be3470981bea9615d259746beb4711a83fa",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.0,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "814fec2ef518732c5a948e02c244f727a6b3e3985a5976da7c770c2e29f9a0a9",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 12,
+      "run_id": "1857534397954a67a8fc66442c1d344d",
+      "historical_variant": "hybrid_add",
+      "checkpoint_sha256": "d70f4379e47e67859819766b12f3a7a3e29ae597328a4546c68f2edf792811dd",
+      "status": "outside registry",
+      "reason": "Non-concat fusion is outside this mapping"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 13,
+      "run_id": "d8b7920f3464419794e27467ae7316c8",
+      "historical_variant": "hybrid_add",
+      "checkpoint_sha256": "cbfaed34881bbb002fb78441c48a6408fa1719846f0993bc40e05a601797a03c",
+      "status": "outside registry",
+      "reason": "Non-concat fusion is outside this mapping"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 14,
+      "run_id": "1fa4d02b91ce49aab05a7e9a4dba43e2",
+      "historical_variant": "hybrid_add",
+      "checkpoint_sha256": "0f942ad1e01fc09541681781fab1810c1fd2885a3491d09f1fba2a1b1a04421e",
+      "status": "outside registry",
+      "reason": "Non-concat fusion is outside this mapping"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 15,
+      "run_id": "17a5ba7aeff34c5c843cda428e7a8cd1",
+      "historical_variant": "hybrid_gate",
+      "checkpoint_sha256": "9b90bc9ffcd13300b3580dc4a2ae1c9fa7a2254c785b9298d163f68ac07b562c",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 16,
+      "run_id": "4cc70004041740a68041dbd300870a37",
+      "historical_variant": "hybrid_gate",
+      "checkpoint_sha256": "82d177fe70ca5625c5c094b824d7a35facd18664c98e0a6eb6cdd65b6b9c86ed",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 17,
+      "run_id": "4f3303ccb40c440097f481918eb1d01d",
+      "historical_variant": "hybrid_gate",
+      "checkpoint_sha256": "ed77376e50501bac9fe7821821d12d97230249d049b30990918fb70fd72d7b90",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 18,
+      "run_id": "3be6e7cfe31d46ca81416b763ec6c274",
+      "historical_variant": "hybrid_constant_gate",
+      "checkpoint_sha256": "ac92f314dfef3d7b967c6db732351f2bb5c1243d2335d1b17d7c368385269919",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 19,
+      "run_id": "606cd3ea2c1b448583492823aeecbbc6",
+      "historical_variant": "hybrid_constant_gate",
+      "checkpoint_sha256": "e488cfa20af3718b220a6d6ed209b35e3a7e52496eda442591ff934b677432ce",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 20,
+      "run_id": "f48f48a2d4734242af45b582b3ae25d6",
+      "historical_variant": "hybrid_constant_gate",
+      "checkpoint_sha256": "e19581f7314e98e1f71f7726920cc11fdfa3c7ab3e8ee3ab06cab4984710a3b3",
+      "status": "outside registry",
+      "reason": "Residual-gate variant is outside cat-v1"
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 21,
+      "run_id": "9ae19869d0ce408f8887710a92bbfd8c",
+      "historical_variant": "hybrid_consistency",
+      "checkpoint_sha256": "4da8fe180c12a145c13d30f71f1f1a0c3c7c84a98c683740e2a48da20cce03b3",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "85af697331a1f4e13b6e776d7b327511d79e8cb3b138a3288e9e981e9ea2416f",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 17,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.1,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "e3e1ff4296677d201021fb99e37adf1147dc2a95d411d3e0e3f6cef0b80d605a",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 22,
+      "run_id": "febf934c07de4ce197aa3fe63718e74a",
+      "historical_variant": "hybrid_consistency",
+      "checkpoint_sha256": "4b3ca4e2f898229f8a03617d045f4e8aabc15dd4444995d1c33325c2128c0c90",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "4c39efbf14d83f1aa863d85cd2f9b38e4e15310453b4ff35b53807f745b63a13",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 23,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.1,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "71694b3bed4100e4da3b506c31e1f66101f820063ca2cacea5e162408e14374e",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    },
+    {
+      "source": "reports/ablation-pilot-runs.json",
+      "source_row": 23,
+      "run_id": "224eac2ff48e46fa9917867e6febd8a0",
+      "historical_variant": "hybrid_consistency",
+      "checkpoint_sha256": "f97e48c955b877688e3b5217d0819aa3d1e8575b8bf544df01909df93c9786e8",
+      "registry_config": {
+        "architecture_id": "cat-v1/M7",
+        "bands": 4,
+        "scale": 2,
+        "width": 16,
+        "window": 4,
+        "zero_residual": false
+      },
+      "status": "verified historical binding",
+      "training_record_sha256": "cc5bf6578c73f1401a5a7f00c3352ae9abbd42acedcbeeb98b16fbd5d1442179",
+      "manifest_sha256": "76ef0cca1e81205441569932fc36ccf743e2328a281bc0ff817ac2d2a3002b2e",
+      "selected_step": 100,
+      "full_training_config": {
+        "seed": 41,
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 20,
+        "consistency_weight": 0.1,
+        "model": {
+          "bands": 4,
+          "scale": 2,
+          "width": 16,
+          "kind": "hybrid",
+          "gate": false,
+          "fusion": "concat",
+          "window": 4
+        }
+      },
+      "synthetic_output_shape": [
+        1,
+        4,
+        10,
+        14
+      ],
+      "synthetic_output_sha256": "6a7e7e8c1cc397eb034c2f86bc36ceedc757e991e7e1c1c69d9228a0f7b83cf7",
+      "maximum_relabel_difference": 0.0,
+      "seed_for_compatibility_check": 77,
+      "parameters": 10807,
+      "deployed": false
+    }
+  ],
+  "seconds": 1.0964588999995613,
+  "exit_code": 0,
+  "limitations": [
+    "Existing pilot training only; not new matched-budget/protocol-v2 evidence.",
+    "Synthetic5x7 output equality tests compatibility only; no held-out pixels or quality rerun.",
+    "No checkpoint is rewritten, uploaded or added to deployment catalog; dataset manifests/pixels are not reopened, so manifest hashes are cross-checked declarations only.",
+    "Historical binding applies to each full configuration, never every width/band/scale of that model ID.",
+    "No equivalent historical M2/M6 checkpoint expected; status remains untrained for those variants."
+  ]
+}
