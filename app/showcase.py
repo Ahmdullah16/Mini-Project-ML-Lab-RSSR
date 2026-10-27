@@ -157,6 +157,9 @@ elif section=='Results':
             download_artifact(chosen)
         else:st.info('No artifacts match.')
 elif section=='Methodology & Data':
+    from model_explorer_ui import render as render_models
+    render_models(ROOT)
+    st.divider()
     st.title('From geographic split to frozen test')
     st.markdown('**Source scenes → geographic split → valid patches → synthetic LR → training / validation → frozen selection → held-out evaluation.**')
     st.graphviz_chart('digraph {rankdir=LR; node [shape=box,style=rounded]; LR -> Head; Head -> "CNN + attention"; Head -> "Window Transformer"; "CNN + attention" -> Fusion; "Window Transformer" -> Fusion; Fusion -> PixelShuffle; LR -> Bicubic; Bicubic -> Add; PixelShuffle -> Add; Add -> SR;}')
@@ -185,10 +188,12 @@ elif section=='Mini-projects':
                 if p['exception']:st.warning(p['exception'])
                 st.markdown(f"[Project brief]({REPO}/blob/main/{p['brief']}) · [Notebook]({REPO}/blob/main/{p['notebook']})")
                 figures=[a['path'] for a in index['artifacts'] if a['path'].lower().startswith('reports/'+p['id'].lower()+'-') and a['path'].endswith('.png')]
-                if figures:st.image(str(ROOT/figures[0]),width='stretch')
+                for figure in figures:
+                    st.image(str(ROOT/figure),caption=Path(figure).name,width='stretch')
     if not found:st.info('No projects match. Clear the search to see all40.')
 elif section=='Satellite Explorer':
     st.title('Acquire a bounded satellite crop');st.caption('Explicit acquisition, not an automatic live feed. No provider request until you submit; optional storage credentials are not required.')
+    st.info('Current acquisition is display-only Sentinel L2A visual uint8 RGB with item-level cloud filtering. It is not calibrated surface reflectance. The new local scientific conversion layer is tested on fixtures; provider acquisition/alignment and scientific model validation are still pending.')
     from inference_ui import render_satellite
     render_satellite()
 else:
