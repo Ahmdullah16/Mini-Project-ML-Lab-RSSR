@@ -1,3 +1,7 @@
+# MP37 feature fusion completed — 2026-10-27
+
+[MP37](../stage_09_hybrid_research/MP37_feature_fusion_laboratory/README.md) implementation/teaching scope complete: expanded notebook, worked algebra/gradients, fusion diagram, parameter/MAC derivation, shared-model fixture and reused historical training comparison. Seven tests and a three-cell real kernel passed; transient initial Windows DLL error documented. [Report](../reports/mp37-fusion.json). No new training or test evaluation. MP36 remains In progress; MP38–MP40 and MP20 evidence gap remain. Learner mastery unassessed.
+
 # Transfer implementation and paper reconciliation — 2026-10-27
 
 Single-attempt archive transfer added with pinned length/checksum, temporary-file cleanup and no retries;7 offline tests passed. No live download. Source-access statements reconciled in paper/literature; correction reference added; generated bibliography/evidence refreshed. Three paper provenance tests and desktop LaTeX compile passed. [Validation](../reports/intake-paper-validation-20261027.json) separates software/build evidence from unexecuted scientific work. Exact archive URL/bytes, approval, v2 validation and PDF visual review remain open.

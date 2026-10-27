@@ -1,0 +1,86 @@
+{
+  "scope": "Synthetic algebra/shape experiment plus unchanged historical validation scores",
+  "environment": {
+    "torch": "2.14.1+cpu",
+    "device": "cpu",
+    "threads": 2,
+    "seed": 17
+  },
+  "worked": {
+    "sum": [
+      4.0,
+      6.0
+    ],
+    "mean": [
+      2.0,
+      3.0
+    ],
+    "projected": [
+      2.0,
+      3.0
+    ],
+    "gradient_a": [
+      0.5,
+      0.5
+    ],
+    "gradient_b": [
+      0.5,
+      0.5
+    ]
+  },
+  "model_fixture": {
+    "input_shape": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "output_shape": [
+      1,
+      3,
+      10,
+      14
+    ],
+    "max_abs_difference": 0.0,
+    "concat_parameters": 3273,
+    "mean_parameters": 3137,
+    "projection_cost": {
+      "parameters": 136,
+      "macs": 4480
+    }
+  },
+  "historical_source": "reports/ablation-pilot-runs.json",
+  "historical_sha256_utf8_lf": "8a1cb548e39aaa530783bb1d63407914446bd85c8632bc710beb995c827a485e",
+  "historical": {
+    "hybrid": {
+      "psnr_mean_db": 43.68694359735831,
+      "sample_seed_sd_db": 0.3710629175467333,
+      "parameters": [
+        10807
+      ],
+      "run_ids": [
+        "755cd7e99b5e4cfb96cf0b9a2f22a8dc",
+        "c94c97c014e2497284ce8f5959dde77b",
+        "e80122a3cbad4120a434638cd038f5cf"
+      ]
+    },
+    "hybrid_add": {
+      "psnr_mean_db": 42.54399542451452,
+      "sample_seed_sd_db": 0.22765141116430826,
+      "parameters": [
+        10279
+      ],
+      "run_ids": [
+        "1857534397954a67a8fc66442c1d344d",
+        "d8b7920f3464419794e27467ae7316c8",
+        "1fa4d02b91ce49aab05a7e9a4dba43e2"
+      ]
+    }
+  },
+  "limitations": [
+    "No new training or test evaluation",
+    "Historical one-scene seed SD is not geographic uncertainty",
+    "Different budgets confound historical architecture comparison",
+    "Equal fusion output is not an SR quality claim"
+  ]
+}

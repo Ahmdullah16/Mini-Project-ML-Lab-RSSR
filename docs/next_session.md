@@ -1,3 +1,9 @@
+# MP37 milestone — 2026-10-27
+
+- PR26 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/26 head59de5d942a885b8fac2b0a19f342640985fdbce6 published19517dd tree1c7848a224d45bb41dd0ecaffea5178c2885a624. CI40451432276 SUCCESS; externally merged0774232, fetched. Integrate after saving current MP37 changes, preserving checkpoints.
+- MP37 expanded local lesson complete:7 tests passed3.78s after one transient WinError4551 collection failure; unchanged standalone experiment had succeeded. No policy/environment bypass. Three-code-cell real kernel passedexit0 with known TCP warning. reports/mp37-fusion.json records synthetic shared-model output equality and existing historical results; no retraining/test inference.
+- NEXT: continue MP38 expanded shared hybrid model lesson, then MP39/MP40 using compatible existing evidence. Finish MP36 v2 lineage/pair metadata and exact archive transfer proposal. Single-attempt transfer and bounded local ZIP code now exist; no archive acquired. Paper compilation current; visual review pending. Do not repeat verified batches.
+
 # Latest checkpoint — 2026-10-27
 
 - PR25 CI40316598653 SUCCESS; externally merged bff3eab. Integrated6127a67 preserving local publication checkpoint. Current new milestone: archive_intake.py local bounded ZIP listing/selective extraction,21 tests passed0.15s. No network downloader or raster decoder added; no archives acquired.

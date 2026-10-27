@@ -261,15 +261,6 @@
     "finished_at": "2026-10-25T08:00:57.919159+00:00"
   },
   {
-    "id": "MP37",
-    "source": "stage_09_hybrid_research/MP37_feature_fusion_laboratory/feature_fusion_laboratory.ipynb",
-    "source_sha256": "205d4450d3bd1d56f0312d9c96ae56688398414a28226efb73645b139050cb51",
-    "started_at": "2026-10-25T08:01:29.156111+00:00",
-    "status": "passed-real-jupyter-kernel",
-    "code_cells": 2,
-    "finished_at": "2026-10-25T08:01:33.414041+00:00"
-  },
-  {
     "id": "MP38",
     "source": "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/hybrid_cnn_attention_transformer_sr_model.ipynb",
     "source_sha256": "d5b0e1f2c242854575d54efff6c1b7515b4b410aa331b038b6b11430a8f30bb1",
@@ -349,5 +340,14 @@
     "status": "passed-real-jupyter-kernel",
     "code_cells": 4,
     "finished_at": "2026-10-26T06:34:54.394554+00:00"
+  },
+  {
+    "id": "MP37",
+    "source": "stage_09_hybrid_research/MP37_feature_fusion_laboratory/feature_fusion_laboratory.ipynb",
+    "source_sha256": "649570690c8bde2516c51d492b1338c56340753d2d88e98582bc8d70c37fa2e8",
+    "started_at": "2026-10-27T04:52:45.858127+00:00",
+    "status": "passed-real-jupyter-kernel",
+    "code_cells": 3,
+    "finished_at": "2026-10-27T04:52:51.144538+00:00"
   }
 ]
