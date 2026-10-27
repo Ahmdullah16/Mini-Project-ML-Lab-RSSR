@@ -218,3 +218,7 @@ The demo now exposes read-only catalog freshness and acquisition/availability/in
 
 Full MP05-MP40 expansions, research generalization, fresh asset ingestion and public hosting remain unfinished. No new research-training result, learner completion or publication-readiness claim is made.
 `python -m pytest`: 51 tests and 4 subtests passed in 11.47 seconds, with the same two known GeoTIFF warnings. Structure validation: 40 IDs and 365 relative links passed.
+
+## Seven-model implementation milestone — 2026-10-27
+
+Versioned C/A/T registry added without altering historical SRModel definitions. Twenty focused tests passed; seven structures are distinct and five historical structure mappings preserve exact outputs under strict state-dictionary loading. Training/evaluation/deployment status for the new registry configurations remains unverified; checkpoint and training provenance null. See docs/architecture-registry.md and reports/architecture-smoke-matrix.json. No frozen experiments rerun. Latest acceptance requirements preserved in docs/seven-model-completion-brief.md.
