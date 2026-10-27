@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "command": "python -m pytest tests/test_surface_reflectance.py -q",
+      "passed": 24,
+      "duration_seconds": 0.77,
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_showcase.py",
+      "result": "seven existing sections and navigation cases passed with urllib network blocked",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_model_explorer.py",
+      "result": "all7model selections passed; M2/M6 checkpoint selectors absent",
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "src/rssr/surface_reflectance.py": "f944b4576add25ce0b8d85f8792cd96afa387250f365b0211bdd908b24eb7365",
+    "tests/test_surface_reflectance.py": "f6562632ee611e7d4ac478a620a6ace1f756f38874d6f4121d95c70034fc00b5",
+    "app/model_explorer_ui.py": "39e86f0ffc8d02136a094e36425ed5bae58aa1a0c970465a7c9eeafc2bb7f51b",
+    "app/showcase.py": "6d4d422986ce7a7af1f57873222e3c60955efea2fc52f44cef92fdf632887bfc",
+    "scripts/check_model_explorer.py": "966eb16e80a5a8a883a170cf06387d8f7512c04ea1b145694636107a5279165a"
+  },
+  "limitations": [
+    "Synthetic reflectance fixtures, not actual provider calibration.",
+    "AppTest only; browser/mobile/public deployment not verified.",
+    "Advanced model family, new training and final40-project acceptance unfinished.",
+    "No original frozen evidence regenerated."
+  ]
+}

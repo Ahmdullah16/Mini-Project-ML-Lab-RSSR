@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-28",
+  "url": "https://mini-project-ml-lab-rssr.streamlit.app/",
+  "method": "new in-app browser tab; no login performed; visible accessibility tree and screenshot",
+  "status": "public page and bounded example inference observed",
+  "model_label": "RGB CNN pilot v1 \u2014 100 CPU training steps",
+  "input": "licensed cached NAIP training example, synthetic LR",
+  "input_shape": [
+    16,
+    16,
+    3
+  ],
+  "output_shape": [
+    32,
+    32,
+    3
+  ],
+  "scale": 2,
+  "displayed_cpu_seconds": 0.002,
+  "visible_result": "Latest completed inference with LR/bicubic/model panels and download buttons",
+  "screenshot_local_path": "C:\\Users\\DELL\\Documents\\Codex\\2026-10-18\\files-pasted-by-the-user-you\\work\\public-inference-20261028.png",
+  "screenshot_sha256": "bab49a913f8ecafc71496fb0917c062cc901cdbf889c0ef8e7541e67c1486cac",
+  "limitations": [
+    "Deployed interface differs from current local interface; deployed commit not verified.",
+    "No fresh satellite data, genuine HR metric, cold-start cycle or durable-storage restart test.",
+    "Today's new code not claimed deployed.",
+    "Download buttons observed, download contents not verified in this check."
+  ]
+}
