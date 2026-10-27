@@ -1,3 +1,11 @@
+# Transfer implementation and paper reconciliation — 2026-10-27
+
+Single-attempt archive transfer added with pinned length/checksum, temporary-file cleanup and no retries;7 offline tests passed. No live download. Source-access statements reconciled in paper/literature; correction reference added; generated bibliography/evidence refreshed. Three paper provenance tests and desktop LaTeX compile passed. [Validation](../reports/intake-paper-validation-20261027.json) separates software/build evidence from unexecuted scientific work. Exact archive URL/bytes, approval, v2 validation and PDF visual review remain open.
+
+# Archive intake and source-methodology milestone — 2026-10-27
+
+PR25 CI passed and external merge integrated. Local ZIP metadata inspection and selective extraction now enforce byte limits, path checks, new destinations and cleanup;21 tests passed. The [feasibility addendum](../reports/mp36-feasibility.md) resolves reading the published registration method/correction through publisher-provided full texts. Original method is not a measured v2 guarantee. No archives, training or frozen test inference ran. MP36 remains In progress; network transfer enforcement, version-specific verification, resource approval and actual paired evidence remain unfinished.
+
 # Cross-sensor intake milestone — 2026-10-26
 
 [Compatibility matrix and resource proposal](cross-sensor-intake.md) now distinguish verified source statements from pair-level unknowns. Metadata-only admission CLI passed21 targeted synthetic tests. No imagery download, registration fitting or new accuracy study ran. MP36 remains In progress; publisher access, calibration/registration policy and resource approval remain gates. Existing paper and frozen results preserved.
