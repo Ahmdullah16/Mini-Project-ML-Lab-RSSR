@@ -55,3 +55,19 @@ Nine integration/regression tests passed: all seven configurations performed one
 ## Executed cost and tiling follow-up
 
 See [budget and seam preflight](architecture-preflight.md):448 no-data candidates executed; M2 has no eligible partial-budget match in even widths2–64, while six configurations have matches for RGB/four-band inputs. Seven native×2 random-weight tiling checks executed with disclosed global-attention differences. No trained quality or full-FLOP claim. Historical checkpoint binding and final trained capability matrix remain pending.
+
+## Historical checkpoint binding
+
+[Historical binding report](../reports/historical-architecture-bindings.json) checks60 records from the unchanged submission and ablation reports.39 distinct local runs passed checkpoint SHA256, full training-config agreement, run identity, training-record/declared manifest-hash agreement, selected step, strict state-dictionary loading and bit-exact synthetic5×7 output equality under their versioned architecture. This is existing pilot provenance, not new training or geographic evaluation. The21 gated/alternate-fusion records outside cat-v1 were explicitly excluded. Missing files would be recorded as unavailable; none were downloaded.
+
+| Registry ID | Verified historical runs | Scope |
+|---|---:|---|
+| M1 | 9 | Exact report configurations only |
+| M2 | 0 | No historical checkpoint binding |
+| M3 | 3 | Exact report configurations only |
+| M4 | 6 | Legacy attention includes C |
+| M5 | 6 | Concat hybrid without extra A |
+| M6 | 0 | No historical checkpoint binding |
+| M7 | 15 | Concat hybrid with A, no residual gate |
+
+Eleven mapping tests passed0.11seconds, including rejection of residual gates, attenuation, alternate fusion and unknown options. `python scripts/bind_legacy_architectures.py` performs the bounded local binding checks. It does not change weights, serve them, evaluate old test pixels or infer every width/band/scale is trained. Dataset manifest hashes are cross-checked recorded declarations; the datasets themselves were not reopened. None of the random-weight width4 smoke configurations inherits trained status from these records. Deployment catalog integration remains separate.
