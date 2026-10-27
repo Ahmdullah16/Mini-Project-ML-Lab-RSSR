@@ -1,0 +1,228 @@
+{
+  "schema": "cat-tiled-discrepancy-v1",
+  "command": "python scripts/check_registry_seams.py",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "device": "CPU",
+    "threads": 2
+  },
+  "source_sha256": {
+    "src/rssr/models.py": "722986b37ab67cd39465617dbb9b689612e1822c81dd2c451199e822c8897c6f",
+    "src/rssr/architecture_registry.py": "509c246aa8d2400e933b10220b26a6758ede2e0ccf340557b137f73aa0cbb54e",
+    "scripts/check_registry_seams.py": "a8eafeab0463fad53a34d8f656d38b2f464f4d3d43dbde5826a83f300eb36158"
+  },
+  "rows": [
+    {
+      "architecture_id": "cat-v1/M1",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 2.384185791015625e-07,
+      "mean_absolute_difference": 1.2697597639999003e-08,
+      "seam_strip_mean_absolute_difference": 1.132038640605515e-08,
+      "interior_mean_absolute_difference": 1.2884665778756244e-08,
+      "full_output_sha256": "e41817ab2a903dc8acd1edfb902b331bc44531ab9e709296e63ee41f987be868",
+      "tiled_output_sha256": "71664281d06685d0e65e95243e999665d2c2fd4716030d61aef24ffbc1cb9958",
+      "criterion": "maximum absolute discrepancy <=1e-6 on this fixture",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 4.2557716369628906e-05,
+      "mean_absolute_difference": 1.5774974144733278e-06,
+      "seam_strip_mean_absolute_difference": 2.5244066819141153e-06,
+      "interior_mean_absolute_difference": 1.448877583243302e-06,
+      "full_output_sha256": "5f5abfc16aeaaff1f15d704f5554f5d0261591211aa83e7850a4278d866530eb",
+      "tiled_output_sha256": "78b22317125a3a2bad9e9a81f504af02c5999952d7678ec33be8288100ce4e3a",
+      "criterion": "finite and exact dimensions; no equivalence claim for global feature attention",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 3.5762786865234375e-07,
+      "mean_absolute_difference": 2.285760558606853e-08,
+      "seam_strip_mean_absolute_difference": 2.068960647250151e-08,
+      "interior_mean_absolute_difference": 2.3152088246547464e-08,
+      "full_output_sha256": "e8a48dfd0589c7b0d595bc165a368934c3c24494f2aae8cc0dfe3326766abc36",
+      "tiled_output_sha256": "04762bd6e57da46dc12a13753d26c6fc40cf5592d3062f9a09dfbece9592ca72",
+      "criterion": "maximum absolute discrepancy <=1e-6 on this fixture",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 4.00543212890625e-05,
+      "mean_absolute_difference": 1.5118620240173186e-06,
+      "seam_strip_mean_absolute_difference": 2.266252522531431e-06,
+      "interior_mean_absolute_difference": 1.4093920981395058e-06,
+      "full_output_sha256": "e8d943489bac5217f9ff5c73cfd2ed8af6d31c514975eb9a985b007237678242",
+      "tiled_output_sha256": "9a4020d6ce64d9dba31508838d9d2fcccc62f6a9bdfe8e65a4499899fb68392e",
+      "criterion": "finite and exact dimensions; no equivalence claim for global feature attention",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 2.384185791015625e-07,
+      "mean_absolute_difference": 8.854260435953165e-09,
+      "seam_strip_mean_absolute_difference": 9.01122554353151e-09,
+      "interior_mean_absolute_difference": 8.832939712988264e-09,
+      "full_output_sha256": "8b0dfb4be0487e1f0540ffbbfc33d7da09bfa81260cfd53eca8533ff0fda4cd8",
+      "tiled_output_sha256": "9ade516686fb5a5b1a37290e0dd49a26276f162656c2b5ee50d2fd9f2e3cd263",
+      "criterion": "maximum absolute discrepancy <=1e-6 on this fixture",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 1.1920928955078125e-07,
+      "mean_absolute_difference": 6.050802525692234e-09,
+      "seam_strip_mean_absolute_difference": 5.469976027683288e-09,
+      "interior_mean_absolute_difference": 6.129696750178937e-09,
+      "full_output_sha256": "bf84c5733f19992b17df9b6ea581e1a036e102a95df34b3e6f1b1a12b4f7436a",
+      "tiled_output_sha256": "883ff4e0711e578f4fe43bb69478a7cc193e76297f4a0cd388664e8589f0a8bc",
+      "criterion": "finite and exact dimensions; no equivalence claim for global feature attention",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "input_shape": [
+        1,
+        3,
+        65,
+        97
+      ],
+      "output_shape": [
+        1,
+        3,
+        130,
+        194
+      ],
+      "width": 4,
+      "native_scale": 2,
+      "tile": 32,
+      "halo": 32,
+      "seed": 76,
+      "maximum_absolute_difference": 6.562471389770508e-05,
+      "mean_absolute_difference": 2.1333760287234327e-06,
+      "seam_strip_mean_absolute_difference": 3.777356141654309e-06,
+      "interior_mean_absolute_difference": 1.910071659949608e-06,
+      "full_output_sha256": "d7d33db1ec08dc3ef1914b94bf5402ccf4efd3d5c84091d23166345363e0c37b",
+      "tiled_output_sha256": "7864686d1f54863aee1a68f06c9816c855c064b501144bfe43e5e189cf7f6ecb",
+      "criterion": "finite and exact dimensions; no equivalence claim for global feature attention",
+      "status": "passed stated synthetic criterion",
+      "checkpoint": null
+    }
+  ],
+  "seconds": 0.6233610999988741,
+  "exit_code": 0,
+  "limitations": [
+    "Untrained weights and deterministic random fixture, not representative-image or perceptual quality.",
+    "Seam strips extend two output pixels on either side of each internal tile boundary; discrepancy is full-frame vs tiled, not HR error.",
+    "A global pooling sees different tile context; no universal tolerance/equivalence claimed.",
+    "Native2 only: repeated cascades, maximum input and trained checkpoint seam tests remain pending."
+  ]
+}

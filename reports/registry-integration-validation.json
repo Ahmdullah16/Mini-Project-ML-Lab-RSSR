@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-27",
+  "kind": "observed implementation test results, not research metrics",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "device": "CPU"
+  },
+  "checks": [
+    {
+      "command": "python -m pytest tests/test_architecture_registry.py -q",
+      "passed": 20,
+      "seconds": 13.11,
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/test_registry_experiment.py tests/test_experiment.py -q",
+      "passed": 9,
+      "seconds": 8.83,
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "src/rssr/architecture_registry.py": "509c246aa8d2400e933b10220b26a6758ede2e0ccf340557b137f73aa0cbb54e",
+    "src/rssr/model_factory.py": "00576788fda69b83ac84b89cfed2170f5c00a222e8ecb40ba96e8f0610c36c74",
+    "src/rssr/experiment.py": "901cd5b93a3c74c52b72188b3f8cac711d23bb8de71f2129d63ff67fa1868787",
+    "tests/test_architecture_registry.py": "1e020588e3911a2637b8a42647cd574a803fb6ce0e2765845ca4db8da64b9932",
+    "tests/test_registry_experiment.py": "b6c09a75b8dfe9b044211a3e61b06bfc5ede77e2af9bfe1295da8ddf9d1e15e7",
+    "tests/test_experiment.py": "413c7cab72c603bfaecab25c33f597ec131b78bf302cb925ef7c6073263eb4d2"
+  },
+  "failure_history": "Initial integration fixture: 7 foreign-key failures due to absent pair/tile registration; fixture corrected, constraints retained; final run passed.",
+  "limitations": [
+    "One-step synthetic optimizer tests do not establish trained scientific models.",
+    "42-row scale matrix separately records random-weight export smoke tests.",
+    "No frozen holdout inference, new real-data training, deployment or peak-memory measurement."
+  ]
+}
