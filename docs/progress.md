@@ -222,3 +222,5 @@ Full MP05-MP40 expansions, research generalization, fresh asset ingestion and pu
 ## Seven-model implementation milestone — 2026-10-27
 
 Versioned C/A/T registry added without altering historical SRModel definitions. Twenty focused tests passed; seven structures are distinct and five historical structure mappings preserve exact outputs under strict state-dictionary loading. Training/evaluation/deployment status for the new registry configurations remains unverified; checkpoint and training provenance null. See docs/architecture-registry.md and reports/architecture-smoke-matrix.json. No frozen experiments rerun. Latest acceptance requirements preserved in docs/seven-model-completion-brief.md.
+
+Training integration follow-up: versioned registry configs now route through existing train/checkpoint loader/evaluator/CLI and database model identity.9 tests passed8.83s, including seven one-step synthetic fixture runs and legacy resume regression. Initial fixture foreign-key failures were corrected by registering tiles; constraints preserved. Not a research training milestone; no deployed checkpoint added.

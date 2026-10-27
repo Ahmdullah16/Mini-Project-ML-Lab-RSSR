@@ -45,3 +45,9 @@ python scripts/check_architecture_matrix.py
 ```
 
 A uses global channel pooling and therefore depends on tile context. T uses aligned windows and replicated boundary padding. Existing overlap logic is reused, but new-variant seam tolerances, representative-image comparisons, maximum-size exports, trained checkpoint binding, CLI/app selection, matched budgets and final trained model/scale evidence remain unfinished. Native ×2/×4 code support does not imply trained weights at either scale. Positive band counts are code support, not trained sensor compatibility.
+
+## Training/evaluation integration
+
+Training JSON can now use `"model": {"architecture_id": "cat-v1/M6", "bands": 3, "scale": 2, "width": 16, "window": 4}` through the existing `rssr train CONFIG MANIFEST` command. Do not include legacy `kind` alongside `architecture_id`; ambiguous configurations fail. The existing evaluator and inference checkpoint loader route by the stored configuration, and the database records the versioned ID. Legacy configurations continue through the original factory.
+
+Nine integration/regression tests passed: all seven configurations performed one Adam step on a tiny synthetic ramp, saved/reloaded selected checkpoints, evaluated the registered fixture and verified the database checkpoint hash; legacy deterministic resume remained exact. This is an optimizer/checkpoint integration test, **not a trained deployment model or research evaluation**. Test artifacts remain temporary and are not catalog assets. The initial fixture omitted database tile registration and correctly failed foreign keys; the fixture was corrected without disabling constraints.

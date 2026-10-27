@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 from .core import config_hash, digest, metrics, resize, degrade
-from .models import SRModel
+from .model_factory import from_config
 from .db import connect
 from .data import now
 
@@ -41,7 +41,7 @@ def save_checkpoint(path, state):
 
 def load_model(path):
     state=torch.load(path,map_location="cpu",weights_only=True)
-    model=SRModel(**state["config"]["model"])
+    model=from_config(state["config"]["model"])
     model.load_state_dict(state["model"]); model.eval()
     return model,state
 
@@ -59,7 +59,7 @@ def train(config, manifest_path, root, resume=None):
     if config["model"]["bands"] != len(manifest["bands"]) or config["model"]["scale"] != manifest["scale"]:
         raise ValueError("Model and dataset bands/scale differ")
     training,validation=load_tiles(manifest,"train",Path(manifest_path).parent),load_tiles(manifest,"validation",Path(manifest_path).parent)
-    model=SRModel(**config["model"]); optimizer=torch.optim.Adam(model.parameters(),lr=config["lr"])
+    model=from_config(config["model"]); optimizer=torch.optim.Adam(model.parameters(),lr=config["lr"])
     generator=torch.Generator().manual_seed(config["seed"])
     step=0; best=float("inf"); best_model=None; best_step=0
     rid=uuid.uuid4().hex; out=root/"runs"/rid; out.mkdir(parents=True)
@@ -82,7 +82,7 @@ def train(config, manifest_path, root, resume=None):
     hardware={"platform":platform.platform(),"processor":platform.processor(),"device":"cpu","threads":2,"gpu_hours":0}
     db=connect(root/"catalog.sqlite")
     with db:
-        db.execute("INSERT INTO runs VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",(rid,git+("+dirty" if dirty else ""),mh,config_hash(config),config["model"]["kind"],config["seed"],json.dumps(environment),json.dumps(hardware),now(),None,"running",None,None))
+        db.execute("INSERT INTO runs VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",(rid,git+("+dirty" if dirty else ""),mh,config_hash(config),config["model"].get("architecture_id",config["model"].get("kind","hybrid")),config["seed"],json.dumps(environment),json.dumps(hardware),now(),None,"running",None,None))
     started=time.perf_counter(); history=[]
     try:
         while step < config["steps"]:
