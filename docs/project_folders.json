@@ -403,7 +403,7 @@
     "tests": [
       "test_mp37_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Expanded implementation/teaching complete; learner mastery unassessed"
   },
   {
     "id": "MP38",
@@ -414,7 +414,7 @@
     "tests": [
       "test_mp38_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Expanded architecture component verified; matched-budget research criteria pending"
   },
   {
     "id": "MP39",
@@ -425,7 +425,7 @@
     "tests": [
       "test_mp39_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Expanded historical ablation analysis verified; geographic uncertainty pending"
   },
   {
     "id": "MP40",
@@ -436,6 +436,6 @@
     "tests": [
       "test_mp40_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Expanded historical robustness/efficiency analysis verified; real cross-sensor/full compute acceptance pending"
   }
 ]

@@ -1,3 +1,15 @@
+# MP40 historical robustness and efficiency — 2026-10-27
+
+[MP40](../stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/README.md) now derives30 condition rows,5 efficiency records and a visually checked [curve figure](../reports/figures/mp40-robustness.svg) from existing development evidence. Five tests, report/figure generation and expanded three-cell real kernel passed. No new benchmark or frozen inference. MP38–MP40 expanded components are verified, but full scientific acceptance remains In progress. Unknown memory/compute/cross-sensor results remain unavailable.
+
+# MP39 historical ablation analysis — 2026-10-27
+
+[MP39](../stage_09_hybrid_research/MP39_controlled_ablation_study/README.md) expands the24-run historical analysis with source lineage, eight-variant table, explicit null geographic CIs, synthetic paired-bootstrap example and solved exercises. Seven tests and three-cell real kernel passed. [Report](../reports/mp39-ablation-analysis.json). No new training/inference; full status remains In progress because independent-region/matched-budget evidence is missing.
+
+# MP38 architecture component — 2026-10-27
+
+[MP38](../stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/README.md) now has an expanded architecture equation/diagram, worked examples, actual shared-model shape trace and zero-residual/gradient checks. Five tests, standalone synthetic experiment and three-cell real notebook passed. [Report](../reports/mp38-architecture.json). No training, downloads or frozen evaluation. Status remains In progress: matched-budget quality comparison and reference-error atlas are unfinished.
+
 # MP37 feature fusion completed — 2026-10-27
 
 [MP37](../stage_09_hybrid_research/MP37_feature_fusion_laboratory/README.md) implementation/teaching scope complete: expanded notebook, worked algebra/gradients, fusion diagram, parameter/MAC derivation, shared-model fixture and reused historical training comparison. Seven tests and a three-cell real kernel passed; transient initial Windows DLL error documented. [Report](../reports/mp37-fusion.json). No new training or test evaluation. MP36 remains In progress; MP38–MP40 and MP20 evidence gap remain. Learner mastery unassessed.
