@@ -1,0 +1,1261 @@
+{
+  "schema": "cat-smoke-v1",
+  "seed": 73,
+  "command": "python scripts/check_architecture_matrix.py",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "threads": 2
+  },
+  "source_sha256": {
+    "src/rssr/models.py": "722986b37ab67cd39465617dbb9b689612e1822c81dd2c451199e822c8897c6f",
+    "src/rssr/architecture_registry.py": "509c246aa8d2400e933b10220b26a6758ede2e0ccf340557b137f73aa0cbb54e",
+    "src/rssr/scaling.py": "ad9d83d251c0221b20912da9d401c96f9eb51f3cf3198dbb9a64ccbe5d2799fa",
+    "scripts/check_architecture_matrix.py": "5c55ff390f33f96a32a3b5089caa8eecfd565bf73c5434297bf44fe4d2f83ca1"
+  },
+  "registry": [
+    {
+      "architecture_id": "cat-v1/M1",
+      "modules": {
+        "C": true,
+        "A": false,
+        "T": false
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 852,
+      "legacy_structure": "cnn",
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "modules": {
+        "C": false,
+        "A": true,
+        "T": false
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 668,
+      "legacy_structure": null,
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "modules": {
+        "C": false,
+        "A": false,
+        "T": true
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 792,
+      "legacy_structure": "transformer",
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "modules": {
+        "C": true,
+        "A": true,
+        "T": false
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 964,
+      "legacy_structure": "attention",
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "modules": {
+        "C": true,
+        "A": false,
+        "T": true
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 1124,
+      "legacy_structure": "hybrid:use_attention=False",
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "modules": {
+        "C": false,
+        "A": true,
+        "T": true
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 904,
+      "legacy_structure": null,
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "modules": {
+        "C": true,
+        "A": true,
+        "T": true
+      },
+      "config": {
+        "bands": 3,
+        "scale": 2,
+        "width": 4,
+        "window": 4,
+        "zero_residual": false
+      },
+      "parameters": 1236,
+      "legacy_structure": "hybrid:use_attention=True",
+      "checkpoint_sha256": null,
+      "training_provenance": null,
+      "status": {
+        "implemented": true,
+        "trained": false,
+        "evaluated": false,
+        "deployed": false
+      },
+      "status_scope": "This registry configuration; historical runs require explicit provenance binding.",
+      "native_scales_implemented": [
+        2,
+        4
+      ],
+      "bands_implemented": "positive integer; trained compatibility unverified",
+      "tiling": "A uses tile-dependent global channel pooling; T requires aligned windows."
+    }
+  ],
+  "rows": [
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.08805620000202907,
+      "rss_before_bytes": 217899008,
+      "rss_after_bytes": 229314560,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "6c7fec9ea677ce0bc8bf3e86b1f89626e42bb48481c2a606a351d062e456bf4b",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.015980299998773262,
+      "rss_before_bytes": 229322752,
+      "rss_after_bytes": 229777408,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "72eddcce47a7ab915ff68ce684fc45fb8faa8cc2266b4c765bf975966c1e3baf",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.028059799999027746,
+      "rss_before_bytes": 229777408,
+      "rss_after_bytes": 230068224,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "31187536476f76cb52409a10205ecd79fabfab4c7c4b0ed64bb0641ca5de5047",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.05370330000005197,
+      "rss_before_bytes": 230068224,
+      "rss_after_bytes": 230875136,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "f335060fba72314262106fc4cef8138ea74795eede25d941da69d364e288e653",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.039569699998537544,
+      "rss_before_bytes": 230875136,
+      "rss_after_bytes": 232632320,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "9f39c269ff7222a262704f2d2da069f04a6424bcfad09bab2343e38966f43132",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.07782159999987925,
+      "rss_before_bytes": 232632320,
+      "rss_after_bytes": 234815488,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "ae97182dc47192d3dfb091d36f5858d071c9ea5d09f076b2c71274ff59f12e35",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.012128099999245023,
+      "rss_before_bytes": 234840064,
+      "rss_after_bytes": 235413504,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "f64f660f168f19484fec97d52a8262414772aca8096d8e39f6e3d6b4b93e8bdc",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.018043899999611313,
+      "rss_before_bytes": 235413504,
+      "rss_after_bytes": 235749376,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "d6746252beac0bb3bb8b3dd52700bab1a35b56be9a1871c6ebd57105fe1f5a25",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.03903129999889643,
+      "rss_before_bytes": 235749376,
+      "rss_after_bytes": 236077056,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "6d84361c51364879c0dfa38203626673d12b9c1b8a5d1b4d50ecb00c31d8c4f6",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.03985829999874113,
+      "rss_before_bytes": 236077056,
+      "rss_after_bytes": 236580864,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "64a0dcbc34ce4db1b05a5e1a8ea4ba0f2bee8106d9af6d816535c7b835e1ff14",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.05566320000070846,
+      "rss_before_bytes": 236580864,
+      "rss_after_bytes": 237674496,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "75a217f219d41260167716d438922ceede3544d568f376d13b5c68d42eab5ea2",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.08685780000087107,
+      "rss_before_bytes": 237674496,
+      "rss_after_bytes": 239370240,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "08f7736d5a0a5604c2533b4658e25ecfd68c40aba308de69d6df611dddf88443",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.014991099997132551,
+      "rss_before_bytes": 239468544,
+      "rss_after_bytes": 240623616,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "9839b3306ee0c4e8bc34d0d84c30f2a8680bdca30f35f248444051fe6a984d08",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.022321300002658973,
+      "rss_before_bytes": 240623616,
+      "rss_after_bytes": 240644096,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "c211211b4f02bf13065fb9e911faff27d718bb1b2ace62d15c140fad45059f6c",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.02923190000001341,
+      "rss_before_bytes": 240644096,
+      "rss_after_bytes": 240943104,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "3c2c6ed3c7e0b5953f7ed83446e8076b9075cfa0f02067c303aa5d38416a6109",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.04497280000214232,
+      "rss_before_bytes": 240943104,
+      "rss_after_bytes": 241369088,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "6b564eda74b77ca63e799b653a3d70352898e668b25bfd02d5a69c1a516bcd09",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.04922459999943385,
+      "rss_before_bytes": 241369088,
+      "rss_after_bytes": 241745920,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "fe1be78fc9b7fed2f1263eaac79f079a69d6a59b4585995991bdd8da0ef9ad29",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.14901910000116914,
+      "rss_before_bytes": 241745920,
+      "rss_after_bytes": 243077120,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "70ef415a05abc962f2deaf9f079f2ad8245bfafd7258354d0e7fd6578b5313e4",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.016012699998100288,
+      "rss_before_bytes": 243081216,
+      "rss_after_bytes": 243081216,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "21d89e98c257acb6be0b355564aec73b3ef0d3a9023b30aec4613bfccf518a38",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.025695799999084556,
+      "rss_before_bytes": 243081216,
+      "rss_after_bytes": 243089408,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "c110d05b26cf53e3859468e42697fa95ad2b85f9d0089158fc08663037e896fc",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.0406927000003634,
+      "rss_before_bytes": 243089408,
+      "rss_after_bytes": 243097600,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "66cad350ace0fab2475a9b4e04e23ee065fe414e13f3c2d87341d43fb7216049",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.04112239999813028,
+      "rss_before_bytes": 243097600,
+      "rss_after_bytes": 243298304,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "12b9c42c4239ede1dd3d9f0a5a38d0ce7b346015aebeb8901c5a82aa28c7e491",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.05149389999860432,
+      "rss_before_bytes": 243298304,
+      "rss_after_bytes": 243105792,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "f44faeefd922b61bb888bd871bb134dc5188c5d2464e049ca04f4d6a7d78b519",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.11860519999754615,
+      "rss_before_bytes": 243105792,
+      "rss_after_bytes": 243707904,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "08a1fc6824d22450d7dccac6c4cfdd5a36a624f777ac011255d081ceb2895e04",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.016226600000663893,
+      "rss_before_bytes": 243712000,
+      "rss_after_bytes": 243712000,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "36a43f3e3b899de5cf3df6d5761f2ebc2053614ba22abde0e498e58747c54472",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.02714900000137277,
+      "rss_before_bytes": 243712000,
+      "rss_after_bytes": 243712000,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "967dab91fea210f7f5886e40a7b48583f7e307bc91b17856685915c76fb75177",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.045705199998337775,
+      "rss_before_bytes": 243712000,
+      "rss_after_bytes": 243712000,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "0394886b996201700e37d40c0fdbb173bb1999bbe8a78cc71ce5c2d7cbc92d3e",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.05958680000185268,
+      "rss_before_bytes": 243712000,
+      "rss_after_bytes": 243916800,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "d82a0a877a3716d9a3e7e9dc4571f9b9a5cfdd7c2ed880b43ed64f72982c9f36",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.09358659999998054,
+      "rss_before_bytes": 243916800,
+      "rss_after_bytes": 244064256,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "bf5afaa4025c9ce9b5ce27dbbe8d4c074fab824950d154bf4810b2d2f32378e0",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.14673929999844404,
+      "rss_before_bytes": 244064256,
+      "rss_after_bytes": 245805056,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "79894648cabe4fcabec82a328ed3ed0f160bf9cfd8d44e525d16ece3ed00ac0d",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.013313100000232225,
+      "rss_before_bytes": 245809152,
+      "rss_after_bytes": 245809152,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "2faf3e8c4dafcf151cf5546a62d428495c0c89d0fa19f02459324ab4087544f8",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.03364259999943897,
+      "rss_before_bytes": 245809152,
+      "rss_after_bytes": 245809152,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "b64276d13aa53ae2a9d0852ae84e4445feed39173da0695f2f075f1c41e1f191",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.03168740000182879,
+      "rss_before_bytes": 245809152,
+      "rss_after_bytes": 245809152,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "13fea69afaf4319cc4f530d9af3eaa81c4f8700c44cb4eace542307a2fa7ca53",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.06580380000013974,
+      "rss_before_bytes": 245809152,
+      "rss_after_bytes": 246009856,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "fa644cd94022911628e323fdad7ac35820d0f568f447da9a738845007e8eed52",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.07351150000249618,
+      "rss_before_bytes": 246009856,
+      "rss_after_bytes": 247111680,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "0837223d216ab6be7e463a87cdf01ee0e80585af321b769ec0cd49d360a62ed9",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.1433123999995587,
+      "rss_before_bytes": 247111680,
+      "rss_after_bytes": 246734848,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "036729106eb6d5665701a8fc6a2272a8582980b8e6466a4f1deafd49b28e14ef",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 2,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        6,
+        10,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.008591999998316169,
+      "rss_before_bytes": 246751232,
+      "rss_after_bytes": 246751232,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "8df89f327c52f6aaed455ca0105c764f512760e6e8d7e368d373fa0e282bb1b8",
+      "stage_count": 1,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 4,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        12,
+        20,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.021302200002537575,
+      "rss_before_bytes": 246751232,
+      "rss_after_bytes": 246751232,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "03e54600b5fd8374b786d500b5241658b4d30bef95df4d29918314916275d672",
+      "stage_count": 2,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 8,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        24,
+        40,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.023153300000558374,
+      "rss_before_bytes": 246751232,
+      "rss_after_bytes": 246755328,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "3aaf744ab439f54f6e9fbfb19cd76d8d73c863f40f2e921926ae67fd9fbdf064",
+      "stage_count": 3,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 16,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        48,
+        80,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.04132690000187722,
+      "rss_before_bytes": 246755328,
+      "rss_after_bytes": 246951936,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "da41421e3322b91364b1854f30a165fce28329345c4848b2e71d3e943ac4849a",
+      "stage_count": 4,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 32,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        96,
+        160,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.0668243000000075,
+      "rss_before_bytes": 246951936,
+      "rss_after_bytes": 248061952,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "267f09123cce98461b11f8d60d3b37ddae75fb024f9327a5d3742d76f168f8c5",
+      "stage_count": 5,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 64,
+      "input_shape": [
+        3,
+        5,
+        3
+      ],
+      "actual_output_shape": [
+        192,
+        320,
+        3
+      ],
+      "method": "untrained x2 block, repeated log2(scale) times; bicubic residual; RGB clipping/quantization",
+      "checkpoint_sha256": null,
+      "execution_status": "passed synthetic plumbing only",
+      "runtime_seconds": 0.15363839999918127,
+      "rss_before_bytes": 248061952,
+      "rss_after_bytes": 247087104,
+      "memory_method": "process RSS snapshots before/after; NOT peak memory",
+      "output_pixel_sha256": "8a5b425dde2cf00b6d259283c5bc05e82a3b25350788148a196796d03367023b",
+      "stage_count": 6,
+      "artifacts": "temporary TIFFs verified then removed; no distributable checkpoint or trained output"
+    }
+  ],
+  "duration_seconds": 2.961359499997343,
+  "exit_status": 0,
+  "limitations": [
+    "Random weights: no trained quality, checkpoint compatibility provenance binding, representative-image or geographic evaluation.",
+    "Maximum-size execution and seam validation for new variants remain pending; historical checks do not establish these.",
+    "The 42 rows are bounded synthetic disk-export checks, not the final trained capability matrix."
+  ]
+}

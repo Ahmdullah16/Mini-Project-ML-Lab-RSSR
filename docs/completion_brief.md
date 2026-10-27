@@ -151,3 +151,7 @@ Use verified native models or explicitly labeled cascades, disclose interpolatio
 ## Research-first priority update — 2026-10-26
 
 The [latest complete user brief](research_upgrade_brief.md) overrides conflicting earlier requirements. Prioritize defensible evidence, then submission package, then interface/deployment. Commit research questions and protocol v2 before new experiments/test inspection; retain null findings and frozen results. Large downloads, long training and paid resources require explicit approval with size/compute/cost/purpose. Existing bounded implementation checks remain authorized.
+
+## Latest expanded acceptance requirements — 2026-10-27
+
+The [seven-model completion brief](seven-model-completion-brief.md) preserves the latest user request verbatim and supplements this brief. It requires distinct C/A/T configurations, an honest seven-by-six scale matrix, final independently checked MP01–40 outputs, interactive lessons, evidence-backed IEEE submission materials and deployment evidence. See [architecture definitions and status](architecture-registry.md). Previous scientific gates and input≤1024-per-side/exact-scale rules remain. Implementation smoke tests are not trained models or final research acceptance.
