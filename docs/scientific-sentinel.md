@@ -23,3 +23,7 @@ All spectral and quality layers must declare the same CRS, affine transform and 
 24tests passed0.77s, including offset arithmetic, all12SCLcodes, mask/nodata/saturation intersection, L1C/unknown metadata rejection, decoded reflectance double-scaling rejection, mismatched grids, no-valid-pixel rejection,1×7and1024×1024inputs,oversize rejection, and actual GeoTIFF float/mask/grid/provenance round-trip with overwrite prevention. Tests use synthetic fixtures only; no satellite asset was downloaded or calibrated. No trained reflectance-model inference or aligned-HR metrics are claimed.
 
 Reproduce with `PYTHONPATH=src`: `python -m pytest tests/test_surface_reflectance.py -q`. Provider-specific STAC/XML ingestion, metadata discrepancy resolution, measured alignment, live quality masking and full pipeline validation remain next tasks. The advanced architecture family, new M2/M6 training and final40-project acceptance are separate unfinished requirements.
+
+## Executable local ingestion
+
+The [local reflectance job](local-reflectance-job.md) now provides plan-first CLI execution on hash-pinned, self-contained, already aligned local GeoTIFFs. It derives cropped grid metadata from actual headers, verifies checksums, intersects quality coverage and exports float32 values without silent resampling.36combined fixture tests passed. This does not remove the live-provider/alignment/scientific-inference gates above.

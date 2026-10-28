@@ -10,6 +10,10 @@ def main():
         from .scale_job import main as rgb_main
         sys.argv.pop(1)
         return rgb_main()
+    if len(sys.argv)>1 and sys.argv[1]=='prepare-reflectance':
+        from .reflectance_job import main as reflectance_main
+        sys.argv.pop(1)
+        return reflectance_main()
     p=argparse.ArgumentParser(description="RSSR laboratory: explicit bounded workflows")
     sub=p.add_subparsers(dest="command",required=True)
     d=sub.add_parser("download"); d.add_argument("manifest"); d.add_argument("--root",default="data")

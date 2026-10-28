@@ -234,3 +234,7 @@ Historical binding follow-up:39 distinct pilot checkpoints verified against orig
 ## Scientific metadata / website milestone — 2026-10-28
 
 Latest user request saved docs/scientific-website-upgrade-brief.md. Added explicit local L2A surface-reflectance conversion/mask/float32 atomic-export component;24fixture tests passed0.77s. Live scientific acquisition/alignment/inference unfinished. Original display acquisition preserved and clearly labelled. Website adds seven evidence-based model cards with checkpoint details/mathematics, marks M2/M6 training unavailable and renders all matching mini-project PNGs. Existing7-section AppTest and all7model selections passed with network blocked. No full browser/public readiness or40-project final acceptance claim. No frozen reports/checkpoints changed.
+
+## Local reflectance ingestion milestone — 2026-10-28
+
+Added plan-first `rssr prepare-reflectance` for hash-pinned local GeoTIFF inputs, bounded pixel-window reads, common-grid rejection, quality-coverage intersection, declared radiometry, disk guard and atomic float32 export.36combined ingestion/conversion tests passed2.34s, including actual CLI subprocess plan/execute. See docs/local-reflectance-job.md and reports/reflectance-job-validation.json. No real satellite product, new model training or frozen research evaluation ran. Provider adapter, mixed-resolution alignment and learned scientific inference remain unfinished.
