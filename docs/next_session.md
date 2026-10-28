@@ -1,3 +1,19 @@
+# Current checkpoint — metric instruction and shared availability, 2026-10-29
+
+- New mandatory brief saved docs/mandatory-website-brief.md; all7groups in docs/acceptance_matrix.md. Full40onsiteoutput and7model execution remain mandatory, not fulfilled by visibility.
+- PR39 exacthead730b2026 CI40744171262 SUCCESS; externally merged origin/main8f16439, integrated2a4e42f retaining newer checkpoint. No agent remote merge.
+- Both Live SR/Satellite now show shared7family status from checkpoint identities: M1/M7 hostedRGB; M2/M6 localRGB pendingdistribution; M3/M4/M5fourband incompatibleRGB. Existing selectors remain pinned-hosted-only. No randomweights/bandconversion.
+- Shared metric explanation and explicitRun64x64synthetic reference lab: blur/noise/brightness/contrast/shift/sharpening, fixedrange1, uniform7x7SSIM, MAE/MSE/RMSE/PSNR/perband/gradient; SAM/LPIPS unavailable. Source citations verified. Outputclears on parameterchange. Zero-contrast roundoff fixed before passing tests.
+-26targetedtests1.95s; both-section AppTest6distortions pluszero/stale/availability passed;970links40IDs passed. reports/metric-teaching-validation.json records12actualsyntheticpairs. Detailed supplement regenerated fromsharedmetricprose and docs/website-validation-update.md; frozen results unchanged. paper/main.tex not edited thisturn.
+- NEXT: publish validated milestone/inspect exactheadCI; implement Satellite Single/Compare workflows over ONE fresh_prepared GeoTIFF in app/satellite_scale_ui.py, sequential pinnedcompatiblemodels, preserve successes and retry failures, invalidate identities on pixels/model/scale/preprocessing. Existing fresh_result single-model UI must remain compatible with scripts/check_satellite_scale.py. Then complete7RGBcheckpoints and MP03onward. Full scientific mask/CRS/export, pairedmetrics, deployment/mobile and40lesson acceptance remain pending.
+- Commands: PYTHONPATH=src; devpython -m pytest tests/test_metric_teaching.py tests/test_paper_source_audit.py tests/test_paper_evidence.py tests/test_instructor_site.py -q; apppython scripts/check_metric_ui.py; devpython scripts/build_learning_supplement.py --check; devpython scripts/audit_paper_sources.py --check. Devpython ../../work/clean-venv/Scripts/python.exe; apppython ../../work/streamlit-venv/Scripts/python.exe. Preserve existing trained artifacts; no frozen reruns.
+
+# Exact publication state — 2026-10-28
+
+- PR38 externally merged1b16c4b after CI40743598846 SUCCESS; integrated locally56997d1, preserving newer checkpoint/acceptance matrix. Agent did not merge remote PR.
+- MP02 follow-up is PR39 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/39, branch feat/trained-seven-model-pilots, exacthead730b2026f751dc1c25c4201a8d53bff98f3b997f, tree61767529f9d6627e52810a79d1c6c94b6ff8eae0 matches local implementationd2c64a9. CI40744171262 IN PROGRESS at last check; do not claim passed.
+- Next: inspect PR39 CI before modifying; preserve any external merge. Continue MP03 native lesson from canonical helpers, then remaining instructor coverage and compatible model scale gaps. All unfinished acceptance gates below remain. Last structural check40IDs/968links passed after local merge. This publication checkpoint is local and should accompany next reviewable milestone.
+
 # Latest follow-up — MP02 native lab, 2026-10-28
 
 - PR38 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/38 published; initial exacthead db81072ad3e69602479e7355d008207a35fd54c7 CI40743598846 SUCCESS. Local ba4bee8 and initial remote tree match0875dd4e6c308e569e4925e7e073d83e179edb71. Follow-up below requires new exact-head CI.

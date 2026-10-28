@@ -1,0 +1,7 @@
+# Website validation update — 2026-10-29
+
+The new metric laboratory was independently executed in both Live SR and Satellite Explorer for blur, noise, brightness, contrast, shift and sharpening. The reference is a deterministic64×64 synthetic RGB pattern, not an uploaded or acquired image. Tests cover exact zero-strength identity, direct NumPy recomputation of MAE/MSE/PSNR, invalid parameters and deterministic distorted pixels. The first test run found tiny zero-contrast roundoff; the algebra was corrected to preserve identity. The rerun passed17tests. Both-section AppTest executed all controls, verified no network and cleared stale output after parameter changes.
+
+The shared seven-family availability view matches hosted artifacts through recorded training-checkpoint hashes. M1/M7 have pinned hosted RGB checkpoints; M2/M6 have local RGB pilots awaiting remote distribution; M3/M4/M5 verified historical checkpoints are four-band. This view does not complete seven-model execution. Scientific SAM and LPIPS are not reported for the synthetic encoded-RGB panel. Upload/satellite reference accuracy remains unavailable without genuine aligned HR.
+
+The remaining mandatory requirements include full individual native lesson acceptance, compatible checkpoints for every supported mode, satellite multi-model comparison, real paired metrics, full scientific export validation and deployed desktop/mobile/restart verification. No new frozen research result, geographic generalization or public deployment is claimed.
