@@ -30,6 +30,24 @@ Stored digital numbers are divided by a fixed 10,000. This numerical convention 
 
 The early ablation pilot uses Adam, L1 training, a small fixed step budget and three seeds, comparing residual architectures and gating controls. Parameter counts differ. The later development runs change both training geography and residual initialization; they therefore cannot isolate either change causally. Their seed variation must not be interpreted as a geographic confidence interval. Detailed settings, run IDs and checkpoint hashes remain in the source records, with separate scope labels in the generated evidence manifest.
 
+\section{Implemented architecture family}
+All seven cat-v1 configurations retain a padded $3\times3$ embedding convolution and a reconstruction convolution followed by pixel shuffle and addition to a bicubic baseline. For input $N\times C\times H\times W$, feature width $d$ and native scale $s$, reconstruction maps $d$ features to $Cs^2$ channels before rearranging them into $N\times C\times sH\times sW$.
+
+C denotes an additional two-convolution local residual branch. A applies global-average channel gating followed by a spatial gate from channel mean and maximum maps. T partitions replicate-padded features into fixed windows, applies learned positional embeddings, two-head self-attention and a feed-forward residual block, then removes padding. These compact blocks are not full RCAN or shifted-window SwinIR reproductions.
+
+\begin{table}[t]
+\centering\small
+\caption{Implemented paths and verified historical checkpoint bindings. Counts are artifact-compatibility evidence, not a seven-model scientific comparison.}
+\begin{tabular}{lll}\toprule
+ID & Additional path & Bindings\\\midrule
+M1 & C &9\\ M2 & A &0\\ M3 & T &3\\
+M4 & C then A &6\\ M5 & Parallel C/T, concat projection &6\\
+M6 & T then A &0\\ M7 & Parallel C/T, projection, A &15\\\bottomrule
+\end{tabular}
+\end{table}
+
+Parallel paths concatenate two $d$-channel tensors and project them with a $1\times1$ convolution. Parameter counts depend on the exact band count, width and scale. Global channel pooling makes tiled feature attention context-dependent. M2 and M6 have no verified trained binding. Within each run, checkpoint selection minimizes validation L1; the later frozen protocol selects among runs using validation PSNR. These are distinct selection stages.
+
 \section{Metric definitions and aggregation}
 For valid, aligned scalar samples $x_i$ and predictions $\hat{x}_i$, define
 \begin{align}
@@ -74,6 +92,9 @@ A systematic reference-based failure atlas remains unfinished. Existing syntheti
 One held-out scene cannot characterize geographic uncertainty. Architecture budgets are imperfectly matched; pretraining confounds external controls. Numerical DN scaling is not physical calibration. Synthetic degradation is not a validated sensor forward model. These limitations prevent a research-grade superiority or transfer conclusion.
 
 Dataset and imagery licenses must be respected separately from code licenses. The candidate datasets include noncommercial HR terms. Geographic outputs can expose sensitive locations; only appropriately authorized and attributed imagery should be redistributed. Model-generated detail should not support consequential interpretations without independent validation. Inputs and caches on the stateless host are not a durable research database.
+
+\section{Conclusion}
+The recorded experiments support a bounded comparative evaluation rather than architectural superiority. In the early pilot, the learned gate averages 45.2122 dB and fixed attenuation 45.0625 dB, both below the 45.8104 dB bicubic baseline. On the separate frozen RGB protocol, CNN and hybrid scores are 50.2614 and 50.2459 dB, versus 48.5183 dB for bicubic. These are mean tile PSNR values in one held-out scene, not a geographic confidence interval. Seven feature paths are implemented, but only five have historical trained bindings. Calibrated cross-sensor transfer, complete matched-budget comparisons and a defensible architectural novelty claim remain open.
 
 \section{Reproducibility checklist and open work}
 \begin{itemize}

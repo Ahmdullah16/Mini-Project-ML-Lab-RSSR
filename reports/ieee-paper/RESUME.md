@@ -12,3 +12,14 @@
 ## Validation performed
 
 Source audit generation and --check passed;6 audit/evidence tests passed0.29s with --basetemp=../../work/pytest-paper-audit-20261028. Initial default-temp run had4passes/2setup errors from sandbox temp-directory creation; no assertion failure. Workspace-local rerun resolved that infrastructure issue. Both prior paper/lesson generators --check and7claim records passed;958relative links valid. Read-only git fetch subsequently succeeded with approved network execution; origin/main remains89df7a7. Existing paper source unchanged by this milestone, so no redundant compile or frozen evaluation rerun.
+
+## Publication checkpoint — 2026-10-28
+
+- Local branchfeat/mp27-attention; preserved teaching milestone954a390, auditd753b0a. Published draft PR36 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/36, branchfeat/native-learning-ieee-audit, head60a8a184448934a9202fe8f33b036a896a8f0f6f, treebd201f9a2ec4de1185aa857dbfc4d13f751b93cb exactly matches locald753b0a. Attached. CI40690309970 IN_PROGRESS at last observation; no success inferred. No PR merge performed.
+- Current checkpoint follow-up is local; include it in the next milestone. Tree clean before checkpoint edits. Independent publication recovered the previously interrupted work.
+- Next commands: inspect PR36 exact-head CI and currentmain; read reports/ieee-paper/RESUME.md. User-reference gate still requires exact conference_041818.pdf and IEEEtran_HOWTO.pdf; confirm intended document.pdf if different from known export. Continue native lesson/model explanations independently; preserve all scientific/resource limits.
+
+
+## Superseding instructor milestone — 2026-10-28
+
+Exact IEEE files are now supplied and reviewed: evidence/supplied-template-review.json. Prior template-transfer gate is resolved. Current manuscript includes actual architecture scope and source-checked numerical conclusion and compiles; latest visual review blocked by computer-use access denial. Native site removes project-GitHub/notebook links, adds executable MP01 numerical lab and7accurate block diagrams/shared model derivations. reports/instructor-site-validation.json has actual checks. Full40native lesson acceptance, advanced models/training, final report typesetting, public deployment and industry/novelty validation remain open.

@@ -11,7 +11,6 @@ sys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'app'))
 from rssr.evidence import build_index
 from rssr.interpretation import explain_selection, metric_definition
 from rssr.build_info import build_identity
-REPO='https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR'
 SECTIONS=['Overview','Live SR','Results','Methodology & Data','Mini-projects','Satellite Explorer','Downloads & Reproducibility']
 st.set_page_config(page_title='RSSR · Research laboratory',page_icon='◈',layout='wide')
 st.markdown('''<style>
@@ -34,7 +33,6 @@ with st.sidebar:
     st.markdown('### ◈ RSSR LAB');st.caption('REMOTE SENSING · SUPER-RESOLUTION')
     section=st.radio('Explore the laboratory',SECTIONS,key='section',label_visibility='collapsed')
     st.divider();st.caption('Measured evidence. Reproducible experiments. Explicit limits.')
-    st.link_button('Source & notebooks',REPO)
     with st.expander('Application version'):st.json(build_identity(ROOT))
 st.caption('RSSR / '+section.upper())
 
@@ -64,7 +62,7 @@ def explain_results(frame):
         st.write(explanation['context'])
         st.write(explanation['aggregation']);st.write(explanation['limits'])
         for source in explanation['sources']:
-            st.markdown(f'[{source}]({REPO}/blob/main/{source})')
+            st.caption('Recorded evidence: '+source)
     with st.expander('Metric mathematics and a controlled numerical example'):
         st.latex(r'\mathrm{MSE}=\frac{1}{N}\sum_i(\hat{x}_i-x_i)^2,\quad \mathrm{RMSE}=\sqrt{\mathrm{MSE}},\quad \mathrm{MAE}=\frac{1}{N}\sum_i|\hat{x}_i-x_i|')
         st.latex(r'\mathrm{PSNR}=10\log_{10}(L^2/\mathrm{MSE})')
@@ -146,7 +144,7 @@ elif section=='Results':
         st.caption('Recorded MP26 development: 1000 steps, Adam .001, batch 4, seeds 17/23/41. Training points are minibatch losses; validation selects checkpoints. No test tuning.')
         st.write(metric_definition(metric)['explanation'])
         st.caption('Question: how does the recorded loss change over optimizer steps? Horizontal axis: step; vertical axis: normalized-DN absolute error. Each colored line is one model/seed, not a confidence interval. Compare training and validation trends before claiming overfitting; these views alone do not establish its cause.')
-        st.markdown(f'[Curve source]({REPO}/blob/main/reports/mp26-attention-sr.json)')
+        st.caption('Curve evidence: recorded MP26 experiment')
     else:
         query=st.text_input('Search recorded artifacts',placeholder='ablation, pilot, mp…')
         artifacts=[a for a in index['artifacts'] if query.lower() in a['path'].lower()]
@@ -196,7 +194,7 @@ elif section=='Mini-projects':
             with st.expander(p['id']+' · '+p['title']):
                 st.write(p['objective']);st.caption(p['status'])
                 if p['exception']:st.warning(p['exception'])
-                st.markdown(f"[Project brief]({REPO}/blob/main/{p['brief']}) · [Notebook]({REPO}/blob/main/{p['notebook']})")
+                st.caption("Read this project in the on-site lesson selector above.")
                 figures=[a['path'] for a in index['artifacts'] if any(part.lower().startswith(p['id'].lower()+'-') for part in Path(a['path']).parts) and Path(a['path']).suffix.lower() in ('.png','.svg','.jpg','.jpeg')]
                 for figure in figures:
                     st.image(str(ROOT/figure),caption=Path(figure).name,width='stretch')

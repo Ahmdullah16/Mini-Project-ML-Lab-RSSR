@@ -250,3 +250,7 @@ Latest [brief](onsite-report-completion-brief.md) saved. Existing40lesson prose 
 ## IEEE evidence-audit workspace — 2026-10-28
 
 Saved [master brief](ieee-reconstruction-brief.md); created [component/claim/implementation audit](../reports/ieee-paper/README.md) and executable source/citation/protocol checker. Six tests passed0.29s after moving pytest temp into workspace;958links and7claim records passed. Existing source preserved pending explicit supplied-reference comparison gate. No new scientific measurements, template-compliance assertion or final PDF. Correctly distinguishes within-run minimum-L1 checkpoint selection from later validation-PSNR run selection.
+
+## Instructor-site milestone — 2026-10-28
+
+Implemented project-source link removal on visitor pages, executable MP01 input/output/pixel/histogram/download teaching, and7actual architecture diagrams with shared derivations and parameter trade-offs.47learning/paper tests and13instructor/MP01tests plus4subtests passed;40lesson/7model AppTests passed. Updated paper compiled, source-based test corrected a transcribed conclusion value; no frozen rerun. Supplied IEEE guidance access resolved; final PDF visual review remains blocked by UI access. [Evidence](../reports/instructor-site-validation.json). This is partial completion, not industry readiness or full40lesson acceptance.

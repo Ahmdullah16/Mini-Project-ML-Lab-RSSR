@@ -16,6 +16,7 @@ def tex(text):
 def build(root):
     parts=['# Detailed project supplement — working source\n\nExisting teaching prose and recorded validation; not final scientific acceptance. Code cells are neither rendered nor executed. Complete parameter audits, new figures, individual mathematical acceptance and final typesetting remain pending. Author details and supplied Library template are unavailable. No venue page limit is assumed.']
     parts.append((root/'docs/learning-reference.md').read_text(encoding='utf-8'))
+    parts.append((root/'docs/model-instructor.md').read_text(encoding='utf-8'))
     audit=json.loads((root/'docs/contribution-audit.json').read_text(encoding='utf-8'))
     parts.append('# Contribution audit\n\n'+audit['scope'])
     for item in audit['items']:
@@ -31,7 +32,7 @@ def build(root):
         manifest['lessons'].append({k:lesson[k] for k in ['id','scope','source_hashes','coverage']})
     text='\n\n'.join(parts)+'\n'
     manifest['supplement_sha256_utf8_lf']=hashlib.sha256(text.encode()).hexdigest()
-    for f in ['docs/learning-reference.md','docs/contribution-audit.json']:
+    for f in ['docs/learning-reference.md','docs/model-instructor.md','docs/contribution-audit.json']:
         manifest.setdefault('shared_sources',{})[f]=hashlib.sha256((root/f).read_text(encoding='utf-8').encode()).hexdigest()
     audit_tex='\n\n'.join(r'\paragraph{'+tex(item['proposed'])+'} '+
         ' '.join(tex(item[k].rstrip('.'))+'.' for k in ['prior_work','difference','needed','observed','supported_claim'])

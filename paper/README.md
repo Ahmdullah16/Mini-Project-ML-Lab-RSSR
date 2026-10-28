@@ -33,3 +33,7 @@ These commands use the standard library for generation, pytest for tests, and no
 The project-wide [claim register](../docs/claim_evidence.json) retains measured/planned/unavailable statuses. New figures and the failure atlas must derive from compatible authorized evidence; synthetic fixtures must not be presented as real sensor outcomes. No frozen artifact is regenerated here.
 
 Build status 2026-10-26: desktop compiler returned success for the source hashes recorded in `reports/paper-build-validation.json`. Three targeted tests and PR24 CI40282443346 passed. Visual PDF review remains pending.
+
+## Supplied template update — 2026-10-28
+
+The four named IEEE files are now accessible in the supplied local folder; earlier unavailable-template notes are superseded. [Review and hashes](../reports/ieee-paper/evidence/supplied-template-review.json) record the examined conference guidance/class. Added actual7path architecture scope and a numerical conclusion checked against frozen records; updated source compiled. Latest PDF visual inspection is pending because the computer-use tool denied access to ChatGPT. The detailed supplement includes the shared model-instructor derivations; it remains a working source, not a final formatted report.
