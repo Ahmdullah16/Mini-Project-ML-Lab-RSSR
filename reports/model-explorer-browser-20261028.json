@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-28",
+  "local_source_commit": "68afcda",
+  "url": "http://127.0.0.1:8503",
+  "observed": [
+    "Model Explorer rendered all7cards and historical checkpoint selector in actual browser",
+    "1280x800: three-column cards with explicit unavailable training labels",
+    "390x844: cards stack vertically with readable wrapped text; inspected middle cards"
+  ],
+  "screenshots": [
+    {
+      "path": "C:\\Users\\DELL\\Documents\\Codex\\2026-10-18\\files-pasted-by-the-user-you\\work\\model-explorer-desktop-20261028.png",
+      "sha256": "94ec3221c8cdecaaf7b904073d48acd6158c01141b50a8339c6574d0b77d5ac2"
+    },
+    {
+      "path": "C:\\Users\\DELL\\Documents\\Codex\\2026-10-18\\files-pasted-by-the-user-you\\work\\model-explorer-phone-20261028.png",
+      "sha256": "d799bf684c655e41e7cd4f2a37ea838b2f1c5f6b84003cf9d6c49764e2118c86"
+    }
+  ],
+  "limitations": [
+    "Focused model-card visual smoke, not exhaustive all-section responsive accessibility audit.",
+    "No new local/public inference for the new registry models.",
+    "Public demo verification recorded separately in public-access-20261028.json."
+  ]
+}

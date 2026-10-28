@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-28",
+  "command": "python -m pytest tests/test_reflectance_job.py tests/test_surface_reflectance.py -q",
+  "exit_code": 0,
+  "passed": 36,
+  "seconds": 2.34,
+  "environment": {
+    "python": "3.12.14",
+    "rasterio": "1.5.2",
+    "numpy": "2.5.4"
+  },
+  "source_sha256": {
+    "src/rssr/reflectance_job.py": "203d722d9e9034b6a741dfc3093d5462dc253405d0c8c43c33bede445e822a1a",
+    "src/rssr/surface_reflectance.py": "f944b4576add25ce0b8d85f8792cd96afa387250f365b0211bdd908b24eb7365",
+    "src/rssr/cli.py": "8afc5011a9a8a3fa695da3b8ee7a6c36c32d7283363e7c8e4847ddbf4824dfa2",
+    "tests/test_reflectance_job.py": "27e0cdc6de1f791116bb801803067984dd312bcb3dae77123279d1c4d63c9113",
+    "tests/test_surface_reflectance.py": "f6562632ee611e7d4ac478a620a6ace1f756f38874d6f4121d95c70034fc00b5"
+  },
+  "executed_fixture_checks": {
+    "requested_window": [
+      1,
+      1,
+      3,
+      2
+    ],
+    "output_shape": [
+      2,
+      2,
+      3
+    ],
+    "output_dtype": "float32",
+    "output_crs": "EPSG:32643",
+    "output_transform": [
+      10,
+      0,
+      500010,
+      0,
+      -10,
+      2999990
+    ],
+    "expected_reflectance": 0.1,
+    "cli_plan_creates_output": false,
+    "cli_execute_creates_output": true
+  },
+  "limitations": [
+    "Synthetic local fixtures, not provider product validation.",
+    "No network, alignment resampling, atmospheric correction, training or held-out evaluation.",
+    "CLI test artifacts are temporary and not deployment assets.",
+    "Memory is estimated allowance, not measured peak."
+  ]
+}
