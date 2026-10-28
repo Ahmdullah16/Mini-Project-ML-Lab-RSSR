@@ -1,3 +1,5 @@
+Current acceptance index: [acceptance_matrix.md](acceptance_matrix.md). It supersedes stale absence/access statements below: M2/M6 now have six local bounded pilots; earlier public inference worked; latest deployment and restart remain unverified. The following historical table retains its original scope.
+
 # Submission readiness
 
 Assessment: 2026-10-26 (teaching/showcase rows updated; older row evidence retains its recorded scope). **Not submission-ready and not publication-ready.** Passed means the stated criterion was observed; failed means incomplete/unverified; blocked means an external prerequisite is missing. Stateless inference and durable research storage are separate requirements.

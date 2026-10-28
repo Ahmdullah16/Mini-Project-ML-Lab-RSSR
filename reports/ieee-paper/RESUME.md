@@ -23,3 +23,7 @@ Source audit generation and --check passed;6 audit/evidence tests passed0.29s wi
 ## Superseding instructor milestone — 2026-10-28
 
 Exact IEEE files are now supplied and reviewed: evidence/supplied-template-review.json. Prior template-transfer gate is resolved. Current manuscript includes actual architecture scope and source-checked numerical conclusion and compiles; latest visual review blocked by computer-use access denial. Native site removes project-GitHub/notebook links, adds executable MP01 numerical lab and7accurate block diagrams/shared model derivations. reports/instructor-site-validation.json has actual checks. Full40native lesson acceptance, advanced models/training, final report typesetting, public deployment and industry/novelty validation remain open.
+
+## Publication checkpoint — instructor milestone
+
+Local implementation7400a2d onfeat/mp27-attention; published draft PR37 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/37 onfeat/self-contained-instructor, head0c1dacdde28c1d6c58fb86cae0128ed154b863dc. Remote treed00cefa7257987b8b48a81d1a3ad364522d75ba7 exactly matches local. Attached. CI40694075637 IN_PROGRESS at last check, no success inferred. No automatic merge or deployment verification. This checkpoint follow-up is local; carry into next milestone. Next: checkCI/main, implement MP02 native instructor using its verified numerical helpers, continue individual40lesson acceptance and report/PDF/deployment checks.

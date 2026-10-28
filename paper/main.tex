@@ -46,7 +46,7 @@ M6 & T then A &0\\ M7 & Parallel C/T, projection, A &15\\\bottomrule
 \end{tabular}
 \end{table}
 
-Parallel paths concatenate two $d$-channel tensors and project them with a $1\times1$ convolution. Parameter counts depend on the exact band count, width and scale. Global channel pooling makes tiled feature attention context-dependent. M2 and M6 have no verified trained binding. Within each run, checkpoint selection minimizes validation L1; the later frozen protocol selects among runs using validation PSNR. These are distinct selection stages.
+Parallel paths concatenate two $d$-channel tensors and project them with a $1\times1$ convolution. Parameter counts depend on the exact band count, width and scale. Global channel pooling makes tiled feature attention context-dependent. The historical binding audit contains no M2 or M6 weights. A subsequent, separate development-only pilot trained each at width 16 for 100 Adam steps (learning rate $10^{-3}$, batch size 4), using seeds 17, 23 and 41 on existing RGB training tiles. All six selected checkpoints were reloaded and evaluated on validation tiles only; no frozen test pixels were accessed. These native $2\times$ pilots are not parameter/MAC matched and do not resolve the failed M2 budget preflight or establish geographic generalization. Within each run, checkpoint selection minimizes validation L1; the later frozen protocol selects among runs using validation PSNR. These are distinct selection stages.
 
 \section{Metric definitions and aggregation}
 For valid, aligned scalar samples $x_i$ and predictions $\hat{x}_i$, define
