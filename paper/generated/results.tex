@@ -1,7 +1,7 @@
 \begin{table}[t]
 \centering\small
 \caption{Early pilot: one validation scene, three seeds; SD is seed variability, not geographic uncertainty.}
-\resizebox{\columnwidth}{!}{%
+\sbox{\resulttablebox}{%
 \begin{tabular}{lrrr}
 \toprule
 Variant & Parameters & PSNR (dB) & SD (dB) \\
@@ -17,11 +17,12 @@ hybrid\_gate & 11467 & 45.2122 & 0.0953 \\
 bicubic & -- & 45.8104 & -- \\
 \bottomrule
 \end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
 \end{table}
 \begin{table}[t]
 \centering\small
 \caption{Later development: mean paired PSNR gain over bicubic across four validation scenes, then three seeds. SD across seeds is not a scene confidence interval.}
-\resizebox{\columnwidth}{!}{%
+\sbox{\resulttablebox}{%
 \begin{tabular}{lrr}
 \toprule
 Model & Mean $\Delta$PSNR (dB) & Seed SD (dB) \\
@@ -30,11 +31,12 @@ cnn & 1.5709 & 0.2818 \\
 hybrid & 1.3337 & 0.2737 \\
 \bottomrule
 \end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
 \end{table}
 \begin{table}[t]
 \centering\small
 \caption{Frozen test, 3 bands: one scene / sixteen tiles. Compare only within this band protocol; official SwinIR has unmatched pretraining.}
-\resizebox{\columnwidth}{!}{%
+\sbox{\resulttablebox}{%
 \begin{tabular}{lrr}
 \toprule
 Model & PSNR (dB) & SSIM \\
@@ -47,11 +49,12 @@ nearest & 47.6379 & 0.9782 \\
 official\_swinir & 48.9897 & 0.9849 \\
 \bottomrule
 \end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
 \end{table}
 \begin{table}[t]
 \centering\small
 \caption{Frozen test, 4 bands: one scene / sixteen tiles. Compare only within this band protocol; official SwinIR has unmatched pretraining.}
-\resizebox{\columnwidth}{!}{%
+\sbox{\resulttablebox}{%
 \begin{tabular}{lrr}
 \toprule
 Model & PSNR (dB) & SSIM \\
@@ -64,4 +67,5 @@ hybrid & 46.2396 & 0.9789 \\
 nearest & 43.8585 & 0.9635 \\
 \bottomrule
 \end{tabular}}
+\ifdim\wd\resulttablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi
 \end{table}

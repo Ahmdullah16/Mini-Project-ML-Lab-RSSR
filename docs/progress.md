@@ -242,3 +242,11 @@ Added plan-first `rssr prepare-reflectance` for hash-pinned local GeoTIFF inputs
 ## Lesson status reconciliation — 2026-10-28
 
 Corrected stale MP35 scope using its existing README/VALIDATION (12 tests and four real-kernel cells previously recorded); no lesson rerun. Website now uses recorded expanded scopes for MP36–40 and preserves scientific pending criteria and learner-mastery limits. Nested report figures including MP35 map and MP40 robustness SVG are discoverable. Three evidence tests and seven-section network-blocked AppTest passed; 40 folder contracts, 940 links and seven claim records passed. Evidence: [validation](../reports/lesson-status-validation.json). Frozen reports untouched.
+
+## Native learning and report sources — 2026-10-28
+
+Latest [brief](onsite-report-completion-brief.md) saved. Existing40lesson prose now appears on-site with shared equations, interactive scale arithmetic and explicit coverage limitations; no code-cell execution. Shared generator creates paper/supplement.md and the paper contribution audit from the same sources. Initial audit makes no novelty claim.47 tests,40lesson AppTest selections,7section and7model checks passed; paper compiles. Initial4PDF pages visually reviewed; shrink-only table correction compiled, final reinspection pending. [Evidence](../reports/onsite-learning-validation.json). Full per-lesson/7model derivations, parameter audit, new diagrams and scientific acceptance remain unfinished. No training or frozen evaluation rerun.
+
+## IEEE evidence-audit workspace — 2026-10-28
+
+Saved [master brief](ieee-reconstruction-brief.md); created [component/claim/implementation audit](../reports/ieee-paper/README.md) and executable source/citation/protocol checker. Six tests passed0.29s after moving pytest temp into workspace;958links and7claim records passed. Existing source preserved pending explicit supplied-reference comparison gate. No new scientific measurements, template-compliance assertion or final PDF. Correctly distinguishes within-run minimum-L1 checkpoint selection from later validation-PSNR run selection.

@@ -159,6 +159,14 @@ elif section=='Results':
 elif section=='Methodology & Data':
     from model_explorer_ui import render as render_models
     render_models(ROOT)
+    with st.expander('Contribution audit · what the evidence supports'):
+        audit=json.loads((ROOT/'docs/contribution-audit.json').read_text(encoding='utf-8'))
+        st.caption(audit['scope'])
+        for item in audit['items']:
+            st.subheader(item['proposed'])
+            for field in ['prior_work','difference','needed','observed','supported_claim']:
+                st.markdown('**'+field.replace('_',' ').title()+':** '+item[field])
+            st.markdown(' · '.join(f'[Primary source {i+1}]({url})' for i,url in enumerate(item['references'])))
     st.divider()
     st.title('From geographic split to frozen test')
     st.markdown('**Source scenes → geographic split → valid patches → synthetic LR → training / validation → frozen selection → held-out evaluation.**')
@@ -178,6 +186,8 @@ elif section=='Mini-projects':
     st.title('Forty projects. Nine connected stages.')
     st.caption('Expanded and executed does not imply every criterion satisfied or mastery assessed. MP20 retains a missing independent SRCNN held-out table.')
     query=st.text_input('Find a project',placeholder='MP26, attention, metrics…');found=False
+    from learning_ui import render as render_learning
+    render_learning(ROOT,[p for p in index['projects'] if query.lower() in (p['id']+' '+p['title']+' '+p['objective']).lower()])
     for stage in dict.fromkeys(p['stage'] for p in index['projects']):
         matches=[p for p in index['projects'] if p['stage']==stage and query.lower() in (p['id']+' '+p['title']+' '+p['objective']).lower()]
         if not matches:continue
@@ -202,7 +212,7 @@ else:
     st.download_button('Download results index JSON',json.dumps(index,indent=2,allow_nan=False),'rssr-evidence-index.json','application/json')
     st.download_button('Download all indexed metrics CSV',pd.DataFrame(index['rows']).to_csv(index=False),'rssr-metrics.csv','text/csv')
     st.download_button('Download artifact manifest',json.dumps(index['artifacts'],indent=2),'rssr-artifacts.json','application/json')
-    for path in ['docs/examiner-demo.md','docs/frozen-reproduction.md','docs/setup.md','references.bib','docs/submission_readiness.md']:download_artifact(path)
+    for path in ['paper/supplement.md','reports/learning-content-manifest.json','docs/contribution-audit.json','docs/examiner-demo.md','docs/frozen-reproduction.md','docs/setup.md','references.bib','docs/submission_readiness.md']:download_artifact(path)
     st.warning('Pending: '+', '.join(index['pending_artifacts'])+'. Recorded research drafts and figures remain in Results → Artifact library.')
     st.code('python -m pip install -r app/requirements.txt\npython scripts/check_model_catalog.py\npython -m streamlit run app/streamlit_app.py',language='bash')
     st.write('Follow the research setup guide for dataset rebuilding. Original checkpoint and tile hashes remain authoritative. Public app inputs, results and caches are temporary; live external durability needs a separately configured and verified account.')

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-28",
+  "scope": "Initial contribution audit; closest verified references among reviewed sources, not an exhaustive novelty search",
+  "items": [
+    {
+      "proposed": "Combining convolution, feature attention and Transformers improves SR",
+      "prior_work": "RCAN: channel reweighting; SwinIR: residual Transformer restoration",
+      "references": ["https://arxiv.org/abs/1807.02758", "https://arxiv.org/abs/2108.10257"],
+      "difference": "Compact cat-v1 feature paths and explicit seven-way implementation registry, rather than a demonstrated new operator",
+      "needed": "Component removal, matched complete budgets, identical data and multiple seeds with independent-region uncertainty",
+      "evidence": ["reports/historical-architecture-bindings.json", "reports/architecture-budget-preflight.json"],
+      "observed": "39 historical bindings across five IDs; M2/M6 lack trained bindings. Partial-cost search finds no eligible M2 width.",
+      "supported_claim": "Implementation and artifact-compatibility contribution only; architectural novelty and seven-model superiority are not established"
+    },
+    {
+      "proposed": "Learned residual reliability produces a reconstruction gain",
+      "prior_work": "Residual reconstruction in SwinIR; project controls include fixed residual attenuation",
+      "references": ["https://arxiv.org/abs/2108.10257"],
+      "difference": "Explicitly testing whether a learned gate adds benefit beyond simply reducing residual magnitude",
+      "needed": "Gain and offset controls, component-removal ablations, matched budgets and independent-scene replication before making a reliability claim",
+      "evidence": ["reports/ablation-pilot-runs.json", "reports/paper-evidence.json"],
+      "observed": "Existing pilot interpretation admits attenuation as an explanation; paper tables preserve all recorded pilot rows and seed dispersion.",
+      "supported_claim": "Negative/inconclusive pilot finding; learned reliability is not established"
+    },
+    {
+      "proposed": "Large multiscale output demonstrates recovered satellite detail",
+      "prior_work": "SwinIR restoration benchmarks require reference-based evaluation, not output-size evidence",
+      "references": ["https://arxiv.org/abs/2108.10257"],
+      "difference": "Exact-dimension cascades, resource preflight and disk-backed export are engineering capabilities",
+      "needed": "Trained representative cascade/seam tests plus calibrated aligned independent cross-sensor references; spectral and downstream evidence where valid",
+      "evidence": ["reports/architecture-seam-smoke.json", "reports/reflectance-job-validation.json"],
+      "observed": "Random-weight native-scale seam checks and synthetic reflectance conversion/export tests; these are not quality or transfer experiments.",
+      "supported_claim": "Bounded implementation evidence only; no measured physical resolving-power or cross-sensor improvement"
+    }
+  ]
+}

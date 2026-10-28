@@ -1,0 +1,319 @@
+{
+  "schema": "ieee-source-audit-v1",
+  "scope": "Recorded-source and citation integrity, not full scientific or bibliography verification",
+  "source_sha256_utf8_lf": {
+    "paper/main.tex": "105582494958fcf41ce73efe0ff436433acd78406815743ff974d3dbcd54441c",
+    "paper/generated/results.tex": "0696f2506b8cb569375f98afc0a9bc9c045acd9282c425a34bdfd6806b2eeaf7",
+    "paper/generated/interpretation.tex": "6fe1975845d615bc33e7067a5e1049e52e01a6fb49286c69d6bd5492e8e80af5",
+    "paper/generated/contribution-audit.tex": "bb42c492d051a9f59b11d5b6a156f956c01aec2402de09ec2bc823ec277ed2af",
+    "paper/references.bib": "0ee2a484eda497570bf92cd14d801a0f9e551347e63981b41faf187722f48639",
+    "references.bib": "0ee2a484eda497570bf92cd14d801a0f9e551347e63981b41faf187722f48639",
+    "reports/paper-evidence.json": "7ec2dcfc4d8eba35494ad7e0f2ccfba259b3ba4508a12428cf1108d6fc9e2074",
+    "reports/final-heldout.json": "5c92d4d172e41f6798ed4668f504ec89d0590b12c2580620ca1b769eb27f56b9",
+    "configs/final-evaluation.json": "74bd076065eb9a034a5281649bba2313b7a0885d6f25232cb13ae1d259e0e0a9",
+    "reports/historical-architecture-bindings.json": "5df69f04b9814f3d352ddb0f819dc0fc26f62c80ad9357080eb2574a75a8959c",
+    "src/rssr/models.py": "722986b37ab67cd39465617dbb9b689612e1822c81dd2c451199e822c8897c6f",
+    "src/rssr/architecture_registry.py": "536e7cd39a6480fc22c736faa385d145af9c3d7d69f6af02a2131c12176b50e1",
+    "src/rssr/experiment.py": "d8c5ea6e58ab63dfe2ac83b803e289fd1aed05c0061feb597c1e811aa783f839",
+    "reports/architecture-budget-preflight.json": "4ae7463c15f7218802fe74da1469b90aacf122793549e41423899379aa847c4d",
+    "reports/reflectance-job-validation.json": "90e9f7c2e6448cee30a8102afbfb20386ceaa001cff343b59ff20e78752bd047",
+    "reports/public-access-20261028.json": "4667ad77a3002f5df6c6cf8866989fd79f612699bcc95d600b05ed39aed2c22d"
+  },
+  "citation_keys_resolved": [
+    "cornebise2022worldstrat",
+    "dong2014srcnn",
+    "liang2021swinir",
+    "michel2022sen2venus",
+    "michel2023correction",
+    "zhang2018rcan"
+  ],
+  "frozen_protocol_hash": "1b2e0f441cdca1810e5f108682d34c4d593586696690d18b44c9507e2051b418",
+  "measured": [
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/0",
+      "bands": 4,
+      "model": "attention",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 46.61039612754235,
+        "ssim": 0.9806664096960139,
+        "sam_rad": 0.014642199301198618,
+        "rmse_band_0": 0.00441506552493215,
+        "rmse_band_1": 0.003049095192133063,
+        "rmse_band_2": 0.0022223253050925947,
+        "rmse_band_3": 0.008246372063069685
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/1",
+      "bands": 4,
+      "model": "bicubic",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 44.76438198186202,
+        "ssim": 0.9689368649709161,
+        "sam_rad": 0.017394209529057986,
+        "rmse_band_0": 0.005502747030298134,
+        "rmse_band_1": 0.0038116149426075537,
+        "rmse_band_2": 0.002760864670827135,
+        "rmse_band_3": 0.010263152476285798
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/2",
+      "bands": 4,
+      "model": "bilinear",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 43.65501460779061,
+        "ssim": 0.9600262893700267,
+        "sam_rad": 0.019897611181241295,
+        "rmse_band_0": 0.006251598218093501,
+        "rmse_band_1": 0.004329081584509854,
+        "rmse_band_2": 0.0031518590937968474,
+        "rmse_band_3": 0.011636883345624892
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/3",
+      "bands": 4,
+      "model": "cnn",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 46.458980557477936,
+        "ssim": 0.9800813183896947,
+        "sam_rad": 0.014624098913544244,
+        "rmse_band_0": 0.004424027911716604,
+        "rmse_band_1": 0.003051711236037371,
+        "rmse_band_2": 0.0022122085115229596,
+        "rmse_band_3": 0.008451044025287293
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/4",
+      "bands": 4,
+      "model": "hybrid",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 46.23964825114393,
+        "ssim": 0.9788706447120977,
+        "sam_rad": 0.015390821811703008,
+        "rmse_band_0": 0.004588940285456594,
+        "rmse_band_1": 0.003144891950686731,
+        "rmse_band_2": 0.0022991479075197808,
+        "rmse_band_3": 0.008638517987375631
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/5",
+      "bands": 4,
+      "model": "nearest",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 43.85848706532964,
+        "ssim": 0.9635437629633047,
+        "sam_rad": 0.019171477397043613,
+        "rmse_band_0": 0.006070879323199291,
+        "rmse_band_1": 0.004200219188545249,
+        "rmse_band_2": 0.0030564317008063787,
+        "rmse_band_3": 0.01128276769321959
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/6",
+      "bands": 3,
+      "model": "bicubic",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 48.51827441928921,
+        "ssim": 0.9817471643099488,
+        "sam_rad": 0.01605259971061596,
+        "rmse_band_0": 0.005502747030298134,
+        "rmse_band_1": 0.0038116149426075537,
+        "rmse_band_2": 0.002760864670827135
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/7",
+      "bands": 3,
+      "model": "bilinear",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 47.41424529496561,
+        "ssim": 0.9765008278894128,
+        "sam_rad": 0.018147505516403026,
+        "rmse_band_0": 0.006251598218093501,
+        "rmse_band_1": 0.004329081584509854,
+        "rmse_band_2": 0.0031518590937968474
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/8",
+      "bands": 3,
+      "model": "cnn",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 50.261407288105204,
+        "ssim": 0.988360623677574,
+        "sam_rad": 0.014631710392466527,
+        "rmse_band_0": 0.004438102839292916,
+        "rmse_band_1": 0.0031155596869838218,
+        "rmse_band_2": 0.002214365132695836
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/9",
+      "bands": 3,
+      "model": "hybrid",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 50.24594942532963,
+        "ssim": 0.9883415401824337,
+        "sam_rad": 0.01490009910800426,
+        "rmse_band_0": 0.004445050280887333,
+        "rmse_band_1": 0.003116047071359351,
+        "rmse_band_2": 0.002227997095267432
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/10",
+      "bands": 3,
+      "model": "nearest",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 47.63789058577291,
+        "ssim": 0.978194033110036,
+        "sam_rad": 0.01738019887274278,
+        "rmse_band_0": 0.006070879323199291,
+        "rmse_band_1": 0.004200219188545249,
+        "rmse_band_2": 0.0030564317008063787
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    },
+    {
+      "category": "executed_measured",
+      "source": "reports/final-heldout.json",
+      "pointer": "/summary/11",
+      "bands": 3,
+      "model": "official_swinir",
+      "scenes": 1,
+      "tiles": 16,
+      "metrics": {
+        "psnr": 48.98966276703189,
+        "ssim": 0.9849111140638542,
+        "sam_rad": 0.016342938745443753,
+        "rmse_band_0": 0.005045634549030347,
+        "rmse_band_1": 0.0035349816284832992,
+        "rmse_band_2": 0.002549024310758453
+      },
+      "limitation": "Mean tile scores in one held-out scene; no geographic CI; normalized DN, not calibrated reflectance"
+    }
+  ],
+  "models": [
+    {
+      "id": "cat-v1/M1",
+      "historical_bindings": 9,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    },
+    {
+      "id": "cat-v1/M2",
+      "historical_bindings": 0,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    },
+    {
+      "id": "cat-v1/M3",
+      "historical_bindings": 3,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    },
+    {
+      "id": "cat-v1/M4",
+      "historical_bindings": 6,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    },
+    {
+      "id": "cat-v1/M5",
+      "historical_bindings": 6,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    },
+    {
+      "id": "cat-v1/M6",
+      "historical_bindings": 0,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    },
+    {
+      "id": "cat-v1/M7",
+      "historical_bindings": 15,
+      "category": "implemented_tested",
+      "limitation": "Binding compatibility does not imply all configurations/scales trained or scientifically evaluated"
+    }
+  ],
+  "metric_units": {
+    "psnr": "dB, fixed range1",
+    "ssim": "dimensionless",
+    "sam_rad": "radians; normalized-DN descriptor, not physical spectral validation",
+    "rmse_band_*": "normalized DN; per-band tile-score scene mean"
+  },
+  "categories": {
+    "executed_measured": "Historical observations with protocol/units",
+    "implemented_tested": "Software checks, not quality evidence",
+    "planned": "Unexecuted experiments/formatting tasks",
+    "unavailable": "Missing reference files, authors or scientific evidence"
+  },
+  "gaps": [
+    "Supplied conference template and HOWTO comparison unavailable",
+    "M2/M6 training and seven-model matched-budget geographic evaluation absent",
+    "New manuscript reconstruction paused at supplied-reference gate",
+    "Citation-key resolution is not metadata/full-text verification",
+    "Latest corrected PDF visual reinspection pending"
+  ],
+  "training_selection_note": "Within-run best checkpoint uses minimum validation L1 (experiment.py); final-evaluation.json selects among seeds/configurations by development PSNR. These are distinct selection stages."
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-28",
+  "scope": "Native lesson prose migration, initial contribution audit and working report sources; not new research",
+  "source_hashes_utf8_lf": {
+    "src/rssr/learning_content.py": "a3c4ecb9a06170717f7679061e8820f5319b9cff719c84915e21b54b7630eea1",
+    "app/learning_ui.py": "357bb7b299236eac08a549d00edc4142e285486a08270f10b0334f144cbdfde6",
+    "app/showcase.py": "f146d69eff319c2b4c00e0685face3bea91798bff83734951c5509e2640d8cdb",
+    "docs/learning-reference.md": "1842e1e5f2a29a5146ce98d7fdc98119d506d71b22808d26a8ae166dd88d83c0",
+    "docs/contribution-audit.json": "9fd038aeb55064c7647b0e450f517cea68aeb5cde42a4afdc6219e3ba4a8a54e",
+    "scripts/build_learning_supplement.py": "185c7002b479b65ad8a85ffe69f1fdd2fd992d18f2c7eb9e20eeb8b1d5efdd49",
+    "paper/main.tex": "105582494958fcf41ce73efe0ff436433acd78406815743ff974d3dbcd54441c",
+    "paper/generated/results.tex": "0696f2506b8cb569375f98afc0a9bc9c045acd9282c425a34bdfd6806b2eeaf7",
+    "paper/generated/contribution-audit.tex": "bb42c492d051a9f59b11d5b6a156f956c01aec2402de09ec2bc823ec277ed2af"
+  },
+  "executed": {
+    "targeted_pytest": "47 passed in1.85s",
+    "lesson_apptest": "40 selections; no code cells or backend URL downloads; rectangular256x128x8 and maximum1024x1024x64 arithmetic",
+    "showcase_apptest": "seven sections, empty states passed",
+    "model_apptest": "seven selections and missing-checkpoint states passed",
+    "generators": "paper evidence and40-lesson supplement --check passed",
+    "structure": "943 relative links;40 folder contracts;7 claim records passed",
+    "paper_compile": "success after table sizing and audit sentence corrections"
+  },
+  "visual_review": {
+    "initial_pdf": "all4pages rendered with pdftoppm and inspected; oversized table scaling and orphan final reference found",
+    "initial_pdf_sha256": "197bf86e1e8bc1ac4fbaa810ce9775a8bd32846e582e8aaf7054026e5a1677e7",
+    "correction": "conditional shrink-only table scaling and audit punctuation applied; recompilation passed",
+    "final_reinspection": "pending; UI interaction guard detected user input during preview refresh. No final layout approval claimed."
+  },
+  "not_verified": [
+    "Final per-lesson derivation/parameter/reference/diagram acceptance",
+    "Complete seven-model training derivations",
+    "Final supplement PDF typesetting",
+    "Current deployment of these changes",
+    "Provided Library IEEE template contents",
+    "Novel architectural or scientific improvement"
+  ],
+  "source_verification": {
+    "RCAN": "arXiv1807.02758 abstract reviewed",
+    "SwinIR": "arXiv2108.10257 abstract reviewed",
+    "HAT": "CVF request403; no new HAT claims added"
+  }
+}

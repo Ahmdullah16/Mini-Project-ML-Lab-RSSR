@@ -1,0 +1,410 @@
+{
+  "kind": "derived teaching prose, not executed experiments",
+  "lessons": [
+    {
+      "id": "MP01",
+      "scope": "Original MP01 preserved",
+      "source_hashes": {
+        "stage_01_python_numpy/MP01_digital_image_explorer/README.md": "6dda8a061335c26638649c328f461fa9c6f84286719cca07f89466dcff04c0eb",
+        "stage_01_python_numpy/MP01_digital_image_explorer/digital_image_explorer.ipynb": "c2c525624e4ed80f995af22476ae45eea2947301df7c925a0cc969325016290f",
+        "stage_01_python_numpy/MP01_digital_image_explorer/VALIDATION.md": "09af825526ad79bc2f51cbcf99a9e23a817dfdb64f983328532764bc31f333cf"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP02",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_01_python_numpy/MP02_numpy_image_laboratory/README.md": "80a93264b213d7982aab9ed143b43be8c8572e7662875223dcdd229101ab7f65",
+        "stage_01_python_numpy/MP02_numpy_image_laboratory/numpy_image_laboratory.ipynb": "6e087a2ae3124cb99b6822d3626563139cf2d09819db885015a4a0027d5f4ec3",
+        "stage_01_python_numpy/MP02_numpy_image_laboratory/VALIDATION.md": "c441b528adf33301d9a2b3edcab22e6e26beaf721f1f9882c3a7f3597279f4f5"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP03",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_01_python_numpy/MP03_image_resizing_laboratory/README.md": "317540d2f319efec65998bfb892b486416a7e695f34f37fe1ce211439bfb0a0a",
+        "stage_01_python_numpy/MP03_image_resizing_laboratory/image_resizing_laboratory.ipynb": "0680e8f68a41faaa31017b81d63ff5b70dd4b656c10fff2176f8b1445f1fb0fe",
+        "stage_01_python_numpy/MP03_image_resizing_laboratory/VALIDATION.md": "262c6b6a91e6cedfb6dd56f43d759e632699d882138bbba5f90653c88e2181ae"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP04",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_01_python_numpy/MP04_image_comparison_tool/README.md": "34a99eb8fb08c6a8cb363388d52ee6f8f758e24fa81d678a429297d3b2720c28",
+        "stage_01_python_numpy/MP04_image_comparison_tool/image_comparison_tool.ipynb": "6f5de1dd086e847164b9d5161f5c462e995d6436a4fd9b70516eac3c5537b5be",
+        "stage_01_python_numpy/MP04_image_comparison_tool/VALIDATION.md": "2d5d3f9d2f0622868b971c72469283deedd0a434fdebc71ac1817bc882dbad17"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP05",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_02_image_processing/MP05_gaussian_blur_simulator/README.md": "427c34fe97a6d41811521b6022557be2f5bc0bfd2b8f1ecc271b438155df4131",
+        "stage_02_image_processing/MP05_gaussian_blur_simulator/gaussian_blur_simulator.ipynb": "6af619e847694fe2040eaab06d965f327caed38eacee657b8a20d199bd4cc2ab",
+        "stage_02_image_processing/MP05_gaussian_blur_simulator/VALIDATION.md": "a42c110915dcc6738956339892b870f7864d54cf5b470c81f96c3f7f12c44c9c"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP06",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_02_image_processing/MP06_low_resolution_image_generator/README.md": "cb815c36f36f409784517b3d9e74e59dca03cbb2388a7281b3c03010bcf2af56",
+        "stage_02_image_processing/MP06_low_resolution_image_generator/low_resolution_image_generator.ipynb": "e55812cc7dc9dc5577ef877488ff15370a1e52dd2811b7fec75b4a06b259b928",
+        "stage_02_image_processing/MP06_low_resolution_image_generator/VALIDATION.md": "9063fe3aae1fa9914ed02e42712460c4e0f03e57fbe0ed96ebca91e3d592d6a6"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP07",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_02_image_processing/MP07_synthetic_degradation_laboratory/README.md": "9698e422ebe710b7f943a325e64edd16a514ae007e74ab23988deac490c79f09",
+        "stage_02_image_processing/MP07_synthetic_degradation_laboratory/synthetic_degradation_laboratory.ipynb": "96fe0017801969f1bdbd9fc9f19849cbaa4fe57a3e11d076e8122084e7611fbe",
+        "stage_02_image_processing/MP07_synthetic_degradation_laboratory/VALIDATION.md": "2fa0d154830a143a9f47178287e66e06a88c0bfb1800cb5b23b4c933df7776db"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP08",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_02_image_processing/MP08_frequency_domain_image_explorer/README.md": "942974633b9cc26720c966806ba3912641a556c1be29b51d8c7f8aa6cd83552d",
+        "stage_02_image_processing/MP08_frequency_domain_image_explorer/frequency_domain_image_explorer.ipynb": "3bab81e25955fe4916a78329181037c84c25597da91b9922654b6bfa2ce5f769",
+        "stage_02_image_processing/MP08_frequency_domain_image_explorer/VALIDATION.md": "62df71851949ea0e3506539a8e938afd065c6af9ed80c16f3bf8210b3113b1a6"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP09",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_03_metrics/MP09_mse_and_psnr_from_scratch/README.md": "c8646ffc6591602b8196be556a89f3c189f635d3b580e3e7c2155d3aab288dea",
+        "stage_03_metrics/MP09_mse_and_psnr_from_scratch/mse_and_psnr_from_scratch.ipynb": "7e15d72602201d67cb086e0b393c7fa333d4a3488ad7e1c70f0315723b029318",
+        "stage_03_metrics/MP09_mse_and_psnr_from_scratch/VALIDATION.md": "c3dc79d590c3a280a96d4e8017e30228cb8b7117688b4173eb041d6cd4ddb7d0"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP10",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_03_metrics/MP10_ssim_evaluation_tool/README.md": "ca9c961ade1bf9307c7ee71b2a6ee2690b8a416715ef84c298849327693708c5",
+        "stage_03_metrics/MP10_ssim_evaluation_tool/ssim_evaluation_tool.ipynb": "8ae45676eae50420f26cc2a6db5ba22e1ea02fd3a2cbafdb71559394cad05159",
+        "stage_03_metrics/MP10_ssim_evaluation_tool/VALIDATION.md": "b77040a5bf075ac24bd6ef3ddb5f5639cb99b3d97542435f77a6d248beb52e9c"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP11",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/README.md": "4649db92ee06a18a677832291d99de09086acc3dce5a43bb22c668847d9f78d4",
+        "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/super_resolution_evaluation_dashboard.ipynb": "6e6cf3a168f3e81413bee8459b195defdfae9405ff6e5198a3c76f13ae801eac",
+        "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/VALIDATION.md": "ef5cb783f60d5e66cc7e28e39101a4539e39f9beac73ba2e6d4ea63d0ec93d59"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP12",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_04_math_pytorch/MP12_linear_algebra_visualizer/README.md": "4247993d1509ec654066ddd7cf49d0597ece5aad3243116696ebda3767718404",
+        "stage_04_math_pytorch/MP12_linear_algebra_visualizer/linear_algebra_visualizer.ipynb": "1945ae4bf1b27adf436937bfbe6cf7d4cf97faa20354aa4d5760b7e77479cbb5",
+        "stage_04_math_pytorch/MP12_linear_algebra_visualizer/VALIDATION.md": "df8b9c45e50b67bcc5c1deae78d49a9ac8934b38aa5b1bbb8293b5059406c99c"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP13",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/README.md": "2436f7731714480acd96c747538e1ba87b133aadbd9125280c356ca43b2bade9",
+        "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/gradient_descent_from_scratch.ipynb": "530f99e9c5483b6e06c608a620e3f8cf7f815bfc44de3e962dd37fda532e37f9",
+        "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/VALIDATION.md": "b398723c3c050fc7ea0d0471e6640b20b7970d4f549cc07aa7e3c07e2d00dead"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP14",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_04_math_pytorch/MP14_neural_network_from_scratch/README.md": "95c868c726554c60fc218e383d1a8b91eb019f65252d87dc24160094316d8119",
+        "stage_04_math_pytorch/MP14_neural_network_from_scratch/neural_network_from_scratch.ipynb": "76148f08c47e8cb70d994ee3746ae98b083a69cb5a7566d9f20fb07942b5b81e",
+        "stage_04_math_pytorch/MP14_neural_network_from_scratch/VALIDATION.md": "79c10e3a79e55ded61190ec05408463ab87ee46b8cf53c974adb4bbc35c0b7dd"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP15",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_04_math_pytorch/MP15_first_pytorch_neural_network/README.md": "46298747aa8c6f59c85aea24526ddbabb4198c75c513944799970e37754ab411",
+        "stage_04_math_pytorch/MP15_first_pytorch_neural_network/first_pytorch_neural_network.ipynb": "a36a02ea3b0891aa8c31b872fd26fb76b7d4cdeede2f1eb8d4274a1e399b8314",
+        "stage_04_math_pytorch/MP15_first_pytorch_neural_network/VALIDATION.md": "e4343cde191cfa7d691d5700a76aa36dae9dc207f8b0c7b3060943bb6c98cd56"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP16",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_04_math_pytorch/MP16_reusable_training_pipeline/README.md": "d5323f863329cd7222df518251e55b378f6f30e367f851b82594ee595898d303",
+        "stage_04_math_pytorch/MP16_reusable_training_pipeline/reusable_training_pipeline.ipynb": "b4730fcabf9173a54322d584a44f8aa119aad7763c355a134d85e2f6a1639b5b",
+        "stage_04_math_pytorch/MP16_reusable_training_pipeline/VALIDATION.md": "fb512f9dc8d68e0ee80fbcc365b1f9df72309298cfdbe882818b85b74546e2cd"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP17",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_05_cnn_sr/MP17_convolution_playground/README.md": "7d50518d4788af738b169987d345566bf7e35cfbe720d38884a6f561f76b2b26",
+        "stage_05_cnn_sr/MP17_convolution_playground/convolution_playground.ipynb": "d787e59e8a8ceb55149b2dba27b610ba9e0116702bd59f3b8d3dc162dff0336f",
+        "stage_05_cnn_sr/MP17_convolution_playground/VALIDATION.md": "7e6a49af7114896e5d8b567d21de64b5adecc993b05ebcd32c45321a8774f327"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP18",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/README.md": "0d99ba0e16a5090bb24c72138eec41f263ac7402bbdc59f3db61603bf0be1399",
+        "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/cnn_edge_detection_laboratory.ipynb": "7b42221660b624cfab8fbf3f5c065243cd1d400d1599aad79932e07f0623ef9f",
+        "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/VALIDATION.md": "6fa9fca4a9308f7d23e9d941497108df3f6857ee6e33f6e82c97c346185fa2f7"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP19",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_05_cnn_sr/MP19_cnn_image_reconstruction/README.md": "8c741ec60b60ca87d1e2c0b2e985aa0dc0ea09452ea8572ebb2a8c6096514544",
+        "stage_05_cnn_sr/MP19_cnn_image_reconstruction/cnn_image_reconstruction.ipynb": "24a85cbfba75bd30c9a74118a1c82208943e34a65c68ce4760249572bdc1722d",
+        "stage_05_cnn_sr/MP19_cnn_image_reconstruction/VALIDATION.md": "176ee53090ed32d6f91dd478cb077fb19441a677b16a7ce1b450da55ab4be396"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP20",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_05_cnn_sr/MP20_srcnn_implementation/README.md": "79e620386bd2821b8b606e4aea07b9d772974f0b1e802f2a1da6501bd6bad24b",
+        "stage_05_cnn_sr/MP20_srcnn_implementation/srcnn_implementation.ipynb": "d0f40e85cc86aced82769f58afe9f5e5711d7a467fd5bf457ee8eee1e2feffd1",
+        "stage_05_cnn_sr/MP20_srcnn_implementation/VALIDATION.md": "102fd1bd66f058e0db5c5564add18c3ffb321fdcc09a3d4cbf2c7b1f9502d15c"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP21",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/README.md": "0a204ab589c785effc175ba1415cc977f93527244c24b19d15c67a7931841071",
+        "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/residual_cnn_super_resolution.ipynb": "f0634303a761932cda2e0adc6e23fd54889ec6f5600f6abaabe1b082592dfb8a",
+        "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/VALIDATION.md": "46456d0e2089ebc74f91b8c4e967d9166e77f495e807f14fc14851fca1e38dfc"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP22",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/README.md": "6524a455697e31cc2f7ca02d9fd6f48084fca18b6e0ece633eaed0e16a0993b6",
+        "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/upsampling_architecture_comparison.ipynb": "d3f53656455838c0f29e8184adc1cfcf604d13218a0ca5c6f4791f8b8b44dd27",
+        "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/VALIDATION.md": "29aa30871ebfcddb07b27c5afc1da8986c0475463a8ad2c6eae90e93534d3e32"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP23",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_06_attention/MP23_channel_attention_from_scratch/README.md": "73f8b1f4165d2858fafeb4efdfac80070cd41c90ffd2b566ecfb070a92d6db4f",
+        "stage_06_attention/MP23_channel_attention_from_scratch/channel_attention_from_scratch.ipynb": "c1b94b5bca6d14546f6755cd550e04d7e6605ef22d11a765ff9dc00f5ad94f3e",
+        "stage_06_attention/MP23_channel_attention_from_scratch/VALIDATION.md": "cba9552e5f8f08c7e95fb04b3470a37afd1b19a875b5d12e1798fa6077dd504a"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP24",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_06_attention/MP24_spatial_attention_from_scratch/README.md": "1cad5cce63f1dd4aacfcc8dd1d66f98a40514d219e74857aed281d78566c615e",
+        "stage_06_attention/MP24_spatial_attention_from_scratch/spatial_attention_from_scratch.ipynb": "6e51d7be89b9d88e1e3703b2cbf5ce6ad1f532cf8d7d676eaa988180eb448bbd",
+        "stage_06_attention/MP24_spatial_attention_from_scratch/VALIDATION.md": "9ecef2c35a26502b63ca4b20366d5959f635b2db3d8b8711814ba42637d2a26c"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP25",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_06_attention/MP25_combined_attention_module/README.md": "efacfadd80bae71076d4855bad0b97783ef66f62c87117cc80cc2ed774542e3f",
+        "stage_06_attention/MP25_combined_attention_module/combined_attention_module.ipynb": "15a703defc0667996acbccdc4b9bd00f6dd20e465b04b46ae77f94d5522b248a",
+        "stage_06_attention/MP25_combined_attention_module/VALIDATION.md": "4eb3f2aae602379bfacd59216ee55afc397895d35072e5049d3eca659c0b2726"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP26",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_06_attention/MP26_attention_based_sr_network/README.md": "d576d7977674a179542d98ab298747bdfd366651cbd96d9294e407d46dadaf6e",
+        "stage_06_attention/MP26_attention_based_sr_network/attention_based_sr_network.ipynb": "76d8c516c8c514abde75c69afc3aaa95e75d6aa0bedf29688cf39f0b20af3341",
+        "stage_06_attention/MP26_attention_based_sr_network/VALIDATION.md": "b686bd06a7288ea08d756f1ebb8f867c556daa4bcdbda31ff060865850ea0817"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP27",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_07_transformers/MP27_self_attention_from_scratch/README.md": "57bb2d8ae0372834de944aba60bc5da38f117cdc250f3237eb500954d8704f0d",
+        "stage_07_transformers/MP27_self_attention_from_scratch/self_attention_from_scratch.ipynb": "3b82afa65bd2dafd91a878a6f4767044a2cde72d5e79c0a2bf4614907992565c",
+        "stage_07_transformers/MP27_self_attention_from_scratch/VALIDATION.md": "6e677520d18bb6a02a8deec169da64e3cf434f1291199a2421c80af4958474f9"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP28",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_07_transformers/MP28_multi_head_self_attention/README.md": "62d33b842c909b76100559a5534a0bab88f9a7ecbddfe4ace4113b93d0a34312",
+        "stage_07_transformers/MP28_multi_head_self_attention/multi_head_self_attention.ipynb": "d9bd28db1a66e4a9d33eb8bb4a9ca8004dccb60121aeb5224e32d048127637f3",
+        "stage_07_transformers/MP28_multi_head_self_attention/VALIDATION.md": "ce482357bec42e39c0260a6e46515b6afa8c6f720f2c3c17cc6efeff28eef558"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP29",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_07_transformers/MP29_transformer_encoder_block/README.md": "3ba612f0c844f40d79050b405eb85f9c588ab90cc90016da3344a88dc0d7f74b",
+        "stage_07_transformers/MP29_transformer_encoder_block/transformer_encoder_block.ipynb": "c05000afc7493ded25a5c471b514ab226b46f74a2332417c84d7e187e2aede44",
+        "stage_07_transformers/MP29_transformer_encoder_block/VALIDATION.md": "4d93a801cc7a6fab3ed2fc8c98120c3c94802b10092dc034569cfec73f47ecd9"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP30",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_07_transformers/MP30_image_patches_and_window_attention/README.md": "de845aff5fe99d8734c7ed671954d740adec37c1475ee8244badc60fe729aeac",
+        "stage_07_transformers/MP30_image_patches_and_window_attention/image_patches_and_window_attention.ipynb": "097c3b919001d7b668bd57576fb0ceebecb35bb1406d3e2ea516c53ff3ee2767",
+        "stage_07_transformers/MP30_image_patches_and_window_attention/VALIDATION.md": "02cb841aab09319bc409fcc4c33e2212f585c138cba615e7610f970a6eb89a33"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP31",
+      "scope": "Expanded existing lesson",
+      "source_hashes": {
+        "stage_07_transformers/MP31_transformer_based_sr_baseline/README.md": "966963e66a17d9bf4e6eb467f46c85f7346be5b54a3f5e03449ff8fc01a4ac4c",
+        "stage_07_transformers/MP31_transformer_based_sr_baseline/transformer_based_sr_baseline.ipynb": "3d7fb9b3f3ba1985034bb019de0cdb04a699f3b607f007002744ef44c710831c",
+        "stage_07_transformers/MP31_transformer_based_sr_baseline/VALIDATION.md": "05b8b05aac560caf36bbbf317903b7d3c089dbc0872a88f06c3f047a51d27be1"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP32",
+      "scope": "Complete implementation and teaching deliverables; learner mastery unassessed",
+      "source_hashes": {
+        "stage_08_remote_sensing/MP32_satellite_image_explorer/README.md": "0ef9d6564bb1a29e5a3f2c781743e37165454b12dd79137b1aa06a2b177c2308",
+        "stage_08_remote_sensing/MP32_satellite_image_explorer/satellite_image_explorer.ipynb": "7bce80dc53f4d57beb0c12c22461bcef464f95ffb04ae5587ccf207b78b66c71",
+        "stage_08_remote_sensing/MP32_satellite_image_explorer/VALIDATION.md": "a663484a5e38a5eadaf5a0c9be382ea89807b280d0c32f13197b18052e2a47a4"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP33",
+      "scope": "Complete implementation and teaching deliverables; learner mastery unassessed",
+      "source_hashes": {
+        "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/README.md": "9f6439e4815f8b32ce676186bda9d0917200bc9a570a67dd33ba1356c53ae259",
+        "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/satellite_preprocessing_pipeline.ipynb": "bc438ed48086257442f7c131f0f4d65dc9d9e775e58b73df720e7d630f60d259",
+        "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/VALIDATION.md": "da08817d219d4c79c1c84ebf5c22e00b924c3e222edf8497a2f1a6408a32264c"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP34",
+      "scope": "Complete implementation and teaching deliverables; learner mastery unassessed",
+      "source_hashes": {
+        "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/README.md": "258b9fed871486adbb2459704a9fa2ecd981778def7ddb25ac29b939d3fe0132",
+        "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/satellite_hr_lr_pair_builder.ipynb": "81dc9a8a2e343f7ef49062b25b5bedc17c3bf4fbcdba164c571b43416ac94327",
+        "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/VALIDATION.md": "d682e48e6bbbe7604af25b858617e8807dc686ea70d477151682a0ac03139d4f"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP35",
+      "scope": "Complete implementation and teaching deliverables; learner mastery unassessed",
+      "source_hashes": {
+        "stage_08_remote_sensing/MP35_geographic_dataset_splitting/README.md": "85fb384dc467d608b238c425b50b3f44b687e34ba92c4526c353937206c34392",
+        "stage_08_remote_sensing/MP35_geographic_dataset_splitting/geographic_dataset_splitting.ipynb": "5f9af0b75e1e6c695085cf1d98b950bc8028af7b00f6a3ff3ef07ebc1e01467e",
+        "stage_08_remote_sensing/MP35_geographic_dataset_splitting/VALIDATION.md": "79c77fd299f669256d07ac4c3f65e2376d22ec7d511c3ec9c1431bf991a8ddb2"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP36",
+      "scope": "Expanded numerical teaching component verified; real cross-sensor feasibility acceptance pending",
+      "source_hashes": {
+        "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/README.md": "e824e5e09377b22fc79ceebb957c84a873b53d9d3f85ad0542b34517a4cc0cb0",
+        "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/cross_sensor_dataset_investigation.ipynb": "f634164d2a61f043b4c5ee6a322ae413adf2c8faceefdf119d339b281b56bbcb",
+        "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/VALIDATION.md": "f655136b4fb82abf437304f7e10cc098a377a2403ed50bb220f11edd2a5b757b"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP37",
+      "scope": "Expanded implementation/teaching complete; learner mastery unassessed",
+      "source_hashes": {
+        "stage_09_hybrid_research/MP37_feature_fusion_laboratory/README.md": "f18954b488bd282e5b335cd4d27774d08bd4247bb9d3085a1f612823fca9fe14",
+        "stage_09_hybrid_research/MP37_feature_fusion_laboratory/feature_fusion_laboratory.ipynb": "4ac940dbc56a1e24b77cf7e9509af6711b1396b03a79e016297295b8f4a6e053",
+        "stage_09_hybrid_research/MP37_feature_fusion_laboratory/VALIDATION.md": "169bdf32ce0826f299e86002fd2b9df23da90f6a9400c366f1833bec1af22745"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP38",
+      "scope": "Expanded architecture component verified; matched-budget research criteria pending",
+      "source_hashes": {
+        "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/README.md": "2195a2aadab000c801f281a87ff99725d4ebcfa988a7784863fdb0faf26032f1",
+        "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/hybrid_cnn_attention_transformer_sr_model.ipynb": "f16a43f2367a1556f5ad999bc84980360bfc77f8e783639b34cdc1615b62e342",
+        "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/VALIDATION.md": "c265e47863b6ba312e320071997850adb6f96a5240ea93d4fa56d1c4058748a9"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP39",
+      "scope": "Expanded historical ablation analysis verified; geographic uncertainty pending",
+      "source_hashes": {
+        "stage_09_hybrid_research/MP39_controlled_ablation_study/README.md": "922ab7e30711106ac7dc5eb184fa606e2ae8b50084be6485cb61645ce9248ceb",
+        "stage_09_hybrid_research/MP39_controlled_ablation_study/controlled_ablation_study.ipynb": "57cff062680ae7beac7b8943ccaa0c59a2e1789424126dae85f9db5f48a7b728",
+        "stage_09_hybrid_research/MP39_controlled_ablation_study/VALIDATION.md": "eb971c8325db4035031eb2cbd6cd2af6bfb8248f7671c8e7cf55a0e0b8a278ce"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    },
+    {
+      "id": "MP40",
+      "scope": "Expanded historical robustness/efficiency analysis verified; real cross-sensor/full compute acceptance pending",
+      "source_hashes": {
+        "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/README.md": "02ea3f55ee81ea2fdb7aab779bdaa85fad70b3b42a92e6ba60f6e8595c2439ce",
+        "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/robustness_and_efficiency_benchmark.ipynb": "3a7d0ee3ccc7cd447d44dee51af23359db42a8ef288be2ffd6f8608f33393cc7",
+        "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/VALIDATION.md": "e80f5620795934ff4978c912eb84e417f0ae94b4ec5951d2a2d8ea2850379eb4"
+      },
+      "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
+    }
+  ],
+  "supplement_sha256_utf8_lf": "c7121d322f87f6eb519d1c9f21ad9bd2ccef8f8355949ca4095a644892db24fb",
+  "shared_sources": {
+    "docs/learning-reference.md": "1842e1e5f2a29a5146ce98d7fdc98119d506d71b22808d26a8ae166dd88d83c0",
+    "docs/contribution-audit.json": "9fd038aeb55064c7647b0e450f517cea68aeb5cde42a4afdc6219e3ba4a8a54e"
+  }
+}

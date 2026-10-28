@@ -14,6 +14,8 @@ jobs:
       - run: python scripts/check_structure.py
       - run: python scripts/check_claim_evidence.py
       - run: python scripts/build_paper_evidence.py --check
+      - run: python scripts/build_learning_supplement.py --check
+      - run: python scripts/audit_paper_sources.py --check
       - run: python scripts/check_project_folders.py
       - name: Rebuild frozen data from pinned public sources
         run: python scripts/rebuild_frozen_data.py --data-root data/ci-frozen-rebuild
@@ -27,6 +29,7 @@ jobs:
       - run: pip install -r app/requirements.txt
       - run: python scripts/check_showcase.py
       - run: python scripts/check_model_explorer.py
+      - run: python scripts/check_learning_ui.py
       - run: python scripts/check_streamlit.py
       - run: python scripts/check_model_catalog.py
       - run: python scripts/check_comparison.py
