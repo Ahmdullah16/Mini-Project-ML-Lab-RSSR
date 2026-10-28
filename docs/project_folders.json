@@ -381,7 +381,7 @@
     "tests": [
       "test_mp35_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Complete implementation and teaching deliverables; learner mastery unassessed"
   },
   {
     "id": "MP36",
@@ -392,7 +392,7 @@
     "tests": [
       "test_mp36_tools.py"
     ],
-    "scope": "Introductory implementation; full criteria pending"
+    "scope": "Expanded numerical teaching component verified; real cross-sensor feasibility acceptance pending"
   },
   {
     "id": "MP37",

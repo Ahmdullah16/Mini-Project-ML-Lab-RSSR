@@ -35,3 +35,16 @@ def test_sources_projects_and_negative_results_preserved(index):
         assert row['unit']!='declared in source'
     assert all(a['bytes']>0 and len(a['sha256'])==64 for a in index['artifacts'])
     json.dumps(index,allow_nan=False)
+
+
+def test_latest_lesson_scopes_and_nested_figures(index):
+    projects={p['id']:p for p in index['projects']}
+    assert projects['MP35']['status'].startswith('Complete implementation')
+    assert projects['MP37']['status'].startswith('Complete implementation')
+    assert 'mastery unassessed' in projects['MP37']['status']
+    for ident in ['MP36','MP38','MP39','MP40']:
+        assert projects[ident]['status'].startswith('Expanded')
+        assert 'pending' in projects[ident]['status']
+        assert projects[ident]['scope_source']=='docs/project_folders.json'
+    assert projects['MP20']['exception']=='Independent held-out SRCNN table pending'
+    assert any(a['path']=='reports/figures/mp40-robustness.svg' for a in index['artifacts'])
