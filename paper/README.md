@@ -1,5 +1,9 @@
 # Working evaluation paper
 
+The [detailed supplement source](supplement.md) now combines native lesson prose, worked examples and recorded validation for all40 projects with the shared mathematical reference and contribution audit. Generate it with `python scripts/build_learning_supplement.py`; `--check` verifies exact synchronization. The website reads the same lesson sources and audit. This is a working Markdown source, not a final typeset report or proof that every new teaching criterion is met. The same generator supplies the paper's contribution-audit section.
+
+The four requested IEEE files in ChatGPT Library `/mini project` were not found in the accessible attachments or local Codex files on2026-10-28. Library access/transfer remains required to verify those exact templates. Existing IEEEtran draft compilation can proceed. No page limit or author identity is assumed.
+
 [main.tex](main.tex) is an IEEE conference-style working draft, not a submission-ready paper. Author details, full literature extraction, reference-based failure atlas, new geographic study and cross-sensor evidence remain open. Compilation is separate from scientific acceptance and visual review.
 
 From the repository root, regenerate only the derived tables and bibliography:

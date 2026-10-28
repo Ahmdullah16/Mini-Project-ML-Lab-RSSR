@@ -24,11 +24,13 @@ def table(caption, header, rows, columns):
     return "\n".join([
         r"\begin{table}[t]", r"\centering\small",
         r"\caption{" + caption + "}",
-        r"\resizebox{\columnwidth}{!}{%",
+        r"\sbox{\resulttablebox}{%",
         r"\begin{tabular}{" + columns + "}", r"\toprule",
         " & ".join(header) + r" \\", r"\midrule",
         *[" & ".join(row) + r" \\" for row in rows],
-        r"\bottomrule", r"\end{tabular}}", r"\end{table}", "",
+        r"\bottomrule", r"\end{tabular}}",
+        r"\ifdim\wd\resulttablebox>\columnwidth\resizebox{\columnwidth}{!}{\usebox{\resulttablebox}}\else\usebox{\resulttablebox}\fi",
+        r"\end{table}", "",
     ])
 
 

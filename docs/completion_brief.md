@@ -159,3 +159,13 @@ The [seven-model completion brief](seven-model-completion-brief.md) preserves th
 ## Latest website/scientific upgrade — 2026-10-28
 
 The [latest full user brief](scientific-website-upgrade-brief.md) adds a versioned advanced family with ablations, a separate scientific Sentinel-2 reflectance path, and a results-first native website. Preserve educational models, historical checkpoint compatibility and frozen evidence. [Scientific admission status](scientific-sentinel.md) distinguishes implemented local conversion from unfinished live provider validation. No advanced-family, seven-trained-model, real cross-sensor or public-readiness completion is implied.
+
+
+## Additional requirements — 2026-10-28
+
+The [on-site teaching, report and contribution-audit brief](onsite-report-completion-brief.md) supplements all prior scope. Complete derivations, parameter explanations, measured examples and references must be readable on-site for all40 lessons and7 models. Start a shared-evidence report supplement now; do not claim novelty from combinations or enlargement. Library `/mini project` files are not mounted here: targeted attachment search found none of the four named IEEE files. Transfer remains required; no venue page limit or author details inferred.
+
+
+## IEEE reconstruction request — 2026-10-28
+
+The [master reconstruction brief](ieee-reconstruction-brief.md) supplements the prior scope. Its explicit requirement to read and compare the existing PDF, conference template and HOWTO gates new manuscript reconstruction until the exact reference PDFs are accessible. Continue independent evidence audit under reports/ieee-paper/. Existing paper/ remains canonical until a reviewed migration; no duplicate diverging manuscript.

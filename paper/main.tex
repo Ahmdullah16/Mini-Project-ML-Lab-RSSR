@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{amsmath,booktabs,graphicx,url}
 \usepackage[hidelinks]{hyperref}
+\newsavebox{\resulttablebox}
 \title{An Evidence-Bounded Evaluation of Compact Remote-Sensing Super-Resolution Models}
 \author{\IEEEauthorblockN{Project evaluation draft}\IEEEauthorblockA{Mini-Project-ML-Lab-RSSR\\Author and affiliation confirmation pending}}
 \begin{document}
@@ -52,6 +53,10 @@ The reported final PSNR is a mean of tile scores for one scene, not PSNR recompu
 \input{generated/interpretation.tex}
 
 The early pilot remains a negative or inconclusive result. Comparable improvement from fixed residual attenuation weakens a learned-reliability interpretation; it does not prove that gating cannot work under other budgets. The final single-scene ranking cannot establish broad geographic superiority or equivalence. No new test inference was run to generate these tables.
+
+\section{Contribution audit}
+Channel attention and residual Transformer restoration already exist in prior work \cite{zhang2018rcan,liang2021swinir}. The following audit uses the same versioned records as the website and supplement. It is an initial comparison with reviewed sources, not an exhaustive novelty determination.
+\input{generated/contribution-audit.tex}
 
 \section{Prospective protocol v2}
 The separately committed design targets five outer geographic folds with at least fifteen eligible independent regions, inner validation, three training seeds, and matched parameter/MAC accounting for the primary hybrid-versus-CNN contrast. Scene-level paired bootstrap intervals would resample regions, not patches or seeds. Shared training sets across folds can induce dependence; small-sample intervals require explicit qualification.
