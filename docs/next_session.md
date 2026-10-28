@@ -1,3 +1,10 @@
+# Latest follow-up — MP02 native lab, 2026-10-28
+
+- PR38 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/38 published; initial exacthead db81072ad3e69602479e7355d008207a35fd54c7 CI40743598846 SUCCESS. Local ba4bee8 and initial remote tree match0875dd4e6c308e569e4925e7e073d83e179edb71. Follow-up below requires new exact-head CI.
+- MP02 now has native explicitRun fixture/broadcasting/mask/populationstatistics/math/example/diagram/PNG; MP01 also explicitRun.40lesson AppTest passed including both mask populations,5targetedtests passed0.18s. reports/mp02-native-instructor.json pins sources. No canonical notebook or frozen artifact regeneration.
+- NEXT: verify follow-up PR38 headCI, continue MP03 native lab, then MP04 onward; separately complete compatible7model scale matrix and research/paper/report/deployment gates in docs/acceptance_matrix.md. No remote merge performed.
+- Next commands: apppython scripts/check_learning_ui.py only after lesson edits; devpython -m pytest stage_01_python_numpy/MP02_numpy_image_laboratory/test_mp02_tools.py tests/test_instructor_site.py -q. Read MP03 canonical helpers before implementing.
+
 # Latest milestone — trained missing models and RGB scale evidence, 2026-10-28
 
 - Latest execution brief: attachment42356034; current acceptance index docs/acceptance_matrix.md. Preserve all prior scope.

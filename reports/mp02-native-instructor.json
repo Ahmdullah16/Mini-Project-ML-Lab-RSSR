@@ -1,0 +1,21 @@
+{
+  "scope": "MP02 native numerical teaching and explicit Run controls; not complete40lesson acceptance",
+  "source_sha256_utf8_lf": {
+    "app/array_lab_ui.py": "73b76a4e1d8cc1ba68cc5606550942bc646375c591dd20ed43f231b6c3b69412",
+    "app/learning_ui.py": "323e4601344f74f364937b7fbe4ae6e798aa40ea9c65c97e85dd90afabd3d3b9",
+    "app/pixel_lab_ui.py": "aabab348d68f500ae7d4a69998b8a485cd1e65784ad395b895158033f463e6b5",
+    "scripts/check_learning_ui.py": "66da99138acd474a3e44bfeb854799365d6c60ea0c19718ccc12e1c891170e48",
+    "src/rssr/array_lab.py": "4645dcd8db229e491f0b382dd0ae7d94c6eef0ee8053be79d371254b29dfacd2"
+  },
+  "executed": [
+    "40lesson navigation/linkabsence/scale arithmetic AppTest passed",
+    "MP01 explicitRun brightness endpoints and histogram passed",
+    "MP02 explicitRun means50,50,60 and variance600 with3pixels; means65,65,75 and variance1125 with4pixels passed",
+    "5canonicalMP02/instructor tests passed0.18s"
+  ],
+  "limits": [
+    "No public deployment verification",
+    "Synthetic2x2displayRGB fixture, no speed or scientific quality claim",
+    "MP03 onward native interactive coverage remains incomplete"
+  ]
+}

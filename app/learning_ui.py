@@ -25,6 +25,9 @@ def render(root, projects):
     if ident=='MP01':
         from pixel_lab_ui import render as render_pixel_lab
         render_pixel_lab(root)
+    elif ident=='MP02':
+        from array_lab_ui import render as render_array_lab
+        render_array_lab()
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):

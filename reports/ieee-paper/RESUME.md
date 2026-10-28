@@ -1,3 +1,5 @@
+Latest2026-10-28: paper/main.tex now distinguishes historical absence from six executed M2/M6 development-only pilots; current source compiled successfully. Source audit regenerated and checked; frozen tables unchanged. PR38 initialhead db81072ad3e69602479e7355d008207a35fd54c7 CI40743598846 SUCCESS. Latest PDF visual review and research acceptance remain pending; see docs/next_session.md and docs/acceptance_matrix.md.
+
 # IEEE reconstruction resume — 2026-10-28
 
 - Phase1: major-claim/component audit and source-integrity implementation completed; full bibliographic and sentence-level review remains incomplete. Current manuscript read in full; historical source hashes, final row pointers and implemented operations inspected. No frozen rerun or weight mutation.

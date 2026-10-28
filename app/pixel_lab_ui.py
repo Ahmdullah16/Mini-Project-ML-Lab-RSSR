@@ -15,6 +15,8 @@ def render(root):
     amount=st.slider('Brightness offset (digital levels)',-255,255,20,key='mp01_brightness')
     x=st.slider('Pixel column',0,95,0,key='mp01_x')
     y=st.slider('Pixel row',0,63,0,key='mp01_y')
+    if not st.button('Run MP01 example',key='mp01_run'):
+        st.info('Choose parameters, then Run MP01 example to compute the output.');return
     output=tools.brighten(source,amount);gray=tools.to_grayscale(output)
     normalized=tools.normalize_rgb(output)
     cols=st.columns(3)
