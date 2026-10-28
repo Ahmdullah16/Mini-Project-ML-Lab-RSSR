@@ -104,6 +104,10 @@ if section=='Overview':
         st.write('Generated texture can look convincing without matching the ground. Sensor response, registration, sampling and physical calibration matter. Display previews and synthetic PSNR do not establish reflectance or downstream accuracy.')
 elif section=='Live SR':
     st.title('Inspect a reconstruction');st.caption('Choose a genuine checkpoint and compare a shared crop. Uploads without references receive no invented accuracy metrics.')
+    from metric_ui import render as render_metrics
+    render_metrics('live')
+    from availability_ui import render as render_availability
+    render_availability()
     workflow=st.radio('Inference workflow',['Single model','Compare models'],horizontal=True,key='inference_workflow')
     if workflow=='Single model':
         from inference_ui import render_live
@@ -202,8 +206,12 @@ elif section=='Mini-projects':
 elif section=='Satellite Explorer':
     st.title('Acquire a bounded satellite crop');st.caption('Explicit acquisition, not an automatic live feed. No provider request until you submit; optional storage credentials are not required.')
     st.info('Current acquisition is display-only Sentinel L2A visual uint8 RGB with item-level cloud filtering. It is not calibrated surface reflectance. The new local scientific conversion layer is tested on fixtures; provider acquisition/alignment and scientific model validation are still pending.')
+    from availability_ui import render as render_availability
+    render_availability()
     from inference_ui import render_satellite
     render_satellite()
+    from metric_ui import render as render_metrics
+    render_metrics("satellite")
 else:
     st.title('Take the evidence with you')
     st.caption('Measured records and reproducibility instructions. Unfinished artifacts are labeled pending, not replaced by placeholders.')

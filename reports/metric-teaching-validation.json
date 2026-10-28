@@ -1,0 +1,229 @@
+{
+  "scope": "Synthetic teaching only, not model/upload/satellite benchmark",
+  "source_hashes": {
+    "src/rssr/metric_teaching.py": "79d88af98fddc05803ce236627688c4b99f1d71d018f9dcbb6e59429a2cc2f49",
+    "src/rssr/model_availability.py": "3f6a9d02a2ad40c39edaf88da87b6eeb8daa78c211ee9f4c2156761dd32db170",
+    "app/metric_ui.py": "6d7f137296213c2a5c56448763f8f85a26685a88268f1eb6e436d958b3a2ae90",
+    "app/availability_ui.py": "e98efe497b18dacd6df8f14b0186c6085cda05067a36f9880803b817fbb8902b",
+    "docs/metric-instructor.md": "aeaba248a48b241b20d51eef5e1d5ed8bb4ea63384eac6e8811283af1b06704f",
+    "scripts/check_metric_ui.py": "937c97635eeb5a8cb7baf8c2ec0d18d6f961afc67016160bb6558ba8727e5557"
+  },
+  "executed": [
+    "26metric/paper/instructor tests passed1.95s",
+    "Both sections6distortions, zero identity, stale-output clearing,7family visibility with2hostedRGBfamilies passed",
+    "970relative links and40IDs passed"
+  ],
+  "rows": [
+    {
+      "kind": "Blur",
+      "strength": 0.0,
+      "metrics": {
+        "mse": 0.0,
+        "rmse": 0.0,
+        "psnr": "positive infinity (exact identity)",
+        "ssim": 1.0,
+        "rmse_band_0": 0.0,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.0,
+        "mae": 0.0,
+        "gradient_mae": 0.0
+      },
+      "output_pixel_sha256": "295498aedfdc9a37742b14203ce2ec0f4564013da8938ac10b898cd54e5a4fb8",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Blur",
+      "strength": 1.0,
+      "metrics": {
+        "mse": 0.01004272197922749,
+        "rmse": 0.10021338223624372,
+        "psnr": 19.981485600654818,
+        "ssim": 0.8750061882111334,
+        "rmse_band_0": 0.001774650434420029,
+        "rmse_band_1": 0.0017746504351646409,
+        "rmse_band_2": 0.17355652442173142,
+        "mae": 0.045873953250217404,
+        "gradient_mae": 0.032156346758788146
+      },
+      "output_pixel_sha256": "c40bf98b1550c9111c10738446c1d61690ff679865fd33303d9b224b9c1bd6d1",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Noise",
+      "strength": 0.0,
+      "metrics": {
+        "mse": 0.0,
+        "rmse": 0.0,
+        "psnr": "positive infinity (exact identity)",
+        "ssim": 1.0,
+        "rmse_band_0": 0.0,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.0,
+        "mae": 0.0,
+        "gradient_mae": 0.0
+      },
+      "output_pixel_sha256": "295498aedfdc9a37742b14203ce2ec0f4564013da8938ac10b898cd54e5a4fb8",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Noise",
+      "strength": 1.0,
+      "metrics": {
+        "mse": 0.03083703553556676,
+        "rmse": 0.17560477082234058,
+        "psnr": 15.109273787542381,
+        "ssim": 0.3083716195444738,
+        "rmse_band_0": 0.1741875646322173,
+        "rmse_band_1": 0.17644067368623584,
+        "rmse_band_2": 0.17617743216242152,
+        "mae": 0.13976266741889276,
+        "gradient_mae": 0.19352010877073986
+      },
+      "output_pixel_sha256": "75f21813481018072a10e9477bb4cc48c8d23f99fc1761133b1e02d1687baece",
+      "clipped_fraction": 0.1644694060087204
+    },
+    {
+      "kind": "Brightness",
+      "strength": 0.0,
+      "metrics": {
+        "mse": 0.0,
+        "rmse": 0.0,
+        "psnr": "positive infinity (exact identity)",
+        "ssim": 1.0,
+        "rmse_band_0": 0.0,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.0,
+        "mae": 0.0,
+        "gradient_mae": 0.0
+      },
+      "output_pixel_sha256": "295498aedfdc9a37742b14203ce2ec0f4564013da8938ac10b898cd54e5a4fb8",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Brightness",
+      "strength": 1.0,
+      "metrics": {
+        "mse": 0.06938925168144466,
+        "rmse": 0.26341839662682004,
+        "psnr": 11.587077960717831,
+        "ssim": 0.7602658760380174,
+        "rmse_band_0": 0.26755163830799966,
+        "rmse_band_1": 0.2675516383079997,
+        "rmse_band_2": 0.2549509692504514,
+        "mae": 0.2522321467598279,
+        "gradient_mae": 0.005291011440690863
+      },
+      "output_pixel_sha256": "ee8e71e854b223ce81417b2c9d490b7ef4a67e7e546148eb83e33b89b18a1e60",
+      "clipped_fraction": 0.3645833432674408
+    },
+    {
+      "kind": "Contrast",
+      "strength": 0.0,
+      "metrics": {
+        "mse": 0.0,
+        "rmse": 0.0,
+        "psnr": "positive infinity (exact identity)",
+        "ssim": 1.0,
+        "rmse_band_0": 0.0,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.0,
+        "mae": 0.0,
+        "gradient_mae": 0.0
+      },
+      "output_pixel_sha256": "295498aedfdc9a37742b14203ce2ec0f4564013da8938ac10b898cd54e5a4fb8",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Contrast",
+      "strength": 1.0,
+      "metrics": {
+        "mse": 0.027001763218775777,
+        "rmse": 0.16432213246783214,
+        "psnr": 15.686078754268582,
+        "ssim": 0.6337729573316002,
+        "rmse_band_0": 0.14318744959748847,
+        "rmse_band_1": 0.14318744959748847,
+        "rmse_band_2": 0.19999999552965178,
+        "mae": 0.14867724891519174,
+        "gradient_mae": 0.02002183501682584
+      },
+      "output_pixel_sha256": "803f1388a3c7df15204b5ce4b96bbcf24841fd72a0925db2204cd60acd3d4eeb",
+      "clipped_fraction": 0.6666666865348816
+    },
+    {
+      "kind": "Shift",
+      "strength": 0.0,
+      "metrics": {
+        "mse": 0.0,
+        "rmse": 0.0,
+        "psnr": "positive infinity (exact identity)",
+        "ssim": 1.0,
+        "rmse_band_0": 0.0,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.0,
+        "mae": 0.0,
+        "gradient_mae": 0.0
+      },
+      "output_pixel_sha256": "295498aedfdc9a37742b14203ce2ec0f4564013da8938ac10b898cd54e5a4fb8",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Shift",
+      "strength": 1.0,
+      "metrics": {
+        "mse": 0.053778136277843246,
+        "rmse": 0.23190113470581217,
+        "psnr": 12.693942526570382,
+        "ssim": 0.6617407921379542,
+        "rmse_band_0": 0.06192256567410627,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.3968627025734035,
+        "mae": 0.10783730506470117,
+        "gradient_mae": 0.03211241442138556
+      },
+      "output_pixel_sha256": "36e59e7a7e3585da0f638aa60d9efdac0d50e2f72acf0796f2286e7cbf73823c",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Sharpening",
+      "strength": 0.0,
+      "metrics": {
+        "mse": 0.0,
+        "rmse": 0.0,
+        "psnr": "positive infinity (exact identity)",
+        "ssim": 1.0,
+        "rmse_band_0": 0.0,
+        "rmse_band_1": 0.0,
+        "rmse_band_2": 0.0,
+        "mae": 0.0,
+        "gradient_mae": 0.0
+      },
+      "output_pixel_sha256": "295498aedfdc9a37742b14203ce2ec0f4564013da8938ac10b898cd54e5a4fb8",
+      "clipped_fraction": 0.0
+    },
+    {
+      "kind": "Sharpening",
+      "strength": 1.0,
+      "metrics": {
+        "mse": 0.009115422752135624,
+        "rmse": 0.09547472310583374,
+        "psnr": 20.40223184972559,
+        "ssim": 0.9418047050374999,
+        "rmse_band_0": 0.0011223811194817953,
+        "rmse_band_1": 0.0011223811241911604,
+        "rmse_band_2": 0.16535945324547238,
+        "mae": 0.045705264599140115,
+        "gradient_mae": 0.023282541785014686
+      },
+      "output_pixel_sha256": "eefca05e20fcb1aa6465007f16dee7f23583d6765a464bbcf9d4d0b9b6afb886",
+      "clipped_fraction": 0.2486979216337204
+    }
+  ],
+  "not_verified": [
+    "All7hostedexecution",
+    "Satellite multimodel comparison",
+    "Complete40lessons",
+    "Current deployed/mobile/desktop visual rendering",
+    "Real paired-image metric integration"
+  ]
+}

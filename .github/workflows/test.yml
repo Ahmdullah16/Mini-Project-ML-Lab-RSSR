@@ -29,6 +29,7 @@ jobs:
       - run: pip install -r app/requirements.txt
       - run: python scripts/check_showcase.py
       - run: python scripts/check_model_explorer.py
+      - run: python scripts/check_metric_ui.py
       - run: python scripts/check_learning_ui.py
       - run: python scripts/check_streamlit.py
       - run: python scripts/check_model_catalog.py

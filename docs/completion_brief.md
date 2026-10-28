@@ -1,3 +1,5 @@
+Latest mandatory website requirements: [mandatory-website-brief.md](mandatory-website-brief.md). All seven numbered requirement groups are tracked in [acceptance_matrix.md](acceptance_matrix.md). These supplement earlier scope; visibility is not execution acceptance.
+
 Continue completing and improving this existing project:
 
 Repository: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR

@@ -15,3 +15,16 @@ This is the current acceptance index. Historical reports retain their original s
 | Site/deployment | Existing Streamlit app, new evidence cards | `python scripts/check_model_explorer.py` | Seven local navigation checks; earlier public-access-20261028.json | Current local changes verified; new deployed version/cold start unverified | Publish reviewed change, verify signed-out version/inference/restart when browser access available |
 | Durable storage | Existing external adapters | Account-specific integration unavailable | docs/operations.md | External storage credentials/account absent | Configure authorized external store; stateless demo remains independent |
 | CI/review | Existing workflow | Actual PR head CI | PR37 CI40694075637 SUCCESS, externally merged8a28fce | PR38 initial head passed CI40743598846; follow-up pending | Inspect follow-up exact-head checks; do not auto-merge |
+
+
+## Mandatory website requirements — 2026-10-29
+
+| Requirement | Implementation | Verification command | Evidence | Status | Next action |
+|---|---|---|---|---|---|
+| W1 Complete all40 on-site lessons and actual outputs | Native prose and MP01/02 labs | check_learning_ui.py plus per-lesson numerical tests | mp02-native-instructor.json; per-project records | Partial; navigation does not prove full acceptance | Continue MP03 onward, individual derivations/parameters/outputs/references/failures |
+| W2 Seven models in both sections | Shared model_availability registry, pinned execution catalog | pytest tests/test_metric_teaching.py; check_metric_ui.py | metric-teaching-validation.json | Seven visible; only M1/M7 hosted RGB families executable | M2/M6 pinned remote distribution; compatible M3/M4/M5 RGB training/integration |
+| W3 Satellite model comparison | Existing one acquired GeoTIFF/single model scale workflow | Existing check_satellite_scale.py | Previous scale evidence only | Multi-model satellite workflow not implemented | Shared exact acquired pixels, sequential results, targeted retry, aligned crop/maps/provenance/exports |
+| W4 Deep metric explanations beside images | Shared metric_ui and metric-instructor.md | check_metric_ui.py; numerical tests | metric-teaching-validation.json | Six basic metrics + per-band/gradient example implemented; real paired-result integration incomplete | Add eligible paired-image path and domain-valid SAM; do not invent upload reference |
+| W5 Controlled metric behaviour | Deterministic64square fixture,6controls, explicitRun | pytest tests/test_metric_teaching.py; check_metric_ui.py | metric-teaching-validation.json | Tested teaching panel in both sections | Visual desktop/mobile review; preserve reference separation |
+| W6 Scientific honesty | Explicit unavailable reference accuracy, separate synthetic panel | Numerical/source/UI checks | metric-teaching-validation.json | Teaching separation verified; full scientific exports acceptance pending | Review registration/mask/band/unit gates for every future paired workflow |
+| W7 Verification and finish | CI now runs metric UI checks | check_metric_ui.py, existing project checks | Per-feature records; checkpoint | Partial, not final acceptance | Full40output coverage, satellite comparisons, all7execution, live/mobile/download/retry validation |
