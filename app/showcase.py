@@ -187,7 +187,7 @@ elif section=='Mini-projects':
                 st.write(p['objective']);st.caption(p['status'])
                 if p['exception']:st.warning(p['exception'])
                 st.markdown(f"[Project brief]({REPO}/blob/main/{p['brief']}) · [Notebook]({REPO}/blob/main/{p['notebook']})")
-                figures=[a['path'] for a in index['artifacts'] if a['path'].lower().startswith('reports/'+p['id'].lower()+'-') and a['path'].endswith('.png')]
+                figures=[a['path'] for a in index['artifacts'] if any(part.lower().startswith(p['id'].lower()+'-') for part in Path(a['path']).parts) and Path(a['path']).suffix.lower() in ('.png','.svg','.jpg','.jpeg')]
                 for figure in figures:
                     st.image(str(ROOT/figure),caption=Path(figure).name,width='stretch')
     if not found:st.info('No projects match. Clear the search to see all40.')

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-28",
+  "scope": "Lesson status reconciliation and nested evidence figures; no research rerun",
+  "source_sha256": {
+    "src/rssr/evidence.py": "e33b32090f3f5ebf5340ab4e7e8633177544bb10b02cb6b0917aab86df8b5fe2",
+    "app/showcase.py": "a31226b7d92e3d5974a94ef10993eb41a96bdca6a3b1a7059cb70eda709b4559",
+    "docs/project_folders.json": "4cd0940645710ffab056c64ba92b2f5220a0c60956ee0a53a428ddf7c46253dd",
+    "tests/test_evidence.py": "8b63ae86ca6e0e16b6e9a4c3787d351b80c3295edc2a44e9dbf05be377644f29"
+  },
+  "validation": {
+    "pytest tests/test_evidence.py -q": "3 passed in 0.23s",
+    "scripts/check_showcase.py": "seven sections and empty states passed, network blocked",
+    "scripts/check_project_folders.py": "40 folder contracts passed",
+    "scripts/check_structure.py": "40 unique IDs; 940 links valid",
+    "scripts/check_claim_evidence.py": "7 records verified"
+  },
+  "preserved_limits": [
+    "MP35 and MP37 teaching implementation complete, learner mastery unassessed",
+    "MP36/38/39/40 retain scientific acceptance gaps",
+    "MP20 independent held-out SRCNN table pending",
+    "No deployed-version, model-quality or final 40-project execution claim"
+  ]
+}

@@ -238,3 +238,7 @@ Latest user request saved docs/scientific-website-upgrade-brief.md. Added explic
 ## Local reflectance ingestion milestone — 2026-10-28
 
 Added plan-first `rssr prepare-reflectance` for hash-pinned local GeoTIFF inputs, bounded pixel-window reads, common-grid rejection, quality-coverage intersection, declared radiometry, disk guard and atomic float32 export.36combined ingestion/conversion tests passed2.34s, including actual CLI subprocess plan/execute. See docs/local-reflectance-job.md and reports/reflectance-job-validation.json. No real satellite product, new model training or frozen research evaluation ran. Provider adapter, mixed-resolution alignment and learned scientific inference remain unfinished.
+
+## Lesson status reconciliation — 2026-10-28
+
+Corrected stale MP35 scope using its existing README/VALIDATION (12 tests and four real-kernel cells previously recorded); no lesson rerun. Website now uses recorded expanded scopes for MP36–40 and preserves scientific pending criteria and learner-mastery limits. Nested report figures including MP35 map and MP40 robustness SVG are discoverable. Three evidence tests and seven-section network-blocked AppTest passed; 40 folder contracts, 940 links and seven claim records passed. Evidence: [validation](../reports/lesson-status-validation.json). Frozen reports untouched.

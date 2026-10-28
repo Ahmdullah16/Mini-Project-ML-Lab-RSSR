@@ -84,8 +84,8 @@ def build_index(root):
     for i,r in enumerate(read('mp26-attention-sr.json')['curves']):
         for point in r['history']:
             curves.append(dict(point,model=r['model'],seed=r['seed'],run_id=r['run_id'],source='reports/mp26-attention-sr.json'))
-    for path in sorted((root/'reports').glob('*')):
-        if path.suffix not in ('.json','.md','.png'):
+    for path in sorted((root/'reports').rglob('*')):
+        if not path.is_file() or path.suffix.lower() not in ('.json','.md','.png','.svg','.jpg','.jpeg'):
             continue
         artifacts.append({'path':path.relative_to(root).as_posix(), 'bytes':path.stat().st_size,
                           'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
@@ -96,9 +96,16 @@ def build_index(root):
         ident=project['id'];number=int(ident[2:]);brief=Path(project['brief'])
         notebook=Path(folders[ident]['notebook'])
         complete = '**Status: Complete (implementation and teaching deliverables)**' in (root/brief).read_text(encoding='utf-8')
+        scope=folders[ident].get('scope','Scope unavailable; criteria not assessed')
+        complete = complete or scope in ('Expanded implementation/teaching complete; learner mastery unassessed',
+                                       'Complete implementation and teaching deliverables; learner mastery unassessed')
+        status=('Complete implementation and teaching deliverables; learner mastery unassessed' if complete
+                else scope if scope.startswith('Expanded')
+                else 'Expanded / execution recorded; criteria not all assessed' if number<=26
+                else scope)
         projects.append({'id':ident,'title':project['title'],'objective':project['objective'],
                          'stage':brief.parts[0], 'brief':brief.as_posix(),'notebook':notebook.as_posix(),
-                         'status':'Complete implementation and teaching deliverables; learner mastery unassessed' if complete else ('Expanded / execution recorded; criteria not all assessed' if number<=26 else 'Introductory / full expansion pending'),
+                         'status':status,'scope_source':'docs/project_folders.json','recorded_scope':scope,
                          'exception':'Independent held-out SRCNN table pending' if number==20 else None})
     if len(projects)!=40 or len({p['stage'] for p in projects})!=9:
         raise ValueError('Syllabus identity/stage mismatch')
