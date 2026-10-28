@@ -1,7 +1,7 @@
 """Native explanatory content; no notebook viewer, execution, or network."""
 import streamlit as st
 import pandas as pd
-from rssr.learning_content import load_lesson
+from rssr.learning_content import load_lesson, visitor_prose
 
 
 def render(root, projects):
@@ -21,8 +21,11 @@ def render(root, projects):
     st.caption(lesson['scope'])
     st.info(lesson['coverage'])
     st.markdown('[Shared mathematical reference](#shared-concepts)')
-    st.markdown(lesson['overview'])
+    st.markdown(visitor_prose(lesson['overview']))
+    if ident=='MP01':
+        from pixel_lab_ui import render as render_pixel_lab
+        render_pixel_lab(root)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
-        st.markdown(lesson['explanations'])
+        st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):
-        st.markdown(lesson['validation'])
+        st.markdown(visitor_prose(lesson['validation']))

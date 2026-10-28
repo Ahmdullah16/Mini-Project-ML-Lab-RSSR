@@ -31,6 +31,10 @@ def render(root):
                 else:st.caption('No trained output offered for this configuration.')
     key=st.selectbox('Inspect architecture',list(NAMES),format_func=lambda k:k+' · '+NAMES[k],key='registry_architecture')
     st.write(PATHS[key]+' + bicubic input baseline')
+    from architecture_diagrams import diagram
+    st.graphviz_chart(diagram(key))
+    with st.expander('Derive the implemented operations and parameter effects',expanded=True):
+        st.markdown((root/'docs/model-instructor.md').read_text(encoding='utf-8'))
     st.latex(r'\widehat{x}=B(y)+R(g(E(y)))')
     st.write('y is the input; E embeds bands; g is the selected feature path; R reconstructs output pixels; B is bicubic interpolation. C denotes the additional convolutional backbone, A additional channel/spatial attention, and T a Transformer including self-attention. Every model retains shared embedding/reconstruction convolutions.')
     rows=[r for r in records if r['status']=='verified historical binding' and r['registry_config']['architecture_id']=='cat-v1/'+key]

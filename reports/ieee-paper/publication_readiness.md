@@ -13,3 +13,8 @@
 | Submission conditions | Unknown | Author/affiliation confirmation, venue identity/page limit and submission authorization unavailable |
 
 No final-paper.pdf is issued by this audit. Neither successful compilation nor implementation tests establish publication acceptance. Submission is not authorized.
+
+
+## Superseding instructor milestone — 2026-10-28
+
+Exact IEEE files are now supplied and reviewed: evidence/supplied-template-review.json. Prior template-transfer gate is resolved. Current manuscript includes actual architecture scope and source-checked numerical conclusion and compiles; latest visual review blocked by computer-use access denial. Native site removes project-GitHub/notebook links, adds executable MP01 numerical lab and7accurate block diagrams/shared model derivations. reports/instructor-site-validation.json has actual checks. Full40native lesson acceptance, advanced models/training, final report typesetting, public deployment and industry/novelty validation remain open.

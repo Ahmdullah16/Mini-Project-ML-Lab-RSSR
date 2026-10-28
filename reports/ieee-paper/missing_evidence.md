@@ -7,3 +7,8 @@
 5. Latest public-code deployment, cold restart and external durable database evidence remain open independently of paper writing. Earlier successful public inference is preserved.
 
 Independent work completed despite these gates: native40lesson milestone preserved, source integrity audit, major claim register, implementation/training contract, requested component matrix and readiness report. Manuscript edits from the new reconstruction request are deliberately not applied before the explicit reference gate.
+
+
+## Superseding instructor milestone — 2026-10-28
+
+Exact IEEE files are now supplied and reviewed: evidence/supplied-template-review.json. Prior template-transfer gate is resolved. Current manuscript includes actual architecture scope and source-checked numerical conclusion and compiles; latest visual review blocked by computer-use access denial. Native site removes project-GitHub/notebook links, adds executable MP01 numerical lab and7accurate block diagrams/shared model derivations. reports/instructor-site-validation.json has actual checks. Full40native lesson acceptance, advanced models/training, final report typesetting, public deployment and industry/novelty validation remain open.

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "scope": "Instructor site milestone, not complete40project or industry acceptance",
+  "source_sha256_utf8_lf": {
+    "src/rssr/learning_content.py": "bf5b33474d6353573f98d02159dd02d1f8c48b28432f4fe21de3244ad2f802b3",
+    "app/learning_ui.py": "733b487a4709b5c000bd0baae8a3f27768cba3cb10c47da4db261ee87bdc78d6",
+    "app/pixel_lab_ui.py": "4bd640656f67f1a621a5803699c95a2ddcee64b6092cb993e4c24102f671b070",
+    "app/architecture_diagrams.py": "35a26e24cdc3d681fb1c6cafc3e8da60a85595fc89c9dbc5ac444801c1f6da01",
+    "app/model_explorer_ui.py": "59de0c220610f488858bc45f065332227ddd207f0f0e89f386cc9e22ae286a62",
+    "app/showcase.py": "70a5f5180c0d47eec68622889dda3599c97da3297eee62b903f2800667caeea5",
+    "docs/model-instructor.md": "7c323a948f53316d219711707a5542ed9a9c9ae7407f47c4bb395e7ba96309c6",
+    "paper/main.tex": "b5db26a0c2bcd924190d3a36f7c27c824688633d02ee05a739310e14e744e054"
+  },
+  "executed": [
+    "47learning/paper audit tests passed0.37s",
+    "13instructor/MP01 tests and4subtests passed0.38s",
+    "40lesson AppTest selections, project-GitHub/notebook link absence, MP01 brightness endpoints/histogram and exact-scale arithmetic passed",
+    "7model selections passed",
+    "IEEE paper compiled after numerical correction",
+    "7section showcase/empty-state AppTest passed",
+    "964relative Markdown links valid; source audit and learning supplement --check passed"
+  ],
+  "failure_fixed": "New conclusion regression test caught hybrid PSNR typo50.2498; corrected to recorded50.2459, test rerun passed",
+  "not_verified": [
+    "Full40lesson new instruction criteria",
+    "All seven-model worked training examples",
+    "Industry benefit or architectural novelty",
+    "Current public deployment of these changes",
+    "Latest PDF visual inspection: computer-use tool denied ChatGPT access"
+  ]
+}

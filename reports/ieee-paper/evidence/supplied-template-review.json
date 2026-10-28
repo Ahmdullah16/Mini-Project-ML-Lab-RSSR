@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-28",
+  "supplied_files": {
+    "conference_041818.pdf": {
+      "bytes": 123365,
+      "sha256": "621ba0f47de5d0b10fce9cc36c20ba03f04d20dee587e0e4596f70dcd4f7653e"
+    },
+    "conference_041818.tex": {
+      "bytes": 15252,
+      "sha256": "a61b929a39ea12831c07047aeb1a423f3820f85d5abbaeea0351aad6a4f0c09a"
+    },
+    "IEEEtran_HOWTO.pdf": {
+      "bytes": 671626,
+      "sha256": "462b4d99a973a5433ffa42de4d96e25c90e87fc44c2ebe598270af8cfd932922"
+    },
+    "IEEEtran.cls": {
+      "bytes": 288304,
+      "sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55"
+    }
+  },
+  "observed": {
+    "conference_pdf": "3pages; textual formatting guidance examined; page1 rendered and visually compared",
+    "howto": "28pages extracted; conference-mode distinctions and final-column balancing guidance examined; not a journal-layout template",
+    "class": "IEEEtran V1.8b2015/08/26; class defaults preserved",
+    "rules_applied": [
+      "conference documentclass",
+      "no altered class margins",
+      "table captions above",
+      "equations numbered by LaTeX",
+      "no template sample authors/references copied",
+      "no inferred venue page limit"
+    ]
+  },
+  "ignored": ".DS_Store is platform metadata, not project instructions",
+  "status": "Supplied-reference access gate resolved; full final-manuscript visual acceptance remains pending"
+}

@@ -1,6 +1,16 @@
 # Resume checkpoint — 2026-10-28
 
-## Latest milestone — IEEE source audit, 2026-10-28
+## Latest milestone — self-contained instructor, 2026-10-28
+
+- PR36 externally mergedc5e3e16; CI40690309970 SUCCESS; integrated48594d6 preserving checkpoint. Latest user brief operationalized docs/instructor-site-brief.md; all previous scope retained.
+- Supplied IEEE files NOW ACCESSIBLE at C:/Users/DELL/Downloads/ML LAB MINI PROJECT. reports/ieee-paper/evidence/supplied-template-review.json pins4files and actual review. Ignore .DS_Store. Earlier template-transfer blockers superseded; authors/venue still unknown.
+- Site: ownGitHub/notebook links removed from visitor markdown/sidebar; internal notebooks preserved. MP01 executes canonical image_tools.py and displays deterministic input, brightness/grayscale output, per-pixel numeric derivation, histogram, flow graph and PNG download. All7cat-v1 paths have accurate native block diagrams; docs/model-instructor.md contains shared derivations, parameter effects and honest application limits, reused in detailed supplement.
+- Paper: actual architecture family section/table and numerical conclusion added; compiled successfully. Test caught hybridRGBtranscription typo, corrected to50.2459from frozenrecord; no evaluation rerun. Latest PDF visual export/review blocked: computer-use tool denied ChatGPT access. Do not claim final PDF layout or deployedsite verified.
+- Tests:47learning/paper tests0.37s;13instructor/MP01tests+4subtests0.38s;40lesson selections/linkabsence/MP01brightness/histogram/exactscale passed;7model checks passed. reports/instructor-site-validation.json records sources and limits.
+- NEXT: verify currentPR/CI; complete MP02native inputs/outputs and explicit derivations/parameters using its verified helpers, continue individually through40, then deeper per-model training examples. Current40prose migration is not full instruction acceptance. Export/review currentpaper when UI available; finish detailed report typesetting and deployment verification. Preserve all untrainedM2/M6, geographic/crosssensor/resource gates.
+- Reproduce changedchecks only: devpython -m pytest tests/test_instructor_site.py stage_01_python_numpy/MP01_digital_image_explorer/test_image_tools.py -q; apppython scripts/check_learning_ui.py; apppython scripts/check_model_explorer.py. Publication appended after commit.
+
+## Preserved milestone — IEEE source audit, 2026-10-28
 
 - Latest user master brief saved `docs/ieee-reconstruction-brief.md`; read `reports/ieee-paper/RESUME.md` next. User requires comparing3providedPDFs before manuscript modification. Exact conference_041818.pdf/IEEEtran_HOWTO.pdf absent; Downloads/document.pdf is the known earlier4page session export. Do not misidentify that as a separately transferred manuscript. New manuscript reconstruction held at this explicit gate; independent audit completed.
 - Prior local954a390 native40lesson/report milestone was committed but unpublished at interruption. Preserve it. Origin/main89df7a7 confirmed after approved read-only fetch; PR35 CI40633080194 SUCCESS, no openPRs at intake. No remote merge performed.
@@ -60,3 +70,9 @@ python scripts/check_showcase.py
 ```
 
 Run changed checks only. Ingestion checks when changed: `python -m pytest tests/test_reflectance_job.py tests/test_surface_reflectance.py -q`. GitHub connector publication helper `../../work/publish_text_entries.py` emits origin/main..HEAD text entries; compare local/remote tree SHA. Shell push previously hung. Attach each created PR.
+
+## Publication checkpoint — 2026-10-28
+
+- Local branchfeat/mp27-attention; preserved teaching milestone954a390, auditd753b0a. Published draft PR36 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/36, branchfeat/native-learning-ieee-audit, head60a8a184448934a9202fe8f33b036a896a8f0f6f, treebd201f9a2ec4de1185aa857dbfc4d13f751b93cb exactly matches locald753b0a. Attached. CI40690309970 IN_PROGRESS at last observation; no success inferred. No PR merge performed.
+- Current checkpoint follow-up is local; include it in the next milestone. Tree clean before checkpoint edits. Independent publication recovered the previously interrupted work.
+- Next commands: inspect PR36 exact-head CI and currentmain; read reports/ieee-paper/RESUME.md. User-reference gate still requires exact conference_041818.pdf and IEEEtran_HOWTO.pdf; confirm intended document.pdf if different from known export. Continue native lesson/model explanations independently; preserve all scientific/resource limits.

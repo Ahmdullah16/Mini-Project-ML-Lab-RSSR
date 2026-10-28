@@ -402,9 +402,10 @@
       "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
     }
   ],
-  "supplement_sha256_utf8_lf": "c7121d322f87f6eb519d1c9f21ad9bd2ccef8f8355949ca4095a644892db24fb",
+  "supplement_sha256_utf8_lf": "f0439b195be7c88a3e15c978f3b64b26648aa36109e608d5869e9f5a951120cb",
   "shared_sources": {
     "docs/learning-reference.md": "1842e1e5f2a29a5146ce98d7fdc98119d506d71b22808d26a8ae166dd88d83c0",
+    "docs/model-instructor.md": "7c323a948f53316d219711707a5542ed9a9c9ae7407f47c4bb395e7ba96309c6",
     "docs/contribution-audit.json": "9fd038aeb55064c7647b0e450f517cea68aeb5cde42a4afdc6219e3ba4a8a54e"
   }
 }

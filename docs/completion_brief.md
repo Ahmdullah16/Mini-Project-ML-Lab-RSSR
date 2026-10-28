@@ -169,3 +169,8 @@ The [on-site teaching, report and contribution-audit brief](onsite-report-comple
 ## IEEE reconstruction request — 2026-10-28
 
 The [master reconstruction brief](ieee-reconstruction-brief.md) supplements the prior scope. Its explicit requirement to read and compare the existing PDF, conference template and HOWTO gates new manuscript reconstruction until the exact reference PDFs are accessible. Continue independent evidence audit under reports/ieee-paper/. Existing paper/ remains canonical until a reviewed migration; no duplicate diverging manuscript.
+
+
+## Self-contained instructor request — 2026-10-28
+
+Follow [instructor-site-brief.md](instructor-site-brief.md). Remove our GitHub/notebook links from visitor pages, preserve internal provenance, expand each lesson and all7model combinations into native instruction with actual inputs/outputs and math/parameter explanations. New supplied IEEE files are now accessible; earlier transfer-blocker notes are superseded by [review](../reports/ieee-paper/evidence/supplied-template-review.json). Industry usefulness/novelty requires evidence, never assertion.

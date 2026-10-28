@@ -9,6 +9,16 @@ from urllib.parse import quote
 REPO = 'https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/blob/main/'
 
 
+def visitor_prose(text):
+    """Keep references, but remove repository/notebook navigation from site prose."""
+    def replace(match):
+        label,target=match.groups()
+        if 'github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR' in target or '.ipynb' in target:
+            return '' if '.ipynb' in target else label
+        return match.group(0)
+    return re.sub(r'\[([^\]]+)\]\(([^\s)]+)\)',replace,text)
+
+
 def prose(text, source):
     """Keep mathematical Markdown; omit fenced code and notebook UI directions."""
     text = re.sub(r'```[^\n]*\n.*?```', '', text, flags=re.S)
