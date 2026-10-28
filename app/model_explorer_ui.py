@@ -18,16 +18,20 @@ def render(root):
     if not path.exists():
         st.warning('Historical checkpoint evidence is unavailable. No trained status has been substituted.');return
     records=json.loads(path.read_text(encoding='utf-8'))['rows']
+    pilot_path=root/'reports/missing-model-pilot.json'
+    pilots=json.loads(pilot_path.read_text(encoding='utf-8'))['runs'] if pilot_path.exists() else []
     for cols,start in [(st.columns(3),0),(st.columns(3),3),(st.columns(1),6)]:
         for col,key in zip(cols,list(NAMES)[start:start+len(cols)]):
             bindings=[r for r in records if r['status']=='verified historical binding' and r['registry_config']['architecture_id']=='cat-v1/'+key]
+            pilot_runs=[r for r in pilots if r['architecture_id']=='cat-v1/'+key]
             with col.container(border=True):
                 st.markdown(f'**{key} · {NAMES[key]}**')
-                st.caption('Implemented · '+(f'{len(bindings)} historical pilot bindings' if bindings else 'Training evidence unavailable'))
+                st.caption('Implemented · '+(f'{len(bindings)} historical pilot bindings' if bindings else f'{len(pilot_runs)} bounded training pilots' if pilot_runs else 'Training evidence unavailable'))
                 st.write(PATHS[key])
                 if bindings:
                     st.write('Recorded native scales: '+', '.join('×'+str(x) for x in sorted({r['registry_config']['scale'] for r in bindings})))
                     st.caption('Binding is specific to configuration and checkpoint; it does not establish deployment or geographic validity.')
+                elif pilot_runs:st.caption('Native ×2 RGB only. Local checkpoints verified; remote distribution and research acceptance pending.')
                 else:st.caption('No trained output offered for this configuration.')
     key=st.selectbox('Inspect architecture',list(NAMES),format_func=lambda k:k+' · '+NAMES[k],key='registry_architecture')
     st.write(PATHS[key]+' + bicubic input baseline')
@@ -42,6 +46,14 @@ def render(root):
         chosen=st.selectbox('Recorded checkpoint',rows,format_func=lambda r:f"{r['registry_config']['bands']} bands · width {r['registry_config']['width']} · seed {r['full_training_config']['seed']} · {r['run_id'][:8]}",key='registry_checkpoint_'+key)
         st.write(f"Parameters: {chosen['parameters']:,} · selected optimizer step: {chosen['selected_step']} · native ×{chosen['registry_config']['scale']}")
         st.caption('Checkpoint SHA256: '+chosen['checkpoint_sha256'])
+    selected_pilots=[r for r in pilots if r['architecture_id']=='cat-v1/'+key]
+    if selected_pilots:
+        chosen=st.selectbox('Bounded pilot checkpoint',selected_pilots,format_func=lambda r:f"Seed {r['seed']} · native ×2 · step {r['selected_step']}",key='registry_checkpoint_'+key)
+        st.write(f"Parameters: {chosen['parameters']:,} · training: {chosen['seconds_training']:.3f} seconds")
+        st.caption('Checkpoint SHA256: '+chosen['checkpoint_sha256'])
+        st.warning('Development-only pilot: 100 Adam steps, width 16, minimum validation L1 selection. No test evaluation, matched-budget claim or remote checkpoint availability. M2 budget matching remains unsuccessful.')
+        st.dataframe(chosen['validation_scene_means'],hide_index=True)
+        st.caption('PSNR is averaged over tiles separately within each validation scene; these are reused development scenes, not independent test evidence. Higher PSNR means lower squared error for the same range and border convention.')
     st.markdown('**What this shows:** distinct feature paths and verified historical artifact compatibility. **What it cannot show:** that more modules improve reconstruction, that all scales are trained natively, or that the models transfer to satellite reflectance.')
     st.info('At ×64, pixel count increases by 4096. Nominal output spacing equals input spacing / 64; validated resolving power remains unavailable without appropriate experiments.')
     with st.expander('Optional reproducibility evidence'):

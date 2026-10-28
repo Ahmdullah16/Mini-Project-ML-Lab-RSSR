@@ -1,0 +1,16 @@
+{
+  "id": "missing-cat-pilot-v1",
+  "architectures": ["cat-v1/M2", "cat-v1/M6"],
+  "seeds": [17, 23, 41],
+  "steps": 100,
+  "batch_size": 4,
+  "lr": 0.001,
+  "validate_every": 50,
+  "consistency_weight": 0.0,
+  "model": {"bands": 3, "scale": 2, "width": 16, "window": 4, "zero_residual": true},
+  "source_manifest": "data/prepared/90d092c8bc2d-x2-p32-n16-portable-v1/manifest.json",
+  "source_manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+  "allowed_splits": ["train", "validation"],
+  "max_wall_seconds_between_runs": 600,
+  "limits": "Existing cached data, CPU2threads,6short runs. No test tile reads or new downloads. Width16 pilot, not parameter/MAC matched: M2 preflight failure remains unchanged. This is engineering training/validation evidence, not independent geographic or cross-sensor research acceptance."
+}

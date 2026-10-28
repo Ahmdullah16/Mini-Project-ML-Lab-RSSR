@@ -1,0 +1,3255 @@
+{
+  "schema": "trained-rgb-capability-v1",
+  "source_hashes": {
+    "scripts/check_trained_scales.py": "eb36bf0b7d84355ba2f72a40c738b0fef1168ed8ffa2e022fc94435193526a7c",
+    "src/rssr/scaling.py": "ad9d83d251c0221b20912da9d401c96f9eb51f3cf3198dbb9a64ccbe5d2799fa",
+    "reports/missing-model-pilot.json": "deaa5f369f4ba7e8aaa7da6afc8c3f214cd5f419c8dd4ad3e55b472f54931fbe",
+    "reports/historical-architecture-bindings.json": "d367fcb611402128611393e5241fc501faa07072025d7635856362cf64d78d64"
+  },
+  "scope": "First listed compatible checkpoint per model, fixed synthetic odd rectangle 5x3; no test or satellite pixels. Higher scales are repeated learned native2 with bicubic residual and per-stage uint8 quantization. Temporary exports removed after verification.",
+  "memory_method": "Process RSS sampled every10ms, includes loaded libraries/prior allocator state; sampled maximum is not guaranteed peak or per-job allocation. No maximum-size execution claim.",
+  "rows": [
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 2,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M1",
+          "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.08821979999629548,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.052068500001041684,
+            "raw_range_normalized": [
+              -0.2223842740058899,
+              1.1268391609191895
+            ],
+            "clipped_scalar_fraction": 0.03888888888888889
+          }
+        ],
+        "output": "stage-1-x2.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "04d0431991c8dc4a39104213aa96307ad4e18b296ecd8e81574680a346d203f2",
+      "sampled_process_rss_max_bytes": 235085824
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 4,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M1",
+          "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.014709700000821613,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005323999997926876,
+            "raw_range_normalized": [
+              -0.2223842740058899,
+              1.1268391609191895
+            ],
+            "clipped_scalar_fraction": 0.03888888888888889
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005905400001211092,
+            "raw_range_normalized": [
+              -0.09068214893341064,
+              1.0399339199066162
+            ],
+            "clipped_scalar_fraction": 0.05
+          }
+        ],
+        "output": "stage-2-x4.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "9816d562243711183cecfa853a7c0fd957696d33bc69408517def4fc471601ec",
+      "sampled_process_rss_max_bytes": 235143168
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 8,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M1",
+          "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.020390300000144634,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.004147300001932308,
+            "raw_range_normalized": [
+              -0.2223842740058899,
+              1.1268391609191895
+            ],
+            "clipped_scalar_fraction": 0.03888888888888889
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005135599996719975,
+            "raw_range_normalized": [
+              -0.09068214893341064,
+              1.0399339199066162
+            ],
+            "clipped_scalar_fraction": 0.05
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.006262499999138527,
+            "raw_range_normalized": [
+              -0.05318412557244301,
+              1.0483394861221313
+            ],
+            "clipped_scalar_fraction": 0.042708333333333334
+          }
+        ],
+        "output": "stage-3-x8.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "743c77eba4c3bfc6a411ff190a09b355b46655d795b37e9db9979418c1fafb13",
+      "sampled_process_rss_max_bytes": 235565056
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 16,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M1",
+          "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.03823499999998603,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005388200006564148,
+            "raw_range_normalized": [
+              -0.2223842740058899,
+              1.1268391609191895
+            ],
+            "clipped_scalar_fraction": 0.03888888888888889
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.009180000000924338,
+            "raw_range_normalized": [
+              -0.09068214893341064,
+              1.0399339199066162
+            ],
+            "clipped_scalar_fraction": 0.05
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.00910190000286093,
+            "raw_range_normalized": [
+              -0.05318412557244301,
+              1.0483394861221313
+            ],
+            "clipped_scalar_fraction": 0.042708333333333334
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007783400003972929,
+            "raw_range_normalized": [
+              -0.03753392770886421,
+              1.0353387594223022
+            ],
+            "clipped_scalar_fraction": 0.035416666666666666
+          }
+        ],
+        "output": "stage-4-x16.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "b459799c8c52bd376d8766082d2a9695488e7a185ef6e9be93d8294a66b01042",
+      "sampled_process_rss_max_bytes": 236576768
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 32,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M1",
+          "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.04971820000355365,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.004870099997788202,
+            "raw_range_normalized": [
+              -0.2223842740058899,
+              1.1268391609191895
+            ],
+            "clipped_scalar_fraction": 0.03888888888888889
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007517400001233909,
+            "raw_range_normalized": [
+              -0.09068214893341064,
+              1.0399339199066162
+            ],
+            "clipped_scalar_fraction": 0.05
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008002099995792378,
+            "raw_range_normalized": [
+              -0.05318412557244301,
+              1.0483394861221313
+            ],
+            "clipped_scalar_fraction": 0.042708333333333334
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008871300000464544,
+            "raw_range_normalized": [
+              -0.03753392770886421,
+              1.0353387594223022
+            ],
+            "clipped_scalar_fraction": 0.035416666666666666
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.014577400004782248,
+            "raw_range_normalized": [
+              -0.028427165001630783,
+              1.0344570875167847
+            ],
+            "clipped_scalar_fraction": 0.02814670138888889
+          }
+        ],
+        "output": "stage-5-x32.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "d927cf71024918ed0f26c76c52a48c3a7ca2ed14e62b2a8b11fbb621000e007f",
+      "sampled_process_rss_max_bytes": 238919680
+    },
+    {
+      "architecture_id": "cat-v1/M1",
+      "scale": 64,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991",
+      "run_id": "fe25142d97e348209a906b05eee28ee4",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M1",
+          "checkpoint_sha256": "b2091734910e077443cc51dd98014925d22f007d0604717953005a53280b5991"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.09223740000015823,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.0036755000037373975,
+            "raw_range_normalized": [
+              -0.2223842740058899,
+              1.1268391609191895
+            ],
+            "clipped_scalar_fraction": 0.03888888888888889
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005796199999167584,
+            "raw_range_normalized": [
+              -0.09068214893341064,
+              1.0399339199066162
+            ],
+            "clipped_scalar_fraction": 0.05
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005246599997917656,
+            "raw_range_normalized": [
+              -0.05318412557244301,
+              1.0483394861221313
+            ],
+            "clipped_scalar_fraction": 0.042708333333333334
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008258399997430388,
+            "raw_range_normalized": [
+              -0.03753392770886421,
+              1.0353387594223022
+            ],
+            "clipped_scalar_fraction": 0.035416666666666666
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.012236800001119263,
+            "raw_range_normalized": [
+              -0.028427165001630783,
+              1.0344570875167847
+            ],
+            "clipped_scalar_fraction": 0.02814670138888889
+          },
+          {
+            "stage": 6,
+            "scale": 64,
+            "width": 320,
+            "height": 192,
+            "file": "stage-6-x64.tif",
+            "bytes": 393504,
+            "runtime_seconds": 0.04284749999351334,
+            "raw_range_normalized": [
+              -0.026649996638298035,
+              1.0353057384490967
+            ],
+            "clipped_scalar_fraction": 0.02377387152777778
+          }
+        ],
+        "output": "stage-6-x64.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "3c05b468f381dd6fcbb9046bbf322394071847382ab8bba18ced8f5b72d1d6cd",
+      "sampled_process_rss_max_bytes": 244641792
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 2,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+      "run_id": "0e2e2b96617046fa8f01b0a9a79eb37e",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M2",
+          "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.01323219999903813,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008665500005008653,
+            "raw_range_normalized": [
+              -0.1784624606370926,
+              1.0749620199203491
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          }
+        ],
+        "output": "stage-1-x2.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "50adb9e69199db4cb57cf546b7ffafea73e0785ef71d0e1e512304ce307fb7a2",
+      "sampled_process_rss_max_bytes": 244736000
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 4,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+      "run_id": "0e2e2b96617046fa8f01b0a9a79eb37e",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M2",
+          "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.019692300003953278,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.004892800003290176,
+            "raw_range_normalized": [
+              -0.1784624606370926,
+              1.0749620199203491
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.010362299995904323,
+            "raw_range_normalized": [
+              -0.035841893404722214,
+              1.0497217178344727
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          }
+        ],
+        "output": "stage-2-x4.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "b1dc1b0567ef6a912d05b3eb04b1001c55a8570b6802c7c889e3f79348525ed8",
+      "sampled_process_rss_max_bytes": 245256192
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 8,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+      "run_id": "0e2e2b96617046fa8f01b0a9a79eb37e",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M2",
+          "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.038023599998268764,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008896100000129081,
+            "raw_range_normalized": [
+              -0.1784624606370926,
+              1.0749620199203491
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008795400004601106,
+            "raw_range_normalized": [
+              -0.035841893404722214,
+              1.0497217178344727
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.012915900006191805,
+            "raw_range_normalized": [
+              -0.022148746997117996,
+              1.027767300605774
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          }
+        ],
+        "output": "stage-3-x8.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "dacbfeea61ca48c8904671006f18c6856d39b9b247dd80c4180d79d35cf60953",
+      "sampled_process_rss_max_bytes": 245829632
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 16,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+      "run_id": "0e2e2b96617046fa8f01b0a9a79eb37e",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M2",
+          "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.060101399998529814,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.010872899998503271,
+            "raw_range_normalized": [
+              -0.1784624606370926,
+              1.0749620199203491
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.011532000004081056,
+            "raw_range_normalized": [
+              -0.035841893404722214,
+              1.0497217178344727
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.012901100002636667,
+            "raw_range_normalized": [
+              -0.022148746997117996,
+              1.027767300605774
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.017791300000681076,
+            "raw_range_normalized": [
+              -0.007223098073154688,
+              1.0079776048660278
+            ],
+            "clipped_scalar_fraction": 0.005989583333333334
+          }
+        ],
+        "output": "stage-4-x16.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "3f07de04e91c749677c82f987b15a3ae0e575c03aab31bb1cb0e6bf5dfe5fa05",
+      "sampled_process_rss_max_bytes": 245825536
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 32,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+      "run_id": "0e2e2b96617046fa8f01b0a9a79eb37e",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M2",
+          "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.07881300000008196,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008465699997032061,
+            "raw_range_normalized": [
+              -0.1784624606370926,
+              1.0749620199203491
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.011435499996878207,
+            "raw_range_normalized": [
+              -0.035841893404722214,
+              1.0497217178344727
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.011540599996806122,
+            "raw_range_normalized": [
+              -0.022148746997117996,
+              1.027767300605774
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.01427479999983916,
+            "raw_range_normalized": [
+              -0.007223098073154688,
+              1.0079776048660278
+            ],
+            "clipped_scalar_fraction": 0.005989583333333334
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.020853299996815622,
+            "raw_range_normalized": [
+              -0.006059043109416962,
+              1.004607081413269
+            ],
+            "clipped_scalar_fraction": 0.004231770833333333
+          }
+        ],
+        "output": "stage-5-x32.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "5e547901687a38240fbc6a1adb05565dc6e15b39f6835ba85505026e9d65b51f",
+      "sampled_process_rss_max_bytes": 243793920
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "scale": 64,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+      "run_id": "0e2e2b96617046fa8f01b0a9a79eb37e",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M2",
+          "checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.10295709999627434,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008533799998986069,
+            "raw_range_normalized": [
+              -0.1784624606370926,
+              1.0749620199203491
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.012474000002839603,
+            "raw_range_normalized": [
+              -0.035841893404722214,
+              1.0497217178344727
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.012217399998917244,
+            "raw_range_normalized": [
+              -0.022148746997117996,
+              1.027767300605774
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.01145120000001043,
+            "raw_range_normalized": [
+              -0.007223098073154688,
+              1.0079776048660278
+            ],
+            "clipped_scalar_fraction": 0.005989583333333334
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.010193300004175398,
+            "raw_range_normalized": [
+              -0.006059043109416962,
+              1.004607081413269
+            ],
+            "clipped_scalar_fraction": 0.004231770833333333
+          },
+          {
+            "stage": 6,
+            "scale": 64,
+            "width": 320,
+            "height": 192,
+            "file": "stage-6-x64.tif",
+            "bytes": 393504,
+            "runtime_seconds": 0.024444800001219846,
+            "raw_range_normalized": [
+              -0.003896582406014204,
+              1.0043179988861084
+            ],
+            "clipped_scalar_fraction": 0.004383680555555556
+          }
+        ],
+        "output": "stage-6-x64.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "c2d7b277b8c30a5750b4ca2cda617d4a906367c5c126b7e7d21198d0113449f4",
+      "sampled_process_rss_max_bytes": 250097664
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 2,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 4,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 8,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 16,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 32,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "scale": 64,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 2,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 4,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 8,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 16,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 32,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "scale": 64,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 2,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 4,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 8,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 16,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 32,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "scale": 64,
+      "status": "unavailable: verified historical weights are four-band; RGB cascade requires three bands",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      }
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 2,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+      "run_id": "29741febf69a48ceb746cefa4937788f",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M6",
+          "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.010696099998313002,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007813200005330145,
+            "raw_range_normalized": [
+              -0.17715923488140106,
+              1.074365258216858
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          }
+        ],
+        "output": "stage-1-x2.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "0c04728826f07880b6e5ad05e079ad6e75ec376bce4ee33051d2cd50b543e8ed",
+      "sampled_process_rss_max_bytes": 256036864
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 4,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+      "run_id": "29741febf69a48ceb746cefa4937788f",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M6",
+          "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.01758539999718778,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.004405799998494331,
+            "raw_range_normalized": [
+              -0.17715923488140106,
+              1.074365258216858
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.009531600000627805,
+            "raw_range_normalized": [
+              -0.03382270410656929,
+              1.0490684509277344
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          }
+        ],
+        "output": "stage-2-x4.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "c95aa05aab4b5c4cd817e7d66870637de70393d7e1c45eebb32e4fc9ca54505d",
+      "sampled_process_rss_max_bytes": 255213568
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 8,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+      "run_id": "29741febf69a48ceb746cefa4937788f",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M6",
+          "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.023652099996979814,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005079000002297107,
+            "raw_range_normalized": [
+              -0.17715923488140106,
+              1.074365258216858
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.006796900001063477,
+            "raw_range_normalized": [
+              -0.03382270410656929,
+              1.0490684509277344
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007910699998319615,
+            "raw_range_normalized": [
+              -0.02156122401356697,
+              1.0294270515441895
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          }
+        ],
+        "output": "stage-3-x8.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "3ab5b53cdec8ee02b58ab51ad75bb69802e3054dc0e1e80a6eab127de2bd0588",
+      "sampled_process_rss_max_bytes": 255647744
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 16,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+      "run_id": "29741febf69a48ceb746cefa4937788f",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M6",
+          "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.036832899997534696,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007572599999548402,
+            "raw_range_normalized": [
+              -0.17715923488140106,
+              1.074365258216858
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.006545399999595247,
+            "raw_range_normalized": [
+              -0.03382270410656929,
+              1.0490684509277344
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.00836179999896558,
+            "raw_range_normalized": [
+              -0.02156122401356697,
+              1.0294270515441895
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.010734299998148344,
+            "raw_range_normalized": [
+              -0.0069206515327095985,
+              1.010394811630249
+            ],
+            "clipped_scalar_fraction": 0.007118055555555555
+          }
+        ],
+        "output": "stage-4-x16.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "767536f9f3df0c35e1eacc63cb1360bf5c069df05089860ac452a30885287666",
+      "sampled_process_rss_max_bytes": 255647744
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 32,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+      "run_id": "29741febf69a48ceb746cefa4937788f",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M6",
+          "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.07689070000196807,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007331100001465529,
+            "raw_range_normalized": [
+              -0.17715923488140106,
+              1.074365258216858
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.0076909999988856725,
+            "raw_range_normalized": [
+              -0.03382270410656929,
+              1.0490684509277344
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007871400004660245,
+            "raw_range_normalized": [
+              -0.02156122401356697,
+              1.0294270515441895
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.016424400004325435,
+            "raw_range_normalized": [
+              -0.0069206515327095985,
+              1.010394811630249
+            ],
+            "clipped_scalar_fraction": 0.007118055555555555
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.025768799998331815,
+            "raw_range_normalized": [
+              -0.002280884888023138,
+              1.0046225786209106
+            ],
+            "clipped_scalar_fraction": 0.006184895833333333
+          }
+        ],
+        "output": "stage-5-x32.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "6f10749a7e973e0b6649840b9050c4810f81f3b56f9f0532056baa05c98a64f2",
+      "sampled_process_rss_max_bytes": 249581568
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "scale": 64,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+      "run_id": "29741febf69a48ceb746cefa4937788f",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M6",
+          "checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.1392115000053309,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.0072212000013678335,
+            "raw_range_normalized": [
+              -0.17715923488140106,
+              1.074365258216858
+            ],
+            "clipped_scalar_fraction": 0.016666666666666666
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.0070434000008390285,
+            "raw_range_normalized": [
+              -0.03382270410656929,
+              1.0490684509277344
+            ],
+            "clipped_scalar_fraction": 0.022222222222222223
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.011176699998031836,
+            "raw_range_normalized": [
+              -0.02156122401356697,
+              1.0294270515441895
+            ],
+            "clipped_scalar_fraction": 0.012847222222222222
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.014053099999728147,
+            "raw_range_normalized": [
+              -0.0069206515327095985,
+              1.010394811630249
+            ],
+            "clipped_scalar_fraction": 0.007118055555555555
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.016616399996564724,
+            "raw_range_normalized": [
+              -0.002280884888023138,
+              1.0046225786209106
+            ],
+            "clipped_scalar_fraction": 0.006184895833333333
+          },
+          {
+            "stage": 6,
+            "scale": 64,
+            "width": 320,
+            "height": 192,
+            "file": "stage-6-x64.tif",
+            "bytes": 393504,
+            "runtime_seconds": 0.06804519999423064,
+            "raw_range_normalized": [
+              -0.0018058153800666332,
+              1.0034255981445312
+            ],
+            "clipped_scalar_fraction": 0.006521267361111111
+          }
+        ],
+        "output": "stage-6-x64.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "68ab3683b6708fb92cc715249f308e50b238660c0b2337a85173f56672111760",
+      "sampled_process_rss_max_bytes": 261160960
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 2,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 2,
+        "output_width": 10,
+        "output_height": 6,
+        "output_pixels": 60,
+        "stages": 1,
+        "output_rgb_bytes": 180,
+        "estimated_disk_bytes": 16777396,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M7",
+          "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.01272179999796208,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008070999996562023,
+            "raw_range_normalized": [
+              -0.19394846260547638,
+              1.1017398834228516
+            ],
+            "clipped_scalar_fraction": 0.044444444444444446
+          }
+        ],
+        "output": "stage-1-x2.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "b2b75e4b40dbd1d9837c9a074c5738af48c243c216f68ca26fff0b4f91e61cd9",
+      "sampled_process_rss_max_bytes": 260608000
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 4,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 4,
+        "output_width": 20,
+        "output_height": 12,
+        "output_pixels": 240,
+        "stages": 2,
+        "output_rgb_bytes": 720,
+        "estimated_disk_bytes": 16778116,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M7",
+          "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.026327799998398405,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.007144100003642961,
+            "raw_range_normalized": [
+              -0.19394846260547638,
+              1.1017398834228516
+            ],
+            "clipped_scalar_fraction": 0.044444444444444446
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.013687300001038238,
+            "raw_range_normalized": [
+              -0.06867603957653046,
+              1.0479621887207031
+            ],
+            "clipped_scalar_fraction": 0.03194444444444444
+          }
+        ],
+        "output": "stage-2-x4.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "e818212f320bd3b4fbacc5b1336872d3b1891e7ee5aeed98080ddea0064d98de",
+      "sampled_process_rss_max_bytes": 260911104
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 8,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 8,
+        "output_width": 40,
+        "output_height": 24,
+        "output_pixels": 960,
+        "stages": 3,
+        "output_rgb_bytes": 2880,
+        "estimated_disk_bytes": 16780996,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M7",
+          "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.038521800001035444,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.009708100005809683,
+            "raw_range_normalized": [
+              -0.19394846260547638,
+              1.1017398834228516
+            ],
+            "clipped_scalar_fraction": 0.044444444444444446
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.012438999998266809,
+            "raw_range_normalized": [
+              -0.06867603957653046,
+              1.0479621887207031
+            ],
+            "clipped_scalar_fraction": 0.03194444444444444
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.011351599998306483,
+            "raw_range_normalized": [
+              -0.03845697268843651,
+              1.0249340534210205
+            ],
+            "clipped_scalar_fraction": 0.021180555555555557
+          }
+        ],
+        "output": "stage-3-x8.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "528572a9982254679acc63f2549a7deb14352f42f798554a2704719f8a06f8e6",
+      "sampled_process_rss_max_bytes": 260947968
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 16,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 16,
+        "output_width": 80,
+        "output_height": 48,
+        "output_pixels": 3840,
+        "stages": 4,
+        "output_rgb_bytes": 11520,
+        "estimated_disk_bytes": 16792516,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M7",
+          "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.044894300001033116,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.006121600003098138,
+            "raw_range_normalized": [
+              -0.19394846260547638,
+              1.1017398834228516
+            ],
+            "clipped_scalar_fraction": 0.044444444444444446
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.009629099993617274,
+            "raw_range_normalized": [
+              -0.06867603957653046,
+              1.0479621887207031
+            ],
+            "clipped_scalar_fraction": 0.03194444444444444
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.01048169999558013,
+            "raw_range_normalized": [
+              -0.03845697268843651,
+              1.0249340534210205
+            ],
+            "clipped_scalar_fraction": 0.021180555555555557
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.014586200006306171,
+            "raw_range_normalized": [
+              -0.019102435559034348,
+              1.02621591091156
+            ],
+            "clipped_scalar_fraction": 0.02065972222222222
+          }
+        ],
+        "output": "stage-4-x16.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "cba2e8ff0539bcb045bc5494a4176cbeaad7ffb27d19f5da625239ef223f07a7",
+      "sampled_process_rss_max_bytes": 260960256
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 32,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 32,
+        "output_width": 160,
+        "output_height": 96,
+        "output_pixels": 15360,
+        "stages": 5,
+        "output_rgb_bytes": 46080,
+        "estimated_disk_bytes": 16838596,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M7",
+          "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.05028090000269003,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005357000001822598,
+            "raw_range_normalized": [
+              -0.19394846260547638,
+              1.1017398834228516
+            ],
+            "clipped_scalar_fraction": 0.044444444444444446
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.006306199997197837,
+            "raw_range_normalized": [
+              -0.06867603957653046,
+              1.0479621887207031
+            ],
+            "clipped_scalar_fraction": 0.03194444444444444
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.0071193999974639155,
+            "raw_range_normalized": [
+              -0.03845697268843651,
+              1.0249340534210205
+            ],
+            "clipped_scalar_fraction": 0.021180555555555557
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.009923900004650932,
+            "raw_range_normalized": [
+              -0.019102435559034348,
+              1.02621591091156
+            ],
+            "clipped_scalar_fraction": 0.02065972222222222
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.01612260000547394,
+            "raw_range_normalized": [
+              -0.022087976336479187,
+              1.0260365009307861
+            ],
+            "clipped_scalar_fraction": 0.019010416666666665
+          }
+        ],
+        "output": "stage-5-x32.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "a2792c3b0631786dbb4ec42d2280ec7dadea1991a1c3cdd93186d5b9b26cc07e",
+      "sampled_process_rss_max_bytes": 255377408
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "scale": 64,
+      "status": "executed synthetic geometry/export; not quality evidence",
+      "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192",
+      "run_id": "d443d5c54b054e1f92f3886960e010c6",
+      "preflight": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+      },
+      "provenance": {
+        "pipeline": "rgb-disk-cascade-v1",
+        "input_width": 5,
+        "input_height": 3,
+        "scale": 64,
+        "output_width": 320,
+        "output_height": 192,
+        "output_pixels": 61440,
+        "stages": 6,
+        "output_rgb_bytes": 184320,
+        "estimated_disk_bytes": 17022916,
+        "estimated_working_memory_bytes": 536870912,
+        "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+        "host_available": true,
+        "host_output_pixel_limit": 1048576,
+        "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+        "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail.",
+        "identity": {
+          "architecture_id": "cat-v1/M7",
+          "checkpoint_sha256": "523ce3952b1813ba72a77f064f879dea335f107d3f640893386b53e7450cf192"
+        },
+        "input_pixel_sha256": "8b20d84fbda0fe79c4f53dc873d32d09af9919dafe2d9c640f65180b9f183739",
+        "input_shape": [
+          3,
+          5,
+          3
+        ],
+        "runtime_seconds": 0.1344429000018863,
+        "stage_outputs": [
+          {
+            "stage": 1,
+            "scale": 2,
+            "width": 10,
+            "height": 6,
+            "file": "stage-1-x2.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.005619000003207475,
+            "raw_range_normalized": [
+              -0.19394846260547638,
+              1.1017398834228516
+            ],
+            "clipped_scalar_fraction": 0.044444444444444446
+          },
+          {
+            "stage": 2,
+            "scale": 4,
+            "width": 20,
+            "height": 12,
+            "file": "stage-2-x4.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.0074683999991975725,
+            "raw_range_normalized": [
+              -0.06867603957653046,
+              1.0479621887207031
+            ],
+            "clipped_scalar_fraction": 0.03194444444444444
+          },
+          {
+            "stage": 3,
+            "scale": 8,
+            "width": 40,
+            "height": 24,
+            "file": "stage-3-x8.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.008627499999420252,
+            "raw_range_normalized": [
+              -0.03845697268843651,
+              1.0249340534210205
+            ],
+            "clipped_scalar_fraction": 0.021180555555555557
+          },
+          {
+            "stage": 4,
+            "scale": 16,
+            "width": 80,
+            "height": 48,
+            "file": "stage-4-x16.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.015243299996654969,
+            "raw_range_normalized": [
+              -0.019102435559034348,
+              1.02621591091156
+            ],
+            "clipped_scalar_fraction": 0.02065972222222222
+          },
+          {
+            "stage": 5,
+            "scale": 32,
+            "width": 160,
+            "height": 96,
+            "file": "stage-5-x32.tif",
+            "bytes": 196880,
+            "runtime_seconds": 0.019739700001082383,
+            "raw_range_normalized": [
+              -0.022087976336479187,
+              1.0260365009307861
+            ],
+            "clipped_scalar_fraction": 0.019010416666666665
+          },
+          {
+            "stage": 6,
+            "scale": 64,
+            "width": 320,
+            "height": 192,
+            "file": "stage-6-x64.tif",
+            "bytes": 393504,
+            "runtime_seconds": 0.05903989999933401,
+            "raw_range_normalized": [
+              -0.02489502914249897,
+              1.026355504989624
+            ],
+            "clipped_scalar_fraction": 0.019476996527777776
+          }
+        ],
+        "output": "stage-6-x64.tif",
+        "preview": "preview.png",
+        "preview_note": "Bounded area-resampled preview only; full TIFF dimensions are unchanged.",
+        "tile": 128,
+        "halo": 32,
+        "seam_note": "Overlapped context with core trimming. Global pooling is approximate; consult inference diagnostic and cascade seam tests.",
+        "reference_metrics": "unavailable without aligned genuine HR",
+        "status": "complete"
+      },
+      "export_sha256": "6012c4e92cec9eca277c218f0730219b295f02d73d8672627e7d3d0033d209b2",
+      "sampled_process_rss_max_bytes": 266858496
+    }
+  ],
+  "native2_seams": [
+    {
+      "architecture_id": "cat-v1/M1",
+      "input_hw": [
+        65,
+        133
+      ],
+      "tile": 128,
+      "halo": 32,
+      "max_abs_normalized": 1.1920928955078125e-07,
+      "seam_band_max_abs_normalized": 1.1920928955078125e-07,
+      "interpretation": "Measured deviation only; global attention is context dependent, no universal seam-free claim."
+    },
+    {
+      "architecture_id": "cat-v1/M2",
+      "input_hw": [
+        65,
+        133
+      ],
+      "tile": 128,
+      "halo": 32,
+      "max_abs_normalized": 5.364418029785156e-06,
+      "seam_band_max_abs_normalized": 5.0067901611328125e-06,
+      "interpretation": "Measured deviation only; global attention is context dependent, no universal seam-free claim."
+    },
+    {
+      "architecture_id": "cat-v1/M6",
+      "input_hw": [
+        65,
+        133
+      ],
+      "tile": 128,
+      "halo": 32,
+      "max_abs_normalized": 2.980232238769531e-07,
+      "seam_band_max_abs_normalized": 2.980232238769531e-07,
+      "interpretation": "Measured deviation only; global attention is context dependent, no universal seam-free claim."
+    },
+    {
+      "architecture_id": "cat-v1/M7",
+      "input_hw": [
+        65,
+        133
+      ],
+      "tile": 128,
+      "halo": 32,
+      "max_abs_normalized": 0.00044655799865722656,
+      "seam_band_max_abs_normalized": 0.0004164576530456543,
+      "interpretation": "Measured deviation only; global attention is context dependent, no universal seam-free claim."
+    }
+  ],
+  "maximum_request_preflight_only": {
+    "pipeline": "rgb-disk-cascade-v1",
+    "input_width": 1024,
+    "input_height": 1024,
+    "scale": 64,
+    "output_width": 65536,
+    "output_height": 65536,
+    "output_pixels": 4294967296,
+    "stages": 6,
+    "output_rgb_bytes": 12884901888,
+    "estimated_disk_bytes": 17192452096,
+    "estimated_working_memory_bytes": 536870912,
+    "memory_note": "Configured allowance for CPU weights, tile activations and GDAL cache; not a measured peak or guarantee for arbitrary models.",
+    "host_available": false,
+    "host_output_pixel_limit": 1048576,
+    "method": "Repeated native learned x2; each stage clips to [0,1] and quantizes RGB uint8. Model includes its declared bicubic residual baseline. No extra scale interpolation.",
+    "limitation": "Cascades are not separately trained x4-x64 models; accumulated artifacts and global-pooling tile-context differences are possible. More pixels do not prove recovered detail."
+  }
+}

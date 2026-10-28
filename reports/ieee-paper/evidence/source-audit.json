@@ -2,7 +2,7 @@
   "schema": "ieee-source-audit-v1",
   "scope": "Recorded-source and citation integrity, not full scientific or bibliography verification",
   "source_sha256_utf8_lf": {
-    "paper/main.tex": "b5db26a0c2bcd924190d3a36f7c27c824688633d02ee05a739310e14e744e054",
+    "paper/main.tex": "98fb68908acb1a6bea238c42ee65d2198b8391e9ff160bf3159662bb317ddb8f",
     "paper/generated/results.tex": "0696f2506b8cb569375f98afc0a9bc9c045acd9282c425a34bdfd6806b2eeaf7",
     "paper/generated/interpretation.tex": "6fe1975845d615bc33e7067a5e1049e52e01a6fb49286c69d6bd5492e8e80af5",
     "paper/generated/contribution-audit.tex": "bb42c492d051a9f59b11d5b6a156f956c01aec2402de09ec2bc823ec277ed2af",

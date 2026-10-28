@@ -1,3 +1,13 @@
+# Latest milestone — trained missing models and RGB scale evidence, 2026-10-28
+
+- Latest execution brief: attachment42356034; current acceptance index docs/acceptance_matrix.md. Preserve all prior scope.
+- PR37 CI40694075637 SUCCESS and externally merged8a28fce; local integration1d8dcb7. Plan committed BEFORE training f6baa35.
+- Six actual M2/M6 width16 RGB native2 pilots,100steps,seeds17/23/41, selected step100 for all; train0.723–1.570seconds. reports/missing-model-pilot.json pins config/checkpoints/validation/reload. Ignored checkpoints at data/missing-cat-pilot-v1/runs; preserve locally. No test pixels read; no dataset download. Strict resume checksum check passed without retraining.
+-24/42 trained RGB scale entries executed: M1/M2/M6/M7 at2/4/8/16/32/64 on5x3 odd rectangle; TIFF dimensions and hashes recorded, native2 seams measured65x133. RSS sampled10ms is not exact peak. M3/M4/M5 verified weights have4bands; RGB executor requires3. No channel substitution. Full1024/65536 execution remains unverified. reports/trained-rgb-capability.json.
+- Model Explorer shows separate local pilot provenance/validation tables; all7navigation checks passed with network denied. Paper updated in place and built-in compile SUCCESS; historical binding table preserved. No remote checkpoint/deployment claim.
+- NEXT: finish targeted tests/source integrity, commit/publish milestone and inspect exact-head CI. Then add compatible M3/M4/M5 RGB pilot protocol (or four-band scientific executor), explicit Run controls and MP02 native lesson; continue40. Latest paper PDF visual review, formatted report/slides, durable accounts and deployed version/cold start remain open.
+- Commands: set PYTHONPATH=src; devpython -m pytest tests/test_missing_model_pilot.py tests/test_instructor_site.py tests/test_paper_source_audit.py tests/test_paper_evidence.py -q; apppython scripts/check_model_explorer.py; devpython scripts/audit_paper_sources.py --check. Do not rerun completed training/scales merely to refresh dates. Devpython ../../work/clean-venv/Scripts/python.exe; apppython ../../work/streamlit-venv/Scripts/python.exe.
+
 # Resume checkpoint — 2026-10-28
 
 ## Latest milestone — self-contained instructor, 2026-10-28
@@ -76,3 +86,7 @@ Run changed checks only. Ingestion checks when changed: `python -m pytest tests/
 - Local branchfeat/mp27-attention; preserved teaching milestone954a390, auditd753b0a. Published draft PR36 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/36, branchfeat/native-learning-ieee-audit, head60a8a184448934a9202fe8f33b036a896a8f0f6f, treebd201f9a2ec4de1185aa857dbfc4d13f751b93cb exactly matches locald753b0a. Attached. CI40690309970 IN_PROGRESS at last observation; no success inferred. No PR merge performed.
 - Current checkpoint follow-up is local; include it in the next milestone. Tree clean before checkpoint edits. Independent publication recovered the previously interrupted work.
 - Next commands: inspect PR36 exact-head CI and currentmain; read reports/ieee-paper/RESUME.md. User-reference gate still requires exact conference_041818.pdf and IEEEtran_HOWTO.pdf; confirm intended document.pdf if different from known export. Continue native lesson/model explanations independently; preserve all scientific/resource limits.
+
+## Publication checkpoint — instructor milestone
+
+Local implementation7400a2d onfeat/mp27-attention; published draft PR37 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/37 onfeat/self-contained-instructor, head0c1dacdde28c1d6c58fb86cae0128ed154b863dc. Remote treed00cefa7257987b8b48a81d1a3ad364522d75ba7 exactly matches local. Attached. CI40694075637 IN_PROGRESS at last check, no success inferred. No automatic merge or deployment verification. This checkpoint follow-up is local; carry into next milestone. Next: checkCI/main, implement MP02 native instructor using its verified numerical helpers, continue individual40lesson acceptance and report/PDF/deployment checks.

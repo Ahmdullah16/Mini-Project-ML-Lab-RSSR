@@ -1,3 +1,7 @@
+# Seven-model pilot and trained RGB scales — 2026-10-28
+
+Executed six bounded M2/M6 runs (100 steps, seeds17/23/41), validation-only, checkpoint reload verified. Frozen tests unchanged. All seven families now have local pilot training evidence; this does not complete research acceptance. Executed24 of42 trained RGB scale entries; M3/M4/M5 four-band weights remain incompatible. See [current acceptance matrix](acceptance_matrix.md), [pilot evidence](../reports/missing-model-pilot.json), [scale evidence](../reports/trained-rgb-capability.json).
+
 # MP40 historical robustness and efficiency — 2026-10-27
 
 [MP40](../stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/README.md) now derives30 condition rows,5 efficiency records and a visually checked [curve figure](../reports/figures/mp40-robustness.svg) from existing development evidence. Five tests, report/figure generation and expanded three-cell real kernel passed. No new benchmark or frozen inference. MP38–MP40 expanded components are verified, but full scientific acceptance remains In progress. Unknown memory/compute/cross-sensor results remain unavailable.

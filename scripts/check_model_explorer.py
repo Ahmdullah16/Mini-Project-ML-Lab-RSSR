@@ -11,6 +11,8 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Network on model
         app.selectbox(key='registry_architecture').set_value(key).run()
         assert not app.exception and not app.error,key
         labels=[s.key for s in app.selectbox]
-        assert ('registry_checkpoint_'+key in labels)==(key not in ('M2','M6'))
+        assert 'registry_checkpoint_'+key in labels
+        if key in ('M2','M6'):
+            assert any('Development-only pilot' in item.value for item in app.warning)
         assert any('4096' in item.value for item in app.info)
-print('Seven model selections passed; missing checkpoints stay unavailable; no network')
+print('Seven model selections passed; bounded pilot records distinguished from historical bindings; no network')
