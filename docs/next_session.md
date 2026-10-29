@@ -1,3 +1,15 @@
+# Resumed merge and verification — 2026-10-29
+
+- Interrupted merge completed d3ed959; preserved newer satellite comparison, acceptance matrix and regenerated report. Original verification reports preserved; new completed local reruns stored separately as reports/scale-comparison-validation-20261029.json and reports/scale-streamlit-restart-20261029.json. Records contain successful final assertions (three published model comparison/cache/retry; two empty-cache process restart runs), not public deployment.
+- PR40 failure diagnosis and key-based repair remain as below. Publish comparison/repair against origin/main e02c25a, then inspect actual-head CI. Do not mark CI passed from local tests.
+
+# Latest follow-up — satellite comparison and CI repair, 2026-10-29
+
+- PR40 head48a7bf08 CI40746483577 FAILED streamlit check_showcase.py positionalbutton after addedteachingcontrol; pytestjob passed. Externally merged e02c25a before repair. No agent merge. Fix uses scaled_liveprepare key; local7section check passed.
+- New Single/Compare satellite workflow: samepreparedsourceSHA, sequentialpinnedRGBmodels, independentresults/errors, targetedretry, keyincludes source/spec/scale/divisor/pipeline, stale scale/source selections dropped, permodelGeoTIFF/provenance and runtimetable/chart. Boundhost requests only.
+- scripts/check_satellite_comparison.py actually ran2cachedCNNmodels on same5x3 georeferencedfixture →10x6; CRS32632/extent retained. Injected2ndfailure preserves1sthash; targetedretry succeeds; scaleinvalidates. reports/satellite-comparison-validation.json. No providerrequest or frozenresult rerun.
+- NEXT: publishrepair/newcomparison and inspectCI; add commonzoom/bicubic/details/disagreement, strengthen scientificmask/nodata tests and all7checkpoint availability. ContinueMP03onward. Prior metricpanel tests26plus41lesson tests passed; report/sourceintegrity passed. Publicdeployment, full40lessons and fullscientificcompletion NOTclaimed.
+
 # Current checkpoint — metric instruction and shared availability, 2026-10-29
 
 - New mandatory brief saved docs/mandatory-website-brief.md; all7groups in docs/acceptance_matrix.md. Full40onsiteoutput and7model execution remain mandatory, not fulfilled by visibility.

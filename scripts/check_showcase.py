@@ -34,7 +34,7 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Network access o
     assert not app.exception
     app.radio(key='section').set_value('Live SR').run()
     app.radio(key='scaled_livechoice').set_value('Upload').run()
-    app.button[0].click().run()
+    app.button(key='scaled_liveprepare').click().run()
     assert not app.exception and any('Choose an image' in e.value for e in app.error)
     app.radio(key='section').set_value('Satellite Explorer').run()
     app.date_input[0].set_value(app.date_input[1].value.replace(year=app.date_input[1].value.year+1)).run()

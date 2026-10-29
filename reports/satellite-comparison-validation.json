@@ -1,0 +1,18 @@
+{
+  "scope": "Offline synthetic5x3 georeferenced fixture, two actual cached hosted CNN checkpoints; no provider query, no generalization claim",
+  "verified": [
+    "same source SHA256 for both models",
+    "two exact10x6 outputs, CRS32632 and unchanged spatial extent",
+    "injected second-model failure preserves first output",
+    "targeted retry succeeds without changing first output",
+    "scale change clears stale results",
+    "input and scale identities differ"
+  ],
+  "not_verified": [
+    "all7model execution",
+    "provider scientific alignment",
+    "cloud masks",
+    "shared zoom/baseline/disagreement maps",
+    "current public UI"
+  ]
+}

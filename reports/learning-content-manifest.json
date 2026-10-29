@@ -402,12 +402,12 @@
       "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
     }
   ],
-  "supplement_sha256_utf8_lf": "1dac39fdcfa6b20001b43576ccebe981969412a07ba8c0f2393c4d9057c6b742",
+  "supplement_sha256_utf8_lf": "eab79cc86cb4c38c9da55c254a5b4b167bc8fc54b30c2a10b505365abbd25671",
   "shared_sources": {
     "docs/learning-reference.md": "1842e1e5f2a29a5146ce98d7fdc98119d506d71b22808d26a8ae166dd88d83c0",
     "docs/model-instructor.md": "7c323a948f53316d219711707a5542ed9a9c9ae7407f47c4bb395e7ba96309c6",
     "docs/contribution-audit.json": "9fd038aeb55064c7647b0e450f517cea68aeb5cde42a4afdc6219e3ba4a8a54e",
     "docs/metric-instructor.md": "fd4b0cd424162e1d1749ed8c8eccfffa443b50e2eb4e6acf51f6db4c3ac683dc",
-    "docs/website-validation-update.md": "b488454be9811ad4df39e03950457cb8b80f659b8ebdbd9797d82bc9a74e0900"
+    "docs/website-validation-update.md": "bd1d29d3f79348182ecfa4f41ab60734ae32173e85fa9dba9772e1d9c2842d0c"
   }
 }

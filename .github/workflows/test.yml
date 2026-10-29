@@ -35,3 +35,4 @@ jobs:
       - run: python scripts/check_model_catalog.py
       - run: python scripts/check_comparison.py
       - run: python scripts/check_satellite_scale.py
+      - run: python scripts/check_satellite_comparison.py
