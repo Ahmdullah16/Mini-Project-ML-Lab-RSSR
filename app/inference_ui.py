@@ -86,5 +86,10 @@ def render_satellite():
             finally: lock.release()
         except Exception as error:
             st.error(f'Satellite request did not complete: {error}')
-    from satellite_scale_ui import render_satellite_scale
-    render_satellite_scale()
+    workflow=st.radio('Satellite inference workflow',['Single model','Compare models'],key='satellite_workflow')
+    if workflow=='Single model':
+        from satellite_scale_ui import render_satellite_scale
+        render_satellite_scale()
+    else:
+        from satellite_compare_ui import render
+        render()
