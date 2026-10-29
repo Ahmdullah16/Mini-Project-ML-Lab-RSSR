@@ -37,9 +37,16 @@ for r in cache.values():
   with mem.open() as ds:
    assert (ds.width,ds.height,ds.crs.to_epsg())==(10,6,32632)
    assert tuple(ds.bounds)==(100,170,150,200)
+saved={k:hashlib.sha256(v['geotiff']).hexdigest() for k,v in cache.items()}
+app.selectbox(key='sat_detail_zoom').set_value(4).run()
+app.slider(key='sat_detail_split').set_value(0.).run()
+app.slider(key='sat_detail_x').set_value(1.).run()
+assert not app.exception
+assert saved=={k:hashlib.sha256(v['geotiff']).hexdigest() for k,v in app.session_state['sat_compare_results'].items()}
+assert any('Shared preview crop' in x.value for x in app.caption)
 app.selectbox(key='sat_compare_scale').set_value(4).run()
 assert not app.session_state['sat_compare_results']
 assert identity(source,CATALOG[0],2)!=identity(source,CATALOG[0],4)
 assert identity(source,CATALOG[0],2)!=identity(source+b'changed',CATALOG[0],2)
-(ROOT/'reports/satellite-comparison-validation.json').write_text(json.dumps({'scope':'Offline synthetic5x3 georeferenced fixture, two actual cached hosted CNN checkpoints; no provider query, no generalization claim','verified':['same source SHA256 for both models','two exact10x6 outputs, CRS32632 and unchanged spatial extent','injected second-model failure preserves first output','targeted retry succeeds without changing first output','scale change clears stale results','input and scale identities differ'],'not_verified':['all7model execution','provider scientific alignment','cloud masks','shared zoom/baseline/disagreement maps','current public UI']},indent=2)+'\n',encoding='utf-8')
+(ROOT/'reports/satellite-comparison-validation.json').write_text(json.dumps({'scope':'Offline synthetic5x3 georeferenced fixture, two actual cached hosted CNN checkpoints; no provider query, no generalization claim','verified':['same source SHA256 for both models','two exact10x6 outputs, CRS32632 and unchanged spatial extent','injected second-model failure preserves first output','targeted retry succeeds without changing first output','shared zoom/divider controls preserve exact exports','scale change clears stale results','input and scale identities differ'],'not_verified':['all7model execution','provider scientific alignment','cloud masks','current public UI']},indent=2)+'\n',encoding='utf-8')
 print('Two actual model exports, common source/CRS/extent, failure preservation, retry and scale invalidation passed')

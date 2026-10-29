@@ -47,6 +47,13 @@ def render():
     if st.button('Run selected satellite comparisons',key='sat_compare_run',disabled=not specs or not request['host_available']):
         for spec in specs:
             if identity(source,spec,scale) not in cache:run_one(spec)
+    if cache or failures:
+        st.subheader('Shared detail view · same crop and fixed display contrast')
+        zoom=st.selectbox('Detail zoom',[1,2,4],key='sat_detail_zoom')
+        cx=st.slider('Detail horizontal center',0.,1.,.5,key='sat_detail_x')
+        cy=st.slider('Detail vertical center',0.,1.,.5,key='sat_detail_y')
+        split=st.slider('Before/after divider · bicubic left, model right',0.,1.,.5,key='sat_detail_split')
+        st.caption('Common controls apply to every model below. Previews are bounded to256pixels per side; zoom enlarges a shared preview crop, not a new inference. Bicubic is calculated on the exact output grid before area preview reduction; it is an interpolation baseline, not HR ground truth. Fixed0–1 contrast; invalid preview pixels shown black. Disagreement is measured before display clipping, then bounded for visualization.')
     rows=[]
     for spec in specs:
         key=identity(source,spec,scale)
@@ -58,6 +65,14 @@ def render():
         if key in cache:
             result=cache[key];meta=result['metadata']
             st.image(preview(result['geotiff']),caption=spec['label']+' · identical fixed0–1 display, no per-model stretch')
+            from rssr.comparison_views import comparison_views,crop_and_wipe
+            views=comparison_views(source,result['geotiff'],scale)
+            detail=crop_and_wipe(views,cx,cy,zoom,split)
+            cols=st.columns(3)
+            cols[0].image(detail['baseline'],caption='Bicubic detail · interpolation only',width='stretch')
+            cols[1].image(detail['wipe'],caption='Bicubic/model divider · '+spec['label'],width='stretch')
+            cols[2].image(detail['disagreement'],caption='Absolute disagreement from bicubic, not error to HR',clamp=True,width='stretch')
+            st.caption('Shared preview crop x,y,width,height: '+str(detail['preview_crop_xywh']))
             st.download_button('GeoTIFF · '+spec['label'],result['geotiff'],key+'.tif','image/tiff',key=key+'_tiff')
             st.download_button('Provenance · '+spec['label'],json.dumps(meta,indent=2),key+'.json','application/json',key=key+'_meta')
             rows.append({'model':spec['label'],'scale':scale,'width':request['output_width'],'height':request['output_height'],'seconds':meta['runtime_seconds'],'checkpoint':spec['checkpoint']['sha256'],'reference_accuracy':'unavailable: no aligned HR'})
@@ -65,4 +80,4 @@ def render():
         st.dataframe(rows,hide_index=True)
         st.bar_chart({r['model']:r['seconds'] for r in rows},y_label='Measured runtime (seconds)')
         st.download_button('Comparison results JSON',json.dumps(rows,indent=2),'satellite-comparison.json','application/json')
-    st.info('This is a shared-source execution comparison, not validated reconstruction accuracy. Source CRS/extent/masks remain in GeoTIFFs. Synchronized zoom, bicubic/detail panels and disagreement maps are still pending; no genuine HR is available here.')
+    st.info('This is a shared-source execution comparison, not validated reconstruction accuracy. Source CRS/extent/masks remain in GeoTIFFs. Shared preview zoom/bicubic/disagreement are display aids; no genuine HR is available here and these are not reconstruction-error maps.')

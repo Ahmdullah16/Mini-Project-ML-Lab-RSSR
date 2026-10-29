@@ -5,6 +5,7 @@
     "two exact10x6 outputs, CRS32632 and unchanged spatial extent",
     "injected second-model failure preserves first output",
     "targeted retry succeeds without changing first output",
+    "shared zoom/divider controls preserve exact exports",
     "scale change clears stale results",
     "input and scale identities differ"
   ],
@@ -12,7 +13,12 @@
     "all7model execution",
     "provider scientific alignment",
     "cloud masks",
-    "shared zoom/baseline/disagreement maps",
     "current public UI"
-  ]
+  ],
+  "preview_tests": "6 tests passed9.31s: matched grid, misaligned dimensions/CRS/extent rejection, resource cap, bounded preview and crop/divider endpoints",
+  "source_sha256": {
+    "src/rssr/comparison_views.py": "6bd10009f2068c1d132f12fed3eeed86ce077e75560adbbf9defd1c10859d495",
+    "app/satellite_compare_ui.py": "905321bb1934f8b14b769da1a3cbdd20df89d21b9fc66fa3136c35fd13d32a4d",
+    "scripts/check_satellite_comparison.py": "62bf1325b210a33d3a22626e784219f811c92f508533fc1af7e84ccb2b268d6c"
+  }
 }
