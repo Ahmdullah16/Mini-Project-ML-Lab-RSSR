@@ -1,3 +1,11 @@
+# Current detail-view milestone — 2026-10-29
+
+- PR41 d257805c1b17d7d4b07698228ee469971df9db54 CI40820234069 SUCCESS; externally merged e85f477. PR40 positionalbutton failure is repaired and passing.
+- Added bounded common-grid satellite preview: exact-grid bicubic baseline then area preview≤256, shared normalizedcrop centers/zoom1,2,4, divider and absolute disagreement (not accuracy). Fixed0–1 contrast, invalidblack, fullGeoTIFF unchanged. src/rssr/comparison_views.py rejects grid/CRS/extent mismatch and >hostcap BEFORE baseline allocation.
+-6previewtests passed9.31s; two actualcachedmodels AppTest verified commoncontrols and preservedexporthashes, retries/scaleinvalidation stillpassed. reports/satellite-comparison-validation.json includes sources. Float32 casting fixed dividerendpoint roundoff found bytest.
+- NEXT: publish this follow-up and inspect its CI. Then complete remaining compatibleRGB checkpoint integrations forM2–M6; all7visibility is not execution. Strengthen masks/nodata/common-source scientific validity; LiveSR shared view parity; MP03onward native lessons; finalreport/paper/publicbrowser acceptance remain open. No fresh satellite acquisition or frozenresult rerun.
+- Commands: PYTHONPATH=src; devpython -m pytest tests/test_comparison_views.py -q; apppython scripts/check_satellite_comparison.py; devpython scripts/build_learning_supplement.py --check. Keep paper/main.tex open; noTeXchange thisturn.
+
 # Resumed merge and verification — 2026-10-29
 
 - Interrupted merge completed d3ed959; preserved newer satellite comparison, acceptance matrix and regenerated report. Original verification reports preserved; new completed local reruns stored separately as reports/scale-comparison-validation-20261029.json and reports/scale-streamlit-restart-20261029.json. Records contain successful final assertions (three published model comparison/cache/retry; two empty-cache process restart runs), not public deployment.
