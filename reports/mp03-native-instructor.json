@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-30",
+  "checks": [
+    "6 canonical MP03 tests passed in 6.55s",
+    "40 lesson AppTest passed; MP03 checkerboard half-scale MAE0.5/MSE0.25; identity zero disagreement; ramp4x exact48x32; parameter change clears result"
+  ],
+  "source_hashes": {
+    "app/resize_lab_ui.py": "c576bd5bad0db3b2a0c5be13a0f01a62d1a050ff29ecce34e629aa8229a38bf0",
+    "src/rssr/image_foundations.py": "3638a577d66c19b5e8ea73dc722ef3a1b5fdc3e29de7e36c5a8534a0df90b138",
+    "scripts/check_learning_ui.py": "8be2ae4ef56ff0b3bdb74ac067a9607fcdd66b2f449bdbb7429575d975849942"
+  },
+  "limits": "Two interpolation methods on synthetic fixtures; no scientific SR acceptance or bicubic execution claim."
+}

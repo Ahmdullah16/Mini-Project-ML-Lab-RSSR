@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-30",
+  "public_url": "https://mini-project-ml-lab-rssr.streamlit.app/",
+  "deployed_commit": "7c2316045d6a96a54afcf389bdf1e904d3297cf2",
+  "input": "licensed cached training example,16x16 RGB",
+  "output": "32x32 per checkpoint",
+  "models": [
+    "CNN pilot v1",
+    "CNN v2",
+    "M7 hybrid v2",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6"
+  ],
+  "displayed_pipeline_seconds": [
+    0.005,
+    0.004,
+    0.006,
+    0.004,
+    0.005,
+    0.005,
+    0.006,
+    0.006
+  ],
+  "observed": "All eight previews, runtime labels, TIFF/provenance controls and comparison bundle appeared after Run prepared request. No error shown.",
+  "limitations": [
+    "Downloads not independently retrieved in this browser check",
+    "Not a cold-start/persistence test",
+    "Satellite public inference not verified in this record",
+    "No aligned HR or scientific accuracy measurement"
+  ],
+  "screenshot": "../../work/seven-family-public-20261030.jpg"
+}

@@ -1,3 +1,9 @@
+# Current follow-up — 2026-10-30
+
+- PR43 head480bb600 CI41088399016 SUCCESS; externally merged7c231604. Public browser Application version confirms7c231604 and all7RGB families available. No agent merge. Public eight-checkpoint16x16→32x32 request PASSED: reports/public-seven-family-20261030.json.
+- MP03 native nearest/bilinear lab implemented using canonical resize_hwc: explicit Run, half-pixel derivation, worked example, deterministic rectangular fixtures, row profiles, disagreement, runtime, PNGs. Six canonical tests passed6.55s; expanded40lesson AppTest PASSED: reports/mp03-native-instructor.json. No frozen data regenerated.
+- NEXT: commit follow-up, integrate external merge and publish PR; inspect exact-head CI. Continue MP04 native lab and remaining acceptance gates; no research completion claim.
+
 # Recovered release milestone — 2026-10-30
 
 - Latest user public check: accessible, LiveSR/Satelliteload, CNN16x16→32x32 ran; sevenfamiliesvisible but olddeployment onlyM1/M7executable. Do NOT repeat oldaccessblocker.
@@ -6,7 +12,7 @@
 -9newRGBpilotruns100steps/seeds17,23,41; reports/rgb-compatible-pilot.json. ExistingM2/M6reused.42/42smalltrainedscales executed reports/trained-rgb-capability-v2.json. Frozen test untouched.
 - GitHub prerelease v0.3.0-rgb-pilots PUBLISHED with5portableweights + manifest; binaryassets outsideGit. reports/rgb-pilot-release-manifest.json pins hashes. Release screenshot ../../work/rgb-pilot-release-published.jpg. configs/hosted-models.json integratesM2–M6; hosted_assets permits onlyexactprojectreleaseprefix plus existingrawhost, requireschecksum/bytes.
 - Actual local8catalogchecks covering7families: cleancheckpointdownloads,LiveSR and512x512→1024x1024 checks passed; fullcatalogLiveSRcomparison and satellitecomparison/retry passed. reports/seven-family-hosted-catalog-check.json, scale-seven-family-comparison.json, seven-family-satellite-validation.json.
-- Fullpytest496passed+17subtests54.77s (62warnings), before latest documentation reconciliation. All40lesson AppTest and metricUI currentrun stillbeingcollected; do not mark them passed prematurely.
+- Fullpytest496passed+17subtests54.77s (62warnings), before latest documentation reconciliation. All40lesson AppTest and metricUI passed after collection.
 - NEXT: finish collection, report/sourceintegrity, commit/publishreviewPR, inspectactualheadCI; verifypublicdeployment/version+allfamilies andMini-projects/SatellitewithoutImportError. Then MP03onward fullinstruction, scientificmask/realpairprotocol/report/PDFreview. Noautomaticmerge.
 - Environment: PYTHONPATH=src everycommand (devvenv has older editable checkout otherwise). Dev ../../work/clean-venv/Scripts/python.exe; app ../../work/streamlit-venv/Scripts/python.exe. Do not rerun completed training/frozenresults.
 

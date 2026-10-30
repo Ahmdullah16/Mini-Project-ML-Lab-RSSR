@@ -99,7 +99,7 @@ if section=='Overview':
         st.caption('Compact educational architecture; not an exact RCAN, CBAM or SwinIR reproduction.')
     with right:
         st.subheader('Completion, without shortcuts')
-        st.markdown(f'**Engineering:** historical public hybrid inference recorded; current public access unverified. Stateless service.\n\n**Education:** {expanded} lessons expanded; inspect project-specific completion criteria.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
+        st.markdown(f'**Engineering:** public app access and seven-family deployment verified on 2026-10-30; execution evidence is dated separately. Stateless service.\n\n**Education:** {expanded} lessons expanded; inspect project-specific completion criteria.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
     with st.expander('Why remote sensing needs more than sharper previews'):
         st.write('Generated texture can look convincing without matching the ground. Sensor response, registration, sampling and physical calibration matter. Display previews and synthetic PSNR do not establish reflectance or downstream accuracy.')
 elif section=='Live SR':

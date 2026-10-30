@@ -35,6 +35,23 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Network during t
     app.button(key='mp02_run').click().run()
     assert any('means=[65.0, 65.0, 75.0]' in w.value for w in app.markdown)
     assert any('variances=[1125.0, 1125.0, 1125.0]' in w.value for w in app.markdown)
+    app.selectbox(key='onsite_lesson').set_value('MP03').run()
+    assert not app.success
+    app.selectbox(key='mp03_factor').set_value(0.5).run()
+    app.button(key='mp03_run').click().run()
+    assert not app.exception
+    assert any('6 × 4; 24 pixels' in w.value for w in app.markdown)
+    assert any('MAE=0.5; MSE=0.25' in w.value for w in app.markdown)
+    assert any('nearest is constant 0' in w.value for w in app.success)
+    app.selectbox(key='mp03_factor').set_value(1).run()
+    assert not app.success
+    app.button(key='mp03_run').click().run()
+    assert any('MAE=0; MSE=0' in w.value for w in app.markdown)
+    app.selectbox(key='mp03_fixture').set_value('Horizontal ramp').run()
+    app.selectbox(key='mp03_factor').set_value(4).run()
+    app.button(key='mp03_run').click().run()
+    assert not app.exception
+    assert any('48 × 32; 1536 pixels' in w.value for w in app.markdown)
     app.slider(key='teaching_width').set_value(256)
     app.slider(key='teaching_height').set_value(128)
     app.selectbox(key='teaching_scale').set_value(8).run()
