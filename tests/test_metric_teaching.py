@@ -32,6 +32,6 @@ def test_shared_availability_uses_checkpoint_identity():
     rows=availability(Path(__file__).resolve().parents[1])
     assert len(rows)==7
     assert [r['model'].split(' · ')[0] for r in rows]==[f'M{i}' for i in range(1,8)]
-    assert [r['model'].split(' · ')[0] for r in rows if r['rgb_execution']]==['M1','M7']
+    assert [r['model'].split(' · ')[0] for r in rows if r['rgb_execution']]==[f'M{i}' for i in range(1,8)]
     assert all(r['checkpoint_sha256'] for r in rows)
-    assert all('four-band' in rows[i]['status'] for i in (2,3,4))
+    assert all('Pinned hosted RGB' in row['status'] for row in rows)

@@ -17,6 +17,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def main():
     historical=json.loads((ROOT/'reports/historical-architecture-bindings.json').read_text())['rows']
     pilots=json.loads((ROOT/'reports/missing-model-pilot.json').read_text())['runs']
+    pilots+=json.loads((ROOT/'reports/rgb-compatible-pilot.json').read_text(encoding='utf-8'))['runs']
     rows=[];seams=[];torch.set_num_threads(2)
     image=np.random.default_rng(17).integers(0,256,(3,5,3),dtype=np.uint8)
     for number in range(1,8):
@@ -53,7 +54,7 @@ def main():
                     rows.append({'architecture_id':key,'scale':scale,'status':'executed synthetic geometry/export; not quality evidence','checkpoint_sha256':digest(checkpoint),'run_id':record['run_id'],'preflight':request,'provenance':metadata,'export_sha256':digest(folder/metadata['output']),'sampled_process_rss_max_bytes':max(samples) if samples else process.memory_info().rss})
             finally:
                 stop.set();sampler.join()
-    report={'schema':'trained-rgb-capability-v1','source_hashes':{p:digest(ROOT/p) for p in ['scripts/check_trained_scales.py','src/rssr/scaling.py','reports/missing-model-pilot.json','reports/historical-architecture-bindings.json']},'scope':'First listed compatible checkpoint per model, fixed synthetic odd rectangle 5x3; no test or satellite pixels. Higher scales are repeated learned native2 with bicubic residual and per-stage uint8 quantization. Temporary exports removed after verification.','memory_method':'Process RSS sampled every10ms, includes loaded libraries/prior allocator state; sampled maximum is not guaranteed peak or per-job allocation. No maximum-size execution claim.','rows':rows,'native2_seams':seams,'maximum_request_preflight_only':plan(1024,1024,64)}
-    (ROOT/'reports/trained-rgb-capability.json').write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
+    report={'schema':'trained-rgb-capability-v1','source_hashes':{p:digest(ROOT/p) for p in ['scripts/check_trained_scales.py','src/rssr/scaling.py','reports/missing-model-pilot.json','reports/rgb-compatible-pilot.json','reports/historical-architecture-bindings.json']},'scope':'First listed compatible checkpoint per model, fixed synthetic odd rectangle 5x3; no test or satellite pixels. Higher scales are repeated learned native2 with bicubic residual and per-stage uint8 quantization. Temporary exports removed after verification.','memory_method':'Process RSS sampled every10ms, includes loaded libraries/prior allocator state; sampled maximum is not guaranteed peak or per-job allocation. No maximum-size execution claim.','rows':rows,'native2_seams':seams,'maximum_request_preflight_only':plan(1024,1024,64)}
+    (ROOT/'reports/trained-rgb-capability-v2.json').write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
     print('Executed',sum(r['status'].startswith('executed') for r in rows),'of',len(rows),'entries')
 if __name__=='__main__':main()

@@ -44,9 +44,13 @@ app.slider(key='sat_detail_x').set_value(1.).run()
 assert not app.exception
 assert saved=={k:hashlib.sha256(v['geotiff']).hexdigest() for k,v in app.session_state['sat_compare_results'].items()}
 assert any('Shared preview crop' in x.value for x in app.caption)
+app.multiselect(key='sat_compare_models').set_value([s['label'] for s in CATALOG]).run()
+app.button(key='sat_compare_run').click().run(timeout=180)
+assert not app.exception and not app.error
+assert len(app.session_state['sat_compare_results'])==len(CATALOG)
 app.selectbox(key='sat_compare_scale').set_value(4).run()
 assert not app.session_state['sat_compare_results']
 assert identity(source,CATALOG[0],2)!=identity(source,CATALOG[0],4)
 assert identity(source,CATALOG[0],2)!=identity(source+b'changed',CATALOG[0],2)
-(ROOT/'reports/satellite-comparison-validation.json').write_text(json.dumps({'scope':'Offline synthetic5x3 georeferenced fixture, two actual cached hosted CNN checkpoints; no provider query, no generalization claim','verified':['same source SHA256 for both models','two exact10x6 outputs, CRS32632 and unchanged spatial extent','injected second-model failure preserves first output','targeted retry succeeds without changing first output','shared zoom/divider controls preserve exact exports','scale change clears stale results','input and scale identities differ'],'not_verified':['all7model execution','provider scientific alignment','cloud masks','current public UI']},indent=2)+'\n',encoding='utf-8')
-print('Two actual model exports, common source/CRS/extent, failure preservation, retry and scale invalidation passed')
+(ROOT/'reports/seven-family-satellite-validation.json').write_text(json.dumps({'scope':'Offline synthetic5x3 georeferenced fixture, all catalog checkpoints across seven families; first two used for injected failure/retry; no provider query or generalization claim','verified':['same source SHA256 for both models','two exact10x6 outputs, CRS32632 and unchanged spatial extent','injected second-model failure preserves first output','targeted retry succeeds without changing first output','all catalog checkpoints executed on common source','shared zoom/divider controls preserve exact exports','scale change clears stale results','input and scale identities differ'],'not_verified':['provider scientific alignment','cloud masks','current public UI']},indent=2)+'\n',encoding='utf-8')
+print('All catalog satellite model exports; source/CRS/extent, failure/retry and scale invalidation passed')

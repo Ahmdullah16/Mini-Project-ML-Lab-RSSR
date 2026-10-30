@@ -8,7 +8,7 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Unexpected netwo
  for section,prefix in [('Live SR','live'),('Satellite Explorer','satellite')]:
   app.radio(key='section').set_value(section).run()
   registry=next(d.value for d in app.dataframe if 'rgb_execution' in d.value.columns)
-  assert len(registry)==7 and int(registry.rgb_execution.sum())==2
+  assert len(registry)==7 and int(registry.rgb_execution.sum())==7
   for kind in ('Blur','Noise','Brightness','Contrast','Shift','Sharpening'):
    app.selectbox(key=prefix+'_distortion').set_value(kind).run()
    app.button(key=prefix+'_run_metrics').click().run()

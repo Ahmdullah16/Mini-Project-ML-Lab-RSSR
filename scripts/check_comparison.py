@@ -8,12 +8,13 @@ app=AppTest.from_file(str(ROOT/'app/streamlit_app.py'),default_timeout=60).run()
 app.radio(key='section').set_value('Live SR').run()
 app.radio(key='inference_workflow').set_value('Compare models').run()
 key='scaled_compare'
+expected=len(app.multiselect(key=key+'models').value)
 assert len(app.selectbox(key=key+'scale').options)==6
 app.button(key=key+'prepare').click().run()
 app.selectbox(key=key+'scale').set_value(4).run()
 app.button(key=key+'run').click().run(timeout=180)
 assert not app.exception and not app.error,([x.value for x in app.exception],[x.value for x in app.error])
-batch=app.session_state[key+'results'];assert len(batch['outputs'])==3
+batch=app.session_state[key+'results'];assert len(batch['outputs'])==expected
 for result in batch['outputs']:
     assert result['pixels'].shape==(64,64,3)
     assert result['metadata']['scale']==4 and len(result['metadata']['stage_outputs'])==2
@@ -39,8 +40,8 @@ def fail_one(image,model,directory,scale,identity):
     return original(image,model,directory,scale,identity)
 with patch('scale_ui.cascade',side_effect=fail_one):
     app.button(key=key+'run').click().run(timeout=120)
-    partial=app.session_state[key+'results'];assert len(partial['outputs'])==2 and len(partial['errors'])==1
+    partial=app.session_state[key+'results'];assert len(partial['outputs'])==expected-1 and len(partial['errors'])==1
 app.button(key=key+'run').click().run(timeout=120)
-assert len(app.session_state[key+'results']['outputs'])==3 and not app.session_state[key+'results']['errors']
-(ROOT/'reports/scale-comparison-validation.json').write_text(json.dumps({'scope':'Local actual published RGB comparison; not public deployment or HR-quality evaluation','models':[r['metadata'] for r in batch['outputs']],'cache_reused':True,'selection_keeps_labels':True,'host_rejection':True,'partial_failure_retry':True},indent=2),encoding='utf-8')
-print('Three actual models x4, cache, exact dimensions, host rejection and partial failure/retry passed')
+assert len(app.session_state[key+'results']['outputs'])==expected and not app.session_state[key+'results']['errors']
+(ROOT/'reports/scale-seven-family-comparison.json').write_text(json.dumps({'scope':'Local actual published RGB comparison; not public deployment or HR-quality evaluation','models':[r['metadata'] for r in batch['outputs']],'cache_reused':True,'selection_keeps_labels':True,'host_rejection':True,'partial_failure_retry':True},indent=2),encoding='utf-8')
+print('All catalog checkpoints x4, cache, exact dimensions, host rejection and partial failure/retry passed')
