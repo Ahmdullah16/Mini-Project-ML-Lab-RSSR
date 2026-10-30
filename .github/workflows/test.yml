@@ -27,6 +27,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r app/requirements.txt
+      - run: python scripts/check_deployment_imports.py
       - run: python scripts/check_showcase.py
       - run: python scripts/check_model_explorer.py
       - run: python scripts/check_metric_ui.py

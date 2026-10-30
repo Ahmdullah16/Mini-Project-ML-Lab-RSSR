@@ -402,12 +402,12 @@
       "coverage": "Existing prose migrated; complete parameter/derivation/visual coverage not yet individually accepted."
     }
   ],
-  "supplement_sha256_utf8_lf": "a07e97c7cf33e199208ef591dade8235f0aef0a24e54e53403495c0178c9efca",
+  "supplement_sha256_utf8_lf": "78285258a2bbe218e186d64dd961d4600ffdbd6a052fec7da1acd016c6673a6d",
   "shared_sources": {
     "docs/learning-reference.md": "1842e1e5f2a29a5146ce98d7fdc98119d506d71b22808d26a8ae166dd88d83c0",
-    "docs/model-instructor.md": "7c323a948f53316d219711707a5542ed9a9c9ae7407f47c4bb395e7ba96309c6",
+    "docs/model-instructor.md": "a8b6c7f46ef0d0a6b9caffe85417ec1791a01f7b002cdb59daac6420ad0d5917",
     "docs/contribution-audit.json": "9fd038aeb55064c7647b0e450f517cea68aeb5cde42a4afdc6219e3ba4a8a54e",
     "docs/metric-instructor.md": "fd4b0cd424162e1d1749ed8c8eccfffa443b50e2eb4e6acf51f6db4c3ac683dc",
-    "docs/website-validation-update.md": "6f58b13595c59e8307dd987cfe527b8aff093ec47a6a2c5c92005b3d5b1c0d1e"
+    "docs/website-validation-update.md": "8b34924c3aef80c3a6e5fd7747e399b2c0e8c89e1068cce3e0fcf498acd88bac"
   }
 }

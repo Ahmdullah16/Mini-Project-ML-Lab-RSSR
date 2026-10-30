@@ -35,5 +35,5 @@ with tempfile.TemporaryDirectory(prefix='rssr-catalog-') as folder:
                         'host_boundary_seconds':time.perf_counter()-start,'rss_after_inference_bytes':psutil.Process().memory_info().rss,
                         'host_boundary_output_shape':list(sr.shape),'status':'passed'})
 report={'models':results,'public_deployment':False,'memory_note':'RSS after inference, not peak; current CPU deployment-only environment'}
-(root/'reports/scale-model-catalog-check.json').write_text(json.dumps(report,indent=2)+'\n')
+(root/'reports/seven-family-hosted-catalog-check.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

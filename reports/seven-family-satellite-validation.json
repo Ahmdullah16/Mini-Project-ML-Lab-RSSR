@@ -1,0 +1,18 @@
+{
+  "scope": "Offline synthetic5x3 georeferenced fixture, all catalog checkpoints across seven families; first two used for injected failure/retry; no provider query or generalization claim",
+  "verified": [
+    "same source SHA256 for both models",
+    "two exact10x6 outputs, CRS32632 and unchanged spatial extent",
+    "injected second-model failure preserves first output",
+    "targeted retry succeeds without changing first output",
+    "all catalog checkpoints executed on common source",
+    "shared zoom/divider controls preserve exact exports",
+    "scale change clears stale results",
+    "input and scale identities differ"
+  ],
+  "not_verified": [
+    "provider scientific alignment",
+    "cloud masks",
+    "current public UI"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-30",
+  "scope": "Recovered local seven-family integration; public rollout not yet verified",
+  "pytest": {
+    "passed": 496,
+    "subtests": 17,
+    "seconds": 54.77
+  },
+  "reports": [
+    "rgb-compatible-pilot.json",
+    "rgb-pilot-release-manifest.json",
+    "trained-rgb-capability-v2.json",
+    "seven-family-hosted-catalog-check.json",
+    "scale-seven-family-comparison.json",
+    "seven-family-satellite-validation.json"
+  ],
+  "warm_worker_import_regression": "Missing visitor_prose reproduced; fresh project imports restore lessons/satellite/live; unchanged rerun retains modules",
+  "release_url": "https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/releases/tag/v0.3.0-rgb-pilots",
+  "public_status": "User verified CNN16x16 to32x32; new integration rollout pending"
+}

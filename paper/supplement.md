@@ -73,7 +73,7 @@ Width d is an integer≥2; two-head Transformer paths require even width. Window
 
 ### Interpretation and applications
 
-This can support a supervised imagery-review prototype: compare reconstruction against bicubic, inspect roads/buildings/vegetation at the same crop and record provenance. It is not validated for cadastral measurement, safety decisions, crop diagnosis or automated change detection. Those applications require suitable independent labels, sensor calibration and task-specific validation. M2/M6 lack trained bindings; real cross-sensor superiority and architectural novelty remain unestablished. Related ideas: [RCAN](https://arxiv.org/abs/1807.02758), [SwinIR](https://arxiv.org/abs/2108.10257).
+This can support a supervised imagery-review prototype: compare reconstruction against bicubic, inspect roads/buildings/vegetation at the same crop and record provenance. It is not validated for cadastral measurement, safety decisions, crop diagnosis or automated change detection. Those applications require suitable independent labels, sensor calibration and task-specific validation. All seven families now have genuine RGB pilot checkpoints; M2–M6 use separately labeled100step compatibility pilots with pinned release assets. Independent geographic research remains incomplete; real cross-sensor superiority and architectural novelty remain unestablished. Related ideas: [RCAN](https://arxiv.org/abs/1807.02758), [SwinIR](https://arxiv.org/abs/2108.10257).
 
 
 # Understand these results
@@ -138,6 +138,14 @@ PR40 was externally merged despite a failing Streamlit CI check: an old position
 The bounded preview now offers shared crop centers, zoom1/2/4, a bicubic/model divider and absolute disagreement from bicubic. Bicubic is computed on the exact output grid, subject to the host pixel cap, then area-reduced to a preview no larger than256pixels per side. Both model and baseline use fixed0–1 display contrast. Disagreement is calculated before display clipping and is explicitly not error against HR. Invalid displayed pixels are black. The export bytes remain unchanged when moving the view controls. Six numerical tests passed, including rejecting mismatched dimensions/CRS/extent and oversized allocation; actual two-model AppTest passed crop/divider controls without changing export hashes. A mixed-dtype divider rounding discrepancy was fixed by keeping the display pipeline float32. Latest browser rendering and scientific mask/cloud/alignment acceptance remain unverified.
 
 PR41 exacthead d257805c1b17d7d4b07698228ee469971df9db54 passed CI40820234069 and was merged externallye85f477. The detail-view follow-up needs its own CI.
+
+## Seven-family deployment integration — 2026-10-30
+
+Nine100step CPU RGB pilots for M3/M4/M5 ran across seeds17/23/41 under a committed plan, using training/validation only. Existing M2/M6 pilots were reused. The seed17 checkpoint for each of M2–M6 was exported without optimizer state; strict reload produced bit-exact synthetic output. Five small model assets plus checksum manifest were published as GitHub prerelease v0.3.0-rgb-pilots, outside Git source history. New hosted catalog entries pin SHA256 and byte budgets. Existing CNN and hybrid checkpoints remain available.
+
+All eight catalog checkpoints across seven families passed clean-download verification and local Live SR inference, including512×512→1024×1024 CPU inference. Local multi-model Live SR and same-source satellite checks executed the full catalog and passed failure/retry/cache checks. Forty-two native/cascaded small RGB exports passed in reports/trained-rgb-capability-v2.json; this does not establish maximum-size execution or research quality.
+
+The reported missing visitor_prose export was reproduced with stale cached Python helpers and corrected by refreshing project imports once per source/root fingerprint. An unchanged rerun preserves imports. The public failure was observed before deployment; current user evidence says the app is accessible and CNN16×16→32×32 worked. Full local release suite:496tests plus17subtests passed54.77seconds. Public rollout of this integration and full40lesson instructional acceptance are separate pending gates.
 
 
 # Contribution audit

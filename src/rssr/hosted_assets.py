@@ -12,8 +12,9 @@ def fetch_asset(asset,cache):
     if not isinstance(budget,int) or not 1<=budget<=32_000_000:
         raise ValueError('Asset byte budget must be 1..32000000')
     parsed=urlparse(url)
-    if parsed.scheme!='https' or parsed.hostname!='raw.githubusercontent.com':
-        raise ValueError('Only the pinned public GitHub artifact host is allowed')
+    release=parsed.hostname=='github.com' and parsed.path.startswith('/Ahmdullah16/Mini-Project-ML-Lab-RSSR/releases/download/v0.3.0-rgb-pilots/')
+    if parsed.scheme!='https' or not (parsed.hostname=='raw.githubusercontent.com' or release):
+        raise ValueError('Only pinned public GitHub artifacts and the versioned project pilot release are allowed')
     if len(expected)!=64 or any(c not in '0123456789abcdef' for c in expected):
         raise ValueError('Invalid asset checksum')
     cache=Path(cache); cache.mkdir(parents=True,exist_ok=True)

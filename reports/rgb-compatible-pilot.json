@@ -1,0 +1,2395 @@
+{
+  "schema": "rgb-compatible-pilot-v1",
+  "plan_sha256": "0961074190bbe065d09281681a1c1f228f6182e68ecf19fa32e884b451fc19da",
+  "source_manifest_sha256": "006e268adc51c706d11055a61bbebb51f19bb8291d5f7d8404553ec1f7af69c3",
+  "subset_manifest_sha256": "6db56ba3eee091c42ffa74af98c1f2f22275761ec417ee8134a8857ee3d702cc",
+  "scope": "Existing cached data, CPU2threads,9short runs of100steps; no test pixels or downloads. Width16 RGB compatibility pilots, not parameter/MAC matched and not independent geographic research. Historical four-band checkpoints stay unchanged. No deployment claim until remote artifact verification.",
+  "runs": [
+    {
+      "architecture_id": "cat-v1/M3",
+      "seed": 17,
+      "run_id": "cc9494d4aa694e01bf37da994dd6614f",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 17,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M3"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/cc9494d4aa694e01bf37da994dd6614f/best.pt",
+      "checkpoint_sha256": "0271e2b263216499056ce96c2abc56979798ed547c3fd286a13bf9255d00e52a",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 1.5167775000008987,
+      "parameters": 4668,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.002771874889731407,
+          "train_total_loss": 0.002771874889731407,
+          "validation_l1": 0.0062250252049125265
+        },
+        {
+          "step": 100,
+          "train_l1": 0.0022861985489726067,
+          "train_total_loss": 0.0022861985489726067,
+          "validation_l1": 0.0061946369605720975
+        }
+      ],
+      "training_record_sha256": "0af4955b612d67e3acc4178baaa925f124ca7c4789a0dd60b874b9d92edf2e5e",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "03545e2a3169f0a718d7d6596d41bf1c5e91c16e59c50e4bfb547b06b3742737",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.22245134778956
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.584357799599275
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.0191330159838
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.06618733831522
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "959e780eeb23bb38054742503de6d439d044b05d7e1f40ce251dff864de5caf3",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "seed": 23,
+      "run_id": "28b699345d5c42809e2a3964ee569169",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 23,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M3"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/28b699345d5c42809e2a3964ee569169/best.pt",
+      "checkpoint_sha256": "c20d21d330a0211ac703c693541b9ae41b99e0cf12c8b3b611d14ad0adc131e1",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 1.4428457999892998,
+      "parameters": 4668,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.0024446272291243076,
+          "train_total_loss": 0.0024446272291243076,
+          "validation_l1": 0.006309679252808564
+        },
+        {
+          "step": 100,
+          "train_l1": 0.0023999775294214487,
+          "train_total_loss": 0.0023999775294214487,
+          "validation_l1": 0.006199203455253155
+        }
+      ],
+      "training_record_sha256": "f8f2d869d329c9450b5b19a7b94cf62fa49c7e05b8091645a1ff101cc40c5d3c",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "3fd33fad7e8dce75f18df04f7111d09227933dccab34fd1877db0c7f34497e54",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.22765126313092
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.569296434754776
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.01975412406186
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.028823086842735
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "729bf6641c2578e57cfe389198ee17237634795ebc0499bf7e3901dc77ea92a0",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M3",
+      "seed": 41,
+      "run_id": "6b00bc78e53d4ff4975669f61e6d76e3",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 41,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M3"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/6b00bc78e53d4ff4975669f61e6d76e3/best.pt",
+      "checkpoint_sha256": "1be4c65d665417a9fb9a83e40f2d95b4fd11b589e2c63636cbc493331a8f6508",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 2.3849981000093976,
+      "parameters": 4668,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.002425865503028035,
+          "train_total_loss": 0.002425865503028035,
+          "validation_l1": 0.006281930964178173
+        },
+        {
+          "step": 100,
+          "train_l1": 0.0023523808922618628,
+          "train_total_loss": 0.0023523808922618628,
+          "validation_l1": 0.006202825603395468
+        }
+      ],
+      "training_record_sha256": "3b415ef72db78fc5021feced82f7386cbb59333b7f46e749d57f93a1204a2275",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "9f627155630ed92e8223d75d448d329020989ed3d7aae00a88773ace05dd5d80",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.21871451033124
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.58086439991898
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.011117975538724
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.051259510228476
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "d0c96efd086b465840f2e8bdb60c8738dfaf6ad04c503c21aa1d109c5ff5c4ba",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "seed": 17,
+      "run_id": "b165fbd8e32a4852a863a29481af76ca",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 17,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M4"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/b165fbd8e32a4852a863a29481af76ca/best.pt",
+      "checkpoint_sha256": "a0d1746612f410abe067247e768e45a5d6e67fe06536056034152dad65969900",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 1.7651194000063697,
+      "parameters": 7075,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.0026850851718336344,
+          "train_total_loss": 0.0026850851718336344,
+          "validation_l1": 0.006199953990289941
+        },
+        {
+          "step": 100,
+          "train_l1": 0.002280082320794463,
+          "train_total_loss": 0.002280082320794463,
+          "validation_l1": 0.006175957982122782
+        }
+      ],
+      "training_record_sha256": "f320ff62f849c983d20df8718adfc75f61b139ed8b6cfe4ade5c97413d141a90",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "7fd2d036b46168d984f05d4bb1b3e398fe16fe0cb75df49a2b1467430b121a05",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.25129817117845
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.59966715073655
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.03875523203504
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.111882719464774
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "3eb802dd98c408eb741bf03ed19b58692f207e40c76ba297346c91b005fe0b40",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "seed": 23,
+      "run_id": "13932f4d2ae54e73848e8fe0a0b08d0b",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 23,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M4"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/13932f4d2ae54e73848e8fe0a0b08d0b/best.pt",
+      "checkpoint_sha256": "511117bed3938d1fd60ebfdd4ef782a22efe43d7f396b1ccbadd1da9e9dd40a5",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 1.6376587999984622,
+      "parameters": 7075,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.0015216716565191746,
+          "train_total_loss": 0.0015216716565191746,
+          "validation_l1": 0.006203844641277101
+        },
+        {
+          "step": 100,
+          "train_l1": 0.0023917960934340954,
+          "train_total_loss": 0.0023917960934340954,
+          "validation_l1": 0.006192078681124258
+        }
+      ],
+      "training_record_sha256": "95b54012f55c12c5a8f67b157e70071ec7f582caf112899dc7c42a4b1fcfa5c5",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "6acfff0a11da4a0bf60a3ae55309d7daa1e43e81a0cf8f5034d417182566544b",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.23149860548463
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.58679989025636
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.02235234339351
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.083314853334656
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "a778f7511d1796f938a649e1290e2f6a3db32e5126491caff95393c4ee72cfd6",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M4",
+      "seed": 41,
+      "run_id": "cc9ae689f6414027b0c61320b19156ca",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 41,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M4"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/cc9ae689f6414027b0c61320b19156ca/best.pt",
+      "checkpoint_sha256": "34d495c270eab8bbff883e1da4f58a12712585043aaf049a337b4f48d003e00c",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 1.6042278000095394,
+      "parameters": 7075,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.0022884916979819536,
+          "train_total_loss": 0.0022884916979819536,
+          "validation_l1": 0.006202335003763437
+        },
+        {
+          "step": 100,
+          "train_l1": 0.002339230617508292,
+          "train_total_loss": 0.002339230617508292,
+          "validation_l1": 0.006183807199704461
+        }
+      ],
+      "training_record_sha256": "fcc373272f185bf4bf3ec3a507452322d734be6ca64729d869bb6f43a68e2176",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "edb69589ead72a0d647f9b2fcd2435cc6121c5c56c76fd1c36621dad3dbc8a32",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.246735736920385
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.600940573763054
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.03600203077042
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.11083053244204
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "930fb705a91be4a33c661509906d6e3060c9a5b557d97ea84b933080c7821268",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "seed": 17,
+      "run_id": "25c73c01a3df4e1a953e2e06431f5267",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 17,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M5"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/25c73c01a3df4e1a953e2e06431f5267/best.pt",
+      "checkpoint_sha256": "0d51af09289174402d55c89343e81f7e4cd62c72d58658b43e07b7673c0c1234",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 2.30884800000058,
+      "parameters": 9836,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.0027002703864127398,
+          "train_total_loss": 0.0027002703864127398,
+          "validation_l1": 0.006208802964465576
+        },
+        {
+          "step": 100,
+          "train_l1": 0.0022825514897704124,
+          "train_total_loss": 0.0022825514897704124,
+          "validation_l1": 0.006183858542499365
+        }
+      ],
+      "training_record_sha256": "7899d943995619194ca05564ed3e01360365816f96dee70872c598b2f0178ca6",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "c6a8dde6d06dbaf9beb39eb32d10508a3021c4c23253afb59667b7a227cd046f",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.23918087746447
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.59589122461668
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.02778595144224
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.09595466651717
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "101eb7ea7cf38b540c1776ff2d231ac846d25257398cff24fca6e480361a3add",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "seed": 23,
+      "run_id": "d030d569c75145999d16ae328fbc7719",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 23,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M5"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/d030d569c75145999d16ae328fbc7719/best.pt",
+      "checkpoint_sha256": "67badefb58d8cade4d786f7863548d4b09adf9184328565daec46d5ff0c9e98e",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 2.287669299999834,
+      "parameters": 9836,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.001771321170963347,
+          "train_total_loss": 0.001771321170963347,
+          "validation_l1": 0.006310634320470854
+        },
+        {
+          "step": 100,
+          "train_l1": 0.00241235108114779,
+          "train_total_loss": 0.00241235108114779,
+          "validation_l1": 0.0062112798368616495
+        }
+      ],
+      "training_record_sha256": "d85b854f3be075a18cd1e71a978f5544baed2fd117da9a2bcd03d32d976e4c24",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "f462f228b4f4b8636759f8d6a574ccce7e9ad95a2d51b6db784ba0d8311a1af8",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.21714610321235
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.550651979452475
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.01141746684635
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.02989855514401
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "ea803e448cb1593f5051b502b90c877b8c588c698be0f0b353304f31cf39abcc",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    },
+    {
+      "architecture_id": "cat-v1/M5",
+      "seed": 41,
+      "run_id": "6d279ae3b71041358656f71c3fe51c9d",
+      "config": {
+        "steps": 100,
+        "batch_size": 4,
+        "lr": 0.001,
+        "validate_every": 50,
+        "consistency_weight": 0.0,
+        "seed": 41,
+        "model": {
+          "bands": 3,
+          "scale": 2,
+          "width": 16,
+          "window": 4,
+          "zero_residual": true,
+          "architecture_id": "cat-v1/M5"
+        }
+      },
+      "checkpoint": "data/rgb-compatible-pilot-v1/runs/6d279ae3b71041358656f71c3fe51c9d/best.pt",
+      "checkpoint_sha256": "2b3ab2b2561f77a07e250d990b414d22d0bf9cda429bb65ac7522cc9c981a1d2",
+      "selected_step": 100,
+      "within_run_selection": "minimum validation L1",
+      "seconds_training": 2.420756799998344,
+      "parameters": 9836,
+      "history": [
+        {
+          "step": 50,
+          "train_l1": 0.0023141803685575724,
+          "train_total_loss": 0.0023141803685575724,
+          "validation_l1": 0.006211297444679076
+        },
+        {
+          "step": 100,
+          "train_l1": 0.002344906097277999,
+          "train_total_loss": 0.002344906097277999,
+          "validation_l1": 0.006201664362379233
+        }
+      ],
+      "training_record_sha256": "1f38c6fa5693d45609315969f8e85e96babe8a539ed1db9ec983cb29302c5975",
+      "environment": {
+        "affine": "3.0.1",
+        "altair": "6.3.0",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "anyio": "4.15.1",
+        "asttokens": "3.0.2",
+        "attrs": "26.1.0",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.0",
+        "colorama": "0.4.6",
+        "comm": "0.2.3",
+        "contourpy": "1.4.0",
+        "cycler": "0.12.1",
+        "debugpy": "1.8.22",
+        "executing": "2.3.0",
+        "fastapi": "0.143.3",
+        "fastjsonschema": "2.22.2",
+        "filelock": "4.2.1",
+        "fonttools": "4.67.0",
+        "fsspec": "2026.7.0",
+        "gradio": "6.30.0",
+        "gradio_client": "2.7.2",
+        "groovy": "0.1.2",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.7.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.13.1",
+        "httpx": "0.28.1",
+        "httpx2": "2.13.1",
+        "huggingface_hub": "2.2.0",
+        "idna": "3.20",
+        "iniconfig": "2.3.1",
+        "ipykernel": "7.4.0",
+        "ipython": "9.17.1",
+        "ipython_pygments_lexers": "1.1.1",
+        "itsdangerous": "2.2.0",
+        "jedi": "0.20.1",
+        "Jinja2": "3.1.6",
+        "jsonschema": "4.26.0",
+        "jsonschema-specifications": "2025.9.1",
+        "jupyter_client": "8.10.0",
+        "jupyter_core": "5.9.1",
+        "kiwisolver": "1.5.1",
+        "markdown-it-py": "4.2.0",
+        "MarkupSafe": "3.0.4",
+        "matplotlib": "3.11.2",
+        "matplotlib-inline": "0.2.2",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "narwhals": "2.27.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.11.1",
+        "nest-asyncio2": "1.7.4",
+        "networkx": "3.6.1",
+        "numpy": "2.5.4",
+        "opentelemetry-api": "1.45.1",
+        "orjson": "3.13.0",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "parso": "0.8.7",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "platformdirs": "4.13.4",
+        "pluggy": "1.7.0",
+        "prompt_toolkit": "3.0.53",
+        "protobuf": "7.36.2",
+        "psutil": "7.2.2",
+        "pure_eval": "0.2.4",
+        "pyarrow": "26.0.0",
+        "pydantic": "2.14.1",
+        "pydantic_core": "2.50.1",
+        "pydeck": "0.9.3",
+        "pydub": "0.25.1",
+        "Pygments": "2.21.0",
+        "pyparsing": "3.3.3",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "python-multipart": "0.0.32",
+        "pytz": "2026.5",
+        "PyYAML": "6.0.3",
+        "pyzmq": "27.2.0",
+        "rasterio": "1.5.2",
+        "referencing": "0.37.0",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "rpds-py": "2026.9.1",
+        "rssr-lab": "0.1.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "semantic-version": "2.10.0",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "stack-data": "0.6.3",
+        "starlette": "1.8.0",
+        "streamlit": "1.66.0",
+        "sympy": "1.14.0",
+        "timm": "1.0.30",
+        "tomlkit": "0.14.0",
+        "torch": "2.14.1+cpu",
+        "torchvision": "0.29.1+cpu",
+        "tornado": "6.5.10",
+        "tqdm": "4.70.1",
+        "traitlets": "5.16.1",
+        "truststore": "0.10.5",
+        "typer": "0.27.3",
+        "typing_extensions": "4.16.0",
+        "typing-inspection": "0.4.4",
+        "tzdata": "2026.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "watchdog": "6.0.0",
+        "wcwidth": "0.9.2",
+        "websockets": "17.2"
+      },
+      "hardware": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+        "device": "cpu",
+        "threads": 2,
+        "gpu_hours": 0
+      },
+      "git_commit": "928e6c60df87b84106e113fb71b8561b7b980b6a",
+      "dirty": true,
+      "validation_record_sha256": "349268441cfbd94de70cd401d58257a19906733329e648c0ce5b1af648216e39",
+      "validation_scene_means": [
+        {
+          "method": "bicubic",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.203556223667654
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.57609484540083
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.00078139179675
+        },
+        {
+          "method": "bicubic",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.077181327887004
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.14479905906708
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 44.75593290492734
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.140781082903345
+        },
+        {
+          "method": "bilinear",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 48.867566651528946
+        },
+        {
+          "method": "model",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 40.22531455197331
+        },
+        {
+          "method": "model",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.58126794799138
+        },
+        {
+          "method": "model",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 36.01907727996297
+        },
+        {
+          "method": "model",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 50.06423885089005
+        },
+        {
+          "method": "nearest",
+          "scene_id": "19432df5cd8f40587d03aaea025473d2164522318a1af9feb4ef8da4ed1703c7",
+          "mean_tile_psnr_db": 39.54387731986414
+        },
+        {
+          "method": "nearest",
+          "scene_id": "42f493637de7f329d19ef4f14bb34453473e0a45b3737346658adc0c5ed1d55a",
+          "mean_tile_psnr_db": 45.09045996445634
+        },
+        {
+          "method": "nearest",
+          "scene_id": "d772229226396aef416e93ce8b3393df5977a333925180fd4be5c0ad8b2c20dd",
+          "mean_tile_psnr_db": 35.38250698015115
+        },
+        {
+          "method": "nearest",
+          "scene_id": "de0a6ea3c4864406885849e46a53ab330b9ac9f6753b7177f0d42da4d0d9e412",
+          "mean_tile_psnr_db": 49.22835217643157
+        }
+      ],
+      "reload_input_shape": [
+        3,
+        16,
+        16
+      ],
+      "reload_output_shape": [
+        3,
+        32,
+        32
+      ],
+      "reload_output_sha256": "c116981a85e005aa0ab0950c4063f6d25a236ddf3add5006d8f01bb4ccbc567c",
+      "status": "trained bounded RGB native2 pilot; not research accepted or remotely deployable"
+    }
+  ],
+  "test_pixels_accessed": false
+}

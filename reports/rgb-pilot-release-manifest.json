@@ -1,0 +1,57 @@
+[
+  {
+    "architecture_id": "cat-v1/M2",
+    "file": "m2-rgb-pilot-v1.pt",
+    "sha256": "d9b819c4759e87fb8c2197f2d6fe775777be955944b1931bd8c60f50d7b07ccb",
+    "bytes": 14789,
+    "training_checkpoint_sha256": "a25b60db652829259cf0dd247424c3146290bd2fe42591ee76e0dbcc0802ba8c",
+    "seed": 17,
+    "selected_step": 100,
+    "source_report": "reports/missing-model-pilot.json",
+    "status": "100step RGB engineering pilot; not independent geographic research"
+  },
+  {
+    "architecture_id": "cat-v1/M3",
+    "file": "m3-rgb-pilot-v1.pt",
+    "sha256": "cdd099b8bb292e3722585f8f341f510296956e1ed8306ea0e219b5a9c02852fc",
+    "bytes": 25640,
+    "training_checkpoint_sha256": "0271e2b263216499056ce96c2abc56979798ed547c3fd286a13bf9255d00e52a",
+    "seed": 17,
+    "selected_step": 100,
+    "source_report": "reports/rgb-compatible-pilot.json",
+    "status": "100step RGB engineering pilot; not independent geographic research"
+  },
+  {
+    "architecture_id": "cat-v1/M4",
+    "file": "m4-rgb-pilot-v1.pt",
+    "sha256": "0346073d5299ecb708c83a5cbe2e8f0d0f98430ee5c21466c74437bc56909940",
+    "bytes": 34521,
+    "training_checkpoint_sha256": "a0d1746612f410abe067247e768e45a5d6e67fe06536056034152dad65969900",
+    "seed": 17,
+    "selected_step": 100,
+    "source_report": "reports/rgb-compatible-pilot.json",
+    "status": "100step RGB engineering pilot; not independent geographic research"
+  },
+  {
+    "architecture_id": "cat-v1/M5",
+    "file": "m5-rgb-pilot-v1.pt",
+    "sha256": "dde37226d8b518826dbadc6801a64f7725d10bd43feef068058ee56bc0804c91",
+    "bytes": 48070,
+    "training_checkpoint_sha256": "0d51af09289174402d55c89343e81f7e4cd62c72d58658b43e07b7673c0c1234",
+    "seed": 17,
+    "selected_step": 100,
+    "source_report": "reports/rgb-compatible-pilot.json",
+    "status": "100step RGB engineering pilot; not independent geographic research"
+  },
+  {
+    "architecture_id": "cat-v1/M6",
+    "file": "m6-rgb-pilot-v1.pt",
+    "sha256": "c82403255c495e62c20776ef2158a2a25d88513d1f9c67ecb388c025b0cdf3d0",
+    "bytes": 28614,
+    "training_checkpoint_sha256": "2bc27dcf4569eba8174198fadad3a3bca8150d875c082310a1a6112d375a6d17",
+    "seed": 17,
+    "selected_step": 100,
+    "source_report": "reports/missing-model-pilot.json",
+    "status": "100step RGB engineering pilot; not independent geographic research"
+  }
+]

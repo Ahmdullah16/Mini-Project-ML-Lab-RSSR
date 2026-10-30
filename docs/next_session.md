@@ -1,3 +1,21 @@
+# Recovered release milestone — 2026-10-30
+
+- Latest user public check: accessible, LiveSR/Satelliteload, CNN16x16→32x32 ran; sevenfamiliesvisible but olddeployment onlyM1/M7executable. Do NOT repeat oldaccessblocker.
+- Main152d730 contains externallymergedPR42; CI40820609698 SUCCESS; integrated987d522. No openPR at intake. Local plan928e6c6 committed BEFORE9M3/M4/M5RGB runs.
+- Recovered uncommitted importsfix and7familyintegration. bootstrap refreshes projectimports on root/sourcefingerprint; regression reproduces missingvisitor_prose and stale satellitehelper then recovers.
+-9newRGBpilotruns100steps/seeds17,23,41; reports/rgb-compatible-pilot.json. ExistingM2/M6reused.42/42smalltrainedscales executed reports/trained-rgb-capability-v2.json. Frozen test untouched.
+- GitHub prerelease v0.3.0-rgb-pilots PUBLISHED with5portableweights + manifest; binaryassets outsideGit. reports/rgb-pilot-release-manifest.json pins hashes. Release screenshot ../../work/rgb-pilot-release-published.jpg. configs/hosted-models.json integratesM2–M6; hosted_assets permits onlyexactprojectreleaseprefix plus existingrawhost, requireschecksum/bytes.
+- Actual local8catalogchecks covering7families: cleancheckpointdownloads,LiveSR and512x512→1024x1024 checks passed; fullcatalogLiveSRcomparison and satellitecomparison/retry passed. reports/seven-family-hosted-catalog-check.json, scale-seven-family-comparison.json, seven-family-satellite-validation.json.
+- Fullpytest496passed+17subtests54.77s (62warnings), before latest documentation reconciliation. All40lesson AppTest and metricUI currentrun stillbeingcollected; do not mark them passed prematurely.
+- NEXT: finish collection, report/sourceintegrity, commit/publishreviewPR, inspectactualheadCI; verifypublicdeployment/version+allfamilies andMini-projects/SatellitewithoutImportError. Then MP03onward fullinstruction, scientificmask/realpairprotocol/report/PDFreview. Noautomaticmerge.
+- Environment: PYTHONPATH=src everycommand (devvenv has older editable checkout otherwise). Dev ../../work/clean-venv/Scripts/python.exe; app ../../work/streamlit-venv/Scripts/python.exe. Do not rerun completed training/frozenresults.
+
+# Exact publication checkpoint — 2026-10-29
+
+- PR41 CI40820234069 SUCCESS; externally merged e85f477, integrated910c733 after preserving detail-view follow-up. No agent remote merge.
+- PR42 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/42 on feat/satellite-detail-views; exacthead3d39204041072a31b0b5a9b6f69e862707848dff; tree153b4319f51a63e8e85d0c84ba706085a5737197 exactly matches local910c733. CI40820609698 IN PROGRESS at last check. No passedCI/deployment claim for this head.
+- FIRST NEXT: inspect PR42 actualheadCI; fix failures before new feature work; integrate external merge if any. Then progress compatible7model execution and MP03onward; scientificmask/generalization/publicverification remain open. This exact publication note is a local follow-up for the next milestone.
+
 # Current detail-view milestone — 2026-10-29
 
 - PR41 d257805c1b17d7d4b07698228ee469971df9db54 CI40820234069 SUCCESS; externally merged e85f477. PR40 positionalbutton failure is repaired and passing.

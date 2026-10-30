@@ -28,11 +28,11 @@ def subset_manifest(source, target):
     return manifest
 
 
-def run(limit=None):
-    plan_path=ROOT/'configs/missing-model-pilot.json';plan=json.loads(plan_path.read_text())
+def run(limit=None, plan_path=None):
+    plan_path=ROOT/(plan_path or 'configs/missing-model-pilot.json');plan=json.loads(plan_path.read_text(encoding='utf-8'))
     source=ROOT/plan['source_manifest']
     if digest(source)!=plan['source_manifest_sha256']:raise ValueError('Source manifest changed')
-    work=ROOT/'data/missing-cat-pilot-v1';manifest_path=work/'manifest.json'
+    work=ROOT/'data'/plan['id'];manifest_path=work/'manifest.json'
     manifest=subset_manifest(source,manifest_path)
     db=connect(work/'catalog.sqlite')
     with db:
@@ -43,9 +43,9 @@ def run(limit=None):
                        (row['id'],row['split'],str(path),str(path),manifest['scale'],None,
                         'existing synthetic paired tile',manifest['protocol'],row['sha256']))
     db.close()
-    report_path=ROOT/'reports/missing-model-pilot.json'
+    report_path=ROOT/'reports'/plan.get('report_file','missing-model-pilot.json')
     report=json.loads(report_path.read_text()) if report_path.exists() else {
-        'schema':'missing-cat-pilot-v1','plan_sha256':digest(plan_path),
+        'schema':plan['id'],'plan_sha256':digest(plan_path),
         'source_manifest_sha256':digest(source),'subset_manifest_sha256':digest(manifest_path),
         'scope':plan['limits'],'runs':[],'test_pixels_accessed':False}
     if report['plan_sha256']!=digest(plan_path) or report['subset_manifest_sha256']!=digest(manifest_path):
@@ -92,5 +92,5 @@ def run(limit=None):
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int);args=parser.parse_args()
-    report=run(args.limit);print('Verified completed pilot runs:',len(report['runs']))
+    parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int);parser.add_argument('--plan');args=parser.parse_args()
+    report=run(args.limit,args.plan);print('Verified completed pilot runs:',len(report['runs']))
