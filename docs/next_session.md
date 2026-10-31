@@ -1,3 +1,5 @@
+2026-11-01: PR50 run 41229517239: tests success, Streamlit failure in scripts/check_cnn_native_lessons.py from incorrect MP19/MP21 button key case (mp19_run vs MP19_run). Corrected in ec88eba6; exact-head CI retest pending. No research results altered.
+
 # MP18–22 native CNN teaching milestone — 2026-10-31
 
 - Current stacked chain: PR48 MP12–16 (CI run 41227394028 SUCCESS, exact head 0a9db78), PR49 MP17 (CI run 41227558834 SUCCESS, exact head ecc9bac), new branch feat/mp18-mp22-native-cnn-20261031 based on PR49. Neither predecessor merged; no old verified work rerun.
