@@ -1,3 +1,7 @@
+# MP12–16 native lab implementation candidate — 2026-10-31
+
+Added 5 bounded native teaching labs with canonical source helper reuse, explicit Run, parameter effects, real synthetic outputs and CSV/JSON. [Static source integrity](../reports/mp12-mp16-native-instructor.json) passed six checks; new pytest/AppTest/CI have not yet executed successfully. Prior MP01–11 and frozen research evidence preserved. MP12–16 still In progress until executed testing and per-project acceptance.
+
 # Native instruction batch — 2026-10-31
 
 MP06–11 now have bounded on-site interactive labs using shared canonical helpers, with21 canonical tests and two batch AppTests passed. [Evidence](../reports/mp06-mp11-native-instructor.json). This advances teaching implementation; per-project scientific acceptance and learner mastery remain In progress. Frozen results are unchanged. Next native batch: MP12–16.
