@@ -18,5 +18,14 @@
     "SRCNN is zero-weight architecture control, not trained quality",
     "No model superiority or real satellite HR metrics inferred"
   ],
-  "next": "Inspect exact-head CI; repair any failures; do not merge automatically"
+  "next": "Inspect exact-head CI; repair any failures; do not merge automatically",
+  "ci_diagnostic": {
+    "failed_run": 41229517239,
+    "head": "9cd312e564dfaa997bc8fdc1adacfe3c9f8dc5e0",
+    "tests": "success",
+    "streamlit": "failure",
+    "cause": "AppTest addressed MP19_run as mp19_run; actual key is MP19_run",
+    "fix_commit": "ec88eba6f3edf9563d421729043f50808070b38b",
+    "retest": "pending"
+  }
 }
