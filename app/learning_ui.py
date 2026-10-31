@@ -43,6 +43,9 @@ def render(root, projects):
     elif ident in ('MP09','MP10','MP11'):
         from metric_lesson_ui import render as render_metric_lesson
         render_metric_lesson(ident)
+    elif ident in ('MP12','MP13','MP14','MP15','MP16'):
+        from math_training_ui import render as render_math_training
+        render_math_training(ident)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):

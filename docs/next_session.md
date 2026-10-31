@@ -1,3 +1,17 @@
+# Validated MP12–MP16 instructor batch — 2026-10-31
+
+- PR48 prior head 96930eb CI run171 / 41226551966 **SUCCESS**. Both jobs passed: tests job 124611801103 including full pytest and source/structure checks; Streamlit job 124611801412 including scripts/check_math_training_lessons.py and all existing app checks. This confirms actual on-site synthetic lesson execution, not independent scientific acceptance.
+- Evidence report reports/mp12-mp16-native-instructor.json includes pinned prior head/run IDs. This documentation-only follow-up will get a *new head*, whose CI must be checked separately. Do not claim that exact new head passed until confirmed.
+- Next unfinished native batch is MP17–22, preferably a separate stacked review branch. No code changes to MP01–16 after this checkpoint; all earlier training/checkpoint/frozen evaluation artifacts preserved. No automatic merge.
+
+# MP12–MP16 native lesson branch — 2026-10-31
+
+- Latest confirmed main at intake: d39bbd5 (PR47 externally merged). Branch `feat/mp12-mp16-native-lessons-20261031` was one commit ahead at intake with `src/rssr/pipeline_lab.py` only. No prior MP01–11 work repeated.
+- Added bounded Streamlit MP12–16 lessons in `app/math_training_ui.py` and routed through existing `app/learning_ui.py`. Reused canonical `rssr.linear_lab.approximate`, `rssr.training_lab`, and `rssr.pipeline_lab`; local MP16 tool now reexports shared implementation rather than duplicating it.
+- Lab demos: MP12 SVD rank/error/tail energy/storage; MP13 analytical MSE gradient and SGD trajectories; MP14 NumPy backprop plus finite difference; MP15 PyTorch float64 parity/dropout/train mode; MP16 deterministic seeded five-sample training, incomplete minibatch and weighted losses. Synthetic only; no dataset downloads, 1000-step reruns, held-out evaluation, training checkpoints or public deployment changes.
+- New numeric tests `tests/test_math_training_lessons.py`, Streamlit offline/AppTest `scripts/check_math_training_lessons.py`, and CI invocation. Source inspection: all six checks passed in `reports/mp12-mp16-native-instructor.json`. Crucially **new Python pytest/AppTest/CI are NOT yet proven passed**. Current model's shell cannot clone GitHub because DNS resolution fails. CI of PR branch must supply execution evidence; do not claim all five accepted until passing exact-head workflow logs.
+- NEXT: inspect PR and exact-head CI; repair failures; update evidence with actual job run IDs, complete smoke checks in installed environment; do not merge automatically. Then MP17–22 native lessons batch; preserve frozen scientific and checkpoint assets. Unmet satellite scientific masks, region-v2, reports/paper and public deployment remain.
+
 # Resume checkpoint — batched lessons, 2026-10-31
 
 ## Verified state
