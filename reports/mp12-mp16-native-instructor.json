@@ -12,7 +12,7 @@
     "numeric tests present": true
   },
   "static_all_passed": true,
-  "evidence_status": "Source inspected through GitHub; pytest and Streamlit AppTest NOT executed in this session",
+  "evidence_status": "GitHub Actions run171 passed both jobs for recorded head. New reports/documentation appended afterwards need exact-head CI recheck.",
   "source_blob_shas": {
     "app/learning_ui.py": "119928279fc3b9c70fae4214eb65efd4467fe8b4",
     "src/rssr/pipeline_lab.py": "0b451b507791d3c185792f62e2e97aba84125db4",
@@ -27,10 +27,45 @@
     "reports/mp16-pipeline.json"
   ],
   "unverified": [
-    "New numerical pytest suite",
-    "New Streamlit AppTest batch",
-    "Full CI",
-    "Public deployment/mobile",
-    "Scientific held-out evaluation"
-  ]
+    "Deployment and visual/mobile on public host",
+    "Individual per-project scientific/learner acceptance",
+    "Held-out geographic evaluation",
+    "Post-evidence-update head CI"
+  ],
+  "ci": {
+    "workflow_run_id": 41226551966,
+    "url": "https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/actions/runs/41226551966",
+    "validated_head": "96930ebc9bbc43a099012c0310765366f76f47c3",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 124611801103,
+        "name": "tests",
+        "conclusion": "success",
+        "steps": [
+          "python -m pytest -q",
+          "check_structure",
+          "check_claim_evidence",
+          "build_paper_evidence --check",
+          "build_learning_supplement --check",
+          "audit_paper_sources --check",
+          "check_project_folders",
+          "rebuild_frozen_data"
+        ]
+      },
+      {
+        "id": 124611801412,
+        "name": "streamlit",
+        "conclusion": "success",
+        "steps": [
+          "check_learning_ui.py",
+          "check_math_training_lessons.py",
+          "check_streamlit.py",
+          "check_model_catalog.py",
+          "check_satellite_comparison.py"
+        ]
+      }
+    ],
+    "note": "CI passed for the pre-evidence-update head, not proof of public deployment, real satellite validity, or geographic scientific acceptance."
+  }
 }
