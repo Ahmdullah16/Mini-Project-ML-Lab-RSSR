@@ -1,3 +1,5 @@
+2026-10-31 MP12–16 native lab GitHub Actions run 41226551966 passed both tests and streamlit jobs at head 96930eb, including new five-lesson execution. Evidence: reports/mp12-mp16-native-instructor.json. Scientific project completion/public deployment still pending; next MP17–22. Documentation follow-up requires exact-head recheck.
+
 2026-10-31 candidate MP12–16 native instructor labs added on review branch with canonical imports and static source checks; new AppTest/pytest/CI still pending. Evidence: reports/mp12-mp16-native-instructor.json. Do not mark W1 complete.
 
 Current2026-10-30 update: public app is accessible and the user verified16×16→32×32 CNN inference. Do not reuse old access-blocker diagnoses. PR43 CI41088399016 passed and was externally merged; public7c231604 executed all8checkpoints covering7families at16x16→32x32. See reports/public-seven-family-20261030.json.
