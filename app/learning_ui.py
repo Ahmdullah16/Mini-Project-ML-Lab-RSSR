@@ -52,6 +52,9 @@ def render(root, projects):
     elif ident in ('MP18','MP19','MP20','MP21','MP22'):
         from cnn_native_lessons import render as render_cnn
         render_cnn(ident)
+    elif ident in ('MP23','MP24','MP25','MP26'):
+        from attention_native_ui import render as render_attention
+        render_attention(ident)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):
