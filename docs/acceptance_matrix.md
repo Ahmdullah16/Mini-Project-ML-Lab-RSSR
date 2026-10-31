@@ -1,3 +1,5 @@
+MP18–22 native bounded CNN lesson candidates added to stacked development branch, using canonical shared models, labeled zero-weight controls, explicit run and CSV/JSON. CI unverified; full scientific and learner completion pending. Evidence reports/mp18-mp22-native-instructor.json.
+
 MP17 native convolution playground candidate added on stacked branch, with canonical correlate/output_size/receptive_field, explicit outputs and new CI checks. CI execution pending; never mark scientific/learner acceptance complete. Evidence: reports/mp17-native-instructor.json.
 
 2026-10-31 MP12–16 native lab GitHub Actions run 41226551966 passed both tests and streamlit jobs at head 96930eb, including new five-lesson execution. Evidence: reports/mp12-mp16-native-instructor.json. Scientific project completion/public deployment still pending; next MP17–22. Documentation follow-up requires exact-head recheck.
