@@ -1,3 +1,5 @@
+2026-11-01: PR50 run 41229517239: tests success, Streamlit failure in scripts/check_cnn_native_lessons.py from incorrect MP19/MP21 button key case (mp19_run vs MP19_run). Corrected in ec88eba6; exact-head CI retest pending. No research results altered.
+
 MP18–22 native bounded CNN lesson candidates added to stacked development branch, using canonical shared models, labeled zero-weight controls, explicit run and CSV/JSON. CI unverified; full scientific and learner completion pending. Evidence reports/mp18-mp22-native-instructor.json.
 
 MP17 native convolution playground candidate added on stacked branch, with canonical correlate/output_size/receptive_field, explicit outputs and new CI checks. CI execution pending; never mark scientific/learner acceptance complete. Evidence: reports/mp17-native-instructor.json.
