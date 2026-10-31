@@ -1,3 +1,9 @@
+# MP23–26 native attention milestone — 2026-11-01
+
+- PR50 exact head 847cc729 **CI success** run41232412252 (both tests and Streamlit including MP18–22), no merge. Prior PR48 and PR49 CI also passed; preserve stacked review chain.
+- New stacked branch feat/mp23-mp26-native-attention-20261101 introduces app/attention_native_ui.py using canonical InspectableAttention and SRModel for MP23 channel gates, MP24 spatial gates, MP25 combined gates, MP26 zero-residual x2 shape/skip. Seeded random gate values explicitly NOT trained inference; no original frozen evidence changed. tests: scripts/check_attention_native_lessons.py wired to CI, not yet run.
+- Next: inspect exact-head CI and correct failures, record job IDs; then MP27–31 native transformer lessons. Public satellite, scientific geographic test and final submission acceptance remain separate. Do not auto-merge.
+
 2026-11-01: PR50 run 41229517239: tests success, Streamlit failure in scripts/check_cnn_native_lessons.py from incorrect MP19/MP21 button key case (mp19_run vs MP19_run). Corrected in ec88eba6; exact-head CI retest pending. No research results altered.
 
 # MP18–22 native CNN teaching milestone — 2026-10-31
