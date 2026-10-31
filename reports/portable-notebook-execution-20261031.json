@@ -1,0 +1,89 @@
+{
+  "source_sha256": "ec7c1227cedb2dbbf995f00d6485b5e28739d4fedfd7ad25d6a5af05853a47f6",
+  "source_commit": "dade80edb7cc1bc9952d9b7c9587c686cf930a2c",
+  "mode": "synthetic demo plus seven canonical model runs; satellite/training false",
+  "code_cells_executed": 51,
+  "seconds": 22.25480549999338,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "output_files": [
+    "data\\rssr_notebook_outputs\\bicubic-teaching.png",
+    "data\\rssr_notebook_outputs\\checkpoint_cache",
+    "data\\rssr_notebook_outputs\\inference-M1-x2",
+    "data\\rssr_notebook_outputs\\inference-M2-x2",
+    "data\\rssr_notebook_outputs\\inference-M3-x2",
+    "data\\rssr_notebook_outputs\\inference-M4-x2",
+    "data\\rssr_notebook_outputs\\inference-M5-x2",
+    "data\\rssr_notebook_outputs\\inference-M6-x2",
+    "data\\rssr_notebook_outputs\\inference-M7-x2",
+    "data\\rssr_notebook_outputs\\metrics-teaching.csv",
+    "data\\rssr_notebook_outputs\\provenance-teaching.json"
+  ],
+  "limits": "No upload, satellite, geographic or full instructional acceptance implied.",
+  "outputs": [
+    {
+      "model": "inference-M1-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "d3345e590b9ef15fbfdff7989215d10525f36950a18a194e309da678496c77d0"
+    },
+    {
+      "model": "inference-M2-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "35a82c62fc131467884e46905e6275afb6ef70a601768f8526b6dca3a88f5885"
+    },
+    {
+      "model": "inference-M3-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "faf64285221202528cc5cae4c4fef000b7878f999598f267a744f43e4a54dca9"
+    },
+    {
+      "model": "inference-M4-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "a72ba3aa6102f384f052fc9c2b8ada39670e423ad3c13250a84c057759099dee"
+    },
+    {
+      "model": "inference-M5-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "89779aca9c40e64c3b958aeece727bda4b46328a0f2d3745c4aabd05e1bb4c15"
+    },
+    {
+      "model": "inference-M6-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "41cd1ae4fd927369ae7f19d306e0afae2118c86add9a3b004f4681a30f9cc633"
+    },
+    {
+      "model": "inference-M7-x2",
+      "width": 32,
+      "height": 32,
+      "bands": 3,
+      "sha256": "b6521f35fc7f250703cf653e47621b9af225e4b8123cf2bc8ff3887516803efd"
+    }
+  ],
+  "default_offline_execution": {
+    "source_sha256": "ec7c1227cedb2dbbf995f00d6485b5e28739d4fedfd7ad25d6a5af05853a47f6",
+    "source_commit": "dade80edb7cc1bc9952d9b7c9587c686cf930a2c",
+    "mode": "default offline demo; model/satellite/training flags false",
+    "code_cells_executed": 50,
+    "seconds": 4.203835499996785,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "output_files": [
+      "data\\rssr_notebook_outputs\\bicubic-teaching.png",
+      "data\\rssr_notebook_outputs\\metrics-teaching.csv",
+      "data\\rssr_notebook_outputs\\provenance-teaching.json"
+    ],
+    "limits": "No model, upload, satellite, geographic or full instructional acceptance implied."
+  },
+  "reproduce": "Run a fresh notebook kernel with default config; for model variant set CONFIG.run_models=True and CONFIG.pinned_repo_path to the reviewed checkout before subsequent cells. Use a new output_directory and assert no model_failures and seven model_results. Verify each stage-1-x2.tif is 32x32x3.",
+  "date": "2026-10-31"
+}
