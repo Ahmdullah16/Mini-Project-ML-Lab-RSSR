@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-31",
+  "branch": "feat/mp17-native-convolution-20261031",
+  "scope": "MP17 native teaching fixture",
+  "input": "9x9 synthetic impulse, horizontal ramp or constant",
+  "parameters": {
+    "kernel": [
+      1,
+      3,
+      5
+    ],
+    "stride": [
+      1,
+      2
+    ],
+    "padding": [
+      0,
+      1,
+      2
+    ],
+    "dilation": [
+      1,
+      2
+    ]
+  },
+  "canonical": "src/rssr/convolution_lab.py",
+  "added": [
+    "app/convolution_lesson_ui.py",
+    "tests/test_convolution_native_ui.py",
+    "scripts/check_convolution_lesson.py"
+  ],
+  "static_status": "Source committed, test execution pending",
+  "claims_not_made": [
+    "research results",
+    "trained model",
+    "real satellite validation",
+    "user mastery"
+  ],
+  "next": "Run exact-head CI including numerical and offline AppTest before considering completion."
+}

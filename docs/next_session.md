@@ -1,3 +1,9 @@
+# MP17 convolution native lesson — 2026-10-31
+
+- Stacked development branch feat/mp17-native-convolution-20261031 on MP12–16 PR48. Preserved previous work and CI run171 success at prior head96930eb; newer documentation head not yet CI-confirmed.
+- Added app/convolution_lesson_ui.py using rssr.convolution_lab for actual float64 9×9 impulse/ramp/constant, kernel 1/3/5, stride1/2, padding0–2, dilation1/2; exact output geometry, receptive field, comparison table, CSV and JSON exports. Explicit Run; no data download or learned checkpoint. Wired to app/learning_ui.py. Added numeric and offline AppTest checks in CI.
+- Current MP17 source additions NOT yet executed under GitHub Actions. Read reports/mp17-native-instructor.json for static evidence. Next: inspect stacked branch CI and repair, then continue related MP18–22 native CNN teaching. No automatic merge. Scientific research and public deployment acceptance remain open.
+
 # Validated MP12–MP16 instructor batch — 2026-10-31
 
 - PR48 prior head 96930eb CI run171 / 41226551966 **SUCCESS**. Both jobs passed: tests job 124611801103 including full pytest and source/structure checks; Streamlit job 124611801412 including scripts/check_math_training_lessons.py and all existing app checks. This confirms actual on-site synthetic lesson execution, not independent scientific acceptance.
