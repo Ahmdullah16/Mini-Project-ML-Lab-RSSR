@@ -1,3 +1,9 @@
+# MP18–22 native CNN teaching milestone — 2026-10-31
+
+- Current stacked chain: PR48 MP12–16 (CI run 41227394028 SUCCESS, exact head 0a9db78), PR49 MP17 (CI run 41227558834 SUCCESS, exact head ecc9bac), new branch feat/mp18-mp22-native-cnn-20261031 based on PR49. Neither predecessor merged; no old verified work rerun.
+- Added five bounded Streamlit MP18–22 experiments reusing canonical Sobel (local MP18), Reconstruction/UpsamplingCNN and SRModel source. Explicit Run, mathematical notation, shapes, diagrams, synthetic measurements, CSV/JSON. Zeroed parameters are labeled architectural controls, NOT trained SR performance. No frozen evidence or checkpoint touched.
+- Tests/tests/test_cnn_native_lessons.py and scripts/check_cnn_native_lessons.py added to existing CI. **Actual exact-head CI pending**, not claimed passed. Evidence reports/mp18-mp22-native-instructor.json. Next: inspect PR exact-head test jobs, repair, update report; then progress MP23–26. No automatic merge. Full independent geographic/masked research remains incomplete.
+
 # MP17 convolution native lesson — 2026-10-31
 
 - Stacked development branch feat/mp17-native-convolution-20261031 on MP12–16 PR48. Preserved previous work and CI run171 success at prior head96930eb; newer documentation head not yet CI-confirmed.
