@@ -1,3 +1,11 @@
+# MP12–16 UI execution verified in CI — 2026-10-31
+
+GitHub Actions [run 41226551966](https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/actions/runs/41226551966) passed the full tests and Streamlit jobs for PR48 head 96930eb, including `check_math_training_lessons.py`. [Evidence](../reports/mp12-mp16-native-instructor.json). Teaching implementation passed CI; independent scientific results/learner mastery still In progress. New documentation follow-up must pass its own CI before merge.
+
+# MP12–16 native lab implementation candidate — 2026-10-31
+
+Added 5 bounded native teaching labs with canonical source helper reuse, explicit Run, parameter effects, real synthetic outputs and CSV/JSON. [Static source integrity](../reports/mp12-mp16-native-instructor.json) passed six checks; new pytest/AppTest/CI have not yet executed successfully. Prior MP01–11 and frozen research evidence preserved. MP12–16 still In progress until executed testing and per-project acceptance.
+
 # Native instruction batch — 2026-10-31
 
 MP06–11 now have bounded on-site interactive labs using shared canonical helpers, with21 canonical tests and two batch AppTests passed. [Evidence](../reports/mp06-mp11-native-instructor.json). This advances teaching implementation; per-project scientific acceptance and learner mastery remain In progress. Frozen results are unchanged. Next native batch: MP12–16.
