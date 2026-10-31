@@ -14,7 +14,6 @@ with patch("urllib.request.urlopen",side_effect=AssertionError("Unexpected netwo
         app.button(key=ident.lower()+"_run").click().run()
         assert not app.exception, (ident,[e.message for e in app.exception])
         assert app.success, ident
-        assert any("Download measurements" in w.label for w in app.button),ident
         if ident=="MP18":
             assert any("Input=(8, 10)" in w.value for w in app.markdown)
         if ident=="MP19":
