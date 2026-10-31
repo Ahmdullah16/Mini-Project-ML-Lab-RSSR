@@ -1,3 +1,9 @@
+# Validated MP12–MP16 instructor batch — 2026-10-31
+
+- PR48 prior head 96930eb CI run171 / 41226551966 **SUCCESS**. Both jobs passed: tests job 124611801103 including full pytest and source/structure checks; Streamlit job 124611801412 including scripts/check_math_training_lessons.py and all existing app checks. This confirms actual on-site synthetic lesson execution, not independent scientific acceptance.
+- Evidence report reports/mp12-mp16-native-instructor.json includes pinned prior head/run IDs. This documentation-only follow-up will get a *new head*, whose CI must be checked separately. Do not claim that exact new head passed until confirmed.
+- Next unfinished native batch is MP17–22, preferably a separate stacked review branch. No code changes to MP01–16 after this checkpoint; all earlier training/checkpoint/frozen evaluation artifacts preserved. No automatic merge.
+
 # MP12–MP16 native lesson branch — 2026-10-31
 
 - Latest confirmed main at intake: d39bbd5 (PR47 externally merged). Branch `feat/mp12-mp16-native-lessons-20261031` was one commit ahead at intake with `src/rssr/pipeline_lab.py` only. No prior MP01–11 work repeated.
