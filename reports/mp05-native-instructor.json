@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "tests": "4 canonical MP05 tests passed0.43s; targeted MP05 and scale arithmetic AppTest passed with navigation network denied",
+  "observations": [
+    "radius0 preserves constant exactly",
+    "sigma1 radius1 center weight0.20417996",
+    "zero-padded constant0.5 has minimum0.263488 and maximum0.5",
+    "parameter change clears result"
+  ],
+  "source_hashes": {
+    "app/blur_lab_ui.py": "7829e40a1148a605865c4ae40740a3396002d288d5ed229c63f946a9aecadb4d",
+    "src/rssr/degradation_lab.py": "7a7b7cc341c1c29902245f98c1df70c24f6a031789f7916d1e0a6c744c047367",
+    "scripts/check_learning_ui.py": "1663195b91474f6ad029d447af01d31a20cc01dcdceec5dce7af2cf72f174fc5"
+  },
+  "limits": "Synthetic Gaussian filtering, not a calibrated sensor degradation or learned SR study."
+}
