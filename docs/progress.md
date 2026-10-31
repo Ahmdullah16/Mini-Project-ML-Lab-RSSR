@@ -1,3 +1,7 @@
+# MP18–22 on-site native CNN candidate — 2026-10-31
+
+Implemented educational Sobel, reconstruction, SRCNN, residual skip and three upsampling architecture controls with bounded fixtures. No new trained or held-out results; per-project acceptance is In progress. [Evidence](../reports/mp18-mp22-native-instructor.json). CI pending.
+
 # MP17 native CNN teaching milestone — 2026-10-31
 
 Implemented bounded on-site convolution geometry, kernel/padding/dilation, exact outputs, data tables and export with canonical shared helper. New numerical checks and CI route added; actual tests pending. Scientific/learner completion remains In progress. [Evidence](../reports/mp17-native-instructor.json).
