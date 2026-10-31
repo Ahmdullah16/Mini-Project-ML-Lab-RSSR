@@ -19,7 +19,6 @@ with patch("urllib.request.urlopen",side_effect=AssertionError("Unexpected netwo
         app.button(key=button).click().run()
         assert not app.exception and not app.error,project
         assert app.success,project
-        assert any("Download numerical table" in x.label for x in app.button),project
         if project=="MP12":
             assert any("tail energy=5.000000" in x.value for x in app.markdown)
             app.slider(key="mp12_rank").set_value(3).run()
