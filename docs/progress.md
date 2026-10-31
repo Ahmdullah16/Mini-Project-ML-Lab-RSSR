@@ -1,3 +1,7 @@
+# Native instruction batch — 2026-10-31
+
+MP06–11 now have bounded on-site interactive labs using shared canonical helpers, with21 canonical tests and two batch AppTests passed. [Evidence](../reports/mp06-mp11-native-instructor.json). This advances teaching implementation; per-project scientific acceptance and learner mastery remain In progress. Frozen results are unchanged. Next native batch: MP12–16.
+
 # Seven-model pilot and trained RGB scales — 2026-10-28
 
 Executed six bounded M2/M6 runs (100 steps, seeds17/23/41), validation-only, checkpoint reload verified. Frozen tests unchanged. All seven families now have local pilot training evidence; this does not complete research acceptance. Executed24 of42 trained RGB scale entries; M3/M4/M5 four-band weights remain incompatible. See [current acceptance matrix](acceptance_matrix.md), [pilot evidence](../reports/missing-model-pilot.json), [scale evidence](../reports/trained-rgb-capability.json).
