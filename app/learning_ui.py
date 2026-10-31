@@ -34,6 +34,9 @@ def render(root, projects):
     elif ident=='MP04':
         from difference_lab_ui import render as render_difference_lab
         render_difference_lab()
+    elif ident=='MP05':
+        from blur_lab_ui import render as render_blur_lab
+        render_blur_lab()
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):

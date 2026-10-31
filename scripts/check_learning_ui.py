@@ -69,6 +69,23 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Network during t
     app.button(key='mp04_run').click().run()
     assert any('MSE=0; RMSE=0; PSNR=inf' in w.value for w in app.markdown)
     assert not app.exception
+    app.selectbox(key='onsite_lesson').set_value('MP05').run()
+    assert not app.success
+    app.selectbox(key='mp05_pattern').set_value('Constant').run()
+    app.slider(key='mp05_radius').set_value(0).run()
+    app.button(key='mp05_run').click().run()
+    assert not app.exception
+    assert any('max absolute change=0;' in w.value for w in app.markdown)
+    app.slider(key='mp05_radius').set_value(1).run()
+    app.selectbox(key='mp05_pattern').set_value('Impulse').run()
+    assert not app.success
+    app.button(key='mp05_run').click().run()
+    assert any('center weight=0.20417996' in w.value for w in app.caption)
+    app.selectbox(key='mp05_pattern').set_value('Constant')
+    app.selectbox(key='mp05_boundary').set_value('constant').run()
+    app.button(key='mp05_run').click().run()
+    assert not app.exception
+    assert any('Output range=[0.263488, 0.5]' in w.value for w in app.markdown)
     app.slider(key='teaching_width').set_value(256)
     app.slider(key='teaching_height').set_value(128)
     app.selectbox(key='teaching_scale').set_value(8).run()
