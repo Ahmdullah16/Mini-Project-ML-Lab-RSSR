@@ -1,3 +1,7 @@
+# MP23–26 native attention teaching — 2026-11-01
+
+Implemented seeded bounded on-site channel/spatial/combined gates and zero-residual attention-SR architecture control, reusing canonical classes. New Streamlit AppTest added; CI pending. Random initialization is not trained SR or a research result. Learner/scientific acceptance incomplete.
+
 # MP18–22 on-site native CNN candidate — 2026-10-31
 
 Implemented educational Sobel, reconstruction, SRCNN, residual skip and three upsampling architecture controls with bounded fixtures. No new trained or held-out results; per-project acceptance is In progress. [Evidence](../reports/mp18-mp22-native-instructor.json). CI pending.
