@@ -52,6 +52,23 @@ with patch('urllib.request.urlopen',side_effect=AssertionError('Network during t
     app.button(key='mp03_run').click().run()
     assert not app.exception
     assert any('48 × 32; 1536 pixels' in w.value for w in app.markdown)
+    app.selectbox(key='onsite_lesson').set_value('MP04').run()
+    assert not app.success
+    app.button(key='mp04_run').click().run()
+    assert not app.exception
+    assert any('bias=10; MAE=10; MSE=100; RMSE=10; PSNR=28.1308' in w.value for w in app.markdown)
+    app.checkbox(key='mp04_shift').set_value(True).run()
+    assert not app.success
+    app.button(key='mp04_run').click().run()
+    assert any('bias=10; MAE=30; MSE=1000' in w.value for w in app.markdown)
+    app.checkbox(key='mp04_exclude').set_value(True).run()
+    app.button(key='mp04_run').click().run()
+    assert any('Included pixels=3; bias=20; MAE=33.3333; MSE=1200' in w.value for w in app.markdown)
+    app.checkbox(key='mp04_shift').set_value(False)
+    app.slider(key='mp04_offset').set_value(0).run()
+    app.button(key='mp04_run').click().run()
+    assert any('MSE=0; RMSE=0; PSNR=inf' in w.value for w in app.markdown)
+    assert not app.exception
     app.slider(key='teaching_width').set_value(256)
     app.slider(key='teaching_height').set_value(128)
     app.selectbox(key='teaching_scale').set_value(8).run()

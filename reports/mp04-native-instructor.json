@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-31",
+  "canonical_tests": "6 passed in20.13s",
+  "ui_checks": "All40 navigation completed before MP04 run exposed missing optional matplotlib. Replaced pandas background_gradient with explicit fixed-range CSS colors; targeted MP04 plus scale-arithmetic AppTest passed.",
+  "observations": [
+    "brightness10: bias10 MAE10 MSE100 RMSE10 PSNR28.1308",
+    "one-column shift: bias10 MAE30 MSE1000",
+    "excluded bottom-right: N3 bias20 MAE33.3333 MSE1200",
+    "identity: zero error, infinite PSNR",
+    "parameter change clears prior result"
+  ],
+  "source_hashes": {
+    "app/difference_lab_ui.py": "63bc346bdb9ee102e9a240dc5dcd15ad110bd554dfd942c0949e1e2793b9f6f5",
+    "scripts/check_learning_ui.py": "11eecc8f559493cca0258ccbd0b9412b79d9bdd2160cf348e29e084999c756d6",
+    "src/rssr/image_foundations.py": "3638a577d66c19b5e8ea73dc722ef3a1b5fdc3e29de7e36c5a8534a0df90b138"
+  },
+  "limits": "Synthetic aligned-reference teaching only; real-image accuracy and full project mastery not established."
+}
