@@ -35,6 +35,7 @@ jobs:
       - run: python scripts/check_degradation_lessons.py
       - run: python scripts/check_metric_lessons.py
       - run: python scripts/check_math_training_lessons.py
+      - run: python scripts/check_convolution_lesson.py
       - run: python scripts/check_streamlit.py
       - run: python scripts/check_model_catalog.py
       - run: python scripts/check_comparison.py
