@@ -1,3 +1,5 @@
+MP17 native convolution playground candidate added on stacked branch, with canonical correlate/output_size/receptive_field, explicit outputs and new CI checks. CI execution pending; never mark scientific/learner acceptance complete. Evidence: reports/mp17-native-instructor.json.
+
 2026-10-31 MP12–16 native lab GitHub Actions run 41226551966 passed both tests and streamlit jobs at head 96930eb, including new five-lesson execution. Evidence: reports/mp12-mp16-native-instructor.json. Scientific project completion/public deployment still pending; next MP17–22. Documentation follow-up requires exact-head recheck.
 
 2026-10-31 candidate MP12–16 native instructor labs added on review branch with canonical imports and static source checks; new AppTest/pytest/CI still pending. Evidence: reports/mp12-mp16-native-instructor.json. Do not mark W1 complete.
