@@ -11,7 +11,7 @@ with patch("urllib.request.urlopen",side_effect=AssertionError("Unexpected netwo
     for ident in ("MP18","MP19","MP20","MP21","MP22"):
         app.selectbox(key="onsite_lesson").set_value(ident).run()
         assert not app.exception and not app.success,ident
-        app.button(key=ident.lower()+"_run").click().run()
+        app.button(key=(ident.lower()+"_run" if ident in ("MP18","MP20","MP22") else ident+"_run")).click().run()
         assert not app.exception, (ident,[e.message for e in app.exception])
         assert app.success, ident
         if ident=="MP18":
