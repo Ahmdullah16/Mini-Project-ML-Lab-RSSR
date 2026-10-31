@@ -49,6 +49,9 @@ def render(root, projects):
     elif ident=='MP17':
         from convolution_lesson_ui import render as render_convolution
         render_convolution()
+    elif ident in ('MP18','MP19','MP20','MP21','MP22'):
+        from cnn_native_lessons import render as render_cnn
+        render_cnn(ident)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):
