@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-31",
+  "scope": "Six native on-site labs; synthetic teaching, not new research results",
+  "canonical_tests": {
+    "MP06-08": "12 passed0.93s",
+    "MP09-11": "9 passed5.49s"
+  },
+  "checks": {
+    "MP06": [
+      "x2/x4 exact24x16 and12x8 shapes",
+      "point mean0 vs area mean0.5"
+    ],
+    "MP07": [
+      "zero noise identity",
+      "seed17 repeated output identical; seed18 changed",
+      "noise before averaging lower MSE; JPEG branch executed"
+    ],
+    "MP08": [
+      "inverse error<1e-12",
+      "Parseval residual<1e-9",
+      "cutoff0.1 removes6/48 frequency;0.2 retains std0.282843"
+    ],
+    "MP09": [
+      "brightness MSE0.01 PSNR20",
+      "zero-strength identity"
+    ],
+    "MP10": [
+      "valid-window maps42x26 and46x30",
+      "identity SSIM1"
+    ],
+    "MP11": [
+      "four-row shared-reference comparison",
+      "identity row zero MSE/infinite PSNR"
+    ]
+  },
+  "ui": "Both batch AppTests passed with urlopen denied; parameter changes clear outputs",
+  "test_repairs": "Initial FFT result parser included sentence punctuation; corrected numeric regex. A Windows encoding rewrite briefly corrupted dimension literals; restored UTF-8 and reran batch successfully.",
+  "source_hashes": {
+    "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
+    "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
+    "app/learning_ui.py": "f78cbc6d072b4761c51d1d84bb3bbd57225d2c35a29fbc52a422753f35f84472",
+    "scripts/check_degradation_lessons.py": "08b0892d39b836744b262842be7e8871472719de5fad7ae2d97e88a9223726d7",
+    "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
+  },
+  "limitations": [
+    "Not a calibrated sensor model",
+    "No frozen test or training reruns",
+    "Full individual scientific/learner acceptance remains in progress",
+    "Public deployment and browser/mobile review of this batch pending"
+  ]
+}

@@ -37,6 +37,12 @@ def render(root, projects):
     elif ident=='MP05':
         from blur_lab_ui import render as render_blur_lab
         render_blur_lab()
+    elif ident in ('MP06','MP07','MP08'):
+        from degradation_batch_ui import render as render_degradation_lab
+        render_degradation_lab(ident)
+    elif ident in ('MP09','MP10','MP11'):
+        from metric_lesson_ui import render as render_metric_lesson
+        render_metric_lesson(ident)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):

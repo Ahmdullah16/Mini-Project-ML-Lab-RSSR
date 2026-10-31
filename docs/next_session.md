@@ -1,23 +1,23 @@
-# Resume checkpoint — 2026-10-31
+# Resume checkpoint — batched lessons, 2026-10-31
 
 ## Verified state
-- PR43 merged externally as 7c231604 after CI41088399016 passed. Public browser verified this version and all eight checkpoints (seven families) on one cached16×16→32×32 request. Evidence: reports/public-seven-family-20261030.json. No access blocker. No public satellite inference/cold-start claim.
-- PR44 https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/44 remains open: ff5f500a06fc0acf3da3b4147cbd342b18da2ddb CI41089876288 SUCCESS. MP03 native resizing implementation is validated; not yet merged. Do not auto-merge.
-- External PR45 merged as dade80ed adds RSSR_Complete_Project.ipynb. Preserve it. Fresh-kernel default50cells passed4.20s; opt-in seven-model variant51cells passed22.25s and seven32×32×3TIFFs verified. reports/portable-notebook-execution-20261031.json. Upload/satellite paths not tested. Notebook fixtures are not full forty-project scientific acceptance.
-- MP04 native comparison lab now implemented: signed error/mask mathematics, numeric examples, fixed-range heatmap, metrics, CSV/PNG exports, explicitRun/stale-output clearing. Six canonical tests passed20.13s. All40 navigation ran; initial MP04 computation failed missing optional matplotlib. Replaced gradient dependency with direct CSS; targeted MP04 and scale controls passed. reports/mp04-native-instructor.json. No frozen experiments regenerated.
-- Local integration a5f622e preserved external PR45 and MP03/04. PR44 updated head7b33be095ca0ba380fa701a43dbcc9d87a4b8749; CI41221613538 tests job passed, Streamlit job still running at last inspection.
-- MP05 Gaussian lab implemented and validated: four canonical tests0.43s, targeted UI radius0 identity, impulse center weight, zero-padding border darkening and stale clearing passed. reports/mp05-native-instructor.json. This follow-up still needs publication and its own CI.
+- PR46 head1585a22 CI41221845231 SUCCESS; externally merged5fb37bff, integrated8cb7fa1 preserving checkpoint. No agent remote merge.
+- New MP06–11 native labs implemented as two shared modules. Twenty-one canonical tests passed; both batched AppTests passed (exact sampling, seeded noise/JPEG, FFT inverse/Parseval/cutoff, MSE/PSNR hand examples, SSIM windows, shared-reference dashboard and stale clearing). reports/mp06-mp11-native-instructor.json. One combined review milestone; no per-project publication loop.
+- User preference: minimize tokens by batching related projects, reading shared helpers once, running affected batch checks once, and performing full checks at release. Keep per-project evidence distinct; do not lower acceptance standards.
+- Preserve earlier public7c231604 eight-checkpoint/seven-family16×16→32×32 execution in reports/public-seven-family-20261030.json. Satellite public inference/cold start remains separate.
+- Preserve portable notebook source from external PR45 and fresh-kernel default50cells/opt-in51cells with seven32×32RGB TIFFs: reports/portable-notebook-execution-20261031.json. No notebook upload/satellite acceptance claim.
+- This MP06–11 batch is validated locally; publish review PR and inspect its exact-head CI. Frozen research outputs unchanged.
 
 ## Next actions
-1. Finish local integration, publish MP03/04 follow-up to existing PR44 (preserve notebook), inspect exact updated-head CI. Do not claim the new head passed from old CI.
-2. Complete MP06 native downsampling lab using existing degradation helpers and canonical stage folder; continue remaining lessons individually. Read canonical helpers before changes. MP01–05 native labs do not imply full40 acceptance.
+1. Publish the validated MP06–11 batch and inspect actual-head CI; integrate any external merge without overwriting progress. No automatic merge.
+2. Next related batch: stage_04_math_pytorch MP12–16. Inspect canonical shared numerical/training helpers together; add bounded native lessons and batch tests. MP01–11 UI implementation does not establish full40 scientific acceptance.
 3. Public Satellite Explorer seven-model inference, downloads, mobile layout, cold-start and configured persistence remain unverified. Preserve stateless semantics and source calibration/masks.
 4. Continue scientific paired-data/region-v2 eligibility and matched-budget gates, final paper/report/PDF review/slides/package. Never relax frozen splits or substitute pilots for geographic evidence. External durable storage account and real author/venue details remain missing.
 
 ## Commands and constraints
 - Work from repo root. Set PYTHONPATH=src and PYTHONUTF8=1 each shell; dev venv otherwise resolves an older editable checkout.
 - Dev Python: ../../work/clean-venv/Scripts/python.exe; app Python: ../../work/streamlit-venv/Scripts/python.exe.
-- After lesson changes: apppython scripts/check_learning_ui.py; targeted canonical project pytest. Current local targeted log ../../work/mp04-targeted.log; full navigation initial failure ../../work/mp04-apptest.log.
+- After lesson changes: apppython scripts/check_degradation_lessons.py and scripts/check_metric_lessons.py for this batch; full40 navigation remains in CI. Canonical stage02/03 tests passed; logs ../../work/mp06-08-apptest.log and ../../work/mp09-11-apptest.log.
 - Integrity: devpython scripts/build_learning_supplement.py --check; devpython scripts/audit_paper_sources.py --check. Both passed after MP03; repeat only affected checks.
 - Notebook artifacts stay outside Git: ../../work/notebook-validation-20261031 and ../../work/notebook-model-validation-20261031. Reproduce in fresh kernel/new output_directory; enable run_models and pinned_repo_path only for opt-in variant. No training or dataset download required.
 - Preserve all frozen evidence and published v0.3.0-rgb-pilots release/checksums. 42 small RGB model-scale cases already executed; full65536-square output not executed.
