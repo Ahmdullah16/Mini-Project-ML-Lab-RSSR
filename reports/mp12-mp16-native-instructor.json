@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "scope": "MP12–MP16 native bounded mathematics/optimization/training labs; branch awaiting actual CI",
+  "branch": "feat/mp12-mp16-native-lessons-20261031",
+  "base_commit": "d39bbd5b2246609f928ab329ff049d5e65e9c0c4",
+  "static_source_integrity": {
+    "native lesson dispatch": true,
+    "five explicit Run controls": true,
+    "canonical imports": true,
+    "explicit click guards": true,
+    "CI job includes batch UI check": true,
+    "numeric tests present": true
+  },
+  "static_all_passed": true,
+  "evidence_status": "Source inspected through GitHub; pytest and Streamlit AppTest NOT executed in this session",
+  "source_blob_shas": {
+    "app/learning_ui.py": "119928279fc3b9c70fae4214eb65efd4467fe8b4",
+    "src/rssr/pipeline_lab.py": "0b451b507791d3c185792f62e2e97aba84125db4",
+    "app/math_training_ui.py": "25328f2cef149917302155a8452cf49662cafb9f",
+    "scripts/check_math_training_lessons.py": "c0df036b8810db891ffff26196bb33772879ec5f",
+    "tests/test_math_training_lessons.py": "7862363f69acbb18c5eac0bd5c78cb68b8d52b3a",
+    ".github/workflows/test.yml": "e30dc0280959698a8c5d32bf29fd8c11f00a0199"
+  },
+  "existing_evidence_preserved": [
+    "reports/mp12-svd.json",
+    "reports/mp13-mp15-training.json",
+    "reports/mp16-pipeline.json"
+  ],
+  "unverified": [
+    "New numerical pytest suite",
+    "New Streamlit AppTest batch",
+    "Full CI",
+    "Public deployment/mobile",
+    "Scientific held-out evaluation"
+  ]
+}
