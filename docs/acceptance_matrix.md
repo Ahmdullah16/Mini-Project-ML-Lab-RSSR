@@ -1,3 +1,5 @@
+2026-11-01: PR50 exact head 847cc729 GitHub Actions 41232412252 SUCCESS; MP18–22 synthetic teaching tests passed. MP23–26 attention lab candidate added on stacked branch, using canonical gates with seeded controls (not trained). New CI pending. Full W1 and scientific acceptance incomplete.
+
 2026-11-01: PR50 run 41229517239: tests success, Streamlit failure in scripts/check_cnn_native_lessons.py from incorrect MP19/MP21 button key case (mp19_run vs MP19_run). Corrected in ec88eba6; exact-head CI retest pending. No research results altered.
 
 MP18–22 native bounded CNN lesson candidates added to stacked development branch, using canonical shared models, labeled zero-weight controls, explicit run and CSV/JSON. CI unverified; full scientific and learner completion pending. Evidence reports/mp18-mp22-native-instructor.json.
