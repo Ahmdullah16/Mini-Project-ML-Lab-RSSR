@@ -48,8 +48,44 @@
   "compatibility": "No changes to dependency manifests, src/rssr, hosted catalog, weights, frozen evidence, notebook or TeX. Original workspace local MP12-16 implementation preserved unmodified; upstream48 has its own tested implementation.",
   "protection": "Rulesets read returned empty; branch protection read denied403 by integration. Merge must use normal GitHub API and honor server protection; no bypass.",
   "limits": [
-    "New integration head CI pending",
-    "Public deployment and post-merge notebook checks pending",
-    "Native architecture controls do not establish trained SR or full scientific acceptance"
-  ]
+    "Native architecture controls do not establish trained SR or full scientific acceptance",
+    "No new large training, satellite acquisition, cold-start/persistence or full mobile verification in this PR review",
+    "Final evidence/checkpoint follow-up is committed locally; publish via normal PR before treating it as main documentation"
+  ],
+  "integration": {
+    "pr": 52,
+    "head": "173068bae90ee755a1f0e8b5c9e87053016368bd",
+    "ci_run": 41279698496,
+    "ci": "success",
+    "merge_commit": "3a10235d575c6c44fbdde90f8339b795628df41f",
+    "merged_at": "2026-11-01T06:10:56Z",
+    "merge_actor_note": "Merged externally before agent issued a merge request; verified merged state.",
+    "open_prs_at_finish": 0
+  },
+  "post_merge": {
+    "notebook": {
+      "source_sha256": "ec7c1227cedb2dbbf995f00d6485b5e28739d4fedfd7ad25d6a5af05853a47f6",
+      "source_commit": "3ee52678f3b35ea1c01d8faf53cf89dd77d05b82",
+      "mode": "default offline demo; model/satellite/training flags false",
+      "code_cells_executed": 50,
+      "seconds": 2.5056061999930535,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "output_files": [
+        "data\\rssr_notebook_outputs\\bicubic-teaching.png",
+        "data\\rssr_notebook_outputs\\metrics-teaching.csv",
+        "data\\rssr_notebook_outputs\\provenance-teaching.json"
+      ],
+      "limits": "No model, upload, satellite, geographic or full instructional acceptance implied."
+    },
+    "app": [
+      "check_deployment_imports.py passed: stale-import recovery without network",
+      "check_showcase.py passed: seven sections, learning curves, source library, empty searches"
+    ],
+    "public": {
+      "url": "https://mini-project-ml-lab-rssr.streamlit.app/",
+      "observed_commit": "3a10235d575c6c44fbdde90f8339b795628df41f",
+      "executed": "MP26 Run: result table and measurements/settings downloads visible; zero-residual x2 shape (1,3,12,16), mean0.5",
+      "screenshot_local": "work/release-mp26-public.png"
+    }
+  }
 }
