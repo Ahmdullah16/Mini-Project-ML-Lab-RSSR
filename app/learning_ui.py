@@ -55,6 +55,9 @@ def render(root, projects):
     elif ident in ('MP23','MP24','MP25','MP26'):
         from attention_native_ui import render as render_attention
         render_attention(ident)
+    elif ident in ('MP27','MP28','MP29','MP30','MP31'):
+        from transformer_native_ui import render as render_transformer
+        render_transformer(ident, root)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):
