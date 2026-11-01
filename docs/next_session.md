@@ -1,3 +1,35 @@
+# PR stack integration checkpoint — 2026-11-01
+
+- User explicitly authorizes merging reviewed PRs only after latest required checks pass; never bypass protection. Earlier no-auto-merge notes below are historical and superseded within this review scope.
+- No open PRs at intake. PR48 reached main d05b695; PR49/50/51 were merged only into feature branches, leaving MP17–26 off main. Integration order48→49→50→51; consolidate unique changes, do not reimplement them.
+- Isolated worktree: work/pr-review-20261101, branch review/pr-integration-20261101. Original outputs/Mini-Project-ML-Lab-RSSR workspace uncommitted MP12–16 work preserved untouched. Use the review worktree for this integration.
+- Fixed periodic-pattern label and sequential attention equation/diagram; strengthened numerical UI assertions. Local full pytest507+17subtests, three affected AppTests,40IDs/979links, report/paper integrity passed. Source PR49/50/51 exact-head CI passed. reports/pr-stack-review-20261101.json records scope.
+- NEXT: publish integration PR; require latest-head CI/review eligibility; normal merge only. Then run post-merge app/notebook checks, verify public version where accessible and update this checkpoint. Protection endpoint403 is API permission, not an app-access failure.
+- Existing frozen research/checkpoints unchanged. MP17–26 are bounded educational controls, not fully accepted trained models. Remaining native work starts MP27; scientific geographic/real-paired, paper/report/slides, durable store and deployment acceptance remain open.
+- Review venv commands from work/pr-review-20261101: set PYTHONPATH=src and PYTHONUTF8=1; ../clean-venv/Scripts/python.exe -m pytest; ../streamlit-venv/Scripts/python.exe scripts/check_attention_native_lessons.py (plus CNN/convolution checks). Reuse completed checks unless new changes justify reruns.
+
+## Historical checkpoints (current state above takes precedence)
+
+# MP23–26 native attention milestone — 2026-11-01
+
+- PR50 exact head 847cc729 **CI success** run41232412252 (both tests and Streamlit including MP18–22), no merge. Prior PR48 and PR49 CI also passed; preserve stacked review chain.
+- New stacked branch feat/mp23-mp26-native-attention-20261101 introduces app/attention_native_ui.py using canonical InspectableAttention and SRModel for MP23 channel gates, MP24 spatial gates, MP25 combined gates, MP26 zero-residual x2 shape/skip. Seeded random gate values explicitly NOT trained inference; no original frozen evidence changed. tests: scripts/check_attention_native_lessons.py wired to CI, not yet run.
+- Next: inspect exact-head CI and correct failures, record job IDs; then MP27–31 native transformer lessons. Public satellite, scientific geographic test and final submission acceptance remain separate. Do not auto-merge.
+
+2026-11-01: PR50 run 41229517239: tests success, Streamlit failure in scripts/check_cnn_native_lessons.py from incorrect MP19/MP21 button key case (mp19_run vs MP19_run). Corrected in ec88eba6; exact-head CI retest pending. No research results altered.
+
+# MP18–22 native CNN teaching milestone — 2026-10-31
+
+- Current stacked chain: PR48 MP12–16 (CI run 41227394028 SUCCESS, exact head 0a9db78), PR49 MP17 (CI run 41227558834 SUCCESS, exact head ecc9bac), new branch feat/mp18-mp22-native-cnn-20261031 based on PR49. Neither predecessor merged; no old verified work rerun.
+- Added five bounded Streamlit MP18–22 experiments reusing canonical Sobel (local MP18), Reconstruction/UpsamplingCNN and SRModel source. Explicit Run, mathematical notation, shapes, diagrams, synthetic measurements, CSV/JSON. Zeroed parameters are labeled architectural controls, NOT trained SR performance. No frozen evidence or checkpoint touched.
+- Tests/tests/test_cnn_native_lessons.py and scripts/check_cnn_native_lessons.py added to existing CI. **Actual exact-head CI pending**, not claimed passed. Evidence reports/mp18-mp22-native-instructor.json. Next: inspect PR exact-head test jobs, repair, update report; then progress MP23–26. No automatic merge. Full independent geographic/masked research remains incomplete.
+
+# MP17 convolution native lesson — 2026-10-31
+
+- Stacked development branch feat/mp17-native-convolution-20261031 on MP12–16 PR48. Preserved previous work and CI run171 success at prior head96930eb; newer documentation head not yet CI-confirmed.
+- Added app/convolution_lesson_ui.py using rssr.convolution_lab for actual float64 9×9 impulse/ramp/constant, kernel 1/3/5, stride1/2, padding0–2, dilation1/2; exact output geometry, receptive field, comparison table, CSV and JSON exports. Explicit Run; no data download or learned checkpoint. Wired to app/learning_ui.py. Added numeric and offline AppTest checks in CI.
+- Current MP17 source additions NOT yet executed under GitHub Actions. Read reports/mp17-native-instructor.json for static evidence. Next: inspect stacked branch CI and repair, then continue related MP18–22 native CNN teaching. No automatic merge. Scientific research and public deployment acceptance remain open.
+
 # Validated MP12–MP16 instructor batch — 2026-10-31
 
 - PR48 prior head 96930eb CI run171 / 41226551966 **SUCCESS**. Both jobs passed: tests job 124611801103 including full pytest and source/structure checks; Streamlit job 124611801412 including scripts/check_math_training_lessons.py and all existing app checks. This confirms actual on-site synthetic lesson execution, not independent scientific acceptance.
