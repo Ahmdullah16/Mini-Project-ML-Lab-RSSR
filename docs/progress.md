@@ -1,6 +1,6 @@
 # MP27–31 native on-site teaching — 2026-11-01
 
-Native UI milestone In progress pending exact-head CI; all five offline AppTests passed. Reuses completed canonical educational operators without rerunning notebooks or frozen studies. Eight new numerical tests passed. Previous MP27–31 implementation/teaching completion remains scoped as documented; learner mastery and research/submission gates remain unassessed/open. [Batch evidence](../reports/mp27-mp31-native-instructor.json).
+Native UI implementation and local validation complete for this bounded teaching scope: all five offline AppTests, all40 navigation and import recovery passed; PR54 head715a8c83 passed both CI41282567158 jobs. Latest documentation-head verification/integration remains a separate gate. Reuses completed canonical educational operators without rerunning notebooks or frozen studies. Eight new numerical tests passed. Previous MP27–31 implementation/teaching completion remains scoped as documented; learner mastery and research/submission gates remain unassessed/open. [Batch evidence](../reports/mp27-mp31-native-instructor.json).
 
 # MP23–26 native attention teaching — 2026-11-01
 
