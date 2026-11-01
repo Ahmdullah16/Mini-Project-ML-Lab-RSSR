@@ -38,6 +38,7 @@ jobs:
       - run: python scripts/check_convolution_lesson.py
       - run: python scripts/check_cnn_native_lessons.py
       - run: python scripts/check_attention_native_lessons.py
+      - run: python scripts/check_transformer_native_lessons.py
       - run: python scripts/check_streamlit.py
       - run: python scripts/check_model_catalog.py
       - run: python scripts/check_comparison.py
