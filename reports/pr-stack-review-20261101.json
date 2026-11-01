@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "inventory": "GET pulls?state=open returned zero; recent closed PRs revealed a stranded stack",
+  "main_at_review": "d05b695",
+  "order": [
+    48,
+    49,
+    50,
+    51
+  ],
+  "stack": {
+    "48": "already merged main",
+    "49": "merged into feature branch after48; not main",
+    "50": "merged into49 branch; not main",
+    "51": "merged into50 branch; not main"
+  },
+  "source_head_ci": {
+    "49": [
+      "ecc9bac50398a6e0a5cdfb6ab9ec699ad1ec80db",
+      41227558834,
+      "success"
+    ],
+    "50": [
+      "847cc72963c0968bf2175b4bb883be80c0645d24",
+      41232412252,
+      "success"
+    ],
+    "51": [
+      "23347c4e7fed1b0f86d83548829330e3de19c584",
+      41233376116,
+      "success"
+    ]
+  },
+  "fixes": [
+    "Integrate all unique MP17-26 changes into current main in one reviewed branch",
+    "Rename periodic fixture mislabeled Ramp",
+    "Correct combined attention to pool channel-gated features; disclose biases, padding and educational variant",
+    "Strengthen attention numerical controls/zero amplitude and all three upsampling UI paths"
+  ],
+  "checks": [
+    "507 pytest tests plus17subtests passed36.05s",
+    "MP17, MP18-22, MP23-26 AppTests passed with network denied",
+    "40 IDs/979 links passed",
+    "Shared report and paper source integrity passed"
+  ],
+  "compatibility": "No changes to dependency manifests, src/rssr, hosted catalog, weights, frozen evidence, notebook or TeX. Original workspace local MP12-16 implementation preserved unmodified; upstream48 has its own tested implementation.",
+  "protection": "Rulesets read returned empty; branch protection read denied403 by integration. Merge must use normal GitHub API and honor server protection; no bypass.",
+  "limits": [
+    "New integration head CI pending",
+    "Public deployment and post-merge notebook checks pending",
+    "Native architecture controls do not establish trained SR or full scientific acceptance"
+  ]
+}

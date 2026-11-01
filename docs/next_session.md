@@ -1,3 +1,15 @@
+# PR stack integration checkpoint — 2026-11-01
+
+- User explicitly authorizes merging reviewed PRs only after latest required checks pass; never bypass protection. Earlier no-auto-merge notes below are historical and superseded within this review scope.
+- No open PRs at intake. PR48 reached main d05b695; PR49/50/51 were merged only into feature branches, leaving MP17–26 off main. Integration order48→49→50→51; consolidate unique changes, do not reimplement them.
+- Isolated worktree: work/pr-review-20261101, branch review/pr-integration-20261101. Original outputs/Mini-Project-ML-Lab-RSSR workspace uncommitted MP12–16 work preserved untouched. Use the review worktree for this integration.
+- Fixed periodic-pattern label and sequential attention equation/diagram; strengthened numerical UI assertions. Local full pytest507+17subtests, three affected AppTests,40IDs/979links, report/paper integrity passed. Source PR49/50/51 exact-head CI passed. reports/pr-stack-review-20261101.json records scope.
+- NEXT: publish integration PR; require latest-head CI/review eligibility; normal merge only. Then run post-merge app/notebook checks, verify public version where accessible and update this checkpoint. Protection endpoint403 is API permission, not an app-access failure.
+- Existing frozen research/checkpoints unchanged. MP17–26 are bounded educational controls, not fully accepted trained models. Remaining native work starts MP27; scientific geographic/real-paired, paper/report/slides, durable store and deployment acceptance remain open.
+- Review venv commands from work/pr-review-20261101: set PYTHONPATH=src and PYTHONUTF8=1; ../clean-venv/Scripts/python.exe -m pytest; ../streamlit-venv/Scripts/python.exe scripts/check_attention_native_lessons.py (plus CNN/convolution checks). Reuse completed checks unless new changes justify reruns.
+
+## Historical checkpoints (current state above takes precedence)
+
 # MP23–26 native attention milestone — 2026-11-01
 
 - PR50 exact head 847cc729 **CI success** run41232412252 (both tests and Streamlit including MP18–22), no merge. Prior PR48 and PR49 CI also passed; preserve stacked review chain.

@@ -24,8 +24,10 @@ with patch("urllib.request.urlopen",side_effect=AssertionError("Unexpected netwo
             assert any("MSE=0.000000" in w.value for w in app.markdown)
         if ident=="MP22":
             assert any("max |output" in w.value for w in app.markdown)
-            app.selectbox(key="mp22_mode").set_value("transpose").run()
-            assert not app.success
-            app.button(key="mp22_run").click().run()
-            assert not app.exception
+            for mode in ('transpose','interpolate'):
+                app.selectbox(key="mp22_mode").set_value(mode).run()
+                assert not app.success
+                app.button(key="mp22_run").click().run()
+                assert not app.exception
+                assert app.dataframe[0].value.iloc[0]['max_absolute_residual']==0
 print("MP18-22 UI batch: five canonical synthetic lessons and stale result clearing passed.")

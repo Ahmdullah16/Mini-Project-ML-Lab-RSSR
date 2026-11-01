@@ -46,13 +46,13 @@ def render(ident):
         residual=ident=="MP21"
         st.latex(r"\hat X=F_\theta(X)" if not residual else r"\hat X=X+F_\theta(X),\quad \frac{\partial\hat X}{\partial X}=I+\frac{\partial F_\theta}{\partial X}")
         st.write("A canonical two-convolution model maps B×3×H×W to the same shape. Zero residual weights give exact identity only with a skip connection; the direct model returns zero. This test isolates architecture, not learned reconstruction quality. Parameter count and numerical MSE are from the actual initialized model.")
-        fixture=st.selectbox(ident+" input",["Ramp","Zeros"],key=ident+"_fixture")
+        fixture=st.selectbox(ident+" input",["Periodic pattern","Zeros"],key=ident+"_fixture")
         st.graphviz_chart('digraph {rankdir=LR; Input -> "Conv 3x3" -> ReLU -> "Conv 3x3" -> Output; Input -> "Optional residual add" -> Output;}')
         if not st.button("Run "+ident,key=ident+"_run"):return
         torch.manual_seed(19);model=Reconstruction(bands=3,residual=residual).eval()
         with torch.no_grad():
             for p in model.parameters():p.zero_()
-            a=_fixture().expand(-1,3,-1,-1).clone() if fixture=="Ramp" else torch.zeros(1,3,8,10)
+            a=_fixture().expand(-1,3,-1,-1).clone() if fixture=="Periodic pattern" else torch.zeros(1,3,8,10)
             output=model(a)
         rows=[{"case":"input","mean":float(a.mean()),"MSE_to_input":0.},
               {"case":"model output","mean":float(output.mean()),"MSE_to_input":float(((output-a)**2).mean())}]

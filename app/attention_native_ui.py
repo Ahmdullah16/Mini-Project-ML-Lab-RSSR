@@ -12,14 +12,15 @@ def render(ident):
     modes={"MP23":"channel","MP24":"spatial","MP25":"combined","MP26":"combined"}
     mode=modes[ident]
     strength=st.slider(ident+" feature amplitude",0.0,1.0,0.5,0.1,key=ident+"_amplitude")
-    st.latex(r"z_c=(HW)^{-1}\sum_{h,w}F_{c,h,w},\quad A_c=\sigma(W_2\,\mathrm{ReLU}(W_1z))")
-    st.latex(r"A_s=\sigma(\mathrm{Conv}_{7\times7}[\mathrm{mean}_c(F);\mathrm{max}_c(F)]),\quad F'=A_s\odot(A_c\odot F)")
+    st.latex(r"z_c=(HW)^{-1}\sum_{h,w}F_{c,h,w},\quad A_c=\sigma(W_2\,\mathrm{ReLU}(W_1z+b_1)+b_2)")
+    st.latex(r"\widetilde F=A_c\odot F,\quad A_s=\sigma(\mathrm{Conv}_{7\times7}[\mathrm{mean}_c(\widetilde F);\mathrm{max}_c(\widetilde F)]),\quad F^{out}=A_s\odot\widetilde F")
+    st.write("For combined attention, spatial pooling uses the channel-gated features, not the original features. Convolution biases are enabled; spatial padding is three zeros per edge. Channel-only and spatial-only modes bypass the other gate. This is an educational average-pooling channel variant, not a faithful full CBAM reproduction.")
     st.write("The input is B×C×H×W; channel weights broadcast over H,W and spatial weights over C. "
              "Sigmoid is in (0,1). The learned gates below are seeded, randomly initialized "
              "architecture demonstrations, not pre-trained image-restoration weights. "
              "Uniform mode multiplies each feature by 0.5; disabled mode is identity. "
              "The numerical output is a controlled change in a tensor, not a ground-truth SR metric.")
-    st.graphviz_chart('digraph {rankdir=LR; Features -> "Global pooling" -> "Channel gate"; Features -> "Spatial pooling"; "Channel gate" -> Multiplication; "Spatial pooling" -> "Spatial gate" -> Multiplication; Multiplication -> Output;}')
+    st.graphviz_chart('digraph {rankdir=LR; Features -> "Global pooling" -> "Channel gate"; Features -> "Channel multiplication"; "Channel gate" -> "Channel multiplication" -> "Spatial pooling" -> "Spatial gate"; "Channel multiplication" -> "Spatial multiplication"; "Spatial gate" -> "Spatial multiplication" -> Output;}')
     if not st.button("Run "+ident,key=ident+"_run"):return
     torch.manual_seed(23)
     layer=InspectableAttention(4).eval()
