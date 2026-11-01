@@ -35,7 +35,9 @@
     "Integrate all unique MP17-26 changes into current main in one reviewed branch",
     "Rename periodic fixture mislabeled Ramp",
     "Correct combined attention to pool channel-gated features; disclose biases, padding and educational variant",
-    "Strengthen attention numerical controls/zero amplitude and all three upsampling UI paths"
+    "Strengthen attention numerical controls/zero amplitude and all three upsampling UI paths",
+    "Correct direct/residual CNN diagrams with distinct convolution nodes; disclose compact SRCNN widths and zero padding",
+    "Record separate MP26 SR-control seed26; remove misleading training docstring"
   ],
   "checks": [
     "507 pytest tests plus17subtests passed36.05s",

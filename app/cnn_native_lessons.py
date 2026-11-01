@@ -1,6 +1,6 @@
 """Five native CNN teaching labs; use the repository's canonical models and operators.
 Fixtures have known synthetic values; model weights are either explicitly initialized
-for a shape/control check or trained only when a bounded optional Run is clicked.
+for a shape/control check. These controls do not train models.
 """
 import json
 import sys
@@ -47,7 +47,7 @@ def render(ident):
         st.latex(r"\hat X=F_\theta(X)" if not residual else r"\hat X=X+F_\theta(X),\quad \frac{\partial\hat X}{\partial X}=I+\frac{\partial F_\theta}{\partial X}")
         st.write("A canonical two-convolution model maps B×3×H×W to the same shape. Zero residual weights give exact identity only with a skip connection; the direct model returns zero. This test isolates architecture, not learned reconstruction quality. Parameter count and numerical MSE are from the actual initialized model.")
         fixture=st.selectbox(ident+" input",["Periodic pattern","Zeros"],key=ident+"_fixture")
-        st.graphviz_chart('digraph {rankdir=LR; Input -> "Conv 3x3" -> ReLU -> "Conv 3x3" -> Output; Input -> "Optional residual add" -> Output;}')
+        st.graphviz_chart('digraph {rankdir=LR; Input -> Conv1 -> ReLU -> Conv2 -> Add -> Output; Input -> Add;}' if residual else 'digraph {rankdir=LR; Input -> Conv1 -> ReLU -> Conv2 -> Output;}')
         if not st.button("Run "+ident,key=ident+"_run"):return
         torch.manual_seed(19);model=Reconstruction(bands=3,residual=residual).eval()
         with torch.no_grad():
@@ -60,7 +60,7 @@ def render(ident):
         _export(ident,rows,{"model":"rssr.cnn_labs.Reconstruction","residual":residual,"weights":"explicit zeros for architectural identity test","training":"none"})
     elif ident=="MP20":
         st.latex(r"\hat X=\operatorname{Conv}_5(\operatorname{ReLU}(\operatorname{Conv}_1(\operatorname{ReLU}(\operatorname{Conv}_9(\operatorname{Bicubic}_2(X))))))")
-        st.write("SRCNN uses a 9×9 feature convolution, 1×1 mapping convolution, and 5×5 reconstruction convolution after bicubic ×2. For input 1×3×8×10, target is 1×3×16×20. Setting all convolution weights to zero yields zero output (not bicubic); random weights cannot be presented as trained model results.")
+        st.write("This compact SRCNN-style model uses32 and16 hidden channels, zero padding to retain size, and a 9×9 feature convolution, 1×1 mapping convolution, and 5×5 reconstruction convolution after bicubic ×2. For input 1×3×8×10, target is 1×3×16×20. Setting all convolution weights to zero yields zero output (not bicubic); random weights cannot be presented as trained model results.")
         st.graphviz_chart('digraph {rankdir=LR; LR -> "Bicubic x2" -> "9x9 features" -> "1x1 map" -> "5x5 reconstruction" -> HR;}')
         if not st.button("Run MP20",key="mp20_run"):return
         model=SRModel(bands=3,scale=2,kind="srcnn").eval()

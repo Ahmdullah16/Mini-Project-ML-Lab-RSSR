@@ -46,6 +46,6 @@ def render(ident):
     table=pd.DataFrame(rows);st.dataframe(table,hide_index=True)
     st.download_button("Download measurements",table.to_csv(index=False),ident+"-attention.csv","text/csv",key=ident+"_csv")
     st.download_button("Download settings",json.dumps({"project":ident,"mode":mode,"amplitude":strength,
-        "seed":23,"source":"rssr.attention_labs.InspectableAttention","claim":"random seeded gates, not trained SR"},indent=2),
+        "seed":23,"sr_control_seed":26 if ident=="MP26" else None,"source":"rssr.attention_labs.InspectableAttention","claim":"random seeded gates, not trained SR"},indent=2),
         ident+"-settings.json","application/json",key=ident+"_json")
     st.success("Executed canonical seeded attention operator on a bounded synthetic tensor.")
