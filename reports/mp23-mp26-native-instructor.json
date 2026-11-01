@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "scope": "MP23–26 native attention teaching",
+  "branch": "feat/mp23-mp26-native-attention-20261101",
+  "source": [
+    "src/rssr/attention_labs.py",
+    "src/rssr/models.py"
+  ],
+  "code": "app/attention_native_ui.py",
+  "test": "scripts/check_attention_native_lessons.py",
+  "prior_exact_head_verified": {
+    "head": "847cc72963c0968bf2175b4bb883be80c0645d24",
+    "run": 41232412252,
+    "conclusion": "success"
+  },
+  "this_branch": "pending CI",
+  "limits": [
+    "Only seeded random gate controls",
+    "No trained model comparisons",
+    "No scientific HR validity or learner mastery"
+  ]
+}
