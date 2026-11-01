@@ -1,3 +1,15 @@
+# MP23–26 native attention teaching — 2026-11-01
+
+Implemented seeded bounded on-site channel/spatial/combined gates and zero-residual attention-SR architecture control, reusing canonical classes. New Streamlit AppTest added; CI pending. Random initialization is not trained SR or a research result. Learner/scientific acceptance incomplete.
+
+# MP18–22 on-site native CNN candidate — 2026-10-31
+
+Implemented educational Sobel, reconstruction, SRCNN, residual skip and three upsampling architecture controls with bounded fixtures. No new trained or held-out results; per-project acceptance is In progress. [Evidence](../reports/mp18-mp22-native-instructor.json). CI pending.
+
+# MP17 native CNN teaching milestone — 2026-10-31
+
+Implemented bounded on-site convolution geometry, kernel/padding/dilation, exact outputs, data tables and export with canonical shared helper. New numerical checks and CI route added; actual tests pending. Scientific/learner completion remains In progress. [Evidence](../reports/mp17-native-instructor.json).
+
 # MP12–16 UI execution verified in CI — 2026-10-31
 
 GitHub Actions [run 41226551966](https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/actions/runs/41226551966) passed the full tests and Streamlit jobs for PR48 head 96930eb, including `check_math_training_lessons.py`. [Evidence](../reports/mp12-mp16-native-instructor.json). Teaching implementation passed CI; independent scientific results/learner mastery still In progress. New documentation follow-up must pass its own CI before merge.
