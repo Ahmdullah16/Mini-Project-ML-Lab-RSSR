@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-01",
+  "baseline": "459f5bdb5a0ea5f7590f527f62ca509a644584a0",
+  "scope": "MP27–31 native Streamlit teaching; canonical sources and notebooks unchanged",
+  "implementation": {
+    "MP27": "Canonical stable attention hand example, allowed-key mask, fixed seed27 feature-scale experiment and analytical memory",
+    "MP28": "Canonical identity hand example and seed28 synthetic fixed projections; per-head probabilities, shapes and parameter/storage counts",
+    "MP29": "Canonical seed29 pre-LN encoder, LN([1,3]), sinusoidal positions, residual/FFN trace",
+    "MP30": "Canonical 4x4 ramp patch roundtrip and clipped 4x4-grid connectivity; analytical larger memory only",
+    "MP31": "Read-only source-hashed comparison of six historical four-band development runs, plus separately labeled synthetic zero-residual shape control"
+  },
+  "validation": {
+    "numerical": "8 focused pytest tests passed",
+    "structure": "40 IDs / 980 relative links passed",
+    "source_integrity": "build_learning_supplement --check and audit_paper_sources --check passed",
+    "app_tests": "check_transformer_native_lessons.py passed all five lessons, exports, stale clearing, missing-evidence recovery; external network blocked, Windows asyncio loopback allowed",
+    "ci": "pending publication and exact-head results"
+  },
+  "restrictions": [
+    "No canonical notebooks or experiments rerun",
+    "No training, downloads, frozen study/checkpoint changes or invented performance",
+    "MP31 four-band historical validation is not seven-model hosted RGB evidence",
+    "Scientific/submission/learner-mastery gates remain open"
+  ],
+  "primary_sources_verified": [
+    "https://arxiv.org/abs/1706.03762",
+    "https://arxiv.org/abs/2002.04745",
+    "https://arxiv.org/abs/2103.14030",
+    "https://arxiv.org/abs/2108.10257"
+  ]
+}

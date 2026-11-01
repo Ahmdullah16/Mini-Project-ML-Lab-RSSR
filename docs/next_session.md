@@ -1,3 +1,9 @@
+# MP27–31 native Transformer batch — 2026-11-01
+
+Baseline main459f5bd rechecked; no open PRs. Branch feat/mp27-mp31-native-transformers in work/pr-review-20261101. Added native dispatch and canonical bounded computations, tables/maps/shape traces, formulas/diagrams/citations, CSV/JSON provenance and explicit Run/stale clearing. Eight focused numerical tests and source/structure checks passed. Final offline AppTest passed; exact-head CI pending: do not mark verified yet. Evidence reports/mp27-mp31-native-instructor.json. Original workspace unfinished files preserved. No notebooks, training, datasets, weights or frozen evidence changed.
+
+Next commands from this worktree (PYTHONPATH=src, PYTHONUTF8=1): ../clean-venv/Scripts/python.exe -m pytest tests/test_transformer_native_lessons.py -q; ../streamlit-venv/Scripts/python.exe scripts/check_transformer_native_lessons.py. Inspect current PR exact-head tests before integration. After integration: MP32–40 missing native teaching; reuse canonical implementations/evidence. Keep full scientific/submission gates open.
+
 # PR stack integration checkpoint — 2026-11-01
 
 - User explicitly authorizes merging reviewed PRs only after latest required checks pass; never bypass protection. Earlier no-auto-merge notes below are historical and superseded within this review scope.
