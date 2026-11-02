@@ -24,7 +24,9 @@ def render(root, projects):
         for field in ('overview','explanations','validation'):
             lesson[field] = current_mp36_prose(lesson[field])
     st.caption(lesson['scope'])
-    st.info(lesson['coverage'])
+    from lesson_execution_evidence import execution_status
+    st.caption(execution_status(root,ident))
+    st.info(lesson['coverage'].replace('Existing prose migrated; ',''))
     st.markdown('[Shared mathematical reference](#shared-concepts)')
     st.markdown(visitor_prose(lesson['overview']))
     if ident=='MP01':

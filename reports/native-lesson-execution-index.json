@@ -1,0 +1,515 @@
+{
+  "scope": "Pinned CI execution coverage, not full W1/scientific acceptance",
+  "verification": {
+    "date": "2026-11-02",
+    "head": "1b57c58e25e2f13bb14fb9468d0cef00a56ffcff",
+    "run_id": 41435887407,
+    "conclusion": "success",
+    "source": "https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/actions/runs/41435887407"
+  },
+  "shared_source_sha256": {
+    "app/hybrid_labs.py": "d788752cbbea49649ed135f9e26f7f5459be4946a4daf86888c527d3b10692ee",
+    "app/remote_sensing_labs.py": "90be8336591e55bdd8c972a0c4e3d7835e708ec709521e4ae47d84299c4222cb",
+    "app/transformer_labs.py": "67a277901475558ecbe2f07a35f1482987cb03db0a784b116dc5b0e9dd6f13ec",
+    "src/rssr/__init__.py": "71d30d44cfb4aa1e38008fb5ac8e2d11ee3546eb0c19cc0d52806a4fdd9779bc",
+    "src/rssr/architecture_registry.py": "536e7cd39a6480fc22c736faa385d145af9c3d7d69f6af02a2131c12176b50e1",
+    "src/rssr/archive_intake.py": "d2e294f1b85fd3602deb31b5226d167d42aae6cdefa984b9f469965c1289f6b6",
+    "src/rssr/archive_transfer.py": "c02f6faba812d060429360a78ce8bd6669179a41a83c66ae46bd601843e2776b",
+    "src/rssr/array_lab.py": "4645dcd8db229e491f0b382dd0ae7d94c6eef0ee8053be79d371254b29dfacd2",
+    "src/rssr/attention_labs.py": "82ca4c1da6b6804521fa4d68dbc68bb6cee141bd43c6342779e393164148bdea",
+    "src/rssr/build_info.py": "d2eb7affb86daa5250f2a416a9c0284c6a782b24773a12ba41056a18b531c36a",
+    "src/rssr/catalog.py": "27386dfef0ef7f81c825c0c5333efe4aa4b5202c7026ce9727e65fdca4441b34",
+    "src/rssr/cli.py": "d08384c9fa17bbae8cf7c56b410801b46c02bd4b8b6296433dc9d7fa91246335",
+    "src/rssr/cnn_labs.py": "f24cb2fe4dd568d76ea2cb9788d29cda072eac1226704d4915a3b43db8324559",
+    "src/rssr/cog.py": "012e989931909ce1031d4d7d39f33790e87db135b7e7672a6b6dfc8f96dfdb78",
+    "src/rssr/comparison.py": "445fc880d47ac769bafb975f8825e4e49d91375c23c80137f5f11fc65a021f7d",
+    "src/rssr/comparison_views.py": "d6e07cf4ca62fbb45983091ed7c2527e58e19c3b3d48d2a525ddf3245749e0c4",
+    "src/rssr/convolution_lab.py": "6a1301cc1d302771746e27576fe9eba1ae8c1df8d9594211286a24ebdd637e5a",
+    "src/rssr/core.py": "4499a9b789e18f53e805e236b971135eebe310124e8d25de5c6cd3053006b890",
+    "src/rssr/data.py": "fe8d963fba4716629cff4ea6e580ab2bd4da863bb300ffc8c88b2f1d88ec85d4",
+    "src/rssr/db.py": "eee399694ff4574325e712c118fdd1719e15a3c814cb79729b22f947b3efccc5",
+    "src/rssr/degradation_lab.py": "cdf4e288b4efc399f09be93f80b6bf00eb575bd1df683e8ad2dfac38bdb21045",
+    "src/rssr/display.py": "44e051da6dd55fb0c6a323c4bc848b8699dd3654f0515380d0b75e4c5ff7cb17",
+    "src/rssr/evidence.py": "7725663500bc213f3a56d4781f67bbe3003f3c15a33c1a83f1b7ea6759111aea",
+    "src/rssr/experiment.py": "d8c5ea6e58ab63dfe2ac83b803e289fd1aed05c0061feb597c1e811aa783f839",
+    "src/rssr/external_storage.py": "8a15408a53aaf685566bdc77cc2d65f5eb1a03154a351a80137fc8b954b869fb",
+    "src/rssr/foundations.py": "2706f9357d10f7a28e3c39d3f3ec1cb199d1fb241c517599c35934efa16ded5d",
+    "src/rssr/fresh.py": "c9158e814958e7eecf6aa00af87d694aaf9d3993d1bf809e45fed9ded99a77ce",
+    "src/rssr/frozen_portability.py": "3a95535436e174e2e69c5be842e7788289682016f1d389fa0e72d9913c4ef08e",
+    "src/rssr/hosted_assets.py": "4d0f3838154f26b51b13cfcd8635778178fbf32a348a8f144557483d05edcbd5",
+    "src/rssr/image_foundations.py": "f2e2576e9f18659703f49a34940a4747e9c534a026b7cffd5e3bcde9b6aaecc1",
+    "src/rssr/inference.py": "4a381ca005887e1e674c00b3f5420e86fef4901f8d038f2dd14c54b1c9ef0e2b",
+    "src/rssr/inference_diagnostics.py": "41553238631e01a83100319956fdc38f280cfdec64112f4eab4530fea48817ae",
+    "src/rssr/ingest.py": "de7b476d438b45a996c187f6bbfaedbd65c2684204360ec11bd2b9234f4bbc64",
+    "src/rssr/interpretation.py": "f8e276450fe0cd4ff1bec9a211aab791bcb60b1901003302f00a8ce4bbfbed7d",
+    "src/rssr/learning_content.py": "bf5b33474d6353573f98d02159dd02d1f8c48b28432f4fe21de3244ad2f802b3",
+    "src/rssr/legacy_architecture.py": "fb0f2b393308f6e42b95018d301dafd02de2555ad353402568091fee9a34fd60",
+    "src/rssr/linear_lab.py": "40539ce3322e78f2c5612ae82063a52b771bc7251325c8b47292108de76c74ea",
+    "src/rssr/metric_lab.py": "32f5a81c79072d66edc3895ebd69199b7eb276d2e582275c47c2ef8c9e1c059b",
+    "src/rssr/metric_teaching.py": "acb2095734e178bc65b286522e4fc03276aafb690df575ed5223fc05a7122f4d",
+    "src/rssr/model_availability.py": "c59266701dcd0eb0eaa0eb6c5d276e222a9def3d1fef41155ed855a281618cd0",
+    "src/rssr/model_cost.py": "953690cd822183d50b251c60e4b8553887f21428f0db18cfe7518a52f672887b",
+    "src/rssr/model_factory.py": "5499205396bc8374e2dbf5d543ef44a1f7bbfe36113d13b4ea141d1531ef17c9",
+    "src/rssr/models.py": "722986b37ab67cd39465617dbb9b689612e1822c81dd2c451199e822c8897c6f",
+    "src/rssr/official_baseline.py": "fb94233b39b9d6893868c2bff6ab4e4bb9a943d4503cdf293af865719b460d0e",
+    "src/rssr/pair_audit.py": "8393a3a8e1cd5517552a34c6d92e476621399e7bababe39c6c968d0be1da2692",
+    "src/rssr/pipeline_lab.py": "a6fc8ec1f8e64142af21c6873058627f4eb6de1ecedddb16ff6f500293ac76f4",
+    "src/rssr/project_runner.py": "e5ce97b9df28f87d85410a43551a5cd7661d7770530a48ca552c037dfe6e46eb",
+    "src/rssr/reflectance_job.py": "09080c802db7f3c219b54c96f417bcc6a81ff49d235ec01ea35555e655b50e59",
+    "src/rssr/satellite_comparison.py": "0e8dc2c894e844beb99a798bc6f857feb6712e1bd91bcd35fb1ecfd4311ef833",
+    "src/rssr/scale_job.py": "00fcf8a268f63dbb2a693c14b0582482e92352b3e164dcb537ed58404409ae3f",
+    "src/rssr/scaling.py": "6f99cd76a411157a04ea0bca49a2df613120ba650b87d70727ac63f977af8817",
+    "src/rssr/scheduler.py": "738354ec0399c706a42c9e1f3ed5b1fd1a0d7794515e393fd8121ecdf7ba056d",
+    "src/rssr/spectral.py": "b5fa94695bec817ad31fa06634edef8f34d41b8010abcdf0dd9d4a1595b1d958",
+    "src/rssr/surface_reflectance.py": "45f7331ec231106f52a735f4bc7e83306e2c86cc26f67e434031c7a79ca573a0",
+    "src/rssr/training_lab.py": "c3e7cf04ebb433b923221bcc0f0e2cf97d9511851986baeff2bbeab685395bfe",
+    "src/rssr/uploads.py": "be960ce750a836f01bd660b823c91b6ce01ee70745d3e0cb741a849dbc1e6c80",
+    "stage_01_python_numpy/MP01_digital_image_explorer/image_tools.py": "98ade7734b4749daed9271053e4d10c1906f4aabf508f4c3dd80a1be5c83a39a",
+    "stage_01_python_numpy/MP01_digital_image_explorer/test_image_tools.py": "422d2fc264037c36e1fc213b8d582aeab66a75e3b0abde14abaed5bd291eb942",
+    "stage_01_python_numpy/MP02_numpy_image_laboratory/mp02_tools.py": "8e26a09806cc65b5bf11775d687442b2d9bad8d14e1c30a0594e035aaa350fc8",
+    "stage_01_python_numpy/MP02_numpy_image_laboratory/test_mp02_tools.py": "4e3fe3a493a438925b0eeb83f17c6e06598843b5f09d492f20c23c390a3e0ed8",
+    "stage_01_python_numpy/MP03_image_resizing_laboratory/mp03_tools.py": "7b59b6a1fb1a9ef60496aa7e9a32c68299395724aebbbf8db758d8508c61078d",
+    "stage_01_python_numpy/MP03_image_resizing_laboratory/test_mp03_tools.py": "f5bb91dba6fbf4bd5b4bf6a1cfb91708d7aed111483c8ce7e776da5f07d5b247",
+    "stage_01_python_numpy/MP04_image_comparison_tool/mp04_tools.py": "c7c2b59d4231e5fc1a18f9862046800c02299c461aa4bd979cc1a3bb47369cba",
+    "stage_01_python_numpy/MP04_image_comparison_tool/test_mp04_tools.py": "f68d8d89fc2243a6976338ab48587e1e93bca590870181a7156202707401a595",
+    "stage_02_image_processing/MP05_gaussian_blur_simulator/mp05_tools.py": "f330436fc2487bfbf597acba144cb3149946ac9d383b8821063f1078e2dd9f31",
+    "stage_02_image_processing/MP05_gaussian_blur_simulator/test_mp05_tools.py": "6f371d6462c5105e4d0032aa6be2891f97c7be52e384f166f98e5a072504e24f",
+    "stage_02_image_processing/MP06_low_resolution_image_generator/mp06_tools.py": "6c7d53618c18a6c1852f160fb684cf6c0c0f147b6ce48e859f93e2aa8a625eb0",
+    "stage_02_image_processing/MP06_low_resolution_image_generator/test_mp06_tools.py": "1194a9849421193ae949484f805493329bb4d6f6e56d3be5a9abe9022e37c7a2",
+    "stage_02_image_processing/MP07_synthetic_degradation_laboratory/mp07_tools.py": "a0e317f6ffb5c7e38148106482fad184ecd950a7b6e5d7fac39ef4767f883d0b",
+    "stage_02_image_processing/MP07_synthetic_degradation_laboratory/test_mp07_tools.py": "ba6ffc9f5aa044efcf70a9de9d7fbb4ef6536ab8cb88b7aad3b0de3e269c1a20",
+    "stage_02_image_processing/MP08_frequency_domain_image_explorer/mp08_tools.py": "4da0983ff750c2afd65e36fc8fd530694c205da940b51d95d5b74f80b299f37e",
+    "stage_02_image_processing/MP08_frequency_domain_image_explorer/test_mp08_tools.py": "0b1a9a53fa527c73d3ce81a1b41f23c245cd129ad429944d9bd3078c4988281b",
+    "stage_03_metrics/MP09_mse_and_psnr_from_scratch/mp09_tools.py": "a5361e4f3fc92ec551b127e918822aaaeceeff8ba1e5c650fd53470550a2acbf",
+    "stage_03_metrics/MP09_mse_and_psnr_from_scratch/test_mp09_tools.py": "2d03c1c0ac022f68fde0e69d6ded2aa62b8a15feab15ecf24a0000a981172e53",
+    "stage_03_metrics/MP10_ssim_evaluation_tool/mp10_tools.py": "b0b720b2af2bcf9e79678132d5018f049315b27791f8b88e3b4b4030ff899b5b",
+    "stage_03_metrics/MP10_ssim_evaluation_tool/test_mp10_tools.py": "1678622600031e68a897cdcf127102a8c86bb17ad0e40f873b72514a0d9c5403",
+    "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/mp11_tools.py": "d398ba57e3ca447d3321e898d95deb9f0cfdf00460cf4ca06ac6b00571d8cfdf",
+    "stage_03_metrics/MP11_super_resolution_evaluation_dashboard/test_mp11_tools.py": "a8989853fe83b2bdcfef5b84df890990977dcc6dd6b282d91d7b6ebdd6469a6d",
+    "stage_04_math_pytorch/MP12_linear_algebra_visualizer/mp12_tools.py": "201a6009621fa88d5494c8eed649eb4798aaf13aa7cc59959a19de5e2ad294fe",
+    "stage_04_math_pytorch/MP12_linear_algebra_visualizer/test_mp12_tools.py": "d6d188b64da3a098b4fb927fa7dc103c673b31d78829361046cf8b5064080b52",
+    "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/mp13_tools.py": "62d1bb1a884a7a662e4d0a5413adf445e33feab0253a07df64eaa63ed55feb3b",
+    "stage_04_math_pytorch/MP13_gradient_descent_from_scratch/test_mp13_tools.py": "748971c87e2352b75cac0bceda030e385b53cdf487588aa259759cdba56366c3",
+    "stage_04_math_pytorch/MP14_neural_network_from_scratch/mp14_tools.py": "1c957d489f51ab090f34ecc21423d41d4959f7b43e8b7838c71231af1b8616b2",
+    "stage_04_math_pytorch/MP14_neural_network_from_scratch/test_mp14_tools.py": "bcfb72cb7cb2b8cb4a384e70994a1c84f99391e6c952107331b4e948c8ad3acc",
+    "stage_04_math_pytorch/MP15_first_pytorch_neural_network/mp15_tools.py": "59b482942f96ca6a01f5ab4f4898a356133a0582ce99cf2b97acd0d006df67ff",
+    "stage_04_math_pytorch/MP15_first_pytorch_neural_network/test_mp15_tools.py": "a199f082c3c3bbba53e3e70e9933863f5ccbf41d14ef9a24ad9580cf9a4f483d",
+    "stage_04_math_pytorch/MP16_reusable_training_pipeline/mp16_tools.py": "4449c0b2b77383a50217f9f437d4b6f81d09bcb5bd567a1f624c8b86c2dee74e",
+    "stage_04_math_pytorch/MP16_reusable_training_pipeline/test_mp16_tools.py": "42d03c894bf208518cc8aa754f69d8315e54b13820c2e7bfa9cf4ccca42dcaa6",
+    "stage_05_cnn_sr/MP17_convolution_playground/mp17_tools.py": "4bc98e47b115a4f0d02169591e3581a1196748a6c7f68996146619e8ef7c8208",
+    "stage_05_cnn_sr/MP17_convolution_playground/test_mp17_tools.py": "58dcb0c44b1a03f40c71e2c23d004b9b10369fcc98bafb7df08c142644d70033",
+    "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/mp18_tools.py": "6b3849962007b163a9d0feff3c0d0831a6cafcbbba69d789de27b8704eac048c",
+    "stage_05_cnn_sr/MP18_cnn_edge_detection_laboratory/test_mp18_tools.py": "80384cb340487bf6233f2d48189acd98804f8000b4a269201b66c34dbfc65d00",
+    "stage_05_cnn_sr/MP19_cnn_image_reconstruction/mp19_tools.py": "3fa1a4f2eb684ffdeefbdd8024f5ac18c15349e4d68dcce8dc12f3cb789440ee",
+    "stage_05_cnn_sr/MP19_cnn_image_reconstruction/test_mp19_tools.py": "c28274e9a0a96eea48a61e5d89bc93038aca1d4226ea1380610ced1ec37510db",
+    "stage_05_cnn_sr/MP20_srcnn_implementation/mp20_tools.py": "abc28aee069bc1e6e1e54fe1318d84be4b52bfe98d1ca0a5d28306acf70f8913",
+    "stage_05_cnn_sr/MP20_srcnn_implementation/test_mp20_tools.py": "5f185574fb3a5f4357812f6b97a279712f092e009039360237e94fce1d17871f",
+    "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/mp21_tools.py": "298c149f6214d21f33b876e629bce37f3867aebce8a4bf019ecba32353ab21cf",
+    "stage_05_cnn_sr/MP21_residual_cnn_super_resolution/test_mp21_tools.py": "1c6b750ff79242d1be4d33276e3688b605e9d84dbe642658c30ce53ee5939efe",
+    "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/mp22_tools.py": "5d6e74197652f7954cef06a48b11fe6583912940af3e98f3cb1fec9c795712a4",
+    "stage_05_cnn_sr/MP22_upsampling_architecture_comparison/test_mp22_tools.py": "c8de9bd2941e4048b7b6af4231588518e0532caec5bcfbee57b9128943e2b364",
+    "stage_06_attention/MP23_channel_attention_from_scratch/mp23_tools.py": "2885a0ffd08b0a35540df0e82fec7816cc1b17baa064c734ba697bc33eb63a20",
+    "stage_06_attention/MP23_channel_attention_from_scratch/test_mp23_tools.py": "e907780db05cf25c582867a1ed22c1ea40f15e66f908edf7d5c16ae6aff3e9e5",
+    "stage_06_attention/MP24_spatial_attention_from_scratch/mp24_tools.py": "c6baf40dde71eee7077b2075fcd3beb143d4cd12e74bf7ee11676a904a79d952",
+    "stage_06_attention/MP24_spatial_attention_from_scratch/test_mp24_tools.py": "9487dd5af12ce7a026ff688e0c180fc2a7b10e4cd0eecc1e10040e8bdc4e6e19",
+    "stage_06_attention/MP25_combined_attention_module/mp25_tools.py": "d426de536fb10e025cb1a94c5e2c18cbc39c6d584786e624d86d42dc37697581",
+    "stage_06_attention/MP25_combined_attention_module/test_mp25_tools.py": "bb0c7442437762742ea6b0ae30fd01fe6e1cb326eaf4cf8970fcf070259319ab",
+    "stage_06_attention/MP26_attention_based_sr_network/mp26_tools.py": "2e070eb36a9996e93f4e7035aab0678901657dabfd3424b6daa40a005a2d55c3",
+    "stage_06_attention/MP26_attention_based_sr_network/test_mp26_tools.py": "9c70c8a9b4b444aae4e5e2e758f7dbbd2e275a3ef9a73dbffc968b10e28c397f",
+    "stage_07_transformers/MP27_self_attention_from_scratch/attention_tools.py": "f24a41c2652af56ea58b52ef5cf5906e01ab961c7afbdc1033ee5d9250eec5d7",
+    "stage_07_transformers/MP27_self_attention_from_scratch/test_attention_tools.py": "6c3f97c2e88d24ac659d8db1d36f846f51e4f22850388062ba5ab44449d50dd4",
+    "stage_07_transformers/MP28_multi_head_self_attention/multihead_tools.py": "8062489d3b88cfd0e442bcbc727d60749661ab9a00b213da4887409a5bb2aa6f",
+    "stage_07_transformers/MP28_multi_head_self_attention/test_multihead_tools.py": "05954b1d9bc45caa9d24a3fd9c56d1efe748e7563593abba0b7e6aa351272a48",
+    "stage_07_transformers/MP29_transformer_encoder_block/encoder_tools.py": "df8329dbaa84f8a81428b9b403752809ad80ae9bf10863c1e001db23c7499af3",
+    "stage_07_transformers/MP29_transformer_encoder_block/test_encoder_tools.py": "7f11760d1a9317db399b37de6b776aa31c1bee3af375100fd5f39414716044c0",
+    "stage_07_transformers/MP30_image_patches_and_window_attention/test_window_tools.py": "2a6643d161011ecb5d23c545a37c1722df241a35debf730d0de7df9494dc41c4",
+    "stage_07_transformers/MP30_image_patches_and_window_attention/window_tools.py": "4f7375b5d8333d112f1089639db3200155203198616e3b27c14dbe906e8f6827",
+    "stage_07_transformers/MP31_transformer_based_sr_baseline/benchmark_tools.py": "54da952b1a6c565caa9ee80e40492c83f819a2bf6310edc11635099573f80477",
+    "stage_07_transformers/MP31_transformer_based_sr_baseline/test_benchmark_tools.py": "7e68adc2627dac7498dafe8214b17c67bd3a99d7da45163df14a6478214f2653",
+    "stage_08_remote_sensing/MP32_satellite_image_explorer/mp32_tools.py": "21caa1b12e1ef0e5ed0992ec66f74648bf8bde6a7b3791fa644f5f55b3a5dc11",
+    "stage_08_remote_sensing/MP32_satellite_image_explorer/test_mp32_tools.py": "0856aa70e56c6d33b7c07fb1249fd10e32ff64c10ce3b633f12613ceb803a642",
+    "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/mp33_tools.py": "bbf7540db240ed266db49bb37747b3ba9b21156b67009720157f39a9be214742",
+    "stage_08_remote_sensing/MP33_satellite_preprocessing_pipeline/test_mp33_tools.py": "5e298a4fe44f851b7291215bd618704848a262d95e11f035a558d47c28282b4e",
+    "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/mp34_tools.py": "85ea9a38e39c1cc213111df211aeda5404ceeb08b6af49a2c6198b405f5d5e61",
+    "stage_08_remote_sensing/MP34_satellite_hr_lr_pair_builder/test_mp34_tools.py": "b9c8166d2be70679eb32a161c2a2c034ae35bbdbc0c0a7191b2f73bff2afad5d",
+    "stage_08_remote_sensing/MP35_geographic_dataset_splitting/mp35_tools.py": "22e941eace9cd7e27c43428fa2d8be4849c780d4e6848fc6bf9635ba4584f328",
+    "stage_08_remote_sensing/MP35_geographic_dataset_splitting/test_mp35_tools.py": "5f3d369b16f850d60dcf3b9a402242b40f2d68a4ebdddce3bb8138a3258f6eac",
+    "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/mp36_tools.py": "9b82a9372b6f9ab6d5e4f820d48bb032a1e2cdfa8898da59ba3cf134cd1106db",
+    "stage_08_remote_sensing/MP36_cross_sensor_dataset_investigation/test_mp36_tools.py": "70ea8e7a35e67fc4fd3f4672a36caf222f50b21153f8d8990d7a13e95d68e504",
+    "stage_09_hybrid_research/MP37_feature_fusion_laboratory/mp37_tools.py": "022d167002386939c79f8013e4246ad64e34147010ce2feb125c7af714488697",
+    "stage_09_hybrid_research/MP37_feature_fusion_laboratory/test_mp37_tools.py": "3b7ffc28f249fdc4f3c8fe44d3c6ac9dbd2f408949e62d091a003dc4891342ea",
+    "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/mp38_tools.py": "b871988b10caa2178993201f6ef7673a4a719f5c6cbd66943f08cce678b8ceca",
+    "stage_09_hybrid_research/MP38_hybrid_cnn_attention_transformer_sr_model/test_mp38_tools.py": "5cc8a7373b890bdd4a56eabaa2da841d0bb28ce7a22350aae32f07c9ad158f65",
+    "stage_09_hybrid_research/MP39_controlled_ablation_study/mp39_tools.py": "dcd231b30874a1de9cc3342a4267243f173c0e2a3b8034f2e272f9ad9915ee33",
+    "stage_09_hybrid_research/MP39_controlled_ablation_study/test_mp39_tools.py": "02494015e4472fad876047285fd7edf282a70d95c567b7dad5d0b363d1998b28",
+    "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/mp40_tools.py": "887c4f2c043c9a3759a7a1a06e54a45c7d4b7c2ab8725cb2b80c8b1304c616f1",
+    "stage_09_hybrid_research/MP40_robustness_and_efficiency_benchmark/test_mp40_tools.py": "bf7a5d8c797e91eb252da9ef64aef7fef3726c6df039a9bf4aba322908604ff7"
+  },
+  "lessons": [
+    {
+      "id": "MP01",
+      "module": "app/pixel_lab_ui.py",
+      "check": "scripts/check_learning_ui.py",
+      "source_sha256": {
+        "app/pixel_lab_ui.py": "aabab348d68f500ae7d4a69998b8a485cd1e65784ad395b895158033f463e6b5",
+        "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
+      }
+    },
+    {
+      "id": "MP02",
+      "module": "app/array_lab_ui.py",
+      "check": "scripts/check_learning_ui.py",
+      "source_sha256": {
+        "app/array_lab_ui.py": "73b76a4e1d8cc1ba68cc5606550942bc646375c591dd20ed43f231b6c3b69412",
+        "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
+      }
+    },
+    {
+      "id": "MP03",
+      "module": "app/resize_lab_ui.py",
+      "check": "scripts/check_learning_ui.py",
+      "source_sha256": {
+        "app/resize_lab_ui.py": "c576bd5bad0db3b2a0c5be13a0f01a62d1a050ff29ecce34e629aa8229a38bf0",
+        "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
+      }
+    },
+    {
+      "id": "MP04",
+      "module": "app/difference_lab_ui.py",
+      "check": "scripts/check_learning_ui.py",
+      "source_sha256": {
+        "app/difference_lab_ui.py": "63bc346bdb9ee102e9a240dc5dcd15ad110bd554dfd942c0949e1e2793b9f6f5",
+        "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
+      }
+    },
+    {
+      "id": "MP05",
+      "module": "app/blur_lab_ui.py",
+      "check": "scripts/check_learning_ui.py",
+      "source_sha256": {
+        "app/blur_lab_ui.py": "7829e40a1148a605865c4ae40740a3396002d288d5ed229c63f946a9aecadb4d",
+        "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
+      }
+    },
+    {
+      "id": "MP06",
+      "module": "app/degradation_batch_ui.py",
+      "check": "scripts/check_degradation_lessons.py",
+      "source_sha256": {
+        "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
+        "scripts/check_degradation_lessons.py": "775c1366c80accc32e11b3a273d69c4e42639404ddef67dc5c53678888f6ded8"
+      }
+    },
+    {
+      "id": "MP07",
+      "module": "app/degradation_batch_ui.py",
+      "check": "scripts/check_degradation_lessons.py",
+      "source_sha256": {
+        "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
+        "scripts/check_degradation_lessons.py": "775c1366c80accc32e11b3a273d69c4e42639404ddef67dc5c53678888f6ded8"
+      }
+    },
+    {
+      "id": "MP08",
+      "module": "app/degradation_batch_ui.py",
+      "check": "scripts/check_degradation_lessons.py",
+      "source_sha256": {
+        "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
+        "scripts/check_degradation_lessons.py": "775c1366c80accc32e11b3a273d69c4e42639404ddef67dc5c53678888f6ded8"
+      }
+    },
+    {
+      "id": "MP09",
+      "module": "app/metric_lesson_ui.py",
+      "check": "scripts/check_metric_lessons.py",
+      "source_sha256": {
+        "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
+        "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
+      }
+    },
+    {
+      "id": "MP10",
+      "module": "app/metric_lesson_ui.py",
+      "check": "scripts/check_metric_lessons.py",
+      "source_sha256": {
+        "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
+        "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
+      }
+    },
+    {
+      "id": "MP11",
+      "module": "app/metric_lesson_ui.py",
+      "check": "scripts/check_metric_lessons.py",
+      "source_sha256": {
+        "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
+        "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
+      }
+    },
+    {
+      "id": "MP12",
+      "module": "app/math_training_ui.py",
+      "check": "scripts/check_math_training_lessons.py",
+      "source_sha256": {
+        "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
+        "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
+      }
+    },
+    {
+      "id": "MP13",
+      "module": "app/math_training_ui.py",
+      "check": "scripts/check_math_training_lessons.py",
+      "source_sha256": {
+        "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
+        "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
+      }
+    },
+    {
+      "id": "MP14",
+      "module": "app/math_training_ui.py",
+      "check": "scripts/check_math_training_lessons.py",
+      "source_sha256": {
+        "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
+        "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
+      }
+    },
+    {
+      "id": "MP15",
+      "module": "app/math_training_ui.py",
+      "check": "scripts/check_math_training_lessons.py",
+      "source_sha256": {
+        "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
+        "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
+      }
+    },
+    {
+      "id": "MP16",
+      "module": "app/math_training_ui.py",
+      "check": "scripts/check_math_training_lessons.py",
+      "source_sha256": {
+        "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
+        "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
+      }
+    },
+    {
+      "id": "MP17",
+      "module": "app/convolution_lesson_ui.py",
+      "check": "scripts/check_convolution_lesson.py",
+      "source_sha256": {
+        "app/convolution_lesson_ui.py": "d4654195d21e41ae6cf9493edcaab8e0c7d26f62f8631cf329f9de210cd971f3",
+        "scripts/check_convolution_lesson.py": "4a409f3d03d5a8d4d2f3ffaa0591209c4d4d085b8e484b5d1bd0d025aa6bbcc6"
+      }
+    },
+    {
+      "id": "MP18",
+      "module": "app/cnn_native_lessons.py",
+      "check": "scripts/check_cnn_native_lessons.py",
+      "source_sha256": {
+        "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
+        "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
+      }
+    },
+    {
+      "id": "MP19",
+      "module": "app/cnn_native_lessons.py",
+      "check": "scripts/check_cnn_native_lessons.py",
+      "source_sha256": {
+        "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
+        "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
+      }
+    },
+    {
+      "id": "MP20",
+      "module": "app/cnn_native_lessons.py",
+      "check": "scripts/check_cnn_native_lessons.py",
+      "source_sha256": {
+        "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
+        "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
+      }
+    },
+    {
+      "id": "MP21",
+      "module": "app/cnn_native_lessons.py",
+      "check": "scripts/check_cnn_native_lessons.py",
+      "source_sha256": {
+        "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
+        "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
+      }
+    },
+    {
+      "id": "MP22",
+      "module": "app/cnn_native_lessons.py",
+      "check": "scripts/check_cnn_native_lessons.py",
+      "source_sha256": {
+        "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
+        "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
+      }
+    },
+    {
+      "id": "MP23",
+      "module": "app/attention_native_ui.py",
+      "check": "scripts/check_attention_native_lessons.py",
+      "source_sha256": {
+        "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
+        "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
+      }
+    },
+    {
+      "id": "MP24",
+      "module": "app/attention_native_ui.py",
+      "check": "scripts/check_attention_native_lessons.py",
+      "source_sha256": {
+        "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
+        "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
+      }
+    },
+    {
+      "id": "MP25",
+      "module": "app/attention_native_ui.py",
+      "check": "scripts/check_attention_native_lessons.py",
+      "source_sha256": {
+        "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
+        "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
+      }
+    },
+    {
+      "id": "MP26",
+      "module": "app/attention_native_ui.py",
+      "check": "scripts/check_attention_native_lessons.py",
+      "source_sha256": {
+        "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
+        "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
+      }
+    },
+    {
+      "id": "MP27",
+      "module": "app/transformer_native_ui.py",
+      "check": "scripts/check_transformer_native_lessons.py",
+      "source_sha256": {
+        "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
+        "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
+      }
+    },
+    {
+      "id": "MP28",
+      "module": "app/transformer_native_ui.py",
+      "check": "scripts/check_transformer_native_lessons.py",
+      "source_sha256": {
+        "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
+        "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
+      }
+    },
+    {
+      "id": "MP29",
+      "module": "app/transformer_native_ui.py",
+      "check": "scripts/check_transformer_native_lessons.py",
+      "source_sha256": {
+        "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
+        "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
+      }
+    },
+    {
+      "id": "MP30",
+      "module": "app/transformer_native_ui.py",
+      "check": "scripts/check_transformer_native_lessons.py",
+      "source_sha256": {
+        "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
+        "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
+      }
+    },
+    {
+      "id": "MP31",
+      "module": "app/transformer_native_ui.py",
+      "check": "scripts/check_transformer_native_lessons.py",
+      "source_sha256": {
+        "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
+        "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
+      }
+    },
+    {
+      "id": "MP32",
+      "module": "app/remote_sensing_native_ui.py",
+      "check": "scripts/check_remote_sensing_native_lessons.py",
+      "source_sha256": {
+        "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
+        "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      }
+    },
+    {
+      "id": "MP33",
+      "module": "app/remote_sensing_native_ui.py",
+      "check": "scripts/check_remote_sensing_native_lessons.py",
+      "source_sha256": {
+        "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
+        "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      }
+    },
+    {
+      "id": "MP34",
+      "module": "app/remote_sensing_native_ui.py",
+      "check": "scripts/check_remote_sensing_native_lessons.py",
+      "source_sha256": {
+        "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
+        "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      }
+    },
+    {
+      "id": "MP35",
+      "module": "app/remote_sensing_native_ui.py",
+      "check": "scripts/check_remote_sensing_native_lessons.py",
+      "source_sha256": {
+        "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
+        "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      }
+    },
+    {
+      "id": "MP36",
+      "module": "app/remote_sensing_native_ui.py",
+      "check": "scripts/check_remote_sensing_native_lessons.py",
+      "source_sha256": {
+        "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
+        "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      }
+    },
+    {
+      "id": "MP37",
+      "module": "app/hybrid_native_ui.py",
+      "check": "scripts/check_hybrid_native_lessons.py",
+      "source_sha256": {
+        "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
+        "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
+      }
+    },
+    {
+      "id": "MP38",
+      "module": "app/hybrid_native_ui.py",
+      "check": "scripts/check_hybrid_native_lessons.py",
+      "source_sha256": {
+        "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
+        "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
+      }
+    },
+    {
+      "id": "MP39",
+      "module": "app/hybrid_native_ui.py",
+      "check": "scripts/check_hybrid_native_lessons.py",
+      "source_sha256": {
+        "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
+        "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
+      }
+    },
+    {
+      "id": "MP40",
+      "module": "app/hybrid_native_ui.py",
+      "check": "scripts/check_hybrid_native_lessons.py",
+      "source_sha256": {
+        "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
+        "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
+      }
+    }
+  ],
+  "remaining": [
+    "Per-criterion educational/visual review is separate",
+    "Independent scientific project gaps remain in acceptance_matrix",
+    "No all40 public-browser execution claim"
+  ]
+}

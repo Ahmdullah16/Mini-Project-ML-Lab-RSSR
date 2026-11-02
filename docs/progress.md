@@ -1,3 +1,5 @@
+2026-11-02: PR56 integrated externally as47ad0bf; both exact-head CI runs41435887407/41435879940 passed. MP01–MP40 native routes are implemented and covered by existing CI interaction checks. Source-hashed execution index added; changes invalidate displayed verification. Full W1 pedagogical/visual and scientific/submission criteria are still separate.
+
 # MP37–MP40 native teaching — 2026-11-02
 
 Local native-control validation passed:14 numerical tests and four offline AppTests. Latest-head CI/integration pending. Canonical educational completion records preserved; full research-grade and learner acceptance remains open. [Batch evidence](../reports/mp37-mp40-native-instructor.json).
