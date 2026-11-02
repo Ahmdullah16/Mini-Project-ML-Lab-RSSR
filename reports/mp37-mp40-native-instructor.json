@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-02",
+  "baseline": "26236d9a4016938b2001bf7c150f8a25af5cdee1",
+  "scope": "MP37–MP40 native synthetic controls and read-only historical development summaries",
+  "implementation": {
+    "MP37": "Canonical sum/mean/concat, actual gradients and exact mean projection; analytical MAC convention",
+    "MP38": "Canonical hybrid zero-residual odd-rectangle RGB/four-band outputs and actual shape hooks",
+    "MP39": "Canonical24-run historical summary, one-scene CI unavailable; separate synthetic paired bootstrap and one-unit rejection",
+    "MP40": "Canonical scene-paired historical robustness, separate bands and blur/noise slices; precomputed efficiency/environment and limits"
+  },
+  "validation": {
+    "numerical": "14 focused pytest tests passed",
+    "app_tests": "Four offline AppTests passed: outputs, protocol filters, stale clearing, exports and one-unit rejection/retry; external sockets denied except Windows asyncio loopback",
+    "structure": "40 IDs / 984 links valid",
+    "source_integrity": "learning-supplement and paper-source checks passed",
+    "ci": "pending exact-head CI"
+  },
+  "restrictions": [
+    "No canonical notebook/experiment rerun",
+    "No training, new hardware benchmark, checkpoint inference, data acquisition or frozen-test access",
+    "Historical reports read-only; no seed/scene substitution",
+    "Native controls are not full scientific/learner/submission acceptance"
+  ],
+  "integration_prerequisite": "MP32–36 PR55 integrated externally at26236d9; exact headfd3fb38 passed both CI41434214186/41434206234"
+}

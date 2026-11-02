@@ -66,6 +66,9 @@ def render(root, projects):
     elif ident in ('MP32','MP33','MP34','MP35','MP36'):
         from remote_sensing_native_ui import render as render_remote_sensing
         render_remote_sensing(ident, root)
+    elif ident in ('MP37','MP38','MP39','MP40'):
+        from hybrid_native_ui import render as render_hybrid
+        render_hybrid(ident, root)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):
