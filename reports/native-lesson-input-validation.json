@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-02",
+  "review_pr": 58,
+  "finding": "Historical computational reports absent from pinned verification inputs",
+  "fix": "Per-lesson input_sha256 is required and checked with source hashes; missing/changed input removes pass claim",
+  "inputs": {
+    "MP31": [
+      "submission-study.json",
+      "development-benchmark.json"
+    ],
+    "MP32-MP36": [
+      "mp36-feasibility.md (provenance export dependency)"
+    ],
+    "MP39": [
+      "ablation-pilot-runs.json"
+    ],
+    "MP40": [
+      "development-benchmark.json"
+    ]
+  },
+  "validation": "7 focused tests passed, including missing/changed/restored input files in isolated temporary trees",
+  "ci": "pending correction exact-head CI",
+  "limits": "No historical input data changed; full W1/scientific acceptance not implied"
+}

@@ -1,3 +1,5 @@
+2026-11-02 follow-up: execution verification now also pins historical computational inputs (MP31/39/40) and feasibility-export dependency (MP32–36). Seven missing/changed/restored-input regression checks passed. Correction exact-head CI pending. [Input validation](../reports/native-lesson-input-validation.json).
+
 2026-11-02 execution coverage: MP01–MP40 native checks passed in exact-head CI41435887407. Source-hashed per-lesson index now separates verified interaction from full content, learner and scientific acceptance. Public MP36 computation and corrected labels verified on47ad0bf; not an all40 browser claim.
 
 2026-11-02 MP37–MP40 native controls implemented;14 numerical tests/four offline AppTests and source checks passed. Latest-head CI pending. All40 now have native dispatch, but this is not automatic full W1/scientific/submission acceptance. Historical seed spread, selected-seed robustness and CPU efficiency retain their limits; no new training or benchmarks. [Batch evidence](../reports/mp37-mp40-native-instructor.json).
