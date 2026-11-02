@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-02",
+  "baseline": "654f2dc17d3e10be2d9ce10c96f312fbada45b43",
+  "scope": "MP32–MP36 native on-site synthetic teaching, not real cross-sensor acceptance",
+  "implementation": {
+    "MP32": "Affine centers/corners and explicit per-band mask statistics; empty means unavailable",
+    "MP33": "Training-only population standardization, constant-band handling, mask-preserving validation application and patch acceptance",
+    "MP34": "Canonical synthetic area/Gaussian pairing with scaled transforms, common footprint and invalid-HR rejection",
+    "MP35": "Synthetic region/box audit with strict angular buffer; explicitly distinct from protocol-v2 5km metric buffer",
+    "MP36": "Canonical scale/displacement/calibration/spectral calculations; site-only update of obsolete methodology prose using existing feasibility review"
+  },
+  "validation": {
+    "numerical": "8 focused pytest tests passed (83 affine deprecation warnings)",
+    "structure": "40 IDs / 982 links passed",
+    "source_integrity": "learning supplement and paper source checks passed",
+    "app_tests": "All five offline AppTests passed: numerical displays, masks, exports, stale clearing, expected rejection and retry; external sockets blocked except Windows asyncio loopback",
+    "latest_head_ci": "pending publication",
+    "imports": "Deployment stale-import recovery passed for lessons/satellite/live"
+  },
+  "scientific_limits": [
+    "No canonical experiment/notebook rerun, model training, downloads, frozen-test access or checkpoint changes",
+    "Original SEN2VENµS 15m SIFT rejection threshold is not residual alignment accuracy",
+    "Original method/correction already reviewed; v2 processing lineage and archive contents unverified",
+    "B11/B12 have no VENµS HR reference; no reference scores",
+    "Real paired eligibility, registration/calibration and resource authorization gates remain open"
+  ],
+  "carry_forward": "Four MP27–31 evidence/checkpoint changes retained from previous feature branch; original workspace four unfinished files preserved"
+}
