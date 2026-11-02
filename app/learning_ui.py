@@ -18,6 +18,11 @@ def render(root, projects):
         return
     ident=st.selectbox('Read a lesson here',[p['id'] for p in projects],key='onsite_lesson')
     lesson=load_lesson(root,ident)
+    if ident == 'MP36':
+        from remote_sensing_labs import current_mp36_prose
+        lesson = dict(lesson)
+        for field in ('overview','explanations','validation'):
+            lesson[field] = current_mp36_prose(lesson[field])
     st.caption(lesson['scope'])
     st.info(lesson['coverage'])
     st.markdown('[Shared mathematical reference](#shared-concepts)')
@@ -58,6 +63,9 @@ def render(root, projects):
     elif ident in ('MP27','MP28','MP29','MP30','MP31'):
         from transformer_native_ui import render as render_transformer
         render_transformer(ident, root)
+    elif ident in ('MP32','MP33','MP34','MP35','MP36'):
+        from remote_sensing_native_ui import render as render_remote_sensing
+        render_remote_sensing(ident, root)
     with st.expander('Derivations, worked examples and interpretation',expanded=True):
         st.markdown(visitor_prose(lesson['explanations']))
     with st.expander('Recorded execution and limitations'):

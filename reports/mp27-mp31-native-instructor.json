@@ -14,7 +14,15 @@
     "structure": "40 IDs / 980 relative links passed",
     "source_integrity": "build_learning_supplement --check and audit_paper_sources --check passed",
     "app_tests": "check_transformer_native_lessons.py passed all five lessons, exports, stale clearing, missing-evidence recovery; external network blocked, Windows asyncio loopback allowed",
-    "ci": "pending publication and exact-head results"
+    "ci": {
+      "verified_implementation_head": "715a8c83fe91a3ff17f81e00a8f7b56276c2112a",
+      "run": 41282567158,
+      "tests": "success",
+      "streamlit": "success",
+      "note": "Documentation follow-up must pass its own exact-head checks; see PR54"
+    },
+    "navigation": "check_learning_ui.py: all40 selections and arithmetic passed",
+    "imports": "check_deployment_imports.py: lessons/satellite/live stale-import recovery passed"
   },
   "restrictions": [
     "No canonical notebooks or experiments rerun",
@@ -27,5 +35,15 @@
     "https://arxiv.org/abs/2002.04745",
     "https://arxiv.org/abs/2103.14030",
     "https://arxiv.org/abs/2108.10257"
-  ]
+  ],
+  "integration": {
+    "pr": 54,
+    "merge": "654f2dc17d3e10be2d9ce10c96f312fbada45b43",
+    "actor": "external; agent did not merge",
+    "documentation_followup_head": "423f15d24a6177524d61230ccd6fcb0e861b9d1c",
+    "documentation_ci": 41282823928,
+    "documentation_ci_result": "tests and Streamlit success",
+    "documentation_location": "feature branch; not included in earlier PR54 merge",
+    "next": "Carry evidence-only diffs into next MP32–40 milestone PR"
+  }
 }
