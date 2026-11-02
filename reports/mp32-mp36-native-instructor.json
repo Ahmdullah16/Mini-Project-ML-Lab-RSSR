@@ -37,5 +37,14 @@
     "pr": 55,
     "merge": "26236d9a4016938b2001bf7c150f8a25af5cdee1",
     "actor": "external; no agent merge call"
+  },
+  "public_check": {
+    "date": "2026-11-02",
+    "commit": "47ad0bfc3497a8c0a80e3b2fd695a92f12bcf758",
+    "lesson": "MP36",
+    "actual_result": "offset1 HR pixel, toy calibration MSE0.001700000000000003; completed0.0095s; exports visible",
+    "labels": "15m match threshold not residual bound; B11/B12 no VENµS HR reference verified visible",
+    "screenshot_local": "work/mp36-public-20261102.png",
+    "limit": "Not an all40 public-browser or real paired-data acceptance check"
   }
 }
