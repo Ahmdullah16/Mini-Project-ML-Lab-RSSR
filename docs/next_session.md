@@ -1,3 +1,10 @@
+# Native lesson execution coverage — 2026-11-02
+
+Main47ad0bf contains MP32–MP40 native labs from PR55/56 (both merged externally); exact-head CI all successful. All40 native interaction checks passed in CI41435887407 at1b57c58e. Preserve canonical tools, notebooks, checkpoints and frozen studies. Public MP36 on47ad0bf executed: offset1pixel, toyMSE.0017, exports and corrected15m/B11/B12 labels visible; screenshot ../mp36-public-20261102.png. No all40 browser claim.
+
+Current branch feat/native-lesson-evidence-index in work/pr-review-20261101 adds per-lesson pinned CI/module/test/shared-source hashes, fail-closed status text and updates stale acceptance rows. Two focused index tests, all40 navigation and986 relative-link checks passed; exact-head CI pending. Original outputs workspace four unfinished files remain untouched.
+
+Next: inspect this branch PR and exact-head CI; run ../clean-venv/Scripts/python.exe -m pytest tests/test_lesson_execution_evidence.py -q with PYTHONPATH=src/PYTHONUTF8=1 if changed. Once integrated, review remaining W1 per-criterion content/visual coverage and W2/W3 public Satellite comparison, using existing evidence instead of regenerating it. Real paired/reference SAM, protocol-v2 eligible manifests, resource authorization, durable external storage and final submission gates remain open.
 # Research interface presentation milestone — 2026-11-02
 
 Baseline main47ad0bf (PR56) preserved; no open PRs at intake. Branch feat/research-interface-20261102 in isolated rssr-interface worktree. Added shared light/dark presentation, responsive hero/cards/roadmap, evidence-derived model status, historical MP31 figure and Ahmdullah researcher/contact profile. Existing seven internal navigation IDs and all inference/lesson implementations preserved. Public guest access remains; no signup/password collection or email sending. Account provider/storage configuration and mobile/desktop visual review remain pending; see interface-upgrade.md.

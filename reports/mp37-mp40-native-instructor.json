@@ -13,7 +13,14 @@
     "app_tests": "Four offline AppTests passed: outputs, protocol filters, stale clearing, exports and one-unit rejection/retry; external sockets denied except Windows asyncio loopback",
     "structure": "40 IDs / 984 links valid",
     "source_integrity": "learning-supplement and paper-source checks passed",
-    "ci": "pending exact-head CI"
+    "ci": {
+      "head": "1b57c58e25e2f13bb14fb9468d0cef00a56ffcff",
+      "runs": [
+        41435887407,
+        41435879940
+      ],
+      "result": "both success"
+    }
   },
   "restrictions": [
     "No canonical notebook/experiment rerun",
@@ -21,5 +28,10 @@
     "Historical reports read-only; no seed/scene substitution",
     "Native controls are not full scientific/learner/submission acceptance"
   ],
-  "integration_prerequisite": "MP32–36 PR55 integrated externally at26236d9; exact headfd3fb38 passed both CI41434214186/41434206234"
+  "integration_prerequisite": "MP32–36 PR55 integrated externally at26236d9; exact headfd3fb38 passed both CI41434214186/41434206234",
+  "integration": {
+    "pr": 56,
+    "merge": "47ad0bfc3497a8c0a80e3b2fd695a92f12bcf758",
+    "actor": "external"
+  }
 }
