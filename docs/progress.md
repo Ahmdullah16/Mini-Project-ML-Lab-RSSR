@@ -1,3 +1,9 @@
+# MP37–MP40 native teaching — 2026-11-02
+
+Local native-control validation passed:14 numerical tests and four offline AppTests. Latest-head CI/integration pending. Canonical educational completion records preserved; full research-grade and learner acceptance remains open. [Batch evidence](../reports/mp37-mp40-native-instructor.json).
+
+2026-11-02 MP32–MP36 integrated through PR55 at26236d9 (external merge); exact headfd3fb38 passed both CI41434214186/41434206234. All five offline AppTests, all40 navigation and import recovery passed. Bounded native teaching verified; real paired scientific acceptance remains gated. Next MP37–MP40 on branch feat/mp37-mp40-native-hybrid.
+
 # MP32–MP36 native teaching — 2026-11-02
 
 Native UI acceptance In progress pending latest-head CI; all five offline AppTests and import recovery passed. Eight focused numerical tests passed; existing canonical educational records remain unchanged. MP36 whole-project/real paired acceptance remains In progress despite the already resolved original methodology/URL correction review. No training or frozen evaluation. [Batch evidence](../reports/mp32-mp36-native-instructor.json).

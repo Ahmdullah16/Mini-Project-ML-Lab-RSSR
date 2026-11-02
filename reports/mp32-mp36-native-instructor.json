@@ -14,8 +14,16 @@
     "structure": "40 IDs / 982 links passed",
     "source_integrity": "learning supplement and paper source checks passed",
     "app_tests": "All five offline AppTests passed: numerical displays, masks, exports, stale clearing, expected rejection and retry; external sockets blocked except Windows asyncio loopback",
-    "latest_head_ci": "pending publication",
-    "imports": "Deployment stale-import recovery passed for lessons/satellite/live"
+    "latest_head_ci": {
+      "head": "fd3fb38c9d850893012ce599429fcdf84695dd32",
+      "runs": [
+        41434214186,
+        41434206234
+      ],
+      "result": "both success"
+    },
+    "imports": "Deployment stale-import recovery passed for lessons/satellite/live",
+    "navigation": "All40 selections and arithmetic passed"
   },
   "scientific_limits": [
     "No canonical experiment/notebook rerun, model training, downloads, frozen-test access or checkpoint changes",
@@ -24,5 +32,10 @@
     "B11/B12 have no VENµS HR reference; no reference scores",
     "Real paired eligibility, registration/calibration and resource authorization gates remain open"
   ],
-  "carry_forward": "Four MP27–31 evidence/checkpoint changes retained from previous feature branch; original workspace four unfinished files preserved"
+  "carry_forward": "Four MP27–31 evidence/checkpoint changes retained from previous feature branch; original workspace four unfinished files preserved",
+  "integration": {
+    "pr": 55,
+    "merge": "26236d9a4016938b2001bf7c150f8a25af5cdee1",
+    "actor": "external; no agent merge call"
+  }
 }
