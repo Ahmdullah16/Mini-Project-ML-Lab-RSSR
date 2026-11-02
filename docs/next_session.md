@@ -1,3 +1,9 @@
+# Verification-input correction — 2026-11-02
+
+PR58 merged externally as36a697a; exact head0ab05c0d passed both CI41486445411/41486437314. Preserved PR57 research interface. Automated review correctly found historical report inputs absent from the verification index. Branch fix/native-evidence-input-hashes now pins MP31 submission/benchmark inputs, MP39 pilot, MP40 benchmark, and MP32–36 feasibility file used by provenance exports. Missing/changed inputs invalidate the pass claim. Seven regression tests passed; exact-head CI pending. No actual input records altered. Evidence reports/native-lesson-input-validation.json.
+
+Next: verify this correction PR latest head, then continue remaining W1 criterion-level visual/content review and public Satellite comparisons from acceptance_matrix.md. All40 native dispatch/CI execution coverage remains distinct from full educational/scientific acceptance. Original workspace unfinished files are preserved.
+
 # Native lesson execution coverage — 2026-11-02
 
 Main47ad0bf contains MP32–MP40 native labs from PR55/56 (both merged externally); exact-head CI all successful. All40 native interaction checks passed in CI41435887407 at1b57c58e. Preserve canonical tools, notebooks, checkpoints and frozen studies. Public MP36 on47ad0bf executed: offset1pixel, toyMSE.0017, exports and corrected15m/B11/B12 labels visible; screenshot ../mp36-public-20261102.png. No all40 browser claim.

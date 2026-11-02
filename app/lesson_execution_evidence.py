@@ -13,6 +13,7 @@ def execution_status(root,ident):
                 p in row['source_sha256'] for p in (row['module'],row['check'])):
             return 'Native-example verification record incomplete; no pass is inferred.'
         paths=dict(record['shared_source_sha256'],**row['source_sha256'])
+        paths.update(row['input_sha256'])
         if any(hashlib.sha256((root/p).read_bytes().replace(b'\r\n',b'\n')).hexdigest()!=sha for p,sha in paths.items()):
             return 'Native example changed since the recorded check; fresh verification is required.'
         check=record['verification']
