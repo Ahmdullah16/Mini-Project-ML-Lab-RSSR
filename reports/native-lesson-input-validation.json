@@ -19,6 +19,22 @@
     ]
   },
   "validation": "7 focused tests passed, including missing/changed/restored input files in isolated temporary trees",
-  "ci": "pending correction exact-head CI",
-  "limits": "No historical input data changed; full W1/scientific acceptance not implied"
+  "ci": {
+    "head": "a5b321508b06740d4ce550f183f7c229487a99fc",
+    "runs": [
+      41487981111,
+      41487971216
+    ],
+    "conclusion": "success",
+    "jobs": [
+      "tests",
+      "streamlit"
+    ]
+  },
+  "limits": "No historical input data changed; full W1/scientific acceptance not implied",
+  "integration": {
+    "pr": 59,
+    "merge": "c0d59e1dd23f2b56c75d2ba930b2a695eb4de2a1",
+    "method": "normal merge after checks and clean eligibility"
+  }
 }

@@ -1,3 +1,5 @@
+2026-11-02 integrated correction: PR59 merged as c0d59e1 after exact head a5b32150 passed tests and Streamlit in CI41487981111/41487971216. This supersedes pending correction notes below. All40 native interaction coverage remains separate from full W1/scientific/submission acceptance.
+
 2026-11-02 follow-up: execution verification now also pins historical computational inputs (MP31/39/40) and feasibility-export dependency (MP32–36). Seven missing/changed/restored-input regression checks passed. Correction exact-head CI pending. [Input validation](../reports/native-lesson-input-validation.json).
 
 2026-11-02 execution coverage: MP01–MP40 native checks passed in exact-head CI41435887407. Source-hashed per-lesson index now separates verified interaction from full content, learner and scientific acceptance. Public MP36 computation and corrected labels verified on47ad0bf; not an all40 browser claim.
