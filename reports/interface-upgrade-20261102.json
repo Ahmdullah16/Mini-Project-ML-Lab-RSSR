@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-02",
+  "baseline": "47ad0bfc3497a8c0a80e3b2fd695a92f12bcf758",
+  "scope": "Presentation only; preserve scientific and lesson implementations",
+  "environment": {
+    "python": "3.12.14",
+    "streamlit": "1.66.1",
+    "torch": "2.15.0+cpu"
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=src python scripts/check_research_design.py",
+      "result": "passed",
+      "coverage": "network-blocked guest overview, both appearances, evidence cards/profile, learning CTA, original inference CTA and state persistence"
+    },
+    {
+      "command": "PYTHONPATH=src python scripts/check_showcase.py",
+      "result": "passed",
+      "coverage": "all seven sections, result filters, curves, source library and invalid input/search states; network blocked"
+    },
+    {
+      "command": "PYTHONPATH=src python scripts/check_learning_ui.py",
+      "result": "passed",
+      "coverage": "40 lesson selections, rectangular/maximum teaching arithmetic; no code cells/network"
+    },
+    {
+      "command": "PYTHONPATH=src python scripts/check_structure.py",
+      "result": "passed",
+      "coverage": "40 sequential IDs and986 valid relative Markdown links"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "not_verified": [
+    "Exact-head GitHub Actions pending",
+    "Desktop/mobile visual screenshot and contrast review",
+    "Live deployment of this presentation change",
+    "Managed authentication and persistent user history not configured"
+  ],
+  "research": "No training, acquisition, datasets, weights or frozen reports modified",
+  "prior_environment_attempt": "Initial design run reached Live SR while torch installation was incomplete and failed importing torch; rerun after installation passed. No application workaround introduced."
+}

@@ -5,6 +5,11 @@ Main47ad0bf contains MP32–MP40 native labs from PR55/56 (both merged externall
 Current branch feat/native-lesson-evidence-index in work/pr-review-20261101 adds per-lesson pinned CI/module/test/shared-source hashes, fail-closed status text and updates stale acceptance rows. Two focused index tests, all40 navigation and986 relative-link checks passed; exact-head CI pending. Original outputs workspace four unfinished files remain untouched.
 
 Next: inspect this branch PR and exact-head CI; run ../clean-venv/Scripts/python.exe -m pytest tests/test_lesson_execution_evidence.py -q with PYTHONPATH=src/PYTHONUTF8=1 if changed. Once integrated, review remaining W1 per-criterion content/visual coverage and W2/W3 public Satellite comparison, using existing evidence instead of regenerating it. Real paired/reference SAM, protocol-v2 eligible manifests, resource authorization, durable external storage and final submission gates remain open.
+# Research interface presentation milestone — 2026-11-02
+
+Baseline main47ad0bf (PR56) preserved; no open PRs at intake. Branch feat/research-interface-20261102 in isolated rssr-interface worktree. Added shared light/dark presentation, responsive hero/cards/roadmap, evidence-derived model status, historical MP31 figure and Ahmdullah researcher/contact profile. Existing seven internal navigation IDs and all inference/lesson implementations preserved. Public guest access remains; no signup/password collection or email sending. Account provider/storage configuration and mobile/desktop visual review remain pending; see interface-upgrade.md.
+
+Local offline research-design and existing seven-section showcase AppTests passed; structure check passed40IDs/986links. Learning navigation check result is recorded in reports/interface-upgrade-20261102.json. CI includes new presentation check. Inspect PR latest-head CI before declaring release verified; no live deployment or final visual acceptance claimed. Resume remaining scientific/provider/export/report gates from acceptance_matrix.md; do not recreate MP27–40, which main now contains. Preserve frozen research/checkpoints. Existing source checkpoint follows for historical provenance.
 
 # MP37–MP40 native hybrid batch — 2026-11-02
 

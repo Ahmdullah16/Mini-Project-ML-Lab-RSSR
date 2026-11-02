@@ -298,3 +298,8 @@ Saved [master brief](ieee-reconstruction-brief.md); created [component/claim/imp
 ## Instructor-site milestone — 2026-10-28
 
 Implemented project-source link removal on visitor pages, executable MP01 input/output/pixel/histogram/download teaching, and7actual architecture diagrams with shared derivations and parameter trade-offs.47learning/paper tests and13instructor/MP01tests plus4subtests passed;40lesson/7model AppTests passed. Updated paper compiled, source-based test corrected a transcribed conclusion value; no frozen rerun. Supplied IEEE guidance access resolved; final PDF visual review remains blocked by UI access. [Evidence](../reports/instructor-site-validation.json). This is partial completion, not industry readiness or full40lesson acceptance.
+
+
+## Presentation update — 2026-11-02
+
+Shared guest interface, responsive architecture/learning cards, light/dark appearance and researcher profile added without changing MP01–MP40 completion statuses. Verification and remaining visual/account gates: [interface upgrade](interface-upgrade.md).
