@@ -52,3 +52,8 @@ This is the current acceptance index. Historical reports retain their original s
 | W5 Controlled metric behaviour | Deterministic64square fixture,6controls, explicitRun | pytest tests/test_metric_teaching.py; check_metric_ui.py | metric-teaching-validation.json | Tested teaching panel in both sections | Visual desktop/mobile review; preserve reference separation |
 | W6 Scientific honesty | Explicit unavailable reference accuracy, separate synthetic panel | Numerical/source/UI checks | metric-teaching-validation.json | Teaching separation verified; full scientific exports acceptance pending | Review registration/mask/band/unit gates for every future paired workflow |
 | W7 Verification and finish | CI now runs metric UI checks | check_metric_ui.py, existing project checks | Per-feature records; checkpoint | Partial, not final acceptance | Full40output coverage, satellite comparisons, all7execution, live/mobile/download/retry validation |
+
+
+## Interface presentation milestone — 2026-11-02
+
+Shared theme/components, guest Overview, evidence-backed cards, roadmap and researcher profile implemented in `app/research_design.py`; original seven route IDs and lesson/inference logic preserved. Local offline design/navigation checks recorded in [interface evidence](../reports/interface-upgrade-20261102.json). This does not close authentication, mobile visual/accessibility review, public satellite/scientific or submission acceptance. No signup backend configured; see [interface scope](interface-upgrade.md). Exact-head CI must be inspected before release.

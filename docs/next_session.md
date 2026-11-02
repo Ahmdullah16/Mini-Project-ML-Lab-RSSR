@@ -1,3 +1,9 @@
+# Research interface presentation milestone — 2026-11-02
+
+Baseline main47ad0bf (PR56) preserved; no open PRs at intake. Branch feat/research-interface-20261102 in isolated rssr-interface worktree. Added shared light/dark presentation, responsive hero/cards/roadmap, evidence-derived model status, historical MP31 figure and Ahmdullah researcher/contact profile. Existing seven internal navigation IDs and all inference/lesson implementations preserved. Public guest access remains; no signup/password collection or email sending. Account provider/storage configuration and mobile/desktop visual review remain pending; see interface-upgrade.md.
+
+Local offline research-design and existing seven-section showcase AppTests passed; structure check passed40IDs/986links. Learning navigation check result is recorded in reports/interface-upgrade-20261102.json. CI includes new presentation check. Inspect PR latest-head CI before declaring release verified; no live deployment or final visual acceptance claimed. Resume remaining scientific/provider/export/report gates from acceptance_matrix.md; do not recreate MP27–40, which main now contains. Preserve frozen research/checkpoints. Existing source checkpoint follows for historical provenance.
+
 # MP37–MP40 native hybrid batch — 2026-11-02
 
 Worktree work/pr-review-20261101; branch feat/mp37-mp40-native-hybrid. MP32–36 integrated/CI verified at main26236d9; original workspace unfinished files preserved. Added native dispatch for final four lessons with canonical fusion/hybrid tools, read-only pilot/robustness summaries, formulas, diagrams, outputs, exports and stale clearing.14 focused tests and four offline AppTests passed; exact-head CI pending. Evidence reports/mp37-mp40-native-instructor.json. No frozen/canonical scientific artifacts changed.
