@@ -1,3 +1,11 @@
+# MP37–MP40 native hybrid batch — 2026-11-02
+
+Worktree work/pr-review-20261101; branch feat/mp37-mp40-native-hybrid. MP32–36 integrated/CI verified at main26236d9; original workspace unfinished files preserved. Added native dispatch for final four lessons with canonical fusion/hybrid tools, read-only pilot/robustness summaries, formulas, diagrams, outputs, exports and stale clearing.14 focused tests and four offline AppTests passed; exact-head CI pending. Evidence reports/mp37-mp40-native-instructor.json. No frozen/canonical scientific artifacts changed.
+
+Next: inspect current PR latest-head tests and Streamlit checks before integration; do not recreate these lessons. Commands with PYTHONPATH=src/PYTHONUTF8=1: ../clean-venv/Scripts/python.exe -m pytest tests/test_hybrid_native_lessons.py -q; ../streamlit-venv/Scripts/python.exe scripts/check_hybrid_native_lessons.py. After integration: verify public native lesson deployment and remaining W1 criterion coverage; all40 native dispatches do not automatically close every pedagogical/scientific gate. Keep real paired/metric-geographic/calibration/resource and submission requirements open.
+
+2026-11-02 MP32–MP36 integrated through PR55 at26236d9 (external merge); exact headfd3fb38 passed both CI41434214186/41434206234. All five offline AppTests, all40 navigation and import recovery passed. Bounded native teaching verified; real paired scientific acceptance remains gated. Next MP37–MP40 on branch feat/mp37-mp40-native-hybrid.
+
 # MP32–MP36 native remote-sensing batch — 2026-11-02
 
 Main654f2dc rechecked; no open PRs at intake. Branch feat/mp32-mp36-native-remote-sensing in work/pr-review-20261101 preserves prior MP27–31 evidence-only diffs and original workspace unfinished work. Added canonical synthetic Stage-08 controls, formula/diagram/output interpretation, JSON/CSV provenance, explicit Run and rejection/retry. MP36 site-only prose follows the already reviewed method/correction; version-specific file applicability remains open. Eight numerical checks and structure/source checks passed; all five offline AppTests and import recovery passed; exact-head CI pending. Evidence reports/mp32-mp36-native-instructor.json.
