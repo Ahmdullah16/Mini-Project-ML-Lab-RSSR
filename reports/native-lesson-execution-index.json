@@ -153,7 +153,8 @@
       "source_sha256": {
         "app/pixel_lab_ui.py": "aabab348d68f500ae7d4a69998b8a485cd1e65784ad395b895158033f463e6b5",
         "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP02",
@@ -162,7 +163,8 @@
       "source_sha256": {
         "app/array_lab_ui.py": "73b76a4e1d8cc1ba68cc5606550942bc646375c591dd20ed43f231b6c3b69412",
         "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP03",
@@ -171,7 +173,8 @@
       "source_sha256": {
         "app/resize_lab_ui.py": "c576bd5bad0db3b2a0c5be13a0f01a62d1a050ff29ecce34e629aa8229a38bf0",
         "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP04",
@@ -180,7 +183,8 @@
       "source_sha256": {
         "app/difference_lab_ui.py": "63bc346bdb9ee102e9a240dc5dcd15ad110bd554dfd942c0949e1e2793b9f6f5",
         "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP05",
@@ -189,7 +193,8 @@
       "source_sha256": {
         "app/blur_lab_ui.py": "7829e40a1148a605865c4ae40740a3396002d288d5ed229c63f946a9aecadb4d",
         "scripts/check_learning_ui.py": "72534fdfa7e1c4044b07a3786636783e0cd3d642deba21c466be794901d65f9d"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP06",
@@ -198,7 +203,8 @@
       "source_sha256": {
         "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
         "scripts/check_degradation_lessons.py": "775c1366c80accc32e11b3a273d69c4e42639404ddef67dc5c53678888f6ded8"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP07",
@@ -207,7 +213,8 @@
       "source_sha256": {
         "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
         "scripts/check_degradation_lessons.py": "775c1366c80accc32e11b3a273d69c4e42639404ddef67dc5c53678888f6ded8"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP08",
@@ -216,7 +223,8 @@
       "source_sha256": {
         "app/degradation_batch_ui.py": "27a90c1a16cbc087197aa74259b37326dcb8d5e3d2c85d6130e59f0a9cef3606",
         "scripts/check_degradation_lessons.py": "775c1366c80accc32e11b3a273d69c4e42639404ddef67dc5c53678888f6ded8"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP09",
@@ -225,7 +233,8 @@
       "source_sha256": {
         "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
         "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP10",
@@ -234,7 +243,8 @@
       "source_sha256": {
         "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
         "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP11",
@@ -243,7 +253,8 @@
       "source_sha256": {
         "app/metric_lesson_ui.py": "9bf6c604bfa50cd12819e016db5ee0649caf828f4654b0d3de58a7b0c91e9d13",
         "scripts/check_metric_lessons.py": "07e5202f35e16b4628c2b8481a695e4c670c12eb0dc2958fbfe70b9057a67177"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP12",
@@ -252,7 +263,8 @@
       "source_sha256": {
         "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
         "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP13",
@@ -261,7 +273,8 @@
       "source_sha256": {
         "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
         "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP14",
@@ -270,7 +283,8 @@
       "source_sha256": {
         "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
         "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP15",
@@ -279,7 +293,8 @@
       "source_sha256": {
         "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
         "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP16",
@@ -288,7 +303,8 @@
       "source_sha256": {
         "app/math_training_ui.py": "772ab409ae95776ec8a220ea82458fbc4bb3c03088df44f412c9ca24205ee8f7",
         "scripts/check_math_training_lessons.py": "9b26809e3c8059274845b740160fd7e088bf3cb8b75b1d7ddd0af9ff043570c6"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP17",
@@ -297,7 +313,8 @@
       "source_sha256": {
         "app/convolution_lesson_ui.py": "d4654195d21e41ae6cf9493edcaab8e0c7d26f62f8631cf329f9de210cd971f3",
         "scripts/check_convolution_lesson.py": "4a409f3d03d5a8d4d2f3ffaa0591209c4d4d085b8e484b5d1bd0d025aa6bbcc6"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP18",
@@ -306,7 +323,8 @@
       "source_sha256": {
         "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
         "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP19",
@@ -315,7 +333,8 @@
       "source_sha256": {
         "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
         "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP20",
@@ -324,7 +343,8 @@
       "source_sha256": {
         "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
         "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP21",
@@ -333,7 +353,8 @@
       "source_sha256": {
         "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
         "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP22",
@@ -342,7 +363,8 @@
       "source_sha256": {
         "app/cnn_native_lessons.py": "724397fd870f7f63c6051f7f689cc034bf5f52c2f99dd47b72b119a2d693ab73",
         "scripts/check_cnn_native_lessons.py": "47ef87beeca55723477a95683a9084490d0bd3f4f97f2507f4e442caf67e7bcb"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP23",
@@ -351,7 +373,8 @@
       "source_sha256": {
         "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
         "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP24",
@@ -360,7 +383,8 @@
       "source_sha256": {
         "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
         "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP25",
@@ -369,7 +393,8 @@
       "source_sha256": {
         "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
         "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP26",
@@ -378,7 +403,8 @@
       "source_sha256": {
         "app/attention_native_ui.py": "5b2b13e5a0c1b222d847b6eef0a8c09e2393455906481b9677d4bee5a4b90ce1",
         "scripts/check_attention_native_lessons.py": "ecda00993ea287cc68c378518839ce780c2bbf8f185891057c919631d6659e26"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP27",
@@ -387,7 +413,8 @@
       "source_sha256": {
         "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
         "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP28",
@@ -396,7 +423,8 @@
       "source_sha256": {
         "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
         "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP29",
@@ -405,7 +433,8 @@
       "source_sha256": {
         "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
         "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP30",
@@ -414,7 +443,8 @@
       "source_sha256": {
         "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
         "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP31",
@@ -423,6 +453,10 @@
       "source_sha256": {
         "app/transformer_native_ui.py": "338fc9d95a805ef5c9f9d242e4e4bba01bddbc84ce37be5f118d5b85bf964cb4",
         "scripts/check_transformer_native_lessons.py": "3e0696f5c9ba07c035bcd48ad75afe7a29b2a30c9767f1efeb64eca0bd5ca659"
+      },
+      "input_sha256": {
+        "reports/submission-study.json": "b2b68bbaeea9eef8e01ea0f9c3860bfad7015dae0973b3dcb37bc16dc7b0557e",
+        "reports/development-benchmark.json": "03f3356e4b7302089e7aa17aac9478c47bb0ef005b13d43dcb4cf9c467d672ab"
       }
     },
     {
@@ -432,6 +466,9 @@
       "source_sha256": {
         "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
         "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      },
+      "input_sha256": {
+        "reports/mp36-feasibility.md": "2cc867b37af77b954b1d29642657106045d8e1b9c6a7c96740186c701f2e5e31"
       }
     },
     {
@@ -441,6 +478,9 @@
       "source_sha256": {
         "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
         "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      },
+      "input_sha256": {
+        "reports/mp36-feasibility.md": "2cc867b37af77b954b1d29642657106045d8e1b9c6a7c96740186c701f2e5e31"
       }
     },
     {
@@ -450,6 +490,9 @@
       "source_sha256": {
         "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
         "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      },
+      "input_sha256": {
+        "reports/mp36-feasibility.md": "2cc867b37af77b954b1d29642657106045d8e1b9c6a7c96740186c701f2e5e31"
       }
     },
     {
@@ -459,6 +502,9 @@
       "source_sha256": {
         "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
         "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      },
+      "input_sha256": {
+        "reports/mp36-feasibility.md": "2cc867b37af77b954b1d29642657106045d8e1b9c6a7c96740186c701f2e5e31"
       }
     },
     {
@@ -468,6 +514,9 @@
       "source_sha256": {
         "app/remote_sensing_native_ui.py": "fe1a15457cf13e3948d945f37939e566da1d505627260f67fd10453a3178b091",
         "scripts/check_remote_sensing_native_lessons.py": "6d589d5dc730e49e3b582f6503bd71319315a255abfcb5c049b63fbb6cf9b69a"
+      },
+      "input_sha256": {
+        "reports/mp36-feasibility.md": "2cc867b37af77b954b1d29642657106045d8e1b9c6a7c96740186c701f2e5e31"
       }
     },
     {
@@ -477,7 +526,8 @@
       "source_sha256": {
         "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
         "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP38",
@@ -486,7 +536,8 @@
       "source_sha256": {
         "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
         "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
-      }
+      },
+      "input_sha256": {}
     },
     {
       "id": "MP39",
@@ -495,6 +546,9 @@
       "source_sha256": {
         "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
         "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
+      },
+      "input_sha256": {
+        "reports/ablation-pilot-runs.json": "8a1cb548e39aaa530783bb1d63407914446bd85c8632bc710beb995c827a485e"
       }
     },
     {
@@ -504,6 +558,9 @@
       "source_sha256": {
         "app/hybrid_native_ui.py": "7f2145e4c46d48eac6e11b240f8cad57d879f86de03b679e22fd498aee7a7e14",
         "scripts/check_hybrid_native_lessons.py": "dde83eadd45a959f2e3a557f0d7f85da8a01b45fc7c8ae887622b0232a212364"
+      },
+      "input_sha256": {
+        "reports/development-benchmark.json": "03f3356e4b7302089e7aa17aac9478c47bb0ef005b13d43dcb4cf9c467d672ab"
       }
     }
   ],
