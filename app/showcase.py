@@ -13,12 +13,7 @@ from rssr.interpretation import explain_selection, metric_definition
 from rssr.build_info import build_identity
 SECTIONS=['Overview','Live SR','Results','Methodology & Data','Mini-projects','Satellite Explorer','Downloads & Reproducibility']
 st.set_page_config(page_title='RSSR · Research laboratory',page_icon='◈',layout='wide')
-st.markdown('''<style>
-.block-container{max-width:1240px;padding-top:4rem;padding-bottom:3rem;}h1{letter-spacing:-.035em;}h2{letter-spacing:-.02em;}
-[data-testid="stMetric"]{background:rgba(37,99,128,.065);border:1px solid rgba(37,99,128,.2);border-radius:12px;padding:16px;}
-[data-testid="stSidebar"]{border-right:1px solid rgba(37,99,128,.18);}
-@media(max-width:640px){.block-container{padding-left:1rem;padding-right:1rem;}h1{font-size:2rem;}}
-</style>''',unsafe_allow_html=True)
+from research_design import SECTION_LABELS, apply_theme, hero, overview_explorer, researcher, footer
 
 @st.cache_data(show_spinner=False)
 def evidence(fingerprint):
@@ -31,10 +26,13 @@ except (OSError,ValueError,KeyError) as error:
     st.error(f'Evidence could not be loaded: {error}. No results have been substituted.');st.stop()
 with st.sidebar:
     st.markdown('### ◈ RSSR LAB');st.caption('REMOTE SENSING · SUPER-RESOLUTION')
-    section=st.radio('Explore the laboratory',SECTIONS,key='section',label_visibility='collapsed')
+    section=st.radio('Explore the laboratory',SECTIONS,key='section',format_func=lambda value:SECTION_LABELS[value],label_visibility='collapsed')
+    appearance=st.selectbox('Appearance',['Light','Dark'],key='lab_appearance')
+    st.caption('Guest workspace · no account required')
     st.divider();st.caption('Measured evidence. Reproducible experiments. Explicit limits.')
     with st.expander('Application version'):st.json(build_identity(ROOT))
-st.caption('RSSR / '+section.upper())
+apply_theme(appearance)
+st.caption('RSSR / '+SECTION_LABELS[section].upper())
 
 def download_artifact(path):
     file=ROOT/path
@@ -76,17 +74,18 @@ def explain_results(frame):
         st.write('Controlled teaching example (not a research observation): x=[0.1,0.2], prediction=[0.2,0.2], two valid scalar samples, L=1. MSE=(0.1²+0²)/2=0.005; RMSE≈0.07071; MAE=0.05; PSNR≈23.0103 dB. This calculation requires a genuine aligned reference when used on images.')
 
 if section=='Overview':
-    st.title('More pixels. Measured evidence.')
-    st.markdown('Explore how convolution, attention and windowed Transformers reconstruct detail in remote-sensing imagery—and where the evidence stops.')
+    hero()
     st.write('Research question: under the same synthetic degradation and validation budget, does combining CNN, attention and Transformer features improve reconstruction over simpler baselines?')
     for col,label,target in zip(st.columns(3),['Try inference','Explore results','Read methodology'],['Live SR','Results','Methodology & Data']):
         col.button(label,on_click=navigate,args=(target,),width='stretch')
-    a,b,c=st.columns(3)
+    a,b,c,d=st.columns(4)
+    d.metric('Configured scales','×2–×64',help='Six choices: ×2, ×4, ×8, ×16, ×32, ×64. Host availability depends on output size; scaling does not prove recovered detail.')
     frozen_rows=[r for r in index['rows'] if r['study']=='Frozen held-out evaluation']
     a.metric('Frozen test scenes',max(r['scenes'] for r in frozen_rows),help='Count from frozen source records; not summed across models.')
     b.metric('Development run records',len({r['run_id'] for r in index['rows'] if r['study']=='Development seed summaries'}),help='Distinct source run IDs; includes reused runs, not all new training jobs.')
     expanded=sum(not p['status'].startswith('Introductory') for p in index['projects'])
     c.metric('Expanded lessons',f'{expanded} / 40',help='See each project for criterion-level completion; learner mastery remains unassessed.')
+    overview_explorer(ROOT,index,navigate)
     st.subheader('What the experiments support')
     test=pd.DataFrame([r for r in index['rows'] if r['study']=='Frozen held-out evaluation' and r['bands']==3 and r['metric']=='psnr'])
     metric_chart(test, 'PSNR · dB')
@@ -102,6 +101,7 @@ if section=='Overview':
         st.markdown(f'**Engineering:** public app access and seven-family deployment verified on 2026-10-30; execution evidence is dated separately. Stateless service.\n\n**Education:** {expanded} lessons expanded; inspect project-specific completion criteria.\n\n**Research:** frozen synthetic test executed; paired cross-sensor validity unestablished.\n\n**Submission:** final report, slides and complete package pending.')
     with st.expander('Why remote sensing needs more than sharper previews'):
         st.write('Generated texture can look convincing without matching the ground. Sensor response, registration, sampling and physical calibration matter. Display previews and synthetic PSNR do not establish reflectance or downstream accuracy.')
+    researcher()
 elif section=='Live SR':
     st.title('Inspect a reconstruction');st.caption('Choose a genuine checkpoint and compare a shared crop. Uploads without references receive no invented accuracy metrics.')
     from metric_ui import render as render_metrics
@@ -222,4 +222,4 @@ else:
     st.warning('Pending: '+', '.join(index['pending_artifacts'])+'. Recorded research drafts and figures remain in Results → Artifact library.')
     st.code('python -m pip install -r app/requirements.txt\npython scripts/check_model_catalog.py\npython -m streamlit run app/streamlit_app.py',language='bash')
     st.write('Follow the research setup guide for dataset rebuilding. Original checkpoint and tile hashes remain authoritative. Public app inputs, results and caches are temporary; live external durability needs a separately configured and verified account.')
-st.divider();st.caption('RSSR LAB · Synthetic evidence ≠ verified ground truth · No training on navigation')
+footer()
