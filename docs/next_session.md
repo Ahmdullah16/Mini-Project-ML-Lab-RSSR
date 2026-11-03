@@ -1,3 +1,9 @@
+# Final AURORA verification — 2026-11-03
+
+PR60 remains OPEN, NOT MERGED: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/60. Exact published head674c1e91dbe3e35dd16e975fa525130467cd8a6d and tree865ab34d5e96341a5b42e87f2c009c993edc8a9c passed BOTH CI41575121516/41575116157 tests and Streamlit. Published tree matched locally tested source. Warm-import P2 fixed; final local555tests+17subtests passed in16.30s (145warnings). Public guest Overview accessible; AURORA remains local/PR only. Native keyboard lens worked; full accessibility matrix remains open. Reviewed screenshot work/aurora-visual/overview-reviewed.png and phone view overview-final-mobile.png.
+
+This final evidence-only note is committed locally after CI; carry it into the next PR update. Do not merge under the AURORA brief. Resume remaining M1 visual/gallery/keyboard gates, then remaining M2–M6 in order as audited below. No need to rerun unchanged lessons or frozen science. Original unfinished outputs workspace preserved.
+
 # AURORA X active checkpoint — 2026-11-03
 
 PR60: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/60 (leave open; do not merge). Browser review exposed nested-helper hot reload; fixed recursive app fingerprint/package refresh and reloading the refresh policy itself. Warm-worker regression reproduces stale policy/helpers and passes. Latest-head CI must be inspected; do not use superseded initial runs.

@@ -35,11 +35,28 @@
     ],
     "overflow": "none in observed document-width measurements",
     "full_accessibility": "NOT VERIFIED",
-    "screenshots": "local work/aurora-visual"
+    "screenshots": "local work/aurora-visual",
+    "reviewed_screenshots": [
+      "work/aurora-visual/overview-reviewed.png",
+      "work/aurora-visual/overview-final-mobile.png"
+    ],
+    "keyboard": "VERIFIED native lens selection only; complete walkthrough NOT VERIFIED"
   },
   "deployment": "NOT VERIFIED feature branch",
   "auth": "NEEDS OWNER ACTION",
-  "ci": "NOT VERIFIED pending exact head",
+  "ci": {
+    "status": "VERIFIED",
+    "head": "674c1e91dbe3e35dd16e975fa525130467cd8a6d",
+    "runs": [
+      41575121516,
+      41575116157
+    ],
+    "conclusion": "success",
+    "jobs": [
+      "tests",
+      "streamlit"
+    ]
+  },
   "preserved": [
     "frozen results",
     "canonical notebooks",
@@ -50,8 +67,9 @@
     "passed": 555,
     "subtests": 17,
     "warnings": 145,
-    "seconds": 19.13
+    "seconds": 16.3
   },
   "warm_worker": "VERIFIED: stale nested UI module and refresh policy reproduced; lesson/satellite/live recovered without network",
-  "pr": 60
+  "pr": 60,
+  "public_guest": "VERIFIED existing Overview loads; feature not deployed"
 }
