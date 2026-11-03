@@ -15,6 +15,8 @@ old_sat=types.ModuleType('rssr.inference');old_sat.__file__=str(ROOT/'src/rssr/i
 sys.modules['rssr.inference']=old_sat
 old_ui=types.ModuleType('rssr_ui.shell');old_ui.__file__=str(ROOT/'app/rssr_ui/shell.py')
 sys.modules['rssr_ui.shell']=old_ui
+import deployment_bootstrap
+deployment_bootstrap.prepare_imports=lambda root: {'imports_refreshed':False}
 if hasattr(sys,'_rssr_deployment_import_state'):delattr(sys,'_rssr_deployment_import_state')
 with patch('urllib.request.urlopen',side_effect=AssertionError('Navigation requested network')):
  app=AppTest.from_file(str(ROOT/'app/streamlit_app.py'),default_timeout=60).run()
