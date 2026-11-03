@@ -18,7 +18,7 @@ def prepare_imports(root):
         setattr(sys,_STATE,{'lock':threading.RLock(),'fingerprint':None})
     state=getattr(sys,_STATE)
     with state['lock']:
-        paths=sorted([* (root/'app').glob('*.py'),*(root/'src/rssr').rglob('*.py'),*(root/'configs').glob('hosted-model*.json')])
+        paths=sorted([* (root/'app').rglob('*.py'),*(root/'src/rssr').rglob('*.py'),*(root/'configs').glob('hosted-model*.json')])
         digest=hashlib.sha256(str(root).encode())
         for path in paths:
             digest.update(path.relative_to(root).as_posix().encode());digest.update(path.read_bytes())
@@ -33,6 +33,10 @@ def prepare_imports(root):
             for name,module in list(sys.modules.items()):
                 if name=='rssr' or name.startswith('rssr.'):
                     sys.modules.pop(name,None)
+                elif name=='rssr_ui' or name.startswith('rssr_ui.'):
+                    origin=getattr(module,'__file__',None)
+                    if origin and Path(origin).resolve().is_relative_to(root/'app/rssr_ui'):
+                        sys.modules.pop(name,None)
                 elif name in app_names:
                     origin=getattr(module,'__file__',None)
                     if origin and Path(origin).resolve().parent==root/'app':sys.modules.pop(name,None)
