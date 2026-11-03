@@ -2,7 +2,7 @@
 
 Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images.
 
-**Engineering demo implemented; laboratory and final submission still in progress.** Public access was unavailable at the last October 23 verification; the existing deployment configuration is preserved. The original 40 IDs and nine stages are preserved. MP01–MP35 have expanded lessons and real-kernel execution evidence; full project criteria and learner mastery are not automatically complete. MP36–MP40 still need full expansion. Every project folder contains its own notebook, tools, tests, runner and validation record; see [folder manifest](docs/project_folders.json).
+**Engineering demo implemented; scientific and submission acceptance remain open.** All40 native lesson routes are integrated; interaction checks do not establish every project criterion or learner mastery. The public app was accessible in the latest recorded November2 MP36 check. AURORA X is a feature-branch upgrade, not a deployed release. See [AURORA audit](docs/aurora_x_audit.md), [design system](docs/design_system.md) and [scientific UI contract](docs/scientific_ui_contract.md).
 
 The [existing public app](https://mini-project-ml-lab-rssr.streamlit.app/) passed actual sample/upload inference, size/error checks, repeated requests and fresh Sentinel GeoTIFF export; see [recorded browser evidence](reports/public-browser-validation.json). The new frozen CNN/hybrid selector is tested locally but not yet verified on the public host.
 

@@ -20,6 +20,7 @@ def render_scaled(comparison=False):
             st.json(json.loads(diagnostic.read_text(encoding='utf-8')))
     selected=st.multiselect('Models to compute',labels,default=labels if comparison else labels[:1],key=prefix+'models')
     scale=st.selectbox('Output scale',SCALES,format_func=lambda s:f'×{s}',key=prefix+'scale')
+    if scale >= 16: st.warning('High-scale output is highly inferential. More pixels do not establish sensor-observed or verified geographic detail.')
     st.write('Wout = s × Win; Hout = s × Hin. Pixel count increases by s², without guaranteeing recovery of missing detail. Repeated stages clip and quantize RGB; the model includes bicubic interpolation in its residual baseline.')
     choice=st.radio('Input',['Licensed cached training example','Upload'],key=prefix+'choice')
     upload=st.file_uploader('Opaque RGB/grayscale PNG/JPEG; width and height each ≤1024; 8 MB',type=['png','jpg','jpeg'],key=prefix+'upload') if choice=='Upload' else None
@@ -59,7 +60,14 @@ def render_scaled(comparison=False):
                         meta=cascade(image,model,folder,scale,{'model':spec,'run_id':state['run_id'],'source':prepared['source']})
                         import rasterio
                         with rasterio.open(folder/meta['output']) as src:pixels=src.read().transpose(1,2,0)
-                        outputs.append({'key':key,'label':label,'pixels':pixels,'metadata':meta,'tiff':(folder/meta['output']).read_bytes(),'preview':(folder/'preview.png').read_bytes()})
+                        tiff = (folder/meta['output']).read_bytes()
+                        from rssr_ui.passport import create_passport
+                        from rssr.build_info import build_identity
+                        passport = create_passport(source_hash=hashlib.sha256(image.tobytes()).hexdigest(),
+                            output_bytes=tiff, model=spec, scale=scale, metadata=meta,
+                            input_shape=list(image.shape), input_encoding='RGB uint8 C-order pixels',
+                            application=build_identity(Path(__file__).resolve().parents[1]))
+                        outputs.append({'key':key,'label':label,'pixels':pixels,'metadata':meta,'tiff':tiff,'preview':(folder/'preview.png').read_bytes(),'passport':passport})
                 finally:lock.release()
             except Exception as error:errors.append(label+': '+str(error))
         st.session_state[prefix+'results']={'input':image.copy(),'outputs':outputs,'errors':errors,'scale':scale}
@@ -85,6 +93,9 @@ def render_scaled(comparison=False):
         st.download_button('Full-resolution BigTIFF · '+r['label'],r['tiff'],f'sr-x{meta["scale"]}.tif','image/tiff',key=prefix+'tiff'+r['label'])
         st.download_button('Provenance · '+r['label'],json.dumps(meta,indent=2),'provenance.json','application/json',key=prefix+'meta'+r['label'])
         with st.expander('Stages and provenance · '+r['label']):st.json(meta)
+        if 'passport' in r:
+            from rssr_ui.passport import render_passport
+            render_passport(r['passport'], prefix+'passport'+r['label'])
 
     bundle=io.BytesIO()
     with zipfile.ZipFile(bundle,'w',zipfile.ZIP_DEFLATED) as archive:
@@ -93,4 +104,5 @@ def render_scaled(comparison=False):
         for i,r in enumerate(batch['outputs']):
             archive.writestr(f'model-{i+1}.tif',r['tiff'])
             archive.writestr(f'model-{i+1}-provenance.json',json.dumps(r['metadata'],indent=2))
+            if 'passport' in r: archive.writestr(f'model-{i+1}-passport.json',json.dumps(r['passport'],indent=2))
     st.download_button('Download completed comparison bundle',bundle.getvalue(),'comparison.zip','application/zip',key=prefix+'bundle')

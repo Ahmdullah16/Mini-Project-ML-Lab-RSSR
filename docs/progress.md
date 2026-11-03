@@ -1,3 +1,5 @@
+2026-11-03 AURORA X: additive foundation/passport work In progress; no merge/deployment. VERIFIED bounded checks, NOT VERIFIED full M0–M6 acceptance. See [audit](aurora_x_audit.md) and [evidence](../reports/aurora-x-validation.json). Existing scientific/project statuses unchanged.
+
 2026-11-02: PR56 integrated externally as47ad0bf; both exact-head CI runs41435887407/41435879940 passed. MP01–MP40 native routes are implemented and covered by existing CI interaction checks. Source-hashed execution index added; changes invalidate displayed verification. Full W1 pedagogical/visual and scientific/submission criteria are still separate.
 
 # MP37–MP40 native teaching — 2026-11-02

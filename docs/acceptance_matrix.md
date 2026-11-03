@@ -1,3 +1,5 @@
+2026-11-03 AURORA X: additive foundation/passport work In progress; no merge/deployment. VERIFIED bounded checks, NOT VERIFIED full M0–M6 acceptance. See [audit](aurora_x_audit.md) and [evidence](../reports/aurora-x-validation.json). Existing scientific/project statuses unchanged.
+
 2026-11-02 integrated correction: PR59 merged as c0d59e1 after exact head a5b32150 passed tests and Streamlit in CI41487981111/41487971216. This supersedes pending correction notes below. All40 native interaction coverage remains separate from full W1/scientific/submission acceptance.
 
 2026-11-02 follow-up: execution verification now also pins historical computational inputs (MP31/39/40) and feasibility-export dependency (MP32–36). Seven missing/changed/restored-input regression checks passed. Correction exact-head CI pending. [Input validation](../reports/native-lesson-input-validation.json).
