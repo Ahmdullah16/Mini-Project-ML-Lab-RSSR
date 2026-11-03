@@ -1,5 +1,7 @@
 # AURORA X active checkpoint — 2026-11-03
 
+PR60: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/60 (leave open; do not merge). Browser review exposed nested-helper hot reload; fixed recursive app fingerprint/package refresh and reloading the refresh policy itself. Warm-worker regression reproduces stale policy/helpers and passes. Latest-head CI must be inspected; do not use superseded initial runs.
+
 Branch feat/rssr-aurora-x in work/pr-review-20261101; main c0d59e1 unchanged, no open PRs at intake. New AURORA brief explicitly prohibits merging this feature. Preserve original outputs workspace unfinished work and all canonical lessons/studies. Prior final-note4f5b44c carried forward.
 
 Implemented scoped token/panel foundation, session-only lenses, quick navigation, registry evidence drawer, developer-only capability lab, bounded inert passports/replay comparison for successful RGB and satellite-comparison results. Baseline544tests+17subtests; foundation3 and passport8 tests passed. Actual CNN5x3→10x6 RGB and synthetic GeoTIFF passport checks passed. Existing seven-section/all40/MP27–31 AppTests passed. Five-width Overview measurements and screenshots in work/aurora-visual; full visual/accessibility acceptance still open. Final evidence: reports/aurora-x-validation.json.

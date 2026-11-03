@@ -51,5 +51,7 @@
     "subtests": 17,
     "warnings": 145,
     "seconds": 19.13
-  }
+  },
+  "warm_worker": "VERIFIED: stale nested UI module and refresh policy reproduced; lesson/satellite/live recovered without network",
+  "pr": 60
 }
