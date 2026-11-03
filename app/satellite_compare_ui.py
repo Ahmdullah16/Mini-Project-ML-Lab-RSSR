@@ -1,5 +1,5 @@
 """Sequential comparison of pinned RGB models on one prepared GeoTIFF."""
-import json,tempfile
+import json,tempfile,hashlib
 from pathlib import Path
 import numpy as np
 import rasterio
@@ -23,6 +23,7 @@ def render():
     st.caption('Acquire once above. Every selected model uses exactly those source bytes; changing AOI/date fields does not replace the prepared acquisition until Acquire is submitted.')
     selected=st.multiselect('Satellite models to compare',[s['label'] for s in CATALOG],default=[s['label'] for s in CATALOG[:2]],key='sat_compare_models')
     scale=st.selectbox('Satellite comparison scale',SCALES,key='sat_compare_scale')
+    if scale >= 16: st.warning('High-scale reconstruction is highly inferential; it does not establish new sensor-observed geographic detail.')
     if prepared is None:return
     source=prepared['geotiff']
     with tempfile.TemporaryDirectory() as temp:
@@ -40,7 +41,14 @@ def render():
         try:
             _,_,checkpoint,lock=resources(spec)
             if not lock.acquire(blocking=False):raise ValueError('CPU busy; retry this model')
-            try:cache[key]=execute(source,checkpoint,spec,scale,prepared['metadata'])
+            try:
+                result = execute(source,checkpoint,spec,scale,prepared['metadata'])
+                from rssr_ui.passport import create_passport
+                from rssr.build_info import build_identity
+                result['passport'] = create_passport(source_hash=hashlib.sha256(source).hexdigest(),
+                    output_bytes=result['geotiff'], model=spec, scale=scale, metadata=result['metadata'],
+                    application=build_identity(Path(__file__).resolve().parents[1]))
+                cache[key] = result
             finally:lock.release()
             failures.pop(key,None)
         except Exception as error:failures[key]=str(error)
@@ -75,6 +83,9 @@ def render():
             st.caption('Shared preview crop x,y,width,height: '+str(detail['preview_crop_xywh']))
             st.download_button('GeoTIFF · '+spec['label'],result['geotiff'],key+'.tif','image/tiff',key=key+'_tiff')
             st.download_button('Provenance · '+spec['label'],json.dumps(meta,indent=2),key+'.json','application/json',key=key+'_meta')
+            if 'passport' in result:
+                from rssr_ui.passport import render_passport
+                render_passport(result['passport'],key+'_passport')
             rows.append({'model':spec['label'],'scale':scale,'width':request['output_width'],'height':request['output_height'],'seconds':meta['runtime_seconds'],'checkpoint':spec['checkpoint']['sha256'],'reference_accuracy':'unavailable: no aligned HR'})
     if rows:
         st.dataframe(rows,hide_index=True)

@@ -1,3 +1,23 @@
+# AURORA X active checkpoint — 2026-11-03
+
+Branch feat/rssr-aurora-x in work/pr-review-20261101; main c0d59e1 unchanged, no open PRs at intake. New AURORA brief explicitly prohibits merging this feature. Preserve original outputs workspace unfinished work and all canonical lessons/studies. Prior final-note4f5b44c carried forward.
+
+Implemented scoped token/panel foundation, session-only lenses, quick navigation, registry evidence drawer, developer-only capability lab, bounded inert passports/replay comparison for successful RGB and satellite-comparison results. Baseline544tests+17subtests; foundation3 and passport8 tests passed. Actual CNN5x3→10x6 RGB and synthetic GeoTIFF passport checks passed. Existing seven-section/all40/MP27–31 AppTests passed. Five-width Overview measurements and screenshots in work/aurora-visual; full visual/accessibility acceptance still open. Final evidence: reports/aurora-x-validation.json.
+
+NEXT: inspect feature PR latest-head CI, do not merge. Commands with PYTHONPATH=src/PYTHONUTF8=1: ../clean-venv/Scripts/python.exe -m pytest tests/test_aurora_foundation.py tests/test_aurora_passport.py -q; ../streamlit-venv/Scripts/python.exe scripts/check_aurora_foundation.py; ../streamlit-venv/Scripts/python.exe scripts/check_aurora_passports.py. Complete M1 visual/keyboard/gallery gates, M2 full workbench/replay, M3 Observatory/fair comparison, M4 research library, M5 configured auth, M6 release. Reuse all existing inference/lessons. See aurora_x_audit.md and OWNER_SETUP.md. No frozen study reruns.
+
+## Earlier checkpoints (superseded where stated)
+
+# Current resume checkpoint — 2026-11-02
+
+Main c0d59e1dd23f2b56c75d2ba930b2a695eb4de2a1 contains PR55 MP32–36, PR56 MP37–40, PR57 interface, PR58 all40 execution index and PR59 input-hash correction. Do not recreate these batches. PR59 exact head a5b321508b06740d4ce550f183f7c229487a99fc passed tests and Streamlit in both CI41487981111 and CI41487971216; merged normally after clean eligibility. Seven input-integrity regression tests passed. No frozen data, weights, historical results or canonical notebooks modified.
+
+This final evidence note is committed locally after integration; carry its documentation/report changes into the next implementation PR. Worktree work/pr-review-20261101, branch fix/native-evidence-input-hashes. Original outputs/Mini-Project-ML-Lab-RSSR four unfinished files remain untouched. Older pending notes below are historical and superseded by this block.
+
+Next commands: git fetch origin main; git status --short; git diff origin/main --stat; inspect open PRs before edits. Set PYTHONPATH=src and PYTHONUTF8=1. Do not repeat unchanged batch checks. Next requirement: W1 criterion-level content/desktop/mobile visual review, then W2/W3 public Satellite comparisons using existing bounded samples and compatible seven-model artifacts. All40 native CI interaction coverage is verified; full educational/scientific acceptance is not. Public MP36 actually executed on47ad0bf, not yet a public c0d59e1 deployment claim.
+
+Concrete external research gates: versioned eligible paired-file inspection/registration/calibration and authorized resource envelope; durable external-storage account configuration; real author/venue details for final submission. Other content/visual/report tasks remain actionable, not externally blocked. Use acceptance_matrix.md for remaining scope.
+
 # Verification-input correction — 2026-11-02
 
 PR58 merged externally as36a697a; exact head0ab05c0d passed both CI41486445411/41486437314. Preserved PR57 research interface. Automated review correctly found historical report inputs absent from the verification index. Branch fix/native-evidence-input-hashes now pins MP31 submission/benchmark inputs, MP39 pilot, MP40 benchmark, and MP32–36 feasibility file used by provenance exports. Missing/changed inputs invalidate the pass claim. Seven regression tests passed; exact-head CI pending. No actual input records altered. Evidence reports/native-lesson-input-validation.json.

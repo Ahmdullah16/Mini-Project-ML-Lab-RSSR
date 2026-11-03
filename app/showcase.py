@@ -12,7 +12,7 @@ from rssr.evidence import build_index
 from rssr.interpretation import explain_selection, metric_definition
 from rssr.build_info import build_identity
 SECTIONS=['Overview','Live SR','Results','Methodology & Data','Mini-projects','Satellite Explorer','Downloads & Reproducibility']
-st.set_page_config(page_title='RSSR · Research laboratory',page_icon='◈',layout='wide')
+st.set_page_config(page_title='RSSR AURORA X · Earth Intelligence',page_icon='◈',layout='wide')
 from research_design import SECTION_LABELS, apply_theme, hero, overview_explorer, researcher, footer
 
 @st.cache_data(show_spinner=False)
@@ -25,13 +25,17 @@ try:index=evidence(fingerprint)
 except (OSError,ValueError,KeyError) as error:
     st.error(f'Evidence could not be loaded: {error}. No results have been substituted.');st.stop()
 with st.sidebar:
-    st.markdown('### ◈ RSSR LAB');st.caption('REMOTE SENSING · SUPER-RESOLUTION')
+    st.markdown('### ◈ RSSR AURORA X');st.caption('REMOTE SENSING · SUPER-RESOLUTION')
     section=st.radio('Explore the laboratory',SECTIONS,key='section',format_func=lambda value:SECTION_LABELS[value],label_visibility='collapsed')
     appearance=st.selectbox('Appearance',['Light','Dark'],key='lab_appearance')
+    from rssr_ui.shell import utilities
+    utilities(SECTIONS, SECTION_LABELS)
     st.caption('Guest workspace · no account required')
     st.divider();st.caption('Measured evidence. Reproducible experiments. Explicit limits.')
     with st.expander('Application version'):st.json(build_identity(ROOT))
 apply_theme(appearance)
+from rssr_ui.shell import guidance, evidence_drawer
+guidance()
 st.caption('RSSR / '+SECTION_LABELS[section].upper())
 
 def download_artifact(path):
@@ -75,6 +79,9 @@ def explain_results(frame):
 
 if section=='Overview':
     hero()
+    from rssr_ui.facts import fact_records
+    facts = fact_records(ROOT, index)
+    evidence_drawer(facts)
     st.write('Research question: under the same synthetic degradation and validation budget, does combining CNN, attention and Transformer features improve reconstruction over simpler baselines?')
     for col,label,target in zip(st.columns(3),['Try inference','Explore results','Read methodology'],['Live SR','Results','Methodology & Data']):
         col.button(label,on_click=navigate,args=(target,),width='stretch')
@@ -84,7 +91,7 @@ if section=='Overview':
     a.metric('Frozen test scenes',max(r['scenes'] for r in frozen_rows),help='Count from frozen source records; not summed across models.')
     b.metric('Development run records',len({r['run_id'] for r in index['rows'] if r['study']=='Development seed summaries'}),help='Distinct source run IDs; includes reused runs, not all new training jobs.')
     expanded=sum(not p['status'].startswith('Introductory') for p in index['projects'])
-    c.metric('Expanded lessons',f'{expanded} / 40',help='See each project for criterion-level completion; learner mastery remains unassessed.')
+    c.metric('Expanded lessons',f"{expanded} / {len(index['projects'])}",help='See each project for criterion-level completion; learner mastery remains unassessed.')
     overview_explorer(ROOT,index,navigate)
     st.subheader('What the experiments support')
     test=pd.DataFrame([r for r in index['rows'] if r['study']=='Frozen held-out evaluation' and r['bands']==3 and r['metric']=='psnr'])
