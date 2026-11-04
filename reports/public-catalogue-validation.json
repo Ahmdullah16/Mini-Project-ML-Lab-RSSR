@@ -2,10 +2,18 @@
   "date": "2026-11-04",
   "baseline": "241b9cc",
   "scope": "metadata catalogue and explicit training preview; not completed location demonstrations",
-  "tests": "canonical split/hash and filter regression passed; offline three-route AppTest recorded in local log",
-  "ci": "NOT VERIFIED pending PR",
+  "tests": "PASS canonical split/hash/filter test; PASS offline three-route AppTest with approved local runtime; sandbox startup hang not counted",
+  "ci": {
+    "head": "e043749d4b225fbbabe837c5253df77fe85098ac",
+    "runs": [
+      41792911827,
+      41792902710
+    ],
+    "status": "in_progress; NOT VERIFIED"
+  },
   "location_geometry": "NOT VERIFIED; bbox/CRS/pixel spacing left null",
   "new_acquisition": false,
   "heldout_pixels_loaded": false,
-  "final_report": "incomplete"
+  "final_report": "incomplete",
+  "pr": 61
 }
