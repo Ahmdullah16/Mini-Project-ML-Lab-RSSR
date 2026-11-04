@@ -31,6 +31,7 @@ jobs:
       - run: python scripts/check_showcase.py
       - run: python scripts/check_research_design.py
       - run: python scripts/check_aurora_foundation.py
+      - run: python scripts/check_public_catalogue.py
       - run: python scripts/check_aurora_passports.py
       - run: python scripts/check_model_explorer.py
       - run: python scripts/check_metric_ui.py

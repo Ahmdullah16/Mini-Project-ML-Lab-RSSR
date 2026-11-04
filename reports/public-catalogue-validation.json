@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-04",
+  "baseline": "241b9cc",
+  "scope": "metadata catalogue and explicit training preview; not completed location demonstrations",
+  "tests": "canonical split/hash and filter regression passed; offline three-route AppTest recorded in local log",
+  "ci": "NOT VERIFIED pending PR",
+  "location_geometry": "NOT VERIFIED; bbox/CRS/pixel spacing left null",
+  "new_acquisition": false,
+  "heldout_pixels_loaded": false,
+  "final_report": "incomplete"
+}
