@@ -29,7 +29,11 @@ def test_manifest_preserves_splits_hashes_and_unknown_geometry():
     assert len(rows)==len(canonical['scenes'])
     for row,scene in zip(rows,canonical['scenes']):
         assert row['sha256']==scene['sha256'] and row['split']==scene['split']
-        assert row['bbox'] is None and row['crs'] is None
+        if row['region']=='ROI_00006':
+            assert row['crs']=='EPSG:32611' and row['pixel_spacing']==[2.5,2.5]
+            assert 'Full canonical HR' in row['geometry_status']
+        else:
+            assert row['bbox'] is None and row['crs'] is None
     assert all(r['split']=='train' for r in select(rows,split='train'))
     assert not select(rows,'Taj Mahal')
     assert not select(rows,'no-such-scene')
