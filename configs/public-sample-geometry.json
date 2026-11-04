@@ -1,0 +1,33 @@
+{
+  "samples": [
+    {
+      "sample_id": "HR__ROI_00006__m_4411338_ne_12_060_20210917.tif",
+      "split": "train",
+      "sha256": "c76f94666fa2fb0269de346b5e0c500e7ef8eca359ab2d0440f4f265d6d1bf73",
+      "crs": "EPSG:32611",
+      "bbox_wgs84": [
+        -113.30750560875087,
+        44.487320169584464,
+        -113.29163029652086,
+        44.498683437756235
+      ],
+      "width": 484,
+      "height": 484,
+      "bands": 4,
+      "pixel_spacing": [
+        2.5,
+        2.5
+      ],
+      "dtype": [
+        "uint16",
+        "uint16",
+        "uint16",
+        "uint16"
+      ],
+      "scope": "Training raster metadata inspected; no pixel values evaluated; place name not inferred",
+      "geometry_scope": "Full canonical HR training raster; synthetic LR preview crop footprint not established",
+      "pixel_spacing_units": "metres",
+      "inspection_date": "2026-11-04"
+    }
+  ]
+}
