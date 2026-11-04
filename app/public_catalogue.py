@@ -2,7 +2,6 @@
 import hashlib
 import json
 from pathlib import Path
-import streamlit as st
 
 
 def records(root):
@@ -21,6 +20,7 @@ def select(rows, query='', split='All'):
 
 
 def render(root, key):
+    import streamlit as st
     with st.expander('Explore real data · public sample catalogue'):
         st.caption('Read-only public provenance. NAIP is aerial imagery. Training illustrations are not independent accuracy evidence.')
         st.info('Taj Mahal/Agra and IIT Guwahati/Brahmaputra: imagery and location metadata not yet verified. No substitute is labeled as either place.')

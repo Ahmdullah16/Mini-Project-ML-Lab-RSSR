@@ -1,3 +1,11 @@
+# Catalogue dependency correction — 2026-11-04
+
+PR61 merged externally as main fba39bc209d48cc65b93a7f2b06cd7e992cb7ad1 while CI remained in progress. Review P1 correctly identified Streamlit import in metadata-only helpers, incompatible with dev-only test installation. Branch fix/catalogue-optional-streamlit moves import into render; new subprocess regression blocks all Streamlit imports while exercising records/filter. Two focused tests passed. Full regression and affected AppTest running; latest correction PR CI pending. Preserve final local evidence notes reconciled against main. No frozen data or notebook reruns.
+
+Next: inspect correction PR latest CI before declaring release verified; then continue geometry inspection/licensed location demos and report work. Requested Indian locations still unverified; no new imagery downloaded. Do not merge automatically.
+
+PR61 checkpoint — 2026-11-04: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/61; head e043749d4b225fbbabe837c5253df77fe85098ac. CI41792911827/41792902710 running at last inspection, NOT VERIFIED. Three-route offline AppTest PASSED in approved local runtime; sandbox startup hung and is not counted as a pass. Canonical split/hash/filter test and structure40IDs/998links passed. This final evidence note is local after publishing; carry forward. No merge/deployment. Next inspect PR61 latest CI and fix failures, then location geometry/licensed acquisition and report/evidence work from attached finalization brief. Do not repeat canonical/frozen experiments.
+
 # Public catalogue continuation — 2026-11-04
 
 GitHub rechecked: main241b9cc71802d072366313ef30c7a534d6b7ae22 contains externally merged PR60; no open PRs at intake. Prior statements that PR60 is open are superseded. Integrated main preserving final local evidence notes. Branch feat/public-sample-catalogue adds read-only provenance/filter/export on Overview, Live SR and Satellite Explorer using the existing development manifest. Training preview is explicit and checksum-verified; no held-out pixels loaded. Requested Indian locations remain unverified, not substituted/mislabeled. Frozen science unchanged.
