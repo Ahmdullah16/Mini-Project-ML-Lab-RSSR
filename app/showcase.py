@@ -229,4 +229,7 @@ else:
     st.warning('Pending: '+', '.join(index['pending_artifacts'])+'. Recorded research drafts and figures remain in Results → Artifact library.')
     st.code('python -m pip install -r app/requirements.txt\npython scripts/check_model_catalog.py\npython -m streamlit run app/streamlit_app.py',language='bash')
     st.write('Follow the research setup guide for dataset rebuilding. Original checkpoint and tile hashes remain authoritative. Public app inputs, results and caches are temporary; live external durability needs a separately configured and verified account.')
+if section in ('Overview','Live SR','Satellite Explorer'):
+    from public_catalogue import render as render_catalogue
+    render_catalogue(ROOT,'catalogue-'+section)
 footer()
