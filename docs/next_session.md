@@ -1,3 +1,7 @@
+CI correction2026-11-08: PR68 test job128517940123 failed1paper-evidence consistency test (565passed+17subtests); bibliography provenance SHA stale after reference update. Regenerated build_paper_evidence.py output: only references.bib hash changed in reports/paper-evidence.json; result tables/frozen values unchanged. Regenerated dependent source audit;12affected tests passed0.41s exit0. Defense-materials branch based on external merge main4b6096c includes this fix before slide work. New CI verification required.
+
+PR68 opened: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/68; published headff77d5e94484287c82167e49cd662dfea220b4a8. Latest-head CI pending verification; no merge. Final structure40IDs/1011links passed. Next: inspect PR68 CI, then slides/examiner materials. This post-publish status note is local and should be carried forward.
+
 # Reference milestone checkpoint — 2026-11-08
 
 PR67 head88899cc5974903d9a2ba02e1d23ec188f320d2bb CI42408730754 completed SUCCESS; merge observed externally as main84d754e. Branch feat/submission-reference-audit-20261108 starts there. Preserve backend/ and old reports/technical-architectures/ untracked work.
