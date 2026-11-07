@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-08",
+  "scope": "Editable copies of existing report and paper; no new experiments",
+  "artifacts": {
+    "RSSR_Detailed_Report_Editable.docx": {
+      "sha256": "173cb50bc316314ab361b8091b9dd5b7131cd8763cd6218686fc9f6f62db3b7a",
+      "bytes": 29636
+    },
+    "RSSR_IEEE_Paper_Editable.docx": {
+      "sha256": "f91b7f44398cd2ceee7fa4e36a33373a2f2caaebda8783ae7344f0d2430906d8",
+      "bytes": 23400
+    },
+    "RSSR_Detailed_Report_Editable.pdf": {
+      "sha256": "92e34f93d5119083ba4d18318aae5ed009a9823f8f15d8a84aeb74b54cb65891",
+      "bytes": 473694
+    },
+    "RSSR_IEEE_Paper_Editable.pdf": {
+      "sha256": "7c8c4b26722e5f27460471440939af4a79ab5a81e5f467fd4d6b085956763941",
+      "bytes": 305731
+    }
+  },
+  "validation": {
+    "pytest": "6 passed in 0.79s; exit 0",
+    "command": "PYTHONPATH=src ../clean-venv/Scripts/python.exe -m pytest tests/test_paper_source_audit.py tests/test_instructor_site.py -q --basetemp=../editable-tests-20261108",
+    "paper_audit": "scripts/audit_paper_sources.py --check passed",
+    "word_render": "Microsoft Word PDF export: report 13 pages, paper 8 pages; all pages visually inspected via six contact sheets",
+    "native_equations": {
+      "report": 170,
+      "paper": 34
+    },
+    "editable_tables": {
+      "report": 13,
+      "paper": 5
+    }
+  },
+  "limits": [
+    "Word copies use single-column editing layout; IEEE LaTeX remains publication layout",
+    "Full reference audit, output panels and slides remain incomplete",
+    "No training or frozen result regeneration"
+  ]
+}
