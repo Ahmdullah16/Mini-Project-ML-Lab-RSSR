@@ -1,4 +1,6 @@
-# Literature verification log — 2026-10-18
+Latest citation audit: [23 primary-source records and applicability](../reports/reference-review-20261108.md), with [machine-readable observations](../reports/reference-audit-20261108.json). Title, ordered author identity and year are checked offline by `scripts/check_reference_audit.py`. This supersedes the earlier citation-count gap, while full per-paper experimental extraction remains unfinished.
+
+# Literature verification log â€” 2026-10-18
 
 This is a scoped primary-source review, not an exhaustive systematic review.
 Published external performance is not reproduced here. DOI fields absent from

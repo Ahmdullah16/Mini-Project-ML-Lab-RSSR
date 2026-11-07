@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-08",
+  "citation_records": 23,
+  "research_records_excluding_correction": 22,
+  "scope": "Primary bibliographic identity and cited-concept audit; full experimental extraction/replication uncompleted",
+  "checks": {
+    "pytest": "12passed0.22s exit0; tests/test_reference_audit.py tests/test_paper_source_audit.py tests/test_instructor_site.py --basetemp=../reference-release-tests-20261108",
+    "reference_checker": "23records match observations; exit0",
+    "paper_source_audit": "--check passed; exit0",
+    "source_compile": "Existing open main.tex desktop compile success; local Tectonic export5pages",
+    "detailed_report": "27pages; diagrams/comparison images reused from source/asset-hash-verified previous delivery",
+    "word_previews": {
+      "report": 25,
+      "ieee": 9
+    },
+    "visual_review": "Affected literature/reference pages and all5IEEEpublication pages inspected; Word bibliography/literature pages inspected",
+    "package": "63files hashed;14embedded report images; ZIP integrity passed",
+    "scientific_execution": "No new training, model inference, imagery transfer or frozen-test access"
+  },
+  "archive_sha256": "c5da8161f902dcd188fc33b9ae0fc3285d1b191362fa7e03b0d2f0bda9c7504c",
+  "next": "Inspect new PR exact-head CI then slides/examiner guide"
+}
