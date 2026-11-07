@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-08",
+  "scope": "Defense presentation and examiner guide; project/scientific acceptance remains open",
+  "ci_correction": {
+    "pr68_job": 128517940123,
+    "original_result": "1failed565passed17subtests; stale bibliography source hash",
+    "fix_commit": "2cb4f53d767e90f7f7accbd534c5c13e28430876",
+    "fix_ci_run": 42411035291,
+    "fix_ci": "success",
+    "integration": "External merge PR70 as2b75f99"
+  },
+  "artifacts": {
+    "RSSR_Defense_Presentation.pdf": {
+      "bytes": 533770,
+      "sha256": "3557d0325b4acc1196ebed0728901f0b08d84df8f66b2259002b60fd8692c097"
+    },
+    "RSSR_Defense_Presentation.pptx": {
+      "bytes": 365404,
+      "sha256": "a61c79981de0c894be2583c080d0c117d65728e4cc422cd9a03805fc2b31c52e"
+    },
+    "RSSR_Examiner_Guide.docx": {
+      "bytes": 16838,
+      "sha256": "dadc623b49e602e34d0eb026ab8c5b37515d85d83a3e47b915ef69c1b9e4b39e"
+    },
+    "RSSR_Examiner_Guide.pdf": {
+      "bytes": 172699,
+      "sha256": "283986a279d89ecb2c39d1127d26e06c44c6a1d154599fca82f0b255b917330c"
+    }
+  },
+  "checks": {
+    "full_pytest": {
+      "command": "PYTHONPATH=src ../clean-venv/Scripts/python.exe -m pytest -q --basetemp=../defense-release-tests-20261108",
+      "passed": 569,
+      "failed": 0,
+      "subtests_passed": 17,
+      "warnings": 145,
+      "seconds": 21.75,
+      "exit_code": 0
+    },
+    "focused_tests": "15passed0.48s exit0; chart-cache repair, paper evidence/source and reference audit",
+    "deck": {
+      "slides": 30,
+      "notes": 30,
+      "native_charts": 2,
+      "native_tables": 1,
+      "embedded_workbook_owners": [
+        12,
+        13
+      ],
+      "chart_values_checked": 10,
+      "chart_precision": "4decimal display values; complete original precision remains in source reports"
+    },
+    "finalizer": {
+      "package": "pass",
+      "layout_findings": 0,
+      "font_policy": "Arial chosen for design; available locally",
+      "first_party_import": true,
+      "final_sha256": "a61c79981de0c894be2583c080d0c117d65728e4cc422cd9a03805fc2b31c52e"
+    },
+    "application": "Exact final deck opened/exported in PowerPoint; native charts resized/restored in private copy, saved/reopened; original final hash unchanged",
+    "visual_review": "All30slides individually reviewed, including PowerPoint render; guide4pages reviewed",
+    "recovery": "Preview-authoring process exited1 despite30draft/previews; not counted as clean one-step build. Reviewed -ResumeDraft pipeline completed with exit0.",
+    "package": "ZIP CRC integrity passed; checksums source-bound",
+    "scientific_execution": "No training, model inference, imagery transfer or frozen-test evaluation"
+  },
+  "remaining": [
+    "Latest new PR CI",
+    "Public seven-model/satellite/mobile/export/restart acceptance",
+    "Broader source-bound failure atlas",
+    "Full experimental literature extraction",
+    "Geographic/cross-sensor scientific gates",
+    "Configured durable research storage",
+    "Clean one-step preview-exporter exit status / Google Slides interop not verified"
+  ]
+}
