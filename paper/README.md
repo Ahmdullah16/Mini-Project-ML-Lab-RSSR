@@ -1,5 +1,11 @@
 # Working evaluation paper
 
+## Detailed report build (7 November 2026)
+
+`python scripts/build_project_report.py --output <external-output-directory>` creates a standalone detailed report TeX source, source-hash manifest, bibliography and seven-family parameter CSV from existing teaching sources and frozen result tables. Install the separate `requirements/report.txt` in a document environment. It uses Pandoc 3.9 through pypandoc-binary 1.17; check `pandoc --version` in that environment. Compile with Tectonic 0.17.0 or a compatible XeLaTeX environment. The present report selects Windows Times New Roman and Consolas; equivalent fonts must be explicitly configured on other systems. Initial Tectonic compilation downloads its TeX support bundle.
+
+Local execution produced an 18-page detailed report and a four-page IEEE paper; all pages were rendered and visually inspected for layout. This does not close scientific or full submission acceptance. The diagrams summarize seven feature paths with shared internal derivations; further layer-level diagrams, full reference review, result-image panels and slides remain outstanding. Nine new references were retrieved from CVF publisher BibTeX records; the bibliography has 20 entries, but that is not a claim that every existing record or full paper has been independently verified. See `reports/reference-metadata-20261107.json` for retrieval scope.
+
 The [detailed supplement source](supplement.md) now combines native lesson prose, worked examples and recorded validation for all40 projects with the shared mathematical reference and contribution audit. Generate it with `python scripts/build_learning_supplement.py`; `--check` verifies exact synchronization. The website reads the same lesson sources and audit. This is a working Markdown source, not a final typeset report or proof that every new teaching criterion is met. The same generator supplies the paper's contribution-audit section.
 
 The four requested IEEE files in ChatGPT Library `/mini project` were not found in the accessible attachments or local Codex files on2026-10-28. Library access/transfer remains required to verify those exact templates. Existing IEEEtran draft compilation can proceed. No page limit or author identity is assumed.

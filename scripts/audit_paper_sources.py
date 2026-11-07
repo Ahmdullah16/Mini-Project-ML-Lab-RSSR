@@ -14,7 +14,7 @@ def read(root,path):
 
 
 def audit(root):
-    files=['paper/main.tex','paper/generated/results.tex','paper/generated/interpretation.tex',
+    files=['paper/main.tex','paper/literature-context.tex','paper/generated/results.tex','paper/generated/interpretation.tex',
            'paper/generated/contribution-audit.tex','paper/references.bib','references.bib',
            'reports/paper-evidence.json','reports/final-heldout.json','configs/final-evaluation.json',
            'reports/historical-architecture-bindings.json','src/rssr/models.py',

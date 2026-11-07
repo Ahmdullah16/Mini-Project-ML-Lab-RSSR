@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-07",
+  "status": "reviewable report milestone; final submission acceptance open",
+  "artifacts": {
+    "references.bib": {
+      "sha256": "fe04aa773296be464a15330bb8cdb1a2fa12ff26d084afdb7316679949087fa2",
+      "bytes": 7554
+    },
+    "report-source-manifest.json": {
+      "sha256": "b9ec0fba5c4a1a2a469f9dec8032df202790499ad5d60d71e8c0ea0b0f34c8bd",
+      "bytes": 1020
+    },
+    "RSSR_Examiner_Demo.md": {
+      "sha256": "4e91bd92993e989990e85e2f0e25a6a2a96dca27367e88fe31f20c1d0304b7ed",
+      "bytes": 4002
+    },
+    "RSSR_Final_Project_Report.pdf": {
+      "sha256": "e4aa8405a6e5e9e06db483dee5d4e54658f5e87e4e9e9e8ff7218f8438578af7",
+      "bytes": 190743
+    },
+    "RSSR_Final_Project_Report.tex": {
+      "sha256": "a6a7a933e9ad7be273df1a39edad2d62682f6aa9e8f02742023fb884ada67da6",
+      "bytes": 39341
+    },
+    "RSSR_IEEE_Research_Paper.pdf": {
+      "sha256": "331510ee2cee5baa3e68ade81c3f8b5667f8ef768198998d25dcd3cf83e81cce",
+      "bytes": 71012
+    },
+    "RSSR_Parameters.csv": {
+      "sha256": "633b93c539de67cd4e4c213e64224b893cc9ce9da934fda050e2500750182bce",
+      "bytes": 606
+    },
+    "RSSR_Reproduction_Guide.md": {
+      "sha256": "cd1d68bf30b64378687e846f174b13d40fd50577797b97ef2e93868cc2cdcefe",
+      "bytes": 3304
+    },
+    "RSSR_Submission_Sources.zip": {
+      "sha256": "de9413ea1c69a134e9dcfd3e8ff66e04b51c070482cad63713499b1751eb7bc2",
+      "bytes": 143466
+    }
+  },
+  "pdf_pages": {
+    "detailed": 18,
+    "ieee": 4
+  },
+  "visual_review": "All 18 report and 4 IEEE pages rendered and inspected; overflow corrected; result-table numbering subsequently corrected",
+  "tests": {
+    "pytest_passed": 560,
+    "subtests_passed": 17,
+    "warnings": 145,
+    "exit_code": 0,
+    "streamlit_seven_section_check": "passed, network blocked",
+    "structure": "40 IDs; 999 relative links valid"
+  },
+  "references": "20 bibliography records; nine new records verified against publisher metadata; full existing-reference and full-text review remains open",
+  "remaining": [
+    "Slides",
+    "Real input/output panels and seven-model matched-protocol comparison acceptance",
+    "Full layer-level diagrams",
+    "Complete reference verification",
+    "Current public deployment verification",
+    "Durable storage and geographic/cross-sensor gates"
+  ]
+}

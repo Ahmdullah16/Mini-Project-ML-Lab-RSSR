@@ -1,0 +1,4 @@
+# Document build only; not required by Streamlit or inference.
+pypandoc_binary==1.17
+# Local PDF visual-review renderer (not required to generate TeX).
+pymupdf==2.1
