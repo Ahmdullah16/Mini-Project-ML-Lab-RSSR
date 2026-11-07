@@ -1,0 +1,59 @@
+{
+  "scope": "Publisher bibliographic metadata and abstracts; not full-paper replication or verification of all existing entries",
+  "sources": [
+    {
+      "key": "Kim_2016_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Kim_Accurate_Image_Super-Resolution_CVPR_2016_paper.html",
+      "page_sha256": "d08026257f8e278c949b1c945f56b00344661ecabd8910747be45af6d8fdb386",
+      "bibtex": "@InProceedings{Kim_2016_CVPR,\nauthor = {Kim, Jiwon and Lee, Jung Kwon and Lee, Kyoung Mu},\ntitle = {Accurate Image Super-Resolution Using Very Deep Convolutional Networks},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2016}\n}"
+    },
+    {
+      "key": "Ledig_2017_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Ledig_Photo-Realistic_Single_Image_CVPR_2017_paper.html",
+      "page_sha256": "9c9c231325a59a4ec01eaaf55fc66f1d7775a2199be06a0eb8c63ea1d08b1728",
+      "bibtex": "@InProceedings{Ledig_2017_CVPR,\nauthor = {Ledig, Christian and Theis, Lucas and Huszar, Ferenc and Caballero, Jose and Cunningham, Andrew and Acosta, Alejandro and Aitken, Andrew and Tejani, Alykhan and Totz, Johannes and Wang, Zehan and Shi, Wenzhe},\ntitle = {Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {July},\nyear = {2017}\n}"
+    },
+    {
+      "key": "Haris_2018_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Haris_Deep_Back-Projection_Networks_CVPR_2018_paper.html",
+      "page_sha256": "533b490f697217fa307cc933216643679386e41f50e6fbba3b880a463a09506b",
+      "bibtex": "@InProceedings{Haris_2018_CVPR,\nauthor = {Haris, Muhammad and Shakhnarovich, Gregory and Ukita, Norimichi},\ntitle = {Deep Back-Projection Networks for Super-Resolution},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2018}\n}"
+    },
+    {
+      "key": "Dai_2019_CVPR",
+      "url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Dai_Second-Order_Attention_Network_for_Single_Image_Super-Resolution_CVPR_2019_paper.html",
+      "page_sha256": "259573add82e746b868cd7b18bdff1ff1752c236a09ba71e5ba5fbfb2ba4b55d",
+      "bibtex": "@InProceedings{Dai_2019_CVPR,\nauthor = {Dai, Tao and Cai, Jianrui and Zhang, Yongbing and Xia, Shu-Tao and Zhang, Lei},\ntitle = {Second-Order Attention Network for Single Image Super-Resolution},\nbooktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2019}\n}"
+    },
+    {
+      "key": "Hu_2018_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html",
+      "page_sha256": "00bc13aac8f7fe4c3dc4e10b7704b2449fe86f3588dd18cb39dc3a5b18d747fd",
+      "bibtex": "@InProceedings{Hu_2018_CVPR,\nauthor = {Hu, Jie and Shen, Li and Sun, Gang},\ntitle = {Squeeze-and-Excitation Networks},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2018}\n}"
+    },
+    {
+      "key": "Wang_2018_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html",
+      "page_sha256": "bb077fdc4f2deec195ae1bfd7ede8437f47aa5507af4862f4f388a3712338570",
+      "bibtex": "@InProceedings{Wang_2018_CVPR,\nauthor = {Wang, Xiaolong and Girshick, Ross and Gupta, Abhinav and He, Kaiming},\ntitle = {Non-Local Neural Networks},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2018}\n}"
+    },
+    {
+      "key": "Zhang_2018_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.html",
+      "page_sha256": "6bac8137798a6fb82705a2eb7f0136e47f111c6f04e8a6972f3fe6a5f84c1309",
+      "bibtex": "@InProceedings{Zhang_2018_CVPR,\nauthor = {Zhang, Richard and Isola, Phillip and Efros, Alexei A. and Shechtman, Eli and Wang, Oliver},\ntitle = {The Unreasonable Effectiveness of Deep Features as a Perceptual Metric},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2018}\n}"
+    },
+    {
+      "key": "Shi_2016_CVPR",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Shi_Real-Time_Single_Image_CVPR_2016_paper.html",
+      "page_sha256": "10776f18ce6d00d9a9954e51889d986def5193ce7ee0210b121d6bee14fdb910",
+      "bibtex": "@InProceedings{Shi_2016_CVPR,\nauthor = {Shi, Wenzhe and Caballero, Jose and Huszar, Ferenc and Totz, Johannes and Aitken, Andrew P. and Bishop, Rob and Rueckert, Daniel and Wang, Zehan},\ntitle = {Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network},\nbooktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\nmonth = {June},\nyear = {2016}\n}"
+    },
+    {
+      "key": "Liu_2021_ICCV",
+      "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html",
+      "page_sha256": "67f1f9b08b4291029e96ec5bdedb80933533a2418bcb609881b2520fdaf9ebb2",
+      "bibtex": "@InProceedings{Liu_2021_ICCV,\n    author    = {Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},\n    title     = {Swin Transformer: Hierarchical Vision Transformer Using Shifted Windows},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {10012-10022}\n}"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def package(destination):
     destination = Path(destination).resolve()
     destination.mkdir(parents=True, exist_ok=True)
-    sources = ["paper/main.tex", "paper/references.bib", "paper/supplement.md",
+    sources = ["paper/main.tex", "paper/literature-context.tex", "paper/references.bib", "paper/supplement.md",
                "docs/model-instructor.md", "docs/student-project-guide.md",
                "docs/examiner-demo.md", "docs/frozen-reproduction.md",
                "reports/paper-evidence.json", "reports/final-heldout.json"]

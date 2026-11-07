@@ -79,6 +79,9 @@ def explain_results(frame):
 
 if section=='Overview':
     hero()
+    st.caption('Course project · EE5302L: Introduction to Machine Learning Lab · Roll No. 264102307')
+    with st.expander('Project basics · a simple explanation you can present'):
+        st.markdown((ROOT/'docs/student-project-guide.md').read_text(encoding='utf-8'))
     from rssr_ui.facts import fact_records
     facts = fact_records(ROOT, index)
     evidence_drawer(facts)

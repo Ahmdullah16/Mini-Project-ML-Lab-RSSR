@@ -305,3 +305,4 @@ Implemented project-source link removal on visitor pages, executable MP01 input/
 ## Presentation update — 2026-11-02
 
 Shared guest interface, responsive architecture/learning cards, light/dark appearance and researcher profile added without changing MP01–MP40 completion statuses. Verification and remaining visual/account gates: [interface upgrade](interface-upgrade.md).
+2026-11-07 report milestone:18-page detailed PDF and4-page IEEE PDF built and visually reviewed; seven feature-path diagrams, registry parameter CSV and nine publisher bibliography records added. Full560tests+17subtests and seven-section offline AppTest passed.20bibliography records is not20fully reviewed papers. Full submission and scientific gates remain open; see reports/submission-report-build-20261107.json.
