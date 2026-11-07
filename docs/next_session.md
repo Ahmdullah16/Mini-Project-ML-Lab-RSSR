@@ -1,3 +1,15 @@
+# Report integration checkpoint — 2026-11-08
+
+Current branch feat/submission-diagram-integration-20261108 from main302f542a2ea86c5e9b207aabe5e77a5e7e0caa46 (PR65 merged externally). No open PR at intake. PR65 only included7804a6f; its CI42405140097 completed SUCCESS. Later diagram commits3ef7f9a/60faca8 were NOT merged by PR65. Recovered technical generator from60faca8 into this batch. Backend and old reports/technical-architectures outputs remain untouched/untracked.
+
+Changed: scripts/build_project_report.py now embeds seven full-model and five internal-module diagrams; generator accepts --output; Word exporter resolves images and keeps diagram headings paired; requirements/report.txt pins rendering/export dependencies; package_report_delivery.py creates checksum-indexed ZIP; docs/report-build.md documents commands and platform limits. Twelve diagrams follow inspected models.py/architecture_registry.py; no new inference/training or frozen result changes.
+
+Delivered ../submission-integrated-20261108: 23-page report PDF, 22-page editable report DOCX (12 embedded images), IEEE single-column DOCX and8-page Word preview, reused5-page publication PDF, full-size diagram PDF/PNG/SVG, source snapshot, registry parameter CSV and checksums. Archive ../RSSR_Report_Delivery_20261108.zip. Visual review completed across all report and Word-preview pages. Packaging verified54hashed files and ZIP integrity. Evidence: reports/report-integration-20261108.json. Six focused tests passed exit0; paper source audit and40IDs/999links passed; seven-section network-blocked AppTest passed. Existing open IEEE source compiled successfully. Local Windows-font report build is not Linux portability evidence.
+
+Next exact action: inspect new PR exact-head CI, fix failures before merge/release; then complete source-bound seven-model output panels, slides and full reference audit. Twenty bibliography records are not twenty fully reviewed papers; these gates remain open along with geographic/cross-sensor acceptance, external durability and latest public execution/restart verification. No obsolete access-blocker diagnosis. Obtain exact published head with git log -1; final PR note follows after publishing.
+
+## Historical checkpoints
+
 # Editable submission milestone — 2026-11-08
 
 Branch feat/editable-submission-20261108 from af1e1f4; fetched main remains 60b31554edc3a59fde3fdbc970add78e4f9f2f06; no open PR at intake. PR64 exact-head d94d588b05841054f31e9d8eb64a04e42c5248fb CI42357298056 completed SUCCESS (supersedes pending notes below).

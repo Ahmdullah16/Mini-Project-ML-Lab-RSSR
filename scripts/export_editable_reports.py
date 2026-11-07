@@ -26,7 +26,7 @@ def export(source, output, pandoc, bibliography, csl):
     portable=output.with_suffix('.tex')
     portable.write_text(text,encoding='utf-8',newline='\n')
     subprocess.run([pandoc,str(portable),'-f','latex','-t','docx','--citeproc',
-                    '--bibliography='+bibliography,'--csl='+csl,'-o',str(output)],check=True)
+                    '--resource-path='+str(source.parent),'--bibliography='+bibliography,'--csl='+csl,'-o',str(output)],check=True)
     doc=Document(output)
     for style in doc.styles:
         if style.type==1:
@@ -38,6 +38,14 @@ def export(source, output, pandoc, bibliography, csl):
     for p in doc.paragraphs:
         if p.style.name=='Author':
             p.text='Ahmdullah | Roll No. 264102307\nEE5302L: Introduction to Machine Learning Lab\nIndian Institute of Technology Guwahati'
+    # Keep architecture diagrams paired with their model/module heading.
+    diagram_titles={'Residual local convolution','Channel and spatial feature gates','Window Transformer encoder','Multi-head attention projections and mixing','Sub-pixel reconstruction and residual output'}
+    for index,p in enumerate(doc.paragraphs):
+        if re.match(r'M[1-7]:',p.text) or p.text in diagram_titles:
+            p.paragraph_format.page_break_before=True
+            for following in doc.paragraphs[index:index+4]:
+                following.paragraph_format.keep_with_next=True
+                if following._p.xpath('.//w:drawing'): break
     for table in doc.tables:
         for row in table.rows:
             for cell in row.cells:

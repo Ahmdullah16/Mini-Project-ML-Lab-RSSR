@@ -5,6 +5,7 @@ import json
 import csv
 import sys
 import re
+import subprocess
 from pathlib import Path
 import pypandoc
 
@@ -17,6 +18,8 @@ SOURCES = ['docs/student-project-guide.md', 'docs/learning-reference.md',
 def build(output):
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=True)
+    figures=output/'figures'
+    subprocess.run([sys.executable,str(ROOT/'scripts/generate_technical_architectures.py'),'--output',str(figures)],check=True)
     parts = [r'''\documentclass[11pt,a4paper]{article}
 \usepackage[margin=25mm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,longtable,array,graphicx,calc,caption}
@@ -31,14 +34,14 @@ def build(output):
 \newsavebox{\resulttablebox}
 \title{Attention- and Transformer-Based Deep Learning for Super-Resolution of Remote Sensing Images\\Detailed Project Report}
 \author{Ahmdullah\\Roll No. 264102307\\EE5302L: Introduction to Machine Learning Lab\\Indian Institute of Technology Guwahati}
-\date{7 November 2026}
+\date{8 November 2026}
 \begin{document}\sloppy\maketitle
 \begin{abstract}
 This report explains the implemented educational architecture family and the recorded remote-sensing super-resolution experiments. It reuses existing mathematical teaching material and immutable experimental tables. Historical studies have different bands and protocols and must not be combined into a seven-model ranking. Synthetic reconstruction measurements do not demonstrate calibrated cross-sensor transfer or recovery of physically missing details. Software capabilities, observed measurements and remaining scientific questions are distinguished throughout.
 \end{abstract}
 \tableofcontents\clearpage
 ''']
-    hashes = {}
+    hashes = {str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest() for path in [ROOT/'src/rssr/models.py',ROOT/'src/rssr/architecture_registry.py',ROOT/'scripts/generate_technical_architectures.py']}
     for source in SOURCES:
         text = (ROOT/source).read_text(encoding='utf-8-sig')
         hashes[source] = hashlib.sha256((ROOT/source).read_bytes()).hexdigest()
@@ -84,23 +87,19 @@ Let $f=E(y)$, $L(f)=f+C(f)$, $P(u,v)=W_f*[u;v]+b_f$, and $A$ and $T$ denote the 
     for ident, title, equation, body in paths:
         parts.append(r'\subsection{' + ident + ': ' + title + '}')
         parts.append(r'\[G_{' + ident[1:] + '}(f)=' + equation + r'\]')
-        parts.append(r'''\begin{center}\begin{tikzpicture}[
-node distance=5mm, block/.style={draw,rounded corners,align=center,text width=10cm,font=\small},
-arr/.style={-{Latex}}]
-\node[block] (input) {Input: $N\times C\times H\times W$};
-\node[block,below=of input] (embed) {Embedding: $3\times3$, stride 1, padding 1; $C\to d$};
-\node[block,below=of embed] (body) {''' + body + r''': $N\times d\times H\times W$};
-\node[block,below=of body] (tail) {Reconstruction: $3\times3$, stride 1, padding 1; $d\to Cs^2$};
-\node[block,below=of tail] (shuffle) {PixelShuffle($s$): $N\times C\times sH\times sW$};
-\node[block,below=of shuffle] (output) {Add bicubic baseline $B_s(y)$: output $N\times C\times sH\times sW$};
-\draw[arr] (input)--(embed);\draw[arr] (embed)--(body);\draw[arr] (body)--(tail);
-\draw[arr] (tail)--(shuffle);\draw[arr] (shuffle)--(output);
-\draw[arr] (input.east) -- ++(6mm,0) |- (output.east);
-\end{tikzpicture}\end{center}
-''')
-        parts.append('The diagram shows the feature-path composition. Internal kernels, gates, normalization, residual connections and parameter effects are defined in the preceding derivations. Native scale and band compatibility must match the selected trained checkpoint.\n')
+        parts.append(r'\begin{center}\includegraphics[width=\linewidth]{figures/' + ident + r'_technical.png}\end{center}')
+        parts.append('The connections show the implemented tensor operations. Read the following internal schematics for kernel sizes, gating, normalization and residual paths. Native scale and bands must match the selected checkpoint.\n')
         parts.append(r'\clearpage')
-    parts.append(r'\section{Recorded experimental results}\setcounter{table}{0}')
+    parts.append(r'\section{Internal module operations and connections}')
+    for filename, title in [
+        ('C_residual_convolution', 'Residual local convolution'),
+        ('A_channel_spatial_gates', 'Channel and spatial feature gates'),
+        ('T_window_encoder', 'Window Transformer encoder'),
+        ('MHSA_two_head_operations', 'Multi-head attention projections and mixing'),
+        ('R_pixelshuffle_reconstruction', 'Sub-pixel reconstruction and residual output')]:
+        parts.append(r'\subsection{' + title + '}')
+        parts.append(r'\begin{center}\includegraphics[width=\linewidth]{figures/' + filename + r'.png}\end{center}\clearpage')
+    parts.append(r'\section{Recorded experimental results}')
     parts.append('The following tables are copied from the verified evidence generator. Seed variation is not geographic uncertainty. No new inference was run to build this report.\n')
     for source in ['paper/generated/results.tex', 'paper/generated/interpretation.tex']:
         data = (ROOT/source).read_bytes()
