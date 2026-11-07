@@ -2,3 +2,7 @@
 pypandoc_binary==1.17
 # Local PDF visual-review renderer (not required to generate TeX).
 pymupdf==2.1
+
+# Technical architecture rendering and editable Word export.
+matplotlib==3.11.2
+python-docx==1.2.0

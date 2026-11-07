@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-08",
+  "baseline_main": "302f542a2ea86c5e9b207aabe5e77a5e7e0caa46",
+  "scope": "Technical diagram integration and reviewed document delivery; all-project scientific acceptance remains open",
+  "checks": {
+    "focused_pytest": {
+      "command": "PYTHONPATH=src ../clean-venv/Scripts/python.exe -m pytest tests/test_paper_source_audit.py tests/test_instructor_site.py -q --basetemp=../integration-final-tests-20261108",
+      "passed": 6,
+      "failed": 0,
+      "exit_code": 0,
+      "seconds": 0.13
+    },
+    "showcase": "scripts/check_showcase.py: seven sections, learning curves, source library and empty searches passed; zero network on navigation; exit0",
+    "structure": "40 unique sequential IDs; 999 valid relative Markdown links; exit0",
+    "paper_source_audit": "--check passed; exit0",
+    "desktop_ieee_compile": "existing open paper/main.tex success",
+    "report_typesetting": "Tectonic success; 23 pages; font portability and two underfull paragraph warnings remain; duplicate table destination fixed",
+    "visual_review": "All 23 detailed PDF pages, all 22 Word-report pages and all 8 Word-paper pages reviewed as contact sheets; twelve diagram images embedded",
+    "word_images": 12,
+    "package": "54 files SHA256-indexed; ZIP integrity passed"
+  },
+  "artifacts": {
+    "RSSR_Report_Delivery_20261108.zip": {
+      "sha256": "689e4052608f3e156aa572da9264ed2704ccf6aa1eb49c82083ddd1b94ad3b6d"
+    }
+  },
+  "unchanged": "No tracked Streamlit, checkpoint, frozen report or scientific result changes",
+  "gates_open": [
+    "Full reference verification (20 records is not 20 reviewed papers)",
+    "Source-bound model output panels and slides",
+    "New live deployment/cold-start/restart verification",
+    "Protocol-v2 geographic and calibrated cross-sensor acceptance",
+    "New PR exact-head CI pending"
+  ]
+}
