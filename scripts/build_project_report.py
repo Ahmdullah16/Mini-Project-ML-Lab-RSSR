@@ -6,6 +6,7 @@ import csv
 import sys
 import re
 import subprocess
+import shutil
 from pathlib import Path
 import pypandoc
 
@@ -15,7 +16,7 @@ SOURCES = ['docs/student-project-guide.md', 'docs/learning-reference.md',
            'docs/model-instructor.md', 'docs/metric-instructor.md']
 
 
-def build(output):
+def build(output, comparison=None):
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=True)
     figures=output/'figures'
@@ -99,8 +100,26 @@ Let $f=E(y)$, $L(f)=f+C(f)$, $P(u,v)=W_f*[u;v]+b_f$, and $A$ and $T$ denote the 
         ('R_pixelshuffle_reconstruction', 'Sub-pixel reconstruction and residual output')]:
         parts.append(r'\subsection{' + title + '}')
         parts.append(r'\begin{center}\includegraphics[width=\linewidth]{figures/' + filename + r'.png}\end{center}\clearpage')
+    if comparison is not None:
+        comparison=Path(comparison).resolve()
+        metadata=json.loads((comparison/'evidence.json').read_text(encoding='utf-8'))
+        rows=metadata['results']
+        if {(r['model'],r['scale']) for r in rows}!={(f'M{i}',s) for i in range(1,8) for s in (2,4)}:
+            raise ValueError('Comparison requires all seven families at x2 and x4')
+        parts.append(r'\section{Executed seven-model display demonstrations}')
+        parts.append('All seven pinned trained models processed the same licensed 16 by 16 NAIP training example. Native scale two produces 32 by 32 outputs; two sequential native stages produce 64 by 64 outputs. This is a training-example demonstration, not independent evaluation. M1 and M7 use 1000-step runs, while M2 through M6 use 100-step pilots; unequal budgets prohibit a model-quality ranking. No aligned HR image was supplied, so PSNR, SSIM and spectral-reference metrics are unavailable. Pipeline runtimes are local observations, not a controlled efficiency benchmark.\n')
+        for scale in (2,4):
+            source=comparison/f'comparison-x{scale}.png'
+            target=figures/source.name;shutil.copy2(source,target)
+            parts.append(r'\subsection{Display comparison at scale '+str(scale)+'}')
+            parts.append(r'\begin{center}\includegraphics[width=\linewidth]{figures/'+source.name+r'}\end{center}')
+            parts.append('The displayed delta MAE is mean absolute disagreement from Pillow bicubic in uint8 RGB levels. It is not HR reconstruction error. Outputs are shown using nearest-neighbour display, without automatic contrast adjustment. Cascades clip and quantize between stages and can accumulate artifacts.\n')
+            hashes['comparison/'+source.name]=hashlib.sha256(source.read_bytes()).hexdigest()
+            parts.append(r'\clearpage')
+        shutil.copy2(comparison/'evidence.json',output/'comparison-evidence.json')
+        hashes['comparison/evidence.json']=hashlib.sha256((comparison/'evidence.json').read_bytes()).hexdigest()
     parts.append(r'\section{Recorded experimental results}')
-    parts.append('The following tables are copied from the verified evidence generator. Seed variation is not geographic uncertainty. No new inference was run to build this report.\n')
+    parts.append('The following tables are copied from the verified evidence generator. Seed variation is not geographic uncertainty. No new frozen-test evaluation was run to build these tables.\n')
     for source in ['paper/generated/results.tex', 'paper/generated/interpretation.tex']:
         data = (ROOT/source).read_bytes()
         hashes[source] = hashlib.sha256(data).hexdigest()
@@ -124,4 +143,5 @@ The available frozen evaluation contains one held-out scene. Matched-budget geog
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True)
-    build(parser.parse_args().output)
+    parser.add_argument('--comparison')
+    build(**vars(parser.parse_args()))

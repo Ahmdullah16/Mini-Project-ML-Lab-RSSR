@@ -1,3 +1,17 @@
+# Sequential submission checkpoint — 2026-11-08
+
+Task1 COMPLETE: PR66 head0603e58ca32ae9ece71afe2fcb02caf58f756bd9 CI42407496064 passed BOTH tests job128508244839 and Streamlit job128508244583. PR66 merged externally into main0cae30e. Current branch feat/submission-model-panels-20261108 starts there. Preserve backend/ and earlier reports/technical-architectures/ untracked work.
+
+Task2 bounded demonstration COMPLETE: scripts/build_seven_model_panels.py reused shared availability, checksum-pinned assets, load_model and disk-backed cascade; actually ran all seven distinct trained RGB checkpoints at native2x and repeated2x→2x (14runs). Licensed16x16 NAIP training input remained unchanged; outputs32x32 and64x64 verified. Seven checkpoint hashes,14output hashes/dimensions and14MAE-disagreement calculations checked. Full provenance, PNGs, BigTIFF stages, comparison panels and shared-range difference maps: ../submission-seven-model-panels-20261108 (ZIP alongside). Input is dark/low-texture; it does not demonstrate convincing true-detail recovery. No HR scores, spectral scores, training or frozen-test access. Model budgets differ1000vs100steps; no architecture ranking or scientific failure atlas claim.
+
+Report builder supports --comparison and embeds the actual panels; packager now checks14images for comparison reports and uses an output-specific ZIP name to preserve earlier deliveries. New report ../submission-with-comparisons-20261108:25-page PDF,24-page Word preview and editable DOCX. Updated ZIP58hashed files;14embedded images; integrity passed. Six focused tests passed0.18s exit0, paper source audit passed. Affected report/Word comparison pages visually reviewed. Evidence: reports/seven-model-panels-20261108.json. App/checkpoints/frozen results unchanged.
+
+NEXT: inspect this batch PR exact-head CI before release claims; then task3 primary-source reference verification (bibliography currently20records, not20fully reviewed papers), task4 slides/examiner materials, task5 public seven-model/satellite/export/mobile/restart checks, task6 final acceptance/package reconciliation. Broader meaningful source-bound examples/failure atlas and geographic/cross-sensor/durability gates remain open. No access-blocker assumption. Commands: git log -1; inspect new PR checks; inspect docs/literature.md plus existing citation evidence before researching only unverified records.
+
+## Earlier checkpoints
+
+PR66 opened: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/66; published head0603e58ca32ae9ece71afe2fcb02caf58f756bd9. Latest-head CI must be checked before integration; no merge. Final structure check after checkpoint links:40IDs/1003links passed. Earlier999 counts describe pre-documentation checks. Inspect PR66 next, then complete output panels/slides/reference audit. This final note is local after publishing and should be carried forward.
+
 # Report integration checkpoint — 2026-11-08
 
 Current branch feat/submission-diagram-integration-20261108 from main302f542a2ea86c5e9b207aabe5e77a5e7e0caa46 (PR65 merged externally). No open PR at intake. PR65 only included7804a6f; its CI42405140097 completed SUCCESS. Later diagram commits3ef7f9a/60faca8 were NOT merged by PR65. Recovered technical generator from60faca8 into this batch. Backend and old reports/technical-architectures outputs remain untouched/untracked.
