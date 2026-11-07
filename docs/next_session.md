@@ -1,3 +1,19 @@
+# Reference milestone checkpoint — 2026-11-08
+
+PR67 head88899cc5974903d9a2ba02e1d23ec188f320d2bb CI42408730754 completed SUCCESS; merge observed externally as main84d754e. Branch feat/submission-reference-audit-20261108 starts there. Preserve backend/ and old reports/technical-architectures/ untracked work.
+
+Task3 citation-identity/concept scope COMPLETE:23records (22research works +1publisher correction) have primary-source title, ordered-author identity and year observations, explicit source URLs/hashes, applicability and review limits. Reused9publisher records from7Nov; checked remaining sources through publisher/author/arXiv/DOI-registry metadata. Added original attention, Adam and SSIM foundations; reconciled Adam2014preprint/2015conference year. Full per-paper losses/data/training/compute/protocol extraction remains unfinished and is not claimed complete. No external performance copied into local results. Machine record: reports/reference-audit-20261108.json; human matrix: reports/reference-review-20261108.md.
+
+Updated root/paper bibliographies and literature section; all23cited keys resolve. Existing open manuscript/supporting sources updated in place; desktop compiler and local export passed. Condensed repetitive open-work bullets to retain5-page IEEE layout. Detailed report27pages; editable report25-page Word preview; IEEE editing copy9pages. New artifacts ../submission-reference-reviewed-20261108; archive ZIP alongside. Affected literature/bibliography/PDF/Word pages visually reviewed. Previous diagram/comparison artifacts reused, not regenerated; --reuse-figures validates source and delivery asset hashes. No new inference/training/frozen-test access.
+
+12focused tests passed0.22s exit0; offline23record checker and paper source audit passed;40IDs/1007links passed before final checkpoint links. New CI includes offline reference checker. Evidence/gaps in reports/reference-audit-20261108.json; final validation record and PR status follow after packaging/publishing. Keep new PR open until exact-head CI passes.
+
+NEXT exact action: inspect this batch PR exact-head CI; then task4 build evidence-grounded presentation slides and refresh examiner guide using existing report/diagrams/comparison artifacts. Remaining: broader useful source-bound failure examples, full per-paper experimental extraction, public seven-model/satellite/mobile/download/restart verification, scientific geographic/cross-sensor and external durability gates. Do not call project fully complete.
+
+## Earlier checkpoints
+
+PR67 opened: https://github.com/Ahmdullah16/Mini-Project-ML-Lab-RSSR/pull/67; published head88899cc5974903d9a2ba02e1d23ec188f320d2bb. Latest-head CI pending verification; no merge. Final structure check40IDs/1005links passed. Inspect PR67 CI, then task3 reference audit. This final status note is local and must be carried forward.
+
 # Sequential submission checkpoint — 2026-11-08
 
 Task1 COMPLETE: PR66 head0603e58ca32ae9ece71afe2fcb02caf58f756bd9 CI42407496064 passed BOTH tests job128508244839 and Streamlit job128508244583. PR66 merged externally into main0cae30e. Current branch feat/submission-model-panels-20261108 starts there. Preserve backend/ and earlier reports/technical-architectures/ untracked work.

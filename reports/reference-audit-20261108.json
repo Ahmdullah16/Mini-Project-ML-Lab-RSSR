@@ -1,0 +1,438 @@
+{
+  "scope": "Primary metadata and cited-concept verification; not complete experimental extraction or reproduction",
+  "records": [
+    {
+      "key": "dong2014srcnn",
+      "source_url": "https://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html",
+      "source_sha256": "de42ff24a3d77519c677c84f3ea26df180418d95156c44708d9235f57847929d",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Learning a Deep Convolutional Network for Image Super-Resolution",
+        "author": "Dong, Chao and Loy, Chen Change and He, Kaiming and Tang, Xiaoou",
+        "year": "2014"
+      },
+      "review_scope": "Author/proceedings citation text manually reconciled; metadata tags absent or insufficient",
+      "applicability": "Learned LR-to-HR convolutional mapping is prior art; compact local SRCNN is an adaptation.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "lim2017edsr",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/html/Lim_Enhanced_Deep_Residual_CVPR_2017_paper.html",
+      "source_sha256": "ee2444234209a2c55e1aecc73a171c04efea587fbd12c9436d06c1f8fa4e6389",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Enhanced Deep Residual Networks for Single Image Super-Resolution",
+        "author": "Lim, Bee and Son, Sanghyun and Kim, Heewon and Nah, Seungjun and Mu Lee, Kyoung",
+        "year": "2017"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Residual CNN SR and multi-scale reconstruction are prior art; compact C block is not EDSR.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "zhang2018rcan",
+      "source_url": "https://arxiv.org/abs/1807.02758",
+      "source_sha256": "0724d03ad85518bfd35d89c4bba842894754d15b7724a6e9cda108126cbf4254",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Image Super-Resolution Using Very Deep Residual Channel Attention Networks",
+        "author": "Zhang, Yulun and Li, Kunpeng and Li, Kai and Wang, Lichen and Zhong, Bineng and Fu, Yun",
+        "year": "2018"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Residual-in-residual channel recalibration is prior art; our small average-pooling gate is not RCAN.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "liang2021swinir",
+      "source_url": "https://arxiv.org/abs/2108.10257",
+      "source_sha256": "223a4bdd892c4d320c8e924437a6d0c50db5645cec3965e4e83da60cbb70ca39",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "SwinIR: Image Restoration Using Swin Transformer",
+        "author": "Liang, Jingyun and Cao, Jiezhang and Sun, Guolei and Zhang, Kai and Van Gool, Luc and Timofte, Radu",
+        "year": "2021"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Residual Swin blocks support restoration; our fixed-window encoder lacks the full shifted-window hierarchy. Official pretrained control has unmatched pretraining.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "chen2023hat",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Chen_Activating_More_Pixels_in_Image_Super-Resolution_Transformer_CVPR_2023_paper.html",
+      "source_sha256": "123073bd2cbbc30b14bcee8ea39545efa280e73f3351c3b6137fcdf5900ec4f6",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Activating More Pixels in Image Super-Resolution Transformer",
+        "author": "Chen, Xiangyu and Wang, Xintao and Zhou, Jiantao and Qiao, Yu and Dong, Chao",
+        "year": "2023"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "HAT combines channel/window attention and overlapping cross-attention; combining C/A/T alone is not a novelty claim.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "guo2025mambairv2",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Guo_MambaIRv2_Attentive_State_Space_Restoration_CVPR_2025_paper.html",
+      "source_sha256": "e23adedcfd5d973ca9d37d70a6143b96a9740031bb143b0eeb610bc828cbf9cf",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "MambaIRv2: Attentive State Space Restoration",
+        "author": "Guo, Hang and Guo, Yong and Zha, Yaohua and Zhang, Yulun and Li, Wenbo and Dai, Tao and Xia, Shu-Tao and Li, Yawei",
+        "year": "2025"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Attentive state-space restoration is a distinct modern alternative; no local Mamba implementation or performance claim.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "sarmad2025difffusr",
+      "source_url": "https://arxiv.org/abs/2506.11764",
+      "source_sha256": "238a127a1dafcb4c6282579f398adaf77a095a00ba6e46c5a9a5da83630f7742",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "DiffFuSR: Super-Resolution of all Sentinel-2 Multispectral Bands using Diffusion Models",
+        "author": "Sarmad, Muhammad and Salberg, Arnt-B\u00f8rre and Kampffmeyer, Michael",
+        "year": "2025"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Diffusion RGB restoration followed by multispectral fusion motivates separating plausible generation from scientific fidelity; not locally executed.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      },
+      "publication_status": "TGRS acceptance and related DOI explicitly stated by author-deposited arXivv2; journal volume/pages unverified."
+    },
+    {
+      "key": "li2026geosr",
+      "source_url": "https://arxiv.org/abs/2605.00310",
+      "source_sha256": "39eceb3ca35e1f1561a607fa07ad80f7c1853798cffd0891bb97035c9dc39b3b",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Beyond Visual Fidelity: Benchmarking Super-Resolution Models for Large-Scale Remote Sensing Imagery via Downstream Task Integration",
+        "author": "Li, Zhili and Chai, Kangyang and Wang, Zhihao and Jia, Xiaowei and Li, Yanhua and Mai, Gengchen and Skakun, Sergii and Manocha, Dinesh and Xie, Yiqun",
+        "year": "2026"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Downstream-task evaluation extends beyond PSNR/SSIM; dataset and downstream utility not locally evaluated.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      },
+      "publication_status": "Preprint v2; under review per source. No accepted-journal claim."
+    },
+    {
+      "key": "michel2022sen2venus",
+      "source_url": "https://api.crossref.org/works/10.3390/data7070096",
+      "source_sha256": "8e41de8ef3c07f1646fba766901d18105a82d173ca4f0a0ec86f45af336b4cb1",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "SEN2VEN\u00b5S, a Dataset for the Training of Sentinel-2 Super-Resolution Algorithms",
+        "author": "Michel, Julien and Vinasco-Salinas, Juan and Inglada, Jordi and Hagolle, Olivier",
+        "year": "2022"
+      },
+      "review_scope": "Publisher-deposited DOI metadata; previously reviewed publisher full text recorded in reports/mp36-feasibility.md",
+      "applicability": "Candidate paired Sentinel-2/VENUS data; native scale matching does not establish bands/calibration/registration eligibility.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "cornebise2022worldstrat",
+      "source_url": "https://arxiv.org/abs/2207.06418",
+      "source_sha256": "5d251f593a662cd49601a0fe5cb5234a1240a200ba4fbe9e9c33e55f1b5c52ba",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Open High-Resolution Satellite Imagery: The WorldStrat Dataset -- With Application to Super-Resolution",
+        "author": "Cornebise, Julien and Or\u0161oli\u0107, Ivan and Kalaitzis, Freddie",
+        "year": "2022"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "Real multi-sensor pairs motivate transfer evaluation; source-specific licensing and noninteger resolution ratio require task-specific validation.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      },
+      "version_note": "Cites original2022 arXiv record; source currently shows v2 dated2025. Dataset-file eligibility remains separate."
+    },
+    {
+      "key": "michel2023correction",
+      "source_url": "https://api.crossref.org/works/10.3390/data8030051",
+      "source_sha256": "e629d7a29974f7f095bbd0db038ddee0c85175c1529e7f44c506ac73a11fb1d6",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Correction: Michel et al. SEN2VEN\u00b5S, a Dataset for the Training of Sentinel-2 Super-Resolution Algorithms. Data 2022, 7, 96",
+        "author": "Michel, Julien and Vinasco-Salinas, Juan and Inglada, Jordi and Hagolle, Olivier",
+        "year": "2023"
+      },
+      "review_scope": "Publisher-deposited DOI metadata; previously reviewed publisher full text recorded in reports/mp36-feasibility.md",
+      "applicability": "Published dataset-URL correction must be preserved; it is not an improved-registration or new-residual-error claim.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Kim_2016_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Kim_Accurate_Image_Super-Resolution_CVPR_2016_paper.html",
+      "source_sha256": "d08026257f8e278c949b1c945f56b00344661ecabd8910747be45af6d8fdb386",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Accurate Image Super-Resolution Using Very Deep Convolutional Networks",
+        "author": "Kim, Jiwon and Lee, Jung Kwon and Lee, Kyoung Mu",
+        "year": "2016"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Residual prediction is established SR prior art; the compact residual branch is not a VDSR reproduction.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Ledig_2017_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Ledig_Photo-Realistic_Single_Image_CVPR_2017_paper.html",
+      "source_sha256": "9c9c231325a59a4ec01eaaf55fc66f1d7775a2199be06a0eb8c63ea1d08b1728",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network",
+        "author": "Ledig, Christian and Theis, Lucas and Huszar, Ferenc and Caballero, Jose and Cunningham, Andrew and Acosta, Alejandro and Aitken, Andrew and Tejani, Alykhan and Totz, Johannes and Wang, Zehan and Shi, Wenzhe",
+        "year": "2017"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Adversarial/perceptual SR can favor plausible texture; our recorded models are not GAN-trained.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Haris_2018_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Haris_Deep_Back-Projection_Networks_CVPR_2018_paper.html",
+      "source_sha256": "533b490f697217fa307cc933216643679386e41f50e6fbba3b880a463a09506b",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Deep Back-Projection Networks for Super-Resolution",
+        "author": "Haris, Muhammad and Shakhnarovich, Gregory and Ukita, Norimichi",
+        "year": "2018"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Iterative back-projection is a different SR architecture; our PixelShuffle tail does not implement it.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Dai_2019_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Dai_Second-Order_Attention_Network_for_Single_Image_Super-Resolution_CVPR_2019_paper.html",
+      "source_sha256": "259573add82e746b868cd7b18bdff1ff1752c236a09ba71e5ba5fbfb2ba4b55d",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Second-Order Attention Network for Single Image Super-Resolution",
+        "author": "Dai, Tao and Cai, Jianrui and Zhang, Yongbing and Xia, Shu-Tao and Zhang, Lei",
+        "year": "2019"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Second-order feature statistics support attention; our mean-pooling gate does not implement covariance attention.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Hu_2018_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Hu_Squeeze-and-Excitation_Networks_CVPR_2018_paper.html",
+      "source_sha256": "00bc13aac8f7fe4c3dc4e10b7704b2449fe86f3588dd18cb39dc3a5b18d747fd",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Squeeze-and-Excitation Networks",
+        "author": "Hu, Jie and Shen, Li and Sun, Gang",
+        "year": "2018"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Channel squeeze/excitation provides a precedent for channel recalibration; our combined gate is compact teaching code.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Wang_2018_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_Non-Local_Neural_Networks_CVPR_2018_paper.html",
+      "source_sha256": "bb077fdc4f2deec195ae1bfd7ede8437f47aa5507af4862f4f388a3712338570",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Non-Local Neural Networks",
+        "author": "Wang, Xiaolong and Girshick, Ross and Gupta, Abhinav and He, Kaiming",
+        "year": "2018"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Non-local aggregation is a context mechanism; our attention uses bounded spatial windows, not unrestricted image-wide self-attention.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Zhang_2018_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Zhang_The_Unreasonable_Effectiveness_CVPR_2018_paper.html",
+      "source_sha256": "6bac8137798a6fb82705a2eb7f0136e47f111c6f04e8a6972f3fe6a5f84c1309",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "The Unreasonable Effectiveness of Deep Features as a Perceptual Metric",
+        "author": "Zhang, Richard and Isola, Phillip and Efros, Alexei A. and Shechtman, Eli and Wang, Oliver",
+        "year": "2018"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Learned perceptual distance is another assessment perspective; LPIPS was not measured here.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Shi_2016_CVPR",
+      "source_url": "https://openaccess.thecvf.com/content_cvpr_2016/html/Shi_Real-Time_Single_Image_CVPR_2016_paper.html",
+      "source_sha256": "10776f18ce6d00d9a9954e51889d986def5193ce7ee0210b121d6bee14fdb910",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network",
+        "author": "Shi, Wenzhe and Caballero, Jose and Huszar, Ferenc and Totz, Johannes and Aitken, Andrew P. and Bishop, Rob and Rueckert, Daniel and Wang, Zehan",
+        "year": "2016"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Sub-pixel rearrangement enables learned enlargement; PixelShuffle itself has no learned parameters.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "Liu_2021_ICCV",
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html",
+      "source_sha256": "67f1f9b08b4291029e96ec5bdedb80933533a2418bcb609881b2520fdaf9ebb2",
+      "retrieved": "2026-11-07 reused publisher metadata",
+      "primary_metadata": {
+        "title": "Swin Transformer: Hierarchical Vision Transformer Using Shifted Windows",
+        "author": "Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining",
+        "year": "2021"
+      },
+      "review_scope": "Publisher metadata and abstract-level method; prior source record reused",
+      "applicability": "Shifted-window hierarchical vision attention is prior art; local block uses fixed windows and no shift.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "vaswani2017attention",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+      "source_sha256": "42974e1042efb1f9127b6a8bd910eedd8e925b89c4de2b3653ecba00ab2f3cf0",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Attention Is All You Need",
+        "author": "Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia",
+        "year": "2017"
+      },
+      "review_scope": "Author/proceedings citation text manually reconciled; metadata tags absent or insufficient",
+      "applicability": "Scaled dot-product attention and head projections support the teaching derivation; translation results do not establish remote-sensing quality.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "kingma2015adam",
+      "source_url": "https://arxiv.org/abs/1412.6980",
+      "source_sha256": "06780135d1ea4dfb313b58b395a19eeb9a372e1e672b37752cd56c152b7d7d02",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Adam: A Method for Stochastic Optimization",
+        "author": "Kingma, Diederik P. and Ba, Jimmy",
+        "year": "2015"
+      },
+      "review_scope": "Primary metadata and abstract/concept; no external performance reproduced",
+      "applicability": "First/second-moment adaptive stochastic optimization supports the training explanation; optimizer choice does not prove model superiority.",
+      "version_note": "arXiv first-submission year2014; explicit source comment identifies ICLR2015 publication. Bibliography cites conference year2015.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    },
+    {
+      "key": "wang2004ssim",
+      "source_url": "https://ece.uwaterloo.ca/~z70wang/research/ssim/",
+      "source_sha256": "c00bd2266cab6ef65e7d45b96ad9c9a56f313dc6322f6d82a732e50703d03645",
+      "retrieved": "2026-11-08",
+      "primary_metadata": {
+        "title": "Image Quality Assessment: From Error Visibility to Structural Similarity",
+        "author": "Wang, Zhou and Bovik, Alan C. and Sheikh, Hamid R. and Simoncelli, Eero P.",
+        "year": "2004"
+      },
+      "review_scope": "Author/proceedings citation text manually reconciled; metadata tags absent or insufficient",
+      "applicability": "Structural image similarity requires a reference and declared implementation settings; local uniform7x7 population-moment variant is not identical to original Gaussian implementation.",
+      "experimental_extraction": {
+        "loss_and_training_budget": "not extracted in this metadata/concept pass",
+        "evaluation_protocol_and_hardware": "not extracted; external scores not reproduced",
+        "replication": "not performed"
+      }
+    }
+  ],
+  "count_scope": {
+    "citation_records": 23,
+    "research_records_excluding_correction": 22,
+    "publisher_correction_records": 1
+  },
+  "limitations": [
+    "Metadata and cited concepts checked; full per-paper experimental extraction is unfinished",
+    "No external performance numbers were copied into local results",
+    "DOI or page fields not observed remain absent; source access via browser and shell differed"
+  ],
+  "verified_fields": [
+    "title",
+    "ordered author identity (name tokens normalized)",
+    "publication year, with explicit preprint/conference distinction"
+  ]
+}

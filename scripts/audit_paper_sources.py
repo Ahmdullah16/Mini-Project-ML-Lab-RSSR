@@ -55,11 +55,10 @@ def audit(root):
                           'implemented_tested':'Software checks, not quality evidence',
                           'planned':'Unexecuted experiments/formatting tasks',
                           'unavailable':'Missing reference files, authors or scientific evidence'},
-            'gaps':['Supplied conference template and HOWTO comparison unavailable',
-                    'M2/M6 training and seven-model matched-budget geographic evaluation absent',
-                    'New manuscript reconstruction paused at supplied-reference gate',
-                    'Citation-key resolution is not metadata/full-text verification',
-                    'Latest corrected PDF visual reinspection pending'],
+            'gaps':['Matched-budget seven-model geographic evaluation remains unexecuted',
+                    'M2/M6 development pilots exist; they do not close scientific validation',
+                    'Reference metadata and cited concepts audited separately; full experimental extraction unfinished',
+                    'Latest public execution/restart verification remains separate from local document compilation'],
             'training_selection_note':'Within-run best checkpoint uses minimum validation L1 (experiment.py); final-evaluation.json selects among seeds/configurations by development PSNR. These are distinct selection stages.'}
 
 

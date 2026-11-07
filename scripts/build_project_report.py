@@ -16,11 +16,28 @@ SOURCES = ['docs/student-project-guide.md', 'docs/learning-reference.md',
            'docs/model-instructor.md', 'docs/metric-instructor.md']
 
 
-def build(output, comparison=None):
+def build(output, comparison=None, reuse_figures=None):
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=True)
     figures=output/'figures'
-    subprocess.run([sys.executable,str(ROOT/'scripts/generate_technical_architectures.py'),'--output',str(figures)],check=True)
+    if reuse_figures is None:
+        subprocess.run([sys.executable,str(ROOT/'scripts/generate_technical_architectures.py'),'--output',str(figures)],check=True)
+    else:
+        prior=Path(reuse_figures).resolve()
+        manifest=json.loads((prior/'report-source-manifest.json').read_text(encoding='utf-8'))
+        manifest['sources_sha256']={k.replace('\\','/'):v for k,v in manifest['sources_sha256'].items()}
+        for rel in ['src/rssr/models.py','src/rssr/architecture_registry.py','scripts/generate_technical_architectures.py']:
+            if manifest['sources_sha256'].get(rel)!=hashlib.sha256((ROOT/rel).read_bytes()).hexdigest():
+                raise ValueError('Cannot reuse stale diagram source: '+rel)
+        assets=json.loads((prior/'delivery-checksums.json').read_text(encoding='utf-8'))
+        figures.mkdir(exist_ok=True)
+        for source in (prior/'figures').iterdir():
+            if source.suffix in ('.png','.svg','.pdf') and not source.name.startswith('comparison-'):
+                identity=source.relative_to(prior).as_posix()
+                if assets.get(identity,{}).get('sha256')!=hashlib.sha256(source.read_bytes()).hexdigest():
+                    raise ValueError('Cannot reuse unverified diagram asset: '+identity)
+                shutil.copy2(source,figures/source.name)
+
     parts = [r'''\documentclass[11pt,a4paper]{article}
 \usepackage[margin=25mm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,longtable,array,graphicx,calc,caption}
@@ -42,7 +59,7 @@ This report explains the implemented educational architecture family and the rec
 \end{abstract}
 \tableofcontents\clearpage
 ''']
-    hashes = {str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest() for path in [ROOT/'src/rssr/models.py',ROOT/'src/rssr/architecture_registry.py',ROOT/'scripts/generate_technical_architectures.py']}
+    hashes = {path.relative_to(ROOT).as_posix():hashlib.sha256(path.read_bytes()).hexdigest() for path in [ROOT/'src/rssr/models.py',ROOT/'src/rssr/architecture_registry.py',ROOT/'scripts/generate_technical_architectures.py']}
     for source in SOURCES:
         text = (ROOT/source).read_text(encoding='utf-8-sig')
         hashes[source] = hashlib.sha256((ROOT/source).read_bytes()).hexdigest()
@@ -144,4 +161,5 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True)
     parser.add_argument('--comparison')
+    parser.add_argument('--reuse-figures')
     build(**vars(parser.parse_args()))

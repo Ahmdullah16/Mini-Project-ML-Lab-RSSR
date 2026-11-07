@@ -2,13 +2,13 @@
   "schema": "ieee-source-audit-v1",
   "scope": "Recorded-source and citation integrity, not full scientific or bibliography verification",
   "source_sha256_utf8_lf": {
-    "paper/main.tex": "3c30cfa0d20aafadf636ce26b9c929603747e3d1933df720801befa0de9719f0",
-    "paper/literature-context.tex": "34cda87457fdddf271c03b2bb61c1883555c639144fd9e05b9cd4dbf6ac3db30",
+    "paper/main.tex": "522bd50bc87a190f607d41986027a8849d1ed6a70ebc781f294d0a4ef46516de",
+    "paper/literature-context.tex": "e4e23f34cda0e1f6980e0bf18e127f74f9822b68a8f361d2ce5452fdab3f8995",
     "paper/generated/results.tex": "0696f2506b8cb569375f98afc0a9bc9c045acd9282c425a34bdfd6806b2eeaf7",
     "paper/generated/interpretation.tex": "6fe1975845d615bc33e7067a5e1049e52e01a6fb49286c69d6bd5492e8e80af5",
     "paper/generated/contribution-audit.tex": "bb42c492d051a9f59b11d5b6a156f956c01aec2402de09ec2bc823ec277ed2af",
-    "paper/references.bib": "9c33519a0d743cc58b28e1b3353527f703165a0a43c7c27b605fc1c3c522e596",
-    "references.bib": "9c33519a0d743cc58b28e1b3353527f703165a0a43c7c27b605fc1c3c522e596",
+    "paper/references.bib": "bcdf4b08c04914218f4d0ec55822801dc349ddcc6a841cb19d5f8b6bfd3c92f5",
+    "references.bib": "bcdf4b08c04914218f4d0ec55822801dc349ddcc6a841cb19d5f8b6bfd3c92f5",
     "reports/paper-evidence.json": "9fe59f01e8f88b97f850cf68b95314b490bf962c8d746aee389f29fd9475bb9a",
     "reports/final-heldout.json": "5c92d4d172e41f6798ed4668f504ec89d0590b12c2580620ca1b769eb27f56b9",
     "configs/final-evaluation.json": "74bd076065eb9a034a5281649bba2313b7a0885d6f25232cb13ae1d259e0e0a9",
@@ -30,11 +30,19 @@
     "Shi_2016_CVPR",
     "Wang_2018_CVPR",
     "Zhang_2018_CVPR",
+    "chen2023hat",
     "cornebise2022worldstrat",
     "dong2014srcnn",
+    "guo2025mambairv2",
+    "kingma2015adam",
+    "li2026geosr",
     "liang2021swinir",
+    "lim2017edsr",
     "michel2022sen2venus",
     "michel2023correction",
+    "sarmad2025difffusr",
+    "vaswani2017attention",
+    "wang2004ssim",
     "zhang2018rcan"
   ],
   "frozen_protocol_hash": "1b2e0f441cdca1810e5f108682d34c4d593586696690d18b44c9507e2051b418",
@@ -319,11 +327,10 @@
     "unavailable": "Missing reference files, authors or scientific evidence"
   },
   "gaps": [
-    "Supplied conference template and HOWTO comparison unavailable",
-    "M2/M6 training and seven-model matched-budget geographic evaluation absent",
-    "New manuscript reconstruction paused at supplied-reference gate",
-    "Citation-key resolution is not metadata/full-text verification",
-    "Latest corrected PDF visual reinspection pending"
+    "Matched-budget seven-model geographic evaluation remains unexecuted",
+    "M2/M6 development pilots exist; they do not close scientific validation",
+    "Reference metadata and cited concepts audited separately; full experimental extraction unfinished",
+    "Latest public execution/restart verification remains separate from local document compilation"
   ],
   "training_selection_note": "Within-run best checkpoint uses minimum validation L1 (experiment.py); final-evaluation.json selects among seeds/configurations by development PSNR. These are distinct selection stages."
 }

@@ -111,13 +111,8 @@ The recorded experiments support a bounded comparative evaluation rather than ar
 
 
 \subsection{Reproducibility and open work}
-\begin{itemize}
-\item Generated tables consume immutable recorded artifacts; canonical text hashes and row identities are in \texttt{reports/paper-evidence.json}.
-\item The claim/evidence register distinguishes measured, locally tested, planned and unavailable statements. It does not infer truth from file presence.
-\item Existing protocol and checkpoint hashes remain preserved. No new training, dataset transfer or frozen-test evaluation is needed to regenerate the paper tables.
-\item Fresh data, v2 execution, complete literature extraction, failure atlas, final notebooks/slides, external persistence and signed-out public verification remain open.
-\item This is a working evaluation paper, not a completed submission. Compiler and generator checks are reported separately from scientific acceptance.
-\end{itemize}
+Generated tables reuse recorded artifacts and preserved protocol/checkpoint hashes; the claim--evidence register distinguishes measured, locally tested, planned and unavailable statements. No training, data transfer or frozen-test reevaluation is needed to regenerate these tables. Open work includes fresh-data/protocol-v2 experiments, full literature extraction, the failure atlas, final presentation materials, external persistence and renewed signed-out public verification. Document compilation does not close scientific or submission acceptance.
+
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \end{document}
