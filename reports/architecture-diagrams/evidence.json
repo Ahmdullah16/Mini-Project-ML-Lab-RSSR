@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-08",
+  "source": "src/rssr/models.py (inspected directly)",
+  "diagrams": [
+    {
+      "file": "reports/architecture-diagrams/m1_cnn.svg",
+      "sha256": "bfe5b9de020094cc4b8dc78991186851222e7052f522b9bcfbeacdbc800ecb0a",
+      "bytes": 3223
+    },
+    {
+      "file": "reports/architecture-diagrams/m2_attention.svg",
+      "sha256": "6845a2460166da2cf613e328a95d40fb2a86462b27c4bfe044a11d796e04f87e",
+      "bytes": 3709
+    },
+    {
+      "file": "reports/architecture-diagrams/m3_transformer.svg",
+      "sha256": "b731b2cce622bcf196daa9b726ce28d59aebe670c808f33ff0a348553ed03a21",
+      "bytes": 4022
+    },
+    {
+      "file": "reports/architecture-diagrams/m4_cnn_attention.svg",
+      "sha256": "03f025b9079c6d7947549265b18fb21aa046ebb323fba17a94777f39a747554e",
+      "bytes": 4019
+    },
+    {
+      "file": "reports/architecture-diagrams/m5_cnn_transformer.svg",
+      "sha256": "ede56ce77b9a1145183e832a12c93ca06031241915b0a55a7e7b4b693921cbf2",
+      "bytes": 4208
+    },
+    {
+      "file": "reports/architecture-diagrams/m6_attention_transformer.svg",
+      "sha256": "97b235293ccadffb0d57efa58ffa5aff28f54a30af1295fa7127d09b11b10a9e",
+      "bytes": 4261
+    },
+    {
+      "file": "reports/architecture-diagrams/m7_cnn_attention_transformer.svg",
+      "sha256": "5fea0fb41c3869c0d5fcebfd365abf575d1b6c28f520eba1a235249df3acc4f5",
+      "bytes": 4980
+    }
+  ],
+  "validation": "XML parsed for all seven; component assertions passed; no model inference or training"
+}
